@@ -40,7 +40,9 @@ async function ingestCurrentPatch() {
     // 2. Fetch the most recent patch from the database
     const latestPatch = await patchesCollection.findOne(
       {}, 
-      { sort: { ingestedAt: -1 } } // Sort descending to get the newest entry
+      { sort: { ingestedAt: -1 }, // Sort descending to get the newest entry
+      projection: { dataHash: 1 } // Only fetch the dataHash field
+      }
     );
 
     // 3. Compare the hashes
