@@ -1,0 +1,14 @@
+/* src/styles/app.css */
+
+/* Tailwind v4 entrypoint (required when using `@tailwindcss/vite`). */
+@import "tailwindcss";
+
+/* 1. Import the font package */
+@import '@fontsource-variable/space-grotesk';
+
+/* 2. Apply it globally */
+body {
+  font-family: 'Space Grotesk Variable', sans-serif;
+  background-color: #0E0E13;
+  color:#fff;
+}
