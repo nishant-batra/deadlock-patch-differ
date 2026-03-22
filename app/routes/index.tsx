@@ -1,277 +1,1069 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { createServerFn } from '@tanstack/react-start';
-import { setResponseHeader } from '@tanstack/react-start/server';
-import { getLatestPatchDiff } from '../server/patchService';
-import Card from '#/components/card';
-const closeQaurters=  {
-    "id": 1342610602,
-    "class_name": "upgrade_close_range",
-    "name": "Close Quarters",
-    "start_trained": true,
-    "image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/mods_weapon/close_range.png",
-    "image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/mods_weapon/close_range.webp",
-    "heroes": [],
-    "properties": {
-      "AbilityCooldown": {
-        "value": "0",
-        "can_set_token_override": true,
-        "css_class": "cooldown",
-        "disable_value": "0",
-        "scale_function": {
-          "class_name": "scale_function_single_stat",
-          "subclass_name": "AbilityCooldown_scale_function",
-          "specific_stat_scale_type": "EItemCooldown"
-        },
-        "label": "Cooldown",
-        "postfix": "s",
-        "postvalue_label": "Cooldown",
-        "icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/cooldown.svg"
-      },
-      "AbilityDuration": {
-        "value": "0",
-        "can_set_token_override": true,
-        "css_class": "duration",
-        "disable_value": "0",
-        "scale_function": {
-          "class_name": "scale_function_single_stat",
-          "subclass_name": "AbilityDuration_scale_function",
-          "specific_stat_scale_type": "ETechDuration"
-        },
-        "label": "Duration",
-        "postfix": "s",
-        "postvalue_label": "Duration",
-        "icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/duration.svg"
-      },
-      "AbilityCastRange": {
-        "value": "0",
-        "can_set_token_override": true,
-        "css_class": "range",
-        "display_units": "EDisplayUnit_Meters",
-        "scale_function": {
-          "class_name": "scale_function_single_stat",
-          "subclass_name": "AbilityCastRange_scale_function",
-          "specific_stat_scale_type": "ETechRange"
-        },
-        "label": "Cast Range",
-        "postfix": "m",
-        "postvalue_label": "Cast Range",
-        "icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/property_range.svg"
-      },
-      "AbilityUnitTargetLimit": {
-        "value": "1",
-        "can_set_token_override": true
-      },
-      "AbilityCastDelay": {
-        "value": "0",
-        "can_set_token_override": true,
-        "css_class": "cast",
-        "disable_value": "0",
-        "label": "Cast Delay",
-        "postfix": "s",
-        "postvalue_label": "Cast Delay",
-        "icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
-      },
-      "AbilityChannelTime": {
-        "value": "0",
-        "can_set_token_override": true,
-        "css_class": "cast",
-        "disable_value": "0",
-        "scale_function": {
-          "class_name": "scale_function_multi_stats",
-          "subclass_name": "scale_duration",
-          "scaling_stats": [
-            "EChannelDuration",
-            "ETechDuration"
-          ]
-        },
-        "label": "Channel Duration",
-        "postfix": "s",
-        "postvalue_label": "Channel Duration",
-        "icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
-      },
-      "AbilityPostCastDuration": {
-        "value": "0",
-        "disable_value": "0"
-      },
-      "AbilityCharges": {
-        "value": "0",
-        "can_set_token_override": true,
-        "css_class": "cast",
-        "disable_value": "-1",
-        "scale_function": {
-          "class_name": "scale_function_ability_charges",
-          "subclass_name": "AbilityCharges_scale_function"
-        },
-        "label": "Charges",
-        "postvalue_label": "Charges",
-        "icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
-      },
-      "AbilityCooldownBetweenCharge": {
-        "value": "-1.0",
-        "can_set_token_override": true,
-        "css_class": "charge_cooldown",
-        "disable_value": "-2",
-        "scale_function": {
-          "class_name": "scale_function_ability_recharge_time",
-          "subclass_name": "scale_function_ability_recharge_time"
-        },
-        "label": "Charge Delay",
-        "postfix": "s",
-        "postvalue_label": "Charge Delay",
-        "icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/recharge.svg"
-      },
-      "ChannelMoveSpeed": {
-        "value": "-1",
-        "can_set_token_override": true,
-        "css_class": "move_speed",
-        "display_units": "EDisplayUnit_MetersPerSecond",
-        "postfix": "m",
-        "icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/move_speed.svg"
-      },
-      "AbilityResourceCost": {
-        "value": "0",
-        "can_set_token_override": true,
-        "css_class": "cast",
-        "disable_value": "0",
-        "icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
-      },
-      "TechPower": {
-        "value": "0",
-        "can_set_token_override": true,
-        "provided_property_type": "MODIFIER_VALUE_TECH_POWER",
-        "disable_value": "0",
-        "prefix": "{s:sign}",
-        "label": "Spirit Power",
-        "postfix": "",
-        "postvalue_label": "Spirit Power"
-      },
-      "WeaponPower": {
-        "value": "0",
-        "can_set_token_override": true,
-        "provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
-        "disable_value": "0",
-        "prefix": "{s:sign}",
-        "label": "Weapon Damage",
-        "postfix": "%",
-        "postvalue_label": "Weapon Damage"
-      },
-      "CloseRangeBonusWeaponPower": {
-        "value": "20",
-        "provided_property_type": "MODIFIER_VALUE_CLOSE_RANGE_BONUS_BASE_DAMAGE_PERCENT",
-        "css_class": "bullet_damage",
-        "usage_flags": [
-          "ConditionallyApplied"
-        ],
-        "display_units": "EDisplayUnit_Normal",
-        "prefix": "{s:sign}",
-        "label": "Weapon Damage",
-        "postfix": "%",
-        "postvalue_label": "Weapon Damage",
-        "conditional": "within Range",
-        "icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/damage_bullet_color.svg",
-        "tooltip_section": "passive",
-        "tooltip_is_elevated": false,
-        "tooltip_is_important": true
-      },
-      "CloseRangeBonusDamageRange": {
-        "value": "15m",
-        "provided_property_type": "MODIFIER_VALUE_BONUS_WEAPON_DAMAGE_CLOSE_RANGE_MAX_RANGE",
-        "css_class": "distance",
-        "label": "Close Range",
-        "postfix": "m",
-        "postvalue_label": "Close Range",
-        "icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/range.svg",
-        "tooltip_section": "passive",
-        "tooltip_is_elevated": false,
-        "tooltip_is_important": false
-      },
-      "MeleeResistPercent": {
-        "value": "20",
-        "provided_property_type": "MODIFIER_VALUE_MELEE_DAMAGE_REDUCTION_PERCENT",
-        "prefix": "{s:sign}",
-        "label": "Melee Resist",
-        "postfix": "%",
-        "postvalue_label": "Melee Resist",
-        "tooltip_section": "innate",
-        "tooltip_is_elevated": false,
-        "tooltip_is_important": false
-      }
-    },
-    "weapon_info": {},
-    "type": "upgrade",
-    "shop_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/close_quarters.png",
-    "shop_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/close_quarters.webp",
-    "item_slot_type": "weapon",
-    "item_tier": 1,
-    "description": {
-      "desc": "Deal additional <span class=\"highlight\">Weapon Damage</span> when in <span class=\"highlight\">close range</span> to your target."
-    },
-    "activation": "passive",
-    "tooltip_sections": [
-      {
-        "section_type": "innate",
-        "section_attributes": [
-          {
-            "properties": [
-              "MeleeResistPercent"
-            ]
-          }
-        ]
-      },
-      {
-        "section_type": "passive",
-        "section_attributes": [
-          {
-            "loc_string": "Deal additional <span class=\"highlight\">Weapon Damage</span> when in <span class=\"highlight\">close range</span> to your target.",
-            "properties": [
-              "CloseRangeBonusDamageRange"
-            ],
-            "important_properties": [
-              "CloseRangeBonusWeaponPower"
-            ]
-          }
-        ]
-      }
-    ],
-    "upgrades": [
-      {
-        "property_upgrades": [
-          {
-            "name": "CloseRangeBonusWeaponPower",
-            "bonus": "15"
-          },
-          {
-            "name": "MeleeResistPercent",
-            "bonus": "10"
-          }
-        ]
-      }
-    ],
-    "is_active_item": false,
-    "shopable": true,
-    "cost": 800
-  };
+import { createFileRoute } from "@tanstack/react-router";
+import { createServerFn } from "@tanstack/react-start";
+import { setResponseHeader } from "@tanstack/react-start/server";
+import Card from "#/components/card";
+import { ItemSlotType } from "#/types";
+import { getLatestPatchDiff } from "../server/patchService";
 
+const closeQaurters = {
+	id: 1342610602,
+	class_name: "upgrade_close_range",
+	name: "Close Quarters",
+	start_trained: true,
+	image:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/mods_weapon/close_range.png",
+	image_webp:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/mods_weapon/close_range.webp",
+	heroes: [],
+	properties: {
+		AbilityCooldown: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cooldown",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityCooldown_scale_function",
+				specific_stat_scale_type: "EItemCooldown",
+			},
+			label: "Cooldown",
+			postfix: "s",
+			postvalue_label: "Cooldown",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/cooldown.svg",
+		},
+		AbilityDuration: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "duration",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityDuration_scale_function",
+				specific_stat_scale_type: "ETechDuration",
+			},
+			label: "Duration",
+			postfix: "s",
+			postvalue_label: "Duration",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/duration.svg",
+		},
+		AbilityCastRange: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "range",
+			display_units: "EDisplayUnit_Meters",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityCastRange_scale_function",
+				specific_stat_scale_type: "ETechRange",
+			},
+			label: "Cast Range",
+			postfix: "m",
+			postvalue_label: "Cast Range",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/property_range.svg",
+		},
+		AbilityUnitTargetLimit: {
+			value: "1",
+			can_set_token_override: true,
+		},
+		AbilityCastDelay: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			label: "Cast Delay",
+			postfix: "s",
+			postvalue_label: "Cast Delay",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityChannelTime: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_multi_stats",
+				subclass_name: "scale_duration",
+				scaling_stats: ["EChannelDuration", "ETechDuration"],
+			},
+			label: "Channel Duration",
+			postfix: "s",
+			postvalue_label: "Channel Duration",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityPostCastDuration: {
+			value: "0",
+			disable_value: "0",
+		},
+		AbilityCharges: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "-1",
+			scale_function: {
+				class_name: "scale_function_ability_charges",
+				subclass_name: "AbilityCharges_scale_function",
+			},
+			label: "Charges",
+			postvalue_label: "Charges",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityCooldownBetweenCharge: {
+			value: "-1.0",
+			can_set_token_override: true,
+			css_class: "charge_cooldown",
+			disable_value: "-2",
+			scale_function: {
+				class_name: "scale_function_ability_recharge_time",
+				subclass_name: "scale_function_ability_recharge_time",
+			},
+			label: "Charge Delay",
+			postfix: "s",
+			postvalue_label: "Charge Delay",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/recharge.svg",
+		},
+		ChannelMoveSpeed: {
+			value: "-1",
+			can_set_token_override: true,
+			css_class: "move_speed",
+			display_units: "EDisplayUnit_MetersPerSecond",
+			postfix: "m",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/move_speed.svg",
+		},
+		AbilityResourceCost: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		TechPower: {
+			value: "0",
+			can_set_token_override: true,
+			provided_property_type: "MODIFIER_VALUE_TECH_POWER",
+			disable_value: "0",
+			prefix: "{s:sign}",
+			label: "Spirit Power",
+			postfix: "",
+			postvalue_label: "Spirit Power",
+		},
+		WeaponPower: {
+			value: "0",
+			can_set_token_override: true,
+			provided_property_type: "MODIFIER_VALUE_WEAPON_POWER",
+			disable_value: "0",
+			prefix: "{s:sign}",
+			label: "Weapon Damage",
+			postfix: "%",
+			postvalue_label: "Weapon Damage",
+		},
+		CloseRangeBonusWeaponPower: {
+			value: "20",
+			provided_property_type:
+				"MODIFIER_VALUE_CLOSE_RANGE_BONUS_BASE_DAMAGE_PERCENT",
+			css_class: "bullet_damage",
+			usage_flags: ["ConditionallyApplied"],
+			display_units: "EDisplayUnit_Normal",
+			prefix: "{s:sign}",
+			label: "Weapon Damage",
+			postfix: "%",
+			postvalue_label: "Weapon Damage",
+			conditional: "within Range",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/damage_bullet_color.svg",
+			tooltip_section: "passive",
+			tooltip_is_elevated: false,
+			tooltip_is_important: true,
+		},
+		CloseRangeBonusDamageRange: {
+			value: "15m",
+			provided_property_type:
+				"MODIFIER_VALUE_BONUS_WEAPON_DAMAGE_CLOSE_RANGE_MAX_RANGE",
+			css_class: "distance",
+			label: "Close Range",
+			postfix: "m",
+			postvalue_label: "Close Range",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/range.svg",
+			tooltip_section: "passive",
+			tooltip_is_elevated: false,
+			tooltip_is_important: false,
+		},
+		MeleeResistPercent: {
+			value: "20",
+			provided_property_type: "MODIFIER_VALUE_MELEE_DAMAGE_REDUCTION_PERCENT",
+			prefix: "{s:sign}",
+			label: "Melee Resist",
+			postfix: "%",
+			postvalue_label: "Melee Resist",
+			tooltip_section: "innate",
+			tooltip_is_elevated: false,
+			tooltip_is_important: false,
+		},
+	},
+	weapon_info: {},
+	type: "upgrade",
+	shop_image:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/close_quarters.png",
+	shop_image_webp:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/close_quarters.webp",
+	item_slot_type: ItemSlotType.WEAPON,
+	item_tier: 1,
+	description: {
+		desc: 'Deal additional <span class="highlight">Weapon Damage</span> when in <span class="highlight">close range</span> to your target.',
+	},
+	activation: "passive",
+	tooltip_sections: [
+		{
+			section_type: "innate",
+			section_attributes: [
+				{
+					properties: ["MeleeResistPercent"],
+				},
+			],
+		},
+		{
+			section_type: "passive",
+			section_attributes: [
+				{
+					loc_string:
+						'Deal additional <span class="highlight">Weapon Damage</span> when in <span class="highlight">close range</span> to your target.',
+					properties: ["CloseRangeBonusDamageRange"],
+					important_properties: ["CloseRangeBonusWeaponPower"],
+				},
+			],
+		},
+	],
+	upgrades: [
+		{
+			property_upgrades: [
+				{
+					name: "CloseRangeBonusWeaponPower",
+					bonus: "15",
+				},
+				{
+					name: "MeleeResistPercent",
+					bonus: "10",
+				},
+			],
+		},
+	],
+	is_active_item: false,
+	shopable: true,
+	cost: 800,
+};
+const rapidRounds = {
+	id: 668299740,
+	class_name: "upgrade_rapid_rounds",
+	name: "Rapid Rounds",
+	start_trained: true,
+	image:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/mods_weapon/rapid_rounds.png",
+	image_webp:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/mods_weapon/rapid_rounds.webp",
+	heroes: [],
+	properties: {
+		AbilityCooldown: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cooldown",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityCooldown_scale_function",
+				specific_stat_scale_type: "EItemCooldown",
+			},
+			label: "Cooldown",
+			postfix: "s",
+			postvalue_label: "Cooldown",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/cooldown.svg",
+		},
+		AbilityDuration: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "duration",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityDuration_scale_function",
+				specific_stat_scale_type: "ETechDuration",
+			},
+			label: "Duration",
+			postfix: "s",
+			postvalue_label: "Duration",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/duration.svg",
+		},
+		AbilityCastRange: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "range",
+			display_units: "EDisplayUnit_Meters",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityCastRange_scale_function",
+				specific_stat_scale_type: "ETechRange",
+			},
+			label: "Cast Range",
+			postfix: "m",
+			postvalue_label: "Cast Range",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/property_range.svg",
+		},
+		AbilityUnitTargetLimit: {
+			value: "1",
+			can_set_token_override: true,
+		},
+		AbilityCastDelay: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			label: "Cast Delay",
+			postfix: "s",
+			postvalue_label: "Cast Delay",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityChannelTime: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_multi_stats",
+				subclass_name: "scale_duration",
+				scaling_stats: ["EChannelDuration", "ETechDuration"],
+			},
+			label: "Channel Duration",
+			postfix: "s",
+			postvalue_label: "Channel Duration",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityPostCastDuration: {
+			value: "0",
+			disable_value: "0",
+		},
+		AbilityCharges: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "-1",
+			scale_function: {
+				class_name: "scale_function_ability_charges",
+				subclass_name: "AbilityCharges_scale_function",
+			},
+			label: "Charges",
+			postvalue_label: "Charges",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityCooldownBetweenCharge: {
+			value: "-1.0",
+			can_set_token_override: true,
+			css_class: "charge_cooldown",
+			disable_value: "-2",
+			scale_function: {
+				class_name: "scale_function_ability_recharge_time",
+				subclass_name: "scale_function_ability_recharge_time",
+			},
+			label: "Charge Delay",
+			postfix: "s",
+			postvalue_label: "Charge Delay",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/recharge.svg",
+		},
+		ChannelMoveSpeed: {
+			value: "-1",
+			can_set_token_override: true,
+			css_class: "move_speed",
+			display_units: "EDisplayUnit_MetersPerSecond",
+			postfix: "m",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/move_speed.svg",
+		},
+		AbilityResourceCost: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		TechPower: {
+			value: "0",
+			can_set_token_override: true,
+			provided_property_type: "MODIFIER_VALUE_TECH_POWER",
+			disable_value: "0",
+			prefix: "{s:sign}",
+			label: "Spirit Power",
+			postfix: "",
+			postvalue_label: "Spirit Power",
+		},
+		WeaponPower: {
+			value: "0",
+			can_set_token_override: true,
+			provided_property_type: "MODIFIER_VALUE_WEAPON_POWER",
+			disable_value: "0",
+			prefix: "{s:sign}",
+			label: "Weapon Damage",
+			postfix: "%",
+			postvalue_label: "Weapon Damage",
+		},
+		BonusFireRate: {
+			value: "9",
+			provided_property_type: "MODIFIER_VALUE_FIRE_RATE",
+			prefix: "{s:sign}",
+			label: "Fire Rate",
+			postfix: "%",
+			postvalue_label: "Fire Rate",
+			tooltip_section: "innate",
+			tooltip_is_elevated: true,
+			tooltip_is_important: false,
+		},
+	},
+	weapon_info: {},
+	type: "upgrade",
+	shop_image:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/rapid_rounds.png",
+	shop_image_webp:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/rapid_rounds.webp",
+	item_slot_type: ItemSlotType.WEAPON,
+	item_tier: 1,
+	description: {},
+	activation: "passive",
+	tooltip_sections: [
+		{
+			section_type: "innate",
+			section_attributes: [
+				{
+					properties: [],
+					elevated_properties: ["BonusFireRate"],
+				},
+			],
+		},
+	],
+	upgrades: [
+		{
+			property_upgrades: [
+				{
+					name: "BonusFireRate",
+					bonus: "15",
+				},
+			],
+		},
+	],
+	is_active_item: false,
+	shopable: true,
+	cost: 800,
+};
+const divineBarrier = {
+	id: 1662311306,
+	class_name: "upgrade_divine_barrier",
+	name: "Divine Barrier",
+	start_trained: true,
+	image:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/mods_armor/savior.png",
+	image_webp:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/mods_armor/savior.webp",
+	heroes: [],
+	properties: {
+		AbilityCooldown: {
+			value: "45",
+			can_set_token_override: true,
+			css_class: "cooldown",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityCooldown_scale_function",
+				specific_stat_scale_type: "EItemCooldown",
+			},
+			label: "Cooldown",
+			postfix: "s",
+			postvalue_label: "Cooldown",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/cooldown.svg",
+			tooltip_section: "active",
+			tooltip_is_elevated: false,
+			tooltip_is_important: false,
+		},
+		AbilityDuration: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "duration",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityDuration_scale_function",
+				specific_stat_scale_type: "ETechDuration",
+			},
+			label: "Duration",
+			postfix: "s",
+			postvalue_label: "Duration",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/duration.svg",
+		},
+		AbilityCastRange: {
+			value: "40m",
+			can_set_token_override: true,
+			css_class: "range",
+			display_units: "EDisplayUnit_Meters",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityCastRange_scale_function",
+				specific_stat_scale_type: "ETechRange",
+			},
+			label: "Cast Range",
+			postfix: "m",
+			postvalue_label: "Cast Range",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/property_range.svg",
+			tooltip_section: "active",
+			tooltip_is_elevated: false,
+			tooltip_is_important: false,
+		},
+		AbilityUnitTargetLimit: {
+			value: "1",
+			can_set_token_override: true,
+		},
+		AbilityCastDelay: {
+			value: "0.2",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			label: "Cast Delay",
+			postfix: "s",
+			postvalue_label: "Cast Delay",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityChannelTime: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_multi_stats",
+				subclass_name: "scale_duration",
+				scaling_stats: ["EChannelDuration", "ETechDuration"],
+			},
+			label: "Channel Duration",
+			postfix: "s",
+			postvalue_label: "Channel Duration",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityPostCastDuration: {
+			value: "0",
+			disable_value: "0",
+		},
+		AbilityCharges: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "-1",
+			scale_function: {
+				class_name: "scale_function_ability_charges",
+				subclass_name: "AbilityCharges_scale_function",
+			},
+			label: "Charges",
+			postvalue_label: "Charges",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityCooldownBetweenCharge: {
+			value: "-1.0",
+			can_set_token_override: true,
+			css_class: "charge_cooldown",
+			disable_value: "-2",
+			scale_function: {
+				class_name: "scale_function_ability_recharge_time",
+				subclass_name: "scale_function_ability_recharge_time",
+			},
+			label: "Charge Delay",
+			postfix: "s",
+			postvalue_label: "Charge Delay",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/recharge.svg",
+		},
+		ChannelMoveSpeed: {
+			value: "-1",
+			can_set_token_override: true,
+			css_class: "move_speed",
+			display_units: "EDisplayUnit_MetersPerSecond",
+			postfix: "m",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/move_speed.svg",
+		},
+		AbilityResourceCost: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		TechPower: {
+			value: "0",
+			can_set_token_override: true,
+			provided_property_type: "MODIFIER_VALUE_TECH_POWER",
+			disable_value: "0",
+			prefix: "{s:sign}",
+			label: "Spirit Power",
+			postfix: "",
+			postvalue_label: "Spirit Power",
+		},
+		WeaponPower: {
+			value: "0",
+			can_set_token_override: true,
+			provided_property_type: "MODIFIER_VALUE_WEAPON_POWER",
+			disable_value: "0",
+			prefix: "{s:sign}",
+			label: "Weapon Damage",
+			postfix: "%",
+			postvalue_label: "Weapon Damage",
+		},
+		CooldownReductionPctOnOthers: {
+			value: "50",
+		},
+		BuffDuration: {
+			value: "6",
+			css_class: "duration",
+			scale_function: {
+				class_name: "scale_function_tech_duration",
+				subclass_name: "duration_scale_function",
+			},
+			label: "Buff Duration",
+			postfix: "s",
+			postvalue_label: "Buff Duration",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/duration.svg",
+			tooltip_section: "active",
+			tooltip_is_elevated: false,
+			tooltip_is_important: false,
+		},
+		CombatBarrier: {
+			value: "600",
+			provided_property_type: "MODIFIER_VALUE_BARRIER_HEALTH",
+			css_class: "combat_barrier",
+			usage_flags: ["ConditionallyApplied"],
+			label: "Barrier",
+			postvalue_label: "Barrier",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/armor_alt.svg",
+			tooltip_section: "active",
+			tooltip_is_elevated: false,
+			tooltip_is_important: true,
+		},
+		BonusMoveSpeed: {
+			value: "2.75m",
+			provided_property_type: "MODIFIER_VALUE_MOVEMENT_SPEED_MAX",
+			css_class: "move_speed",
+			usage_flags: ["ConditionallyApplied"],
+			display_units: "EDisplayUnit_MetersPerSecond",
+			prefix: "{s:sign}",
+			label: "Move Speed",
+			postfix: " m",
+			postvalue_label: "Move Speed",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/move_speed.svg",
+			tooltip_section: "active",
+			tooltip_is_elevated: false,
+			tooltip_is_important: true,
+		},
+		TechRangeMultiplier: {
+			value: "10",
+			provided_property_type: "MODIFIER_VALUE_TECH_RANGE_PERCENT",
+			css_class: "distance",
+			prefix: "{s:sign}",
+			label: "Ability Range",
+			postfix: "%",
+			postvalue_label: "Ability Range",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/range.svg",
+			tooltip_section: "innate",
+			tooltip_is_elevated: false,
+			tooltip_is_important: false,
+		},
+		TechRadiusMultiplier: {
+			value: "10",
+			provided_property_type: "MODIFIER_VALUE_TECH_RADIUS_PERCENT",
+			css_class: "distance",
+			prefix: "{s:sign}",
+			label: "Radius",
+			postfix: "%",
+			postvalue_label: "Radius",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/range.svg",
+		},
+	},
+	weapon_info: {},
+	type: "upgrade",
+	shop_image:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/divine_barrier.png",
+	shop_image_webp:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/divine_barrier.webp",
+	item_slot_type: "vitality",
+	item_tier: 4,
+	description: {
+		desc: '<span class="highlight">Remove all non-stun debuffs</span> from the target and provide them with a <span class="highlight">Barrier</span> and <span class="highlight">Move Speed</span>. <span class="diminish"><br>Can be self-cast. Cooldown is reduced by half when cast on someone else.</span>',
+	},
+	activation: "press",
+	component_items: ["upgrade_guardian_ward"],
+	tooltip_sections: [
+		{
+			section_type: "innate",
+			section_attributes: [
+				{
+					properties: ["TechRangeMultiplier"],
+				},
+			],
+		},
+		{
+			section_type: "active",
+			section_attributes: [
+				{
+					loc_string:
+						'<span class="highlight">Remove all non-stun debuffs</span> from the target and provide them with a <span class="highlight">Barrier</span> and <span class="highlight">Move Speed</span>. <span class="diminish"><br>Can be self-cast. Cooldown is reduced by half when cast on someone else.</span>',
+					properties: ["AbilityCooldown", "BuffDuration", "AbilityCastRange"],
+					important_properties: ["CombatBarrier", "BonusMoveSpeed"],
+				},
+			],
+		},
+	],
+	upgrades: [
+		{
+			property_upgrades: [
+				{
+					name: "AbilityCooldown",
+					bonus: "-27",
+				},
+				{
+					name: "TechRadiusMultiplier",
+					bonus: "10",
+				},
+				{
+					name: "TechRangeMultiplier",
+					bonus: "10",
+				},
+			],
+		},
+	],
+	is_active_item: true,
+	shopable: true,
+	cost: 6400,
+};
+const cheatDeath = {
+	id: 3361811174,
+	class_name: "upgrade_cheat_death",
+	name: "Cheat Death",
+	start_trained: true,
+	image:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/mods_tech/torment_aura.png",
+	image_webp:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/mods_tech/torment_aura.webp",
+	heroes: [],
+	update_time: 1741743802,
+	properties: {
+		AbilityCooldown: {
+			value: 90,
+			can_set_token_override: true,
+			css_class: "cooldown",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityCooldown_scale_function",
+				specific_stat_scale_type: "EItemCooldown",
+			},
+			label: "Cooldown",
+			postfix: "s",
+			postvalue_label: "Cooldown",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/cooldown.svg",
+			tooltip_section: "passive",
+			tooltip_is_elevated: false,
+			tooltip_is_important: false,
+		},
+		AbilityDuration: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "duration",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityDuration_scale_function",
+				specific_stat_scale_type: "ETechDuration",
+			},
+			label: "Duration",
+			postfix: "s",
+			postvalue_label: "Duration",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/duration.svg",
+		},
+		AbilityCastRange: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "range",
+			display_units: "EDisplayUnit_Meters",
+			scale_function: {
+				class_name: "scale_function_single_stat",
+				subclass_name: "AbilityCastRange_scale_function",
+				specific_stat_scale_type: "ETechRange",
+			},
+			label: "Cast Range",
+			postfix: "m",
+			postvalue_label: "Cast Range",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/property_range.svg",
+		},
+		AbilityUnitTargetLimit: {
+			value: "1",
+			can_set_token_override: true,
+		},
+		AbilityCastDelay: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			label: "Cast Delay",
+			postfix: "s",
+			postvalue_label: "Cast Delay",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityChannelTime: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			scale_function: {
+				class_name: "scale_function_multi_stats",
+				subclass_name: "scale_duration",
+				scaling_stats: ["EChannelDuration", "ETechDuration"],
+			},
+			label: "Channel Duration",
+			postfix: "s",
+			postvalue_label: "Channel Duration",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityPostCastDuration: {
+			value: "0",
+			disable_value: "0",
+		},
+		AbilityCharges: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "-1",
+			scale_function: {
+				class_name: "scale_function_ability_charges",
+				subclass_name: "AbilityCharges_scale_function",
+			},
+			label: "Charges",
+			postvalue_label: "Charges",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		AbilityCooldownBetweenCharge: {
+			value: "-1.0",
+			can_set_token_override: true,
+			css_class: "charge_cooldown",
+			disable_value: "-2",
+			scale_function: {
+				class_name: "scale_function_ability_recharge_time",
+				subclass_name: "scale_function_ability_recharge_time",
+			},
+			label: "Charge Delay",
+			postfix: "s",
+			postvalue_label: "Charge Delay",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/recharge.svg",
+		},
+		ChannelMoveSpeed: {
+			value: "-1",
+			can_set_token_override: true,
+			css_class: "move_speed",
+			display_units: "EDisplayUnit_MetersPerSecond",
+			postfix: "m",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/move_speed.svg",
+		},
+		AbilityResourceCost: {
+			value: "0",
+			can_set_token_override: true,
+			css_class: "cast",
+			disable_value: "0",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png",
+		},
+		TechPower: {
+			value: "0",
+			can_set_token_override: true,
+			provided_property_type: "MODIFIER_VALUE_TECH_POWER",
+			disable_value: "0",
+			prefix: "{s:sign}",
+			label: "Spirit Power",
+			postfix: "",
+			postvalue_label: "Spirit Power",
+		},
+		WeaponPower: {
+			value: "0",
+			can_set_token_override: true,
+			provided_property_type: "MODIFIER_VALUE_WEAPON_POWER",
+			disable_value: "0",
+			prefix: "{s:sign}",
+			label: "Weapon Damage",
+			postfix: "%",
+			postvalue_label: "Weapon Damage",
+		},
+		DeathImmunityDuration: {
+			value: "4.5",
+			css_class: "duration",
+			scale_function: {
+				class_name: "scale_function_tech_duration",
+				subclass_name: "duration_scale_function",
+			},
+			label: "Death Immunity Duration",
+			postfix: "s",
+			postvalue_label: "Death Immunity Duration",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/duration.svg",
+			tooltip_section: "passive",
+			tooltip_is_elevated: false,
+			tooltip_is_important: true,
+		},
+		BonusHealth: {
+			value: "200",
+			provided_property_type: "MODIFIER_VALUE_HEALTH_MAX",
+			css_class: "health",
+			prefix: "{s:sign}",
+			label: "Bonus Health",
+			postvalue_label: "Bonus Health",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/health.svg",
+			tooltip_section: "innate",
+			tooltip_is_elevated: false,
+			tooltip_is_important: false,
+		},
+		BulletResist: {
+			value: "15",
+			provided_property_type: "MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST",
+			css_class: "bullet_armor_up",
+			usage_flags: ["IntrinsicallyProvidedInAbility"],
+			prefix: "{s:sign}",
+			label: "Bullet Resist",
+			postfix: "%",
+			postvalue_label: "Bullet Resist",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/armor_bullet_color.svg",
+			tooltip_section: "innate",
+			tooltip_is_elevated: false,
+			tooltip_is_important: false,
+		},
+		DeathImmunityDamageReduction: {
+			value: "-60",
+			provided_property_type: "MODIFIER_VALUE_DAMAGE_PERCENT",
+			css_class: "damage",
+			usage_flags: ["ConditionallyApplied"],
+			negative_attribute: true,
+			label: "Damage Reduction",
+			postfix: "%",
+			postvalue_label: "Damage Reduction",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/damage_crit.svg",
+			tooltip_section: "passive",
+			tooltip_is_elevated: false,
+			tooltip_is_important: false,
+		},
+		HealAmpReceivePenaltyPercent: {
+			value: "-60",
+			provided_property_type: "MODIFIER_VALUE_HEAL_AMP_RECEIVE_PERCENT",
+			usage_flags: ["ConditionallyApplied"],
+			negative_attribute: true,
+			prefix: "",
+			label: "Healing Reduction",
+			postfix: "%",
+			postvalue_label: "Healing Reduction",
+			tooltip_section: "passive",
+			tooltip_is_elevated: false,
+			tooltip_is_important: false,
+		},
+		HealAmpRegenPenaltyPercent: {
+			value: "-60",
+			provided_property_type: "MODIFIER_VALUE_HEAL_AMP_REGEN_PERCENT",
+			usage_flags: ["ConditionallyApplied"],
+			negative_attribute: true,
+			label: "Healing Reduction",
+			postfix: "%",
+			postvalue_label: "Healing Reduction",
+		},
+		BonusMoveSpeed: {
+			value: "0m",
+			provided_property_type: "MODIFIER_VALUE_MOVEMENT_SPEED_MAX",
+			css_class: "move_speed",
+			usage_flags: ["ConditionallyApplied"],
+			negative_attribute: true,
+			display_units: "EDisplayUnit_MetersPerSecond",
+			prefix: "{s:sign}",
+			label: "Move Speed",
+			postfix: " m",
+			postvalue_label: "Move Speed",
+			icon: "https://assets-bucket.deadlock-api.com/assets-api-res/icons/move_speed.svg",
+		},
+	},
+	weapon_info: {},
+	type: "upgrade",
+	shop_image:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/cheat_death.png",
+	shop_image_webp:
+		"https://assets-bucket.deadlock-api.com/assets-api-res/images/items/vitality/cheat_death.webp",
+	item_slot_type: "vitality",
+	item_tier: 4,
+	disabled: false,
+	description: {},
+	activation: "passive",
+	tooltip_sections: [
+		{
+			section_type: "innate",
+			section_attributes: [
+				{
+					properties: ["BonusHealth", "BulletResist"],
+				},
+			],
+		},
+		{
+			section_type: "passive",
+			section_attributes: [
+				{
+					loc_string:
+						'When you would take lethal damage, instead become <span class="highlight">temporarily death immune</span> and <span class="highlight">remove all non-stun debuffs</span>. <br><br>While death immune, you deal <span class="highlight">reduced damage</span> and have <span class="highlight">reduced healing</span>.',
+					properties: [
+						"AbilityCooldown",
+						"DeathImmunityDamageReduction",
+						"HealAmpReceivePenaltyPercent",
+					],
+					important_properties: ["DeathImmunityDuration"],
+				},
+			],
+		},
+	],
+	upgrades: [
+		{
+			property_upgrades: [
+				{
+					name: "DeathImmunityDamageReduction",
+					bonus: "90",
+				},
+				{
+					name: "HealAmpReceivePenaltyPercent",
+					bonus: "90",
+				},
+				{
+					name: "HealAmpRegenPenaltyPercent",
+					bonus: "90",
+				},
+				{
+					name: "DeathImmunityDuration",
+					bonus: "0.5",
+				},
+				{
+					name: "AbilityCooldown",
+					bonus: "-20",
+				},
+			],
+		},
+	],
+	is_active_item: false,
+	shopable: true,
+	cost: 6400,
+};
 // 1. The Server Function (Executes on Vercel Edge)
-const fetchLatestDiff = createServerFn({ method: 'GET' })
-  .handler(async () => {
-    // Cache this forever until the Vercel Deploy Hook rebuilds the site
-    setResponseHeader('Cache-Control', 'public, s-maxage=31536000, immutable');
-    return await getLatestPatchDiff();
-  });
+const fetchLatestDiff = createServerFn({ method: "GET" }).handler(async () => {
+	// Cache this forever until the Vercel Deploy Hook rebuilds the site
+	setResponseHeader("Cache-Control", "public, s-maxage=31536000, immutable");
+	return await getLatestPatchDiff();
+});
 
 // 2. The Route Configuration
-export const Route = createFileRoute('/')({
-  loader: async () => fetchLatestDiff(),
-  component: Home,
+export const Route = createFileRoute("/")({
+	loader: async () => fetchLatestDiff(),
+	component: Home,
 });
 
 // 3. The React Component
 function Home() {
-  // const { oldVersion, newVersion, diff } = Route.useLoaderData();
+	// const { oldVersion, newVersion, diff } = Route.useLoaderData();
 
-
-  return (
-<Card item={closeQaurters} />
-  );
+	return (
+		<>
+			<Card item={closeQaurters} />
+			<Card item={rapidRounds} />
+			<Card item={divineBarrier} />
+			<Card item={cheatDeath} />
+		</>
+	);
 }
