@@ -4,11 +4,65 @@
 @import "tailwindcss";
 
 /* 1. Import the font package */
-@import '@fontsource-variable/space-grotesk';
+@import "@fontsource-variable/space-grotesk";
+
+/* Registered here because Tailwind v4 has no tailwind.config plugins array.
+   Biome's CSS parser does not know Tailwind's `@plugin` at-rule and flags it. */
+@plugin "@tailwindcss/typography";
 
 /* 2. Apply it globally */
 body {
-  font-family: 'Space Grotesk Variable', sans-serif;
-  background-color: #0E0E13;
-  color:#fff;
+	font-family: "Space Grotesk Variable", sans-serif;
+	background-color: #0e0e13;
+	color: #fff;
+}
+
+svg {
+	height: 20px !important;
+	width: 20px !important;
+	display: inline-block;
+}
+.highlight {
+	font-weight: 700;
+	color: white;
+}
+.diminish {
+	font-style: italic;
+	font-size: 14px;
+	color: oklch(87.2% 0.01 258.338);
+}
+.inline-attribute {
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Without this the sticky section nav covers whatever you jump to. */
+section[id] {
+	scroll-margin-top: 4.5rem;
+}
+
+.masonary {
+	column-count: 3;
+	column-gap: 0;
+}
+
+/* Cards were splitting across columns. */
+.masonary > * {
+	break-inside: avoid;
+}
+@media (max-width: 1228px) {
+	.masonary {
+		column-count: 2;
+	}
+}
+
+@media (max-width: 828px) {
+	.masonary {
+		column-count: 1;
+	}
 }

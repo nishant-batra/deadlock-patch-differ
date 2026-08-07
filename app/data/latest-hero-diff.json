@@ -1,0 +1,394 @@
+{
+	"added": {},
+	"removed": {},
+	"modified": {
+		"Lady Geist": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"ground_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.7,
+									"new": 0.72
+								}
+							}
+						},
+						"air_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.49,
+									"new": 0.51
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Abrams": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"ground_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.7,
+									"new": 0.72
+								}
+							}
+						},
+						"air_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.49,
+									"new": 0.51
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Dynamo": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"ground_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.7,
+									"new": 0.72
+								}
+							}
+						},
+						"air_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.49,
+									"new": 0.51
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Kelvin": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"ground_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.7,
+									"new": 0.72
+								}
+							}
+						},
+						"air_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.49,
+									"new": 0.51
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Bebop": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"ground_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.7,
+									"new": 0.72
+								}
+							}
+						},
+						"air_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.49,
+									"new": 0.51
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Mo & Krill": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"ground_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.7,
+									"new": 0.72
+								}
+							}
+						},
+						"air_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.49,
+									"new": 0.51
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Shiv": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"stamina_regen_per_second": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.18181,
+									"new": 0.166667
+								}
+							}
+						},
+						"ground_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.7,
+									"new": 0.72
+								}
+							}
+						},
+						"air_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.49,
+									"new": 0.51
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Venator": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"sprint_speed": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 1.5,
+									"new": 1
+								}
+							}
+						},
+						"ground_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.7,
+									"new": 0.72
+								}
+							}
+						},
+						"air_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.49,
+									"new": 0.51
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Victor": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"ground_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.7,
+									"new": 0.72
+								}
+							}
+						},
+						"air_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.49,
+									"new": 0.51
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Paige": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"ground_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.7,
+									"new": 0.72
+								}
+							}
+						},
+						"air_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.49,
+									"new": 0.51
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"The Doorman": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"standard_level_up_upgrades": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": {
+							"old": 1.19,
+							"new": 1.25
+						}
+					}
+				}
+			}
+		},
+		"Rem": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"ground_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.68,
+									"new": 0.72
+								}
+							}
+						},
+						"air_dash_duration": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.49,
+									"new": 0.51
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

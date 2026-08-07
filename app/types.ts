@@ -1,5 +1,10 @@
 // types.ts
 
+import type { Change } from "#/utils/diffEngine";
+import type { DisplayChange } from "#/utils/tooltipProjection";
+
+export type { Change, DisplayChange };
+
 export type ItemData = Item[];
 export enum ItemSlotType {
 	WEAPON = "weapon",
@@ -71,6 +76,11 @@ export interface ScaleFunction {
 	street_brawl_stat_scale?: number;
 	upgrade_type?: string;
 	scale_stat_filter?: string;
+}
+export interface ImportantPropertiesWithIcon {
+	name: string;
+	icon: string;
+	localized_name: string;
 }
 
 export interface WeaponInfo {
@@ -163,6 +173,7 @@ export interface SectionAttribute {
 	properties?: string[];
 	elevated_properties?: string[];
 	important_properties?: string[];
+	important_properties_with_icon?: ImportantPropertiesWithIcon[];
 	loc_string?: string;
 }
 
@@ -187,4 +198,106 @@ export interface PropertyInfo {
 export interface Videos {
 	webm?: string;
 	mp4?: string;
+}
+
+// ---------------------------------------------------------------------------
+// Heroes
+// ---------------------------------------------------------------------------
+
+export interface HeroImages {
+	icon_hero_card?: string;
+	icon_hero_card_webp?: string;
+	icon_image_small?: string;
+	icon_image_small_webp?: string;
+	minimap_image?: string;
+	minimap_image_webp?: string;
+	top_bar_vertical_image?: string;
+	top_bar_vertical_image_webp?: string;
+	background_image?: string;
+	background_image_webp?: string;
+	/** No `_webp` sibling exists for this one. */
+	name_image?: string;
+}
+
+export interface StartingStat {
+	value: number;
+	display_stat_name?: string;
+}
+
+export interface HeroColors {
+	ui?: number[];
+	style?: number[];
+	style_hex?: string;
+}
+
+export interface Hero {
+	id: number;
+	class_name: string;
+	name: string;
+	images: HeroImages;
+	/** `signature1` … `weapon_primary` → an item `class_name`. */
+	items: Record<string, string>;
+	starting_stats: Record<string, StartingStat>;
+	standard_level_up_upgrades: Record<string, number>;
+	colors?: HeroColors;
+	player_selectable?: boolean;
+	disabled?: boolean;
+	in_development?: boolean;
+}
+
+// ---------------------------------------------------------------------------
+// Patch artifacts
+// ---------------------------------------------------------------------------
+
+export interface PatchMeta {
+	clientVersion: number;
+	versionDatetime: string;
+	ingestedAt: string;
+	counts: { items: number; heroes: number };
+}
+
+export interface PatchNote {
+	title: string;
+	pubDate: string;
+	link: string;
+	source: string;
+	/** Sanitized at ingest — safe for `dangerouslySetInnerHTML`. */
+	html: string;
+}
+
+export interface PatchNotes {
+	primary?: PatchNote;
+	recent: PatchNote[];
+}
+
+export interface ItemsView {
+	items: Item[];
+	abilities: Item[];
+}
+
+export interface AbilityChange {
+	ability: Item;
+	changes: Change[];
+}
+
+export interface ChangedHero {
+	hero: Hero;
+	abilities: AbilityChange[];
+	statChanges: Change[];
+}
+
+export interface ChangedItem {
+	item: Item;
+	changes: DisplayChange[];
+}
+
+/**
+ * The three item groups, pre-grouped at ingest so the route renders them in
+ * order without doing its own bucketing. Added and removed items carry no
+ * change list - there is nothing to diff a new or deleted item against.
+ */
+export interface ItemChanges {
+	added: Item[];
+	removed: Item[];
+	changed: ChangedItem[];
 }
