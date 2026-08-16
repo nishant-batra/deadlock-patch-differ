@@ -7,9 +7,12 @@ export default function PatchHeader({ meta }: { meta: PatchMeta | null }) {
 	return (
 		<header className="border-white/10 border-b px-4 py-5 sm:px-8">
 			<div className="mx-auto flex max-w-7xl flex-wrap items-baseline gap-x-4 gap-y-2">
-				<h1 className="font-extrabold text-2xl tracking-tight">
+				<Link
+					to="/"
+					className="font-extrabold text-2xl tracking-tight hover:text-gray-200"
+				>
 					Deadlock Patch Comparator
-				</h1>
+				</Link>
 
 				{meta ? (
 					<>

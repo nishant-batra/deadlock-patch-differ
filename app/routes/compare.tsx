@@ -59,7 +59,10 @@ export const Route = createFileRoute("/compare")({
 				content:
 					"Side-by-side base stat and ability comparison tool for Deadlock heroes. Compare health, weapon damage, spirit scaling, and mobility stats.",
 			},
-			{ property: "og:url", content: "https://deadlockpatch.vercel.app/compare" },
+			{
+				property: "og:url",
+				content: "https://deadlockpatch.vercel.app/compare",
+			},
 			{
 				name: "twitter:title",
 				content:
@@ -71,7 +74,9 @@ export const Route = createFileRoute("/compare")({
 					"Side-by-side base stat and ability comparison tool for Deadlock heroes. Compare health, weapon damage, spirit scaling, and mobility stats.",
 			},
 		],
-		links: [{ rel: "canonical", href: "https://deadlockpatch.vercel.app/compare" }],
+		links: [
+			{ rel: "canonical", href: "https://deadlockpatch.vercel.app/compare" },
+		],
 	}),
 	loader: async () => fetchHeroes(),
 	component: Compare,
@@ -84,7 +89,11 @@ function Compare() {
 
 	return (
 		<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
-			<h2 className="mb-4 font-extrabold text-xl">Compare heroes</h2>
+			<h1 className="mb-1 font-extrabold text-2xl">Deadlock Hero Comparison</h1>
+			<p className="mb-6 text-gray-400 text-sm">
+				Compare Deadlock hero stats side by side — health, weapon damage, spirit
+				scaling, and mobility.
+			</p>
 			<HeroCompare heroes={heroesData} />
 		</main>
 	);

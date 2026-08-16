@@ -48,7 +48,7 @@ export const Route = createFileRoute("/")({
 			(loaderData?.items?.changed?.length ?? 0);
 
 		const title = `Deadlock Patch Notes (${patchTitle}) — ${heroCount} Heroes, ${itemCount} Items Changed | Deadlock Patch Comparator`;
-		const description = `Interactive visual breakdown of ${patchTitle}. Compare stat changes, ability upgrades, and item buffs/nerfs across ${heroCount} heroes and ${itemCount} items in Deadlock.`;
+		const description = `Interactive visual breakdown of ${patchTitle}, the latest Deadlock update. Compare stat changes, ability upgrades, and item buffs/nerfs across ${heroCount} heroes and ${itemCount} items in this Deadlock patch visualizer.`;
 
 		return {
 			meta: [
@@ -252,6 +252,14 @@ function Changes() {
 			<SectionNav counts={{ items: itemCount, heroes: heroes.length }} />
 
 			<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
+				<h1 className="mb-1 font-extrabold text-2xl">
+					Deadlock Patch Notes &amp; Update Visualizer
+				</h1>
+				<p className="mb-6 text-gray-400 text-sm">
+					See exactly what changed in the latest Deadlock update — hero stat
+					changes, item buffs and nerfs, and full patch notes, visualized side
+					by side.
+				</p>
 				<Legend />
 				{blocks.map((block, index) => (
 					<Fragment key={block.id}>

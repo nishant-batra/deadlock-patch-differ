@@ -14,6 +14,7 @@ import type { ReactNode } from "react";
 import AdSlot from "#/components/ad-slot";
 import { ADSENSE_PUBLISHER_ID } from "#/components/ad-slot/constants";
 import PatchHeader from "#/components/patch-header";
+import RouteLoadingBar from "#/components/route-loading-bar";
 import ScrollToTop from "#/components/scroll-to-top";
 import { getPatchMeta } from "#/server/patchService";
 import styles from "../styles/app.css?url";
@@ -41,7 +42,7 @@ export const Route = createRootRoute({
 			{
 				name: "keywords",
 				content:
-					"Deadlock patch notes, Deadlock changes, Deadlock buffs and nerfs, Deadlock hero stats, Deadlock item changes, Deadlock update tracker, Valve Deadlock",
+					"Deadlock patch notes, Deadlock changes, Deadlock buffs and nerfs, Deadlock hero stats, Deadlock item changes, Deadlock update tracker, Valve Deadlock, Deadlock patch visualizer, Deadlock update, Deadlock update visualizer, Deadlock hero comparison, Deadlock item stats, Deadlock all items, Deadlock all heroes",
 			},
 			{ name: "theme-color", content: "#090d16" },
 			{
@@ -51,7 +52,24 @@ export const Route = createRootRoute({
 			{ property: "og:site_name", content: "Deadlock Patch Comparator" },
 			{ property: "og:type", content: "website" },
 			{ property: "og:locale", content: "en_US" },
+			{
+				property: "og:image",
+				content: "https://deadlockpatch.vercel.app/og-image.webp",
+			},
+			{ property: "og:image:type", content: "image/webp" },
+			{
+				property: "og:image:alt",
+				content: "Deadlock — Valve's hero shooter",
+			},
 			{ name: "twitter:card", content: "summary_large_image" },
+			{
+				name: "twitter:image",
+				content: "https://deadlockpatch.vercel.app/og-image.webp",
+			},
+			{
+				name: "twitter:image:alt",
+				content: "Deadlock — Valve's hero shooter",
+			},
 		],
 		links: [{ rel: "stylesheet", href: styles }],
 		scripts: [
@@ -91,6 +109,7 @@ function RootComponent() {
 	const meta = Route.useLoaderData();
 	return (
 		<RootDocument>
+			<RouteLoadingBar />
 			<PatchHeader meta={meta} />
 			<div className="ad-rail-row">
 				<AdSlot

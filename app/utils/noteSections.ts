@@ -43,7 +43,9 @@ export type NoteSection = {
  * separators are needed.
  */
 export const chunks = (html: string): string[] =>
-	html.split(/(?<=<\/p>)|<br\s*\/?>/i).filter((chunk) => chunk.trim());
+	html
+		.split(/(?<=<\/p>)|(?<=<br\s*\/?>)/i)
+		.filter((chunk) => chunk.trim());
 
 /**
  * The heading name if this chunk is one, else `null`. The feed writes headings

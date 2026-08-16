@@ -32,6 +32,9 @@ export type TierRow = {
 	new?: string | number;
 	/** e.g. `ETechPower` - the bonus scales with Spirit rather than being flat. */
 	scaling?: string;
+	/** Mirrors `ItemProperty.prefix`/`.postfix` - same rendering as a `PropertyList` chip. */
+	prefix?: string;
+	postfix?: string;
 };
 
 export type TierDiff = {
@@ -41,7 +44,13 @@ export type TierDiff = {
 	text?: { old: string; new: string };
 };
 
-type Projected = { label: string; bonus: string | number; scaling?: string };
+type Projected = {
+	label: string;
+	bonus: string | number;
+	scaling?: string;
+	prefix?: string;
+	postfix?: string;
+};
 
 /**
  * `name` is not unique inside a tier. `upgrade_type` (e.g. `EAddToScale`)
@@ -57,7 +66,17 @@ const keyOf = (upgrade: PropertyUpgrade, seen: Map<string, number>) => {
 	return `${base}#${occurrence}`;
 };
 
-const projectTier = (tier: Upgrade | undefined): Map<string, Projected> => {
+/**
+ * `upgrade.name` is a key into the ability's own `properties` dict - the
+ * same dict `PropertyList`/`StatDelta` read `prefix`/`postfix` from for
+ * items. Verified against the current catalog: 1072 of 1073
+ * `property_upgrades` resolve to a matching `properties` entry, so this
+ * carries real units (`%`, `s`, ...) rather than guessing them.
+ */
+const projectTier = (
+	tier: Upgrade | undefined,
+	properties: Item["properties"] | undefined,
+): Map<string, Projected> => {
 	const seen = new Map<string, number>();
 	const out = new Map<string, Projected>();
 	for (const upgrade of tier?.property_upgrades ?? []) {
@@ -65,6 +84,8 @@ const projectTier = (tier: Upgrade | undefined): Map<string, Projected> => {
 			label: humaniseStatKey(upgrade.name),
 			bonus: upgrade.bonus,
 			scaling: upgrade.scale_stat_filter,
+			prefix: properties?.[upgrade.name]?.prefix,
+			postfix: properties?.[upgrade.name]?.postfix,
 		});
 	}
 	return out;
@@ -90,8 +111,8 @@ export function diffAbilityTiers(
 	after: Item | undefined,
 ): TierDiff[] {
 	return TIERS.map((tier) => {
-		const previous = projectTier(before?.upgrades?.[tier - 1]);
-		const current = projectTier(after?.upgrades?.[tier - 1]);
+		const previous = projectTier(before?.upgrades?.[tier - 1], before?.properties);
+		const current = projectTier(after?.upgrades?.[tier - 1], after?.properties);
 		const rows: TierRow[] = [];
 
 		for (const [key, value] of current) {
@@ -103,6 +124,8 @@ export function diffAbilityTiers(
 					kind: "added",
 					new: value.bonus,
 					scaling: value.scaling,
+					prefix: value.prefix,
+					postfix: value.postfix,
 				});
 			} else if (!same(prior.bonus, value.bonus)) {
 				rows.push({
@@ -112,6 +135,8 @@ export function diffAbilityTiers(
 					old: prior.bonus,
 					new: value.bonus,
 					scaling: value.scaling,
+					prefix: value.prefix,
+					postfix: value.postfix,
 				});
 			} else {
 				rows.push({
@@ -120,6 +145,8 @@ export function diffAbilityTiers(
 					kind: "equal",
 					new: value.bonus,
 					scaling: value.scaling,
+					prefix: value.prefix,
+					postfix: value.postfix,
 				});
 			}
 		}
@@ -132,6 +159,8 @@ export function diffAbilityTiers(
 					kind: "removed",
 					old: value.bonus,
 					scaling: value.scaling,
+					prefix: value.prefix,
+					postfix: value.postfix,
 				});
 			}
 		}
@@ -171,6 +200,8 @@ export function currentTiers(tiers: TierDiff[]): TierDiff[] {
 				kind: "equal" as const,
 				new: row.new,
 				scaling: row.scaling,
+				prefix: row.prefix,
+				postfix: row.postfix,
 			})),
 	}));
 }

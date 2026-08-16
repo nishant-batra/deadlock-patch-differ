@@ -45,11 +45,16 @@ export const Route = createFileRoute("/items")({
 				},
 				{ property: "og:title", content: title },
 				{ property: "og:description", content: description },
-				{ property: "og:url", content: "https://deadlockpatch.vercel.app/items" },
+				{
+					property: "og:url",
+					content: "https://deadlockpatch.vercel.app/items",
+				},
 				{ name: "twitter:title", content: title },
 				{ name: "twitter:description", content: description },
 			],
-			links: [{ rel: "canonical", href: "https://deadlockpatch.vercel.app/items" }],
+			links: [
+				{ rel: "canonical", href: "https://deadlockpatch.vercel.app/items" },
+			],
 		};
 	},
 	loader: async ({ deps }) => fetchItems({ data: deps.type }),
@@ -65,6 +70,12 @@ function Items() {
 
 	return (
 		<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
+			<h1 className="mb-1 font-extrabold text-2xl">All Deadlock Items</h1>
+			<p className="mb-6 text-gray-400 text-sm">
+				Browse every Deadlock shop item with full item stats — costs, component
+				trees, active abilities, and stat scaling across Weapon, Vitality, and
+				Spirit tiers.
+			</p>
 			<div className="mb-4 flex gap-2">
 				{itemTypes.map((itemType) => (
 					<button

@@ -1,6 +1,13 @@
 import ScalingIcon from "#/components/scaling-icon";
 import type { TierDiff } from "#/types";
+import { resolvePrefix, shouldAppendPostfix } from "#/utils/statFormatting";
 import { formatBonus } from "./utils";
+
+type Row = TierDiff["rows"][number];
+
+/** `prefix` + the formatted bonus + `postfix`, same rendering as a `PropertyList` chip. */
+const withUnits = (value: Row["old"] | Row["new"], row: Row) =>
+	`${resolvePrefix(row.prefix)}${formatBonus(value)}${shouldAppendPostfix(value, row.postfix) ? row.postfix : ""}`;
 
 export default function TierRowView({
 	row,
@@ -20,7 +27,7 @@ export default function TierRowView({
 					<span className="rounded bg-emerald-500/20 px-1 font-bold text-[9px] text-emerald-300 uppercase">
 						New
 					</span>
-					<b className="text-emerald-300">{formatBonus(row.new)}</b>
+					<b className="text-emerald-300">{withUnits(row.new, row)}</b>
 				</span>
 			</div>
 		);
@@ -36,7 +43,7 @@ export default function TierRowView({
 					<span className="rounded bg-rose-500/20 px-1 font-bold text-[9px] text-rose-300 uppercase">
 						Gone
 					</span>
-					<s className="text-gray-500">{formatBonus(row.old)}</s>
+					<s className="text-gray-500">{withUnits(row.old, row)}</s>
 				</span>
 			</div>
 		);
@@ -49,9 +56,9 @@ export default function TierRowView({
 					{scaled}
 				</span>
 				<span className="flex items-baseline gap-1 font-bold">
-					<s className="font-normal text-gray-500">{formatBonus(row.old)}</s>
+					<s className="font-normal text-gray-500">{withUnits(row.old, row)}</s>
 					<span className="text-gray-500">&rarr;</span>
-					<span className="text-amber-300">{formatBonus(row.new)}</span>
+					<span className="text-amber-300">{withUnits(row.new, row)}</span>
 				</span>
 			</div>
 		);
@@ -62,7 +69,7 @@ export default function TierRowView({
 				{row.label}
 				{scaled}
 			</span>
-			<span className="text-gray-200">{formatBonus(row.new)}</span>
+			<span className="text-gray-200">{withUnits(row.new, row)}</span>
 		</div>
 	);
 }

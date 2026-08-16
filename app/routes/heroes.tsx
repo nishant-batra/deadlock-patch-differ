@@ -21,11 +21,16 @@ export const Route = createFileRoute("/heroes")({
 				},
 				{ property: "og:title", content: title },
 				{ property: "og:description", content: description },
-				{ property: "og:url", content: "https://deadlockpatch.vercel.app/heroes" },
+				{
+					property: "og:url",
+					content: "https://deadlockpatch.vercel.app/heroes",
+				},
 				{ name: "twitter:title", content: title },
 				{ name: "twitter:description", content: description },
 			],
-			links: [{ rel: "canonical", href: "https://deadlockpatch.vercel.app/heroes" }],
+			links: [
+				{ rel: "canonical", href: "https://deadlockpatch.vercel.app/heroes" },
+			],
 		};
 	},
 	loader: async () => fetchHeroes(),
@@ -43,6 +48,11 @@ function Heroes() {
 
 	return (
 		<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
+			<h1 className="mb-1 font-extrabold text-2xl">All Deadlock Heroes</h1>
+			<p className="mb-6 text-gray-400 text-sm">
+				Explore hero stats for every Deadlock hero — starting stats, leveling
+				growth, weapons, and ability upgrade tiers.
+			</p>
 			<div className="mb-4 flex items-center justify-between">
 				<p className="text-gray-400 text-sm">
 					{sorted.length} live hero{sorted.length === 1 ? "" : "es"}
