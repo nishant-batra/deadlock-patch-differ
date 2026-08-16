@@ -69,6 +69,43 @@ section[id] {
 		column-count: 1;
 	}
 }
+.ad-rail-wrap {
+	display: none;
+}
+
+.ad-rail {
+	display: none;
+}
+
+/* Single cutoff, coupled by construction: the rail only shows once there's
+   room for it beside the max-w-7xl content column, and it can never overlap
+   that column because they're flex siblings, not independently positioned.
+   `align-items: stretch` (the flex default) is what makes this work - it
+   gives .ad-rail-wrap the same height as the page content next to it, which
+   is the room position: sticky needs to actually stick instead of scrolling
+   away immediately. */
+@media (min-width: 1680px) {
+	.ad-rail-row {
+		display: flex;
+		gap: 2rem;
+		padding-left: 1.5rem;
+	}
+
+	.ad-rail-wrap {
+		display: block;
+		flex: none;
+		width: 10rem;
+	}
+
+	.ad-rail {
+		display: block;
+		position: sticky;
+		top: 4.5rem;
+		height: calc(100vh - 4.5rem - 1.5rem);
+		max-height: 600px;
+	}
+}
+
 html::-webkit-scrollbar {
 	width: 6px;
 }

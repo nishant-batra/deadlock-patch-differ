@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { Fragment } from "react";
+import AdSlot from "#/components/ad-slot";
 import HeroCard from "#/components/hero-card";
 import ItemCard from "#/components/item-card";
 import Legend from "#/components/legend";
@@ -252,8 +253,16 @@ function Changes() {
 
 			<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
 				<Legend />
-				{blocks.map((block) => (
-					<Fragment key={block.id}>{byId[block.id]}</Fragment>
+				{blocks.map((block, index) => (
+					<Fragment key={block.id}>
+						{byId[block.id]}
+						{index < blocks.length - 1 && (
+							<AdSlot
+								slotId={`TODO-ad-unit-in-content-${index + 1}`}
+								className="mb-12"
+							/>
+						)}
+					</Fragment>
 				))}
 			</main>
 		</>

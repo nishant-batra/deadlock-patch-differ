@@ -8,7 +8,10 @@ import {
 } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
+import { Analytics } from "@vercel/analytics/react";
 import type { ReactNode } from "react";
+import AdSlot from "#/components/ad-slot";
+import { ADSENSE_PUBLISHER_ID } from "#/components/ad-slot/constants";
 import PatchHeader from "#/components/patch-header";
 import ScrollToTop from "#/components/scroll-to-top";
 import { getPatchMeta } from "#/server/patchService";
@@ -47,6 +50,15 @@ export const Route = createRootRoute({
 		],
 		links: [{ rel: "stylesheet", href: styles }],
 		scripts: [
+			...(ADSENSE_PUBLISHER_ID
+				? [
+						{
+							src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`,
+							async: true,
+							crossOrigin: "anonymous" as const,
+						},
+					]
+				: []),
 			{
 				type: "application/ld+json",
 				children: JSON.stringify({
@@ -75,7 +87,16 @@ function RootComponent() {
 	return (
 		<RootDocument>
 			<PatchHeader meta={meta} />
-			<Outlet />
+			<div className="ad-rail-row">
+				<AdSlot
+					slotId="TODO-ad-unit-sticky-rail"
+					wrapperClassName="ad-rail-wrap"
+					className="ad-rail"
+				/>
+				<div className="min-w-0 flex-1">
+					<Outlet />
+				</div>
+			</div>
 			<ScrollToTop />
 		</RootDocument>
 	);
@@ -90,6 +111,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
 			<body>
 				{children}
 				<Scripts />
+				<Analytics />
 			</body>
 		</html>
 	);

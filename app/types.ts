@@ -290,6 +290,12 @@ export interface ItemsView {
 	abilities: Item[];
 }
 
+/** One slot type's worth of shop items, plus the catalog's total count for SEO copy. */
+export interface ItemsPage {
+	items: Item[];
+	totalCount: number;
+}
+
 export interface AbilityChange {
 	ability: Item;
 	changes: Change[];

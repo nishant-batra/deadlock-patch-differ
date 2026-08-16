@@ -13,6 +13,8 @@ import type {
 	HeroEntry,
 	Item,
 	ItemChanges,
+	ItemSlotType,
+	ItemsPage,
 	ItemsView,
 	PatchMeta,
 	PatchNotes,
@@ -61,6 +63,20 @@ export function getPatchNotes(): PatchNotes {
 
 export function getAllItems(): Item[] {
 	return readItemsView().items;
+}
+
+/**
+ * Filtered to one slot type server-side rather than shipping the full ~1.2 MB
+ * catalog and letting the `/items` page filter client-side - `totalCount`
+ * (unfiltered) is carried alongside so the page's SEO copy still reports the
+ * whole catalog, not just the active tab.
+ */
+export function getItemsPage(slotType: ItemSlotType): ItemsPage {
+	const items = readItemsView().items;
+	return {
+		items: items.filter((item) => item.item_slot_type === slotType),
+		totalCount: items.length,
+	};
 }
 
 type RawItemChanges = {

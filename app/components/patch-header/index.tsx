@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { itemTypes } from "#/components/item-card/constants";
 import type { PatchMeta } from "#/types";
 import { formatPatchDate } from "#/utils/common-utils";
 
@@ -41,6 +42,7 @@ export default function PatchHeader({ meta }: { meta: PatchMeta | null }) {
 					</Link>
 					<Link
 						to="/items"
+						search={{ type: itemTypes[0] }}
 						className="text-gray-300 hover:text-white [&.active]:font-bold [&.active]:text-white"
 					>
 						All items

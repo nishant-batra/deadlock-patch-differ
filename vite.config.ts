@@ -10,7 +10,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 const config = defineConfig({
 	plugins: [
 		devtools(),
-		nitro({ rollupConfig: { external: [/^@sentry\//] } }),
+		nitro({ preset: "vercel", rollupConfig: { external: [/^@sentry\//] } }),
 		tsconfigPaths({ projects: ["./tsconfig.json"] }),
 		tailwindcss(),
 		tanstackStart({
