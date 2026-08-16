@@ -44,6 +44,10 @@ export const Route = createRootRoute({
 					"Deadlock patch notes, Deadlock changes, Deadlock buffs and nerfs, Deadlock hero stats, Deadlock item changes, Deadlock update tracker, Valve Deadlock",
 			},
 			{ name: "theme-color", content: "#090d16" },
+			{
+				name: "google-site-verification",
+				content: "70a-hi7LXl9oYXXOugLieN1KF_AekN35jMWI73TkCoI",
+			},
 			{ property: "og:site_name", content: "Deadlock Patch Comparator" },
 			{ property: "og:type", content: "website" },
 			{ property: "og:locale", content: "en_US" },
