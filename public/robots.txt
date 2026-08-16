@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Update domain to your production domain once configured
-Sitemap: https://deadlockpatch.com/sitemap.xml
+Sitemap: https://deadlock-patch-differ.vercel.app/sitemap.xml

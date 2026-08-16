@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://deadlockpatch.com/</loc>
+    <loc>https://deadlock-patch-differ.vercel.app/</loc>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://deadlockpatch.com/heroes</loc>
+    <loc>https://deadlock-patch-differ.vercel.app/heroes</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deadlockpatch.com/items</loc>
+    <loc>https://deadlock-patch-differ.vercel.app/items</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deadlockpatch.com/compare</loc>
+    <loc>https://deadlock-patch-differ.vercel.app/compare</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

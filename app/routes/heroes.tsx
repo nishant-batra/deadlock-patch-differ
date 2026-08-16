@@ -21,11 +21,11 @@ export const Route = createFileRoute("/heroes")({
 				},
 				{ property: "og:title", content: title },
 				{ property: "og:description", content: description },
-				{ property: "og:url", content: "https://deadlockpatch.com/heroes" },
+				{ property: "og:url", content: "https://deadlock-patch-differ.vercel.app/heroes" },
 				{ name: "twitter:title", content: title },
 				{ name: "twitter:description", content: description },
 			],
-			links: [{ rel: "canonical", href: "https://deadlockpatch.com/heroes" }],
+			links: [{ rel: "canonical", href: "https://deadlock-patch-differ.vercel.app/heroes" }],
 		};
 	},
 	loader: async () => fetchHeroes(),
