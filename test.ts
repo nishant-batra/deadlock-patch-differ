@@ -8,7 +8,19 @@ import {
 } from "./app/utils/diffEngine";
 import { hasProse, sanitizeNotesHtml } from "./app/utils/sanitizeHtml";
 import { diffItems } from "./app/utils/tooltipProjection";
-import type { Item, TooltipSection } from "./app/types";
+import { diffWords } from "./app/utils/wordDiff";
+import {
+	generalHtml,
+	hasGeneralContent,
+	splitSections,
+	titleDate,
+} from "./app/utils/noteSections";
+import {
+	diffAbilityTiers,
+	hasTierChanges,
+} from "./app/utils/abilityUpgrades";
+import { isLiveHero } from "./app/utils/roster";
+import type { Hero, Item, TooltipSection } from "./app/types";
 
 let failures = 0;
 function assert(label: string, condition: boolean, detail?: unknown) {
@@ -129,6 +141,10 @@ function runTest() {
 	);
 
 	testTooltipProjection();
+	testWordDiff();
+	testNoteSections();
+	testAbilityTiers();
+	testRoster();
 
 	console.log(
 		failures === 0
@@ -136,6 +152,361 @@ function runTest() {
 			: `\n${failures} check(s) FAILED.`,
 	);
 	if (failures > 0) process.exitCode = 1;
+}
+
+/** The live-roster filter, checked against the real catalog. */
+function testRoster() {
+	const heroes: Hero[] = JSON.parse(
+		fs.readFileSync("./app/data/heroes-view.json", "utf8"),
+	);
+	const live = heroes.filter(isLiveHero);
+
+	console.log("\nroster: only heroes actually in play");
+	assert("keeps 38 of 57", live.length === 38, live.length);
+	const name = (n: string) => live.some((h) => h.name === n);
+	assert("excludes Raven (experimental)", !name("Raven"));
+	assert("excludes Fathom (unreleased)", !name("Fathom"));
+	assert("excludes Boho (Hero Labs)", !name("Boho"));
+	assert("keeps Infernus", name("Infernus"));
+	assert("keeps The Doorman", name("The Doorman"));
+	assert(
+		"every kept hero is selectable and not disabled",
+		live.every((h) => h.player_selectable && !h.disabled && !h.in_development),
+	);
+}
+
+/**
+ * Per-tier ability upgrade diffing. The fixture is the real Powder Keg T3
+ * change, which is the case that breaks a naive implementation: it repeats
+ * `ImpactDamage` and `DPS` within one tier, once flat and once spirit-scaling.
+ */
+function testAbilityTiers() {
+	const tier = (...ups: Array<Record<string, unknown>>) => ({
+		property_upgrades: ups,
+	});
+	const before = {
+		description: { t3_desc: "Deals bonus damage." },
+		upgrades: [
+			tier({ name: "AbilityCooldown", bonus: "-10" }),
+			tier({ name: "AbilityCharges", bonus: "1" }),
+			tier(
+				{ name: "BarrelDamage", bonus: "80" },
+				{ name: "AbilityCooldownBetweenCharge", bonus: "-5" },
+				{
+					name: "BarrelDamage",
+					bonus: 0.5,
+					scale_stat_filter: "ETechPower",
+					upgrade_type: "EAddToScale",
+				},
+			),
+		],
+	} as unknown as Item;
+	const after = {
+		description: { t3_desc: "Deals bonus impact damage." },
+		upgrades: [
+			tier({ name: "AbilityCooldown", bonus: "-10" }),
+			tier({ name: "AbilityCharges", bonus: "1" }),
+			tier(
+				{ name: "ImpactDamage", bonus: "40" },
+				{ name: "DPS", bonus: "13.3333" },
+				{ name: "AbilityCooldownBetweenCharge", bonus: "-5" },
+				{
+					name: "ImpactDamage",
+					bonus: 0.25,
+					scale_stat_filter: "ETechPower",
+					upgrade_type: "EAddToScale",
+				},
+				{
+					name: "DPS",
+					bonus: 0.083333,
+					scale_stat_filter: "ETechPower",
+					upgrade_type: "EAddToScale",
+				},
+			),
+		],
+	} as unknown as Item;
+
+	const tiers = diffAbilityTiers(before, after);
+	console.log("\nabilityUpgrades: Powder Keg T3 (the real regression case)");
+	assert("always three tiers", tiers.length === 3);
+	assert(
+		"T1 and T2 are untouched",
+		tiers[0].rows.every((r) => r.kind === "equal") &&
+			tiers[1].rows.every((r) => r.kind === "equal"),
+	);
+
+	const t3 = tiers[2];
+	const kinds = (label: string) =>
+		t3.rows.filter((r) => r.label === label).map((r) => r.kind);
+	assert("BarrelDamage removed", kinds("Barrel Damage").includes("removed"));
+	assert("ImpactDamage added", kinds("Impact Damage").includes("added"));
+	assert("DPS added", kinds("DPS").includes("added"));
+	assert(
+		"AbilityCooldownBetweenCharge unchanged",
+		kinds("Ability Cooldown Between Charge").join() === "equal",
+		kinds("Ability Cooldown Between Charge"),
+	);
+	// The whole point of the composite key: the flat and scaling entries of the
+	// same property must not collapse into one row.
+	assert(
+		"duplicate names stay as separate rows",
+		t3.rows.filter((r) => r.label === "Impact Damage").length === 2 &&
+			t3.rows.filter((r) => r.label === "DPS").length === 2,
+		t3.rows.map((r) => `${r.label}:${r.kind}`),
+	);
+	assert(
+		"the scaling row is marked",
+		t3.rows.some((r) => r.label === "Impact Damage" && r.scaling === "ETechPower"),
+	);
+	assert("DPS keeps its acronym casing", kinds("DPS").length === 2, t3.rows.map((r) => r.label));
+
+	console.log("\nabilityUpgrades: tier descriptions and edge cases");
+	assert("t3_desc rewrite surfaces on tier 3", Boolean(t3.text), t3.text);
+	assert("tier 1 has no text change", !tiers[0].text);
+	assert(
+		"the text diff carries both sides",
+		t3.text?.old === "Deals bonus damage." &&
+			t3.text?.new === "Deals bonus impact damage.",
+		t3.text,
+	);
+
+	const self = diffAbilityTiers(after, after);
+	assert(
+		"an unchanged ability is all `equal` (so it still renders)",
+		self.every((t) => t.rows.every((r) => r.kind === "equal") && !t.text),
+	);
+	assert(
+		"hasTierChanges is false for a self-diff",
+		!hasTierChanges(self) && hasTierChanges(tiers),
+	);
+
+	// Test Wraith Card Trick regression: adding scale_stat_filter to an existing upgrade
+	// should not split into an added + removed pair
+	const wraithBefore = {
+		upgrades: [
+			{
+				property_upgrades: [
+					{ name: "HeartHeal", bonus: "75" },
+					{ name: "HeartHeal", bonus: "0.5", upgrade_type: "EAddToScale" },
+				],
+			},
+		],
+	} as unknown as Item;
+	const wraithAfter = {
+		upgrades: [
+			{
+				property_upgrades: [
+					{ name: "HeartHeal", bonus: "75" },
+					{
+						name: "HeartHeal",
+						bonus: "0.5",
+						upgrade_type: "EAddToScale",
+						scale_stat_filter: "ETechPower",
+					},
+				],
+			},
+		],
+	} as unknown as Item;
+	const wraithDiff = diffAbilityTiers(wraithBefore, wraithAfter);
+	const wraithT1Rows = wraithDiff[0].rows;
+	assert(
+		"adding scaling to an existing upgrade does not duplicate into added+removed",
+		wraithT1Rows.length === 2 &&
+			!wraithT1Rows.some((r) => r.kind === "removed") &&
+			!wraithT1Rows.some((r) => r.kind === "added"),
+		wraithT1Rows.map((r) => `${r.label}:${r.kind}`),
+	);
+
+	const empty = diffAbilityTiers({} as Item, {} as Item);
+	assert(
+		"an ability with no upgrades yields three empty tiers, not a crash",
+		empty.length === 3 && empty.every((t) => t.rows.length === 0),
+	);
+	assert(
+		"undefined inputs do not crash",
+		diffAbilityTiers(undefined, undefined).length === 3,
+	);
+}
+
+/**
+ * Patch-note section splitting. Fixtures are the two real markup shapes in the
+ * live feed: headed notes using `<b>\[ Items ]</b>`, and unheaded ones that are
+ * a single <p> with <br> separators.
+ */
+function testNoteSections() {
+	const P = (s: string) => `<p class="bb_paragraph">${s}</p>`;
+	const HEAD = (name: string) => P(`<b>\\[ ${name} ]</b>`);
+	const known = new Set(["Apollo", "Shiv", "Crushing Fists", "Cursed Relic"]);
+
+	console.log("\nnoteSections: titleDate joins a note to its build");
+	assert(
+		'" Minor Update - 08-12-2026" -> 2026-08-12',
+		titleDate(" Minor Update - 08-12-2026") === "2026-08-12",
+		titleDate(" Minor Update - 08-12-2026"),
+	);
+	assert(
+		'"Matchmaking Update" has no date',
+		titleDate("Matchmaking Update") === null,
+	);
+
+	console.log("\nnoteSections: headed note drops Items and Heroes");
+	// The 07-28 shape.
+	const headed =
+		HEAD("General") +
+		P("- Stamina bucket 3 heroes have their ground dash time increased") +
+		HEAD("Items") +
+		P("- Crushing Fists: Max stacks stun duration increased from 0.5s to 0.75s") +
+		P("- Cursed Relic: No longer has -14% Damage Output innate") +
+		HEAD("Heroes") +
+		P("- Apollo: Riposte melee resist reduction increased");
+
+	const names = splitSections(headed)
+		.map((s) => s.name)
+		.filter(Boolean);
+	assert(
+		"finds all three sections",
+		JSON.stringify(names) === JSON.stringify(["General", "Items", "Heroes"]),
+		names,
+	);
+
+	const generalOnly = generalHtml(headed, known);
+	assert("keeps the General text", generalOnly.includes("Stamina bucket"));
+	assert("drops the Items section", !generalOnly.includes("Crushing Fists"));
+	assert("drops Cursed Relic too", !generalOnly.includes("Cursed Relic"));
+	assert("drops the Heroes section", !generalOnly.includes("Apollo"));
+
+	console.log("\nnoteSections: a new heading is kept, not silently dropped");
+	// Only 5 headings exist today; an unseen one must default to General.
+	const withNew =
+		HEAD("Map Changes") + P("- Mid lane reworked") + HEAD("Items") + P("- x");
+	const keptNew = generalHtml(withNew, known);
+	assert("keeps Map Changes", keptNew.includes("Mid lane reworked"));
+	assert("still drops Items", !keptNew.includes("- x"));
+
+	console.log("\nnoteSections: unheaded note filters balance lines per line");
+	// The 08-12 shape: ONE <p>, <br>-separated, all hero balance.
+	const unheaded = P(
+		[
+			"- Apollo: Riposte melee resist reduction increased from -22% to -25%",
+			"- Shiv: Alt Fire ammo cost reduced from 5 to 4",
+		].join("<br>"),
+	);
+	const unheadedGeneral = generalHtml(unheaded, known);
+	assert(
+		"a pure balance note yields no general content",
+		!hasGeneralContent(unheaded, known),
+		unheadedGeneral,
+	);
+	assert("does not leak Apollo", !unheadedGeneral.includes("Apollo"));
+
+	console.log("\nnoteSections: unheaded note keeps genuine general lines");
+	// The 07-09 shape: Urn lines are general, hero lines are balance.
+	const mixed = P(
+		[
+			"- Urn Runner sprint bonus reduced from +2m to 0",
+			"- Apollo: Riposte melee resist reduction increased",
+			"- Urn talking frequency increased from every 8s to every 6s",
+		].join("<br>"),
+	);
+	const mixedGeneral = generalHtml(mixed, known);
+	assert("keeps the Urn lines", mixedGeneral.includes("Urn Runner sprint"));
+	assert("keeps the second Urn line", mixedGeneral.includes("talking frequency"));
+	assert("drops the hero line", !mixedGeneral.includes("Apollo"));
+	assert("reports general content", hasGeneralContent(mixed, known));
+
+	console.log("\nnoteSections: a rework note is kept whole");
+	const rework = P("This update includes a revamp to how matchmaking works, with Ranked mode.");
+	assert(
+		"keeps rework prose",
+		generalHtml(rework, known).includes("Ranked"),
+		generalHtml(rework, known),
+	);
+}
+
+/**
+ * Word-level description diff. Cases are the real prose-rewrite shapes from the
+ * 6640->6644 patch.
+ */
+function testWordDiff() {
+	const text = (ops: ReturnType<typeof diffWords>, ...keep: string[]) =>
+		ops
+			.filter((o) => keep.includes(o.op))
+			.map((o) => o.text)
+			.join("");
+
+	console.log("\nwordDiff: reconstruction invariants");
+	// The safety net: whatever the alignment does, the surviving text must
+	// rebuild each side exactly. This catches any tokenizer or backtrack bug.
+	const pairs: Array<[string, string]> = [
+		[
+			"Reset the cooldown of the imbued non-ultimate ability.",
+			"Reset the cooldown of the imbued non-ultimate ability.This item's cooldown is increased by the cooldown of the imbued ability.",
+		],
+		[
+			"Grants Fire Rate and Spirit Resistance but Silences you and disables stamina usage and regeneration.",
+			"Grants Fire Rate, Spirit Resistance and Move Speed, and removes the Move Speed penalty while shooting, but Silences you and disables stamina usage and regeneration.",
+		],
+		["", "brand new text"],
+		["gone entirely", ""],
+	];
+	for (const [before, after] of pairs) {
+		const ops = diffWords(before, after);
+		assert(
+			`equal+delete rebuilds "before" (${before.slice(0, 20)}…)`,
+			text(ops, "equal", "delete") === before,
+			text(ops, "equal", "delete"),
+		);
+		assert(
+			`equal+insert rebuilds "after" (${after.slice(0, 20)}…)`,
+			text(ops, "equal", "insert") === after,
+			text(ops, "equal", "insert"),
+		);
+	}
+
+	console.log("\nwordDiff: pure append (Echo Shard shape)");
+	const append = diffWords(
+		"Reset the cooldown of the imbued non-ultimate ability.",
+		"Reset the cooldown of the imbued non-ultimate ability.This item's cooldown is increased by the cooldown of the imbued ability.",
+	);
+	assert("no deletions on a pure append", !append.some((o) => o.op === "delete"));
+	assert("exactly one inserted run", append.filter((o) => o.op === "insert").length === 1);
+	assert(
+		"the inserted run is the appended clause",
+		text(append, "insert").startsWith("This item's cooldown"),
+		text(append, "insert"),
+	);
+
+	console.log("\nwordDiff: substitution keeps the shared tail (Fury Trance shape)");
+	const sub = diffWords(
+		"Grants Fire Rate and Spirit Resistance but Silences you and disables stamina usage and regeneration.",
+		"Grants Fire Rate, Spirit Resistance and Move Speed, and removes the Move Speed penalty while shooting, but Silences you and disables stamina usage and regeneration.",
+	);
+	assert("has deletions", sub.some((o) => o.op === "delete"));
+	assert("has insertions", sub.some((o) => o.op === "insert"));
+	assert(
+		"the retained tail stays equal",
+		text(sub, "equal").includes("but Silences you and disables stamina usage and regeneration."),
+		text(sub, "equal"),
+	);
+
+	console.log("\nwordDiff: a comma insertion does not restrike its neighbour");
+	// The load-bearing tokenizer case: "Resist and" -> "Resist, Debuff Resist and"
+	// must NOT mark the first "Resist" as deleted just because a comma arrived.
+	const comma = diffWords("Apply Resist and an aura", "Apply Resist, Debuff Resist and an aura");
+	assert(
+		'"Resist" is not deleted',
+		!comma.some((o) => o.op === "delete" && o.text.includes("Resist")),
+		comma,
+	);
+	assert(
+		"the comma and Debuff Resist are inserted",
+		text(comma, "insert").includes(",") && text(comma, "insert").includes("Debuff Resist"),
+		text(comma, "insert"),
+	);
+	assert(
+		"identical text yields no changes",
+		diffWords("same text", "same text").every((o) => o.op === "equal"),
+	);
 }
 
 /**

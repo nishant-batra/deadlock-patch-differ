@@ -7,7 +7,7 @@ export default function PatchHeader({ meta }: { meta: PatchMeta | null }) {
 		<header className="border-white/10 border-b px-4 py-5 sm:px-8">
 			<div className="mx-auto flex max-w-7xl flex-wrap items-baseline gap-x-4 gap-y-2">
 				<h1 className="font-extrabold text-2xl tracking-tight">
-					Deadlock Patch Differ
+					Deadlock Patch Comparator
 				</h1>
 
 				{meta ? (
@@ -44,6 +44,12 @@ export default function PatchHeader({ meta }: { meta: PatchMeta | null }) {
 						className="text-gray-300 hover:text-white [&.active]:font-bold [&.active]:text-white"
 					>
 						All items
+					</Link>
+					<Link
+						to="/heroes"
+						className="text-gray-300 hover:text-white [&.active]:font-bold [&.active]:text-white"
+					>
+						All heroes
 					</Link>
 				</nav>
 			</div>

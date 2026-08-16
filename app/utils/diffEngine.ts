@@ -192,4 +192,16 @@ export function summarize(
 export const isStatChange = (change: Change) =>
 	change.path[0] === "properties" && change.path.at(-1) === "value";
 
+/**
+ * `['properties','BaseAttackDamagePercent','scale_function','stat_scale']` -
+ * the per-point multiplier a property scales with (e.g. spirit power)
+ * changed while the property's own base `value` stayed put. Invisible on the
+ * tooltip's face, but a real buff/nerf - Plot Armor's 0.2 -> 0.3 weapon-damage
+ * scaling shipped this way.
+ */
+export const isScaleChange = (change: Change) =>
+	change.path[0] === "properties" &&
+	change.path.at(-2) === "scale_function" &&
+	change.path.at(-1) === "stat_scale";
+
 export const statKeyOf = (change: Change) => change.path[1];

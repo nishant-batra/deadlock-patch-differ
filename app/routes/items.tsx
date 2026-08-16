@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { useState } from "react";
-import Card from "#/components/card";
-import { itemTypes } from "#/components/constants";
+import ItemCard from "#/components/item-card";
+import { itemTypes } from "#/components/item-card/constants";
 import { getAllItems } from "#/server/patchService";
 import type { Item, ItemSlotType } from "#/types";
 
@@ -17,6 +17,29 @@ const fetchItems = createServerFn({ method: "GET" }).handler(
 );
 
 export const Route = createFileRoute("/items")({
+	head: ({ loaderData }: { loaderData?: Item[] }) => {
+		const itemCount = loaderData?.length ?? 0;
+		const title = `All ${itemCount > 0 ? `${itemCount} ` : ""}Deadlock Shop Items — Weapon, Vitality & Spirit Tiers | Deadlock Patch Comparator`;
+		const description = `Browse all ${itemCount > 0 ? `${itemCount} ` : ""}Deadlock shop items. View item costs, component trees, active abilities, and stat scalings across Weapon, Vitality, and Spirit tiers.`;
+
+		return {
+			meta: [
+				{ title },
+				{ name: "description", content: description },
+				{
+					name: "robots",
+					content:
+						"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+				},
+				{ property: "og:title", content: title },
+				{ property: "og:description", content: description },
+				{ property: "og:url", content: "https://deadlockpatch.com/items" },
+				{ name: "twitter:title", content: title },
+				{ name: "twitter:description", content: description },
+			],
+			links: [{ rel: "canonical", href: "https://deadlockpatch.com/items" }],
+		};
+	},
 	loader: async () => fetchItems(),
 	component: Items,
 });
@@ -28,7 +51,7 @@ function Items() {
 	const [itemsFilter, setItemsFilter] = useState<ItemSlotType>(itemTypes[0]);
 
 	return (
-		<div className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
+		<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
 			<div className="mb-4 flex gap-2">
 				{itemTypes.map((itemType) => (
 					<button
@@ -49,9 +72,9 @@ function Items() {
 					.filter((item) => item.item_slot_type === itemsFilter)
 					.sort((a, b) => (a?.cost ?? 0) - (b?.cost ?? 0))
 					.map((card) => (
-						<Card item={card} key={card.id} />
+						<ItemCard item={card} key={card.id} />
 					))}
 			</div>
-		</div>
+		</main>
 	);
 }

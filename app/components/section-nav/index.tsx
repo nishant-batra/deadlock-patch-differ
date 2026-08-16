@@ -8,7 +8,7 @@ export default function SectionNav({
 	counts: { items: number; heroes: number };
 }) {
 	return (
-		<nav className="sticky top-0 z-10 flex gap-4 border-white/10 border-b bg-[#0e0e13]/95 px-4 py-3 backdrop-blur sm:px-8">
+		<nav className="sticky top-0  flex gap-4 z-1 border-white/10 border-b bg-[#0e0e13]/95 px-4 py-3 backdrop-blur sm:px-8">
 			<a className="flex items-center gap-2 hover:text-white" href="#items">
 				Items <Badge>{counts.items}</Badge>
 			</a>

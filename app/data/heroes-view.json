@@ -1098,14 +1098,14 @@
 			"signature4": "citadel_ability_rocket_barrage"
 		},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.18,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.171,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 52,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
 			"MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST": 0,
-			"MODIFIER_VALUE_TECH_RESIST": 0.625,
+			"MODIFIER_VALUE_TECH_RESIST": 0.35,
 			"MODIFIER_VALUE_TECH_DAMAGE_MULTIPLIER": 0,
 			"MODIFIER_VALUE_TECH_POWER": 1.1
 		},
@@ -7742,7 +7742,7 @@
 				"display_stat_name": "EStamina"
 			},
 			"base_health_regen": {
-				"value": 2.5,
+				"value": 2,
 				"display_stat_name": "EBaseHealthRegen"
 			},
 			"stamina_regen_per_second": {

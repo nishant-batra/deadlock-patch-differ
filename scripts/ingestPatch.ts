@@ -21,8 +21,18 @@ import {
 	pruneUnmodified,
 	summarize,
 } from "../app/utils/diffEngine";
-import { hasProse, sanitizeNotesHtml } from "../app/utils/sanitizeHtml";
+import { sanitizeNotesHtml } from "../app/utils/sanitizeHtml";
+import {
+	generalHtml,
+	hasGeneralContent,
+	titleDate,
+} from "../app/utils/noteSections";
 import { diffItems } from "../app/utils/tooltipProjection";
+import {
+	diffAbilityTiers,
+	type TierDiff,
+} from "../app/utils/abilityUpgrades";
+import { isLiveHero } from "../app/utils/roster";
 import type { Item } from "../app/types";
 
 const API = "https://api.deadlock-api.com";
@@ -30,13 +40,17 @@ const DATA_DIR = path.join(process.cwd(), "app", "data");
 
 // Hero ability slots that a hero card renders. `weapon_melee` and the
 // `ability_*` movement slots are shared across heroes and never patch-notable.
-const SLOTS = [
-	"weapon_primary",
-	"signature1",
-	"signature2",
-	"signature3",
-	"signature4",
-];
+//
+// `weapon_primary` is kept separate: it resolves to a pseudo-ability (no
+// localised name, no `ability_type`, three permanently empty tiers) and is not
+// an ability - see the matching split in patchService.ts. `SLOTS` (the union)
+// still feeds `buildItemsView`/`buildAbilityTiers`, which only need "every
+// class a hero card could reference" and are unaffected either way;
+// `countChangedHeroes` must mirror `getChangedHeroes()`'s predicate exactly or
+// the nav badge stops matching the number of cards actually rendered.
+const WEAPON_SLOT = "weapon_primary";
+const ABILITY_SLOTS = ["signature1", "signature2", "signature3", "signature4"];
+const SLOTS = [WEAPON_SLOT, ...ABILITY_SLOTS];
 
 const SHOP_FIELDS = [
 	"id",
@@ -69,16 +83,6 @@ const ABILITY_FIELDS = [
 	"upgrades",
 ];
 
-const ABILITY_STUB_FIELDS = [
-	"id",
-	"class_name",
-	"name",
-	"image_webp",
-	"image",
-	"hero",
-	"ability_type",
-];
-
 const HERO_VIEW_FIELDS = [
 	"id",
 	"class_name",
@@ -96,6 +100,7 @@ const HERO_VIEW_FIELDS = [
 /** Every file `ingest()` writes. Used to detect a missing artifact. */
 const ARTIFACTS = [
 	"item-changes.json",
+	"ability-tiers.json",
 	"latest-patch.json",
 	"latest-heroes.json",
 	"latest-diff.json",
@@ -155,11 +160,7 @@ const isShopItem = (item: Json) =>
 	Boolean(item.item_tier) &&
 	(item.item_tier as number) < 5;
 
-/**
- * 3.59 MB -> ~1.65 MB: full detail only for abilities that actually changed,
- * icon-only stubs for the rest.
- */
-function buildItemsView(items: Json[], heroes: Json[], itemDiff: PrunedNode) {
+function buildItemsView(items: Json[], heroes: Json[]) {
 	const heroAbilityClasses = new Set(
 		heroes.flatMap((hero) =>
 			SLOTS.map((slot) => (hero.items as Record<string, string>)?.[slot]).filter(
@@ -167,23 +168,12 @@ function buildItemsView(items: Json[], heroes: Json[], itemDiff: PrunedNode) {
 			),
 		),
 	);
-	const changedNames = new Set([
-		...Object.keys(itemDiff.modified),
-		...Object.keys(itemDiff.added),
-	]);
 
 	return {
 		items: items.filter(isShopItem).map((item) => pick(item, SHOP_FIELDS)),
 		abilities: items
 			.filter((item) => heroAbilityClasses.has(item.class_name as string))
-			.map((item) =>
-				pick(
-					item,
-					changedNames.has(item.name as string)
-						? ABILITY_FIELDS
-						: ABILITY_STUB_FIELDS,
-				),
-			),
+			.map((item) => pick(item, ABILITY_FIELDS)),
 	};
 }
 
@@ -230,6 +220,39 @@ function buildItemChanges(prevItems: Json[], items: Json[]) {
 	return { added, removed, changed };
 }
 
+/**
+ * Per-tier upgrade diffs for every hero ability, keyed by ability name.
+ *
+ * Computed here because the diff needs the *previous* payload, which only
+ * exists at ingest. Shipping the raw `upgrades` arrays instead would cost
+ * ~462 KB in items-view.json; these diffs are 111 KB and are what the popover
+ * actually renders. Unchanged abilities are included on purpose - their rows
+ * come out as `equal`, so the popover shows real upgrade content rather than an
+ * empty state.
+ */
+function buildAbilityTiers(prevItems: Json[], items: Json[], heroes: Json[]) {
+	const abilityClasses = new Set(
+		heroes.flatMap((hero) =>
+			SLOTS.map((slot) => (hero.items as Record<string, string>)?.[slot]).filter(
+				Boolean,
+			),
+		),
+	);
+	const prevByName = new Map(prevItems.map((item) => [item.name as string, item]));
+	const out: Record<string, TierDiff[]> = {};
+
+	for (const item of items) {
+		if (!abilityClasses.has(item.class_name as string)) continue;
+		const name = item.name as string;
+		const previous = prevByName.get(name);
+		out[name] = diffAbilityTiers(
+			(previous ?? item) as unknown as Item,
+			item as unknown as Item,
+		);
+	}
+	return out;
+}
+
 type RawPatch = {
 	source: string;
 	title: string;
@@ -247,55 +270,55 @@ const toNote = (patch: RawPatch | undefined) =>
 		html: sanitizeNotesHtml(patch.content),
 	};
 
-/** Notes trail their build, so the match window extends both ways. */
-const NOTE_WINDOW_MS = 3 * 24 * 60 * 60 * 1000;
-
 /**
- * No source is trusted to carry prose, and notes do not line up 1:1 with builds.
+ * Splits the feed into the two things the page needs.
  *
- * The original rule was `pub_date <= versionDatetime`, which is backwards for
- * the case that matters most: Valve ships the build, then posts the notes hours
- * later. Build 6644 is stamped 15:39:35 while its notes went up at 20:24:35Z, so
- * the newest patch's own notes were always excluded and the site fell back to a
- * three-week-old entry.
+ * Source: Steam only. The forum entries are mirrors of the Steam posts - the
+ * newest one is literally "Deadlock - Minor Update - 06-30-2026 - Steam News"
+ * plus a link-unfurl card, 447 chars of noise. Preferring Steam replaces the old
+ * ">40 chars of prose" heuristic, which was arbitrary and let that stub through.
  *
- * Nearest-in-time within the window, rather than longest or newest. Longest
- * picks the previous patch's bigger changelog; newest picks the forum
- * link-unfurl stub that went up 4 minutes after the real Steam post. Verified
- * against six historical builds.
+ * `balance` is the note describing the item/hero diff, joined by the date its
+ * title embeds - the feed carries no build number. `general` is the most recent
+ * note with content that is not item/hero changes, which can be a *newer,
+ * different* update: a rework like "Matchmaking Update" touches no items at all,
+ * while a pure balance patch has no general content. Both are surfaced so the
+ * page can always show both blocks, ordered by their own dates.
  */
-function pickNotes(patches: RawPatch[], versionDatetime: string) {
-	const buildTime = Date.parse(`${versionDatetime}Z`);
-	const withProse = patches.filter(
-		(patch) =>
-			!Number.isNaN(Date.parse(patch.pub_date)) && hasProse(patch.content),
-	);
-	const distance = (patch: RawPatch) =>
-		Math.abs(Date.parse(patch.pub_date) - buildTime);
-
-	const near = Number.isNaN(buildTime)
-		? []
-		: withProse
-				.filter((patch) => distance(patch) <= NOTE_WINDOW_MS)
-				.sort((a, b) => distance(a) - distance(b));
-
-	// A build with no notes of its own (6640 was one) keeps the previous entry
-	// rather than showing nothing.
-	const byRecency = withProse
+function pickNotes(
+	patches: RawPatch[],
+	versionDatetime: string,
+	knownNames: Set<string>,
+) {
+	const steam = patches
 		.filter(
 			(patch) =>
-				Number.isNaN(buildTime) || Date.parse(patch.pub_date) <= buildTime,
+				patch.source === "steam" && !Number.isNaN(Date.parse(patch.pub_date)),
 		)
 		.sort((a, b) => Date.parse(b.pub_date) - Date.parse(a.pub_date));
 
-	const primary = near[0] ?? byRecency[0];
-	const rest = [...withProse]
-		.sort((a, b) => Date.parse(b.pub_date) - Date.parse(a.pub_date))
-		.filter((patch) => patch !== primary);
+	const buildDate = versionDatetime.slice(0, 10);
+	const balance =
+		steam.find((patch) => titleDate(patch.title) === buildDate) ?? steam[0];
+
+	const general = steam.find((patch) =>
+		hasGeneralContent(patch.content, knownNames),
+	);
 
 	return {
-		primary: toNote(primary),
-		recent: [primary, ...rest].filter(Boolean).slice(0, 5).map(toNote),
+		general: general && {
+			title: general.title.trim(),
+			pubDate: general.pub_date,
+			link: general.link,
+			source: general.source,
+			html: sanitizeNotesHtml(generalHtml(general.content, knownNames)),
+		},
+		balance: balance && {
+			title: balance.title.trim(),
+			pubDate: balance.pub_date,
+			link: balance.link,
+		},
+		recent: steam.slice(0, 5).map(toNote),
 	};
 }
 
@@ -313,7 +336,10 @@ function countChangedHeroes(
 	const byClass = new Map(items.map((i) => [i.class_name as string, i]));
 	let count = 0;
 	for (const hero of heroes) {
-		const slotClasses = SLOTS.map(
+		// Same guard as getChangedHeroes(), or the nav badge disagrees with the
+		// number of cards actually rendered.
+		if (!isLiveHero(hero)) continue;
+		const slotClasses = ABILITY_SLOTS.map(
 			(slot) => (hero.items as Record<string, string>)?.[slot],
 		).filter(Boolean);
 		const resolved = slotClasses.map((cn) => byClass.get(cn));
@@ -323,10 +349,17 @@ function countChangedHeroes(
 			const node = itemDiff.modified[ability?.name as string];
 			return node ? summarize(node as PrunedNode).length > 0 : false;
 		});
+		const weaponClass = (hero.items as Record<string, string>)?.[
+			WEAPON_SLOT
+		];
+		const weaponNode = weaponClass ? itemDiff.modified[weaponClass] : undefined;
+		const weaponChanged = weaponNode
+			? summarize(weaponNode as PrunedNode).length > 0
+			: false;
 		const statChanges: Change[] = summarize(
 			heroDiff.modified[hero.name as string] as PrunedNode,
 		);
-		if (abilityChanged || statChanges.length > 0) count += 1;
+		if (abilityChanged || weaponChanged || statChanges.length > 0) count += 1;
 	}
 	return count;
 }
@@ -387,16 +420,28 @@ async function ingest() {
 
 	console.log("Writing artifacts:");
 	write("item-changes.json", itemChanges);
+	write("ability-tiers.json", buildAbilityTiers(prevItems, items, heroes));
 	write("latest-patch.json", items);
 	write("latest-heroes.json", heroes);
 	write("latest-diff.json", itemDiff);
 	write("latest-hero-diff.json", heroDiff);
-	write("items-view.json", buildItemsView(items, heroes, itemDiff));
+	write("items-view.json", buildItemsView(items, heroes));
 	write(
 		"heroes-view.json",
 		heroes.map((hero) => pick(hero, HERO_VIEW_FIELDS)),
 	);
-	write("patch-notes.json", pickNotes(patches, steam.version_datetime));
+	// Hero and shop-item names, used to strip balance lines out of an unheaded
+	// note. Both payloads are already in memory, so this costs nothing.
+	const knownNames = new Set(
+		[
+			...heroes.map((hero) => hero.name),
+			...items.filter(isShopItem).map((item) => item.name),
+		].filter(Boolean) as string[],
+	);
+	write(
+		"patch-notes.json",
+		pickNotes(patches, steam.version_datetime, knownNames),
+	);
 	write("patch-meta.json", {
 		clientVersion: steam.client_version,
 		versionDatetime: steam.version_datetime,

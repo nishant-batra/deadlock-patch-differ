@@ -1,9 +1,10 @@
 // types.ts
 
+import type { TierDiff } from "#/utils/abilityUpgrades";
 import type { Change } from "#/utils/diffEngine";
 import type { DisplayChange } from "#/utils/tooltipProjection";
 
-export type { Change, DisplayChange };
+export type { Change, DisplayChange, TierDiff };
 
 export type ItemData = Item[];
 export enum ItemSlotType {
@@ -265,8 +266,22 @@ export interface PatchNote {
 	html: string;
 }
 
+/** Attribution only - which update a set of diff cards came from. */
+export interface NoteRef {
+	title: string;
+	pubDate: string;
+	link: string;
+}
+
 export interface PatchNotes {
-	primary?: PatchNote;
+	/**
+	 * The most recent note with content that is not item/hero changes, with
+	 * those sections already stripped. May be a different (newer) update than
+	 * `balance` - a rework like "Matchmaking Update" changes no items at all.
+	 */
+	general?: PatchNote;
+	/** The update the item/hero diff came from, matched by date in its title. */
+	balance?: NoteRef;
 	recent: PatchNote[];
 }
 
@@ -278,12 +293,23 @@ export interface ItemsView {
 export interface AbilityChange {
 	ability: Item;
 	changes: Change[];
+	/**
+	 * Per-tier upgrade diff. Always three entries, including for an unchanged
+	 * ability - the popover renders the real upgrade content either way.
+	 */
+	tiers: TierDiff[];
 }
 
-export interface ChangedHero {
+/** A hero joined to its signature/ultimate abilities - no diff implied. */
+export interface HeroEntry {
 	hero: Hero;
 	abilities: AbilityChange[];
+}
+
+export interface ChangedHero extends HeroEntry {
 	statChanges: Change[];
+	/** Changes to the hero's weapon (`weapon_info.*`) - not an ability. */
+	weaponChanges: Change[];
 }
 
 export interface ChangedItem {

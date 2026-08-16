@@ -1,21 +1,11 @@
-import type { DisplayChange, ImportantPropertiesWithIcon, Item } from "#/types";
-import { colorsFor, RESPONSE_CONVERSION_MAP } from "./constants";
-import StatDelta, { resolveDeltaRows } from "./StatDelta";
-import TextChange from "./TextChange";
+import PropertyList from "#/components/property-list";
+import StatDelta, { resolveDeltaRows } from "#/components/stat-delta";
+import TextChange from "#/components/text-change";
+import type { DisplayChange, Item } from "#/types";
+import { colorsFor } from "./constants";
+import { renderedKeys } from "./utils";
 
-/** The property keys this patch moved, for the marker ring on the row itself. */
-const changedKeysOf = (changes: DisplayChange[]) =>
-	new Set(
-		changes.flatMap((change) =>
-			change.kind === "stat" ||
-			change.kind === "row-added" ||
-			change.kind === "row-removed"
-				? [change.key]
-				: [],
-		),
-	);
-
-export default function Card({
+export default function ItemCard({
 	item,
 	changes,
 	isNew,
@@ -38,14 +28,33 @@ export default function Card({
 		tooltip_sections,
 	} = item;
 	const colors = colorsFor(item_slot_type);
-	const deltaRows = changes ? resolveDeltaRows(changes, allProperties) : [];
+
+	// Every changed property key with a chip gets its delta rendered there
+	// instead (PropertyList's `previousValues`) - only changes with nowhere to
+	// render inline (cost, cooldown, text, added/removed rows, and orphan
+	// stats) stay in the top strip.
+	const inlined = renderedKeys(tooltip_sections);
+	const isInlinedStat = (change: DisplayChange) =>
+		change.kind === "stat" && inlined.has(change.key);
+	const previousValues = new Map(
+		(changes ?? [])
+			.filter((change): change is Extract<DisplayChange, { kind: "stat" }> =>
+				isInlinedStat(change),
+			)
+			.map((change) => [change.key, change.old]),
+	);
+	const stripChanges = (changes ?? []).filter(
+		(change) => !isInlinedStat(change),
+	);
+	const deltaRows = stripChanges.length
+		? resolveDeltaRows(stripChanges, allProperties)
+		: [];
 	const textChanges = changes?.filter((c) => c.kind === "text") ?? [];
-	const changedKeys = changedKeysOf(changes ?? []);
 	const flagged = isNew || isRemoved;
 
 	return (
 		<div
-			className={`m-3 flex w-100 flex-col overflow-hidden rounded-md ${isRemoved ? "opacity-60 grayscale" : ""}`}
+			className={`m-3 flex max-w-100 min-w-80 flex-col overflow-hidden rounded-md ${isRemoved ? "opacity-60 grayscale" : ""}`}
 			style={{
 				background: colors.description,
 				outline:
@@ -148,7 +157,7 @@ export default function Card({
 								background: section_type !== "innate" ? colors.highlight : "",
 								fontColor: colors.primary,
 								className: `${section_type === "innate" && "self-start"}`,
-								highlightKeys: changedKeys,
+								previousValues,
 							};
 							return (
 								<div
@@ -165,7 +174,7 @@ export default function Card({
 									)}
 									<div className="mt-2 flex flex-col gap-0.5">
 										{important_properties && (
-											<RenderProperties
+											<PropertyList
 												itemProperties={important_properties}
 												importantPropertiesWithIcon={
 													important_properties_with_icon
@@ -175,14 +184,14 @@ export default function Card({
 											/>
 										)}
 										{elevated_properties && (
-											<RenderProperties
+											<PropertyList
 												itemProperties={elevated_properties}
 												{...commonProps}
 												className={`${section_type === "innate" && "flex-col"}`}
 											/>
 										)}
 										{properties && (
-											<RenderProperties
+											<PropertyList
 												itemProperties={properties.filter(
 													(val) => val !== "AbilityCooldown",
 												)}
@@ -194,120 +203,6 @@ export default function Card({
 								</div>
 							);
 						})}
-					</div>
-				);
-			})}
-		</div>
-	);
-}
-
-export function RenderProperties({
-	allProperties,
-	itemProperties,
-	background,
-	fontColor,
-	className,
-	importantPropertiesWithIcon,
-}: {
-	allProperties: Item["properties"];
-	itemProperties: Array<string>;
-	background?: string;
-	fontColor: string;
-	className?: string;
-	importantPropertiesWithIcon?: ImportantPropertiesWithIcon[];
-	/** Property keys that moved in this patch - rendered with a marker ring. */
-	highlightKeys?: Set<string>;
-}) {
-	return (
-		<div className={`flex flex-1 ${className ?? ""}`}>
-			{itemProperties.map((property) => {
-				const displayProperty = allProperties[property];
-				if (!displayProperty) return null;
-				const {
-					label,
-					value,
-					postfix,
-					prefix,
-					icon,
-					tooltip_is_important,
-					tooltip_is_elevated,
-					usage_flags,
-					negative_attribute,
-					tooltip_section,
-				} = displayProperty;
-				const importantPropertyWithIcon = importantPropertiesWithIcon?.find(
-					(val) => val.name === property,
-				);
-				const {
-					icon: importantPropertyIcon,
-					localized_name: importantPropertyName,
-				} = importantPropertyWithIcon ?? {};
-				const isConditional = usage_flags?.includes("ConditionallyApplied");
-				const isStatusEffect =
-					importantPropertyWithIcon?.name.includes("StatusEffect");
-				const showPostfix =
-					postfix &&
-					value &&
-					typeof value === "string" &&
-					value?.slice(value?.length - postfix?.length) !== postfix;
-				return (
-					<div
-						key={property}
-						className={`flex flex-1 flex-wrap items-center gap-0.5 px-2 ${tooltip_is_important ? "flex-col p-2" : ""}  ${tooltip_section !== "innate" ? "justify-center p-2" : ""}`}
-						style={{ background }}
-					>
-						<div
-							className={`flex ${tooltip_is_important ? "text-xl" : ""} ${negative_attribute ? "text-[#CE7A6F]" : ""}`}
-						>
-							{Boolean(
-								(tooltip_is_important && icon) || importantPropertyIcon,
-							) && (
-								<img
-									alt={label}
-									src={icon ?? importantPropertyIcon}
-									width={20}
-									height={20}
-								/>
-							)}
-							{prefix ? (
-								<span className="text-gray-300">
-									{Object.hasOwn(RESPONSE_CONVERSION_MAP, prefix)
-										? RESPONSE_CONVERSION_MAP[prefix]
-										: prefix}
-								</span>
-							) : null}
-							<b>{value ?? importantPropertyName}</b>
-
-							{showPostfix && (
-								<span
-									className={`${negative_attribute ? "text-[#CE7A6F]" : "text-gray-400"}`}
-								>
-									{postfix}
-								</span>
-							)}
-						</div>
-						<span
-							style={{
-								color: tooltip_is_important
-									? fontColor
-									: tooltip_is_elevated
-										? "#fff"
-										: "#d1d5dc",
-							}}
-							className={`text-center ${tooltip_is_elevated && "font-bold"}`}
-						>
-							{label}
-						</span>
-						{Boolean(
-							(isConditional && tooltip_is_important) ||
-								(isStatusEffect && importantPropertyWithIcon),
-						) && (
-							<p className="font-medium text-gray-300 italic">
-								{isConditional && tooltip_is_important
-									? "Conditional"
-									: "Status Effect"}
-							</p>
-						)}
 					</div>
 				);
 			})}

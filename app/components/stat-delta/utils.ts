@@ -1,6 +1,6 @@
 import type { Change, DisplayChange, Item } from "#/types";
 import { statKeyOf } from "#/utils/diffEngine";
-import { humaniseStatKey } from "./constants";
+import { humaniseStatKey } from "#/utils/statLabels";
 
 /** A single row in the change strip, normalised from a `DisplayChange`. */
 export type DeltaRow = {
@@ -10,6 +10,9 @@ export type DeltaRow = {
 	old?: string | number;
 	new?: string | number;
 	negativeAttribute?: boolean;
+	/** Mirrors `ItemProperty.prefix`/`.postfix` - same sign/unit rendering as the tooltip chip. */
+	prefix?: string;
+	postfix?: string;
 };
 
 /**
@@ -50,6 +53,7 @@ export function resolveDeltaRows(
 					new: change.new,
 					// A longer cooldown is a nerf, so it reads like a negative stat.
 					negativeAttribute: true,
+					postfix: allProperties?.AbilityCooldown?.postfix,
 				});
 				break;
 			case "stat":
@@ -61,6 +65,8 @@ export function resolveDeltaRows(
 					old: change.old,
 					new: change.new,
 					negativeAttribute: allProperties?.[change.key]?.negative_attribute,
+					prefix: allProperties?.[change.key]?.prefix,
+					postfix: allProperties?.[change.key]?.postfix,
 				});
 				break;
 			case "row-added":
@@ -71,6 +77,8 @@ export function resolveDeltaRows(
 					kind: "added",
 					new: change.value,
 					negativeAttribute: allProperties?.[change.key]?.negative_attribute,
+					prefix: allProperties?.[change.key]?.prefix,
+					postfix: allProperties?.[change.key]?.postfix,
 				});
 				break;
 			case "row-removed":
@@ -81,6 +89,8 @@ export function resolveDeltaRows(
 					kind: "removed",
 					old: change.value,
 					negativeAttribute: allProperties?.[change.key]?.negative_attribute,
+					prefix: allProperties?.[change.key]?.prefix,
+					postfix: allProperties?.[change.key]?.postfix,
 				});
 				break;
 			default:
@@ -124,10 +134,12 @@ export function deltaRowsFromChanges(
 		old: change.old as string | number | undefined,
 		new: change.new as string | number | undefined,
 		negativeAttribute: allProperties?.[statKeyOf(change)]?.negative_attribute,
+		prefix: allProperties?.[statKeyOf(change)]?.prefix,
+		postfix: allProperties?.[statKeyOf(change)]?.postfix,
 	}));
 }
 
-const format = (value: unknown) => {
+export const formatDeltaValue = (value: unknown) => {
 	if (value === null || value === undefined) return "—";
 	if (typeof value === "number") {
 		return Number.isInteger(value) ? String(value) : String(+value.toFixed(3));
@@ -148,7 +160,7 @@ const asNumber = (value: unknown) => {
  * which way is bad, so a rise in a negative stat is a nerf and vice versa.
  * Unknown / non-numeric moves stay neutral rather than guessing.
  */
-function toneOf(row: DeltaRow) {
+export function toneOfDeltaRow(row: DeltaRow) {
 	if (row.kind === "added") return "text-emerald-300";
 	if (row.kind === "removed") return "text-rose-300";
 	const before = asNumber(row.old);
@@ -158,34 +170,4 @@ function toneOf(row: DeltaRow) {
 	}
 	const better = row.negativeAttribute ? after < before : after > before;
 	return better ? "text-emerald-300" : "text-rose-300";
-}
-
-export default function StatDelta({ row }: { row: DeltaRow }) {
-	const tone = toneOf(row);
-	return (
-		<div className="flex flex-wrap items-baseline justify-between gap-2 px-2 py-1 text-sm">
-			<span className="text-gray-300">{row.label}</span>
-			{row.kind === "added" ? (
-				<span className="flex items-baseline gap-1.5">
-					<span className="rounded bg-emerald-500/20 px-1.5 py-0.5 font-bold text-[10px] text-emerald-300 uppercase tracking-wide">
-						New
-					</span>
-					<b className={tone}>{format(row.new)}</b>
-				</span>
-			) : row.kind === "removed" ? (
-				<span className="flex items-baseline gap-1.5">
-					<span className="rounded bg-rose-500/20 px-1.5 py-0.5 font-bold text-[10px] text-rose-300 uppercase tracking-wide">
-						Removed
-					</span>
-					<s className="text-gray-400">{format(row.old)}</s>
-				</span>
-			) : (
-				<span className="flex items-baseline gap-1.5 font-bold">
-					<s className="font-normal text-gray-500">{format(row.old)}</s>
-					<span className="text-gray-500">&rarr;</span>
-					<span className={tone}>{format(row.new)}</span>
-				</span>
-			)}
-		</div>
-	);
 }

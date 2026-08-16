@@ -1,0 +1,11168 @@
+{
+	"citadel_weapon_rutger_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"citadel_weapon_kali_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"citadel_weapon_yakuza_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"citadel_weapon_thumper_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"rutger_rocket": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "80"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -7.5
+				}
+			]
+		}
+	],
+	"rutger_force_field": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -14
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "70"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		}
+	],
+	"rutger_cheat_death": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BulletLifestealPercent|#0",
+					"label": "Bullet Lifesteal Percent",
+					"kind": "equal",
+					"new": "100"
+				}
+			]
+		}
+	],
+	"rutger_pulse": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MovementSlow|#0",
+					"label": "Movement Slow",
+					"kind": "equal",
+					"new": "25"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -47
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DamageMax|#0",
+					"label": "Damage Max",
+					"kind": "equal",
+					"new": "200"
+				}
+			]
+		}
+	],
+	"citadel_ability_kali_spinning_blade": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "equal",
+					"new": "4"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "Damage|EMultiplyScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 1.218672,
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "CooldownReductionOnHit|#0",
+					"label": "Cooldown Reduction On Hit",
+					"kind": "equal",
+					"new": "-7"
+				}
+			]
+		}
+	],
+	"ability_kali_dust_storm": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "FireRateSlow|#0",
+					"label": "Fire Rate Slow",
+					"kind": "equal",
+					"new": "40"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -9.5
+				}
+			]
+		}
+	],
+	"citadel_ability_kali_disruptive_charge": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "LifestealPercent|#0",
+					"label": "Lifesteal Percent",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": "40"
+				}
+			]
+		}
+	],
+	"ability_kali_trappers_bolo": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "ReverseLifeLeech|#0",
+					"label": "Reverse Life Leech",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "ReverseLifeLeechDuration|#0",
+					"label": "Reverse Life Leech Duration",
+					"kind": "equal",
+					"new": "8"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -47
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StunsTargets|#0",
+					"label": "Stuns Targets",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"yakuza_kobun": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SummonCasterHealthPct|#0",
+					"label": "Summon Caster Health Pct",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SummonDPS|#0",
+					"label": "Summon DPS",
+					"kind": "equal",
+					"new": "45"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "SummonCount|#0",
+					"label": "Summon Count",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"yakuza_shakedown_target": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "WeaponPowerDebuff|#0",
+					"label": "Weapon Power Debuff",
+					"kind": "equal",
+					"new": "-30"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "IgnoreChannelSlow|#0",
+					"label": "Ignore Channel Slow",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ShareDamagePercent|#0",
+					"label": "Share Damage Percent",
+					"kind": "equal",
+					"new": "67"
+				}
+			]
+		}
+	],
+	"yakuza_setting_sun": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -19
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Range|#0",
+					"label": "Range",
+					"kind": "equal",
+					"new": "175m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "CenterDamage|#0",
+					"label": "Center Damage",
+					"kind": "equal",
+					"new": "200"
+				}
+			]
+		}
+	],
+	"yakuza_protection_racket": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "WeaponRecoilReduction|#0",
+					"label": "Weapon Recoil Reduction",
+					"kind": "equal",
+					"new": "60"
+				},
+				{
+					"key": "MoveWhileShootingSpeedPenaltyReductionPercent|#0",
+					"label": "Move While Shooting Speed Penalty Reduction Percent",
+					"kind": "equal",
+					"new": "60"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusCritDamagePercent|#0",
+					"label": "Bonus Crit Damage Percent",
+					"kind": "equal",
+					"new": "40"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BulletShieldHealth|#0",
+					"label": "Bullet Shield Health",
+					"kind": "equal",
+					"new": "360"
+				}
+			]
+		}
+	],
+	"thumper_ability_1": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "60"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "equal",
+					"new": "-3"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -3.75
+				}
+			]
+		}
+	],
+	"thumper_ability_2": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BarbedWireRadius|#0",
+					"label": "Barbed Wire Radius",
+					"kind": "equal",
+					"new": "3m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BarbedWireDamagePerMeter|#0",
+					"label": "Barbed Wire Damage Per Meter",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		}
+	],
+	"thumper_ability_3": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -0.75
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -0.75
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -0.75
+				}
+			]
+		}
+	],
+	"thumper_ability_4": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -0.75
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -0.75
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -0.75
+				}
+			]
+		}
+	],
+	"Doc's Orders": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Powder Keg": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ImpactDamage|#0",
+					"label": "Impact Damage",
+					"kind": "added",
+					"new": "40"
+				},
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "added",
+					"new": "13.3333"
+				},
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "equal",
+					"new": "-5"
+				},
+				{
+					"key": "ImpactDamage|EAddToScale#0",
+					"label": "Impact Damage",
+					"kind": "added",
+					"new": 0.25,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "DPS|EAddToScale#0",
+					"label": "DPS",
+					"kind": "added",
+					"new": 0.083333,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "BarrelDamage|#0",
+					"label": "Barrel Damage",
+					"kind": "removed",
+					"old": "80"
+				},
+				{
+					"key": "BarrelDamage|EAddToScale#0",
+					"label": "Barrel Damage",
+					"kind": "removed",
+					"old": 0.5,
+					"scaling": "ETechPower"
+				}
+			],
+			"text": {
+				"old": "+80 Damage-5 Charge TimeImproved Spirit Scaling",
+				"new": "+40 Impact Damage+13.3333 Burn Damage per Second-5 Charge TimeImproved Spirit Scaling"
+			}
+		}
+	],
+	"Bounce Pad": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SpeedOnLand|#0",
+					"label": "Speed On Land",
+					"kind": "equal",
+					"new": "4m"
+				},
+				{
+					"key": "SpeedOnLandDuration|#0",
+					"label": "Speed On Land Duration",
+					"kind": "equal",
+					"new": "4"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StompStunDuration|#0",
+					"label": "Stomp Stun Duration",
+					"kind": "equal",
+					"new": 0.7
+				}
+			]
+		}
+	],
+	"Spirit Lasso": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 80
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "0.75"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-40"
+				}
+			]
+		}
+	],
+	"Crackshot": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "FadingSlowPercent|#0",
+					"label": "Fading Slow Percent",
+					"kind": "equal",
+					"new": "25"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 49.5
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldownPerHeadshot|#0",
+					"label": "Ability Cooldown Per Headshot",
+					"kind": "equal",
+					"new": "-6"
+				},
+				{
+					"key": "AbilityCooldownPerHeadshotNPC|#0",
+					"label": "Ability Cooldown Per Headshot NPC",
+					"kind": "equal",
+					"new": "-3"
+				}
+			]
+		}
+	],
+	"citadel_weapon_bull_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Shoulder Charge": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": 40
+				},
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": "0.8"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-18"
+				},
+				{
+					"key": "WeaponDamageBonus|#0",
+					"label": "Weapon Damage Bonus",
+					"kind": "equal",
+					"new": 1.5
+				},
+				{
+					"key": "WeaponPowerIncreaseDuration|#0",
+					"label": "Weapon Power Increase Duration",
+					"kind": "equal",
+					"new": "6"
+				}
+			]
+		}
+	],
+	"Infernal Resilience": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusMaxHealth|#0",
+					"label": "Bonus Max Health",
+					"kind": "equal",
+					"new": "200"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "MeleeLifesteal|#0",
+					"label": "Melee Lifesteal",
+					"kind": "equal",
+					"new": "18"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "RegenIncomingDamagePercent|#0",
+					"label": "Regen Incoming Damage Percent",
+					"kind": "equal",
+					"new": "8"
+				},
+				{
+					"key": "StatusResistancePercent|#0",
+					"label": "Status Resistance Percent",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		}
+	],
+	"Seismic Impact": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -30
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": 0.8
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ImmunityDuration|#0",
+					"label": "Immunity Duration",
+					"kind": "equal",
+					"new": "6"
+				},
+				{
+					"key": "ImpactRadius|#0",
+					"label": "Impact Radius",
+					"kind": "equal",
+					"new": "6m"
+				}
+			]
+		}
+	],
+	"Siphon Life": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -20
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 18
+				},
+				{
+					"key": "DPS|EAddToScale#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 0.12,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		}
+	],
+	"Humble Pie": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Exploding Uppercut": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -11
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "UppercutBuffOnHit|#0",
+					"label": "Uppercut Buff On Hit",
+					"kind": "equal",
+					"new": "9"
+				},
+				{
+					"key": "BuffBaseWeaponPct|#0",
+					"label": "Buff Base Weapon Pct",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "RestoreHookCooldown|#0",
+					"label": "Restore Hook Cooldown",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "MissingHPHeal|#0",
+					"label": "Missing HP Heal",
+					"kind": "equal",
+					"new": "18"
+				}
+			]
+		}
+	],
+	"Sticky Bomb": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -8
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "changed",
+					"old": "50",
+					"new": 85
+				},
+				{
+					"key": "BonusDamage|#0",
+					"label": "Bonus Damage",
+					"kind": "removed",
+					"old": "50"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MovementSpeedBonus|#0",
+					"label": "Movement Speed Bonus",
+					"kind": "added",
+					"new": "5m"
+				},
+				{
+					"key": "StatusResistancePercent|#0",
+					"label": "Status Resistance Percent",
+					"kind": "added",
+					"new": "25"
+				},
+				{
+					"key": "MovementSpeedBonusDuration|#0",
+					"label": "Movement Speed Bonus Duration",
+					"kind": "added",
+					"new": "6"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "removed",
+					"old": -6.5
+				}
+			],
+			"text": {
+				"old": "",
+				"new": "On Cast: +5m Move Speed and +25% Debuff Resistance for 6s"
+			}
+		}
+	],
+	"Hyper Beam": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -20
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 108
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BeamLifesteal|#0",
+					"label": "Beam Lifesteal",
+					"kind": "equal",
+					"new": "65"
+				},
+				{
+					"key": "BeamLifestealNonHeroPercent|#0",
+					"label": "Beam Lifesteal Non Hero Percent",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		}
+	],
+	"Grapple Arm": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BulletAmp|#0",
+					"label": "Bullet Amp",
+					"kind": "equal",
+					"new": "20"
+				},
+				{
+					"key": "BulletAmpDuration|#0",
+					"label": "Bullet Amp Duration",
+					"kind": "equal",
+					"new": "6"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "30m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -11.5
+				}
+			]
+		}
+	],
+	"citadel_weapon_bomber_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"ability_charged_bomb": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_bomber_ability02": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_bomber_ability03": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_bomber_ult": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"citadel_weapon_cadence_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"cadence_ability_anthem": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "ExtraLargeClip|#0",
+					"label": "Extra Large Clip",
+					"kind": "equal",
+					"new": "75"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "4m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "PeakFireRateBonus|#0",
+					"label": "Peak Fire Rate Bonus",
+					"kind": "equal",
+					"new": "100"
+				}
+			]
+		}
+	],
+	"cadence_ability_lullaby": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "ExternalBonusHealthRegen|#0",
+					"label": "External Bonus Health Regen",
+					"kind": "equal",
+					"new": "15"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "LingerDuration|#0",
+					"label": "Linger Duration",
+					"kind": "equal",
+					"new": ".75"
+				}
+			]
+		}
+	],
+	"cadence_ability_silencecontraptions": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "40"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "DashDistance|#0",
+					"label": "Dash Distance",
+					"kind": "equal",
+					"new": "4m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "1.5"
+				}
+			]
+		}
+	],
+	"cadence_ability_crescendo": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BulletResist|#0",
+					"label": "Bullet Resist",
+					"kind": "equal",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "4"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "120"
+				}
+			]
+		}
+	],
+	"Trade Secret": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Pulse Grenade": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-12"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "PulseDamage|#0",
+					"label": "Pulse Damage",
+					"kind": "equal",
+					"new": 20
+				},
+				{
+					"key": "PulseDamage|EAddToScale#0",
+					"label": "Pulse Damage",
+					"kind": "equal",
+					"new": "0.5",
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DamageAmplificationPerStack|#0",
+					"label": "Damage Amplification Per Stack",
+					"kind": "equal",
+					"new": 4
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": 1.6
+				}
+			]
+		}
+	],
+	"Time Wall": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "TimeWallWidth|#0",
+					"label": "Time Wall Width",
+					"kind": "equal",
+					"new": "3m"
+				},
+				{
+					"key": "TimeWallHeight|#0",
+					"label": "Time Wall Height",
+					"kind": "equal",
+					"new": "1m"
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": 3.5
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "FriendlyBulletDamageBonus|#0",
+					"label": "Friendly Bullet Damage Bonus",
+					"kind": "equal",
+					"new": 35
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "2.3"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		}
+	],
+	"Kinetic Carbine": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MaxSlowDuration|#0",
+					"label": "Max Slow Duration",
+					"kind": "equal",
+					"new": "0.4"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -12
+				},
+				{
+					"key": "SpeedChange|EAddToScale#0",
+					"label": "Speed Change",
+					"kind": "equal",
+					"new": 0.06,
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "SpeedBoostDuration|#0",
+					"label": "Speed Boost Duration",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "MinBonusBulletDamage|EAddToScale#0",
+					"label": "Min Bonus Bullet Damage",
+					"kind": "equal",
+					"new": "55",
+					"scaling": "EWeaponPower"
+				},
+				{
+					"key": "MaxBonusBulletDamage|EAddToScale#0",
+					"label": "Max Bonus Bullet Damage",
+					"kind": "equal",
+					"new": "55",
+					"scaling": "EWeaponPower"
+				}
+			]
+		}
+	],
+	"Paradoxical Swap": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "200"
+				},
+				{
+					"key": "BarrierDuration|#0",
+					"label": "Barrier Duration",
+					"kind": "equal",
+					"new": "8"
+				},
+				{
+					"key": "CombatBarrier|EAddToScale#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "1.5",
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "13m"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-30"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MultiSwap|#0",
+					"label": "Multi Swap",
+					"kind": "equal",
+					"new": "7m"
+				},
+				{
+					"key": "MaxHealthDamage|#0",
+					"label": "Max Health Damage",
+					"kind": "equal",
+					"new": "10"
+				}
+			]
+		}
+	],
+	"citadel_weapon_sumo_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Kinetic Pulse": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BulletResistReduction|#0",
+					"label": "Bullet Resist Reduction",
+					"kind": "equal",
+					"new": "-15"
+				},
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "equal",
+					"new": "4"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 135
+				},
+				{
+					"key": "StompRange|#0",
+					"label": "Stomp Range",
+					"kind": "equal",
+					"new": "20m"
+				}
+			]
+		}
+	],
+	"Quantum Entanglement": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "6m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-6"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ReduceDebuffs|#0",
+					"label": "Reduce Debuffs",
+					"kind": "equal",
+					"new": "50"
+				},
+				{
+					"key": "ChargeReplenish|#0",
+					"label": "Charge Replenish",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Rejuvenating Aurora": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MovementSpeedBonus|#0",
+					"label": "Movement Speed Bonus",
+					"kind": "equal",
+					"new": "4m"
+				},
+				{
+					"key": "MovementSpeedBonusDuration|#0",
+					"label": "Movement Speed Bonus Duration",
+					"kind": "equal",
+					"new": "8"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -20
+				},
+				{
+					"key": "AbilityChannelTime|#0",
+					"label": "Ability Channel Time",
+					"kind": "equal",
+					"new": 1
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "NoChannel|#0",
+					"label": "No Channel",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "HealMaxHealthPercent|#0",
+					"label": "Heal Max Health Percent",
+					"kind": "equal",
+					"new": "2.5"
+				}
+			]
+		}
+	],
+	"Singularity": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "VacuumRadius|#0",
+					"label": "Vacuum Radius",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityChannelTime|#0",
+					"label": "Ability Channel Time",
+					"kind": "equal",
+					"new": "0.75"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DPSPercentHealth|#0",
+					"label": "DPS Percent Health",
+					"kind": "equal",
+					"new": 6
+				}
+			]
+		}
+	],
+	"citadel_weapon_engineer_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Medicinal Specter": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "added",
+					"new": "1.5"
+				},
+				{
+					"key": "SpiritResist|#0",
+					"label": "Spirit Resist",
+					"kind": "removed",
+					"old": "40"
+				}
+			],
+			"text": {
+				"old": "Specter provides +40% Spirit Resist",
+				"new": "+1.5s Duration"
+			}
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -20
+				},
+				{
+					"key": "StaminaCooldownReduction|#0",
+					"label": "Stamina Cooldown Reduction",
+					"kind": "equal",
+					"new": 100
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxHealthRegenPct|#0",
+					"label": "Max Health Regen Pct",
+					"kind": "equal",
+					"new": "2.0"
+				},
+				{
+					"key": "HealRadius|#0",
+					"label": "Heal Radius",
+					"kind": "equal",
+					"new": "3m"
+				},
+				{
+					"key": "SpiritResist|#0",
+					"label": "Spirit Resist",
+					"kind": "added",
+					"new": "40"
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "removed",
+					"old": "1.5"
+				}
+			],
+			"text": {
+				"old": "+2.0% Max Health regen per second, +3m Heal Radius and +1.5s Duration",
+				"new": "+2.0% Max HP Regen +3m Heal Radius +40% Spirit Resist"
+			}
+		}
+	],
+	"Mini Turret": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "TurretAttackRange|#0",
+					"label": "Turret Attack Range",
+					"kind": "equal",
+					"new": "10m"
+				},
+				{
+					"key": "TurretDPS|#0",
+					"label": "Turret DPS",
+					"kind": "equal",
+					"new": "10"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AttackSpeedMult|#0",
+					"label": "Attack Speed Mult",
+					"kind": "equal",
+					"new": "25"
+				},
+				{
+					"key": "TurretLifetime|#0",
+					"label": "Turret Lifetime",
+					"kind": "equal",
+					"new": "12"
+				}
+			]
+		}
+	],
+	"Spectral Wall": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusDamagePercent|#0",
+					"label": "Bonus Damage Percent",
+					"kind": "equal",
+					"new": "20"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "7"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -20
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": 2
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "CreateTurrets|#0",
+					"label": "Create Turrets",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "TurretLifeTime|#0",
+					"label": "Turret Life Time",
+					"kind": "equal",
+					"new": "8"
+				},
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		}
+	],
+	"Heavy Barrage": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MoveSlowPercent|#0",
+					"label": "Move Slow Percent",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "EnemyDashSlowPercent|#0",
+					"label": "Enemy Dash Slow Percent",
+					"kind": "equal",
+					"new": "-18"
+				},
+				{
+					"key": "MoveSlowDuration|#0",
+					"label": "Move Slow Duration",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -45
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": 6
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DamagePerRocket|#0",
+					"label": "Damage Per Rocket",
+					"kind": "equal",
+					"new": 15
+				},
+				{
+					"key": "DamagePerRocket|EAddToScale#0",
+					"label": "Damage Per Rocket",
+					"kind": "equal",
+					"new": 0.16,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "ExplosionRadius|#0",
+					"label": "Explosion Radius",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		}
+	],
+	"Johann's Gift": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Essence Bomb": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-5"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 50
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BloodSpillDPSPercent|#0",
+					"label": "Blood Spill DPS Percent",
+					"kind": "equal",
+					"new": 26
+				},
+				{
+					"key": "BloodSpillDuration|#0",
+					"label": "Blood Spill Duration",
+					"kind": "equal",
+					"new": "6"
+				}
+			]
+		}
+	],
+	"Malice": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -3
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "HealthToDamage|#0",
+					"label": "Health To Damage",
+					"kind": "equal",
+					"new": 25.199999
+				},
+				{
+					"key": "NumBloodShards|#0",
+					"label": "Num Blood Shards",
+					"kind": "equal",
+					"new": "4"
+				},
+				{
+					"key": "SpreadAngleDegrees|#0",
+					"label": "Spread Angle Degrees",
+					"kind": "equal",
+					"new": "22"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "VulnerabilityPerStack|#0",
+					"label": "Vulnerability Per Stack",
+					"kind": "equal",
+					"new": "8"
+				}
+			]
+		}
+	],
+	"Life Drain": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "LifeDrainPerSecond|#0",
+					"label": "Life Drain Per Second",
+					"kind": "equal",
+					"new": 13
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "2.5"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "equal",
+					"new": "0.1"
+				},
+				{
+					"key": "LifeDrainPerSecond|EAddToScale#0",
+					"label": "Life Drain Per Second",
+					"kind": "equal",
+					"new": 0.3,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Soul Exchange": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -50
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SilenceDuration|#0",
+					"label": "Silence Duration",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "SilenceRadius|#0",
+					"label": "Silence Radius",
+					"kind": "equal",
+					"new": "25m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "SelfBuffDuration|#0",
+					"label": "Self Buff Duration",
+					"kind": "equal",
+					"new": "8"
+				},
+				{
+					"key": "TechResist|#0",
+					"label": "Tech Resist",
+					"kind": "equal",
+					"new": "50"
+				},
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "BonusSpirit|#0",
+					"label": "Bonus Spirit",
+					"kind": "equal",
+					"new": "60"
+				}
+			]
+		}
+	],
+	"Cold Calculus": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Lightning Ball": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "35"
+				},
+				{
+					"key": "MaxLifetime|#0",
+					"label": "Max Lifetime",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 58.5
+				},
+				{
+					"key": "ShockRadius|#0",
+					"label": "Shock Radius",
+					"kind": "changed",
+					"old": "1.5m",
+					"new": "1.75m"
+				}
+			],
+			"text": {
+				"old": "+58.5 DPS and +1.5m radius",
+				"new": "+58.5 DPS and +1.75m radius"
+			}
+		}
+	],
+	"Static Charge": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "changed",
+					"old": -19,
+					"new": -20
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "ShockRadius|#0",
+					"label": "Shock Radius",
+					"kind": "equal",
+					"new": "7m"
+				},
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "added",
+					"new": "5m"
+				}
+			],
+			"text": {
+				"old": "",
+				"new": "+7m Radius +5m Cast range"
+			}
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": "0.9"
+				},
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "added",
+					"new": "160"
+				}
+			],
+			"text": {
+				"old": "",
+				"new": "+0.9s Stun Duration +160 Damage"
+			}
+		}
+	],
+	"Power Surge": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -18
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "3m"
+				},
+				{
+					"key": "BonusPerChain|#0",
+					"label": "Bonus Per Chain",
+					"kind": "equal",
+					"new": "8"
+				},
+				{
+					"key": "DamagePerChain|#0",
+					"label": "Damage Per Chain",
+					"kind": "equal",
+					"new": "8"
+				},
+				{
+					"key": "BonusPerChain|EAddToScale#0",
+					"label": "Bonus Per Chain",
+					"kind": "equal",
+					"new": 0.23,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "DamagePerChain|EAddToScale#0",
+					"label": "Damage Per Chain",
+					"kind": "equal",
+					"new": 0.23,
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "TechResistDebuff|#0",
+					"label": "Tech Resist Debuff",
+					"kind": "equal",
+					"new": "-15"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "10"
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "10"
+				}
+			]
+		}
+	],
+	"Storm Cloud": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BulletResistOnActive|#0",
+					"label": "Bullet Resist On Active",
+					"kind": "equal",
+					"new": "55"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "10m"
+				},
+				{
+					"key": "InitialRadius|#0",
+					"label": "Initial Radius",
+					"kind": "equal",
+					"new": "5m"
+				},
+				{
+					"key": "AbilityChannelTime|#0",
+					"label": "Ability Channel Time",
+					"kind": "equal",
+					"new": "7"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 65
+				},
+				{
+					"key": "FlightControlEnabled|#0",
+					"label": "Flight Control Enabled",
+					"kind": "equal",
+					"new": "4m"
+				}
+			]
+		}
+	],
+	"Censure & Penance": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Sleep Dagger": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BulletResistReduction|#0",
+					"label": "Bullet Resist Reduction",
+					"kind": "equal",
+					"new": -10
+				},
+				{
+					"key": "BulletResistReductionDuration|#0",
+					"label": "Bullet Resist Reduction Duration",
+					"kind": "equal",
+					"new": 6
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SleepDuration|#0",
+					"label": "Sleep Duration",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "FixationStacks|#0",
+					"label": "Fixation Stacks",
+					"kind": "equal",
+					"new": 15
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -17
+				},
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "50"
+				},
+				{
+					"key": "GroundDashReductionPercent|#0",
+					"label": "Ground Dash Reduction Percent",
+					"kind": "equal",
+					"new": "-50"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		}
+	],
+	"Smoke Bomb": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "InvisMoveSpeedMod|#0",
+					"label": "Invis Move Speed Mod",
+					"kind": "equal",
+					"new": "7m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "equal",
+					"new": "7"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BulletLifesteal|#0",
+					"label": "Bullet Lifesteal",
+					"kind": "equal",
+					"new": "50"
+				},
+				{
+					"key": "PostInvisBuffDuration|#0",
+					"label": "Post Invis Buff Duration",
+					"kind": "equal",
+					"new": "5"
+				},
+				{
+					"key": "DispelOnUse|#0",
+					"label": "Dispel On Use",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Fixation": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "ProcDamage|#0",
+					"label": "Proc Damage",
+					"kind": "equal",
+					"new": 40
+				},
+				{
+					"key": "ProcDamage|EAddToScale#0",
+					"label": "Proc Damage",
+					"kind": "equal",
+					"new": 0.8,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "ProcDamageStackCount|#0",
+					"label": "Proc Damage Stack Count",
+					"kind": "equal",
+					"new": "20"
+				},
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "15"
+				},
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "5"
+				},
+				{
+					"key": "MaxStacks|#0",
+					"label": "Max Stacks",
+					"kind": "equal",
+					"new": "40"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DamageBonusFixedPerStack|#0",
+					"label": "Damage Bonus Fixed Per Stack",
+					"kind": "equal",
+					"new": "0.11"
+				},
+				{
+					"key": "DamageBonusFixedPerStack|EAddToScale#0",
+					"label": "Damage Bonus Fixed Per Stack",
+					"kind": "equal",
+					"new": "0.0003",
+					"scaling": "EBaseWeaponDamageIncrease"
+				}
+			]
+		}
+	],
+	"Bullet Dance": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "WeaponDamageBonus|#0",
+					"label": "Weapon Damage Bonus",
+					"kind": "equal",
+					"new": "7"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": 10
+				},
+				{
+					"key": "ChannelMoveSpeed|#0",
+					"label": "Channel Move Speed",
+					"kind": "equal",
+					"new": "3m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "EvasionPercent|#0",
+					"label": "Evasion Percent",
+					"kind": "equal",
+					"new": 40
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-65"
+				}
+			]
+		}
+	],
+	"Wallflower's Revenge": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Stake": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "changed",
+					"old": "65",
+					"new": "45"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -22
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ChainDuration|#0",
+					"label": "Chain Duration",
+					"kind": "equal",
+					"new": "0.75"
+				},
+				{
+					"key": "CaptureRadius|#0",
+					"label": "Capture Radius",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		}
+	],
+	"Flight": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusClipSizePercent|#0",
+					"label": "Bonus Clip Size Percent",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "10"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MagicDamagePerBullet|#0",
+					"label": "Magic Damage Per Bullet",
+					"kind": "equal",
+					"new": 10
+				},
+				{
+					"key": "MagicDamagePerBullet|EAddToScale#0",
+					"label": "Magic Damage Per Bullet",
+					"kind": "equal",
+					"new": 0.1,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "RefreshOnKill|#0",
+					"label": "Refresh On Kill",
+					"kind": "equal",
+					"new": 1
+				}
+			]
+		}
+	],
+	"Crow Familiar": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "HealAmpReceivePenaltyPercent|#0",
+					"label": "Heal Amp Receive Penalty Percent",
+					"kind": "equal",
+					"new": "-35"
+				},
+				{
+					"key": "HealAmpRegenPenaltyPercent|#0",
+					"label": "Heal Amp Regen Penalty Percent",
+					"kind": "equal",
+					"new": "-35"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -16
+				},
+				{
+					"key": "DotHealthPercent|#0",
+					"label": "Dot Health Percent",
+					"kind": "equal",
+					"new": 0.5
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BulletResistReduction|#0",
+					"label": "Bullet Resist Reduction",
+					"kind": "equal",
+					"new": "-8"
+				},
+				{
+					"key": "TechArmorDamageReduction|#0",
+					"label": "Tech Armor Damage Reduction",
+					"kind": "equal",
+					"new": "-8"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		}
+	],
+	"Assassinate": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -15
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "LowHealthEnemyDamageBonus|#0",
+					"label": "Low Health Enemy Damage Bonus",
+					"kind": "equal",
+					"new": 80
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "WeaponDamageBonusPerKill|#0",
+					"label": "Weapon Damage Bonus Per Kill",
+					"kind": "equal",
+					"new": "4"
+				}
+			]
+		}
+	],
+	"Incendiary Remarks": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Concussive Combustion": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "100"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -65
+				},
+				{
+					"key": "LifeStealPercentOnHit|#0",
+					"label": "Life Steal Percent On Hit",
+					"kind": "equal",
+					"new": 100
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": "0.9"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "10m"
+				}
+			]
+		}
+	],
+	"Flame Dash": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -12
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 20
+				},
+				{
+					"key": "GroundFlameDuration|#0",
+					"label": "Ground Flame Duration",
+					"kind": "equal",
+					"new": 1
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "equal",
+					"new": "14"
+				}
+			]
+		}
+	],
+	"Napalm": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "LifestealPercentHero|#0",
+					"label": "Lifesteal Percent Hero",
+					"kind": "equal",
+					"new": "15"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "IncomingDamagePercentFromCaster|#0",
+					"label": "Incoming Damage Percent From Caster",
+					"kind": "equal",
+					"new": "17"
+				},
+				{
+					"key": "HealAmpReceivePenaltyPercent|#0",
+					"label": "Heal Amp Receive Penalty Percent",
+					"kind": "equal",
+					"new": "-33"
+				},
+				{
+					"key": "HealAmpRegenPenaltyPercent|#0",
+					"label": "Heal Amp Regen Penalty Percent",
+					"kind": "equal",
+					"new": "-33"
+				}
+			]
+		}
+	],
+	"Afterburn": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": "16"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "OutgoingTechDamagePercent|#0",
+					"label": "Outgoing Tech Damage Percent",
+					"kind": "equal",
+					"new": "-35"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BurnDuration|#0",
+					"label": "Burn Duration",
+					"kind": "equal",
+					"new": 3
+				}
+			]
+		}
+	],
+	"Expedition's End": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Arctic Beam": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MaxSlowPercent|#0",
+					"label": "Max Slow Percent",
+					"kind": "equal",
+					"new": 25
+				},
+				{
+					"key": "MaxFireRateSlowPercent|#0",
+					"label": "Max Fire Rate Slow Percent",
+					"kind": "equal",
+					"new": 25
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 20
+				},
+				{
+					"key": "DPS|EAddToScale#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": "0.6",
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BeamSplit|#0",
+					"label": "Beam Split",
+					"kind": "equal",
+					"new": "10m"
+				},
+				{
+					"key": "BeamSplit|EAddToScale#0",
+					"label": "Beam Split",
+					"kind": "equal",
+					"new": 0.93,
+					"scaling": "ETechRange"
+				},
+				{
+					"key": "BeamSplitCount|#0",
+					"label": "Beam Split Count",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-13"
+				}
+			]
+		}
+	],
+	"Ice Path": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MoveSpeedBonus|#0",
+					"label": "Move Speed Bonus",
+					"kind": "equal",
+					"new": "2m"
+				},
+				{
+					"key": "BulletResist|#0",
+					"label": "Bullet Resist",
+					"kind": "equal",
+					"new": "35"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -25
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BonusSpiritPct|#0",
+					"label": "Bonus Spirit Pct",
+					"kind": "equal",
+					"new": "35"
+				},
+				{
+					"key": "BonusSpirit|#0",
+					"label": "Bonus Spirit",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		}
+	],
+	"Frost Grenade": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "HealAmount|#0",
+					"label": "Heal Amount",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "PauseStaminaRegen|#0",
+					"label": "Pause Stamina Regen",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "2m"
+				},
+				{
+					"key": "HealAmount|EAddToScale#0",
+					"label": "Heal Amount",
+					"kind": "equal",
+					"new": "0.9",
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "0.8",
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Frozen Shelter": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-20"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": 1.5
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BonusHealthRegen|#0",
+					"label": "Bonus Health Regen",
+					"kind": "equal",
+					"new": "65"
+				},
+				{
+					"key": "BonusHealthRegen|EAddToScale#0",
+					"label": "Bonus Health Regen",
+					"kind": "equal",
+					"new": 1,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "PurgeOnCast|#0",
+					"label": "Purge On Cast",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Tale of The Tape": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Grapple": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -17
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "20m"
+				},
+				{
+					"key": "WeaponDamageBonus|#0",
+					"label": "Weapon Damage Bonus",
+					"kind": "equal",
+					"new": 7
+				},
+				{
+					"key": "WeaponDamageBonusDuration|#0",
+					"label": "Weapon Damage Bonus Duration",
+					"kind": "equal",
+					"new": "10"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "RestoreStaminaOnUse|#0",
+					"label": "Restore Stamina On Use",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "AirControlPercent|#0",
+					"label": "Air Control Percent",
+					"kind": "equal",
+					"new": "60"
+				}
+			]
+		}
+	],
+	"Ground Strike": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -10
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "EnemySlowPct|#0",
+					"label": "Enemy Slow Pct",
+					"kind": "equal",
+					"new": "50"
+				},
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "StompBounceHeight|#0",
+					"label": "Stomp Bounce Height",
+					"kind": "equal",
+					"new": "400"
+				},
+				{
+					"key": "TossDuration|#0",
+					"label": "Toss Duration",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StompDamagePerMeterPrimary|EAddToScale#0",
+					"label": "Stomp Damage Per Meter Primary",
+					"kind": "equal",
+					"new": 0.03255,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "StompDamagePerMeterPrimary|EMultiplyBase#0",
+					"label": "Stomp Damage Per Meter Primary",
+					"kind": "equal",
+					"new": "113"
+				},
+				{
+					"key": "StompDamagePerMeterSecondary|EAddToScale#0",
+					"label": "Stomp Damage Per Meter Secondary",
+					"kind": "equal",
+					"new": 0.008137,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "StompDamagePerMeterSecondary|EMultiplyBase#0",
+					"label": "Stomp Damage Per Meter Secondary",
+					"kind": "equal",
+					"new": "113"
+				}
+			]
+		}
+	],
+	"Death Slam": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "ThrowDistance|#0",
+					"label": "Throw Distance",
+					"kind": "equal",
+					"new": "12m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -35
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": 1.2
+				},
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "6m"
+				}
+			]
+		}
+	],
+	"Flog": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "EnemySlowDuration|#0",
+					"label": "Enemy Slow Duration",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "EnemySlowPct|#0",
+					"label": "Enemy Slow Pct",
+					"kind": "equal",
+					"new": "35"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -16
+				},
+				{
+					"key": "FireRateSlow|#0",
+					"label": "Fire Rate Slow",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 80
+				},
+				{
+					"key": "TargetingConeAngle|#0",
+					"label": "Targeting Cone Angle",
+					"kind": "equal",
+					"new": 40
+				},
+				{
+					"key": "HealPctVsHeroes|#0",
+					"label": "Heal Pct Vs Heroes",
+					"kind": "equal",
+					"new": 20
+				},
+				{
+					"key": "HealPctVsNonHeroes|#0",
+					"label": "Heal Pct Vs Non Heroes",
+					"kind": "equal",
+					"new": 6
+				}
+			]
+		}
+	],
+	"Promises Kept": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Dust Devil": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "60"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-12"
+				},
+				{
+					"key": "WhirlwindEvasionChance|#0",
+					"label": "Whirlwind Evasion Chance",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "RecastWindow|#0",
+					"label": "Recast Window",
+					"kind": "equal",
+					"new": "6"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 0.6,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Djinn's Mark": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MovementSpeedSlow|#0",
+					"label": "Movement Speed Slow",
+					"kind": "equal",
+					"new": "60"
+				},
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "equal",
+					"new": "0.8"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "ProcDamageBase|#0",
+					"label": "Proc Damage Base",
+					"kind": "equal",
+					"new": "20"
+				},
+				{
+					"key": "VictimStackDuration|#0",
+					"label": "Victim Stack Duration",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-0.75"
+				},
+				{
+					"key": "ProcCooldown|#0",
+					"label": "Proc Cooldown",
+					"kind": "equal",
+					"new": "-0.75"
+				},
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": "0.5"
+				},
+				{
+					"key": "MaxStacks|#0",
+					"label": "Max Stacks",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Fire Scarabs": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": "7"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "StealDuration|#0",
+					"label": "Steal Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "OutgoingDamagePenaltyPercent|#0",
+					"label": "Outgoing Damage Penalty Percent",
+					"kind": "equal",
+					"new": "-15"
+				},
+				{
+					"key": "DPS|EAddToScale#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": "0.13",
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Traveler": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "3m"
+				},
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": "20"
+				},
+				{
+					"key": "MovementSpeedBonusDuration|#0",
+					"label": "Movement Speed Bonus Duration",
+					"kind": "equal",
+					"new": "12"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "400"
+				},
+				{
+					"key": "CombatBarrier|EAddToScale#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "0.6",
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-90"
+				}
+			]
+		}
+	],
+	"citadel_weapon_digger_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Scorn": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 35
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -5
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "1m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DamageBonus|#0",
+					"label": "Damage Bonus",
+					"kind": "equal",
+					"new": "15"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "16"
+				}
+			]
+		}
+	],
+	"Burrow": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 50
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityChannelTime|#0",
+					"label": "Ability Channel Time",
+					"kind": "equal",
+					"new": "4"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -20
+				},
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "4m"
+				}
+			]
+		}
+	],
+	"Sand Blast": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "50"
+				},
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "5m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "GroundDashReductionPercent|#0",
+					"label": "Ground Dash Reduction Percent",
+					"kind": "equal",
+					"new": "-30"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -25
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": 1.5
+				}
+			]
+		}
+	],
+	"Combo": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "LifeStealPercentOnHit|#0",
+					"label": "Life Steal Percent On Hit",
+					"kind": "equal",
+					"new": "100"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -30
+				},
+				{
+					"key": "BulletResist|#0",
+					"label": "Bullet Resist",
+					"kind": "equal",
+					"new": 50
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityChannelTime|#0",
+					"label": "Ability Channel Time",
+					"kind": "equal",
+					"new": "0.7"
+				},
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 40
+				},
+				{
+					"key": "DPS|EAddToScale#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 0.4,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Sweetest Lie": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Ava": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BuffDuration|#0",
+					"label": "Buff Duration",
+					"kind": "equal",
+					"new": "15"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "MaxBonusMoveSpeedPercent|#0",
+					"label": "Max Bonus Move Speed Percent",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "HealthRegen|#0",
+					"label": "Health Regen",
+					"kind": "equal",
+					"new": "15"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "OutgoingDamagePercent|#0",
+					"label": "Outgoing Damage Percent",
+					"kind": "equal",
+					"new": "18"
+				},
+				{
+					"key": "DamageAmpDuration|#0",
+					"label": "Damage Amp Duration",
+					"kind": "equal",
+					"new": "6"
+				},
+				{
+					"key": "DamageAmpBuildDuration|#0",
+					"label": "Damage Amp Build Duration",
+					"kind": "equal",
+					"new": "10"
+				}
+			]
+		}
+	],
+	"Gloom Bombs": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-3"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "MeleeResistReduction|#0",
+					"label": "Melee Resist Reduction",
+					"kind": "equal",
+					"new": "-6"
+				},
+				{
+					"key": "MeleeResistReductionDuration|#0",
+					"label": "Melee Resist Reduction Duration",
+					"kind": "equal",
+					"new": "6"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "GrenadeCount|#0",
+					"label": "Grenade Count",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		}
+	],
+	"Return to Shadows": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-20"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "75"
+				},
+				{
+					"key": "BonusMoveSpeedPercent|#0",
+					"label": "Bonus Move Speed Percent",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "RefundCooldowns|#0",
+					"label": "Refund Cooldowns",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "HealAmount|#0",
+					"label": "Heal Amount",
+					"kind": "equal",
+					"new": "450"
+				}
+			]
+		}
+	],
+	"Leaping Slash": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "HealAmount|#0",
+					"label": "Heal Amount",
+					"kind": "equal",
+					"new": "25"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusGoldOnKill|#0",
+					"label": "Bonus Gold On Kill",
+					"kind": "equal",
+					"new": "200"
+				},
+				{
+					"key": "BountyDuration|#0",
+					"label": "Bounty Duration",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "CooldownRefundPercent|#0",
+					"label": "Cooldown Refund Percent",
+					"kind": "equal",
+					"new": "50"
+				},
+				{
+					"key": "ImpactDamage|#0",
+					"label": "Impact Damage",
+					"kind": "equal",
+					"new": "60"
+				}
+			]
+		}
+	],
+	"citadel_weapon_archer_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Charged Shot": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|EAddToBase#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 54,
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "equal",
+					"new": "-3"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 1,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Rain of Arrows": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "WeaponDamageBonus|#0",
+					"label": "Weapon Damage Bonus",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "equal",
+					"new": "1.5"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -12
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BulletLifestealPercent|#0",
+					"label": "Bullet Lifesteal Percent",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "TechLifestealPercent|#0",
+					"label": "Tech Lifesteal Percent",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "EvasionPercent|#0",
+					"label": "Evasion Percent",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		}
+	],
+	"Spirit Snare": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -20
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BulletArmorReduction|#0",
+					"label": "Bullet Armor Reduction",
+					"kind": "equal",
+					"new": "-15"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "10"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "TetherDuration|#0",
+					"label": "Tether Duration",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "1.5m"
+				}
+			]
+		}
+	],
+	"Guided Owl": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 85
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -40
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "LowHealthEnemyThresholdPct|#0",
+					"label": "Low Health Enemy Threshold Pct",
+					"kind": "equal",
+					"new": "22"
+				}
+			]
+		}
+	],
+	"Busted Flush": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Serrated Knives": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BleedDuration|#0",
+					"label": "Bleed Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BleedDPSPerStack|#0",
+					"label": "Bleed DPS Per Stack",
+					"kind": "equal",
+					"new": 12
+				},
+				{
+					"key": "BleedDPSPerStack|EAddToScale#0",
+					"label": "Bleed DPS Per Stack",
+					"kind": "equal",
+					"new": 0.07
+				}
+			]
+		}
+	],
+	"Slice and Dice": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-6"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "TechArmorDamageReduction|#0",
+					"label": "Tech Armor Damage Reduction",
+					"kind": "equal",
+					"new": "-4"
+				},
+				{
+					"key": "DashRange|#0",
+					"label": "Dash Range",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ImpactDamage|#0",
+					"label": "Impact Damage",
+					"kind": "equal",
+					"new": "50"
+				},
+				{
+					"key": "CooldownReductionOnHit|#0",
+					"label": "Cooldown Reduction On Hit",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "CooldownReductionOnHitNonHero|#0",
+					"label": "Cooldown Reduction On Hit Non Hero",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "MaxCooldownReductionsFromHits|#0",
+					"label": "Max Cooldown Reductions From Hits",
+					"kind": "equal",
+					"new": "8"
+				}
+			]
+		}
+	],
+	"Bloodletting": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -15
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "DeferClearPct|#0",
+					"label": "Defer Clear Pct",
+					"kind": "equal",
+					"new": "40"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DamagePctDeferred|#0",
+					"label": "Damage Pct Deferred",
+					"kind": "equal",
+					"new": "15"
+				}
+			]
+		}
+	],
+	"Killing Blow": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "2m"
+				},
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "6m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BuffDamage|#0",
+					"label": "Buff Damage",
+					"kind": "equal",
+					"new": "16"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-25"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "EnemyHealthPercent|#0",
+					"label": "Enemy Health Percent",
+					"kind": "equal",
+					"new": "10"
+				}
+			]
+		}
+	],
+	"citadel_weapon_shieldguy_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"ability_shieldguy_ability01": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_shieldguy_ability02": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_shieldguy_ability03": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_shieldguy_ult": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"Riptide": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"The Black Sheep": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Flying Cloak": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 70
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "WeaponDamageBonus|#0",
+					"label": "Weapon Damage Bonus",
+					"kind": "equal",
+					"new": 5
+				},
+				{
+					"key": "WeaponDamageBonusDuration|#0",
+					"label": "Weapon Damage Bonus Duration",
+					"kind": "equal",
+					"new": "6"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxLifetime|#0",
+					"label": "Max Lifetime",
+					"kind": "equal",
+					"new": 1.6
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10"
+				}
+			]
+		}
+	],
+	"Enchanter's Satchel": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -5
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "90"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "FireRateSlow|#0",
+					"label": "Fire Rate Slow",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "MoveSlowPercent|#0",
+					"label": "Move Slow Percent",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "4.0"
+				},
+				{
+					"key": "AbilityChannelTime|#0",
+					"label": "Ability Channel Time",
+					"kind": "equal",
+					"new": "1.5"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "4m"
+				}
+			]
+		}
+	],
+	"Barrage": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "DamagePerProjectile|#0",
+					"label": "Damage Per Projectile",
+					"kind": "equal",
+					"new": 16
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -16
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AmpPercentPerStack|#0",
+					"label": "Amp Percent Per Stack",
+					"kind": "equal",
+					"new": "4"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "3m"
+				}
+			]
+		}
+	],
+	"Affliction": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-35"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "4m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 13
+				},
+				{
+					"key": "DPS|EAddToScale#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 0.1
+				},
+				{
+					"key": "DisableHealing|#0",
+					"label": "Disable Healing",
+					"kind": "equal",
+					"new": 1
+				}
+			]
+		}
+	],
+	"Protector's Hand": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Kudzu Connection": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MoveSpeedBonus|#0",
+					"label": "Move Speed Bonus",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": "8"
+				},
+				{
+					"key": "BulletLifestealPercent|#0",
+					"label": "Bullet Lifesteal Percent",
+					"kind": "equal",
+					"new": "8"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "-13"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-37"
+				}
+			]
+		}
+	],
+	"Entangling Thorns": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "2m"
+				},
+				{
+					"key": "DPS|EAddToScale#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": "0.5",
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "TimeToEntangle|#0",
+					"label": "Time To Entangle",
+					"kind": "equal",
+					"new": 2
+				},
+				{
+					"key": "EntangleDuration|#0",
+					"label": "Entangle Duration",
+					"kind": "equal",
+					"new": 1.6
+				}
+			]
+		}
+	],
+	"Stone Form": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MaxHealthRegen|#0",
+					"label": "Max Health Regen",
+					"kind": "equal",
+					"new": 7
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-25"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "changed",
+					"old": "1",
+					"new": "0.75"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "1.5",
+					"scaling": "ETechPower"
+				}
+			],
+			"text": {
+				"old": "+1s Stun Duration and increased Damage spirit scaling",
+				"new": "+0.75s Stun Duration and increased Damage spirit scaling"
+			}
+		}
+	],
+	"Air Drop": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AirDropBulletShield|#0",
+					"label": "Air Drop Bullet Shield",
+					"kind": "equal",
+					"new": "300"
+				},
+				{
+					"key": "AirDropBulletShield|EAddToScale#0",
+					"label": "Air Drop Bullet Shield",
+					"kind": "equal",
+					"new": "0.7",
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "SilenceDuration|#0",
+					"label": "Silence Duration",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "ExplodeDamage|EAddToScale#0",
+					"label": "Explode Damage",
+					"kind": "equal",
+					"new": 1.5,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "AirDropBulletShield|EAddToScale#0",
+					"label": "Air Drop Bullet Shield",
+					"kind": "equal",
+					"new": "1.0",
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"citadel_weapon_tokamak_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"tokamak_hot_shot": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityChannelTime|#0",
+					"label": "Ability Channel Time",
+					"kind": "equal",
+					"new": "0.5"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "NormalDPS|EAddToScale#0",
+					"label": "Normal DPS",
+					"kind": "equal",
+					"new": 0.097494,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "NormalDPS|#0",
+					"label": "Normal DPS",
+					"kind": "equal",
+					"new": "16"
+				},
+				{
+					"key": "HotDPS|EAddToScale#0",
+					"label": "Hot DPS",
+					"kind": "equal",
+					"new": 0.292481,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "HotDPS|#0",
+					"label": "Hot DPS",
+					"kind": "equal",
+					"new": "48"
+				}
+			]
+		}
+	],
+	"tokamak_radiance": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -14
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "EvasionChance|#0",
+					"label": "Evasion Chance",
+					"kind": "equal",
+					"new": "+20"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxDPS|EAddToScale#0",
+					"label": "Max DPS",
+					"kind": "equal",
+					"new": 0.146241,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "MaxDPS|#0",
+					"label": "Max DPS",
+					"kind": "equal",
+					"new": "+24"
+				}
+			]
+		}
+	],
+	"tokamak_dying_star": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "ExplosionRadius|#0",
+					"label": "Explosion Radius",
+					"kind": "equal",
+					"new": "3m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -7.5
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 0.487469,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "80"
+				}
+			]
+		}
+	],
+	"tokamak_crimson_cannon": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "DelayBetweenShots|#0",
+					"label": "Delay Between Shots",
+					"kind": "equal",
+					"new": "-0.2"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "+50"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 1.462406,
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -47
+				}
+			]
+		}
+	],
+	"Deep Sea Interpreter": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Splatter": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 36
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -14
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxBounces|#0",
+					"label": "Max Bounces",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 0.9,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"The Cube": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "2.5m"
+				},
+				{
+					"key": "StaminaCooldownReduction|#0",
+					"label": "Stamina Cooldown Reduction",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "PostCubeBuff|#0",
+					"label": "Post Cube Buff",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusHealthRegen|#0",
+					"label": "Bonus Health Regen",
+					"kind": "equal",
+					"new": "25"
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -20
+				},
+				{
+					"key": "PurgeDebuffs|#0",
+					"label": "Purge Debuffs",
+					"kind": "equal",
+					"new": 1
+				}
+			]
+		}
+	],
+	"Goo Ball": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-25"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "70"
+				},
+				{
+					"key": "BulletResist|#0",
+					"label": "Bullet Resist",
+					"kind": "equal",
+					"new": "20"
+				},
+				{
+					"key": "TechResist|#0",
+					"label": "Tech Resist",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "7"
+				},
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": "0.3"
+				}
+			]
+		}
+	],
+	"Puddle Punch": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "1.5m"
+				},
+				{
+					"key": "LifeStealPercentOnHit|#0",
+					"label": "Life Steal Percent On Hit",
+					"kind": "equal",
+					"new": "60"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -14
+				},
+				{
+					"key": "UseHeavyMelee|#0",
+					"label": "Use Heavy Melee",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "DamageHeavyMelee|EAddToScale#0",
+					"label": "Damage Heavy Melee",
+					"kind": "equal",
+					"new": 0.6
+				},
+				{
+					"key": "DamageHeavyMelee|#0",
+					"label": "Damage Heavy Melee",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "Damage|EMultiplyScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 0
+				},
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": -40
+				}
+			]
+		}
+	],
+	"Freedom's Cost": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Binding Word": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BulletArmorReduction|#0",
+					"label": "Bullet Armor Reduction",
+					"kind": "equal",
+					"new": "20"
+				},
+				{
+					"key": "BulletArmorReductionDuration|#0",
+					"label": "Bullet Armor Reduction Duration",
+					"kind": "equal",
+					"new": "5"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "ImmobilizeDuration|#0",
+					"label": "Immobilize Duration",
+					"kind": "equal",
+					"new": "0.75"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-14"
+				},
+				{
+					"key": "SilenceDebuff|#0",
+					"label": "Silence Debuff",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Willpower": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MoveSpeedBonusPct|#0",
+					"label": "Move Speed Bonus Pct",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-24"
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StatusResistancePercent|#0",
+					"label": "Status Resistance Percent",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "CombatBarrier|EAddToScale#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "2.7",
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Alchemical Flask": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "StaminaReduction|#0",
+					"label": "Stamina Reduction",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "35"
+				},
+				{
+					"key": "WeaponPowerDebuff|#0",
+					"label": "Weapon Power Debuff",
+					"kind": "equal",
+					"new": "-25"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "FireRateSlow|#0",
+					"label": "Fire Rate Slow",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-7"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		}
+	],
+	"Last Stand": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "4m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "PulseDPS|#0",
+					"label": "Pulse DPS",
+					"kind": "equal",
+					"new": 40.5
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -30
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "4"
+				},
+				{
+					"key": "UnstoppableCastDelay|#0",
+					"label": "Unstoppable Cast Delay",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "BulletResist|#0",
+					"label": "Bullet Resist",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "TechResist|#0",
+					"label": "Tech Resist",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		}
+	],
+	"The Rake": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Telekinesis": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "100"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-45"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "1.5"
+				},
+				{
+					"key": "TossDistance|#0",
+					"label": "Toss Distance",
+					"kind": "equal",
+					"new": "6m"
+				},
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "6m"
+				}
+			]
+		}
+	],
+	"Project Mind": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "15m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "300"
+				},
+				{
+					"key": "BarrierDuration|#0",
+					"label": "Barrier Duration",
+					"kind": "equal",
+					"new": "5"
+				},
+				{
+					"key": "CombatBarrier|EAddToScale#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": 1.7,
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -32
+				}
+			]
+		}
+	],
+	"Full Auto": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-20"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusFireRate|EAddToBase#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": "10"
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MagicDamagePerBullet|EAddToScale#0",
+					"label": "Magic Damage Per Bullet",
+					"kind": "changed",
+					"old": "0.06",
+					"new": "0.045"
+				},
+				{
+					"key": "UnlimitedAmmo|#0",
+					"label": "Unlimited Ammo",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Card Trick": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "0.4"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ImprovedJokerChance|#0",
+					"label": "Improved Joker Chance",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "SpadeDamageBonus|#0",
+					"label": "Spade Damage Bonus",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "DiamondResistShred|#0",
+					"label": "Diamond Resist Shred",
+					"kind": "equal",
+					"new": "-5"
+				},
+				{
+					"key": "HeartHeal|#0",
+					"label": "Heart Heal",
+					"kind": "equal",
+					"new": "75"
+				},
+				{
+					"key": "HeartHeal|EAddToScale#0",
+					"label": "Heart Heal",
+					"kind": "equal",
+					"new": "0.5",
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "ClubSlowPercent|#0",
+					"label": "Club Slow Percent",
+					"kind": "changed",
+					"old": "-20",
+					"new": "20"
+				}
+			]
+		}
+	],
+	"The Butcher's Hand": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Consume": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "ConsumeHealPercentage|#0",
+					"label": "Consume Heal Percentage",
+					"kind": "equal",
+					"new": "25"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": "40"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityUnitTargetLimit|#0",
+					"label": "Ability Unit Target Limit",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		}
+	],
+	"Bio Blast": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "ScrapDamage|#0",
+					"label": "Scrap Damage",
+					"kind": "equal",
+					"new": "55"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "EnemyMoveSlow|#0",
+					"label": "Enemy Move Slow",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		}
+	],
+	"Overload": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "GarbageRadius|#0",
+					"label": "Garbage Radius",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-35"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BaseDamage|#0",
+					"label": "Base Damage",
+					"kind": "equal",
+					"new": "100"
+				},
+				{
+					"key": "DamagePerSecond|#0",
+					"label": "Damage Per Second",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		}
+	],
+	"Wrecking Ball": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -7.5
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": "0.5"
+				}
+			]
+		}
+	],
+	"Sister's Lament": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Power Slash": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "40"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-4"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "FullChargeDamage|#0",
+					"label": "Full Charge Damage",
+					"kind": "equal",
+					"new": 150
+				},
+				{
+					"key": "FullChargeDamage|EAddToScale#0",
+					"label": "Full Charge Damage",
+					"kind": "equal",
+					"new": 0.5,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "SlashLength|#0",
+					"label": "Slash Length",
+					"kind": "equal",
+					"new": "8m"
+				}
+			]
+		}
+	],
+	"Flying Slash": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-18"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SpiritBonus|#0",
+					"label": "Spirit Bonus",
+					"kind": "equal",
+					"new": "35"
+				},
+				{
+					"key": "BuffDuration|#0",
+					"label": "Buff Duration",
+					"kind": "equal",
+					"new": "6"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "15m"
+				},
+				{
+					"key": "CanGrappleAllyHeroes|#0",
+					"label": "Can Grapple Ally Heroes",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "equal",
+					"new": "5"
+				}
+			]
+		}
+	],
+	"Crimson Slash": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BuffDuration|#0",
+					"label": "Buff Duration",
+					"kind": "equal",
+					"new": "4"
+				},
+				{
+					"key": "BuffMeleeDamage|#0",
+					"label": "Buff Melee Damage",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "HealMaxHealth|#0",
+					"label": "Heal Max Health",
+					"kind": "equal",
+					"new": "6"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 0.6,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Shadow Transformation": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "WeaponDamageBonus|#0",
+					"label": "Weapon Damage Bonus",
+					"kind": "equal",
+					"new": 7
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "4m"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-20"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "3.0"
+				},
+				{
+					"key": "BulletResist|#0",
+					"label": "Bullet Resist",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "TechResist|#0",
+					"label": "Tech Resist",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		}
+	],
+	"The Rattler": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Slither": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SlideScale|#0",
+					"label": "Slide Scale",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Stamina|#0",
+					"label": "Stamina",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BuffDuration|#0",
+					"label": "Buff Duration",
+					"kind": "equal",
+					"new": "5"
+				},
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "180"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "8"
+				},
+				{
+					"key": "CombatBarrier|EAddToScale#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "0.8",
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Lethal Venom": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "VenomMaxDamage|#0",
+					"label": "Venom Max Damage",
+					"kind": "equal",
+					"new": 31.5
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "HealAmpRegenPenaltyPercent|#0",
+					"label": "Heal Amp Regen Penalty Percent",
+					"kind": "equal",
+					"new": "-40"
+				},
+				{
+					"key": "HealAmpReceivePenaltyPercent|#0",
+					"label": "Heal Amp Receive Penalty Percent",
+					"kind": "equal",
+					"new": "-40"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-12"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BuildUpPerShot|#0",
+					"label": "Build Up Per Shot",
+					"kind": "equal",
+					"new": "4.5"
+				}
+			]
+		}
+	],
+	"Screwjab Dagger": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BulletResistReduction|#0",
+					"label": "Bullet Resist Reduction",
+					"kind": "equal",
+					"new": "-8"
+				},
+				{
+					"key": "BulletResistReductionPerStack|#0",
+					"label": "Bullet Resist Reduction Per Stack",
+					"kind": "equal",
+					"new": "-6"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "CooldownRefundPercent|#0",
+					"label": "Cooldown Refund Percent",
+					"kind": "equal",
+					"new": "55"
+				},
+				{
+					"key": "MaxStacks|#0",
+					"label": "Max Stacks",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "equal",
+					"new": "-2"
+				}
+			]
+		}
+	],
+	"Petrifying Bola": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "PetrifyDamage|#0",
+					"label": "Petrify Damage",
+					"kind": "equal",
+					"new": 49.5
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-20"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "PetrifyDuration|#0",
+					"label": "Petrify Duration",
+					"kind": "equal",
+					"new": "1.0"
+				}
+			]
+		}
+	],
+	"citadel_weapon_vandal_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"citadel_ability_vandal_surge": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -28
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "0.5"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityUnitTargetLimit|#0",
+					"label": "Ability Unit Target Limit",
+					"kind": "equal",
+					"new": "5"
+				}
+			]
+		}
+	],
+	"ability_vandal_pillar": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-15"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "PetrifyDuration|#0",
+					"label": "Petrify Duration",
+					"kind": "equal",
+					"new": "1.5"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "3m"
+				}
+			]
+		}
+	],
+	"ability_haunt": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AfterburnSpiritDamageReduction|#0",
+					"label": "Afterburn Spirit Damage Reduction",
+					"kind": "equal",
+					"new": "-30"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BurnDuration|#0",
+					"label": "Burn Duration",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		}
+	],
+	"citadel_ability_vandal_overflow": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -28
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "0.5"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityUnitTargetLimit|#0",
+					"label": "Ability Unit Target Limit",
+					"kind": "equal",
+					"new": "5"
+				}
+			]
+		}
+	],
+	"The Prestige": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Vexing Bolt": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "FireRateSlow|#0",
+					"label": "Fire Rate Slow",
+					"kind": "equal",
+					"new": "25"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "5"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-13"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxDamage|#0",
+					"label": "Max Damage",
+					"kind": "equal",
+					"new": 126
+				},
+				{
+					"key": "CloneDamagePercentage|EAddToBase#0",
+					"label": "Clone Damage Percentage",
+					"kind": "equal",
+					"new": 50,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Spectral Assistant": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "added",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "added",
+					"new": "7"
+				},
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "added",
+					"new": "5m"
+				},
+				{
+					"key": "LeashRadius|#0",
+					"label": "Leash Radius",
+					"kind": "added",
+					"new": "5m"
+				}
+			],
+			"text": {
+				"old": "",
+				"new": "+7s Duration & 5m Range"
+			}
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "added",
+					"new": "60"
+				},
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "added",
+					"new": 12.599999
+				}
+			],
+			"text": {
+				"old": "",
+				"new": "+60% Fire Rate and +12.599999 Assistant Damage"
+			}
+		}
+	],
+	"Audience Participation": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Rabbit Hex": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "HexDuration|#0",
+					"label": "Hex Duration",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "3m"
+				},
+				{
+					"key": "DamageAmpPercentage|#0",
+					"label": "Damage Amp Percentage",
+					"kind": "equal",
+					"new": "7"
+				}
+			]
+		}
+	],
+	"Civil Servant": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Bottled Phantasmicide": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "4"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "TechArmorDamageReduction|#0",
+					"label": "Tech Armor Damage Reduction",
+					"kind": "equal",
+					"new": "-25"
+				}
+			]
+		}
+	],
+	"Crawling Plague": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-45"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SpiritResReducedPerStack|#0",
+					"label": "Spirit Res Reduced Per Stack",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "SpiritReducedPerStack|#0",
+					"label": "Spirit Reduced Per Stack",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "SpiderCount|#0",
+					"label": "Spider Count",
+					"kind": "equal",
+					"new": "5"
+				},
+				{
+					"key": "SpreadDistance|#0",
+					"label": "Spread Distance",
+					"kind": "equal",
+					"new": "900m"
+				}
+			]
+		}
+	],
+	"Pest Barrier": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-8"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "200"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "5m"
+				}
+			]
+		}
+	],
+	"Silktrap": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "WebDuration|#0",
+					"label": "Web Duration",
+					"kind": "equal",
+					"new": "120"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "SilenceDuration|#0",
+					"label": "Silence Duration",
+					"kind": "equal",
+					"new": "2.5"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		}
+	],
+	"Umbrella Gun": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Umbrella Maneuver": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-14"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"Blindside": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "TurnRateSlowDuration|#0",
+					"label": "Turn Rate Slow Duration",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-12"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BackstabBonusDamagePct|#0",
+					"label": "Backstab Bonus Damage Pct",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		}
+	],
+	"Revelation": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "5m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -25
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		}
+	],
+	"citadel_weapon_gunslinger2_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Demontrigger Blitz": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-20"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "6"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "TotalShots|#0",
+					"label": "Total Shots",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		}
+	],
+	"Infernal Brand": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-3"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "ProcDamage|#0",
+					"label": "Proc Damage",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"gunslinger_knockbackblast": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"New Money": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Sanguine Retreat": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": "25"
+				},
+				{
+					"key": "BuffDuration|#0",
+					"label": "Buff Duration",
+					"kind": "equal",
+					"new": "8"
+				},
+				{
+					"key": "BonusBullets|#0",
+					"label": "Bonus Bullets",
+					"kind": "equal",
+					"new": "8"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxRecasts|#0",
+					"label": "Max Recasts",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "4m"
+				}
+			]
+		}
+	],
+	"Love Bites": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "30"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "MagicDamagePerBullet|#0",
+					"label": "Magic Damage Per Bullet",
+					"kind": "equal",
+					"new": 3
+				},
+				{
+					"key": "BonusDamage|#0",
+					"label": "Bonus Damage",
+					"kind": "equal",
+					"new": 45
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "PerTargetCooldown|#0",
+					"label": "Per Target Cooldown",
+					"kind": "equal",
+					"new": "-5"
+				},
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": "25"
+				},
+				{
+					"key": "BuffDuration|#0",
+					"label": "Buff Duration",
+					"kind": "equal",
+					"new": "5"
+				}
+			]
+		}
+	],
+	"Nox Nostra": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 1.9
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-45"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "CurrentHealthPercent|#0",
+					"label": "Current Health Percent",
+					"kind": "equal",
+					"new": 0.5
+				}
+			]
+		}
+	],
+	"Rake": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "60"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "RakeHealPerKill|#0",
+					"label": "Rake Heal Per Kill",
+					"kind": "equal",
+					"new": 30
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -8
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MissingHealthDamagePercentage|#0",
+					"label": "Missing Health Damage Percentage",
+					"kind": "equal",
+					"new": 7
+				},
+				{
+					"key": "RakeHealPerKill|EAddToScale#0",
+					"label": "Rake Heal Per Kill",
+					"kind": "equal",
+					"new": 1.2,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"citadel_weapon_boho_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Intertwine": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "DamageShareRadius|#0",
+					"label": "Damage Share Radius",
+					"kind": "equal",
+					"new": "3m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DamageSharePercentage|#0",
+					"label": "Damage Share Percentage",
+					"kind": "equal",
+					"new": 22.5
+				}
+			]
+		}
+	],
+	"Skipshot": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-2"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 18
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BounceCount|#0",
+					"label": "Bounce Count",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		}
+	],
+	"Swish": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 18
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "80"
+				}
+			]
+		}
+	],
+	"ability_boho_channeltether": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 18
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "150"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ImmobilizeDuration|#0",
+					"label": "Immobilize Duration",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"citadel_weapon_swan_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"ability_swan_featherboomerang": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"Jeté": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"Acrobat": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "FireRatePerStack|#0",
+					"label": "Fire Rate Per Stack",
+					"kind": "equal",
+					"new": "4"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxStacks|#0",
+					"label": "Max Stacks",
+					"kind": "equal",
+					"new": "4"
+				}
+			]
+		}
+	],
+	"ability_swan_ult": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"citadel_weapon_skyrunner_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Flakshot": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "RicochetChance|#0",
+					"label": "Ricochet Chance",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusDamage|#0",
+					"label": "Bonus Damage",
+					"kind": "equal",
+					"new": "5"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "RicochetDamagePercent|#0",
+					"label": "Ricochet Damage Percent",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		}
+	],
+	"ability_skyrunner_magic_beam": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"Lifethread": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"citadel_weapon_graf_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"ability_graf_ability01": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_graf_ability02": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_graf_ability03": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_graf_ult": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"citadel_weapon_fortuna_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"ability_fortuna_ability01": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_fortuna_ability02": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_fortuna_ability03": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"ability_fortuna_ult": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0"
+				}
+			]
+		}
+	],
+	"Memento Mori": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Jumpstart": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "3m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "TotalHealthRegen|#0",
+					"label": "Total Health Regen",
+					"kind": "equal",
+					"new": "70"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-8"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "TotalHealthRegen|EAddToScale#0",
+					"label": "Total Health Regen",
+					"kind": "equal",
+					"new": "0.9",
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "StatusResistancePercent|#0",
+					"label": "Status Resistance Percent",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		}
+	],
+	"Aura of Suffering": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "25"
+				},
+				{
+					"key": "EnemyDashSlowPercent|#0",
+					"label": "Enemy Dash Slow Percent",
+					"kind": "equal",
+					"new": "-25"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "0.5"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "MinDps|#0",
+					"label": "Min Dps",
+					"kind": "equal",
+					"new": "6"
+				},
+				{
+					"key": "MaxDPS|#0",
+					"label": "Max DPS",
+					"kind": "equal",
+					"new": 34
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "IncomingDamagePercent|#0",
+					"label": "Incoming Damage Percent",
+					"kind": "equal",
+					"new": "15"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "1m"
+				}
+			]
+		}
+	],
+	"Shocking Reanimation": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusDamagePerBullet|#0",
+					"label": "Bonus Damage Per Bullet",
+					"kind": "equal",
+					"new": 6
+				},
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": "15"
+				},
+				{
+					"key": "BonusDamagePerBullet|EAddToScale#0",
+					"label": "Bonus Damage Per Bullet",
+					"kind": "equal",
+					"new": "0.06",
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "RespawnHealthPercent|#0",
+					"label": "Respawn Health Percent",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "175"
+				},
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": 1.5
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -95
+				}
+			]
+		}
+	],
+	"Pain Battery": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "equal",
+					"new": "2s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 50
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MissingHealthPercentHeal|#0",
+					"label": "Missing Health Percent Heal",
+					"kind": "equal",
+					"new": "15"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 0.6,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Bookwyrm": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-12"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "GroundFlameDuration|#0",
+					"label": "Ground Flame Duration",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "1m"
+				},
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": 1
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 100
+				},
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": 30
+				},
+				{
+					"key": "DragonTravelRange|#0",
+					"label": "Dragon Travel Range",
+					"kind": "equal",
+					"new": "12m"
+				}
+			]
+		}
+	],
+	"Captivating Read": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-11"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "ImmobilizeDuration|#0",
+					"label": "Immobilize Duration",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "TechArmorDamageReduction|#0",
+					"label": "Tech Armor Damage Reduction",
+					"kind": "equal",
+					"new": "-18"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "6"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "1m"
+				}
+			]
+		}
+	],
+	"Plot Armor": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": "14"
+				},
+				{
+					"key": "BonusFireRate|EAddToScale#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": 0.16,
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "100"
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "CombatBarrier|EAddToScale#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": 0.5,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "BonusTargets|#0",
+					"label": "Bonus Targets",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "BonusTargetsBarrierPercentage|#0",
+					"label": "Bonus Targets Barrier Percentage",
+					"kind": "equal",
+					"new": "100"
+				}
+			]
+		}
+	],
+	"Rallying Charge": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "HealAmount|#0",
+					"label": "Heal Amount",
+					"kind": "equal",
+					"new": "150"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "KnightCount|#0",
+					"label": "Knight Count",
+					"kind": "equal",
+					"new": "4"
+				},
+				{
+					"key": "KnightCountInFirstWave|#0",
+					"label": "Knight Count In First Wave",
+					"kind": "equal",
+					"new": "4"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-45"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 160
+				},
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": "0.5"
+				},
+				{
+					"key": "MaxAmp|#0",
+					"label": "Max Amp",
+					"kind": "equal",
+					"new": "70"
+				}
+			]
+		}
+	],
+	"Chapter's End": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Service With A Smile": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Doorway": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "250"
+				},
+				{
+					"key": "BarrierDuration|#0",
+					"label": "Barrier Duration",
+					"kind": "equal",
+					"new": "12"
+				},
+				{
+					"key": "CombatBarrier|EAddToScale#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "1.5",
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DoorwayDistance|#0",
+					"label": "Doorway Distance",
+					"kind": "equal",
+					"new": "40m"
+				},
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "30m"
+				},
+				{
+					"key": "DoorwayDistance|EAddToScale#0",
+					"label": "Doorway Distance",
+					"kind": "equal",
+					"new": "0.15",
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Luggage Cart": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "CartDamage|#0",
+					"label": "Cart Damage",
+					"kind": "equal",
+					"new": "80"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "25m"
+				},
+				{
+					"key": "WallImpactDamage|#0",
+					"label": "Wall Impact Damage",
+					"kind": "equal",
+					"new": "75"
+				},
+				{
+					"key": "WallImpactDamage|EAddToScale#0",
+					"label": "Wall Impact Damage",
+					"kind": "equal",
+					"new": 0.6,
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": "1.25"
+				},
+				{
+					"key": "AbilityCooldown|EAddToBase#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-15"
+				}
+			]
+		}
+	],
+	"Call Bell": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "ImpactDamage|#0",
+					"label": "Impact Damage",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "ExplosionDamage|#0",
+					"label": "Explosion Damage",
+					"kind": "equal",
+					"new": "40"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ProjectileFuse|#0",
+					"label": "Projectile Fuse",
+					"kind": "equal",
+					"new": "26"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "4.5m"
+				},
+				{
+					"key": "ImpactDamage|EAddToScale#0",
+					"label": "Impact Damage",
+					"kind": "equal",
+					"new": 0.35,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "ExplosionDamage|EAddToScale#0",
+					"label": "Explosion Damage",
+					"kind": "equal",
+					"new": 0.35,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Hotel Guest": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-20"
+				},
+				{
+					"key": "StaminaDrain|#0",
+					"label": "Stamina Drain",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "150"
+				},
+				{
+					"key": "LateCheckoutDamage|#0",
+					"label": "Late Checkout Damage",
+					"kind": "equal",
+					"new": "150"
+				},
+				{
+					"key": "LateCheckoutStun|#0",
+					"label": "Late Checkout Stun",
+					"kind": "equal",
+					"new": "1.5"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "UnstoppableWhileHotelOccupied|#0",
+					"label": "Unstoppable While Hotel Occupied",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "LateCheckoutCooldown|#0",
+					"label": "Late Checkout Cooldown",
+					"kind": "equal",
+					"new": "15"
+				}
+			]
+		}
+	],
+	"Biquette": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Blasted": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "2.25m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "GainSlamOnUse|#0",
+					"label": "Gain Slam On Use",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "BulletDamageAmp|#0",
+					"label": "Bullet Damage Amp",
+					"kind": "equal",
+					"new": "7"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxHealthMelee|#0",
+					"label": "Max Health Melee",
+					"kind": "equal",
+					"new": "50"
+				},
+				{
+					"key": "MaxHealthMelee|EAddToScale#0",
+					"label": "Max Health Melee",
+					"kind": "equal",
+					"new": 0.6,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Chain Gang": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BulletResist|#0",
+					"label": "Bullet Resist",
+					"kind": "equal",
+					"new": "40"
+				},
+				{
+					"key": "TechResist|#0",
+					"label": "Tech Resist",
+					"kind": "equal",
+					"new": "40"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-40"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "UnstoppablePerHero|#0",
+					"label": "Unstoppable Per Hero",
+					"kind": "equal",
+					"new": 1.3
+				},
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "5m"
+				}
+			]
+		}
+	],
+	"Rising Ram": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "WeaponDamageBurst|#0",
+					"label": "Weapon Damage Burst",
+					"kind": "equal",
+					"new": 25
+				},
+				{
+					"key": "WeaponDamageBurstDuration|#0",
+					"label": "Weapon Damage Burst Duration",
+					"kind": "equal",
+					"new": "5"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "0.4"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxHealthBuffPct|#0",
+					"label": "Max Health Buff Pct",
+					"kind": "added",
+					"new": 10
+				},
+				{
+					"key": "MaxHealthBuffDuration|#0",
+					"label": "Max Health Buff Duration",
+					"kind": "added",
+					"new": 16
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -13
+				},
+				{
+					"key": "DealMaxHealthDamagePct|#0",
+					"label": "Deal Max Health Damage Pct",
+					"kind": "removed",
+					"old": 7
+				},
+				{
+					"key": "DealMaxHealthDamagePct|EAddToScale#0",
+					"label": "Deal Max Health Damage Pct",
+					"kind": "removed",
+					"old": "0.03"
+				}
+			]
+		}
+	],
+	"Bashdown": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "2m"
+				},
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "CountsAsLightMelee|#0",
+					"label": "Counts As Light Melee",
+					"kind": "equal",
+					"new": "-1"
+				},
+				{
+					"key": "CountsAsHeavyMelee|#0",
+					"label": "Counts As Heavy Melee",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "HeavyMeleeDamage|EAddToScale#0",
+					"label": "Heavy Melee Damage",
+					"kind": "equal",
+					"new": 0.5
+				},
+				{
+					"key": "HeavyMeleeDamage|#0",
+					"label": "Heavy Melee Damage",
+					"kind": "equal",
+					"new": 0
+				},
+				{
+					"key": "MeleeDamage|EMultiplyScale#0",
+					"label": "Melee Damage",
+					"kind": "equal",
+					"new": 0
+				},
+				{
+					"key": "MeleeDamage|#0",
+					"label": "Melee Damage",
+					"kind": "equal",
+					"new": 0
+				},
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "equal",
+					"new": -3
+				}
+			]
+		}
+	],
+	"Crimson Grasp": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Rend": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusDamage|#0",
+					"label": "Bonus Damage",
+					"kind": "equal",
+					"new": 40
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -8
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "UseHeavyMelee|#0",
+					"label": "Use Heavy Melee",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "DamageHeavyMelee|EAddToScale#0",
+					"label": "Damage Heavy Melee",
+					"kind": "equal",
+					"new": 0.55
+				},
+				{
+					"key": "Damage|EMultiplyScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 0
+				}
+			]
+		}
+	],
+	"Stalker's Mark": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BulletResistReduction|#0",
+					"label": "Bullet Resist Reduction",
+					"kind": "equal",
+					"new": "-8"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "changed",
+					"old": "-12",
+					"new": "-10"
+				}
+			],
+			"text": {
+				"old": "-12s Cooldown and +3s Duration",
+				"new": "-10s Cooldown and +3s Duration"
+			}
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DotHealthPercent|#0",
+					"label": "Dot Health Percent",
+					"kind": "equal",
+					"new": 1.5
+				},
+				{
+					"key": "HealAmpReceivePenaltyPercent|#0",
+					"label": "Heal Amp Receive Penalty Percent",
+					"kind": "equal",
+					"new": -40
+				},
+				{
+					"key": "HealAmpRegenPenaltyPercent|#0",
+					"label": "Heal Amp Regen Penalty Percent",
+					"kind": "equal",
+					"new": -40
+				}
+			]
+		}
+	],
+	"Bloodscent": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "3m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "HealOnKillPct|#0",
+					"label": "Heal On Kill Pct",
+					"kind": "equal",
+					"new": "24"
+				},
+				{
+					"key": "StaminaToRestore|#0",
+					"label": "Stamina To Restore",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AmpDamagePercent|#0",
+					"label": "Amp Damage Percent",
+					"kind": "equal",
+					"new": 11
+				}
+			]
+		}
+	],
+	"Eternal Night": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusSprintSpeed|#0",
+					"label": "Bonus Sprint Speed",
+					"kind": "equal",
+					"new": "10m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-40"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "2.5"
+				},
+				{
+					"key": "MaxTargets|#0",
+					"label": "Max Targets",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"51:20": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Gutshot": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "25"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10"
+				},
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": "0.4"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BuffDuration|#0",
+					"label": "Buff Duration",
+					"kind": "equal",
+					"new": "5"
+				}
+			]
+		}
+	],
+	"Ira Domini": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "1.2m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusDamage|#0",
+					"label": "Bonus Damage",
+					"kind": "equal",
+					"new": "65"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-15"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AllStakesBlessed|#0",
+					"label": "All Stakes Blessed",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Consecrating Grenade": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-5"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "1.5m"
+				},
+				{
+					"key": "BurnRadius|#0",
+					"label": "Burn Radius",
+					"kind": "equal",
+					"new": "1.5m"
+				},
+				{
+					"key": "BurnDuration|#0",
+					"label": "Burn Duration",
+					"kind": "equal",
+					"new": "1.0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "HealAmpReceivePenaltyPercent|#0",
+					"label": "Heal Amp Receive Penalty Percent",
+					"kind": "equal",
+					"new": "-20"
+				},
+				{
+					"key": "HealAmpRegenPenaltyPercent|#0",
+					"label": "Heal Amp Regen Penalty Percent",
+					"kind": "equal",
+					"new": "-20"
+				},
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "equal",
+					"new": "3"
+				}
+			]
+		}
+	],
+	"Hex-Lined Snap Trap": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-11"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "ImmobilizeDuration|#0",
+					"label": "Immobilize Duration",
+					"kind": "equal",
+					"new": "1.0"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "IncomingDamagePercentFromCaster|#0",
+					"label": "Incoming Damage Percent From Caster",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Gun Damage": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Pillow Toss": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-7"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "FireRateSlow|#0",
+					"label": "Fire Rate Slow",
+					"kind": "equal",
+					"new": "35"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "2m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "100"
+				},
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Naptime": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "ConsumeStaminaOnWake|#0",
+					"label": "Consume Stamina On Wake",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "NoStaminaRegenDuringSleep|#0",
+					"label": "No Stamina Regen During Sleep",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SleepDuration|#0",
+					"label": "Sleep Duration",
+					"kind": "equal",
+					"new": "0.75"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "3m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DamageResistPctWhileChanneling|#0",
+					"label": "Damage Resist Pct While Channeling",
+					"kind": "equal",
+					"new": "50"
+				},
+				{
+					"key": "UnstoppableWhileChanneling|#0",
+					"label": "Unstoppable While Channeling",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-55"
+				}
+			]
+		}
+	],
+	"Lil Helpers": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "HelperCount|#0",
+					"label": "Helper Count",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "1.5m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "HelperCount|#0",
+					"label": "Helper Count",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "InfestDamageTakenPercent|#0",
+					"label": "Infest Damage Taken Percent",
+					"kind": "equal",
+					"new": "15"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "HelperCount|#0",
+					"label": "Helper Count",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "TechArmorGain|#0",
+					"label": "Tech Armor Gain",
+					"kind": "equal",
+					"new": "15"
+				}
+			]
+		}
+	],
+	"Tag Along": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-8"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusBarrierAmpPercent|#0",
+					"label": "Bonus Barrier Amp Percent",
+					"kind": "equal",
+					"new": "35"
+				},
+				{
+					"key": "BonusItemDurationPercent|#0",
+					"label": "Bonus Item Duration Percent",
+					"kind": "equal",
+					"new": "35"
+				},
+				{
+					"key": "BonusItemRangePercent|#0",
+					"label": "Bonus Item Range Percent",
+					"kind": "equal",
+					"new": "35"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "TechPowerPercent|#0",
+					"label": "Tech Power Percent",
+					"kind": "equal",
+					"new": "15"
+				},
+				{
+					"key": "BonusSpiritPower|#0",
+					"label": "Bonus Spirit Power",
+					"kind": "equal",
+					"new": "35"
+				},
+				{
+					"key": "HopOffEffecDuration|#0",
+					"label": "Hop Off Effec Duration",
+					"kind": "equal",
+					"new": "10"
+				},
+				{
+					"key": "MissingHealthBurstPct|EAddToScale#0",
+					"label": "Missing Health Burst Pct",
+					"kind": "equal",
+					"new": 0.016,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "HealingPerSecond|EAddToScale#0",
+					"label": "Healing Per Second",
+					"kind": "equal",
+					"new": 0.34,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Pride of Ixia": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Disengaging Sigil": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": "25"
+				},
+				{
+					"key": "BonusBulletSpeedPercent|#0",
+					"label": "Bonus Bullet Speed Percent",
+					"kind": "equal",
+					"new": "25"
+				},
+				{
+					"key": "BuffDuration|#0",
+					"label": "Buff Duration",
+					"kind": "equal",
+					"new": "8"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "StaminaToRestore|#0",
+					"label": "Stamina To Restore",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "ResetsAirLimit|#0",
+					"label": "Resets Air Limit",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "RecastTime|#0",
+					"label": "Recast Time",
+					"kind": "equal",
+					"new": "4"
+				}
+			]
+		}
+	],
+	"Riposte": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-8"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "MeleeResistReduction|#0",
+					"label": "Melee Resist Reduction",
+					"kind": "changed",
+					"old": "-30",
+					"new": "-25"
+				},
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "added",
+					"new": "0.4"
+				}
+			],
+			"text": {
+				"old": "",
+				"new": "-25% Melee Resist and +0.4s Stun Duration"
+			}
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "TargetLifesteal|#0",
+					"label": "Target Lifesteal",
+					"kind": "changed",
+					"old": "60",
+					"new": "75"
+				},
+				{
+					"key": "TargetLifestealDuration|#0",
+					"label": "Target Lifesteal Duration",
+					"kind": "changed",
+					"old": "7",
+					"new": "13"
+				}
+			],
+			"text": {
+				"old": "Gain 60% Bullet, Spirit &amp; Melee Lifesteal against the Riposte target for 7s",
+				"new": "Gain 75% Bullet, Spirit &amp; Melee Lifesteal against the Riposte target for 13s"
+			}
+		}
+	],
+	"Flawless Advance": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "HealFixedHealth|#0",
+					"label": "Heal Fixed Health",
+					"kind": "equal",
+					"new": "35"
+				},
+				{
+					"key": "HealFixedHealth|EAddToScale#0",
+					"label": "Heal Fixed Health",
+					"kind": "equal",
+					"new": 1.3,
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-12"
+				},
+				{
+					"key": "BulletResist|#0",
+					"label": "Bullet Resist",
+					"kind": "equal",
+					"new": "60"
+				},
+				{
+					"key": "DashBuffDuration|#0",
+					"label": "Dash Buff Duration",
+					"kind": "equal",
+					"new": "1.5"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BaseDamage|#0",
+					"label": "Base Damage",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "BaseDamage|EMultiplyScale#0",
+					"label": "Base Damage",
+					"kind": "equal",
+					"new": "1.15",
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "MaxDamageBeforePerfect|#0",
+					"label": "Max Damage Before Perfect",
+					"kind": "equal",
+					"new": "45"
+				},
+				{
+					"key": "MaxDamageBeforePerfect|EMultiplyScale#0",
+					"label": "Max Damage Before Perfect",
+					"kind": "equal",
+					"new": "1.15",
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "PerfectDamage|#0",
+					"label": "Perfect Damage",
+					"kind": "equal",
+					"new": "65"
+				},
+				{
+					"key": "PerfectDamage|EMultiplyScale#0",
+					"label": "Perfect Damage",
+					"kind": "equal",
+					"new": "1.15",
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "AttackDashRange|#0",
+					"label": "Attack Dash Range",
+					"kind": "equal",
+					"new": "3.0m"
+				},
+				{
+					"key": "DashSpeed|#0",
+					"label": "Dash Speed",
+					"kind": "equal",
+					"new": "550"
+				}
+			]
+		}
+	],
+	"Itani Lo Sahn": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "DashRange|#0",
+					"label": "Dash Range",
+					"kind": "equal",
+					"new": "8m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-35"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BonusDamagePercent|#0",
+					"label": "Bonus Damage Percent",
+					"kind": "equal",
+					"new": "50"
+				}
+			]
+		}
+	],
+	"The Teacher": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Grasping Hands": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "90"
+				},
+				{
+					"key": "ZombieWallLength|#0",
+					"label": "Zombie Wall Length",
+					"kind": "equal",
+					"new": "10m"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ImmobilizeDuration|#0",
+					"label": "Immobilize Duration",
+					"kind": "equal",
+					"new": "0.75"
+				},
+				{
+					"key": "SummonCount|#0",
+					"label": "Summon Count",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-14"
+				}
+			]
+		}
+	],
+	"Jar of Dead": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "HealPerPickup|#0",
+					"label": "Heal Per Pickup",
+					"kind": "equal",
+					"new": "5"
+				},
+				{
+					"key": "HealPerPickup|EAddToScale#0",
+					"label": "Heal Per Pickup",
+					"kind": "equal",
+					"new": "0.16",
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "30"
+				},
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "SkullCount|#0",
+					"label": "Skull Count",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "SkullLifetime|#0",
+					"label": "Skull Lifetime",
+					"kind": "equal",
+					"new": "4"
+				}
+			]
+		}
+	],
+	"Borrowed Decree": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-15"
+				},
+				{
+					"key": "MoveSpeedPercent|#0",
+					"label": "Move Speed Percent",
+					"kind": "equal",
+					"new": "25"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "10"
+				},
+				{
+					"key": "SummonFrequency|#0",
+					"label": "Summon Frequency",
+					"kind": "equal",
+					"new": "-0.3"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "CurrentHealthDamagePercentage|#0",
+					"label": "Current Health Damage Percentage",
+					"kind": "equal",
+					"new": "5"
+				}
+			]
+		}
+	],
+	"Essence Theft": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MaxStolenSpiritResist|#0",
+					"label": "Max Stolen Spirit Resist",
+					"kind": "equal",
+					"new": "5"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "MaxStolenAttackDamage|#0",
+					"label": "Max Stolen Attack Damage",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "SkullBuildUp|#0",
+					"label": "Skull Build Up",
+					"kind": "equal",
+					"new": "0.15"
+				},
+				{
+					"key": "ZombieMeleeBuildUp|#0",
+					"label": "Zombie Melee Build Up",
+					"kind": "equal",
+					"new": "0.15"
+				},
+				{
+					"key": "ZombieExplosionBuildUp|#0",
+					"label": "Zombie Explosion Build Up",
+					"kind": "equal",
+					"new": "1.0"
+				},
+				{
+					"key": "MaxStolenTargets|#0",
+					"label": "Max Stolen Targets",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"citadel_weapon_werewolf_rifle": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Slam Fire": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BaseAttackDamagePercent|#0",
+					"label": "Base Attack Damage Percent",
+					"kind": "equal",
+					"new": "15"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StackDuration|#0",
+					"label": "Stack Duration",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "MaxStacks|#0",
+					"label": "Max Stacks",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "BonusCurrentHealthDamagePercentage|#0",
+					"label": "Bonus Current Health Damage Percentage",
+					"kind": "equal",
+					"new": "7"
+				}
+			]
+		}
+	],
+	"Boot Kick": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-6"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "StaminaRestore|#0",
+					"label": "Stamina Restore",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "OutgoingDamagePercent|#0",
+					"label": "Outgoing Damage Percent",
+					"kind": "equal",
+					"new": "-35"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "5"
+				},
+				{
+					"key": "BonusDamage|#0",
+					"label": "Bonus Damage",
+					"kind": "equal",
+					"new": "80"
+				}
+			]
+		}
+	],
+	"Entangling Bola": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "25"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-8"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "RicochetCount|#0",
+					"label": "Ricochet Count",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "RicochetRange|#0",
+					"label": "Ricochet Range",
+					"kind": "equal",
+					"new": "15m"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "0.75"
+				}
+			]
+		}
+	],
+	"Lycan Curse": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BulletResist|#0",
+					"label": "Bullet Resist",
+					"kind": "equal",
+					"new": "15"
+				},
+				{
+					"key": "TechResist|#0",
+					"label": "Tech Resist",
+					"kind": "equal",
+					"new": "15"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "4m"
+				},
+				{
+					"key": "BonusHealth|#0",
+					"label": "Bonus Health",
+					"kind": "equal",
+					"new": "200"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "KillDurationBonus|#0",
+					"label": "Kill Duration Bonus",
+					"kind": "equal",
+					"new": "15"
+				},
+				{
+					"key": "KillCreditWindow|#0",
+					"label": "Kill Credit Window",
+					"kind": "equal",
+					"new": "1.5"
+				}
+			]
+		}
+	],
+	"Carny Life": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Light Eater": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityLifestealPercentHero|#0",
+					"label": "Ability Lifesteal Percent Hero",
+					"kind": "equal",
+					"new": "15"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "3m"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "25"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "0.2",
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Dazzling Trick": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "3.5m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "80"
+				},
+				{
+					"key": "CombatBarrier|EAddToScale#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "0.7",
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "1.5"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-18"
+				}
+			]
+		}
+	],
+	"Shining Wonder": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "GroundDashReductionPercent|#0",
+					"label": "Ground Dash Reduction Percent",
+					"kind": "equal",
+					"new": "-15"
+				},
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "90"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxBounces|#0",
+					"label": "Max Bounces",
+					"kind": "equal",
+					"new": "8"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-30"
+				}
+			]
+		}
+	],
+	"Radiant Daggers": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "ImpactDamage|#0",
+					"label": "Impact Damage",
+					"kind": "equal",
+					"new": "80"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-22"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MagicIncreasePerStack|#0",
+					"label": "Magic Increase Per Stack",
+					"kind": "equal",
+					"new": "3"
+				},
+				{
+					"key": "FireRatePerStack|#0",
+					"label": "Fire Rate Per Stack",
+					"kind": "equal",
+					"new": "9"
+				}
+			]
+		}
+	]
+}

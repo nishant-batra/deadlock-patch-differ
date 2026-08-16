@@ -39,6 +39,8 @@ svg {
 
 html {
 	scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(100, 100, 100, 0.4) transparent;
 }
 
 /* Without this the sticky section nav covers whatever you jump to. */
@@ -48,21 +50,38 @@ section[id] {
 
 .masonary {
 	column-count: 3;
-	column-gap: 0;
+	justify-items: center;
+	column-gap: 12px;
 }
 
 /* Cards were splitting across columns. */
 .masonary > * {
 	break-inside: avoid;
 }
-@media (max-width: 1228px) {
+@media (max-width: 1270px) {
 	.masonary {
 		column-count: 2;
 	}
 }
 
-@media (max-width: 828px) {
+@media (max-width: 875px) {
 	.masonary {
 		column-count: 1;
 	}
+}
+html::-webkit-scrollbar {
+	width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+	background: rgba(100, 100, 100, 0.4);
+	border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+	background: rgba(100, 100, 100, 0.7);
 }
