@@ -6,7 +6,7 @@
     "#/*": "./app/*"
   },
   "scripts": {
-    "dev": "vite dev --port 3000",
+    "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
     "ingest": "tsx scripts/ingestPatch.ts",

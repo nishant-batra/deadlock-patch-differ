@@ -8,6 +8,9 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 const config = defineConfig({
+	server: {
+		port: process.env.PORT ? Number(process.env.PORT) : 5173,
+	},
 	plugins: [
 		devtools(),
 		nitro({ preset: "vercel", rollupConfig: { external: [/^@sentry\//] } }),
