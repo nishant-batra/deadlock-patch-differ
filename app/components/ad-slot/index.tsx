@@ -18,38 +18,33 @@ export default function AdSlot({
 }: AdSlotProps) {
 	const { insRef, status } = useAdSlot(ADSENSE_PUBLISHER_ID);
 
-	if (!ADSENSE_PUBLISHER_ID) {
-		// Dev-only stand-in so placement/responsiveness can be checked before a
-		// real publisher ID exists. Renders nothing in production.
-		if (!import.meta.env.DEV) return null;
-		const placeholder = (
-			<div
-				className={`flex min-h-[90px] items-center justify-center rounded border border-white/20 border-dashed bg-white/5 text-white/40 text-xs ${className ?? ""}`}
-			>
-				Ad ({slotId})
-			</div>
-		);
-		return wrapperClassName ? (
-			<div className={wrapperClassName}>{placeholder}</div>
-		) : (
-			placeholder
-		);
-	}
+	if (!ADSENSE_PUBLISHER_ID) return null;
 
 	// AdSense resolved the request and had nothing to serve - don't leave an
 	// empty container (or its wrapper) taking up space.
 	if (status === "unfilled") return null;
 
+	// The <ins> must stay mounted while pending - AdSense needs it in the DOM
+	// to measure and fill it - so a shimmer is layered on top instead of
+	// hiding it, and swaps out once `status` becomes "filled".
 	const ins = (
-		<ins
-			ref={insRef}
-			className={`adsbygoogle block ${className ?? ""}`}
-			style={{ display: "block" }}
-			data-ad-client={ADSENSE_PUBLISHER_ID}
-			data-ad-slot={slotId}
-			data-ad-format={format}
-			data-full-width-responsive="true"
-		/>
+		<div className={`relative ${className ?? ""}`}>
+			<ins
+				ref={insRef}
+				className="adsbygoogle block min-h-[90px] w-full"
+				style={{ display: "block" }}
+				data-ad-client={ADSENSE_PUBLISHER_ID}
+				data-ad-slot={slotId}
+				data-ad-format={format}
+				data-full-width-responsive="true"
+			/>
+			{status === "pending" && (
+				<div
+					className="absolute inset-0 animate-pulse rounded bg-white/10"
+					aria-hidden="true"
+				/>
+			)}
+		</div>
 	);
 
 	return wrapperClassName ? (

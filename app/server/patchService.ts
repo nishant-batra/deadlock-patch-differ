@@ -2,9 +2,21 @@
 //
 // Reads the precomputed artifacts written by scripts/ingestPatch.ts. The only
 // real logic here is joining the two sources of "this hero changed".
-
-import fs from "node:fs";
-import path from "node:path";
+//
+// These are static imports, not runtime fs reads: Vercel's serverless bundler
+// can only trace files reached through real imports, not a dynamically-built
+// fs path, so a fs.readFileSync(path.join(DATA_DIR, file)) here silently
+// finds nothing in production. A new commit to app/data already triggers a
+// fresh Vercel build (that's what the ingest cron is for), so bundling the
+// JSON at build time costs nothing over reading it at request time.
+import abilityTiersJson from "#/data/ability-tiers.json";
+import heroesViewJson from "#/data/heroes-view.json";
+import itemChangesJson from "#/data/item-changes.json";
+import itemsViewJson from "#/data/items-view.json";
+import latestDiffJson from "#/data/latest-diff.json";
+import latestHeroDiffJson from "#/data/latest-hero-diff.json";
+import patchMetaJson from "#/data/patch-meta.json";
+import patchNotesJson from "#/data/patch-notes.json";
 import type {
 	AbilityChange,
 	ChangedHero,
@@ -28,31 +40,18 @@ import {
 	WEAPON_SLOT,
 } from "#/utils/roster";
 
-const DATA_DIR = path.join(process.cwd(), "app", "data");
-
 const EMPTY_DIFF: PrunedNode = { added: {}, removed: {}, modified: {} };
 
-function read<T>(file: string, fallback: T): T {
-	const full = path.join(DATA_DIR, file);
-	if (!fs.existsSync(full)) return fallback;
-	try {
-		return JSON.parse(fs.readFileSync(full, "utf8")) as T;
-	} catch {
-		return fallback;
-	}
-}
+const readItemsView = () => itemsViewJson as unknown as ItemsView;
 
-const readItemsView = () =>
-	read<ItemsView>("items-view.json", { items: [], abilities: [] });
-
-const readItemDiff = () => read<PrunedNode>("latest-diff.json", EMPTY_DIFF);
+const readItemDiff = () => latestDiffJson as unknown as PrunedNode;
 
 export function getPatchMeta(): PatchMeta | null {
-	return read<PatchMeta | null>("patch-meta.json", null);
+	return (patchMetaJson as unknown as PatchMeta | null) ?? null;
 }
 
 export function getPatchNotes(): PatchNotes {
-	return read<PatchNotes>("patch-notes.json", { recent: [] });
+	return patchNotesJson as unknown as PatchNotes;
 }
 
 export function getAllItems(): Item[] {
@@ -79,12 +78,6 @@ type RawItemChanges = {
 	changed: Array<{ name: string; changes: ChangedItem["changes"] }>;
 };
 
-const EMPTY_ITEM_CHANGES: RawItemChanges = {
-	added: [],
-	removed: [],
-	changed: [],
-};
-
 /**
  * Shop items only - ability changes surface through `getChangedHeroes()`.
  *
@@ -99,7 +92,7 @@ const EMPTY_ITEM_CHANGES: RawItemChanges = {
 export function getItemChanges(): ItemChanges {
 	const { items } = readItemsView();
 	const byName = new Map(items.map((item) => [item.name, item]));
-	const raw = read<RawItemChanges>("item-changes.json", EMPTY_ITEM_CHANGES);
+	const raw = itemChangesJson as unknown as RawItemChanges;
 
 	return {
 		added: raw.added.flatMap((entry) => {
@@ -152,16 +145,16 @@ function joinAbilities(
  * Whether a resolved hero counts as "changed" is decided by `isHeroChanged()`.
  */
 export function getChangedHeroes(): ChangedHero[] {
-	const heroes = read<Hero[]>("heroes-view.json", []);
+	const heroes = heroesViewJson as unknown as Hero[];
 	const { abilities } = readItemsView();
-	const heroDiff = read<PrunedNode>("latest-hero-diff.json", EMPTY_DIFF);
+	const heroDiff = latestHeroDiffJson as unknown as PrunedNode;
 	const itemDiff = readItemDiff();
 	const abilityByClass = new Map(abilities.map((a) => [a.class_name, a]));
 
-	const tiersByName = read<Record<string, TierDiff[]>>(
-		"ability-tiers.json",
-		{},
-	);
+	const tiersByName = abilityTiersJson as unknown as Record<
+		string,
+		TierDiff[]
+	>;
 
 	return heroes.flatMap((hero) => {
 		// Unreleased and experimental heroes ship in the catalog but are not in
@@ -196,13 +189,13 @@ export function getChangedHeroes(): ChangedHero[] {
  * unchanged) tiers with no diff noise.
  */
 export function getAllHeroes(): HeroEntry[] {
-	const heroes = read<Hero[]>("heroes-view.json", []);
+	const heroes = heroesViewJson as unknown as Hero[];
 	const { abilities } = readItemsView();
 	const abilityByClass = new Map(abilities.map((a) => [a.class_name, a]));
-	const tiersByName = read<Record<string, TierDiff[]>>(
-		"ability-tiers.json",
-		{},
-	);
+	const tiersByName = abilityTiersJson as unknown as Record<
+		string,
+		TierDiff[]
+	>;
 
 	return heroes.flatMap((hero) => {
 		if (!isLiveHero(hero)) return [];

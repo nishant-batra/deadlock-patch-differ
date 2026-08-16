@@ -8,6 +8,11 @@ declare global {
 
 type AdFillStatus = "pending" | "filled" | "unfilled";
 
+// If AdSense hasn't written data-ad-status by this point (script blocked,
+// request stalled), treat the slot as unfilled so the wrapper collapses
+// instead of holding empty space indefinitely.
+const PENDING_TIMEOUT_MS = 3000;
+
 /**
  * Pushes the ad request once per mounted <ins> element, as AdSense requires.
  * A ref guards against React 19 double-invoking the callback ref in dev.
@@ -35,6 +40,12 @@ export function useAdSlot(publisherId: string | undefined) {
 				attributeFilter: ["data-ad-status"],
 			});
 
+			const timeout = window.setTimeout(() => {
+				setStatus((current) =>
+					current === "pending" ? "unfilled" : current,
+				);
+			}, PENDING_TIMEOUT_MS);
+
 			if (!pushed.current) {
 				pushed.current = true;
 				try {
@@ -45,7 +56,10 @@ export function useAdSlot(publisherId: string | undefined) {
 				}
 			}
 
-			return () => observer.disconnect();
+			return () => {
+				observer.disconnect();
+				window.clearTimeout(timeout);
+			};
 		},
 		[publisherId],
 	);
