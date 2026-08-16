@@ -21,20 +21,14 @@ import type {
 } from "#/types";
 import { currentTiers, type TierDiff } from "#/utils/abilityUpgrades";
 import { type PrunedNode, summarize } from "#/utils/diffEngine";
-import { isLiveHero } from "#/utils/roster";
+import {
+	ABILITY_SLOTS,
+	isHeroChanged,
+	isLiveHero,
+	WEAPON_SLOT,
+} from "#/utils/roster";
 
 const DATA_DIR = path.join(process.cwd(), "app", "data");
-
-/**
- * `weapon_primary` resolves to a pseudo-ability (e.g.
- * `citadel_weapon_engineer_set`) - no localised name, no `ability_type`,
- * three permanently empty upgrade tiers, and every hero's weapon icon is the
- * same generic `weapon_damage.png`. It is not an ability; its changes live
- * under `weapon_info.*` on that same entry and are surfaced separately in
- * `getChangedHeroes()` / `getAllHeroes()` rather than joined into `abilities`.
- */
-const WEAPON_SLOT = "weapon_primary";
-const ABILITY_SLOTS = ["signature1", "signature2", "signature3", "signature4"];
 
 const EMPTY_DIFF: PrunedNode = { added: {}, removed: {}, modified: {} };
 
@@ -152,13 +146,10 @@ function joinAbilities(
 }
 
 /**
- * Finding #2: a hero is changed if its own object changed, its weapon changed,
- * or it owns a changed ability - ability and weapon diffs live in the item
- * diff, not the hero diff.
- * Finding #5: a hero with an unresolvable ability slot (currently Fathom, which
- * is unreleased) is dropped entirely rather than rendered half-empty. A
- * missing weapon slot does not drop the hero - it just yields no weapon
- * changes.
+ * A hero with an unresolvable ability slot (currently Fathom, which is
+ * unreleased) is dropped entirely rather than rendered half-empty. A missing
+ * weapon slot does not drop the hero - it just yields no weapon changes.
+ * Whether a resolved hero counts as "changed" is decided by `isHeroChanged()`.
  */
 export function getChangedHeroes(): ChangedHero[] {
 	const heroes = read<Hero[]>("heroes-view.json", []);
@@ -185,21 +176,17 @@ export function getChangedHeroes(): ChangedHero[] {
 		);
 		if (!abilityChanges) return [];
 
-		// Finding #1: stat moves land in `starting_stats` OR
-		// `standard_level_up_upgrades`. summarize() walks whatever moved.
+		if (!isHeroChanged(hero, abilityByClass, itemDiff, heroDiff)) return [];
+
+		// Stat moves land in `starting_stats` OR `standard_level_up_upgrades`.
+		// summarize() walks whatever moved.
 		const statChanges = summarize(heroDiff.modified[hero.name] as PrunedNode);
 		const weaponClass = hero.items?.[WEAPON_SLOT];
 		const weaponChanges = weaponClass
 			? summarize(itemDiff.modified[weaponClass] as PrunedNode)
 			: [];
 
-		const changed =
-			statChanges.length > 0 ||
-			weaponChanges.length > 0 ||
-			abilityChanges.some((a) => a.changes.length > 0);
-		return changed
-			? [{ hero, abilities: abilityChanges, statChanges, weaponChanges }]
-			: [];
+		return [{ hero, abilities: abilityChanges, statChanges, weaponChanges }];
 	});
 }
 

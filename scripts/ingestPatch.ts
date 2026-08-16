@@ -14,12 +14,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import {
-	type Change,
 	generateDeadlockPatchDiff,
 	hasAnyChange,
 	type PrunedNode,
 	pruneUnmodified,
-	summarize,
 } from "../app/utils/diffEngine";
 import { sanitizeNotesHtml } from "../app/utils/sanitizeHtml";
 import {
@@ -32,24 +30,23 @@ import {
 	diffAbilityTiers,
 	type TierDiff,
 } from "../app/utils/abilityUpgrades";
-import { isLiveHero } from "../app/utils/roster";
+import {
+	ABILITY_SLOTS,
+	type HeroChangeInput,
+	isHeroChanged,
+	isLiveHero,
+	WEAPON_SLOT,
+} from "../app/utils/roster";
 import type { Item } from "../app/types";
 
 const API = "https://api.deadlock-api.com";
 const DATA_DIR = path.join(process.cwd(), "app", "data");
 
-// Hero ability slots that a hero card renders. `weapon_melee` and the
-// `ability_*` movement slots are shared across heroes and never patch-notable.
-//
-// `weapon_primary` is kept separate: it resolves to a pseudo-ability (no
-// localised name, no `ability_type`, three permanently empty tiers) and is not
-// an ability - see the matching split in patchService.ts. `SLOTS` (the union)
-// still feeds `buildItemsView`/`buildAbilityTiers`, which only need "every
-// class a hero card could reference" and are unaffected either way;
-// `countChangedHeroes` must mirror `getChangedHeroes()`'s predicate exactly or
-// the nav badge stops matching the number of cards actually rendered.
-const WEAPON_SLOT = "weapon_primary";
-const ABILITY_SLOTS = ["signature1", "signature2", "signature3", "signature4"];
+// `weapon_melee` and the `ability_*` movement slots are shared across heroes
+// and never patch-notable, so they are excluded from `SLOTS`. `SLOTS` (the
+// union of `WEAPON_SLOT` and `ABILITY_SLOTS`) feeds `buildItemsView` /
+// `buildAbilityTiers`, which only need "every class a hero card could
+// reference".
 const SLOTS = [WEAPON_SLOT, ...ABILITY_SLOTS];
 
 const SHOP_FIELDS = [
@@ -323,9 +320,9 @@ function pickNotes(
 }
 
 /**
- * Finding #2: a hero is changed if its own object changed OR if it owns a
- * changed ability - ability diffs live in the item diff, not the hero diff.
- * Finding #5: a hero whose slots do not resolve (currently Fathom) is skipped.
+ * Counts heroes `getChangedHeroes()` (patchService.ts) would render, via the
+ * same `isHeroChanged()` predicate - so the nav badge always matches the
+ * number of cards actually rendered.
  */
 function countChangedHeroes(
 	heroes: Json[],
@@ -333,33 +330,17 @@ function countChangedHeroes(
 	itemDiff: PrunedNode,
 	heroDiff: PrunedNode,
 ) {
-	const byClass = new Map(items.map((i) => [i.class_name as string, i]));
+	const byClass = new Map(
+		items.map((i) => [i.class_name as string, { name: i.name as string }]),
+	);
 	let count = 0;
 	for (const hero of heroes) {
-		// Same guard as getChangedHeroes(), or the nav badge disagrees with the
-		// number of cards actually rendered.
 		if (!isLiveHero(hero)) continue;
-		const slotClasses = ABILITY_SLOTS.map(
-			(slot) => (hero.items as Record<string, string>)?.[slot],
-		).filter(Boolean);
-		const resolved = slotClasses.map((cn) => byClass.get(cn));
-		if (resolved.length === 0 || resolved.some((a) => !a)) continue;
-
-		const abilityChanged = resolved.some((ability) => {
-			const node = itemDiff.modified[ability?.name as string];
-			return node ? summarize(node as PrunedNode).length > 0 : false;
-		});
-		const weaponClass = (hero.items as Record<string, string>)?.[
-			WEAPON_SLOT
-		];
-		const weaponNode = weaponClass ? itemDiff.modified[weaponClass] : undefined;
-		const weaponChanged = weaponNode
-			? summarize(weaponNode as PrunedNode).length > 0
-			: false;
-		const statChanges: Change[] = summarize(
-			heroDiff.modified[hero.name as string] as PrunedNode,
-		);
-		if (abilityChanged || weaponChanged || statChanges.length > 0) count += 1;
+		if (
+			isHeroChanged(hero as unknown as HeroChangeInput, byClass, itemDiff, heroDiff)
+		) {
+			count += 1;
+		}
 	}
 	return count;
 }
