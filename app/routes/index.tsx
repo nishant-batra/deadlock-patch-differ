@@ -61,11 +61,11 @@ export const Route = createFileRoute("/")({
 				},
 				{ property: "og:title", content: title },
 				{ property: "og:description", content: description },
-				{ property: "og:url", content: "https://deadlock-patch-differ.vercel.app/" },
+				{ property: "og:url", content: "https://deadlockpatch.vercel.app/" },
 				{ name: "twitter:title", content: title },
 				{ name: "twitter:description", content: description },
 			],
-			links: [{ rel: "canonical", href: "https://deadlock-patch-differ.vercel.app/" }],
+			links: [{ rel: "canonical", href: "https://deadlockpatch.vercel.app/" }],
 		};
 	},
 	loader: async () => fetchChanges(),

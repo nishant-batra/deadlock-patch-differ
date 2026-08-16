@@ -45,11 +45,11 @@ export const Route = createFileRoute("/items")({
 				},
 				{ property: "og:title", content: title },
 				{ property: "og:description", content: description },
-				{ property: "og:url", content: "https://deadlock-patch-differ.vercel.app/items" },
+				{ property: "og:url", content: "https://deadlockpatch.vercel.app/items" },
 				{ name: "twitter:title", content: title },
 				{ name: "twitter:description", content: description },
 			],
-			links: [{ rel: "canonical", href: "https://deadlock-patch-differ.vercel.app/items" }],
+			links: [{ rel: "canonical", href: "https://deadlockpatch.vercel.app/items" }],
 		};
 	},
 	loader: async ({ deps }) => fetchItems({ data: deps.type }),

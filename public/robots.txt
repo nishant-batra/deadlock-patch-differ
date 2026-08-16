@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://deadlock-patch-differ.vercel.app/sitemap.xml
+Sitemap: https://deadlockpatch.vercel.app/sitemap.xml

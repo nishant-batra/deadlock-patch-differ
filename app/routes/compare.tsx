@@ -59,7 +59,7 @@ export const Route = createFileRoute("/compare")({
 				content:
 					"Side-by-side base stat and ability comparison tool for Deadlock heroes. Compare health, weapon damage, spirit scaling, and mobility stats.",
 			},
-			{ property: "og:url", content: "https://deadlock-patch-differ.vercel.app/compare" },
+			{ property: "og:url", content: "https://deadlockpatch.vercel.app/compare" },
 			{
 				name: "twitter:title",
 				content:
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/compare")({
 					"Side-by-side base stat and ability comparison tool for Deadlock heroes. Compare health, weapon damage, spirit scaling, and mobility stats.",
 			},
 		],
-		links: [{ rel: "canonical", href: "https://deadlock-patch-differ.vercel.app/compare" }],
+		links: [{ rel: "canonical", href: "https://deadlockpatch.vercel.app/compare" }],
 	}),
 	loader: async () => fetchHeroes(),
 	component: Compare,
