@@ -9,6 +9,7 @@ import {
 import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import type { ReactNode } from "react";
 import AdSlot from "#/components/ad-slot";
 import { ADSENSE_PUBLISHER_ID } from "#/components/ad-slot/constants";
@@ -112,6 +113,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
 				{children}
 				<Scripts />
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
