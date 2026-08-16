@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@fontsource-variable/space-grotesk": "^5.2.10",
-    "@vercel/analytics": "^1.5.0",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-devtools": "latest",
     "@tanstack/react-query": "latest",
@@ -27,6 +26,8 @@
     "@tanstack/react-router-ssr-query": "latest",
     "@tanstack/react-start": "latest",
     "@tanstack/router-plugin": "^1.132.0",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^2.0.0",
     "dotenv": "^17.3.1",
     "fast-json-stable-stringify": "^2.1.0",
     "lucide-react": "^0.545.0",
