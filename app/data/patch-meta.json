@@ -1,9 +1,9 @@
 {
-	"clientVersion": 6679,
-	"versionDatetime": "2026-08-14T11:57:12",
-	"ingestedAt": "2026-08-15T10:02:53.496Z",
+	"clientVersion": 6683,
+	"versionDatetime": "2026-08-20T12:40:04",
+	"ingestedAt": "2026-08-20T22:42:45.792Z",
 	"counts": {
 		"items": 0,
-		"heroes": 12
+		"heroes": 1
 	}
 }

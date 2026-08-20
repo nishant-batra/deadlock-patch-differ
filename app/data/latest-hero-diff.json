@@ -1,48 +1,5 @@
 {
 	"added": {},
 	"removed": {},
-	"modified": {
-		"McGinnis": {
-			"added": {},
-			"removed": {},
-			"modified": {
-				"standard_level_up_upgrades": {
-					"added": {},
-					"removed": {},
-					"modified": {
-						"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": {
-							"old": 0.18,
-							"new": 0.171
-						},
-						"MODIFIER_VALUE_TECH_RESIST": {
-							"old": 0.625,
-							"new": 0.35
-						}
-					}
-				}
-			}
-		},
-		"Billy": {
-			"added": {},
-			"removed": {},
-			"modified": {
-				"starting_stats": {
-					"added": {},
-					"removed": {},
-					"modified": {
-						"base_health_regen": {
-							"added": {},
-							"removed": {},
-							"modified": {
-								"value": {
-									"old": 2.5,
-									"new": 2
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+	"modified": {}
 }
