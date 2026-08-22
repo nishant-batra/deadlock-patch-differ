@@ -1,5 +1,32 @@
 {
 	"added": [],
 	"removed": [],
-	"changed": []
+	"changed": [
+		{
+			"name": "Restorative Locket",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "TechResist",
+					"label": "Spirit Resist",
+					"old": "10",
+					"new": "8"
+				}
+			]
+		},
+		{
+			"name": "Radiant Regeneration",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "",
+					"key": "HealingPerCast",
+					"label": "Healing on Ability Cast",
+					"old": "70",
+					"new": "65"
+				}
+			]
+		}
+	]
 }

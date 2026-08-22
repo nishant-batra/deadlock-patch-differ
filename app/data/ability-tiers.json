@@ -11850,17 +11850,23 @@
 				{
 					"key": "CombatBarrier|#0",
 					"label": "Combat Barrier",
-					"kind": "equal",
-					"new": "80"
+					"kind": "changed",
+					"old": "80",
+					"new": "70"
 				},
 				{
 					"key": "CombatBarrier|EAddToScale#0",
 					"label": "Combat Barrier",
-					"kind": "equal",
-					"new": "0.7",
+					"kind": "changed",
+					"old": "0.7",
+					"new": "0.76",
 					"scaling": "ETechPower"
 				}
-			]
+			],
+			"text": {
+				"old": "+80 Barrier and Increased Barrier Spirit Scaling",
+				"new": "+70 Barrier and Increased Barrier Spirit Scaling"
+			}
 		},
 		{
 			"tier": 3,
@@ -11868,18 +11874,24 @@
 				{
 					"key": "DebuffDuration|#0",
 					"label": "Debuff Duration",
-					"kind": "equal",
-					"new": "1.5",
+					"kind": "changed",
+					"old": "1.5",
+					"new": "1.25",
 					"postfix": "s"
 				},
 				{
 					"key": "AbilityCooldown|#0",
 					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": "-18",
+					"kind": "changed",
+					"old": "-18",
+					"new": "-20",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "+1.5 Silence Duration and -18s Cooldown. Allows Shining Wonder Bounce.",
+				"new": "+1.25 Silence Duration and -20s Cooldown. Allows Shining Wonder Bounce."
+			}
 		}
 	],
 	"Shining Wonder": [
@@ -11911,8 +11923,19 @@
 					"label": "Damage",
 					"kind": "equal",
 					"new": "90"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "added",
+					"new": "0.45",
+					"scaling": "ETechPower"
 				}
-			]
+			],
+			"text": {
+				"old": "",
+				"new": "+90 Damage and Increased Spirit Scaling"
+			}
 		},
 		{
 			"tier": 3,
@@ -11969,8 +11992,9 @@
 				{
 					"key": "MagicIncreasePerStack|#0",
 					"label": "Magic Increase Per Stack",
-					"kind": "equal",
-					"new": "3",
+					"kind": "changed",
+					"old": "3",
+					"new": "4",
 					"prefix": "{s:sign}",
 					"postfix": "%"
 				},

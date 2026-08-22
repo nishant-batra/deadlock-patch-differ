@@ -2,7 +2,7 @@
 	"added": {},
 	"removed": {},
 	"modified": {
-		"Bookwyrm": {
+		"Restorative Locket": {
 			"added": {},
 			"removed": {},
 			"modified": {
@@ -10,22 +10,366 @@
 					"added": {},
 					"removed": {},
 					"modified": {
-						"GroundAuraSpacing": {
-							"added": {
-								"scale_function": {
-									"class_name": "scale_function_tech_range",
-									"subclass_name": "spacingsf"
-								}
-							},
+						"TechResist": {
+							"added": {},
 							"removed": {},
 							"modified": {
 								"value": {
-									"old": "1m",
-									"new": "2m"
+									"old": "10",
+									"new": "8"
 								}
 							}
 						}
 					}
+				}
+			}
+		},
+		"Radiant Regeneration": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"properties": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"HealingPerCast": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": "70",
+									"new": "65"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Dazzling Trick": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"properties": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"AbilityCooldown": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": "32",
+									"new": "34"
+								}
+							}
+						}
+					}
+				},
+				"description": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"t2_desc": {
+							"old": "+80 Barrier and Increased Barrier Spirit Scaling",
+							"new": "+70 Barrier and Increased Barrier Spirit Scaling"
+						},
+						"t3_desc": {
+							"old": "+1.5 Silence Duration and -18s Cooldown. Allows Shining Wonder Bounce.",
+							"new": "+1.25 Silence Duration and -20s Cooldown. Allows Shining Wonder Bounce."
+						}
+					}
+				},
+				"upgrades": {
+					"old": [
+						{
+							"property_upgrades": [
+								{
+									"name": "BonusMoveSpeed",
+									"bonus": "3.5m"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "CombatBarrier",
+									"bonus": "80"
+								},
+								{
+									"name": "CombatBarrier",
+									"bonus": "0.7",
+									"scale_stat_filter": "ETechPower",
+									"upgrade_type": "EAddToScale"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "DebuffDuration",
+									"bonus": "1.5"
+								},
+								{
+									"name": "AbilityCooldown",
+									"bonus": "-18"
+								}
+							]
+						}
+					],
+					"new": [
+						{
+							"property_upgrades": [
+								{
+									"name": "BonusMoveSpeed",
+									"bonus": "3.5m"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "CombatBarrier",
+									"bonus": "70"
+								},
+								{
+									"name": "CombatBarrier",
+									"bonus": "0.76",
+									"scale_stat_filter": "ETechPower",
+									"upgrade_type": "EAddToScale"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "DebuffDuration",
+									"bonus": "1.25"
+								},
+								{
+									"name": "AbilityCooldown",
+									"bonus": "-20"
+								}
+							]
+						}
+					]
+				}
+			}
+		},
+		"Shining Wonder": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"properties": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"Damage": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": "165",
+									"new": "140"
+								},
+								"scale_function": {
+									"added": {},
+									"removed": {},
+									"modified": {
+										"stat_scale": {
+											"old": 0.88,
+											"new": 0.6
+										}
+									}
+								}
+							}
+						},
+						"BounceRadius": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": "17.5m",
+									"new": "16.5m"
+								}
+							}
+						}
+					}
+				},
+				"description": {
+					"added": {
+						"t2_desc": "+90 Damage and Increased Spirit Scaling"
+					},
+					"removed": {},
+					"modified": {}
+				},
+				"upgrades": {
+					"old": [
+						{
+							"property_upgrades": [
+								{
+									"name": "GroundDashReductionPercent",
+									"bonus": "-15"
+								},
+								{
+									"name": "SlowPercent",
+									"bonus": "20"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "Damage",
+									"bonus": "90"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "MaxBounces",
+									"bonus": "8"
+								},
+								{
+									"name": "AbilityCooldown",
+									"bonus": "-30"
+								}
+							]
+						}
+					],
+					"new": [
+						{
+							"property_upgrades": [
+								{
+									"name": "GroundDashReductionPercent",
+									"bonus": "-15"
+								},
+								{
+									"name": "SlowPercent",
+									"bonus": "20"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "Damage",
+									"bonus": "90"
+								},
+								{
+									"name": "Damage",
+									"bonus": "0.45",
+									"scale_stat_filter": "ETechPower",
+									"upgrade_type": "EAddToScale"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "MaxBounces",
+									"bonus": "8"
+								},
+								{
+									"name": "AbilityCooldown",
+									"bonus": "-30"
+								}
+							]
+						}
+					]
+				}
+			}
+		},
+		"Radiant Daggers": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"properties": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"MagicIncreasePerStack": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": "8",
+									"new": "7"
+								}
+							}
+						}
+					}
+				},
+				"upgrades": {
+					"old": [
+						{
+							"property_upgrades": [
+								{
+									"name": "AbilityCharges",
+									"bonus": "2"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "ImpactDamage",
+									"bonus": "80"
+								},
+								{
+									"name": "AbilityCooldown",
+									"bonus": "-22"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "MagicIncreasePerStack",
+									"bonus": "3"
+								},
+								{
+									"name": "FireRatePerStack",
+									"bonus": "9"
+								}
+							]
+						}
+					],
+					"new": [
+						{
+							"property_upgrades": [
+								{
+									"name": "AbilityCharges",
+									"bonus": "2"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "ImpactDamage",
+									"bonus": "80"
+								},
+								{
+									"name": "AbilityCooldown",
+									"bonus": "-22"
+								}
+							]
+						},
+						{
+							"property_upgrades": [
+								{
+									"name": "MagicIncreasePerStack",
+									"bonus": "4"
+								},
+								{
+									"name": "FireRatePerStack",
+									"bonus": "9"
+								}
+							]
+						}
+					]
 				}
 			}
 		}
