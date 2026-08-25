@@ -85,7 +85,7 @@ export default function ItemCard({
 				alt={name}
 			/>
 
-			{changes && changes.length > 0 && (
+			{(deltaRows.length > 0 || textChanges.length > 0) && (
 				<div
 					className="mx-2 mt-2 flex flex-col rounded-sm py-1"
 					style={{ background: colors.highlight }}
