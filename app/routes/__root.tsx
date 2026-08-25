@@ -3,6 +3,7 @@
 import {
 	createRootRoute,
 	HeadContent,
+	Link,
 	Outlet,
 	Scripts,
 } from "@tanstack/react-router";
@@ -103,6 +104,38 @@ export const Route = createRootRoute({
 	}),
 	loader: async () => fetchPatchMeta(),
 	component: RootComponent,
+	// General fallback for any URL that matches no route at all. Individual
+	// routes (e.g. `/heroes/$heroSlug`) can still define their own, more
+	// specific `notFoundComponent` for a `notFound()` thrown from their own
+	// loader - this one only catches what nothing more specific already did.
+	notFoundComponent: () => (
+		<main className="mx-auto max-w-7xl px-4 py-16 text-center">
+			<h1 className="mb-2 font-extrabold text-2xl">Page not found</h1>
+			<p className="mb-6 text-gray-400">
+				That page doesn't exist. Try one of these instead.
+			</p>
+			<div className="flex flex-wrap justify-center gap-2">
+				<Link
+					to="/"
+					className="rounded-xl border border-amber-500 p-2 font-bold"
+				>
+					Patch notes
+				</Link>
+				<Link
+					to="/heroes"
+					className="rounded-xl border border-amber-500 p-2 font-bold"
+				>
+					Heroes
+				</Link>
+				<Link
+					to="/items"
+					className="rounded-xl border border-amber-500 p-2 font-bold"
+				>
+					Items
+				</Link>
+			</div>
+		</main>
+	),
 });
 
 function RootComponent() {

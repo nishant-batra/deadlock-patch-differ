@@ -5,7 +5,7 @@ import type { Change, Item } from "#/types";
 import { isScaleChange, isStatChange, statKeyOf } from "#/utils/diffEngine";
 import { isNegativeProperty } from "#/utils/negativeProperties";
 import { humaniseStatKey } from "#/utils/statLabels";
-import { renderedKeys } from "./utils";
+import { renderedKeys, sectionPropertyKeys } from "./utils";
 
 const OTHER_LIMIT = 4;
 
@@ -137,14 +137,7 @@ export default function AbilityDetail({
 			{sections.map((section, index) => {
 				// De-duplicated: a property can appear as both a basic property and
 				// an important property of a block, which would collide as a key.
-				const properties = [
-					...new Set([
-						...(section.basic_properties ?? []),
-						...(section.properties_block?.flatMap((block) =>
-							block.properties.map((p) => p.important_property),
-						) ?? []),
-					]),
-				];
+				const properties = [...new Set(sectionPropertyKeys(section))];
 				if (!section.loc_string && properties.length === 0) return null;
 				return (
 					<section

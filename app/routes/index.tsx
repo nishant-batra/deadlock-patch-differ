@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { Fragment } from "react";
 import AdSlot from "#/components/ad-slot";
@@ -255,11 +255,20 @@ function Changes() {
 				<h1 className="mb-1 font-extrabold text-2xl">
 					Deadlock Patch Notes &amp; Update Visualizer
 				</h1>
-				<p className="mb-6 text-gray-400 text-sm">
-					See exactly what changed in the latest Deadlock update — hero stat
-					changes, item buffs and nerfs, and full patch notes, visualized side
-					by side.
-				</p>
+				<div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+					<p className="text-gray-400 text-sm">
+						See exactly what changed in the latest Deadlock update — hero stat
+						changes, item buffs and nerfs, and full patch notes, visualized side
+						by side.
+					</p>
+					<Link
+						to="/compare"
+						search={{ heroes: [] }}
+						className="rounded-xl border border-amber-500 p-2 font-bold"
+					>
+						Compare heroes
+					</Link>
+				</div>
 				<Legend />
 				{blocks.map((block, index) => (
 					<Fragment key={block.id}>

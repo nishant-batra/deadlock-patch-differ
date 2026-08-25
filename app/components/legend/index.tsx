@@ -7,8 +7,9 @@ import Swatch from "./swatch";
  * drift from what the cards actually show - if the rendering changes, this
  * changes with it.
  *
- * A <details> so returning readers can fold it away; open by default because the
- * colour language (green/red is direction, not magnitude) is not obvious.
+ * A <details>, collapsed by default - a returning reader who already knows the
+ * colour language (green/red is direction, not magnitude) shouldn't have to
+ * scroll past it every visit; it's one click away for anyone who needs it.
  *
  * No prose intro or trailing notes - the visuals plus captions carry the
  * meaning on their own, and duplicating that in a paragraph just gave readers
@@ -25,10 +26,7 @@ const example = (row: Omit<DeltaRow, "id">): DeltaRow => ({
 
 export default function Legend() {
 	return (
-		<details
-			open
-			className="mb-8 rounded-lg border border-white/10 bg-white/[0.03]"
-		>
+		<details className="mb-8 rounded-lg border border-white/10 bg-white/[0.03]">
 			<summary className="cursor-pointer select-none px-4 py-3 font-bold text-sm">
 				How to read these cards
 			</summary>

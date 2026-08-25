@@ -212,6 +212,8 @@ export interface HeroImages {
 	icon_image_small_webp?: string;
 	minimap_image?: string;
 	minimap_image_webp?: string;
+	hero_card_gloat?: string;
+	hero_card_gloat_webp?: string;
 	top_bar_vertical_image?: string;
 	top_bar_vertical_image_webp?: string;
 	background_image?: string;

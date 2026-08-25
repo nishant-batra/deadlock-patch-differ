@@ -17,10 +17,7 @@ const tier = (rows: TierDiff["rows"]): TierDiff => ({ tier: 2, rows });
 
 export default function HeroLegend() {
 	return (
-		<details
-			open
-			className="mb-8 rounded-lg border border-white/10 bg-white/[0.03]"
-		>
+		<details className="mb-8 rounded-lg border border-white/10 bg-white/[0.03]">
 			<summary className="cursor-pointer select-none px-4 py-3 font-bold text-sm">
 				How to read hero abilities
 			</summary>

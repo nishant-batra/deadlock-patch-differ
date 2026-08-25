@@ -1,6 +1,5 @@
 import { createPortal } from "react-dom";
 import type { Change, Item, TierDiff } from "#/types";
-import { prose } from "#/utils/tooltipProjection";
 import AbilityDetail from "./ability-detail";
 import TierBlock from "./tier-block";
 import { useDismissablePopover } from "./useDismissablePopover";
@@ -23,9 +22,18 @@ export default function AbilityPopover({
 
 	// Anything that is not an upgrade or tier-description move - property values,
 	// tooltip details. Those are rendered by AbilityDetail below the tiers.
+	//
+	// `tooltip_details` itself is excluded too: it's an array in the payload, so
+	// the diff engine can't walk inside it and instead reports the whole
+	// `info_sections` blob as one opaque "modified" node the moment any text or
+	// property inside it moves - literally labelled "Info Sections", which
+	// names a JSON field, not a game concept. `AbilityDetail` already renders
+	// the section's real (current) content below, so this raw diff signal adds
+	// nothing a player could act on.
 	const otherChanges = changes.filter(
 		(change) =>
 			change.path[0] !== "upgrades" &&
+			change.path[0] !== "tooltip_details" &&
 			!(change.path[0] === "description" && /^t\d_desc$/.test(change.path[1])),
 	);
 
@@ -48,23 +56,22 @@ export default function AbilityPopover({
 					&times;
 				</button>
 			</div>
-			{ability.description?.desc && (
-				<p className="mt-0.5 text-gray-400 text-xs">
-					{prose(ability.description.desc)}
-				</p>
-			)}
-
 			<div className="mt-3 flex flex-col gap-1.5">
 				{tiers.map((tier) => (
 					<TierBlock key={tier.tier} tier={tier} />
 				))}
 			</div>
 
-			{otherChanges.length > 0 && (
-				<div className="mt-2">
-					<AbilityDetail item={ability} changes={otherChanges} />
-				</div>
-			)}
+			{/* Always shown, not just for abilities with other changes - the
+			    section/property breakdown (radius, DPS, duration, ...) is real
+			    information about what the ability *is*, independent of whether
+			    anything moved this patch. `AbilityDetail` also covers the
+			    description text itself (its first section's `loc_string` repeats
+			    `desc` verbatim, or it falls back to `desc` directly when there are
+			    no sections), so nothing needs restating above it. */}
+			<div className="mt-2">
+				<AbilityDetail item={ability} changes={otherChanges} />
+			</div>
 		</div>,
 		document.body,
 	);

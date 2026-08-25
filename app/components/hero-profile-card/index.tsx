@@ -1,6 +1,8 @@
+import { Link } from "@tanstack/react-router";
 import AbilityRow from "#/components/ability-row";
 import HeroAvatar from "#/components/hero-avatar";
 import type { HeroEntry } from "#/types";
+import { heroSlug } from "#/utils/heroSlug";
 import { labelForStatKey } from "#/utils/statLabels";
 import { PRIMARY_STATS } from "./constants";
 import StatRow from "./stat-row";
@@ -44,9 +46,18 @@ export default function HeroProfileCard({
 
 	return (
 		<article className="m-3 flex min-w-80 max-w-100 flex-col rounded-md bg-[#1b1b24]">
-			<header className="flex items-center gap-3 bg-[#2a2a36] p-2.5">
-				<HeroAvatar hero={hero} />
-				<h3 className="font-extrabold text-lg">{hero.name}</h3>
+			<header className="flex items-center justify-between gap-3 bg-[#2a2a36] p-2.5">
+				<div className="flex items-center gap-3">
+					<HeroAvatar hero={hero} />
+					<h3 className="font-extrabold text-lg">{hero.name}</h3>
+				</div>
+				<Link
+					to="/heroes/$heroSlug"
+					params={{ heroSlug: heroSlug(hero.name) }}
+					className="shrink-0 rounded-lg border border-amber-500 px-2 py-1 font-bold text-xs"
+				>
+					View hero →
+				</Link>
 			</header>
 
 			<div className="flex flex-col gap-0.5 bg-[#22222c] py-1">

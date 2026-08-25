@@ -13,6 +13,7 @@ import { Route as ItemsRouteImport } from './routes/items'
 import { Route as HeroesRouteImport } from './routes/heroes'
 import { Route as CompareRouteImport } from './routes/compare'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as HeroesHeroSlugRouteImport } from './routes/heroes_.$heroSlug'
 
 const ItemsRoute = ItemsRouteImport.update({
   id: '/items',
@@ -34,18 +35,25 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HeroesHeroSlugRoute = HeroesHeroSlugRouteImport.update({
+  id: '/heroes_/$heroSlug',
+  path: '/heroes/$heroSlug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/compare': typeof CompareRoute
   '/heroes': typeof HeroesRoute
   '/items': typeof ItemsRoute
+  '/heroes/$heroSlug': typeof HeroesHeroSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/compare': typeof CompareRoute
   '/heroes': typeof HeroesRoute
   '/items': typeof ItemsRoute
+  '/heroes/$heroSlug': typeof HeroesHeroSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,20 @@ export interface FileRoutesById {
   '/compare': typeof CompareRoute
   '/heroes': typeof HeroesRoute
   '/items': typeof ItemsRoute
+  '/heroes_/$heroSlug': typeof HeroesHeroSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/compare' | '/heroes' | '/items'
+  fullPaths: '/' | '/compare' | '/heroes' | '/items' | '/heroes/$heroSlug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/compare' | '/heroes' | '/items'
-  id: '__root__' | '/' | '/compare' | '/heroes' | '/items'
+  to: '/' | '/compare' | '/heroes' | '/items' | '/heroes/$heroSlug'
+  id:
+    | '__root__'
+    | '/'
+    | '/compare'
+    | '/heroes'
+    | '/items'
+    | '/heroes_/$heroSlug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +82,7 @@ export interface RootRouteChildren {
   CompareRoute: typeof CompareRoute
   HeroesRoute: typeof HeroesRoute
   ItemsRoute: typeof ItemsRoute
+  HeroesHeroSlugRoute: typeof HeroesHeroSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +115,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/heroes_/$heroSlug': {
+      id: '/heroes_/$heroSlug'
+      path: '/heroes/$heroSlug'
+      fullPath: '/heroes/$heroSlug'
+      preLoaderRoute: typeof HeroesHeroSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +130,7 @@ const rootRouteChildren: RootRouteChildren = {
   CompareRoute: CompareRoute,
   HeroesRoute: HeroesRoute,
   ItemsRoute: ItemsRoute,
+  HeroesHeroSlugRoute: HeroesHeroSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
