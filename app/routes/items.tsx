@@ -1,24 +1,11 @@
 import { createFileRoute, stripSearchParams } from "@tanstack/react-router";
-import { createServerFn } from "@tanstack/react-start";
-import ItemCard from "#/components/item-card";
-import { itemTypes } from "#/components/item-card/constants";
-import { getItemsPage } from "#/server/patchService";
+import Items from "#/pages/items";
+import { fetchItems } from "#/pages/items/server";
+import { itemTypes } from "#/shared/components/item-card/constants";
 import type { ItemSlotType, ItemsPage } from "#/types";
 
 const isItemSlotType = (value: unknown): value is ItemSlotType =>
 	itemTypes.includes(value as ItemSlotType);
-
-// Return type is explicit: without it the server-fn boundary widens the loader
-// data to `any` and every downstream callback loses its types.
-//
-// The `setResponseHeader` call that was here threw on every render - see the
-// note in routes/index.tsx.
-const fetchItems = createServerFn({ method: "GET" })
-	.inputValidator((slotType: ItemSlotType) => slotType)
-	// Already filtered at ingest: shop items only, no Street Brawl (tier 5).
-	// Filtered again here by slot type, server-side, so a tab switch only ever
-	// ships the ~400 KB slice being viewed instead of the whole ~1.2 MB catalog.
-	.handler(async ({ data }): Promise<ItemsPage> => getItemsPage(data));
 
 export const Route = createFileRoute("/items")({
 	validateSearch: (
@@ -58,10 +45,10 @@ export const Route = createFileRoute("/items")({
 		};
 	},
 	loader: async ({ deps }) => fetchItems({ data: deps.type }),
-	component: Items,
+	component: RouteComponent,
 });
 
-function Items() {
+function RouteComponent() {
 	// Annotated for the same reason as the index route: the generated route tree
 	// and `useLoaderData()` reference each other, so inference yields `any`.
 	const { items }: ItemsPage = Route.useLoaderData();
@@ -69,37 +56,12 @@ function Items() {
 	const navigate = Route.useNavigate();
 
 	return (
-		<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
-			<h1 className="mb-1 font-extrabold text-2xl">All Deadlock Items</h1>
-			<p className="mb-6 text-gray-400 text-sm">
-				Browse every Deadlock shop item with full item stats — costs, component
-				trees, active abilities, and stat scaling across Weapon, Vitality, and
-				Spirit tiers.
-			</p>
-			<div className="mb-4 flex gap-2">
-				{itemTypes.map((itemType) => (
-					<button
-						type="button"
-						key={itemType}
-						aria-pressed={type === itemType}
-						className={`rounded-xl border border-amber-500 p-2 capitalize ${
-							type === itemType ? "bg-amber-500/20 font-bold" : ""
-						}`}
-						onClick={() =>
-							navigate({ search: { type: itemType }, replace: true })
-						}
-					>
-						{itemType}
-					</button>
-				))}
-			</div>
-			<div className="masonary">
-				{[...items]
-					.sort((a, b) => (a?.cost ?? 0) - (b?.cost ?? 0))
-					.map((card) => (
-						<ItemCard item={card} key={card.id} />
-					))}
-			</div>
-		</main>
+		<Items
+			items={items}
+			type={type}
+			onTypeChange={(next) =>
+				navigate({ search: { type: next }, replace: true })
+			}
+		/>
 	);
 }

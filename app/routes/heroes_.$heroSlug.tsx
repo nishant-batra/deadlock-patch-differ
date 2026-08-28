@@ -1,11 +1,8 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import HeroAbilities from "#/components/hero-detail/hero-abilities";
-import HeroLevelUp from "#/components/hero-detail/hero-level-up";
-import HeroPortrait from "#/components/hero-detail/hero-portrait";
-import HeroStats from "#/components/hero-detail/hero-stats";
-import { fetchHeroes } from "#/server/fetchHeroes";
+import HeroDetail from "#/pages/hero-detail";
+import { fetchHeroes } from "#/server/heroes";
+import { heroSlug } from "#/shared/utils/heroSlug";
 import type { HeroEntry } from "#/types";
-import { heroSlug } from "#/utils/heroSlug";
 
 export const Route = createFileRoute("/heroes_/$heroSlug")({
 	loader: async ({ params }): Promise<HeroEntry> => {
@@ -72,61 +69,12 @@ export const Route = createFileRoute("/heroes_/$heroSlug")({
 			</Link>
 		</main>
 	),
-	component: HeroDetail,
+	component: RouteComponent,
 });
 
-function HeroDetail() {
+function RouteComponent() {
 	// Annotated for the same reason as the other routes: the generated route
 	// tree and `useLoaderData()` reference each other, so inference yields `any`.
-	const { hero, abilities }: HeroEntry = Route.useLoaderData();
-
-	return (
-		<main className="mx-auto max-w-4xl px-4 py-6 sm:px-8">
-			<div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-				<p className="text-gray-400 text-sm">
-					<Link to="/heroes" className="underline hover:text-white">
-						Heroes
-					</Link>{" "}
-					/ <span className="text-gray-100">{hero.name}</span>
-				</p>
-				<Link
-					to="/compare"
-					search={{ heroes: [hero.class_name] }}
-					className="rounded-xl border border-amber-500 p-2 font-bold"
-				>
-					Compare heroes
-				</Link>
-			</div>
-
-			<header className="mb-6 flex items-center gap-4">
-				<HeroPortrait hero={hero} />
-				<h1 className="font-extrabold text-3xl">{hero.name}</h1>
-			</header>
-
-			<section className="mb-8">
-				<h2 className="mb-2 font-bold text-xl">Starting Stats</h2>
-				<HeroStats hero={hero} />
-			</section>
-
-			<section className="mb-8">
-				<h2 className="mb-2 font-bold text-xl">Level-Up Growth</h2>
-				<HeroLevelUp hero={hero} />
-			</section>
-
-			<section className="mb-8">
-				<h2 className="mb-2 font-bold text-xl">Abilities</h2>
-				<HeroAbilities abilities={abilities} />
-			</section>
-
-			<div className="mt-8 text-center">
-				<Link
-					to="/compare"
-					search={{ heroes: [hero.class_name] }}
-					className="rounded-xl border border-amber-500 p-2 font-bold"
-				>
-					Compare {hero.name} with another hero →
-				</Link>
-			</div>
-		</main>
-	);
+	const entry: HeroEntry = Route.useLoaderData();
+	return <HeroDetail {...entry} />;
 }

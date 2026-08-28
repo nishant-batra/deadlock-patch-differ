@@ -1,8 +1,8 @@
 // types.ts
 
-import type { TierDiff } from "#/utils/abilityUpgrades";
-import type { Change } from "#/utils/diffEngine";
-import type { DisplayChange } from "#/utils/tooltipProjection";
+import type { TierDiff } from "#/lib/abilityUpgrades";
+import type { Change } from "#/lib/diffEngine";
+import type { DisplayChange } from "#/lib/tooltipProjection";
 
 export type { Change, DisplayChange, TierDiff };
 

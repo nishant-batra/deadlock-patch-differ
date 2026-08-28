@@ -1,6 +1,6 @@
 import { createFileRoute, stripSearchParams } from "@tanstack/react-router";
-import HeroCompare from "#/components/hero-compare";
-import { fetchHeroes } from "#/server/fetchHeroes";
+import Compare from "#/pages/compare";
+import { fetchHeroes } from "#/server/heroes";
 import type { HeroEntry } from "#/types";
 
 const MAX_HEROES = 3;
@@ -79,22 +79,12 @@ export const Route = createFileRoute("/compare")({
 		],
 	}),
 	loader: async () => fetchHeroes(),
-	component: Compare,
+	component: RouteComponent,
 });
 
-function Compare() {
+function RouteComponent() {
 	// Annotated for the same reason as the other routes: the generated route
 	// tree and `useLoaderData()` reference each other, so inference yields `any`.
 	const heroesData: HeroEntry[] = Route.useLoaderData();
-
-	return (
-		<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
-			<h1 className="mb-1 font-extrabold text-2xl">Deadlock Hero Comparison</h1>
-			<p className="mb-6 text-gray-400 text-sm">
-				Compare Deadlock hero stats side by side — health, weapon damage, spirit
-				scaling, and mobility.
-			</p>
-			<HeroCompare heroes={heroesData} />
-		</main>
-	);
+	return <Compare heroes={heroesData} />;
 }

@@ -18,25 +18,25 @@ import {
 	hasAnyChange,
 	type PrunedNode,
 	pruneUnmodified,
-} from "../app/utils/diffEngine";
-import { sanitizeNotesHtml } from "../app/utils/sanitizeHtml";
+} from "../app/lib/diffEngine";
+import { sanitizeNotesHtml } from "../app/lib/sanitizeHtml";
 import {
 	generalHtml,
 	hasGeneralContent,
 	titleDate,
-} from "../app/utils/noteSections";
-import { diffItems } from "../app/utils/tooltipProjection";
+} from "../app/lib/noteSections";
+import { diffItems } from "../app/lib/tooltipProjection";
 import {
 	diffAbilityTiers,
 	type TierDiff,
-} from "../app/utils/abilityUpgrades";
+} from "../app/lib/abilityUpgrades";
 import {
 	ABILITY_SLOTS,
 	type HeroChangeInput,
 	isHeroChanged,
 	isLiveHero,
 	WEAPON_SLOT,
-} from "../app/utils/roster";
+} from "../app/lib/roster";
 import type { Item } from "../app/types";
 
 const API = "https://api.deadlock-api.com";

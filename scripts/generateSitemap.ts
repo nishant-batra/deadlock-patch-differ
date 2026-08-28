@@ -10,8 +10,8 @@ import fs from "node:fs";
 import path from "node:path";
 import heroesViewJson from "../app/data/heroes-view.json" with { type: "json" };
 import type { Hero } from "../app/types";
-import { heroSlug } from "../app/utils/heroSlug";
-import { isLiveHero } from "../app/utils/roster";
+import { heroSlug } from "../app/shared/utils/heroSlug";
+import { isLiveHero } from "../app/lib/roster";
 
 const BASE_URL = "https://deadlockpatch.vercel.app";
 const SITEMAP_PATH = path.join(process.cwd(), "public", "sitemap.xml");

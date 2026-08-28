@@ -7,24 +7,16 @@ import {
 	Outlet,
 	Scripts,
 } from "@tanstack/react-router";
-import { createServerFn } from "@tanstack/react-start";
-import { setResponseHeader } from "@tanstack/react-start/server";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import type { ReactNode } from "react";
-import AdSlot from "#/components/ad-slot";
-import { ADSENSE_PUBLISHER_ID } from "#/components/ad-slot/constants";
-import PatchHeader from "#/components/patch-header";
-import RouteLoadingBar from "#/components/route-loading-bar";
-import ScrollToTop from "#/components/scroll-to-top";
-import { getPatchMeta } from "#/server/patchService";
+import PatchHeader from "#/layout/patch-header";
+import RouteLoadingBar from "#/layout/route-loading-bar";
+import ScrollToTop from "#/layout/scroll-to-top";
+import { fetchPatchMeta } from "#/layout/server";
+import AdSlot from "#/shared/components/ad-slot";
+import { ADSENSE_PUBLISHER_ID } from "#/shared/components/ad-slot/constants";
 import styles from "../styles/app.css?url";
-
-const fetchPatchMeta = createServerFn({ method: "GET" }).handler(async () => {
-	// Rebuilt by the deploy hook whenever new artifacts are committed.
-	setResponseHeader("Cache-Control", "public, s-maxage=31536000, immutable");
-	return getPatchMeta();
-});
 
 export const Route = createRootRoute({
 	head: () => ({
