@@ -1,5 +1,188 @@
 {
 	"added": {},
 	"removed": {},
-	"modified": {}
+	"modified": {
+		"Holliday": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"standard_level_up_upgrades": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": {
+							"old": 41,
+							"new": 43
+						}
+					}
+				}
+			}
+		},
+		"Shiv": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"standard_level_up_upgrades": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": {
+							"old": 0.2,
+							"new": 0.24
+						}
+					}
+				}
+			}
+		},
+		"Warden": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"scaling_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"ERoundsPerSecond": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"scale": {
+									"old": 0.01,
+									"new": 0.008
+								}
+							}
+						},
+						"EFireRate": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"scale": {
+									"old": 0.25,
+									"new": 0.21
+								}
+							}
+						}
+					}
+				},
+				"standard_level_up_upgrades": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": {
+							"old": 0.28,
+							"new": 0.25
+						}
+					}
+				}
+			}
+		},
+		"Viscous": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"standard_level_up_upgrades": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": {
+							"old": 1.6,
+							"new": 1.44
+						}
+					}
+				}
+			}
+		},
+		"Paige": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"scaling_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"EHeavyMeleeDamage": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"scale": {
+									"old": 0.3,
+									"new": 0.45
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Graves": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"standard_level_up_upgrades": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": {
+							"old": 33,
+							"new": 35
+						}
+					}
+				}
+			}
+		},
+		"Silver": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"sprint_speed": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 1.5,
+									"new": 2.5
+								}
+							}
+						}
+					}
+				},
+				"standard_level_up_upgrades": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": {
+							"old": 28,
+							"new": 31
+						}
+					}
+				}
+			}
+		},
+		"Celeste": {
+			"added": {},
+			"removed": {},
+			"modified": {
+				"starting_stats": {
+					"added": {},
+					"removed": {},
+					"modified": {
+						"stamina_regen_per_second": {
+							"added": {},
+							"removed": {},
+							"modified": {
+								"value": {
+									"old": 0.2,
+									"new": 0.18867
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

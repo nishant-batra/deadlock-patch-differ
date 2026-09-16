@@ -18312,7 +18312,7 @@
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 1.144,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 41,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 43,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -26248,7 +26248,7 @@
 		},
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.165,
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.2,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.24,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 46,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
@@ -30895,11 +30895,11 @@
 		"scaling_stats": {
 			"ERoundsPerSecond": {
 				"scaling_stat": "ETechPower",
-				"scale": 0.01
+				"scale": 0.008
 			},
 			"EFireRate": {
 				"scaling_stat": "ETechPower",
-				"scale": 0.25
+				"scale": 0.21
 			}
 		},
 		"purchase_bonuses": {
@@ -30986,7 +30986,7 @@
 			]
 		},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.28,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.25,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 60,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -35753,7 +35753,7 @@
 		},
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.36,
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 1.6,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 1.44,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 45,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
@@ -70202,7 +70202,7 @@
 		"scaling_stats": {
 			"EHeavyMeleeDamage": {
 				"scaling_stat": "ETechPower",
-				"scale": 0.3
+				"scale": 0.45
 			}
 		},
 		"purchase_bonuses": {
@@ -82864,7 +82864,7 @@
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.054,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 33,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 35,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -86816,7 +86816,7 @@
 				"display_stat_name": "EMaxMoveSpeed"
 			},
 			"sprint_speed": {
-				"value": 1.5,
+				"value": 2.5,
 				"display_stat_name": "ESprintSpeed"
 			},
 			"crouch_speed": {
@@ -87611,7 +87611,7 @@
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.117,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.7735,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 28,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 31,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -88447,7 +88447,7 @@
 				"display_stat_name": "EBaseHealthRegen"
 			},
 			"stamina_regen_per_second": {
-				"value": 0.2,
+				"value": 0.18867,
 				"display_stat_name": "EStaminaRegenPerSecond"
 			},
 			"ability_resource_max": {

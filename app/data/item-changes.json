@@ -3,28 +3,534 @@
 	"removed": [],
 	"changed": [
 		{
-			"name": "Restorative Locket",
+			"name": "Cultist Sacrifice",
 			"changes": [
 				{
-					"kind": "stat",
-					"section": "innate",
-					"key": "TechResist",
-					"label": "Spirit Resist",
-					"old": "10",
-					"new": "8"
+					"kind": "text",
+					"section": "active",
+					"old": "Target an enemy NPC and consume it for 180% Bonus Souls and grants a powerful long lasting buff.",
+					"new": "Target an enemy NPC and consume it for 170% Bonus Souls and grants a powerful long lasting buff."
 				}
 			]
 		},
 		{
-			"name": "Radiant Regeneration",
+			"name": "Capacitor",
 			"changes": [
 				{
 					"kind": "stat",
-					"section": "",
-					"key": "HealingPerCast",
-					"label": "Healing on Ability Cast",
-					"old": "70",
-					"new": "65"
+					"section": "active",
+					"key": "MaxSlowPercent",
+					"label": "Max Move Speed",
+					"old": "75",
+					"new": "60"
+				}
+			]
+		},
+		{
+			"name": "Hollow Point",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "BulletArmorReduction",
+					"label": "Bullet Resist",
+					"old": "-9",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"name": "Weighted Shots",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "SlowPercent",
+					"label": "Move Speed",
+					"old": "30",
+					"new": "24"
+				},
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "GroundDashReductionPercent",
+					"label": "Dash Distance",
+					"old": "-22",
+					"new": "-20"
+				}
+			]
+		},
+		{
+			"name": "Slowing Bullets",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "SlowPercent",
+					"label": "Move Speed",
+					"old": "30",
+					"new": "24"
+				},
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "GroundDashReductionPercent",
+					"label": "Dash Distance",
+					"old": "-22",
+					"new": "-20"
+				}
+			]
+		},
+		{
+			"name": "Weakening Headshot",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "BulletResistReduction",
+					"label": "Bullet Resist",
+					"old": "-13",
+					"new": "-12"
+				}
+			]
+		},
+		{
+			"name": "Point Blank",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "SlowPercent",
+					"label": "Move Speed",
+					"old": "25",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"name": "Fortitude",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "HealLifePercentOutOfCombat",
+					"label": "Max Health Regen",
+					"old": "2",
+					"new": "2.25"
+				}
+			]
+		},
+		{
+			"name": "Leech",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "AbilityLifestealPercentHero",
+					"label": "Spirit Lifesteal",
+					"old": "25",
+					"new": "28"
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BulletLifestealPercent",
+					"label": "Bullet Lifesteal",
+					"old": "25",
+					"new": "28"
+				}
+			]
+		},
+		{
+			"name": "Trophy Collector",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "StackingGoldPerMinute",
+					"label": "Souls per Minute",
+					"old": "18",
+					"new": "16"
+				}
+			]
+		},
+		{
+			"name": "Spiritual Overflow",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "BonusFireRate",
+					"label": "Fire Rate",
+					"old": "30",
+					"new": "25"
+				},
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "BonusSpirit",
+					"label": "Spirit Power",
+					"old": "40",
+					"new": "30"
+				},
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "BuildUpPerShot",
+					"label": "Buildup Per Shot",
+					"old": "0.75",
+					"new": "1.08"
+				}
+			]
+		},
+		{
+			"name": "Mystic Reverb",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "MovementSpeedSlow",
+					"label": "Move Speed",
+					"old": "40",
+					"new": "32"
+				}
+			]
+		},
+		{
+			"name": "Tankbuster",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "CurrentHealthDamage",
+					"label": "Current Health Bonus Damage",
+					"old": "8",
+					"new": "7.5"
+				}
+			]
+		},
+		{
+			"name": "Mystic Slow",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "MovementSpeedSlow",
+					"label": "Move Speed",
+					"old": "30",
+					"new": "24"
+				},
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "GroundDashReductionPercent",
+					"label": "Dash Distance",
+					"old": "-12",
+					"new": "-10"
+				}
+			]
+		},
+		{
+			"name": "Slowing Hex",
+			"changes": [
+				{
+					"kind": "cooldown",
+					"section": "active",
+					"old": "27",
+					"new": "29"
+				},
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "SlowPercent",
+					"label": "Move Speed",
+					"old": "20",
+					"new": "16"
+				},
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "GroundDashReductionPercent",
+					"label": "Dash Distance",
+					"old": "-30",
+					"new": "-26"
+				}
+			]
+		},
+		{
+			"name": "Focus Lens",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "PercentDamage",
+					"label": "Damage On Expire",
+					"old": "30",
+					"new": "35"
+				},
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "AbilityCastRange",
+					"label": "Cast Range",
+					"old": "20m",
+					"new": "25m"
+				}
+			]
+		},
+		{
+			"name": "Decay",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "DotHealthPercent",
+					"label": "Bleed Damage",
+					"old": "2.6",
+					"new": "1.95"
+				},
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "AbilityDuration",
+					"label": "Duration",
+					"old": "10",
+					"new": "12"
+				}
+			]
+		},
+		{
+			"name": "Phantom Strike",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "SlowPercent",
+					"label": "Move Speed",
+					"old": "50",
+					"new": "40"
+				}
+			]
+		},
+		{
+			"name": "Vortex Web",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "SlowPercent",
+					"label": "Move Speed",
+					"old": "35",
+					"new": "28"
+				},
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "GroundDashReductionPercent",
+					"label": "Dash Distance",
+					"old": "-40",
+					"new": "-36"
+				}
+			]
+		},
+		{
+			"name": "Shadow Weave",
+			"changes": [
+				{
+					"kind": "components",
+					"old": [],
+					"new": [
+						"upgrade_sprint_booster"
+					]
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BonusSprintSpeed",
+					"label": "Sprint Speed",
+					"old": "1.5m",
+					"new": "2m"
+				}
+			]
+		},
+		{
+			"name": "Restorative Locket",
+			"changes": [
+				{
+					"kind": "text",
+					"section": "active",
+					"old": "When an enemy uses an ability within 35mm range from you, store one Restoration Stack. Consume all stacks to heal yourself and replenish up to 3 stamina based on how many stacks you have.",
+					"new": "When an enemy uses an ability within 32mm range from you, store one Restoration Stack. Consume all stacks to heal yourself and replenish up to 3 stamina based on how many stacks you have."
+				}
+			]
+		},
+		{
+			"name": "Colossus",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "SlowPercent",
+					"label": "Move Speed",
+					"old": "30",
+					"new": "24"
+				}
+			]
+		},
+		{
+			"name": "Cold Front",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "MovementSpeedSlow",
+					"label": "Move Speed",
+					"old": "60",
+					"new": "48"
+				}
+			]
+		},
+		{
+			"name": "Lifestrike",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "SlowPercent",
+					"label": "Move Speed",
+					"old": "60",
+					"new": "48"
+				},
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "LifestealHeal",
+					"label": "Heal on Melee Hit",
+					"old": "100",
+					"new": "120"
+				},
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "LifestealHealPercent",
+					"label": "Melee Hit Heal",
+					"old": "30",
+					"new": "35"
+				}
+			]
+		},
+		{
+			"name": "Diviner's Kevlar",
+			"changes": [
+				{
+					"kind": "row-added",
+					"section": "innate",
+					"key": "UltimateCooldownReduction",
+					"label": "Ultimate Cooldown Reduction",
+					"value": "10",
+					"prefix": "{s:sign}",
+					"postfix": "%",
+					"conditional": false
+				}
+			]
+		},
+		{
+			"name": "Mercurial Magnum",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "BulletsBonusMagicDamage",
+					"label": "Base Bullet Damage",
+					"old": "25",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"name": "Veil Walker",
+			"changes": [
+				{
+					"kind": "components",
+					"old": [
+						"upgrade_sprint_booster"
+					],
+					"new": []
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "SpiritPower",
+					"label": "Spirit Power",
+					"old": "10",
+					"new": "6"
+				},
+				{
+					"kind": "row-removed",
+					"section": "innate",
+					"key": "BonusSprintSpeed",
+					"label": "Sprint Speed",
+					"value": "2.0m",
+					"prefix": "{s:sign}",
+					"postfix": "m",
+					"conditional": false
+				},
+				{
+					"kind": "row-removed",
+					"section": "innate",
+					"key": "OutOfCombatHealthRegen",
+					"label": "Out of Combat Regen",
+					"value": "2",
+					"prefix": "{s:sign}",
+					"postfix": "",
+					"conditional": false
+				}
+			]
+		},
+		{
+			"name": "Lightning Scroll",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "MovementSpeedSlow",
+					"label": "Move Speed on Spirit Damage",
+					"old": "30",
+					"new": "24"
+				}
+			]
+		},
+		{
+			"name": "Ballistic Enchantment",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "AbilityDuration",
+					"label": "Duration",
+					"old": "14",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"name": "Golden Goose Egg",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "OutgoingDamagePenaltyPercent",
+					"label": "Damage Penalty",
+					"old": "-10",
+					"new": "-15"
+				},
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "BonusGoldPerMinute",
+					"label": "Soul Value per Minute",
+					"old": "90",
+					"new": "80"
 				}
 			]
 		}
