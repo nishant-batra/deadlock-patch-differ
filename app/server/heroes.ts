@@ -8,7 +8,12 @@ import heroesViewJson from "#/data/heroes-view.json";
 import { currentTiers, type TierDiff } from "#/lib/abilityUpgrades";
 import { isLiveHero } from "#/lib/roster";
 import type { Hero, HeroEntry } from "#/types";
-import { EMPTY_DIFF, joinAbilities, readItemsView } from "./core";
+import {
+	changedHeroNames,
+	EMPTY_DIFF,
+	joinAbilities,
+	readItemsView,
+} from "./core";
 
 /**
  * Every live hero, unfiltered by whether anything changed - the "All heroes"
@@ -45,4 +50,12 @@ export function getAllHeroes(): HeroEntry[] {
  */
 export const fetchHeroes = createServerFn({ method: "GET" }).handler(
 	async (): Promise<HeroEntry[]> => getAllHeroes(),
+);
+
+/**
+ * Serialized as `string[]`, not a `Set` - server-fn results cross a network
+ * boundary and a `Set` doesn't survive that round-trip intact.
+ */
+export const fetchChangedHeroNames = createServerFn({ method: "GET" }).handler(
+	async (): Promise<string[]> => changedHeroNames(),
 );

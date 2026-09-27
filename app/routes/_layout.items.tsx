@@ -7,7 +7,7 @@ import type { ItemSlotType, ItemsPage } from "#/types";
 const isItemSlotType = (value: unknown): value is ItemSlotType =>
 	itemTypes.includes(value as ItemSlotType);
 
-export const Route = createFileRoute("/items")({
+export const Route = createFileRoute("/_layout/items")({
 	validateSearch: (
 		search: Record<string, unknown>,
 	): { type: ItemSlotType } => ({

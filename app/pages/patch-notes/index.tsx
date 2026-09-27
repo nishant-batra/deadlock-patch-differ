@@ -1,12 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { Fragment } from "react";
 import AdSlot from "#/shared/components/ad-slot";
+import Badge from "#/shared/components/badge";
+import CardLegend from "#/shared/components/card-legend";
+import CutFrame from "#/shared/components/cut-frame";
+import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
 import ItemCard from "#/shared/components/item-card";
 import { formatPatchDate } from "#/shared/utils/formatPatchDate";
 import HeroCard from "./hero-card";
-import Legend from "./legend";
-import HeroLegend from "./legend/hero-legend";
-import SectionNav, { Badge } from "./section-nav";
+import HeroLegend from "./hero-legend";
 import type { ChangesPayload } from "./server";
 
 function EmptyState({ children }: { children: React.ReactNode }) {
@@ -44,7 +46,6 @@ function SectionHeading({
 
 export default function Changes({ items, heroes, notes }: ChangesPayload) {
 	const { added, removed, changed } = items;
-	const itemCount = added.length + removed.length + changed.length;
 
 	// The item/hero diff and the general notes can come from different updates -
 	// a rework changes no items, a balance patch carries no general text - so the
@@ -179,40 +180,38 @@ export default function Changes({ items, heroes, notes }: ChangesPayload) {
 	};
 
 	return (
-		<>
-			<SectionNav counts={{ items: itemCount, heroes: heroes.length }} />
-
-			<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
-				<h1 className="mb-1 font-extrabold text-2xl">
-					Deadlock Patch Notes &amp; Update Visualizer
-				</h1>
-				<div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-					<p className="text-gray-400 text-sm">
-						See exactly what changed in the latest Deadlock update — hero stat
-						changes, item buffs and nerfs, and full patch notes, visualized side
-						by side.
-					</p>
+		<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
+			<h1 className="mb-1 font-extrabold text-2xl">
+				Deadlock Patch Notes &amp; Update Visualizer
+			</h1>
+			<div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+				<p className="text-gray-400 text-sm">
+					See exactly what changed in the latest Deadlock update — hero stat
+					changes, item buffs and nerfs, and full patch notes, visualized side
+					by side.
+				</p>
+				<CutFrame color={AMBER_BORDER}>
 					<Link
 						to="/compare"
 						search={{ heroes: [] }}
-						className="rounded-xl border border-amber-500 p-2 font-bold"
+						className="cut-corner px-3 py-1.5 font-bold"
 					>
 						Compare heroes
 					</Link>
-				</div>
-				<Legend />
-				{blocks.map((block, index) => (
-					<Fragment key={block.id}>
-						{byId[block.id]}
-						{index < blocks.length - 1 && (
-							<AdSlot
-								slotId={`TODO-ad-unit-in-content-${index + 1}`}
-								className="mb-12"
-							/>
-						)}
-					</Fragment>
-				))}
-			</main>
-		</>
+				</CutFrame>
+			</div>
+			<CardLegend />
+			{blocks.map((block, index) => (
+				<Fragment key={block.id}>
+					{byId[block.id]}
+					{index < blocks.length - 1 && (
+						<AdSlot
+							slotId={`TODO-ad-unit-in-content-${index + 1}`}
+							className="mb-12"
+						/>
+					)}
+				</Fragment>
+			))}
+		</main>
 	);
 }

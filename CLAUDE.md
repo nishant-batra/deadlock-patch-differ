@@ -21,6 +21,13 @@ app/components/hero-card/
 - **Pure functions** (no React, no state, deterministic input → output: formatting, calculations, transforms) → a colocated `utils.ts`, or `app/utils/` if genuinely shared across multiple unrelated features.
 - Shared, cross-feature hooks/utils (used by 3+ unrelated features) can graduate to `app/hooks/` or `app/utils/` — don't put feature-specific logic there by default.
 
+## Where styles go
+
+- Tailwind classes in the JSX come first. Reach for custom CSS only for what utilities can't express cleanly (pseudo-elements, `:has()`, complex `clip-path`s, keyframes).
+- Custom CSS that belongs to one component goes in a CSS module colocated with it — `styles.module.css` in the feature folder, imported as `styles` — never in `app/styles/app.css`.
+- `app/styles/app.css` is only for global concerns: Tailwind setup, theme tokens, base element styles, and utility classes shared by many unrelated components (e.g. `cut-double` / `cut-corner`).
+- Module rules are unlayered, so they beat Tailwind utilities regardless of specificity. Don't set properties in a module (display, margin, size…) that callers are expected to override with utility classes — leave those to `className`.
+
 ## Naming
 
 - A folder's main component file is `index.tsx`. Any other component file is kebab-case and named for what it renders (`ability-detail.tsx`), never PascalCase.

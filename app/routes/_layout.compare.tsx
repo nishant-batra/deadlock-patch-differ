@@ -26,7 +26,7 @@ function parseHeroes(raw: unknown): string[] {
 	].slice(0, MAX_HEROES);
 }
 
-export const Route = createFileRoute("/compare")({
+export const Route = createFileRoute("/_layout/compare")({
 	validateSearch: (search: Record<string, unknown>) => ({
 		heroes: parseHeroes(search.heroes),
 	}),

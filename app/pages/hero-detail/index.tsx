@@ -1,4 +1,6 @@
 import { Link } from "@tanstack/react-router";
+import CutFrame from "#/shared/components/cut-frame";
+import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
 import type { HeroEntry } from "#/types";
 import HeroAbilities from "./hero-abilities";
 import HeroLevelUp from "./hero-level-up";
@@ -15,13 +17,15 @@ export default function HeroDetail({ hero, abilities }: HeroEntry) {
 					</Link>{" "}
 					/ <span className="text-gray-100">{hero.name}</span>
 				</p>
-				<Link
-					to="/compare"
-					search={{ heroes: [hero.class_name] }}
-					className="rounded-xl border border-amber-500 p-2 font-bold"
-				>
-					Compare heroes
-				</Link>
+				<CutFrame color={AMBER_BORDER}>
+					<Link
+						to="/compare"
+						search={{ heroes: [hero.class_name] }}
+						className="cut-corner px-3 py-1.5 font-bold"
+					>
+						Compare heroes
+					</Link>
+				</CutFrame>
 			</div>
 
 			<header className="mb-6 flex items-center gap-4">
@@ -45,13 +49,15 @@ export default function HeroDetail({ hero, abilities }: HeroEntry) {
 			</section>
 
 			<div className="mt-8 text-center">
-				<Link
-					to="/compare"
-					search={{ heroes: [hero.class_name] }}
-					className="rounded-xl border border-amber-500 p-2 font-bold"
-				>
-					Compare {hero.name} with another hero →
-				</Link>
+				<CutFrame color={AMBER_BORDER}>
+					<Link
+						to="/compare"
+						search={{ heroes: [hero.class_name] }}
+						className="cut-corner px-3 py-1.5 font-bold"
+					>
+						Compare {hero.name} with another hero →
+					</Link>
+				</CutFrame>
 			</div>
 		</main>
 	);

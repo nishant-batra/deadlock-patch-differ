@@ -9,129 +9,163 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ItemsRouteImport } from './routes/items'
-import { Route as HeroesRouteImport } from './routes/heroes'
-import { Route as CompareRouteImport } from './routes/compare'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as HeroesHeroSlugRouteImport } from './routes/heroes_.$heroSlug'
+import { Route as LayoutRouteImport } from './routes/_layout'
+import { Route as LayoutIndexRouteImport } from './routes/_layout.index'
+import { Route as LayoutItemsRouteImport } from './routes/_layout.items'
+import { Route as LayoutHeroesRouteImport } from './routes/_layout.heroes'
+import { Route as LayoutCompareRouteImport } from './routes/_layout.compare'
+import { Route as LayoutHeroesHeroSlugRouteImport } from './routes/_layout.heroes_.$heroSlug'
 
-const ItemsRoute = ItemsRouteImport.update({
-  id: '/items',
-  path: '/items',
+const LayoutRoute = LayoutRouteImport.update({
+  id: '/_layout',
   getParentRoute: () => rootRouteImport,
 } as any)
-const HeroesRoute = HeroesRouteImport.update({
-  id: '/heroes',
-  path: '/heroes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CompareRoute = CompareRouteImport.update({
-  id: '/compare',
-  path: '/compare',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndexRoute = IndexRouteImport.update({
+const LayoutIndexRoute = LayoutIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => LayoutRoute,
 } as any)
-const HeroesHeroSlugRoute = HeroesHeroSlugRouteImport.update({
+const LayoutItemsRoute = LayoutItemsRouteImport.update({
+  id: '/items',
+  path: '/items',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutHeroesRoute = LayoutHeroesRouteImport.update({
+  id: '/heroes',
+  path: '/heroes',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutCompareRoute = LayoutCompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutHeroesHeroSlugRoute = LayoutHeroesHeroSlugRouteImport.update({
   id: '/heroes_/$heroSlug',
   path: '/heroes/$heroSlug',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => LayoutRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/compare': typeof CompareRoute
-  '/heroes': typeof HeroesRoute
-  '/items': typeof ItemsRoute
-  '/heroes/$heroSlug': typeof HeroesHeroSlugRoute
+  '/': typeof LayoutIndexRoute
+  '/compare': typeof LayoutCompareRoute
+  '/heroes': typeof LayoutHeroesRoute
+  '/items': typeof LayoutItemsRoute
+  '/heroes/$heroSlug': typeof LayoutHeroesHeroSlugRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/compare': typeof CompareRoute
-  '/heroes': typeof HeroesRoute
-  '/items': typeof ItemsRoute
-  '/heroes/$heroSlug': typeof HeroesHeroSlugRoute
+  '/compare': typeof LayoutCompareRoute
+  '/heroes': typeof LayoutHeroesRoute
+  '/items': typeof LayoutItemsRoute
+  '/': typeof LayoutIndexRoute
+  '/heroes/$heroSlug': typeof LayoutHeroesHeroSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/compare': typeof CompareRoute
-  '/heroes': typeof HeroesRoute
-  '/items': typeof ItemsRoute
-  '/heroes_/$heroSlug': typeof HeroesHeroSlugRoute
+  '/_layout': typeof LayoutRouteWithChildren
+  '/_layout/compare': typeof LayoutCompareRoute
+  '/_layout/heroes': typeof LayoutHeroesRoute
+  '/_layout/items': typeof LayoutItemsRoute
+  '/_layout/': typeof LayoutIndexRoute
+  '/_layout/heroes_/$heroSlug': typeof LayoutHeroesHeroSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths: '/' | '/compare' | '/heroes' | '/items' | '/heroes/$heroSlug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/compare' | '/heroes' | '/items' | '/heroes/$heroSlug'
+  to: '/compare' | '/heroes' | '/items' | '/' | '/heroes/$heroSlug'
   id:
     | '__root__'
-    | '/'
-    | '/compare'
-    | '/heroes'
-    | '/items'
-    | '/heroes_/$heroSlug'
+    | '/_layout'
+    | '/_layout/compare'
+    | '/_layout/heroes'
+    | '/_layout/items'
+    | '/_layout/'
+    | '/_layout/heroes_/$heroSlug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  CompareRoute: typeof CompareRoute
-  HeroesRoute: typeof HeroesRoute
-  ItemsRoute: typeof ItemsRoute
-  HeroesHeroSlugRoute: typeof HeroesHeroSlugRoute
+  LayoutRoute: typeof LayoutRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/items': {
-      id: '/items'
-      path: '/items'
-      fullPath: '/items'
-      preLoaderRoute: typeof ItemsRouteImport
+    '/_layout': {
+      id: '/_layout'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof LayoutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/heroes': {
-      id: '/heroes'
-      path: '/heroes'
-      fullPath: '/heroes'
-      preLoaderRoute: typeof HeroesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/compare': {
-      id: '/compare'
-      path: '/compare'
-      fullPath: '/compare'
-      preLoaderRoute: typeof CompareRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
+    '/_layout/': {
+      id: '/_layout/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof LayoutIndexRouteImport
+      parentRoute: typeof LayoutRoute
     }
-    '/heroes_/$heroSlug': {
-      id: '/heroes_/$heroSlug'
+    '/_layout/items': {
+      id: '/_layout/items'
+      path: '/items'
+      fullPath: '/items'
+      preLoaderRoute: typeof LayoutItemsRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/heroes': {
+      id: '/_layout/heroes'
+      path: '/heroes'
+      fullPath: '/heroes'
+      preLoaderRoute: typeof LayoutHeroesRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/compare': {
+      id: '/_layout/compare'
+      path: '/compare'
+      fullPath: '/compare'
+      preLoaderRoute: typeof LayoutCompareRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/heroes_/$heroSlug': {
+      id: '/_layout/heroes_/$heroSlug'
       path: '/heroes/$heroSlug'
       fullPath: '/heroes/$heroSlug'
-      preLoaderRoute: typeof HeroesHeroSlugRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof LayoutHeroesHeroSlugRouteImport
+      parentRoute: typeof LayoutRoute
     }
   }
 }
 
+interface LayoutRouteChildren {
+  LayoutCompareRoute: typeof LayoutCompareRoute
+  LayoutHeroesRoute: typeof LayoutHeroesRoute
+  LayoutItemsRoute: typeof LayoutItemsRoute
+  LayoutIndexRoute: typeof LayoutIndexRoute
+  LayoutHeroesHeroSlugRoute: typeof LayoutHeroesHeroSlugRoute
+}
+
+const LayoutRouteChildren: LayoutRouteChildren = {
+  LayoutCompareRoute: LayoutCompareRoute,
+  LayoutHeroesRoute: LayoutHeroesRoute,
+  LayoutItemsRoute: LayoutItemsRoute,
+  LayoutIndexRoute: LayoutIndexRoute,
+  LayoutHeroesHeroSlugRoute: LayoutHeroesHeroSlugRoute,
+}
+
+const LayoutRouteWithChildren =
+  LayoutRoute._addFileChildren(LayoutRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  CompareRoute: CompareRoute,
-  HeroesRoute: HeroesRoute,
-  ItemsRoute: ItemsRoute,
-  HeroesHeroSlugRoute: HeroesHeroSlugRoute,
+  LayoutRoute: LayoutRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}

@@ -10,12 +10,11 @@ import {
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import type { ReactNode } from "react";
-import PatchHeader from "#/layout/patch-header";
 import RouteLoadingBar from "#/layout/route-loading-bar";
-import ScrollToTop from "#/layout/scroll-to-top";
-import { fetchPatchMeta } from "#/layout/server";
-import AdSlot from "#/shared/components/ad-slot";
 import { ADSENSE_PUBLISHER_ID } from "#/shared/components/ad-slot/constants";
+import CutFrame from "#/shared/components/cut-frame";
+import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
+import { itemTypes } from "#/shared/components/item-card/constants";
 import styles from "../styles/app.css?url";
 
 export const Route = createRootRoute({
@@ -94,7 +93,6 @@ export const Route = createRootRoute({
 			},
 		],
 	}),
-	loader: async () => fetchPatchMeta(),
 	component: RootComponent,
 	// General fallback for any URL that matches no route at all. Individual
 	// routes (e.g. `/heroes/$heroSlug`) can still define their own, more
@@ -107,46 +105,35 @@ export const Route = createRootRoute({
 				That page doesn't exist. Try one of these instead.
 			</p>
 			<div className="flex flex-wrap justify-center gap-2">
-				<Link
-					to="/"
-					className="rounded-xl border border-amber-500 p-2 font-bold"
-				>
-					Patch notes
-				</Link>
-				<Link
-					to="/heroes"
-					className="rounded-xl border border-amber-500 p-2 font-bold"
-				>
-					Heroes
-				</Link>
-				<Link
-					to="/items"
-					className="rounded-xl border border-amber-500 p-2 font-bold"
-				>
-					Items
-				</Link>
+				<CutFrame color={AMBER_BORDER}>
+					<Link to="/" className="cut-corner px-3 py-1.5 font-bold">
+						Patch notes
+					</Link>
+				</CutFrame>
+				<CutFrame color={AMBER_BORDER}>
+					<Link to="/heroes" className="cut-corner px-3 py-1.5 font-bold">
+						Heroes
+					</Link>
+				</CutFrame>
+				<CutFrame color={AMBER_BORDER}>
+					<Link
+						to="/items"
+						search={{ type: itemTypes[0] }}
+						className="cut-corner px-3 py-1.5 font-bold"
+					>
+						Items
+					</Link>
+				</CutFrame>
 			</div>
 		</main>
 	),
 });
 
 function RootComponent() {
-	const meta = Route.useLoaderData();
 	return (
 		<RootDocument>
 			<RouteLoadingBar />
-			<PatchHeader meta={meta} />
-			<div className="ad-rail-row">
-				<AdSlot
-					slotId="TODO-ad-unit-sticky-rail"
-					wrapperClassName="ad-rail-wrap"
-					className="ad-rail"
-				/>
-				<div className="min-w-0 flex-1">
-					<Outlet />
-				</div>
-			</div>
-			<ScrollToTop />
+			<Outlet />
 		</RootDocument>
 	);
 }

@@ -1,4 +1,5 @@
-﻿import { ADSENSE_PUBLISHER_ID } from "./constants";
+﻿import clsx from "clsx";
+import { ADSENSE_PUBLISHER_ID } from "./constants";
 import { useAdSlot } from "./useAdSlot";
 
 type AdSlotProps = Readonly<{
@@ -28,7 +29,7 @@ export default function AdSlot({
 	// to measure and fill it - so a shimmer is layered on top instead of
 	// hiding it, and swaps out once `status` becomes "filled".
 	const ins = (
-		<div className={`relative ${className ?? ""}`}>
+		<div className={clsx("relative", className)}>
 			<ins
 				ref={insRef}
 				className="adsbygoogle block min-h-[90px] w-full"

@@ -1,0 +1,99 @@
+/* A border that follows the child's cut corners. A plain border, ring or
+   inset shadow is clipped away along the diagonal by the child's clip-path,
+   so the frame paints its own ring instead: a ::before filled with the frame
+   colour and clipped to (outer shape) minus (inner shape) with the evenodd
+   rule. Because it's a hollow ring, the child can have any background -
+   including transparent - and the frame never shows through it.
+
+   The shape is read off the direct child's class (`cut-double`/`cut-corner`)
+   via :has(); the slice size can't be read upward, so it comes from the
+   frame's `--frame-cut` (falling back to each shape's default size). The
+   child's own slice is then overridden to `outer - width * (2 - sqrt 2)` so
+   the ring is exactly as thick on the diagonals as on the straight edges.
+
+   Unlayered on purpose: it has to beat the child's own `[--cut:...]` utility.
+   For the same reason nothing here sets layout (display, margin, size) - that
+   comes from the frame's className. */
+
+.frame {
+	/* Reset so a nested frame never inherits an outer frame's slice size. */
+	--frame-cut: initial;
+	--w: var(--frame-width);
+	--inner-cut: calc(var(--outer-cut) - var(--w) * 0.586);
+	position: relative;
+	padding: var(--w);
+}
+
+.frame::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background: var(--frame-color);
+	/* Plain rectangle ring - used when the child has no cut class. */
+	clip-path: polygon(
+		evenodd,
+		0 0,
+		100% 0,
+		100% 100%,
+		0 100%,
+		0 0,
+		var(--w) var(--w),
+		calc(100% - var(--w)) var(--w),
+		calc(100% - var(--w)) calc(100% - var(--w)),
+		var(--w) calc(100% - var(--w)),
+		var(--w) var(--w)
+	);
+}
+
+.frame:has(> :global(.cut-double)) {
+	--outer-cut: var(--frame-cut, var(--cut-lg));
+}
+.frame:has(> :global(.cut-corner)) {
+	--outer-cut: var(--frame-cut, var(--cut-xs));
+}
+
+.frame > :global(.cut-double),
+.frame > :global(.cut-corner) {
+	--cut: var(--inner-cut);
+}
+
+/* Top-right + bottom-left cut - mirrors `.cut-double` in app.css. */
+.frame:has(> :global(.cut-double))::before {
+	clip-path: polygon(
+		evenodd,
+		0 0,
+		calc(100% - var(--outer-cut)) 0,
+		100% var(--outer-cut),
+		100% 100%,
+		var(--outer-cut) 100%,
+		0 calc(100% - var(--outer-cut)),
+		0 0,
+		var(--w) var(--w),
+		calc(100% - var(--w) - var(--inner-cut)) var(--w),
+		calc(100% - var(--w)) calc(var(--w) + var(--inner-cut)),
+		calc(100% - var(--w)) calc(100% - var(--w)),
+		calc(var(--w) + var(--inner-cut)) calc(100% - var(--w)),
+		var(--w) calc(100% - var(--w) - var(--inner-cut)),
+		var(--w) var(--w)
+	);
+}
+
+/* Bottom-right cut - mirrors `.cut-corner` in app.css. */
+.frame:has(> :global(.cut-corner))::before {
+	clip-path: polygon(
+		evenodd,
+		0 0,
+		100% 0,
+		100% calc(100% - var(--outer-cut)),
+		calc(100% - var(--outer-cut)) 100%,
+		0 100%,
+		0 0,
+		var(--w) var(--w),
+		calc(100% - var(--w)) var(--w),
+		calc(100% - var(--w)) calc(100% - var(--w) - var(--inner-cut)),
+		calc(100% - var(--w) - var(--inner-cut)) calc(100% - var(--w)),
+		var(--w) calc(100% - var(--w)),
+		var(--w) var(--w)
+	);
+}

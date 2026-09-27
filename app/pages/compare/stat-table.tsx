@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import HeroAvatar from "#/shared/components/hero-avatar";
 import type { Hero } from "#/types";
 import { compareSections } from "./utils";
@@ -40,11 +41,11 @@ export default function StatTable({ heroes }: { heroes: Hero[] }) {
 								{row.values.map((value, index) => (
 									<td
 										key={heroes[index]?.class_name ?? index}
-										className={
-											row.bestIndexes.includes(index)
-												? "px-2 py-1 font-bold text-amber-300"
-												: "px-2 py-1"
-										}
+										className={clsx(
+											"px-2 py-1",
+											row.bestIndexes.includes(index) &&
+												"font-bold text-amber-300",
+										)}
 									>
 										{value ?? "—"}
 									</td>

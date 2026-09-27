@@ -1,4 +1,5 @@
-﻿import TextChange from "#/shared/components/text-change";
+﻿import clsx from "clsx";
+import TextChange from "#/shared/components/text-change";
 import type { TierDiff } from "#/types";
 import TierRowView from "./tier-row";
 
@@ -15,7 +16,10 @@ export default function TierBlock({ tier }: { tier: TierDiff }) {
 		Boolean(tier.text) || tier.rows.some((row) => row.kind !== "equal");
 	return (
 		<div
-			className={`rounded-md p-2 text-xs ${touched ? "bg-amber-300/10 ring-1 ring-amber-300/40" : "bg-white/5"}`}
+			className={clsx(
+				"rounded-md p-2 text-xs",
+				touched ? "bg-amber-300/10 ring-1 ring-amber-300/40" : "bg-white/5",
+			)}
 		>
 			<div className="mb-1 font-bold text-[10px] text-gray-400 uppercase tracking-widest">
 				T{tier.tier}

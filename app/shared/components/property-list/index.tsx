@@ -1,4 +1,5 @@
-﻿import {
+﻿import clsx from "clsx";
+import {
 	formatDeltaValue,
 	toneOfDeltaRow,
 } from "#/shared/components/stat-delta";
@@ -14,6 +15,7 @@ export default function PropertyList({
 	className,
 	importantPropertiesWithIcon,
 	previousValues,
+	changedFrameColor = "rgb(252 211 77 / 0.6)",
 }: {
 	allProperties: Item["properties"];
 	itemProperties: Array<string>;
@@ -25,9 +27,12 @@ export default function PropertyList({
 	 * rendered inline as `old -> new` on the chip itself rather than restated
 	 * in a separate strip. */
 	previousValues?: Map<string, string | number>;
+	/** Frame colour for changed chips - item cards pass their slot colour so
+	 * the chip frame matches the card frame. */
+	changedFrameColor?: string;
 }) {
 	return (
-		<div className={`flex flex-1 ${className ?? ""}`}>
+		<div className={clsx("flex flex-1", className)}>
 			{itemProperties.map((property) => {
 				const displayProperty = allProperties[property];
 				if (!displayProperty) return null;
@@ -71,14 +76,24 @@ export default function PropertyList({
 				if (!changed && !tooltip_is_elevated && (value === 0 || value === "0"))
 					return null;
 
-				return (
+				const chip = (
 					<div
 						key={property}
-						className={`flex flex-1 flex-wrap items-center gap-0.5 px-2 ${tooltip_is_important ? "flex-col p-2" : ""}  ${tooltip_section !== "innate" ? "justify-center p-2" : ""} ${changed ? "rounded ring-1 ring-amber-300/60" : ""}`}
+						className={clsx(
+							"flex flex-1 flex-wrap items-center gap-0.5 px-2",
+							tooltip_is_important && "flex-col p-2",
+							tooltip_section !== "innate" && "justify-center p-2",
+						)}
 						style={{ background }}
 					>
 						<div
-							className={`flex ${tooltip_is_important ? "text-xl" : ""} ${negative_attribute ? "text-[#CE7A6F]" : ""}`}
+							// Changed chips drop a size: `old -> new` is roughly twice as wide
+							// as a lone value and would otherwise overflow the stat row.
+							className={clsx(
+								"flex",
+								tooltip_is_important && (changed ? "text-lg" : "text-xl"),
+								negative_attribute && "text-[#CE7A6F]",
+							)}
 						>
 							{Boolean(
 								(tooltip_is_important && icon) || importantPropertyIcon,
@@ -121,7 +136,9 @@ export default function PropertyList({
 
 							{showPostfix && (
 								<span
-									className={`${negative_attribute ? "text-[#CE7A6F]" : "text-gray-400"}`}
+									className={
+										negative_attribute ? "text-[#CE7A6F]" : "text-gray-400"
+									}
 								>
 									{postfix}
 								</span>
@@ -135,7 +152,10 @@ export default function PropertyList({
 										? "#fff"
 										: "#d1d5dc",
 							}}
-							className={`text-center ${tooltip_is_elevated && "font-bold"}`}
+							className={clsx(
+								"text-center",
+								tooltip_is_elevated && "font-bold",
+							)}
 						>
 							{label}
 						</span>
@@ -150,6 +170,21 @@ export default function PropertyList({
 							</p>
 						)}
 					</div>
+				);
+
+				// Changed chips are framed the same way the card is: an outer layer
+				// in the frame colour with padding, the chip sitting inside it - a
+				// ring/outline gets lost against the dark chip background.
+				return changed ? (
+					<div
+						key={property}
+						className="flex flex-1 p-[1.5px]"
+						style={{ background: changedFrameColor }}
+					>
+						{chip}
+					</div>
+				) : (
+					chip
 				);
 			})}
 		</div>

@@ -1,4 +1,4 @@
-export default function Swatch({
+export default function LegendSwatch({
 	children,
 	caption,
 }: {

@@ -14,11 +14,11 @@ export default function HeroCard({
 
 	return (
 		<article
-			className="m-3 flex max-w-100 min-w-80 flex-col rounded-md bg-[#1b1b24] relative"
+			className="cut-double relative m-3 flex max-w-100 min-w-80 flex-col bg-[#1b1b24]"
 			style={{ contentVisibility: "auto" }}
 		>
 			<header className="flex items-center gap-3 bg-[#2a2a36] p-2.5">
-				<HeroAvatar hero={hero} />
+				<HeroAvatar hero={hero} className="cut-double [--cut:var(--cut-md)]" />
 				<h3 className="font-extrabold text-lg">{hero.name}</h3>
 			</header>
 

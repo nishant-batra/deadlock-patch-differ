@@ -1,13 +1,16 @@
+import clsx from "clsx";
+import CutFrame from "#/shared/components/cut-frame";
+import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
 import ItemCard from "#/shared/components/item-card";
 import { itemTypes } from "#/shared/components/item-card/constants";
-import type { Item, ItemSlotType } from "#/types";
+import type { ItemSlotType, ItemsPage } from "#/types";
 
 export default function Items({
 	items,
 	type,
 	onTypeChange,
 }: {
-	items: Item[];
+	items: ItemsPage["items"];
 	type: ItemSlotType;
 	onTypeChange: (type: ItemSlotType) => void;
 }) {
@@ -21,24 +24,31 @@ export default function Items({
 			</p>
 			<div className="mb-4 flex gap-2">
 				{itemTypes.map((itemType) => (
-					<button
-						type="button"
-						key={itemType}
-						aria-pressed={type === itemType}
-						className={`rounded-xl border border-amber-500 p-2 capitalize ${
-							type === itemType ? "bg-amber-500/20 font-bold" : ""
-						}`}
-						onClick={() => onTypeChange(itemType)}
-					>
-						{itemType}
-					</button>
+					<CutFrame key={itemType} color={AMBER_BORDER}>
+						<button
+							type="button"
+							aria-pressed={type === itemType}
+							className={clsx(
+								"cut-corner px-3 py-1.5 capitalize",
+								type === itemType && "bg-amber-500/20 font-bold",
+							)}
+							onClick={() => onTypeChange(itemType)}
+						>
+							{itemType}
+						</button>
+					</CutFrame>
 				))}
 			</div>
 			<div className="masonary">
 				{[...items]
-					.sort((a, b) => (a?.cost ?? 0) - (b?.cost ?? 0))
-					.map((card) => (
-						<ItemCard item={card} key={card.id} />
+					.sort((a, b) => (a.item?.cost ?? 0) - (b.item?.cost ?? 0))
+					.map(({ item, changes }) => (
+						<ItemCard
+							item={item}
+							changes={changes}
+							isChanged={Boolean(changes?.length)}
+							key={item.id}
+						/>
 					))}
 			</div>
 		</main>

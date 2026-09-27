@@ -43,9 +43,67 @@ html {
 	scrollbar-color: rgba(100, 100, 100, 0.4) transparent;
 }
 
-/* Without this the sticky section nav covers whatever you jump to. */
+/* Fallback for the instant before the navbar's ResizeObserver (useNavHeight)
+   measures the real header and overwrites this. */
+:root {
+	--nav-height: 4.5rem;
+}
+
+/* Without this the sticky navbar covers whatever you jump to. */
 section[id] {
-	scroll-margin-top: 4.5rem;
+	scroll-margin-top: var(--nav-height);
+}
+
+/* --------------------------------------------------------------------------
+   "Cut steel" geometry (1b) - clipped corners standing in for Deadlock's
+   angular UI plating, applied via className rather than drawn per-component
+   so every card/chip/icon shares one definition. `--cut` is set by the
+   consumer (default --cut-lg, override with e.g. `[--cut:var(--cut-md)]`)
+   so one clip-path shape scales across wildly different element sizes.
+   -------------------------------------------------------------------------- */
+:root {
+	--cut-lg: 18px;
+	--cut-md: 10px;
+	--cut-sm: 9px;
+	--cut-xs: 7px;
+}
+
+/* In `@layer utilities` (not left unlayered) so these share cascade-layer
+   parity with Tailwind's own utilities - an arbitrary-property override like
+   `[--cut:var(--cut-md)]` is itself generated inside `@layer utilities`, and
+   an unlayered rule always beats a layered one regardless of specificity, so
+   leaving these unlayered made the override lose every time. The `:where()`
+   default is zero-specificity so the override then wins on specificity too,
+   regardless of stylesheet source order. */
+@layer utilities {
+	/* Top-right + bottom-left corners clipped - card shells, avatars, icons. */
+	:where(.cut-double) {
+		--cut: var(--cut-lg);
+	}
+	.cut-double {
+		clip-path: polygon(
+			0 0,
+			calc(100% - var(--cut)) 0,
+			100% var(--cut),
+			100% 100%,
+			var(--cut) 100%,
+			0 calc(100% - var(--cut))
+		);
+	}
+
+	/* Single bottom-right corner clipped - nav chips, pills, flag-bar tags. */
+	:where(.cut-corner) {
+		--cut: var(--cut-xs);
+	}
+	.cut-corner {
+		clip-path: polygon(
+			0 0,
+			100% 0,
+			100% calc(100% - var(--cut)),
+			calc(100% - var(--cut)) 100%,
+			0 100%
+		);
+	}
 }
 
 .masonary {
@@ -118,8 +176,8 @@ section[id] {
 	.ad-rail {
 		display: block;
 		position: sticky;
-		top: 4.5rem;
-		height: calc(100vh - 4.5rem - 1.5rem);
+		top: var(--nav-height);
+		height: calc(100vh - var(--nav-height) - 1.5rem);
 		max-height: 600px;
 	}
 }

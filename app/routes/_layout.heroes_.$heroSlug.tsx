@@ -1,10 +1,12 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import HeroDetail from "#/pages/hero-detail";
 import { fetchHeroes } from "#/server/heroes";
+import CutFrame from "#/shared/components/cut-frame";
+import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
 import { heroSlug } from "#/shared/utils/heroSlug";
 import type { HeroEntry } from "#/types";
 
-export const Route = createFileRoute("/heroes_/$heroSlug")({
+export const Route = createFileRoute("/_layout/heroes_/$heroSlug")({
 	loader: async ({ params }): Promise<HeroEntry> => {
 		const heroes = await fetchHeroes();
 		const entry = heroes.find(
@@ -61,12 +63,11 @@ export const Route = createFileRoute("/heroes_/$heroSlug")({
 		<main className="mx-auto max-w-7xl px-4 py-16 text-center">
 			<h1 className="mb-2 font-extrabold text-2xl">Hero not found</h1>
 			<p className="mb-6 text-gray-400">We couldn't find a hero at this URL.</p>
-			<Link
-				to="/heroes"
-				className="rounded-xl border border-amber-500 p-2 font-bold"
-			>
-				Back to all heroes
-			</Link>
+			<CutFrame color={AMBER_BORDER}>
+				<Link to="/heroes" className="cut-corner px-3 py-1.5 font-bold">
+					Back to all heroes
+				</Link>
+			</CutFrame>
 		</main>
 	),
 	component: RouteComponent,

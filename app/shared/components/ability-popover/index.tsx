@@ -46,7 +46,7 @@ export default function AbilityPopover({
 			role="dialog"
 			aria-label={`${ability.name} upgrades`}
 			style={style ?? { position: "fixed", top: -9999, left: -9999 }}
-			className="z-1 overflow-auto   max-h-[calc(100dvh-16px)] max-w-100 min-w-80 rounded-lg border border-white/15 bg-[#15151d] p-3 shadow-2xl"
+			className="z-40 overflow-auto   max-h-[calc(100dvh-16px)] max-w-100 min-w-80 rounded-lg border border-white/15 bg-[#15151d] p-3 shadow-2xl"
 		>
 			<div className="flex items-start justify-between gap-2">
 				<p className="font-bold">{ability.name}</p>

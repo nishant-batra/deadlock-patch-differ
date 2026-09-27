@@ -1,5 +1,6 @@
 // app/pages/patch-notes/server.ts
 import { createServerFn } from "@tanstack/react-start";
+import { setResponseHeader } from "@tanstack/react-start/server";
 import abilityTiersJson from "#/data/ability-tiers.json";
 import heroesViewJson from "#/data/heroes-view.json";
 import itemChangesJson from "#/data/item-changes.json";
@@ -8,15 +9,13 @@ import patchNotesJson from "#/data/patch-notes.json";
 import type { TierDiff } from "#/lib/abilityUpgrades";
 import { type PrunedNode, summarize } from "#/lib/diffEngine";
 import { isHeroChanged, isLiveHero, WEAPON_SLOT } from "#/lib/roster";
-import { joinAbilities, readItemDiff, readItemsView } from "#/server/core";
-import type {
-	ChangedHero,
-	ChangedItem,
-	Hero,
-	Item,
-	ItemChanges,
-	PatchNotes,
-} from "#/types";
+import {
+	itemChangesByName,
+	joinAbilities,
+	readItemDiff,
+	readItemsView,
+} from "#/server/core";
+import type { ChangedHero, Hero, Item, ItemChanges, PatchNotes } from "#/types";
 
 export function getPatchNotes(): PatchNotes {
 	return patchNotesJson as unknown as PatchNotes;
@@ -25,7 +24,6 @@ export function getPatchNotes(): PatchNotes {
 type RawItemChanges = {
 	added: Array<{ name: string }>;
 	removed: Array<{ name: string; snapshot: Item }>;
-	changed: Array<{ name: string; changes: ChangedItem["changes"] }>;
 };
 
 /**
@@ -50,9 +48,9 @@ export function getItemChanges(): ItemChanges {
 			return item ? [item] : [];
 		}),
 		removed: raw.removed.map((entry) => entry.snapshot),
-		changed: raw.changed.flatMap((entry) => {
-			const item = byName.get(entry.name);
-			return item ? [{ item, changes: entry.changes }] : [];
+		changed: [...itemChangesByName()].flatMap(([name, changes]) => {
+			const item = byName.get(name);
+			return item ? [{ item, changes }] : [];
 		}),
 	};
 }
@@ -107,16 +105,14 @@ export type ChangesPayload = {
 
 // Return type is explicit: without it the server-fn boundary widens the loader
 // data to `any` and every downstream callback loses its types.
-//
-// There was a `setResponseHeader("Cache-Control", …)` call here, but
-// @tanstack/react-start 1.166 exports no such function - it resolved to
-// `undefined` and threw on every render, so SSR fell back to a client render
-// via the error boundary and no header was ever set. Caching needs
-// reimplementing against this version's API.
 export const fetchChanges = createServerFn({ method: "GET" }).handler(
-	async (): Promise<ChangesPayload> => ({
-		items: getItemChanges(),
-		heroes: getChangedHeroes(),
-		notes: getPatchNotes(),
-	}),
+	async (): Promise<ChangesPayload> => {
+		// Rebuilt by the deploy hook whenever new artifacts are committed.
+		setResponseHeader("Cache-Control", "public, s-maxage=31536000, immutable");
+		return {
+			items: getItemChanges(),
+			heroes: getChangedHeroes(),
+			notes: getPatchNotes(),
+		};
+	},
 );

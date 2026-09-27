@@ -1,14 +1,16 @@
 import { TierBlock } from "#/shared/components/ability-popover";
+import { CHANGED_COLOR } from "#/shared/components/ability-row/constants";
+import CutFrame from "#/shared/components/cut-frame";
+import Swatch from "#/shared/components/legend-swatch";
 import type { TierDiff } from "#/types";
-import Swatch from "./swatch";
 
 /**
- * How to read a hero card's ability row. Split from the item/stat `Legend`
+ * How to read a hero card's ability row. Split from the item/stat `CardLegend`
  * above it rather than folded in, so a returning reader who already knows
  * what green/red and New/Removed mean isn't shown those swatches twice -
  * only the language unique to abilities lives here.
  *
- * The tier swatch renders the *real* `TierBlock`, same reasoning as `Legend`:
+ * The tier swatch renders the *real* `TierBlock`, same reasoning as `CardLegend`:
  * a drawn mock would drift the first time the ability popover's markup
  * changes.
  */
@@ -24,13 +26,11 @@ export default function HeroLegend() {
 
 			<div className="border-white/10 border-t px-4 py-4 text-sm">
 				<div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-					<Swatch caption="An ability icon with a dot changed this patch - click it to open its upgrade tiers">
+					<Swatch caption="An ability icon with an amber border changed this patch - click it to open its upgrade tiers">
 						<div className="flex justify-center p-3">
-							<span className="relative block size-11 rounded bg-white/10 ring-1 ring-white/15">
-								<span className="absolute -top-1 -right-1 block size-2.5 rounded-full bg-amber-300">
-									<span className="sr-only">Changed this patch</span>
-								</span>
-							</span>
+							<CutFrame cut="sm" color={CHANGED_COLOR} className="flex size-12">
+								<span className="cut-double block size-full bg-white/10" />
+							</CutFrame>
 						</div>
 					</Swatch>
 

@@ -294,7 +294,7 @@ export interface ItemsView {
 
 /** One slot type's worth of shop items, plus the catalog's total count for SEO copy. */
 export interface ItemsPage {
-	items: Item[];
+	items: Array<{ item: Item; changes?: DisplayChange[] }>;
 	totalCount: number;
 }
 

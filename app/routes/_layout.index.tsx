@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import Changes from "#/pages/patch-notes";
 import { type ChangesPayload, fetchChanges } from "#/pages/patch-notes/server";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/_layout/")({
 	head: ({ loaderData }: { loaderData?: ChangesPayload }) => {
 		const patchTitle =
 			loaderData?.notes?.balance?.title || "Latest Valve Deadlock Patch";

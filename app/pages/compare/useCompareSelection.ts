@@ -3,7 +3,7 @@ import { getRouteApi } from "@tanstack/react-router";
 // `getRouteApi` rather than importing `Route` from the route module - that
 // would be a circular import (the route module imports `HeroCompare`, which
 // imports this hook).
-const route = getRouteApi("/compare");
+const route = getRouteApi("/_layout/compare");
 
 /**
  * Selection lives in the URL, not local state - a comparison is then
