@@ -175,8 +175,9 @@
 				{
 					"key": "MovementSlow|#0",
 					"label": "Movement Slow",
-					"kind": "equal",
-					"new": "25",
+					"kind": "changed",
+					"old": "25",
+					"new": "20",
 					"postfix": "%"
 				}
 			]
@@ -212,8 +213,9 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "equal",
-					"new": "30",
+					"kind": "changed",
+					"old": "30",
+					"new": "24",
 					"prefix": "-",
 					"postfix": "%"
 				},
@@ -264,8 +266,9 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "equal",
-					"new": "30",
+					"kind": "changed",
+					"old": "30",
+					"new": "24",
 					"prefix": "-",
 					"postfix": "%"
 				}
@@ -770,7 +773,11 @@
 					"prefix": "",
 					"postfix": ""
 				}
-			]
+			],
+			"text": {
+				"old": "+40 Impact Damage+13.3333 Burn Damage per Second-5 Charge TimeImproved Spirit Scaling",
+				"new": "+40 Impact Damage+13.3333 Burn Damage per Second-5s Charge TimeImproved Spirit Scaling"
+			}
 		}
 	],
 	"Bounce Pad": [
@@ -861,17 +868,12 @@
 				{
 					"key": "FadingSlowPercent|#0",
 					"label": "Fading Slow Percent",
-					"kind": "changed",
-					"old": "25",
+					"kind": "equal",
 					"new": "20",
 					"prefix": "-",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "-25% Fading Move Speed",
-				"new": "-20% Fading Move Speed"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -885,21 +887,17 @@
 				{
 					"key": "BulletResistReduction|#0",
 					"label": "Bullet Resist Reduction",
-					"kind": "added",
+					"kind": "equal",
 					"new": "-6",
 					"postfix": "%"
 				},
 				{
 					"key": "BulletResistReductionDuration|#0",
 					"label": "Bullet Resist Reduction Duration",
-					"kind": "added",
+					"kind": "equal",
 					"new": "5"
 				}
-			],
-			"text": {
-				"old": "",
-				"new": "+49.5 Damage and -6% Bullet Resist for 5s"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -921,7 +919,7 @@
 			]
 		}
 	],
-	"citadel_weapon_bull_set": [
+	"Case Closed": [
 		{
 			"tier": 1,
 			"rows": []
@@ -942,8 +940,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": 40,
+					"kind": "equal",
 					"new": 32,
 					"prefix": "-",
 					"postfix": "%"
@@ -955,11 +952,7 @@
 					"new": "3",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "Applies +40.0% Slow for 3s",
-				"new": "Applies +32.0% Slow for 3s"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -1031,8 +1024,7 @@
 				{
 					"key": "RegenIncomingDamagePercent|#0",
 					"label": "Regen Incoming Damage Percent",
-					"kind": "changed",
-					"old": "8",
+					"kind": "equal",
 					"new": "9",
 					"postfix": "%"
 				},
@@ -1044,11 +1036,7 @@
 					"prefix": "{s:sign}",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "+20% Debuff Resist and +8% Damage Regenerated",
-				"new": "+20% Debuff Resist and +9% Damage Regenerated"
-			}
+			]
 		}
 	],
 	"Seismic Impact": [
@@ -1082,8 +1070,7 @@
 				{
 					"key": "ImmunityDuration|#0",
 					"label": "Immunity Duration",
-					"kind": "changed",
-					"old": "6",
+					"kind": "equal",
 					"new": "5",
 					"postfix": "s"
 				},
@@ -1094,11 +1081,7 @@
 					"new": "6m",
 					"postfix": "m"
 				}
-			],
-			"text": {
-				"old": "On cast, become Unstoppable for 6s and +6m Impact Radius",
-				"new": "On cast, become Unstoppable for 5s and +6m Impact Radius"
-			}
+			]
 		}
 	],
 	"Siphon Life": [
@@ -1605,7 +1588,7 @@
 					"kind": "equal",
 					"new": "15",
 					"prefix": "{s:sign}",
-					"postfix": "/sec"
+					"postfix": "/s"
 				}
 			]
 		},
@@ -1642,8 +1625,8 @@
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
 					"kind": "changed",
-					"old": "40",
-					"new": "26",
+					"old": "26",
+					"new": "32",
 					"prefix": "-",
 					"postfix": "%"
 				}
@@ -1822,7 +1805,11 @@
 					"new": "2.3",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "2.3s Silence Duration +35.0% Weapon Damage",
+				"new": "Silences enemies for 2.3s+35.0% Weapon Damage"
+			}
 		},
 		{
 			"tier": 3,
@@ -1891,15 +1878,6 @@
 					"label": "Max Bonus Bullet Damage",
 					"kind": "equal",
 					"new": "55",
-					"scaling": "EWeaponPower",
-					"prefix": "",
-					"postfix": ""
-				},
-				{
-					"key": "MinBonusBulletDamage|EAddToScale#0",
-					"label": "Min Bonus Bullet Damage",
-					"kind": "removed",
-					"old": "55",
 					"scaling": "EWeaponPower",
 					"prefix": "",
 					"postfix": ""
@@ -1972,7 +1950,7 @@
 			]
 		}
 	],
-	"citadel_weapon_sumo_set": [
+	"The Vonnegun": [
 		{
 			"tier": 1,
 			"rows": []
@@ -2011,8 +1989,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "30",
+					"kind": "equal",
 					"new": "24",
 					"prefix": "-",
 					"postfix": "%"
@@ -2024,11 +2001,7 @@
 					"new": "4",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "On Hit: -15% Bullet Resist and -30% Move Speed for 4s",
-				"new": "On Hit: -15% Bullet Resist and -24% Move Speed for 4s"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -2187,7 +2160,7 @@
 			]
 		}
 	],
-	"citadel_weapon_engineer_set": [
+	"Services Rendered": [
 		{
 			"tier": 1,
 			"rows": []
@@ -2367,17 +2340,12 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "30",
+					"kind": "equal",
 					"new": "24",
 					"prefix": "-",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "Deploy 2 Mini Turrets near the wall for 8s+30% Slow",
-				"new": "Deploy 2 Mini Turrets near the wall for 8s+24% Slow"
-			}
+			]
 		}
 	],
 	"Heavy Barrage": [
@@ -2387,8 +2355,7 @@
 				{
 					"key": "MoveSlowPercent|#0",
 					"label": "Move Slow Percent",
-					"kind": "changed",
-					"old": "30",
+					"kind": "equal",
 					"new": "24",
 					"prefix": "-",
 					"postfix": "%"
@@ -2396,8 +2363,7 @@
 				{
 					"key": "EnemyDashSlowPercent|#0",
 					"label": "Enemy Dash Slow Percent",
-					"kind": "changed",
-					"old": "-18",
+					"kind": "equal",
 					"new": "-16"
 				},
 				{
@@ -2407,11 +2373,7 @@
 					"new": "1",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "Applies 30% movement and dash slow for 1s",
-				"new": "Applies 24% movement and dash slow for 1s"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -2509,8 +2471,7 @@
 				{
 					"key": "BloodSpillDPSPercent|#0",
 					"label": "Blood Spill DPS Percent",
-					"kind": "changed",
-					"old": 26,
+					"kind": "equal",
 					"new": 30
 				},
 				{
@@ -2520,11 +2481,7 @@
 					"new": "6",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "Bombs leave a toxic mess on the ground, dealing 26.0% of the original damage per second, for 6s.",
-				"new": "Bombs leave a toxic mess on the ground, dealing 30.0% of the original damage per second, for 6s."
-			}
+			]
 		}
 	],
 	"Malice": [
@@ -2622,8 +2579,7 @@
 				{
 					"key": "LifeDrainPerSecond|EAddToScale#0",
 					"label": "Life Drain Per Second",
-					"kind": "changed",
-					"old": 0.3,
+					"kind": "equal",
 					"new": 0.45,
 					"scaling": "ETechPower",
 					"postfix": ""
@@ -2731,8 +2687,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "35",
+					"kind": "equal",
 					"new": "28",
 					"prefix": "-",
 					"postfix": "%"
@@ -2744,11 +2699,7 @@
 					"new": "1",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "-35% move speed on hit targets and +1s Lifetime",
-				"new": "-28% move speed on hit targets and +1s Lifetime"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -3034,8 +2985,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "50",
+					"kind": "equal",
 					"new": "40",
 					"prefix": "-",
 					"postfix": "%"
@@ -3043,8 +2993,7 @@
 				{
 					"key": "GroundDashReductionPercent|#0",
 					"label": "Ground Dash Reduction Percent",
-					"kind": "changed",
-					"old": "-50",
+					"kind": "equal",
 					"new": "-45",
 					"postfix": "%"
 				},
@@ -3055,11 +3004,7 @@
 					"new": "3",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "-17.0s Cooldown -50% Move and Dash Speed for 3s on wake-up",
-				"new": "-17.0s Cooldown -40% Move and Dash Speed for 3s on wake-up"
-			}
+			]
 		}
 	],
 	"Smoke Bomb": [
@@ -3147,8 +3092,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "15",
+					"kind": "equal",
 					"new": "12",
 					"prefix": "-",
 					"postfix": "%"
@@ -3160,11 +3104,7 @@
 					"new": "2",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "40.0 Spirit damage and 15% slow for 2s to target every 20 stacks",
-				"new": "40.0 Spirit damage and 12% slow for 2s to target every 20 stacks"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -3193,17 +3133,16 @@
 					"kind": "equal",
 					"new": "0.11",
 					"prefix": "+",
-					"postfix": " per stack"
+					"postfix": "/stack"
 				},
 				{
 					"key": "DamageBonusFixedPerStack|EAddToScale#0",
 					"label": "Damage Bonus Fixed Per Stack",
-					"kind": "changed",
-					"old": "0.0003",
+					"kind": "equal",
 					"new": "0.00035",
 					"scaling": "EBaseWeaponDamageIncrease",
 					"prefix": "+",
-					"postfix": " per stack"
+					"postfix": "/stack"
 				}
 			]
 		}
@@ -3389,7 +3328,11 @@
 					"new": "-35",
 					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "Applies -35% Healing Reduction",
+				"new": "Reduces Incoming Healing by -35%"
+			}
 		},
 		{
 			"tier": 2,
@@ -3406,7 +3349,7 @@
 					"label": "Dot Health Percent",
 					"kind": "equal",
 					"new": 0.5,
-					"postfix": "%/sec"
+					"postfix": "% DPS"
 				}
 			]
 		},
@@ -3704,8 +3647,7 @@
 				{
 					"key": "MaxSlowPercent|#0",
 					"label": "Max Slow Percent",
-					"kind": "changed",
-					"old": 25,
+					"kind": "equal",
 					"new": 20,
 					"prefix": "-",
 					"postfix": "%"
@@ -3718,11 +3660,7 @@
 					"prefix": "-",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "-25.0% to Fire Rate and Move Speed",
-				"new": "-20.0% to Fire Rate and Move Speed"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -3947,11 +3885,7 @@
 					"kind": "equal",
 					"new": "1"
 				}
-			],
-			"text": {
-				"old": "Purges non-ult debuffs for you and your allies. +65 Health Regen that now scales with Spirit",
-				"new": "Purges non-ult debuffs for you and your allies. +65 Health Regen and increased Spirit Scaling"
-			}
+			]
 		}
 	],
 	"Tale of The Tape": [
@@ -4001,16 +3935,11 @@
 				{
 					"key": "WeaponDamageBonusDuration|#0",
 					"label": "Weapon Damage Bonus Duration",
-					"kind": "changed",
-					"old": "10",
+					"kind": "equal",
 					"new": "6",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "+20m Cast Range and gain +7.0 Weapon Damage for 10s",
-				"new": "+20m Cast Range and gain +7.0 Weapon Damage for 6s"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -4057,8 +3986,7 @@
 				{
 					"key": "EnemySlowPct|#0",
 					"label": "Enemy Slow Pct",
-					"kind": "changed",
-					"old": "50",
+					"kind": "equal",
 					"new": "40",
 					"prefix": "-",
 					"postfix": "%"
@@ -4083,11 +4011,7 @@
 					"new": "1",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "Struck enemies are knocked up and slowed by 50% for 3s",
-				"new": "Struck enemies are knocked up and slowed by 40% for 3s"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -4095,16 +4019,14 @@
 				{
 					"key": "StompDamagePerMeterPrimary|EAddToScale#0",
 					"label": "Stomp Damage Per Meter Primary",
-					"kind": "changed",
-					"old": 0.03255,
+					"kind": "equal",
 					"new": 0.04,
 					"scaling": "ETechPower"
 				},
 				{
 					"key": "StompDamagePerMeterPrimary|EMultiplyBase#0",
 					"label": "Stomp Damage Per Meter Primary",
-					"kind": "changed",
-					"old": "113",
+					"kind": "equal",
 					"new": "120"
 				},
 				{
@@ -4117,15 +4039,10 @@
 				{
 					"key": "StompDamagePerMeterSecondary|EMultiplyBase#0",
 					"label": "Stomp Damage Per Meter Secondary",
-					"kind": "changed",
-					"old": "113",
+					"kind": "equal",
 					"new": "120"
 				}
-			],
-			"text": {
-				"old": "Damage Per Meter +110% and improved scaling",
-				"new": "Damage Per Meter +120% and improved scaling"
-			}
+			]
 		}
 	],
 	"Death Slam": [
@@ -4187,17 +4104,12 @@
 				{
 					"key": "EnemySlowPct|#0",
 					"label": "Enemy Slow Pct",
-					"kind": "changed",
-					"old": "35",
+					"kind": "equal",
 					"new": "28",
 					"prefix": "-",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "Apply -35% Move speed for 3s",
-				"new": "Apply -28% Move speed for 3s"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -4231,16 +4143,14 @@
 				{
 					"key": "TargetingConeAngle|#0",
 					"label": "Targeting Cone Angle",
-					"kind": "changed",
-					"old": 40,
+					"kind": "equal",
 					"new": 25,
-					"postfix": "º"
+					"postfix": "°"
 				},
 				{
 					"key": "HealPctVsHeroes|#0",
 					"label": "Heal Pct Vs Heroes",
-					"kind": "changed",
-					"old": 20,
+					"kind": "equal",
 					"new": 15,
 					"postfix": "%"
 				},
@@ -4251,11 +4161,7 @@
 					"new": 6,
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "+80.0 Damage +40.0 Attack angle+20.0% Heal",
-				"new": "+80.0 Damage +25.0 Attack angle+15.0% Heal"
-			}
+			]
 		}
 	],
 	"Promises Kept": [
@@ -4330,8 +4236,7 @@
 				{
 					"key": "MovementSpeedSlow|#0",
 					"label": "Movement Speed Slow",
-					"kind": "changed",
-					"old": "60",
+					"kind": "equal",
 					"new": "48",
 					"prefix": "-",
 					"postfix": "%"
@@ -4343,11 +4248,7 @@
 					"new": "0.8",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "On Proc: Apply a fading 60% Slow for 0.8s",
-				"new": "On Proc: Apply a fading 48% Slow for 0.8s"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -4428,7 +4329,11 @@
 					"new": "2",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "",
+				"new": "+1 Charge+2s Duration"
+			}
 		},
 		{
 			"tier": 3,
@@ -4447,7 +4352,11 @@
 					"new": "0.13",
 					"scaling": "ETechPower"
 				}
-			]
+			],
+			"text": {
+				"old": "",
+				"new": "-15% Damage Penalty Increased Spirit scaling"
+			}
 		}
 	],
 	"Traveler": [
@@ -4510,7 +4419,7 @@
 			]
 		}
 	],
-	"citadel_weapon_digger_set": [
+	"Yellow Canary": [
 		{
 			"tier": 1,
 			"rows": []
@@ -4605,7 +4514,11 @@
 					"new": "2m",
 					"postfix": "m"
 				}
-			]
+			],
+			"text": {
+				"old": "+4s Burrow time and +2 radius",
+				"new": "+4s Burrow time and +2m radius"
+			}
 		},
 		{
 			"tier": 3,
@@ -4653,8 +4566,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "30",
+					"kind": "equal",
 					"new": "24",
 					"prefix": "-",
 					"postfix": "%"
@@ -4662,16 +4574,11 @@
 				{
 					"key": "GroundDashReductionPercent|#0",
 					"label": "Ground Dash Reduction Percent",
-					"kind": "changed",
-					"old": "-30",
+					"kind": "equal",
 					"new": "-26",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "Slow targets by -30% and reduces dash distances by -30%",
-				"new": "Slow targets by -24% and reduces dash distances by -26%"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -4970,7 +4877,7 @@
 			]
 		}
 	],
-	"citadel_weapon_archer_set": [
+	"The Mourning Comes": [
 		{
 			"tier": 1,
 			"rows": []
@@ -5042,8 +4949,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "30",
+					"kind": "equal",
 					"new": "24",
 					"prefix": "-",
 					"postfix": "%"
@@ -5055,11 +4961,7 @@
 					"new": "1.5",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "While airborne, +3 Weapon Damage and weapon damage applies 30% movement slow for 1.5s",
-				"new": "While airborne, +3 Weapon Damage and weapon damage applies 24% movement slow for 1.5s"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -5688,8 +5590,7 @@
 				{
 					"key": "MoveSlowPercent|#0",
 					"label": "Move Slow Percent",
-					"kind": "changed",
-					"old": "40",
+					"kind": "equal",
 					"new": "32",
 					"prefix": "-",
 					"postfix": "%"
@@ -5715,11 +5616,7 @@
 					"new": "4m",
 					"postfix": "m"
 				}
-			],
-			"text": {
-				"old": "+1.5s Duration+4m Radius-40% Move Speed and Fire Rate for 4.0s",
-				"new": "+1.5s Duration+4m Radius-32% Move Speed and Fire Rate for 4.0s"
-			}
+			]
 		}
 	],
 	"Barrage": [
@@ -5953,8 +5850,7 @@
 				{
 					"key": "MaxHealthRegen|#0",
 					"label": "Max Health Regen",
-					"kind": "changed",
-					"old": 7,
+					"kind": "equal",
 					"new": 6,
 					"postfix": "%"
 				}
@@ -6017,8 +5913,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "40",
+					"kind": "equal",
 					"new": "32",
 					"prefix": "-",
 					"postfix": "%"
@@ -6030,11 +5925,7 @@
 					"new": "3",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "+40% Slow for 3s on enemies hit",
-				"new": "+32% Slow for 3s on enemies hit"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -6059,206 +5950,6 @@
 					"kind": "equal",
 					"new": "1.0",
 					"scaling": "ETechPower"
-				}
-			]
-		}
-	],
-	"citadel_weapon_tokamak_set": [
-		{
-			"tier": 1,
-			"rows": []
-		},
-		{
-			"tier": 2,
-			"rows": []
-		},
-		{
-			"tier": 3,
-			"rows": []
-		}
-	],
-	"tokamak_hot_shot": [
-		{
-			"tier": 1,
-			"rows": [
-				{
-					"key": "AbilityCharges|#0",
-					"label": "Ability Charges",
-					"kind": "equal",
-					"new": "1"
-				}
-			]
-		},
-		{
-			"tier": 2,
-			"rows": [
-				{
-					"key": "AbilityChannelTime|#0",
-					"label": "Ability Channel Time",
-					"kind": "equal",
-					"new": "0.5",
-					"postfix": "s"
-				}
-			]
-		},
-		{
-			"tier": 3,
-			"rows": [
-				{
-					"key": "NormalDPS|EAddToScale#0",
-					"label": "Normal DPS",
-					"kind": "equal",
-					"new": 0.097494,
-					"scaling": "ETechPower"
-				},
-				{
-					"key": "NormalDPS|#0",
-					"label": "Normal DPS",
-					"kind": "equal",
-					"new": "16"
-				},
-				{
-					"key": "HotDPS|EAddToScale#0",
-					"label": "Hot DPS",
-					"kind": "equal",
-					"new": 0.292481,
-					"scaling": "ETechPower"
-				},
-				{
-					"key": "HotDPS|#0",
-					"label": "Hot DPS",
-					"kind": "equal",
-					"new": "48"
-				}
-			]
-		}
-	],
-	"tokamak_radiance": [
-		{
-			"tier": 1,
-			"rows": [
-				{
-					"key": "AbilityCooldown|#0",
-					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": -14,
-					"postfix": "s"
-				}
-			]
-		},
-		{
-			"tier": 2,
-			"rows": [
-				{
-					"key": "EvasionChance|#0",
-					"label": "Evasion Chance",
-					"kind": "equal",
-					"new": "+20"
-				}
-			]
-		},
-		{
-			"tier": 3,
-			"rows": [
-				{
-					"key": "MaxDPS|EAddToScale#0",
-					"label": "Max DPS",
-					"kind": "equal",
-					"new": 0.146241,
-					"scaling": "ETechPower"
-				},
-				{
-					"key": "MaxDPS|#0",
-					"label": "Max DPS",
-					"kind": "equal",
-					"new": "+24"
-				}
-			]
-		}
-	],
-	"tokamak_dying_star": [
-		{
-			"tier": 1,
-			"rows": [
-				{
-					"key": "ExplosionRadius|#0",
-					"label": "Explosion Radius",
-					"kind": "equal",
-					"new": "3m",
-					"postfix": "m"
-				}
-			]
-		},
-		{
-			"tier": 2,
-			"rows": [
-				{
-					"key": "AbilityCooldown|#0",
-					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": -7.5,
-					"postfix": "s"
-				}
-			]
-		},
-		{
-			"tier": 3,
-			"rows": [
-				{
-					"key": "Damage|EAddToScale#0",
-					"label": "Damage",
-					"kind": "equal",
-					"new": 0.487469,
-					"scaling": "ETechPower"
-				},
-				{
-					"key": "Damage|#0",
-					"label": "Damage",
-					"kind": "equal",
-					"new": "80"
-				}
-			]
-		}
-	],
-	"tokamak_crimson_cannon": [
-		{
-			"tier": 1,
-			"rows": [
-				{
-					"key": "DelayBetweenShots|#0",
-					"label": "Delay Between Shots",
-					"kind": "equal",
-					"new": "-0.2"
-				}
-			]
-		},
-		{
-			"tier": 2,
-			"rows": [
-				{
-					"key": "Damage|#0",
-					"label": "Damage",
-					"kind": "equal",
-					"new": "+50"
-				},
-				{
-					"key": "Damage|EAddToScale#0",
-					"label": "Damage",
-					"kind": "equal",
-					"new": 1.462406,
-					"scaling": "ETechPower"
-				}
-			]
-		},
-		{
-			"tier": 3,
-			"rows": [
-				{
-					"key": "AbilityCooldown|#0",
-					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": -47,
-					"postfix": "s"
 				}
 			]
 		}
@@ -6290,16 +5981,11 @@
 				{
 					"key": "Radius|#0",
 					"label": "Radius",
-					"kind": "changed",
-					"old": "2m",
+					"kind": "equal",
 					"new": "1.5m",
 					"postfix": "m"
 				}
-			],
-			"text": {
-				"old": "+36.0 Damage and +2m Radius",
-				"new": "+36.0 Damage and +1.5m Radius"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -6329,7 +6015,11 @@
 					"new": 0.9,
 					"scaling": "ETechPower"
 				}
-			]
+			],
+			"text": {
+				"old": "Bounces 1 times and improves Spirit Scaling",
+				"new": "+1 Bounces and improved Spirit Scaling"
+			}
 		}
 	],
 	"The Cube": [
@@ -6459,15 +6149,11 @@
 				{
 					"key": "Damage|EAddToScale#0",
 					"label": "Damage",
-					"kind": "added",
+					"kind": "equal",
 					"new": "0.2",
 					"scaling": "ETechPower"
 				}
-			],
-			"text": {
-				"old": "+7s Duration and +0.3s Stun Duration",
-				"new": "+7s Duration, +0.3s Stun Duration, and +0.2 Spirit Scaling"
-			}
+			]
 		}
 	],
 	"Puddle Punch": [
@@ -6654,8 +6340,7 @@
 				{
 					"key": "StatusResistancePercent|#0",
 					"label": "Status Resistance Percent",
-					"kind": "changed",
-					"old": "40",
+					"kind": "equal",
 					"new": "30",
 					"prefix": "{s:sign}",
 					"postfix": "%"
@@ -6663,16 +6348,11 @@
 				{
 					"key": "CombatBarrier|EAddToScale#0",
 					"label": "Combat Barrier",
-					"kind": "changed",
-					"old": "2.7",
+					"kind": "equal",
 					"new": "2.1",
 					"scaling": "ETechPower"
 				}
-			],
-			"text": {
-				"old": "+40% Debuff Resistance and improved Barrier scaling",
-				"new": "+30% Debuff Resistance and improved Barrier scaling"
-			}
+			]
 		}
 	],
 	"Alchemical Flask": [
@@ -7014,8 +6694,7 @@
 				{
 					"key": "DiamondResistShred|#0",
 					"label": "Diamond Resist Shred",
-					"kind": "changed",
-					"old": "-5",
+					"kind": "equal",
 					"new": "-4",
 					"postfix": "%"
 				},
@@ -7035,8 +6714,7 @@
 				{
 					"key": "ClubSlowPercent|#0",
 					"label": "Club Slow Percent",
-					"kind": "changed",
-					"old": "20",
+					"kind": "equal",
 					"new": "12",
 					"prefix": "-",
 					"postfix": "%"
@@ -7126,8 +6804,8 @@
 					"key": "EnemyMoveSlow|#0",
 					"label": "Enemy Move Slow",
 					"kind": "changed",
-					"old": "20",
-					"new": "13",
+					"old": "13",
+					"new": "16",
 					"postfix": "%"
 				}
 			]
@@ -7241,17 +6919,12 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "40",
+					"kind": "equal",
 					"new": "32",
 					"prefix": "-",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "+40% Movement Slow for 3s",
-				"new": "+32% Movement Slow for 3s"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -7405,7 +7078,7 @@
 				{
 					"key": "HealFixedHealth|EAddToScale#0",
 					"label": "Heal Fixed Health",
-					"kind": "added",
+					"kind": "equal",
 					"new": 0.4,
 					"scaling": "ETechPower"
 				}
@@ -7520,8 +7193,7 @@
 				{
 					"key": "BuffDuration|#0",
 					"label": "Buff Duration",
-					"kind": "changed",
-					"old": "5",
+					"kind": "equal",
 					"new": "4",
 					"postfix": "s"
 				},
@@ -7545,11 +7217,7 @@
 					"new": "0.8",
 					"scaling": "ETechPower"
 				}
-			],
-			"text": {
-				"old": "On Slide: Gain 180 barrier for 5s",
-				"new": "On Slide: Gain 180 barrier for 4s"
-			}
+			]
 		}
 	],
 	"Lethal Venom": [
@@ -7589,7 +7257,11 @@
 					"new": "-12",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "-40% Healing Reduction and -12s Cooldown",
+				"new": "-40% Incoming Healing and -12s Cooldown"
+			}
 		},
 		{
 			"tier": 3,
@@ -8077,8 +7749,8 @@
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
 					"kind": "changed",
-					"old": "20",
-					"new": "14",
+					"old": "14",
+					"new": "16",
 					"prefix": "-",
 					"postfix": "%"
 				}
@@ -8549,17 +8221,12 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "30",
+					"kind": "equal",
 					"new": "24",
 					"prefix": "-",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "On Proc: +30% Slow for 3s",
-				"new": "On Proc: +24% Slow for 3s"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -8707,16 +8374,131 @@
 			"rows": []
 		}
 	],
-	"Intertwine": [
+	"ability_boho_skipgrenade": [
 		{
 			"tier": 1,
 			"rows": [
 				{
-					"key": "DamageShareRadius|#0",
-					"label": "Damage Share Radius",
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
 					"kind": "equal",
-					"new": "3m",
-					"postfix": "m"
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		}
+	],
+	"ability_boho_ability02": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		}
+	],
+	"ability_boho_ability03": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		}
+	],
+	"ability_boho_ridebroom": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusClipSizePercent|#0",
+					"label": "Bonus Clip Size Percent",
+					"kind": "equal",
+					"new": "50",
+					"prefix": "{s:sign}",
+					"postfix": "%"
 				}
 			]
 		},
@@ -8727,7 +8509,7 @@
 					"key": "AbilityDuration|#0",
 					"label": "Ability Duration",
 					"kind": "equal",
-					"new": "3",
+					"new": "10",
 					"postfix": "s"
 				}
 			]
@@ -8736,120 +8518,23 @@
 			"tier": 3,
 			"rows": [
 				{
-					"key": "DamageSharePercentage|#0",
-					"label": "Damage Share Percentage",
+					"key": "MagicDamagePerBullet|#0",
+					"label": "Magic Damage Per Bullet",
 					"kind": "equal",
-					"new": 22.5,
-					"postfix": "%"
-				}
-			]
-		}
-	],
-	"Skipshot": [
-		{
-			"tier": 1,
-			"rows": [
+					"new": 10
+				},
 				{
-					"key": "AbilityCooldown|#0",
-					"label": "Ability Cooldown",
+					"key": "MagicDamagePerBullet|EAddToScale#0",
+					"label": "Magic Damage Per Bullet",
 					"kind": "equal",
-					"new": "-2",
-					"postfix": "s"
-				}
-			]
-		},
-		{
-			"tier": 2,
-			"rows": [
+					"new": 0.1,
+					"scaling": "ETechPower"
+				},
 				{
-					"key": "Damage|#0",
-					"label": "Damage",
+					"key": "RefreshOnKill|#0",
+					"label": "Refresh On Kill",
 					"kind": "equal",
-					"new": 18
-				}
-			]
-		},
-		{
-			"tier": 3,
-			"rows": [
-				{
-					"key": "BounceCount|#0",
-					"label": "Bounce Count",
-					"kind": "equal",
-					"new": "2"
-				}
-			]
-		}
-	],
-	"Swish": [
-		{
-			"tier": 1,
-			"rows": [
-				{
-					"key": "Damage|#0",
-					"label": "Damage",
-					"kind": "equal",
-					"new": 18
-				}
-			]
-		},
-		{
-			"tier": 2,
-			"rows": [
-				{
-					"key": "BonusMoveSpeed|#0",
-					"label": "Bonus Move Speed",
-					"kind": "equal",
-					"new": "2m",
-					"prefix": "{s:sign}",
-					"postfix": " m"
-				}
-			]
-		},
-		{
-			"tier": 3,
-			"rows": [
-				{
-					"key": "CombatBarrier|#0",
-					"label": "Combat Barrier",
-					"kind": "equal",
-					"new": "80"
-				}
-			]
-		}
-	],
-	"ability_boho_channeltether": [
-		{
-			"tier": 1,
-			"rows": [
-				{
-					"key": "Damage|#0",
-					"label": "Damage",
-					"kind": "equal",
-					"new": 18
-				}
-			]
-		},
-		{
-			"tier": 2,
-			"rows": [
-				{
-					"key": "CombatBarrier|#0",
-					"label": "Combat Barrier",
-					"kind": "equal",
-					"new": "150"
-				}
-			]
-		},
-		{
-			"tier": 3,
-			"rows": [
-				{
-					"key": "ImmobilizeDuration|#0",
-					"label": "Immobilize Duration",
-					"kind": "equal",
-					"new": "1",
-					"postfix": "s"
+					"new": 1
 				}
 			]
 		}
@@ -9109,6 +8794,172 @@
 		}
 	],
 	"Lifethread": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		}
+	],
+	"citadel_weapon_druid_set": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"ability_druid_leech_seed": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		}
+	],
+	"ability_druid_helicopter_seeds": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		}
+	],
+	"ability_druid_sprout": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		}
+	],
+	"ability_druid_ult": [
 		{
 			"tier": 1,
 			"rows": [
@@ -9558,8 +9409,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "25",
+					"kind": "equal",
 					"new": "20",
 					"prefix": "-",
 					"postfix": "%"
@@ -9567,8 +9417,7 @@
 				{
 					"key": "EnemyDashSlowPercent|#0",
 					"label": "Enemy Dash Slow Percent",
-					"kind": "changed",
-					"old": "-25",
+					"kind": "equal",
 					"new": "-22"
 				},
 				{
@@ -9578,11 +9427,7 @@
 					"new": "0.5",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "Enemies receive 25% Move and Dash Slow",
-				"new": "Enemies receive 20% Move and Dash Slow"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -9694,8 +9539,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "40",
+					"kind": "equal",
 					"new": "32",
 					"prefix": "-",
 					"postfix": "%"
@@ -9707,11 +9551,7 @@
 					"new": "2s",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "On Hit: Apply 40% Slow for 2ss",
-				"new": "On Hit: Apply 32% Slow for 2ss"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -9816,8 +9656,7 @@
 				{
 					"key": "AbilityCooldown|#0",
 					"label": "Ability Cooldown",
-					"kind": "changed",
-					"old": "-11",
+					"kind": "equal",
 					"new": "-14",
 					"postfix": "s"
 				}
@@ -9856,16 +9695,11 @@
 				{
 					"key": "Radius|#0",
 					"label": "Radius",
-					"kind": "changed",
-					"old": "1m",
+					"kind": "equal",
 					"new": "2m",
 					"postfix": "m"
 				}
-			],
-			"text": {
-				"old": "+1m RadiusOn Hit: Reduce Spirit Resist by -18% for 6s",
-				"new": "+2m RadiusOn Hit: Reduce Spirit Resist by -18% for 6s"
-			}
+			]
 		}
 	],
 	"Plot Armor": [
@@ -10641,7 +10475,7 @@
 					"label": "Dot Health Percent",
 					"kind": "equal",
 					"new": 1.5,
-					"postfix": "%/sec"
+					"postfix": "% DPS"
 				},
 				{
 					"key": "HealAmpReceivePenaltyPercent|#0",
@@ -10658,7 +10492,11 @@
 					"new": -40,
 					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "+1.5% Bleed and -40.0% Healing Reduction",
+				"new": "+1.5% Bleed and -40.0% Incoming Healing"
+			}
 		}
 	],
 	"Bloodscent": [
@@ -10747,6 +10585,176 @@
 					"label": "Max Targets",
 					"kind": "equal",
 					"new": "1"
+				}
+			],
+			"text": {
+				"old": "+2.5s Duration and +1 Max Targets.",
+				"new": "+2.5s Duration and +1 Max Target."
+			}
+		}
+	],
+	"Opera Gun": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"ability_opera_ability01": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		}
+	],
+	"ability_opera_ability02": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		}
+	],
+	"ability_opera_ability03": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		}
+	],
+	"ability_opera_ult": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "0",
+					"postfix": "s"
 				}
 			]
 		}
@@ -10923,7 +10931,11 @@
 					"new": "3",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "-20% Healing Reduction and allow Charges",
+				"new": "-20% Incoming Healing and allow Charges"
+			}
 		}
 	],
 	"Hex-Lined Snap Trap": [
@@ -11601,8 +11613,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "30",
+					"kind": "equal",
 					"new": "24",
 					"prefix": "-",
 					"postfix": "%"
@@ -11614,11 +11625,7 @@
 					"new": "1",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "On Hit: Apply 30% Slow for 1s",
-				"new": "On Hit: Apply 24% Slow for 1s"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -11745,7 +11752,7 @@
 			]
 		}
 	],
-	"citadel_weapon_werewolf_rifle": [
+	"Hair of the Dog": [
 		{
 			"tier": 1,
 			"rows": []
@@ -11870,8 +11877,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "25",
+					"kind": "equal",
 					"new": "20",
 					"prefix": "-",
 					"postfix": "%"
@@ -12029,8 +12035,7 @@
 				{
 					"key": "Damage|#0",
 					"label": "Damage",
-					"kind": "changed",
-					"old": "25",
+					"kind": "equal",
 					"new": "22"
 				},
 				{
@@ -12040,11 +12045,7 @@
 					"new": "0.2",
 					"scaling": "ETechPower"
 				}
-			],
-			"text": {
-				"old": "+25 Damage and Increased Spirit Scaling",
-				"new": "+22 Damage and Increased Spirit Scaling"
-			}
+			]
 		}
 	],
 	"Dazzling Trick": [
@@ -12106,25 +12107,19 @@
 				{
 					"key": "GroundDashReductionPercent|#0",
 					"label": "Ground Dash Reduction Percent",
-					"kind": "changed",
-					"old": "-15",
+					"kind": "equal",
 					"new": "-14",
 					"postfix": "%"
 				},
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "20",
+					"kind": "equal",
 					"new": "16",
 					"prefix": "-",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "-20% Move Speed and -15% Dash Distance",
-				"new": "-16% Move Speed and -14% Dash Distance"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -12150,8 +12145,7 @@
 				{
 					"key": "MaxBounces|#0",
 					"label": "Max Bounces",
-					"kind": "changed",
-					"old": "8",
+					"kind": "equal",
 					"new": "6"
 				},
 				{
@@ -12161,11 +12155,7 @@
 					"new": "-30",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "+8 Max Bounces and -30s Cooldown",
-				"new": "+6 Max Bounces and -30s Cooldown"
-			}
+			]
 		}
 	],
 	"Radiant Daggers": [
@@ -12186,8 +12176,7 @@
 				{
 					"key": "ImpactDamage|#0",
 					"label": "Impact Damage",
-					"kind": "changed",
-					"old": "80",
+					"kind": "equal",
 					"new": "70"
 				},
 				{
