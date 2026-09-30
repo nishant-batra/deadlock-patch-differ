@@ -17,22 +17,12 @@ const statKeyOf = (path: string[]) =>
 const labelForStat = (path: string[]) => labelForStatKey(statKeyOf(path));
 
 /**
- * Five `weapon_info` fields all restate one `bullet_damage` nerf
- * (`damage_per_shot`, `damage_per_magazine`, `damage_per_second_with_reload`
- * are all derived from `bullet_damage` and `damage_per_second`). A denylist,
- * not an allowlist, so an unknown weapon field is never silently swallowed.
- */
-const DERIVED_WEAPON_KEYS = new Set([
-	"damage_per_shot",
-	"damage_per_magazine",
-	"damage_per_second_with_reload",
-]);
-
-/**
  * The hero card's top strip: the hero's own stat moves plus its weapon's
  * moves, merged into one list. Weapon damage is not an ability - it renders
  * here, above the ability row, alongside `starting_stats` /
- * `standard_level_up_upgrades` changes (see patchService.ts).
+ * `standard_level_up_upgrades` changes. Both lists arrive already filtered to
+ * player-facing values (derived weapon fields included) - see
+ * lib/heroChanges.ts.
  *
  * Reimplements the row shape `deltaRowsFromChanges` builds rather than
  * calling it, because that helper cannot see hero-stat direction
@@ -43,24 +33,15 @@ export function heroStatRows(
 	statChanges: Change[],
 	weaponChanges: Change[],
 ): DeltaRow[] {
-	const changes = [
-		...statChanges,
-		...weaponChanges.filter(
-			(change) => !DERIVED_WEAPON_KEYS.has(change.path.at(-1) as string),
-		),
-	];
-
-	return changes.map((change) => ({
-		id: change.path.join("."),
-		label: labelForStat(change.path),
-		kind:
-			change.kind === "added"
-				? "added"
-				: change.kind === "removed"
-					? "removed"
-					: "stat",
-		old: change.old as string | number | undefined,
-		new: change.new as string | number | undefined,
-		negativeAttribute: isNegativeHeroStat(statKeyOf(change.path)),
-	}));
+	return [...statChanges, ...weaponChanges].map(
+		({ path, kind, old, new: next }) => ({
+			id: path.join("."),
+			label: labelForStat(path),
+			kind:
+				kind === "added" ? "added" : kind === "removed" ? "removed" : "stat",
+			old: old as string | number | undefined,
+			new: next as string | number | undefined,
+			negativeAttribute: isNegativeHeroStat(statKeyOf(path)),
+		}),
+	);
 }

@@ -1,9 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Heroes from "#/pages/heroes";
-import { fetchChangedHeroNames, fetchHeroes } from "#/server/heroes";
-import type { HeroEntry } from "#/types";
+import {
+	fetchChangedHeroNames,
+	fetchHeroes,
+	fetchUpcomingHeroes,
+} from "#/server/heroes";
+import type { Hero, HeroEntry } from "#/types";
 
-type HeroesLoaderData = { heroes: HeroEntry[]; changedNames: string[] };
+type HeroesLoaderData = {
+	heroes: HeroEntry[];
+	changedNames: string[];
+	upcoming: Hero[];
+};
 
 export const Route = createFileRoute("/_layout/heroes")({
 	head: ({ loaderData }: { loaderData?: HeroesLoaderData }) => {
@@ -35,11 +43,12 @@ export const Route = createFileRoute("/_layout/heroes")({
 		};
 	},
 	loader: async () => {
-		const [heroes, changedNames] = await Promise.all([
+		const [heroes, changedNames, upcoming] = await Promise.all([
 			fetchHeroes(),
 			fetchChangedHeroNames(),
+			fetchUpcomingHeroes(),
 		]);
-		return { heroes, changedNames };
+		return { heroes, changedNames, upcoming };
 	},
 	component: RouteComponent,
 });
@@ -47,6 +56,13 @@ export const Route = createFileRoute("/_layout/heroes")({
 function RouteComponent() {
 	// Annotated for the same reason as the other routes: the generated route
 	// tree and `useLoaderData()` reference each other, so inference yields `any`.
-	const { heroes, changedNames }: HeroesLoaderData = Route.useLoaderData();
-	return <Heroes heroesData={heroes} changedNames={changedNames} />;
+	const { heroes, changedNames, upcoming }: HeroesLoaderData =
+		Route.useLoaderData();
+	return (
+		<Heroes
+			heroesData={heroes}
+			changedNames={changedNames}
+			upcoming={upcoming}
+		/>
+	);
 }

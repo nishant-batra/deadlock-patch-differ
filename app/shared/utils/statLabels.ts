@@ -53,6 +53,24 @@ const HERO_STAT_LABELS: Record<string, string> = {
 	clip_size: "Clip Size",
 	bullets_per_second: "Bullets / Second",
 	reload_time: "Reload Time",
+	reload_duration: "Reload Time",
+	cycle_time: "Time Between Shots",
+	intra_burst_cycle_time: "Time Between Burst Shots",
+	burst_shot_count: "Shots / Burst",
+	bullets: "Pellets / Shot",
+	zoom_fov: "Zoom FOV",
+	spread: "Spread",
+	standing_spread: "Standing Spread",
+	vertical_recoil: "Vertical Recoil",
+	horizontal_recoil: "Horizontal Recoil",
+	crit_bonus_start: "Headshot Multiplier (Near)",
+	crit_bonus_end: "Headshot Multiplier (Far)",
+	crit_bonus_against_npcs: "Headshot Bonus vs NPCs",
+	damage_falloff_start_range: "Falloff Start",
+	damage_falloff_end_range: "Falloff End",
+	ooc_health_regen: "Out-of-Combat Health Regen",
+	MODIFIER_VALUE_OUT_OF_COMBAT_HEALTH_REGEN:
+		"Out-of-Combat Health Regen / Level",
 };
 
 /**
@@ -64,6 +82,13 @@ const HERO_STAT_LABELS: Record<string, string> = {
 const NEGATIVE_HERO_STATS = new Set([
 	"crit_damage_received_scale",
 	"reload_time",
+	"reload_duration",
+	"cycle_time",
+	"intra_burst_cycle_time",
+	"spread",
+	"standing_spread",
+	"vertical_recoil",
+	"horizontal_recoil",
 ]);
 
 export const isNegativeHeroStat = (key: string) => NEGATIVE_HERO_STATS.has(key);

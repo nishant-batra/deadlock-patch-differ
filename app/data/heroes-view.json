@@ -163,7 +163,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Arsonist",
+			"Explosive",
+			"Burn Rubber"
+		]
 	},
 	{
 		"id": 2,
@@ -329,7 +335,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"High Voltage",
+			"Merciless",
+			"Area Denial"
+		]
 	},
 	{
 		"id": 3,
@@ -495,7 +507,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Sniper",
+			"Soaring",
+			"One Shot Kill"
+		]
 	},
 	{
 		"id": 4,
@@ -661,7 +679,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Lifesteal",
+			"Self Damage",
+			"Fatale"
+		]
 	},
 	{
 		"id": 6,
@@ -827,7 +851,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Tank",
+			"Brawler",
+			"Bull-Headed"
+		]
 	},
 	{
 		"id": 7,
@@ -993,7 +1023,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Duelist",
+			"Isolator",
+			"Telekinetic"
+		]
 	},
 	{
 		"id": 8,
@@ -1159,7 +1195,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Inventor",
+			"Support",
+			"Disruption"
+		]
 	},
 	{
 		"id": 10,
@@ -1325,7 +1367,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Calculated",
+			"Disruptor",
+			"Tactician"
+		]
 	},
 	{
 		"id": 11,
@@ -1491,7 +1539,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Teamplay",
+			"Initiator",
+			"Clutch"
+		]
 	},
 	{
 		"id": 12,
@@ -1657,7 +1711,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Protector",
+			"Explorer",
+			"Ice Cold"
+		]
 	},
 	{
 		"id": 13,
@@ -1823,7 +1883,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Assassin",
+			"Stealthy",
+			"Lethal"
+		]
 	},
 	{
 		"id": 14,
@@ -1989,7 +2055,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Crackshot",
+			"Explosive",
+			"Apprehender"
+		]
 	},
 	{
 		"id": 15,
@@ -2155,7 +2227,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Hook",
+			"Bomb",
+			"Punch"
+		]
 	},
 	{
 		"id": 16,
@@ -2321,7 +2399,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Tricksy",
+			"Slippery",
+			"Burst Damage"
+		]
 	},
 	{
 		"id": 17,
@@ -2487,7 +2571,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Precision",
+			"Hunter",
+			"Area Denial"
+		]
 	},
 	{
 		"id": 18,
@@ -2653,7 +2743,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Tag-Team",
+			"Initiator",
+			"Burrower"
+		]
 	},
 	{
 		"id": 19,
@@ -2820,7 +2916,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Rage",
+			"Bleed",
+			"Repeat"
+		]
 	},
 	{
 		"id": 20,
@@ -2986,7 +3088,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Team-up",
+			"Disruptor",
+			"Rock Solid"
+		]
 	},
 	{
 		"id": 21,
@@ -3143,7 +3251,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": false
+		"in_development": false,
+		"tags": []
 	},
 	{
 		"id": 25,
@@ -3309,7 +3418,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Initiator",
+			"Fearless",
+			"One Man Army"
+		]
 	},
 	{
 		"id": 27,
@@ -3476,7 +3591,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Relentless",
+			"Acrobatics",
+			"Pursuer"
+		]
 	},
 	{
 		"id": 31,
@@ -3646,7 +3767,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Initiator",
+			"High Flying",
+			"Arrogant"
+		]
 	},
 	{
 		"id": 35,
@@ -3813,7 +3940,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Evasive",
+			"Disruptor",
+			"Gooey"
+		]
 	},
 	{
 		"id": 38,
@@ -3964,7 +4097,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 39,
@@ -4115,7 +4249,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 48,
@@ -4274,7 +4409,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 49,
@@ -4425,7 +4561,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 50,
@@ -4595,7 +4732,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Trickster",
+			"Burst Damage",
+			"Frogs"
+		]
 	},
 	{
 		"id": 51,
@@ -4746,7 +4889,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 52,
@@ -4912,7 +5056,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Bodyguard",
+			"Traveller",
+			"Focused"
+		]
 	},
 	{
 		"id": 53,
@@ -5065,7 +5215,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 54,
@@ -5216,7 +5367,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 56,
@@ -5360,7 +5512,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 57,
@@ -5504,7 +5657,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 58,
@@ -5670,7 +5824,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Gunner",
+			"Slippery",
+			"Rat-a-Tat"
+		]
 	},
 	{
 		"id": 59,
@@ -5823,7 +5983,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 60,
@@ -5989,7 +6150,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Trickster",
+			"Copycat",
+			"Versatile"
+		]
 	},
 	{
 		"id": 61,
@@ -6146,7 +6313,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 62,
@@ -6299,7 +6467,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 63,
@@ -6465,7 +6634,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Harasser",
+			"Nimble",
+			"Vexing"
+		]
 	},
 	{
 		"id": 64,
@@ -6631,7 +6806,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Stalker",
+			"Bloodthirsty",
+			"Cruel"
+		]
 	},
 	{
 		"id": 65,
@@ -6797,7 +6978,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Devout",
+			"Arms Expert",
+			"Tactical"
+		]
 	},
 	{
 		"id": 66,
@@ -6967,7 +7154,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"You",
+			"Can't",
+			"Kill Me"
+		]
 	},
 	{
 		"id": 67,
@@ -7133,7 +7326,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Helpful",
+			"Protector",
+			"Booksmart"
+		]
 	},
 	{
 		"id": 68,
@@ -7280,7 +7479,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 69,
@@ -7446,7 +7646,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Disorienting",
+			"Map Control",
+			"Mind Games"
+		]
 	},
 	{
 		"id": 70,
@@ -7604,7 +7810,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 71,
@@ -7757,7 +7964,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 72,
@@ -7923,7 +8131,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Punk",
+			"Chaotic",
+			"G.O.A.T."
+		]
 	},
 	{
 		"id": 73,
@@ -8076,7 +8290,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 74,
@@ -8229,7 +8444,12 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": [
+			"Harasser",
+			"Nimble",
+			"Vexing"
+		]
 	},
 	{
 		"id": 75,
@@ -8382,7 +8602,12 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": [
+			"Duelist",
+			"Isolator",
+			"Telekinetic"
+		]
 	},
 	{
 		"id": 76,
@@ -8548,7 +8773,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Morbid",
+			"Area Denial",
+			"Necromancer"
+		]
 	},
 	{
 		"id": 77,
@@ -8714,7 +8945,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Finesse",
+			"Mobility",
+			"A Cut Above"
+		]
 	},
 	{
 		"id": 78,
@@ -8868,7 +9105,13 @@
 		},
 		"player_selectable": false,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "pre_release",
+		"tags": [
+			"Reckless",
+			"High-flying",
+			"Explosive"
+		]
 	},
 	{
 		"id": 79,
@@ -9034,7 +9277,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Helpful",
+			"Tiny",
+			"zZzzZ"
+		]
 	},
 	{
 		"id": 80,
@@ -9200,7 +9449,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Feral",
+			"Hot Mess",
+			"Transformation"
+		]
 	},
 	{
 		"id": 81,
@@ -9366,7 +9621,13 @@
 		},
 		"player_selectable": true,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "release",
+		"tags": [
+			"Performer",
+			"Disruptive",
+			"Dazzling"
+		]
 	},
 	{
 		"id": 82,
@@ -9510,7 +9771,8 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": []
 	},
 	{
 		"id": 83,
@@ -9668,7 +9930,12 @@
 		},
 		"player_selectable": false,
 		"disabled": true,
-		"in_development": true
+		"in_development": true,
+		"tags": [
+			"Tricksy",
+			"Slippery",
+			"Burst Damage"
+		]
 	},
 	{
 		"id": 84,
@@ -9822,7 +10089,13 @@
 		},
 		"player_selectable": false,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "pre_release",
+		"tags": [
+			"Scrappy",
+			"Regal",
+			"Tenacious"
+		]
 	},
 	{
 		"id": 85,
@@ -9976,7 +10249,13 @@
 		},
 		"player_selectable": false,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "pre_release",
+		"tags": [
+			"Strategist",
+			"Focused",
+			"Checkmate"
+		]
 	},
 	{
 		"id": 86,
@@ -10130,7 +10409,13 @@
 		},
 		"player_selectable": false,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "pre_release",
+		"tags": [
+			"Ambitious",
+			"Nimble",
+			"Creative"
+		]
 	},
 	{
 		"id": 87,
@@ -10284,7 +10569,13 @@
 		},
 		"player_selectable": false,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "pre_release",
+		"tags": [
+			"Strict",
+			"Terrifying",
+			"Savior"
+		]
 	},
 	{
 		"id": 88,
@@ -10438,6 +10729,12 @@
 		},
 		"player_selectable": false,
 		"disabled": false,
-		"in_development": false
+		"in_development": false,
+		"development_state": "pre_release",
+		"tags": [
+			"Cackling",
+			"Beady",
+			"Hexing"
+		]
 	}
 ]

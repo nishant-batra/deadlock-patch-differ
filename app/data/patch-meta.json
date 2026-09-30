@@ -1,9 +1,10 @@
 {
-	"clientVersion": 6712,
-	"versionDatetime": "2026-09-29T13:26:28",
-	"ingestedAt": "2026-09-30T00:23:52.522Z",
+	"clientVersion": 6722,
+	"versionDatetime": "2026-09-29T15:55:11",
+	"ingestedAt": "2026-09-30T04:55:06.683Z",
 	"counts": {
-		"items": 18,
-		"heroes": 38
+		"items": 9,
+		"heroes": 15,
+		"upcomingHeroes": 6
 	}
 }

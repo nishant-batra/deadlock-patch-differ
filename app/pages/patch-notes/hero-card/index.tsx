@@ -14,7 +14,7 @@ export default function HeroCard({
 
 	return (
 		<article
-			className="cut-double relative m-3 flex max-w-100 min-w-80 flex-col bg-[#1b1b24]"
+			className="cut-double relative m-3 flex max-w-100 min-w-0 flex-col bg-[#1b1b24]"
 			style={{ contentVisibility: "auto" }}
 		>
 			<header className="flex items-center gap-3 bg-[#2a2a36] p-2.5">

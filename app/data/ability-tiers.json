@@ -1222,15 +1222,8 @@
 				{
 					"key": "Damage|#0",
 					"label": "Damage",
-					"kind": "changed",
-					"old": "50",
+					"kind": "equal",
 					"new": 85
-				},
-				{
-					"key": "BonusDamage|#0",
-					"label": "Bonus Damage",
-					"kind": "removed",
-					"old": "50"
 				}
 			]
 		},
@@ -1240,13 +1233,13 @@
 				{
 					"key": "MovementSpeedBonus|#0",
 					"label": "Movement Speed Bonus",
-					"kind": "added",
+					"kind": "equal",
 					"new": "5m"
 				},
 				{
 					"key": "StatusResistancePercent|#0",
 					"label": "Status Resistance Percent",
-					"kind": "added",
+					"kind": "equal",
 					"new": "25",
 					"prefix": "{s:sign}",
 					"postfix": "%"
@@ -1254,22 +1247,11 @@
 				{
 					"key": "MovementSpeedBonusDuration|#0",
 					"label": "Movement Speed Bonus Duration",
-					"kind": "added",
+					"kind": "equal",
 					"new": "6",
 					"postfix": "s"
-				},
-				{
-					"key": "AbilityCooldown|#0",
-					"label": "Ability Cooldown",
-					"kind": "removed",
-					"old": -6.5,
-					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "",
-				"new": "On Cast: +5m Move Speed and +25% Debuff Resistance for 6s"
-			}
+			]
 		}
 	],
 	"Hyper Beam": [
@@ -2729,8 +2711,7 @@
 				{
 					"key": "AbilityCooldown|#0",
 					"label": "Ability Cooldown",
-					"kind": "changed",
-					"old": -19,
+					"kind": "equal",
 					"new": -20,
 					"postfix": "s"
 				}
@@ -2749,15 +2730,11 @@
 				{
 					"key": "AbilityCastRange|#0",
 					"label": "Ability Cast Range",
-					"kind": "added",
+					"kind": "equal",
 					"new": "5m",
 					"postfix": "m"
 				}
-			],
-			"text": {
-				"old": "",
-				"new": "+7m Radius +5m Cast range"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -2772,14 +2749,10 @@
 				{
 					"key": "Damage|#0",
 					"label": "Damage",
-					"kind": "added",
+					"kind": "equal",
 					"new": "160"
 				}
-			],
-			"text": {
-				"old": "",
-				"new": "+0.9s Stun Duration +160 Damage"
-			}
+			]
 		}
 	],
 	"Power Surge": [
@@ -7608,7 +7581,7 @@
 				{
 					"key": "AbilityCooldown|#0",
 					"label": "Ability Cooldown",
-					"kind": "added",
+					"kind": "equal",
 					"new": "-10",
 					"postfix": "s"
 				}
@@ -7620,29 +7593,25 @@
 				{
 					"key": "AbilityDuration|#0",
 					"label": "Ability Duration",
-					"kind": "added",
+					"kind": "equal",
 					"new": "7",
 					"postfix": "s"
 				},
 				{
 					"key": "AbilityCastRange|#0",
 					"label": "Ability Cast Range",
-					"kind": "added",
+					"kind": "equal",
 					"new": "5m",
 					"postfix": "m"
 				},
 				{
 					"key": "LeashRadius|#0",
 					"label": "Leash Radius",
-					"kind": "added",
+					"kind": "equal",
 					"new": "5m",
 					"postfix": "m"
 				}
-			],
-			"text": {
-				"old": "",
-				"new": "+7s Duration & 5m Range"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -7650,7 +7619,7 @@
 				{
 					"key": "BonusFireRate|#0",
 					"label": "Bonus Fire Rate",
-					"kind": "added",
+					"kind": "equal",
 					"new": "60",
 					"prefix": "{s:sign}",
 					"postfix": "%"
@@ -7658,14 +7627,10 @@
 				{
 					"key": "Damage|#0",
 					"label": "Damage",
-					"kind": "added",
+					"kind": "equal",
 					"new": 12.599999
 				}
-			],
-			"text": {
-				"old": "",
-				"new": "+60% Fire Rate and +12.599999 Assistant Damage"
-			}
+			]
 		}
 	],
 	"Audience Participation": [

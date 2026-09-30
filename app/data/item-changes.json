@@ -466,51 +466,6 @@
 	],
 	"changed": [
 		{
-			"name": "Rebuttal",
-			"changes": [
-				{
-					"kind": "row-added",
-					"section": "passive",
-					"key": "ParrySuccessHealPercentage",
-					"label": "Damage Parried as Heal",
-					"value": "100",
-					"prefix": "",
-					"postfix": "%",
-					"conditional": false
-				}
-			]
-		},
-		{
-			"name": "Silence Wave",
-			"changes": [
-				{
-					"kind": "row-removed",
-					"section": "active",
-					"key": "AbilityDuration",
-					"label": "Silence Duration",
-					"value": "3",
-					"prefix": "",
-					"postfix": "s",
-					"conditional": false
-				}
-			]
-		},
-		{
-			"name": "Silencer",
-			"changes": [
-				{
-					"kind": "row-removed",
-					"section": "passive",
-					"key": "SilenceDuration",
-					"label": "Silence Duration",
-					"value": "2.5",
-					"prefix": "",
-					"postfix": "s",
-					"conditional": false
-				}
-			]
-		},
-		{
 			"name": "Crippling Headshot",
 			"changes": [
 				{
@@ -533,46 +488,6 @@
 			]
 		},
 		{
-			"name": "Ricochet",
-			"changes": [
-				{
-					"kind": "row-added",
-					"section": "",
-					"key": "RicochetTargets",
-					"label": "Ricochet Targets",
-					"value": "2",
-					"prefix": "",
-					"postfix": "",
-					"conditional": false
-				},
-				{
-					"kind": "row-removed",
-					"section": "",
-					"key": "RicochetTargetsTooltipOnly",
-					"label": "Ricochet Targets",
-					"value": "2",
-					"prefix": "",
-					"postfix": "",
-					"conditional": false
-				}
-			]
-		},
-		{
-			"name": "Return Fire",
-			"changes": [
-				{
-					"kind": "row-removed",
-					"section": "innate",
-					"key": "BulletResist",
-					"label": "Bullet Resist",
-					"value": "10",
-					"prefix": "{s:sign}",
-					"postfix": "%",
-					"conditional": false
-				}
-			]
-		},
-		{
 			"name": "Healbane",
 			"changes": [
 				{
@@ -580,51 +495,6 @@
 					"section": "passive",
 					"old": "Your ❖ spirit damage applies Healing Reduction. If an enemy hero dies under this effect, you receive a large heal.",
 					"new": "Your ❖ spirit damage reduces the enemy's Incoming Healing. If an enemy hero dies under this effect, you receive a large heal."
-				}
-			]
-		},
-		{
-			"name": "Focus Lens",
-			"changes": [
-				{
-					"kind": "row-removed",
-					"section": "active",
-					"key": "AbilityDuration",
-					"label": "Duration",
-					"value": "4.5",
-					"prefix": "",
-					"postfix": "s",
-					"conditional": false
-				}
-			]
-		},
-		{
-			"name": "Knockdown",
-			"changes": [
-				{
-					"kind": "row-removed",
-					"section": "active",
-					"key": "StunDuration",
-					"label": "Stun Duration",
-					"value": "0.5",
-					"prefix": "",
-					"postfix": "s",
-					"conditional": false
-				}
-			]
-		},
-		{
-			"name": "Vortex Web",
-			"changes": [
-				{
-					"kind": "row-added",
-					"section": "active",
-					"key": "TetherDuration",
-					"label": "Tether Duration",
-					"value": "0.5",
-					"prefix": "",
-					"postfix": "s",
-					"conditional": false
 				}
 			]
 		},
@@ -647,35 +517,10 @@
 			"name": "Ethereal Shift",
 			"changes": [
 				{
-					"kind": "row-removed",
-					"section": "active",
-					"key": "FloatMoveSpeed",
-					"label": "Float Speed",
-					"value": "2.5m",
-					"prefix": "",
-					"postfix": " m",
-					"conditional": true
-				},
-				{
 					"kind": "text",
 					"section": "active",
 					"old": "You enter a void state and become untargetable and invincible for a short duration, during which you float slowly and cannot perform actions. Afterwards you gain Spirit Power, Move Speed, and Spirit Resist.Can be canceled early.Activation cancels any active ability.",
 					"new": "Instantly enter a void state and become Invulnerable for a short duration. Afterwards, gain a variety of temporary buffs:"
-				}
-			]
-		},
-		{
-			"name": "Lightning Scroll",
-			"changes": [
-				{
-					"kind": "row-removed",
-					"section": "passive",
-					"key": "StunDuration",
-					"label": "Stun Duration",
-					"value": "0.75",
-					"prefix": "",
-					"postfix": "s",
-					"conditional": false
 				}
 			]
 		}

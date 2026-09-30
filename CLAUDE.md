@@ -35,4 +35,11 @@ app/components/hero-card/
 - Utils are named after what they do, in camelCase, verb-first when they're actions (`formatPatchDate`, `computeStatDelta`), noun-based when they're pure selectors/derivations (`abilityTierLabel`).
 - Don't prefix a colocated file with its own feature/folder name — the folder already provides that scope. Only prefix when the file lives somewhere broader than the feature it describes (e.g. a shared `app/utils/statLabels.ts`).
 
+## Destructuring
+
+- Destructure objects before using their fields instead of repeating `obj.field` — in function/component params, callback params (`({ id, name }) => …`), loop bindings (`for (const [key, { label, bonus }] of map)`), and at the top of a block (`const { prefix, postfix } = properties?.[name] ?? {};`).
+- Prefer shorthand properties once destructured (`{ key, label, scaling }` over `{ key: row.key, … }`).
+- Rename when a field is a reserved word or would shadow something (`{ new: value }`).
+- Skip it when it hurts readability: a single one-off access, a nullable object that needs a `?? {}` dance for one field, or when the whole object is still passed along and only one field is read.
+
 Apply these rules going forward for new components and when meaningfully touching existing ones — no need to do a big-bang refactor of the current flat `app/components/` and `app/utils/` structure unless asked.

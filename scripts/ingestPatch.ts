@@ -16,9 +16,9 @@ import path from "node:path";
 import {
 	generateDeadlockPatchDiff,
 	hasAnyChange,
-	type PrunedNode,
 	pruneUnmodified,
 } from "../app/lib/diffEngine";
+import { buildHeroChanges } from "../app/lib/heroChanges";
 import { sanitizeNotesHtml } from "../app/lib/sanitizeHtml";
 import {
 	generalHtml,
@@ -27,17 +27,19 @@ import {
 } from "../app/lib/noteSections";
 import { diffItems } from "../app/lib/tooltipProjection";
 import {
-	diffAbilityTiers,
+	diffAbilityTiersByClass,
 	type TierDiff,
 } from "../app/lib/abilityUpgrades";
 import {
-	ABILITY_SLOTS,
-	type HeroChangeInput,
-	isHeroChanged,
-	isLiveHero,
-	WEAPON_SLOT,
-} from "../app/lib/roster";
-import type { Item } from "../app/types";
+	mergeAbilityTiers,
+	mergeHeroChanges,
+	mergeItemChanges,
+	type StoredItemChanges,
+} from "../app/lib/mergeChanges";
+import { patchNotification } from "../app/lib/patchNotification";
+import { placeBuild } from "../app/lib/patchWindow";
+import { ABILITY_SLOTS, isUpcomingHero, WEAPON_SLOT } from "../app/lib/roster";
+import type { Hero, HeroChanges, Item, PatchMeta } from "../app/types";
 
 const API = "https://api.deadlock-api.com";
 const DATA_DIR = path.join(process.cwd(), "app", "data");
@@ -92,6 +94,10 @@ const HERO_VIEW_FIELDS = [
 	"player_selectable",
 	"disabled",
 	"in_development",
+	// Upcoming heroes: `development_state` identifies them, `tags` is the one
+	// piece of real copy they ship with.
+	"development_state",
+	"tags",
 ];
 
 /** Every file `ingest()` writes. Used to detect a missing artifact. */
@@ -100,8 +106,7 @@ const ARTIFACTS = [
 	"ability-tiers.json",
 	"latest-patch.json",
 	"latest-heroes.json",
-	"latest-diff.json",
-	"latest-hero-diff.json",
+	"hero-changes.json",
 	"items-view.json",
 	"heroes-view.json",
 	"patch-notes.json",
@@ -235,19 +240,11 @@ function buildAbilityTiers(prevItems: Json[], items: Json[], heroes: Json[]) {
 			),
 		),
 	);
-	const prevByName = new Map(prevItems.map((item) => [item.name as string, item]));
-	const out: Record<string, TierDiff[]> = {};
-
-	for (const item of items) {
-		if (!abilityClasses.has(item.class_name as string)) continue;
-		const name = item.name as string;
-		const previous = prevByName.get(name);
-		out[name] = diffAbilityTiers(
-			(previous ?? item) as unknown as Item,
-			item as unknown as Item,
-		);
-	}
-	return out;
+	return diffAbilityTiersByClass(
+		prevItems as unknown as Item[],
+		items as unknown as Item[],
+		abilityClasses,
+	);
 }
 
 type RawPatch = {
@@ -258,14 +255,17 @@ type RawPatch = {
 	content: string;
 };
 
-const toNote = (patch: RawPatch | undefined) =>
-	patch && {
-		title: patch.title.trim(),
-		pubDate: patch.pub_date,
-		link: patch.link,
-		source: patch.source,
-		html: sanitizeNotesHtml(patch.content),
+const toNote = (patch: RawPatch | undefined) => {
+	if (!patch) return undefined;
+	const { title, pub_date, link, source, content } = patch;
+	return {
+		title: title.trim(),
+		pubDate: pub_date,
+		link,
+		source,
+		html: sanitizeNotesHtml(content),
 	};
+};
 
 /**
  * Splits the feed into the two things the page needs.
@@ -289,17 +289,19 @@ function pickNotes(
 ) {
 	const steam = patches
 		.filter(
-			(patch) =>
-				patch.source === "steam" && !Number.isNaN(Date.parse(patch.pub_date)),
+			({ source, pub_date }) =>
+				source === "steam" && !Number.isNaN(Date.parse(pub_date)),
 		)
-		.sort((a, b) => Date.parse(b.pub_date) - Date.parse(a.pub_date));
+		.sort(
+			({ pub_date: a }, { pub_date: b }) => Date.parse(b) - Date.parse(a),
+		);
 
 	const buildDate = versionDatetime.slice(0, 10);
 	const balance =
-		steam.find((patch) => titleDate(patch.title) === buildDate) ?? steam[0];
+		steam.find(({ title }) => titleDate(title) === buildDate) ?? steam[0];
 
-	const general = steam.find((patch) =>
-		hasGeneralContent(patch.content, knownNames),
+	const general = steam.find(({ content }) =>
+		hasGeneralContent(content, knownNames),
 	);
 
 	return {
@@ -319,32 +321,6 @@ function pickNotes(
 	};
 }
 
-/**
- * Counts heroes `getChangedHeroes()` (patchService.ts) would render, via the
- * same `isHeroChanged()` predicate - so the nav badge always matches the
- * number of cards actually rendered.
- */
-function countChangedHeroes(
-	heroes: Json[],
-	items: Json[],
-	itemDiff: PrunedNode,
-	heroDiff: PrunedNode,
-) {
-	const byClass = new Map(
-		items.map((i) => [i.class_name as string, { name: i.name as string }]),
-	);
-	let count = 0;
-	for (const hero of heroes) {
-		if (!isLiveHero(hero)) continue;
-		if (
-			isHeroChanged(hero as unknown as HeroChangeInput, byClass, itemDiff, heroDiff)
-		) {
-			count += 1;
-		}
-	}
-	return count;
-}
-
 async function ingest() {
 	if (!fs.existsSync(DATA_DIR)) {
 		fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -357,7 +333,8 @@ async function ingest() {
 	const prevHeroes = readJsonOr<Json[]>("latest-heroes.json", []);
 
 	console.log("Fetching latest assets (no client_version = latest)...");
-	const [steam, items, heroes, patches] = await Promise.all([
+	const [{ client_version, version_datetime }, items, heroes, patches] =
+		await Promise.all([
 		fetchJson<{ client_version: number; version_datetime: string }>(
 			`${API}/v1/assets/steam-info`,
 		),
@@ -366,11 +343,13 @@ async function ingest() {
 		fetchJson<RawPatch[]>(`${API}/v2/patches`),
 	]);
 	console.log(
-		`  build ${steam.client_version} (${steam.version_datetime}), ` +
+		`  build ${client_version} (${version_datetime}), ` +
 			`${items.length} items, ${heroes.length} heroes, ${patches.length} notes`,
 	);
 
-	// Diff on FULL payloads - trimming here loses changes.
+	// Only answers "did anything move at all" - what the page shows is derived
+	// from value-level projections below. Diff on FULL payloads: trimming first
+	// was measured to lose changes.
 	console.log("Diffing against committed snapshots...");
 	const itemDiff = pruneUnmodified(generateDeadlockPatchDiff(prevItems, items));
 	const heroDiff = pruneUnmodified(
@@ -391,21 +370,103 @@ async function ingest() {
 		console.log(`Regenerating missing artifacts: ${missing.join(", ")}`);
 	}
 
-	// Display-level changes for items: derived from the tooltip projection, not
-	// from the raw diff above, which is retained for patch detection and heroes.
-	const itemChanges = buildItemChanges(prevItems, items);
-	console.log(
-		`  items: ${itemChanges.added.length} added, ${itemChanges.removed.length} removed, ` +
-			`${itemChanges.changed.length} changed`,
+	// What this build changed since the last one. Display-level changes for
+	// items come from the tooltip projection, not the raw diff above, which is
+	// retained for patch detection only.
+	const buildItems = buildItemChanges(
+		prevItems,
+		items,
+	) as unknown as StoredItemChanges;
+	const buildTiers = buildAbilityTiers(prevItems, items, heroes);
+	const buildHeroes = buildHeroChanges(
+		prevHeroes as unknown as Hero[],
+		heroes as unknown as Hero[],
+		prevItems as unknown as Item[],
+		items as unknown as Item[],
+		buildTiers,
 	);
+	const hasVisibleChanges =
+		buildItems.added.length +
+			buildItems.removed.length +
+			buildItems.changed.length >
+			0 || Object.keys(buildHeroes).length > 0;
+
+	// A hotfix within the window merges into the page instead of replacing it.
+	// Metas written before windows existed: the build on the page opened one.
+	const prevMeta = readJsonOr<PatchMeta | null>("patch-meta.json", null);
+	const currentWindow =
+		prevMeta &&
+		(prevMeta.window ?? {
+			startBuild: prevMeta.clientVersion,
+			startedAt: prevMeta.versionDatetime,
+			builds: [prevMeta.clientVersion],
+		});
+	const { action, window: patchWindow } = placeBuild(
+		currentWindow ?? undefined,
+		client_version,
+		version_datetime,
+		hasVisibleChanges,
+	);
+	console.log(
+		`  build ${client_version}: ${action} (window of ${patchWindow.startBuild}, ` +
+			`builds ${patchWindow.builds.join(", ")})`,
+	);
+
+	let itemChanges = buildItems;
+	let abilityTiers = buildTiers;
+	let heroChanges = buildHeroes;
+	if (action !== "open") {
+		// "keep" merges too: with nothing visible in this build the merge leaves
+		// the page as it is, but the tiers still pick up the current upgrades.
+		const itemByName = new Map(
+			(items as unknown as Item[]).map((item) => [item.name, item]),
+		);
+		const itemByClass = new Map(
+			(items as unknown as Item[]).map((item) => [item.class_name, item]),
+		);
+		const abilityNamesOf = new Map(
+			(heroes as unknown as Hero[]).map(({ name, items: slots }) => [
+				name,
+				ABILITY_SLOTS.flatMap((slot) => {
+					const ability = itemByClass.get(slots?.[slot]);
+					return ability ? [ability.name] : [];
+				}),
+			]),
+		);
+		itemChanges = mergeItemChanges(
+			readJsonOr<StoredItemChanges>("item-changes.json", {
+				added: [],
+				removed: [],
+				changed: [],
+			}),
+			buildItems,
+			itemByName,
+		);
+		abilityTiers = mergeAbilityTiers(
+			readJsonOr<Record<string, TierDiff[]>>("ability-tiers.json", {}),
+			buildTiers,
+		);
+		heroChanges = mergeHeroChanges(
+			readJsonOr<Record<string, HeroChanges>>("hero-changes.json", {}),
+			buildHeroes,
+			abilityTiers,
+			abilityNamesOf,
+		);
+	}
+
+	const { added, removed, changed } = itemChanges;
+	console.log(
+		`  items: ${added.length} added, ${removed.length} removed, ` +
+			`${changed.length} changed`,
+	);
+	console.log(`  heroes: ${Object.keys(heroChanges).length} changed`);
 
 	console.log("Writing artifacts:");
 	write("item-changes.json", itemChanges);
-	write("ability-tiers.json", buildAbilityTiers(prevItems, items, heroes));
+	write("ability-tiers.json", abilityTiers);
+	write("hero-changes.json", heroChanges);
 	write("latest-patch.json", items);
 	write("latest-heroes.json", heroes);
-	write("latest-diff.json", itemDiff);
-	write("latest-hero-diff.json", heroDiff);
 	write("items-view.json", buildItemsView(items, heroes));
 	write(
 		"heroes-view.json",
@@ -421,23 +482,64 @@ async function ingest() {
 	);
 	write(
 		"patch-notes.json",
-		pickNotes(patches, steam.version_datetime, knownNames),
+		// The balance note is the patch's, not its latest hotfix's.
+		pickNotes(patches, patchWindow.startedAt, knownNames),
 	);
 	write("patch-meta.json", {
-		clientVersion: steam.client_version,
-		versionDatetime: steam.version_datetime,
+		clientVersion: client_version,
+		versionDatetime: version_datetime,
 		ingestedAt: new Date().toISOString(),
+		window: patchWindow,
 		counts: {
 			// The badge counts what the page shows, so it counts all three groups.
-			items:
-				itemChanges.added.length +
-				itemChanges.removed.length +
-				itemChanges.changed.length,
-			heroes: countChangedHeroes(heroes, items, itemDiff, heroDiff),
+			items: added.length + removed.length + changed.length,
+			// Same file the page reads, so the badge always matches the cards.
+			heroes: Object.keys(heroChanges).length,
+			upcomingHeroes: (heroes as unknown as Hero[]).filter(isUpcomingHero)
+				.length,
 		},
 	});
 
+	// Every new build gets a GitHub issue - the workflow opens it after the data
+	// is pushed. A re-published build (same number) is not news.
+	if (prevMeta?.clientVersion !== client_version) {
+		const names = (list: Array<{ name: string }>) =>
+			list.map(({ name }) => name);
+		notify(
+			patchNotification({
+				build: client_version,
+				buildTime: version_datetime,
+				action,
+				window: patchWindow,
+				// This build's own changes, not the merged window.
+				items: {
+					added: names(buildItems.added),
+					removed: names(buildItems.removed),
+					changed: names(buildItems.changed),
+				},
+				heroes: Object.keys(buildHeroes),
+				note: pickNotes(patches, version_datetime, knownNames).balance,
+			}),
+		);
+	}
+
 	console.log("Done.");
+}
+
+/**
+ * Hands the issue to the workflow: the body as a file, and `notify=true` plus
+ * the title as step outputs. Outside GitHub Actions it only logs.
+ */
+function notify({ title, body }: { title: string; body: string }) {
+	const { GITHUB_OUTPUT, RUNNER_TEMP } = process.env;
+	console.log(`Notification: ${title}`);
+	if (!GITHUB_OUTPUT || !RUNNER_TEMP) return;
+	const bodyFile = path.join(RUNNER_TEMP, "patch-notification.md");
+	fs.writeFileSync(bodyFile, body);
+	fs.appendFileSync(
+		GITHUB_OUTPUT,
+		`notify=true\ntitle=${title}\nbody_file=${bodyFile}\n`,
+	);
 }
 
 ingest().catch((error) => {

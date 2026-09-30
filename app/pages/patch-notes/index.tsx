@@ -6,6 +6,7 @@ import CardLegend from "#/shared/components/card-legend";
 import CutFrame from "#/shared/components/cut-frame";
 import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
 import ItemCard from "#/shared/components/item-card";
+import UpcomingHeroes from "#/shared/components/upcoming-heroes";
 import { formatPatchDate } from "#/shared/utils/formatPatchDate";
 import HeroCard from "./hero-card";
 import HeroLegend from "./hero-legend";
@@ -44,16 +45,22 @@ function SectionHeading({
 	);
 }
 
-export default function Changes({ items, heroes, notes }: ChangesPayload) {
+export default function Changes({
+	items,
+	heroes,
+	upcomingHeroes,
+	notes,
+}: ChangesPayload) {
 	const { added, removed, changed } = items;
+	const { balance, general, recent } = notes;
 
 	// The item/hero diff and the general notes can come from different updates -
 	// a rework changes no items, a balance patch carries no general text - so the
 	// blocks are ordered by their own dates, newest first. When both come from
 	// the same note the dates tie and the original Items -> Heroes -> General
 	// order is preserved, since sort() is stable.
-	const balanceDate = notes.balance?.pubDate;
-	const generalDate = notes.general?.pubDate;
+	const balanceDate = balance?.pubDate;
+	const generalDate = general?.pubDate;
 	const blocks = [
 		{ id: "items", date: balanceDate },
 		{ id: "heroes", date: balanceDate },
@@ -84,7 +91,7 @@ export default function Changes({ items, heroes, notes }: ChangesPayload) {
 				</div>
 			)}
 
-			<SectionHeading count={changed.length} source={notes.balance}>
+			<SectionHeading count={changed.length} source={balance}>
 				Item changes
 			</SectionHeading>
 			{changed.length === 0 ? (
@@ -101,7 +108,7 @@ export default function Changes({ items, heroes, notes }: ChangesPayload) {
 
 	const heroesBlock = (
 		<section id="heroes" className="mb-12">
-			<SectionHeading count={heroes.length} source={notes.balance}>
+			<SectionHeading count={heroes.length} source={balance}>
 				Hero changes
 			</SectionHeading>
 			{heroes.length === 0 ? (
@@ -124,20 +131,20 @@ export default function Changes({ items, heroes, notes }: ChangesPayload) {
 			{/* Item and hero sections are stripped at ingest - they are already
 			    rendered as diff cards above, and duplicating them as raw text was
 			    the whole reason for this split. */}
-			<SectionHeading source={notes.general}>General</SectionHeading>
-			{notes.general ? (
+			<SectionHeading source={general}>General</SectionHeading>
+			{general ? (
 				<article className="prose prose-invert max-w-none">
 					<p className="text-gray-400 text-sm">
 						<span className="rounded-full bg-white/10 px-2 py-0.5 text-xs">
-							{notes.general.source}
+							{general.source}
 						</span>
 					</p>
 					{/* Sanitized at ingest by app/lib/sanitizeHtml.ts. */}
 					<div
 						// biome-ignore lint/security/noDangerouslySetInnerHtml: sanitized at ingest
-						dangerouslySetInnerHTML={{ __html: notes.general.html }}
+						dangerouslySetInnerHTML={{ __html: general.html }}
 					/>
-					<a href={notes.general.link} target="_blank" rel="noreferrer">
+					<a href={general.link} target="_blank" rel="noreferrer">
 						View original
 					</a>
 				</article>
@@ -145,11 +152,11 @@ export default function Changes({ items, heroes, notes }: ChangesPayload) {
 				<EmptyState>No general changes in this patch.</EmptyState>
 			)}
 
-			{notes.recent.length > 1 && (
+			{recent.length > 1 && (
 				<div className="mt-8">
 					<h3 className="mb-2 font-bold">Earlier notes</h3>
 					<ul className="flex flex-col gap-1 text-sm">
-						{notes.recent.slice(1).map(
+						{recent.slice(1).map(
 							(note) =>
 								note && (
 									<li key={note.link}>
@@ -200,10 +207,20 @@ export default function Changes({ items, heroes, notes }: ChangesPayload) {
 					</Link>
 				</CutFrame>
 			</div>
+			{/* Pinned above the dated blocks: announced heroes are the headline
+			    of the patch that reveals them, and stay listed until release. */}
+			{upcomingHeroes.length > 0 && (
+				<section id="new-heroes" className="mb-12">
+					<SectionHeading count={upcomingHeroes.length}>
+						New heroes
+					</SectionHeading>
+					<UpcomingHeroes heroes={upcomingHeroes} />
+				</section>
+			)}
 			<CardLegend />
-			{blocks.map((block, index) => (
-				<Fragment key={block.id}>
-					{byId[block.id]}
+			{blocks.map(({ id }, index) => (
+				<Fragment key={id}>
+					{byId[id]}
 					{index < blocks.length - 1 && (
 						<AdSlot
 							slotId={`TODO-ad-unit-in-content-${index + 1}`}

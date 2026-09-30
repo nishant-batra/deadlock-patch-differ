@@ -21,10 +21,10 @@ function OtherChanges({ changes }: { changes: Change[] }) {
 	const shown = changes.slice(0, OTHER_LIMIT);
 	return (
 		<div className="px-2 py-1 text-gray-400 text-xs">
-			{shown.map((change) => (
-				<span key={change.path.join(".")} className="mr-2 inline-block">
-					{humaniseStatKey(change.path.at(-1) ?? "")}
-					{change.kind !== "modified" ? ` (${change.kind})` : ""}
+			{shown.map(({ path, kind }) => (
+				<span key={path.join(".")} className="mr-2 inline-block">
+					{humaniseStatKey(path.at(-1) ?? "")}
+					{kind !== "modified" ? ` (${kind})` : ""}
 				</span>
 			))}
 			{changes.length > shown.length && (
@@ -49,8 +49,8 @@ export default function AbilityDetail({
 }) {
 	const statChanges = changes.filter(isStatChange);
 	const scaleChanges = changes.filter(isScaleChange);
-	const sections = item.tooltip_details?.info_sections ?? [];
-	const allProperties = item.properties ?? {};
+	const { tooltip_details, properties: allProperties = {}, description } = item;
+	const sections = tooltip_details?.info_sections ?? [];
 
 	// Every changed key with a chip gets its delta rendered there instead
 	// (PropertyList's `previousValues`) - only orphans, changed keys the
@@ -58,27 +58,34 @@ export default function AbilityDetail({
 	// patch: 5 of 9 changed ability properties are orphans, so this is the
 	// majority path, not a rare fallback.
 	const inlined = renderedKeys(sections);
+	// Only an `old -> new` move fits on a chip; a stat that is new or gone has
+	// no "before" to show inline, so it goes to the strip as NEW / REMOVED.
+	const isInlined = (change: Change) =>
+		change.kind === "modified" && inlined.has(statKeyOf(change));
 	const previousValues = new Map(
 		statChanges
-			.filter((change) => inlined.has(statKeyOf(change)))
+			.filter(isInlined)
 			.map((change) => [statKeyOf(change), change.old as string | number]),
 	);
 	const orphanRows: DeltaRow[] = statChanges
-		.filter((change) => !inlined.has(statKeyOf(change)))
+		.filter((change) => !isInlined(change))
 		.map((change) => {
+			const { path, kind, old, new: next } = change;
 			const key = statKeyOf(change);
+			const { label, negative_attribute, prefix, postfix } =
+				allProperties[key] ?? {};
 			return {
-				id: change.path.join("."),
-				label: allProperties[key]?.label ?? humaniseStatKey(key),
-				kind: "stat",
-				old: change.old as string | number | undefined,
-				new: change.new as string | number | undefined,
+				id: path.join("."),
+				label: label ?? humaniseStatKey(key),
+				kind:
+					kind === "added" ? "added" : kind === "removed" ? "removed" : "stat",
+				old: old as string | number | undefined,
+				new: next as string | number | undefined,
 				// AbilityCooldown and siblings carry no `negative_attribute` in the
 				// payload at all - see negativeProperties.ts.
-				negativeAttribute:
-					allProperties[key]?.negative_attribute ?? isNegativeProperty(key),
-				prefix: allProperties[key]?.prefix,
-				postfix: allProperties[key]?.postfix,
+				negativeAttribute: negative_attribute ?? isNegativeProperty(key),
+				prefix,
+				postfix,
 			};
 		});
 
@@ -86,16 +93,16 @@ export default function AbilityDetail({
 	// scales with (e.g. spirit power) did - so this can never be inlined onto
 	// the tooltip chip the way a `.value` change is; it always needs its own row.
 	const scaleRows: DeltaRow[] = scaleChanges.map((change) => {
+		const { path, old, new: next } = change;
 		const key = statKeyOf(change);
-		const label = allProperties[key]?.label ?? humaniseStatKey(key);
+		const { label, negative_attribute } = allProperties[key] ?? {};
 		return {
-			id: change.path.join("."),
-			label: `${label} Scaling`,
+			id: path.join("."),
+			label: `${label ?? humaniseStatKey(key)} Scaling`,
 			kind: "stat",
-			old: change.old as string | number | undefined,
-			new: change.new as string | number | undefined,
-			negativeAttribute:
-				allProperties[key]?.negative_attribute ?? isNegativeProperty(key),
+			old: old as string | number | undefined,
+			new: next as string | number | undefined,
+			negativeAttribute: negative_attribute ?? isNegativeProperty(key),
 			// No prefix/postfix here on purpose - `stat_scale` is a unitless
 			// per-point multiplier, not the property's own displayed value, so the
 			// property's "%"/"m" postfix does not apply to it.
@@ -126,30 +133,31 @@ export default function AbilityDetail({
 
 			{/* The first info section usually repeats `desc` verbatim - only fall
 			    back to it when there are no sections at all. */}
-			{sections.length === 0 && item.description?.desc && (
+			{sections.length === 0 && description?.desc && (
 				<div
 					className="text-gray-300 text-sm"
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: first-party API copy
-					dangerouslySetInnerHTML={{ __html: item.description.desc }}
+					dangerouslySetInnerHTML={{ __html: description.desc }}
 				/>
 			)}
 
 			{sections.map((section, index) => {
 				// De-duplicated: a property can appear as both a basic property and
 				// an important property of a block, which would collide as a key.
+				const { loc_string } = section;
 				const properties = [...new Set(sectionPropertyKeys(section))];
-				if (!section.loc_string && properties.length === 0) return null;
+				if (!loc_string && properties.length === 0) return null;
 				return (
 					<section
 						// biome-ignore lint/suspicious/noArrayIndexKey: sections have no stable id, `loc_string` can repeat or be absent, and the list never reorders
-						key={`${section.loc_string ?? "section"}-${index}`}
+						key={`${loc_string ?? "section"}-${index}`}
 						className="flex flex-col"
 					>
-						{section.loc_string && (
+						{loc_string && (
 							<div
 								className="my-1 text-gray-300 text-sm"
 								// biome-ignore lint/security/noDangerouslySetInnerHtml: first-party API copy
-								dangerouslySetInnerHTML={{ __html: section.loc_string }}
+								dangerouslySetInnerHTML={{ __html: loc_string }}
 							/>
 						)}
 						{properties.length > 0 && (
@@ -166,7 +174,7 @@ export default function AbilityDetail({
 				);
 			})}
 
-			{sections.length === 0 && !item.description?.desc && (
+			{sections.length === 0 && !description?.desc && (
 				<p className="text-gray-500 text-sm">No detail available.</p>
 			)}
 		</div>
