@@ -88,18 +88,44 @@ const isSafeUrl = (value: string) => {
 	return !/^(javascript|data|vbscript):/i.test(bare);
 };
 
-function keepOnly(rawAttrs: string, allowed: string[]): string {
-	if (allowed.length === 0) return "";
-	const kept: string[] = [];
+/** Every attribute on a tag, lower-cased name -> raw value. First one wins. */
+function parseAttrs(rawAttrs: string): Map<string, string> {
+	const attrs = new Map<string, string>();
 	ATTR_RE.lastIndex = 0;
 	let match: RegExpExecArray | null = ATTR_RE.exec(rawAttrs);
 	while (match !== null) {
 		const name = match[1].toLowerCase();
-		const value = match[3] ?? match[4] ?? match[5] ?? "";
-		if (allowed.includes(name) && isSafeUrl(value)) {
+		if (!attrs.has(name))
+			attrs.set(name, match[3] ?? match[4] ?? match[5] ?? "");
+		match = ATTR_RE.exec(rawAttrs);
+	}
+	return attrs;
+}
+
+const isHttpUrl = (value: string) => /^https?:\/\//i.test(value.trim());
+
+/**
+ * Steam's feed points each image at a localized copy that does not exist
+ * (`/<hash>/english.png` -> 404) and relies on an inline
+ * `onerror="this.src=this.dataset.fallbackSrc"` to swap in the plain
+ * `/<hash>.png`, which does. Inline handlers never survive sanitizing, so the
+ * swap is done here instead: the fallback becomes the `src`.
+ */
+function resolveImgSrc(attrs: Map<string, string>) {
+	const fallback = attrs.get("data-fallback-src");
+	if (fallback && isHttpUrl(fallback)) attrs.set("src", fallback);
+}
+
+function keepOnly(tag: string, rawAttrs: string, allowed: string[]): string {
+	if (allowed.length === 0) return "";
+	const attrs = parseAttrs(rawAttrs);
+	if (tag === "img") resolveImgSrc(attrs);
+	const kept: string[] = [];
+	for (const name of allowed) {
+		const value = attrs.get(name);
+		if (value !== undefined && isSafeUrl(value)) {
 			kept.push(`${name}="${escapeAttr(value)}"`);
 		}
-		match = ATTR_RE.exec(rawAttrs);
 	}
 	return kept.length > 0 ? ` ${kept.join(" ")}` : "";
 }
@@ -115,7 +141,7 @@ export function sanitizeNotesHtml(raw: string): string {
 		// Unknown tag: unwrap - keep the children, drop the tag itself.
 		if (!ALLOWED.has(tag)) return "";
 		if (full.startsWith("</")) return `</${tag}>`;
-		const kept = keepOnly(attrs, ALLOWED_ATTR[tag] ?? []);
+		const kept = keepOnly(tag, attrs, ALLOWED_ATTR[tag] ?? []);
 		return VOID_TAGS.has(tag) ? `<${tag}${kept} />` : `<${tag}${kept}>`;
 	});
 }

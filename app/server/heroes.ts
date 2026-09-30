@@ -1,46 +1,92 @@
 // app/server/heroes.ts
 //
-// Shared by `/heroes`, `/heroes/$heroSlug`, and `/compare` - all three render
-// the same live roster, and separate definitions would let them drift.
+// Shared by `/heroes`, `/heroes/$heroSlug`, `/compare` and the Changes page -
+// all of them render the same roster, and separate definitions would let them
+// drift.
 import { createServerFn } from "@tanstack/react-start";
 import abilityTiersJson from "#/data/ability-tiers.json";
 import heroesViewJson from "#/data/heroes-view.json";
 import { currentTiers, type TierDiff } from "#/lib/abilityUpgrades";
-import { isLiveHero } from "#/lib/roster";
-import type { Hero, HeroEntry } from "#/types";
-import {
-	changedHeroNames,
-	EMPTY_DIFF,
-	joinAbilities,
-	readItemsView,
-} from "./core";
+import { isLiveHero, isUpcomingHero } from "#/lib/roster";
+import { heroSlug } from "#/shared/utils/heroSlug";
+import type { Hero, HeroEntry, HeroPage, Item } from "#/types";
+import { changedHeroNames, joinAbilities, readItemsView } from "./core";
+
+/** No ability changes - the roster pages show each kit as it stands. */
+const NO_CHANGES = {};
+
+const readHeroes = () => heroesViewJson as unknown as Hero[];
 
 /**
- * Every live hero, unfiltered by whether anything changed - the "All heroes"
- * page. Joined with `EMPTY_DIFF` so abilities render their real (possibly
- * unchanged) tiers with no diff noise.
+ * The catalog is a static import, so these lookups are built once per server
+ * instance on first use, not on every request.
  */
-export function getAllHeroes(): HeroEntry[] {
-	const heroes = heroesViewJson as unknown as Hero[];
-	const { abilities } = readItemsView();
-	const abilityByClass = new Map(abilities.map((a) => [a.class_name, a]));
-	const tiersByName = abilityTiersJson as unknown as Record<string, TierDiff[]>;
+let abilityByClassCache: Map<string, Item> | undefined;
+const abilityByClass = () => {
+	abilityByClassCache ??= new Map(
+		readItemsView().abilities.map((ability) => [ability.class_name, ability]),
+	);
+	return abilityByClassCache;
+};
 
-	return heroes.flatMap((hero) => {
+let heroBySlugCache: Map<string, Hero> | undefined;
+const heroBySlug = () => {
+	heroBySlugCache ??= new Map(
+		readHeroes().map((hero) => [heroSlug(hero.name), hero]),
+	);
+	return heroBySlugCache;
+};
+
+/**
+ * A live hero joined to its current kit, or `undefined` when an ability slot
+ * does not resolve. Joined with `NO_CHANGES` so abilities render their real
+ * (possibly unchanged) tiers with no diff noise.
+ */
+function liveEntry(hero: Hero): HeroEntry | undefined {
+	const abilities = joinAbilities(
+		hero,
+		abilityByClass(),
+		abilityTiersJson as unknown as Record<string, TierDiff[]>,
+		NO_CHANGES,
+	);
+	if (!abilities) return undefined;
+	return {
+		hero,
+		abilities: abilities.map(({ tiers, ...ability }) => ({
+			...ability,
+			tiers: currentTiers(tiers),
+		})),
+	};
+}
+
+/** Every live hero, unfiltered by whether anything changed. */
+export function getAllHeroes(): HeroEntry[] {
+	return readHeroes().flatMap((hero) => {
 		if (!isLiveHero(hero)) return [];
-		const abilityChanges = joinAbilities(
-			hero,
-			abilityByClass,
-			tiersByName,
-			EMPTY_DIFF,
-		);
-		if (!abilityChanges) return [];
-		const current = abilityChanges.map((change) => ({
-			...change,
-			tiers: currentTiers(change.tiers),
-		}));
-		return [{ hero, abilities: current }];
+		const entry = liveEntry(hero);
+		return entry ? [entry] : [];
 	});
+}
+
+/** Announced heroes that are not playable yet, alphabetical. */
+export function getUpcomingHeroes(): Hero[] {
+	return readHeroes()
+		.filter(isUpcomingHero)
+		.sort(({ name: a }, { name: b }) => a.localeCompare(b));
+}
+
+/**
+ * The hero at `/heroes/$heroSlug`. One Map lookup and one ability join,
+ * instead of building the whole roster to find a single hero.
+ */
+export function getHeroPage(slug: string): HeroPage | undefined {
+	const hero = heroBySlug().get(slug);
+	if (!hero) return undefined;
+	if (isLiveHero(hero)) {
+		const entry = liveEntry(hero);
+		return entry ? { kind: "live", entry } : undefined;
+	}
+	return isUpcomingHero(hero) ? { kind: "upcoming", hero } : undefined;
 }
 
 /**
@@ -51,6 +97,16 @@ export function getAllHeroes(): HeroEntry[] {
 export const fetchHeroes = createServerFn({ method: "GET" }).handler(
 	async (): Promise<HeroEntry[]> => getAllHeroes(),
 );
+
+export const fetchUpcomingHeroes = createServerFn({ method: "GET" }).handler(
+	async (): Promise<Hero[]> => getUpcomingHeroes(),
+);
+
+export const fetchHeroPage = createServerFn({ method: "GET" })
+	.inputValidator((slug: string) => slug)
+	.handler(
+		async ({ data }): Promise<HeroPage | null> => getHeroPage(data) ?? null,
+	);
 
 /**
  * Serialized as `string[]`, not a `Set` - server-fn results cross a network

@@ -1,4 +1,5 @@
 ﻿import clsx from "clsx";
+import { isStatusEffectKey } from "#/lib/statusEffects";
 import {
 	formatDeltaValue,
 	toneOfDeltaRow,
@@ -6,6 +7,7 @@ import {
 import { isNegativeProperty } from "#/shared/utils/negativeProperties";
 import { resolvePrefix } from "#/shared/utils/statFormatting";
 import type { ImportantPropertiesWithIcon, Item } from "#/types";
+import StatusChip from "./status-chip";
 
 export default function PropertyList({
 	allProperties,
@@ -15,6 +17,7 @@ export default function PropertyList({
 	className,
 	importantPropertiesWithIcon,
 	previousValues,
+	statusDurations,
 	changedFrameColor = "rgb(252 211 77 / 0.6)",
 }: {
 	allProperties: Item["properties"];
@@ -27,6 +30,9 @@ export default function PropertyList({
 	 * rendered inline as `old -> new` on the chip itself rather than restated
 	 * in a separate strip. */
 	previousValues?: Map<string, string | number>;
+	/** Status-effect key -> the duration property its badge shows
+	 * (`statusEffectDurations()`). */
+	statusDurations?: Map<string, string>;
 	/** Frame colour for changed chips - item cards pass their slot colour so
 	 * the chip frame matches the card frame. */
 	changedFrameColor?: string;
@@ -35,7 +41,26 @@ export default function PropertyList({
 		<div className={clsx("flex flex-1", className)}>
 			{itemProperties.map((property) => {
 				const displayProperty = allProperties[property];
-				if (!displayProperty) return null;
+				if (!displayProperty) {
+					// Status effects have no `properties` entry - they render as a badge.
+					const effect = importantPropertiesWithIcon?.find(
+						({ name }) => name === property,
+					);
+					if (!effect || !isStatusEffectKey(property)) return null;
+					const durationKey = statusDurations?.get(property);
+					return (
+						<StatusChip
+							key={property}
+							effect={effect}
+							duration={durationKey ? allProperties[durationKey] : undefined}
+							previousValue={
+								durationKey ? previousValues?.get(durationKey) : undefined
+							}
+							background={background}
+							fontColor={fontColor}
+						/>
+					);
+				}
 				const {
 					label,
 					value,
@@ -49,7 +74,7 @@ export default function PropertyList({
 					tooltip_section,
 				} = displayProperty;
 				const importantPropertyWithIcon = importantPropertiesWithIcon?.find(
-					(val) => val.name === property,
+					({ name }) => name === property,
 				);
 				const {
 					icon: importantPropertyIcon,

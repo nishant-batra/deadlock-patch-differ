@@ -1,7 +1,7 @@
 // scripts/generateSitemap.ts
 //
 // Regenerates public/sitemap.xml: the 4 static top-level routes plus one
-// <url> per live hero, at /heroes/${heroSlug(hero.name)}. Run standalone via
+// <url> per live or upcoming hero, at /heroes/${heroSlug(name)}. Run standalone via
 // `npm run generate-sitemap`, or as part of `npm run ingest` (see
 // package.json) so the sitemap grows/shrinks with the live roster whenever
 // the roster itself changes.
@@ -11,7 +11,7 @@ import path from "node:path";
 import heroesViewJson from "../app/data/heroes-view.json" with { type: "json" };
 import type { Hero } from "../app/types";
 import { heroSlug } from "../app/shared/utils/heroSlug";
-import { isLiveHero } from "../app/lib/roster";
+import { isLiveHero, isUpcomingHero } from "../app/lib/roster";
 
 const BASE_URL = "https://deadlockpatch.vercel.app";
 const SITEMAP_PATH = path.join(process.cwd(), "public", "sitemap.xml");
@@ -34,12 +34,12 @@ const STATIC_URLS: UrlEntry[] = [
 function buildXml(urls: UrlEntry[], lastmod: string): string {
 	const entries = urls
 		.map(
-			(url) =>
+			({ loc, changefreq, priority }) =>
 				`  <url>\n` +
-				`    <loc>${url.loc}</loc>\n` +
+				`    <loc>${loc}</loc>\n` +
 				`    <lastmod>${lastmod}</lastmod>\n` +
-				`    <changefreq>${url.changefreq}</changefreq>\n` +
-				`    <priority>${url.priority}</priority>\n` +
+				`    <changefreq>${changefreq}</changefreq>\n` +
+				`    <priority>${priority}</priority>\n` +
 				`  </url>`,
 		)
 		.join("\n");
@@ -53,16 +53,19 @@ function buildXml(urls: UrlEntry[], lastmod: string): string {
 }
 
 function generateSitemap() {
-	const heroes = (heroesViewJson as unknown as Hero[]).filter(isLiveHero);
+	// Upcoming heroes get a page now and keep its URL on release.
+	const heroes = (heroesViewJson as unknown as Hero[]).filter(
+		(hero) => isLiveHero(hero) || isUpcomingHero(hero),
+	);
 	const heroUrls: UrlEntry[] = heroes
-		.map((hero) => ({
-			loc: `${BASE_URL}/heroes/${heroSlug(hero.name)}`,
+		.map(({ name }) => ({
+			loc: `${BASE_URL}/heroes/${heroSlug(name)}`,
 			changefreq: "weekly",
 			priority: "0.6",
 		}))
 		// Stable, deterministic order so regenerating without a roster change
 		// produces no diff.
-		.sort((a, b) => a.loc.localeCompare(b.loc));
+		.sort(({ loc: a }, { loc: b }) => a.localeCompare(b));
 
 	const lastmod = new Date().toISOString().slice(0, 10);
 	const xml = buildXml([...STATIC_URLS, ...heroUrls], lastmod);

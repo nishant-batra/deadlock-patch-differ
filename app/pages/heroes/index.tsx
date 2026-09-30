@@ -1,19 +1,23 @@
 import { useMemo, useState } from "react";
 import CutFrame from "#/shared/components/cut-frame";
 import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
-import type { HeroEntry } from "#/types";
+import UpcomingHeroes from "#/shared/components/upcoming-heroes";
+import type { Hero, HeroEntry } from "#/types";
 import HeroProfileCard from "./hero-profile-card";
 
 export default function Heroes({
 	heroesData,
 	changedNames,
+	upcoming,
 }: {
 	heroesData: HeroEntry[];
 	changedNames: string[];
+	/** Announced, not yet playable - shown above the live roster. */
+	upcoming: Hero[];
 }) {
 	const [expandAll, setExpandAll] = useState(false);
-	const sorted = [...heroesData].sort((a, b) =>
-		a.hero.name.localeCompare(b.hero.name),
+	const sorted = [...heroesData].sort(({ hero: a }, { hero: b }) =>
+		a.name.localeCompare(b.name),
 	);
 	const changedSet = useMemo(() => new Set(changedNames), [changedNames]);
 
@@ -24,6 +28,12 @@ export default function Heroes({
 				Explore hero stats for every Deadlock hero — starting stats, leveling
 				growth, weapons, and ability upgrade tiers.
 			</p>
+			{upcoming.length > 0 && (
+				<section className="mb-8">
+					<h2 className="mb-3 font-bold text-xl">Coming soon</h2>
+					<UpcomingHeroes heroes={upcoming} />
+				</section>
+			)}
 			<div className="mb-4 flex items-center justify-between">
 				<p className="text-gray-400 text-sm">
 					{sorted.length} live hero{sorted.length === 1 ? "" : "es"}

@@ -11,22 +11,27 @@
 // finds nothing in production. A new commit to app/data already triggers a
 // fresh Vercel build (that's what the ingest cron is for), so bundling the
 // JSON at build time costs nothing over reading it at request time.
+import heroChangesJson from "#/data/hero-changes.json";
 import heroesViewJson from "#/data/heroes-view.json";
 import itemChangesJson from "#/data/item-changes.json";
 import itemsViewJson from "#/data/items-view.json";
-import latestDiffJson from "#/data/latest-diff.json";
-import latestHeroDiffJson from "#/data/latest-hero-diff.json";
 import type { TierDiff } from "#/lib/abilityUpgrades";
-import { type PrunedNode, summarize } from "#/lib/diffEngine";
-import { ABILITY_SLOTS, isHeroChanged, isLiveHero } from "#/lib/roster";
+import { ABILITY_SLOTS, isLiveHero } from "#/lib/roster";
 import type { DisplayChange } from "#/lib/tooltipProjection";
-import type { AbilityChange, Hero, Item, ItemsView } from "#/types";
-
-export const EMPTY_DIFF: PrunedNode = { added: {}, removed: {}, modified: {} };
+import type {
+	AbilityChange,
+	Change,
+	Hero,
+	HeroChanges,
+	Item,
+	ItemsView,
+} from "#/types";
 
 export const readItemsView = () => itemsViewJson as unknown as ItemsView;
 
-export const readItemDiff = () => latestDiffJson as unknown as PrunedNode;
+/** Hero name -> its filtered changes (lib/heroChanges.ts). Present iff changed. */
+export const readHeroChanges = () =>
+	heroChangesJson as unknown as Record<string, HeroChanges>;
 
 type RawItemChanges = {
 	changed: Array<{ name: string; changes: DisplayChange[] }>;
@@ -40,34 +45,27 @@ type RawItemChanges = {
  * without re-deriving them.
  */
 export function itemChangesByName(): Map<string, DisplayChange[]> {
-	const raw = itemChangesJson as unknown as RawItemChanges;
-	return new Map(raw.changed.map((entry) => [entry.name, entry.changes]));
+	const { changed } = itemChangesJson as unknown as RawItemChanges;
+	return new Map(changed.map(({ name, changes }) => [name, changes]));
 }
 
 /**
- * Names of every live hero `isHeroChanged()` (the single source of truth
- * shared with `getChangedHeroes()` and ingest's badge count) considers
- * changed this patch. Boolean-only and cheap on purpose: `/heroes` only
- * needs to flag cards, not build the full stat/ability diff `getChangedHeroes()`
- * renders on the Changes page.
+ * Names of every live hero with a hero-changes.json entry, in roster order -
+ * the same file ingest's badge count and `getChangedHeroes()` read, so the
+ * three always agree. Cheap on purpose: `/heroes` only needs to flag cards.
  */
 export function changedHeroNames(): string[] {
 	const heroes = heroesViewJson as unknown as Hero[];
-	const { abilities } = readItemsView();
-	const abilityByClass = new Map(abilities.map((a) => [a.class_name, a]));
-	const itemDiff = readItemDiff();
-	const heroDiff = latestHeroDiffJson as unknown as PrunedNode;
-
+	const changes = readHeroChanges();
 	return heroes
-		.filter(isLiveHero)
-		.filter((hero) => isHeroChanged(hero, abilityByClass, itemDiff, heroDiff))
-		.map((hero) => hero.name);
+		.filter((hero) => isLiveHero(hero) && Object.hasOwn(changes, hero.name))
+		.map(({ name }) => name);
 }
 
 /**
  * Joins a hero's four signature/ultimate slots to their ability entries and
- * diffs each against `itemDiff`. Shared by `getChangedHeroes()` (real diff)
- * and `getAllHeroes()` (`EMPTY_DIFF`, so every ability comes back with
+ * attaches each one's precomputed changes. Shared by `getChangedHeroes()` and
+ * `getAllHeroes()` (an empty record, so every ability comes back with
  * `changes: []` and its real three tiers - `diffAbilityTiers` keeps `equal`
  * rows on purpose so the popover still shows genuine upgrade content).
  *
@@ -78,7 +76,7 @@ export function joinAbilities(
 	hero: Hero,
 	abilityByClass: Map<string, Item>,
 	tiersByName: Record<string, TierDiff[]>,
-	itemDiff: PrunedNode,
+	changesByAbility: Record<string, Change[]>,
 ): AbilityChange[] | undefined {
 	const slotClasses = ABILITY_SLOTS.map((slot) => hero.items?.[slot]).filter(
 		Boolean,
@@ -86,11 +84,14 @@ export function joinAbilities(
 	const resolved = slotClasses.map((cn) => abilityByClass.get(cn));
 	if (resolved.length === 0 || resolved.some((a) => !a)) return undefined;
 
-	return (resolved as Item[]).map((ability) => ({
-		ability,
-		changes: summarize(itemDiff.modified[ability.name] as PrunedNode),
-		// Always three tiers, even unchanged - the popover renders real
-		// upgrade content either way.
-		tiers: tiersByName[ability.name] ?? [],
-	}));
+	return (resolved as Item[]).map((ability) => {
+		const { name } = ability;
+		return {
+			ability,
+			changes: changesByAbility[name] ?? [],
+			// Always three tiers, even unchanged - the popover renders real
+			// upgrade content either way.
+			tiers: tiersByName[name] ?? [],
+		};
+	});
 }
