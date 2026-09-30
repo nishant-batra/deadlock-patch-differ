@@ -59,8 +59,11 @@ type Projected = {
  * `scale_stat_filter` is omitted from the key so adding or updating scaling
  * doesn't break row pairing into a false added+removed pair.
  */
-const keyOf = (upgrade: PropertyUpgrade, seen: Map<string, number>) => {
-	const base = [upgrade.name, upgrade.upgrade_type ?? ""].join("|");
+const keyOf = (
+	{ name, upgrade_type }: PropertyUpgrade,
+	seen: Map<string, number>,
+) => {
+	const base = [name, upgrade_type ?? ""].join("|");
 	const occurrence = seen.get(base) ?? 0;
 	seen.set(base, occurrence + 1);
 	return `${base}#${occurrence}`;
@@ -80,12 +83,14 @@ const projectTier = (
 	const seen = new Map<string, number>();
 	const out = new Map<string, Projected>();
 	for (const upgrade of tier?.property_upgrades ?? []) {
+		const { name, bonus, scale_stat_filter } = upgrade;
+		const { prefix, postfix } = properties?.[name] ?? {};
 		out.set(keyOf(upgrade, seen), {
-			label: humaniseStatKey(upgrade.name),
-			bonus: upgrade.bonus,
-			scaling: upgrade.scale_stat_filter,
-			prefix: properties?.[upgrade.name]?.prefix,
-			postfix: properties?.[upgrade.name]?.postfix,
+			label: humaniseStatKey(name),
+			bonus,
+			scaling: scale_stat_filter,
+			prefix,
+			postfix,
 		});
 	}
 	return out;
@@ -118,52 +123,52 @@ export function diffAbilityTiers(
 		const current = projectTier(after?.upgrades?.[tier - 1], after?.properties);
 		const rows: TierRow[] = [];
 
-		for (const [key, value] of current) {
+		for (const [key, { label, bonus, scaling, prefix, postfix }] of current) {
 			const prior = previous.get(key);
 			if (!prior) {
 				rows.push({
 					key,
-					label: value.label,
+					label,
 					kind: "added",
-					new: value.bonus,
-					scaling: value.scaling,
-					prefix: value.prefix,
-					postfix: value.postfix,
+					new: bonus,
+					scaling,
+					prefix,
+					postfix,
 				});
-			} else if (!same(prior.bonus, value.bonus)) {
+			} else if (!same(prior.bonus, bonus)) {
 				rows.push({
 					key,
-					label: value.label,
+					label,
 					kind: "changed",
 					old: prior.bonus,
-					new: value.bonus,
-					scaling: value.scaling,
-					prefix: value.prefix,
-					postfix: value.postfix,
+					new: bonus,
+					scaling,
+					prefix,
+					postfix,
 				});
 			} else {
 				rows.push({
 					key,
-					label: value.label,
+					label,
 					kind: "equal",
-					new: value.bonus,
-					scaling: value.scaling,
-					prefix: value.prefix,
-					postfix: value.postfix,
+					new: bonus,
+					scaling,
+					prefix,
+					postfix,
 				});
 			}
 		}
 
-		for (const [key, value] of previous) {
+		for (const [key, { label, bonus, scaling, prefix, postfix }] of previous) {
 			if (!current.has(key)) {
 				rows.push({
 					key,
-					label: value.label,
+					label,
 					kind: "removed",
-					old: value.bonus,
-					scaling: value.scaling,
-					prefix: value.prefix,
-					postfix: value.postfix,
+					old: bonus,
+					scaling,
+					prefix,
+					postfix,
 				});
 			}
 		}
@@ -182,7 +187,7 @@ export function diffAbilityTiers(
 /** True when any tier actually moved - drives the change dot. */
 export const hasTierChanges = (tiers: TierDiff[]) =>
 	tiers.some(
-		(tier) => tier.text || tier.rows.some((row) => row.kind !== "equal"),
+		({ text, rows }) => text || rows.some(({ kind }) => kind !== "equal"),
 	);
 
 /**
@@ -193,18 +198,44 @@ export const hasTierChanges = (tiers: TierDiff[]) =>
  * becomes an `equal` row carrying only its current value.
  */
 export function currentTiers(tiers: TierDiff[]): TierDiff[] {
-	return tiers.map((tier) => ({
-		tier: tier.tier,
-		rows: tier.rows
-			.filter((row) => row.kind !== "removed")
-			.map((row) => ({
-				key: row.key,
-				label: row.label,
+	return tiers.map(({ tier, rows }) => ({
+		tier,
+		rows: rows
+			.filter(({ kind }) => kind !== "removed")
+			.map(({ key, label, new: value, scaling, prefix, postfix }) => ({
+				key,
+				label,
 				kind: "equal" as const,
-				new: row.new,
-				scaling: row.scaling,
-				prefix: row.prefix,
-				postfix: row.postfix,
+				new: value,
+				scaling,
+				prefix,
+				postfix,
 			})),
 	}));
+}
+
+/**
+ * Tier diffs for every ability in `abilityClasses`, keyed by ability name (the
+ * key the popover looks them up by).
+ *
+ * The previous version is found by `class_name`, never by name: 20 names are
+ * shared between a hero ability and a helper or variant item (Frozen Shelter
+ * vs `ability_ice_dome_trigger`, which has no upgrades; Static Charge vs
+ * `citadel_ability_static_charge_v2`), and a name lookup silently diffed
+ * against the wrong one - reporting every upgrade row as "added". An ability
+ * with no previous version diffs against itself, so its rows come out `equal`.
+ */
+export function diffAbilityTiersByClass(
+	prevItems: Item[],
+	items: Item[],
+	abilityClasses: Set<string>,
+): Record<string, TierDiff[]> {
+	const prevByClass = new Map(prevItems.map((item) => [item.class_name, item]));
+	const out: Record<string, TierDiff[]> = {};
+	for (const item of items) {
+		const { class_name, name } = item;
+		if (!abilityClasses.has(class_name)) continue;
+		out[name] = diffAbilityTiers(prevByClass.get(class_name) ?? item, item);
+	}
+	return out;
 }

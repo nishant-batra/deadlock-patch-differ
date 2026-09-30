@@ -1,7 +1,5 @@
 // app/lib/roster.ts
 
-import { type PrunedNode, summarize } from "./diffEngine";
-
 /**
  * Hero ability slots that a hero card renders, plus the pseudo-ability slot
  * that carries weapon changes. Shared by `patchService.ts` and
@@ -38,59 +36,34 @@ export const ABILITY_SLOTS = [
  * Hero Labs heroes are excluded too: `disabled` is the game's own signal that
  * they are not in normal play.
  *
- * Shared by `getChangedHeroes()` and ingest's `countChangedHeroes()` - if the two
- * disagree, the nav badge stops matching the number of cards on screen.
+ * Shared by ingest (which heroes get a hero-changes.json entry) and every
+ * roster page - if they disagree, the nav badge stops matching the cards.
  */
-export const isLiveHero = (hero: {
+export const isLiveHero = ({
+	player_selectable,
+	disabled,
+	in_development,
+}: {
 	player_selectable?: boolean;
 	disabled?: boolean;
 	in_development?: boolean;
 }) =>
-	hero.player_selectable === true &&
-	hero.disabled !== true &&
-	hero.in_development !== true;
-
-export interface HeroChangeInput {
-	name: string;
-	items?: Record<string, string>;
-}
+	player_selectable === true && disabled !== true && in_development !== true;
 
 /**
- * Whether a hero counts as "changed": one of its resolved abilities has a
- * changed diff entry, its weapon slot does, or its own hero-diff entry does.
- * Returns `false` when any ability slot fails to resolve (currently only
- * Fathom, unreleased) - callers should treat that the same as excluding the
- * hero rather than rendering or counting it half-empty.
+ * An announced hero that is not playable yet. Valve ships these in the catalog
+ * with real names, portraits, colours and tags but placeholder everything else
+ * (build 6722: six heroes, identical 780-health stat blocks, Infernus' weapon,
+ * no abilities), so they are shown as "coming soon" and nothing more.
  *
- * This is the single source of truth for "is this hero changed" - both
- * `getChangedHeroes()` (patchService.ts) and ingest's `countChangedHeroes()`
- * call it. Previously each reimplemented the rule by hand; if the two ever
- * disagreed, the nav badge would stop matching the number of cards rendered.
+ * Keyed on the API's own `development_state`, not on `in_development` - Hero
+ * Labs and scrapped heroes are `in_development` too, and are not announced.
+ * Release flips a hero to live, which ends this by construction, so it moves
+ * into the normal roster on its own - at the same `/heroes/$heroSlug` URL.
  */
-export function isHeroChanged(
-	hero: HeroChangeInput,
-	abilityByClass: Map<string, { name: string }>,
-	itemDiff: PrunedNode,
-	heroDiff: PrunedNode,
-): boolean {
-	const slotClasses = ABILITY_SLOTS.map((slot) => hero.items?.[slot]).filter(
-		Boolean,
-	) as string[];
-	const resolved = slotClasses.map((cn) => abilityByClass.get(cn));
-	if (resolved.length === 0 || resolved.some((a) => !a)) return false;
-
-	const abilityChanged = (resolved as { name: string }[]).some((ability) => {
-		const node = itemDiff.modified[ability.name] as PrunedNode | undefined;
-		return node ? summarize(node).length > 0 : false;
-	});
-
-	const weaponClass = hero.items?.[WEAPON_SLOT];
-	const weaponChanged = weaponClass
-		? summarize(itemDiff.modified[weaponClass] as PrunedNode).length > 0
-		: false;
-
-	const statChanged =
-		summarize(heroDiff.modified[hero.name] as PrunedNode).length > 0;
-
-	return abilityChanged || weaponChanged || statChanged;
-}
+export const isUpcomingHero = (hero: {
+	development_state?: string;
+	player_selectable?: boolean;
+	disabled?: boolean;
+	in_development?: boolean;
+}) => hero.development_state === "pre_release" && !isLiveHero(hero);

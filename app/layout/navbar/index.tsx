@@ -71,7 +71,15 @@ export default function Navbar({ meta }: { meta: PatchMeta | null }) {
 				)}
 
 				{onChangesPage && meta && (
-					<div className="ml-auto flex gap-3">
+					<div className="ml-auto flex flex-wrap gap-3">
+						{(meta.counts.upcomingHeroes ?? 0) > 0 && (
+							<a
+								className="flex items-center gap-1.5 hover:text-white"
+								href="#new-heroes"
+							>
+								New heroes <Badge>{meta.counts.upcomingHeroes}</Badge>
+							</a>
+						)}
 						<a
 							className="flex items-center gap-1.5 hover:text-white"
 							href="#items"

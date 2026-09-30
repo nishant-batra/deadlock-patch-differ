@@ -246,7 +246,16 @@ export interface Hero {
 	player_selectable?: boolean;
 	disabled?: boolean;
 	in_development?: boolean;
+	/** `"release"` for the live roster, `"pre_release"` for announced heroes. */
+	development_state?: string;
+	/** Three personality words, e.g. Rat King: Scrappy, Regal, Tenacious. */
+	tags?: string[];
 }
+
+/** What `/heroes/$heroSlug` renders: a full live hero, or an announced one. */
+export type HeroPage =
+	| { kind: "live"; entry: HeroEntry }
+	| { kind: "upcoming"; hero: Hero };
 
 // ---------------------------------------------------------------------------
 // Patch artifacts
@@ -256,7 +265,8 @@ export interface PatchMeta {
 	clientVersion: number;
 	versionDatetime: string;
 	ingestedAt: string;
-	counts: { items: number; heroes: number };
+	/** `upcomingHeroes` is absent in metas ingested before it existed. */
+	counts: { items: number; heroes: number; upcomingHeroes?: number };
 }
 
 export interface PatchNote {
@@ -312,6 +322,20 @@ export interface AbilityChange {
 export interface HeroEntry {
 	hero: Hero;
 	abilities: AbilityChange[];
+}
+
+/**
+ * One hero's entry in hero-changes.json - already filtered to player-facing
+ * values at ingest (see lib/heroChanges.ts). A hero is in that file if and only
+ * if it changed.
+ */
+export interface HeroChanges {
+	/** `starting_stats` / `standard_level_up_upgrades` moves. */
+	stats: Change[];
+	/** `weapon_info` moves. */
+	weapon: Change[];
+	/** Ability name -> its property/scaling/description moves. */
+	abilities: Record<string, Change[]>;
 }
 
 export interface ChangedHero extends HeroEntry {
