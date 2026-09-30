@@ -1,536 +1,526 @@
 {
-	"added": [],
-	"removed": [],
+	"added": [
+		{
+			"name": "Spirit Shredder"
+		},
+		{
+			"name": "Armor Piercer"
+		}
+	],
+	"removed": [
+		{
+			"name": "Spirit Shredder Bullets",
+			"snapshot": {
+				"id": 1144549437,
+				"class_name": "upgrade_tech_defense_shredders",
+				"name": "Spirit Shredder Bullets",
+				"shop_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/spirit_shredder_bullets.webp",
+				"shop_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/spirit_shredder_bullets.png",
+				"item_slot_type": "weapon",
+				"item_tier": 2,
+				"cost": 1600,
+				"activation": "passive",
+				"is_active_item": false,
+				"properties": {
+					"AbilityCooldown": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "cooldown",
+						"disable_value": "0",
+						"scale_function": {
+							"class_name": "scale_function_single_stat",
+							"subclass_name": "AbilityCooldown_scale_function",
+							"specific_stat_scale_type": "EItemCooldown"
+						},
+						"label": "Cooldown",
+						"postfix": "s",
+						"postvalue_label": "Cooldown",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/cooldown.svg"
+					},
+					"AbilityDuration": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "duration",
+						"disable_value": "0",
+						"scale_function": {
+							"class_name": "scale_function_single_stat",
+							"subclass_name": "AbilityDuration_scale_function",
+							"specific_stat_scale_type": "ETechDuration"
+						},
+						"label": "Duration",
+						"postfix": "s",
+						"postvalue_label": "Duration",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/duration.svg"
+					},
+					"AbilityCastRange": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "range",
+						"display_units": "EDisplayUnit_Meters",
+						"scale_function": {
+							"class_name": "scale_function_single_stat",
+							"subclass_name": "AbilityCastRange_scale_function",
+							"specific_stat_scale_type": "ETechRange"
+						},
+						"label": "Cast Range",
+						"postfix": "m",
+						"postvalue_label": "Cast Range",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/property_range.svg"
+					},
+					"AbilityUnitTargetLimit": {
+						"value": "1",
+						"can_set_token_override": true
+					},
+					"AbilityCastDelay": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "cast",
+						"disable_value": "0",
+						"label": "Cast Delay",
+						"postfix": "s",
+						"postvalue_label": "Cast Delay",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+					},
+					"AbilityChannelTime": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "cast",
+						"disable_value": "0",
+						"scale_function": {
+							"class_name": "scale_function_multi_stats",
+							"subclass_name": "scale_duration",
+							"scaling_stats": [
+								"EChannelDuration",
+								"ETechDuration"
+							]
+						},
+						"label": "Channel Duration",
+						"postfix": "s",
+						"postvalue_label": "Channel Duration",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+					},
+					"AbilityPostCastDuration": {
+						"value": "0",
+						"disable_value": "0"
+					},
+					"AbilityCharges": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "cast",
+						"disable_value": "-1",
+						"scale_function": {
+							"class_name": "scale_function_ability_charges",
+							"subclass_name": "AbilityCharges_scale_function"
+						},
+						"label": "Charges",
+						"postvalue_label": "Charges",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+					},
+					"AbilityCooldownBetweenCharge": {
+						"value": "-1.0",
+						"can_set_token_override": true,
+						"css_class": "charge_cooldown",
+						"disable_value": "-2",
+						"scale_function": {
+							"class_name": "scale_function_ability_recharge_time",
+							"subclass_name": "scale_function_ability_recharge_time"
+						},
+						"label": "Charge Delay",
+						"postfix": "s",
+						"postvalue_label": "Charge Delay",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/recharge.svg"
+					},
+					"ChannelMoveSpeed": {
+						"value": "-1",
+						"can_set_token_override": true,
+						"css_class": "move_speed",
+						"display_units": "EDisplayUnit_MetersPerSecond",
+						"postfix": "m",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/move_speed.svg"
+					},
+					"AbilityResourceCost": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "cast",
+						"disable_value": "0",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+					},
+					"TechPower": {
+						"value": "0",
+						"can_set_token_override": true,
+						"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+						"disable_value": "0",
+						"prefix": "{s:sign}",
+						"label": "Spirit Power",
+						"postfix": "",
+						"postvalue_label": "Spirit Power"
+					},
+					"WeaponPower": {
+						"value": "0",
+						"can_set_token_override": true,
+						"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+						"disable_value": "0",
+						"prefix": "{s:sign}",
+						"label": "Weapon Damage",
+						"postfix": "%",
+						"postvalue_label": "Weapon Damage"
+					},
+					"TechArmorDamageReduction": {
+						"value": "-8",
+						"provided_property_type": "MODIFIER_VALUE_TECH_RESIST_REDUCTION",
+						"css_class": "tech_armor_down",
+						"usage_flags": [
+							"ConditionallyApplied"
+						],
+						"prefix": "{s:sign}",
+						"label": "Spirit Resist",
+						"postfix": "%",
+						"postvalue_label": "Spirit Resist",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/armor_spirit_color.svg",
+						"tooltip_section": "passive",
+						"tooltip_is_elevated": false,
+						"tooltip_is_important": true
+					},
+					"DebuffDuration": {
+						"value": "8",
+						"css_class": "duration",
+						"scale_function": {
+							"class_name": "scale_function_tech_duration",
+							"subclass_name": "duration_scale_function"
+						},
+						"label": "Debuff Duration",
+						"postfix": "s",
+						"postvalue_label": "Debuff Duration",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/duration.svg",
+						"tooltip_section": "passive",
+						"tooltip_is_elevated": false,
+						"tooltip_is_important": false
+					},
+					"AbilityLifestealPercentHero": {
+						"value": "10",
+						"provided_property_type": "MODIFIER_VALUE_TECH_DAMAGE_TAKEN_HEALS_ATTACKER",
+						"css_class": "healing",
+						"usage_flags": [
+							"ConditionallyApplied"
+						],
+						"scale_function": {
+							"class_name": "scale_function_single_stat",
+							"subclass_name": "AbilityLifestealPercentHero_scale_function",
+							"specific_stat_scale_type": "EHealingOutput"
+						},
+						"prefix": "{s:sign}",
+						"label": "Spirit Lifesteal",
+						"postfix": "%",
+						"postvalue_label": "Spirit Lifesteal",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heal.svg",
+						"tooltip_section": "passive",
+						"tooltip_is_elevated": false,
+						"tooltip_is_important": true
+					}
+				},
+				"tooltip_sections": [
+					{
+						"section_type": "passive",
+						"section_attributes": [
+							{
+								"loc_string": "Your bullets apply a debuff that reduces the <span class=\"highlight\">Spirit Resist</span> of the target and grants you and your allies <span class=\"highlight\">Spirit Lifesteal</span> against them.",
+								"properties": [
+									"DebuffDuration"
+								],
+								"important_properties": [
+									"TechArmorDamageReduction",
+									"AbilityLifestealPercentHero"
+								]
+							}
+						]
+					}
+				],
+				"description": {
+					"desc": "Your bullets apply a debuff that reduces the <span class=\"highlight\">Spirit Resist</span> of the target and grants you and your allies <span class=\"highlight\">Spirit Lifesteal</span> against them."
+				}
+			}
+		},
+		{
+			"name": "Armor Piercing Rounds",
+			"snapshot": {
+				"id": 673001892,
+				"class_name": "upgrade_aprounds",
+				"name": "Armor Piercing Rounds",
+				"shop_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/armor_piercing_rounds.webp",
+				"shop_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/items/weapon/armor_piercing_rounds.png",
+				"item_slot_type": "weapon",
+				"item_tier": 4,
+				"cost": 6400,
+				"activation": "passive",
+				"is_active_item": false,
+				"properties": {
+					"AbilityCooldown": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "cooldown",
+						"disable_value": "0",
+						"scale_function": {
+							"class_name": "scale_function_single_stat",
+							"subclass_name": "AbilityCooldown_scale_function",
+							"specific_stat_scale_type": "EItemCooldown"
+						},
+						"label": "Cooldown",
+						"postfix": "s",
+						"postvalue_label": "Cooldown",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/cooldown.svg"
+					},
+					"AbilityDuration": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "duration",
+						"disable_value": "0",
+						"scale_function": {
+							"class_name": "scale_function_single_stat",
+							"subclass_name": "AbilityDuration_scale_function",
+							"specific_stat_scale_type": "ETechDuration"
+						},
+						"label": "Duration",
+						"postfix": "s",
+						"postvalue_label": "Duration",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/duration.svg"
+					},
+					"AbilityCastRange": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "range",
+						"display_units": "EDisplayUnit_Meters",
+						"scale_function": {
+							"class_name": "scale_function_single_stat",
+							"subclass_name": "AbilityCastRange_scale_function",
+							"specific_stat_scale_type": "ETechRange"
+						},
+						"label": "Cast Range",
+						"postfix": "m",
+						"postvalue_label": "Cast Range",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/property_range.svg"
+					},
+					"AbilityUnitTargetLimit": {
+						"value": "1",
+						"can_set_token_override": true
+					},
+					"AbilityCastDelay": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "cast",
+						"disable_value": "0",
+						"label": "Cast Delay",
+						"postfix": "s",
+						"postvalue_label": "Cast Delay",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+					},
+					"AbilityChannelTime": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "cast",
+						"disable_value": "0",
+						"scale_function": {
+							"class_name": "scale_function_multi_stats",
+							"subclass_name": "scale_duration",
+							"scaling_stats": [
+								"EChannelDuration",
+								"ETechDuration"
+							]
+						},
+						"label": "Channel Duration",
+						"postfix": "s",
+						"postvalue_label": "Channel Duration",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+					},
+					"AbilityPostCastDuration": {
+						"value": "0",
+						"disable_value": "0"
+					},
+					"AbilityCharges": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "cast",
+						"disable_value": "-1",
+						"scale_function": {
+							"class_name": "scale_function_ability_charges",
+							"subclass_name": "AbilityCharges_scale_function"
+						},
+						"label": "Charges",
+						"postvalue_label": "Charges",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+					},
+					"AbilityCooldownBetweenCharge": {
+						"value": "-1.0",
+						"can_set_token_override": true,
+						"css_class": "charge_cooldown",
+						"disable_value": "-2",
+						"scale_function": {
+							"class_name": "scale_function_ability_recharge_time",
+							"subclass_name": "scale_function_ability_recharge_time"
+						},
+						"label": "Charge Delay",
+						"postfix": "s",
+						"postvalue_label": "Charge Delay",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/recharge.svg"
+					},
+					"ChannelMoveSpeed": {
+						"value": "-1",
+						"can_set_token_override": true,
+						"css_class": "move_speed",
+						"display_units": "EDisplayUnit_MetersPerSecond",
+						"postfix": "m",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/move_speed.svg"
+					},
+					"AbilityResourceCost": {
+						"value": "0",
+						"can_set_token_override": true,
+						"css_class": "cast",
+						"disable_value": "0",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+					},
+					"TechPower": {
+						"value": "0",
+						"can_set_token_override": true,
+						"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+						"disable_value": "0",
+						"prefix": "{s:sign}",
+						"label": "Spirit Power",
+						"postfix": "",
+						"postvalue_label": "Spirit Power"
+					},
+					"WeaponPower": {
+						"value": "0",
+						"can_set_token_override": true,
+						"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+						"disable_value": "0",
+						"prefix": "{s:sign}",
+						"label": "Weapon Damage",
+						"postfix": "%",
+						"postvalue_label": "Weapon Damage"
+					},
+					"BonusBulletSpeedPercent": {
+						"value": "60",
+						"provided_property_type": "MODIFIER_VALUE_BONUS_BULLET_SPEED_PERCENT",
+						"prefix": "{s:sign}",
+						"label": "Bullet Velocity",
+						"postfix": "%",
+						"postvalue_label": "Bullet Velocity",
+						"tooltip_section": "innate",
+						"tooltip_is_elevated": false,
+						"tooltip_is_important": false
+					},
+					"ProcChance": {
+						"value": "55",
+						"label": "Proc Chance",
+						"postfix": "%",
+						"postvalue_label": "Proc Chance",
+						"tooltip_is_elevated": false,
+						"tooltip_is_important": true
+					},
+					"BaseAttackDamagePercent": {
+						"value": "8",
+						"provided_property_type": "MODIFIER_VALUE_WEAPON_DAMAGE_INCREASE",
+						"css_class": "bullet_damage",
+						"display_units": "EDisplayUnit_Normal",
+						"prefix": "{s:sign}",
+						"label": "Weapon Damage",
+						"postfix": "%",
+						"postvalue_label": "Weapon Damage",
+						"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/damage_bullet_color.svg",
+						"tooltip_section": "innate",
+						"tooltip_is_elevated": false,
+						"tooltip_is_important": false
+					}
+				},
+				"tooltip_sections": [
+					{
+						"section_type": "innate",
+						"section_attributes": [
+							{
+								"properties": [
+									"BonusBulletSpeedPercent",
+									"BaseAttackDamagePercent"
+								],
+								"elevated_properties": []
+							}
+						]
+					},
+					{
+						"section_attributes": [
+							{
+								"loc_string": "Your Bullets have a chance to become unavoidable, <span class=\"highlight\">piercing through</span> enemies and <span class=\"highlight\">ignoring their Bullet Resistance</span>.",
+								"important_properties": [
+									"ProcChance"
+								]
+							}
+						]
+					}
+				],
+				"description": {
+					"desc": "Your Bullets have a chance to become unavoidable, <span class=\"highlight\">piercing through</span> enemies and <span class=\"highlight\">ignoring their Bullet Resistance</span>."
+				},
+				"component_items": [
+					"upgrade_high_velocity_mag"
+				]
+			}
+		}
+	],
 	"changed": [
 		{
-			"name": "Cultist Sacrifice",
+			"name": "Crippling Headshot",
 			"changes": [
 				{
 					"kind": "text",
-					"section": "active",
-					"old": "Target an enemy NPC and consume it for 180% Bonus Souls and grants a powerful long lasting buff.",
-					"new": "Target an enemy NPC and consume it for 170% Bonus Souls and grants a powerful long lasting buff."
-				}
-			]
-		},
-		{
-			"name": "Capacitor",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "active",
-					"key": "MaxSlowPercent",
-					"label": "Max Move Speed",
-					"old": "75",
-					"new": "60"
-				}
-			]
-		},
-		{
-			"name": "Hollow Point",
-			"changes": [
-				{
-					"kind": "stat",
 					"section": "passive",
-					"key": "BulletArmorReduction",
-					"label": "Bullet Resist",
-					"old": "-9",
-					"new": "-10"
+					"old": "Landing a Headshot will reduce their Bullet and Spirit Resist and applies Healing Reduction.",
+					"new": "Landing a Headshot will reduce their Bullet, Spirit Resist, and Incoming Healing."
 				}
 			]
 		},
 		{
-			"name": "Weighted Shots",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "SlowPercent",
-					"label": "Move Speed",
-					"old": "30",
-					"new": "24"
-				},
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "GroundDashReductionPercent",
-					"label": "Dash Distance",
-					"old": "-22",
-					"new": "-20"
-				}
-			]
-		},
-		{
-			"name": "Slowing Bullets",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "SlowPercent",
-					"label": "Move Speed",
-					"old": "30",
-					"new": "24"
-				},
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "GroundDashReductionPercent",
-					"label": "Dash Distance",
-					"old": "-22",
-					"new": "-20"
-				}
-			]
-		},
-		{
-			"name": "Weakening Headshot",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "BulletResistReduction",
-					"label": "Bullet Resist",
-					"old": "-13",
-					"new": "-12"
-				}
-			]
-		},
-		{
-			"name": "Point Blank",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "SlowPercent",
-					"label": "Move Speed",
-					"old": "25",
-					"new": "20"
-				}
-			]
-		},
-		{
-			"name": "Fortitude",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "HealLifePercentOutOfCombat",
-					"label": "Max Health Regen",
-					"old": "2",
-					"new": "2.25"
-				}
-			]
-		},
-		{
-			"name": "Leech",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "innate",
-					"key": "AbilityLifestealPercentHero",
-					"label": "Spirit Lifesteal",
-					"old": "25",
-					"new": "28"
-				},
-				{
-					"kind": "stat",
-					"section": "innate",
-					"key": "BulletLifestealPercent",
-					"label": "Bullet Lifesteal",
-					"old": "25",
-					"new": "28"
-				}
-			]
-		},
-		{
-			"name": "Trophy Collector",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "StackingGoldPerMinute",
-					"label": "Souls per Minute",
-					"old": "18",
-					"new": "16"
-				}
-			]
-		},
-		{
-			"name": "Spiritual Overflow",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "BonusFireRate",
-					"label": "Fire Rate",
-					"old": "30",
-					"new": "25"
-				},
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "BonusSpirit",
-					"label": "Spirit Power",
-					"old": "40",
-					"new": "30"
-				},
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "BuildUpPerShot",
-					"label": "Buildup Per Shot",
-					"old": "0.75",
-					"new": "1.08"
-				}
-			]
-		},
-		{
-			"name": "Mystic Reverb",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "MovementSpeedSlow",
-					"label": "Move Speed",
-					"old": "40",
-					"new": "32"
-				}
-			]
-		},
-		{
-			"name": "Tankbuster",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "CurrentHealthDamage",
-					"label": "Current Health Bonus Damage",
-					"old": "8",
-					"new": "7.5"
-				}
-			]
-		},
-		{
-			"name": "Mystic Slow",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "MovementSpeedSlow",
-					"label": "Move Speed",
-					"old": "30",
-					"new": "24"
-				},
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "GroundDashReductionPercent",
-					"label": "Dash Distance",
-					"old": "-12",
-					"new": "-10"
-				}
-			]
-		},
-		{
-			"name": "Slowing Hex",
-			"changes": [
-				{
-					"kind": "cooldown",
-					"section": "active",
-					"old": "27",
-					"new": "29"
-				},
-				{
-					"kind": "stat",
-					"section": "active",
-					"key": "SlowPercent",
-					"label": "Move Speed",
-					"old": "20",
-					"new": "16"
-				},
-				{
-					"kind": "stat",
-					"section": "active",
-					"key": "GroundDashReductionPercent",
-					"label": "Dash Distance",
-					"old": "-30",
-					"new": "-26"
-				}
-			]
-		},
-		{
-			"name": "Focus Lens",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "active",
-					"key": "PercentDamage",
-					"label": "Damage On Expire",
-					"old": "30",
-					"new": "35"
-				},
-				{
-					"kind": "stat",
-					"section": "active",
-					"key": "AbilityCastRange",
-					"label": "Cast Range",
-					"old": "20m",
-					"new": "25m"
-				}
-			]
-		},
-		{
-			"name": "Decay",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "active",
-					"key": "DotHealthPercent",
-					"label": "Bleed Damage",
-					"old": "2.6",
-					"new": "1.95"
-				},
-				{
-					"kind": "stat",
-					"section": "active",
-					"key": "AbilityDuration",
-					"label": "Duration",
-					"old": "10",
-					"new": "12"
-				}
-			]
-		},
-		{
-			"name": "Phantom Strike",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "active",
-					"key": "SlowPercent",
-					"label": "Move Speed",
-					"old": "50",
-					"new": "40"
-				}
-			]
-		},
-		{
-			"name": "Vortex Web",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "active",
-					"key": "SlowPercent",
-					"label": "Move Speed",
-					"old": "35",
-					"new": "28"
-				},
-				{
-					"kind": "stat",
-					"section": "active",
-					"key": "GroundDashReductionPercent",
-					"label": "Dash Distance",
-					"old": "-40",
-					"new": "-36"
-				}
-			]
-		},
-		{
-			"name": "Shadow Weave",
-			"changes": [
-				{
-					"kind": "components",
-					"old": [],
-					"new": [
-						"upgrade_sprint_booster"
-					]
-				},
-				{
-					"kind": "stat",
-					"section": "innate",
-					"key": "BonusSprintSpeed",
-					"label": "Sprint Speed",
-					"old": "1.5m",
-					"new": "2m"
-				}
-			]
-		},
-		{
-			"name": "Restorative Locket",
+			"name": "Toxic Bullets",
 			"changes": [
 				{
 					"kind": "text",
-					"section": "active",
-					"old": "When an enemy uses an ability within 35mm range from you, store one Restoration Stack. Consume all stacks to heal yourself and replenish up to 3 stamina based on how many stacks you have.",
-					"new": "When an enemy uses an ability within 32mm range from you, store one Restoration Stack. Consume all stacks to heal yourself and replenish up to 3 stamina based on how many stacks you have."
+					"section": "",
+					"old": "Your bullets build up a Bleed on enemies, causing them to lose a percentage of their Max Health over time. Also applies Healing Reduction on the bleeding target.",
+					"new": "Your bullets build up a Bleed on enemies, causing them to lose a percentage of their Max Health over time. Also reduces Incoming Healing on the bleeding target."
 				}
 			]
 		},
 		{
-			"name": "Colossus",
+			"name": "Healbane",
 			"changes": [
 				{
-					"kind": "stat",
-					"section": "active",
-					"key": "SlowPercent",
-					"label": "Move Speed",
-					"old": "30",
-					"new": "24"
+					"kind": "text",
+					"section": "passive",
+					"old": "Your ❖ spirit damage applies Healing Reduction. If an enemy hero dies under this effect, you receive a large heal.",
+					"new": "Your ❖ spirit damage reduces the enemy's Incoming Healing. If an enemy hero dies under this effect, you receive a large heal."
 				}
 			]
 		},
 		{
-			"name": "Cold Front",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "active",
-					"key": "MovementSpeedSlow",
-					"label": "Move Speed",
-					"old": "60",
-					"new": "48"
-				}
-			]
-		},
-		{
-			"name": "Lifestrike",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "SlowPercent",
-					"label": "Move Speed",
-					"old": "60",
-					"new": "48"
-				},
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "LifestealHeal",
-					"label": "Heal on Melee Hit",
-					"old": "100",
-					"new": "120"
-				},
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "LifestealHealPercent",
-					"label": "Melee Hit Heal",
-					"old": "30",
-					"new": "35"
-				}
-			]
-		},
-		{
-			"name": "Diviner's Kevlar",
+			"name": "Echo Shard",
 			"changes": [
 				{
 					"kind": "row-added",
-					"section": "innate",
-					"key": "UltimateCooldownReduction",
-					"label": "Ultimate Cooldown Reduction",
-					"value": "10",
-					"prefix": "{s:sign}",
+					"section": "active",
+					"key": "ImbuedCooldownMultiplier",
+					"label": "Imbued Ability Cooldown",
+					"value": "100",
+					"prefix": "",
 					"postfix": "%",
 					"conditional": false
 				}
 			]
 		},
 		{
-			"name": "Mercurial Magnum",
+			"name": "Ethereal Shift",
 			"changes": [
 				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "BulletsBonusMagicDamage",
-					"label": "Base Bullet Damage",
-					"old": "25",
-					"new": "20"
-				}
-			]
-		},
-		{
-			"name": "Veil Walker",
-			"changes": [
-				{
-					"kind": "components",
-					"old": [
-						"upgrade_sprint_booster"
-					],
-					"new": []
-				},
-				{
-					"kind": "stat",
-					"section": "innate",
-					"key": "SpiritPower",
-					"label": "Spirit Power",
-					"old": "10",
-					"new": "6"
-				},
-				{
-					"kind": "row-removed",
-					"section": "innate",
-					"key": "BonusSprintSpeed",
-					"label": "Sprint Speed",
-					"value": "2.0m",
-					"prefix": "{s:sign}",
-					"postfix": "m",
-					"conditional": false
-				},
-				{
-					"kind": "row-removed",
-					"section": "innate",
-					"key": "OutOfCombatHealthRegen",
-					"label": "Out of Combat Regen",
-					"value": "2",
-					"prefix": "{s:sign}",
-					"postfix": "",
-					"conditional": false
-				}
-			]
-		},
-		{
-			"name": "Lightning Scroll",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "innate",
-					"key": "MovementSpeedSlow",
-					"label": "Move Speed on Spirit Damage",
-					"old": "30",
-					"new": "24"
-				}
-			]
-		},
-		{
-			"name": "Ballistic Enchantment",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "passive",
-					"key": "AbilityDuration",
-					"label": "Duration",
-					"old": "14",
-					"new": "20"
-				}
-			]
-		},
-		{
-			"name": "Golden Goose Egg",
-			"changes": [
-				{
-					"kind": "stat",
-					"section": "innate",
-					"key": "OutgoingDamagePenaltyPercent",
-					"label": "Damage Penalty",
-					"old": "-10",
-					"new": "-15"
-				},
-				{
-					"kind": "stat",
+					"kind": "text",
 					"section": "active",
-					"key": "BonusGoldPerMinute",
-					"label": "Soul Value per Minute",
-					"old": "90",
-					"new": "80"
+					"old": "You enter a void state and become untargetable and invincible for a short duration, during which you float slowly and cannot perform actions. Afterwards you gain Spirit Power, Move Speed, and Spirit Resist.Can be canceled early.Activation cancels any active ability.",
+					"new": "Instantly enter a void state and become Invulnerable for a short duration. Afterwards, gain a variety of temporary buffs:"
 				}
 			]
 		}
