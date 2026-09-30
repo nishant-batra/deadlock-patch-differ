@@ -26,9 +26,20 @@ import {
 	titleDate,
 } from "../app/lib/noteSections";
 import { diffItems } from "../app/lib/tooltipProjection";
-import { diffAbilityTiersByClass } from "../app/lib/abilityUpgrades";
+import {
+	diffAbilityTiersByClass,
+	type TierDiff,
+} from "../app/lib/abilityUpgrades";
+import {
+	mergeAbilityTiers,
+	mergeHeroChanges,
+	mergeItemChanges,
+	type StoredItemChanges,
+} from "../app/lib/mergeChanges";
+import { patchNotification } from "../app/lib/patchNotification";
+import { placeBuild } from "../app/lib/patchWindow";
 import { ABILITY_SLOTS, isUpcomingHero, WEAPON_SLOT } from "../app/lib/roster";
-import type { Hero, Item } from "../app/types";
+import type { Hero, HeroChanges, Item, PatchMeta } from "../app/types";
 
 const API = "https://api.deadlock-api.com";
 const DATA_DIR = path.join(process.cwd(), "app", "data");
@@ -359,22 +370,94 @@ async function ingest() {
 		console.log(`Regenerating missing artifacts: ${missing.join(", ")}`);
 	}
 
-	// Display-level changes for items: derived from the tooltip projection, not
-	// from the raw diff above, which is retained for patch detection and heroes.
-	const itemChanges = buildItemChanges(prevItems, items);
-	const { added, removed, changed } = itemChanges;
-	console.log(
-		`  items: ${added.length} added, ${removed.length} removed, ` +
-			`${changed.length} changed`,
-	);
-
-	const abilityTiers = buildAbilityTiers(prevItems, items, heroes);
-	const heroChanges = buildHeroChanges(
+	// What this build changed since the last one. Display-level changes for
+	// items come from the tooltip projection, not the raw diff above, which is
+	// retained for patch detection only.
+	const buildItems = buildItemChanges(
+		prevItems,
+		items,
+	) as unknown as StoredItemChanges;
+	const buildTiers = buildAbilityTiers(prevItems, items, heroes);
+	const buildHeroes = buildHeroChanges(
 		prevHeroes as unknown as Hero[],
 		heroes as unknown as Hero[],
 		prevItems as unknown as Item[],
 		items as unknown as Item[],
-		abilityTiers,
+		buildTiers,
+	);
+	const hasVisibleChanges =
+		buildItems.added.length +
+			buildItems.removed.length +
+			buildItems.changed.length >
+			0 || Object.keys(buildHeroes).length > 0;
+
+	// A hotfix within the window merges into the page instead of replacing it.
+	// Metas written before windows existed: the build on the page opened one.
+	const prevMeta = readJsonOr<PatchMeta | null>("patch-meta.json", null);
+	const currentWindow =
+		prevMeta &&
+		(prevMeta.window ?? {
+			startBuild: prevMeta.clientVersion,
+			startedAt: prevMeta.versionDatetime,
+			builds: [prevMeta.clientVersion],
+		});
+	const { action, window: patchWindow } = placeBuild(
+		currentWindow ?? undefined,
+		client_version,
+		version_datetime,
+		hasVisibleChanges,
+	);
+	console.log(
+		`  build ${client_version}: ${action} (window of ${patchWindow.startBuild}, ` +
+			`builds ${patchWindow.builds.join(", ")})`,
+	);
+
+	let itemChanges = buildItems;
+	let abilityTiers = buildTiers;
+	let heroChanges = buildHeroes;
+	if (action !== "open") {
+		// "keep" merges too: with nothing visible in this build the merge leaves
+		// the page as it is, but the tiers still pick up the current upgrades.
+		const itemByName = new Map(
+			(items as unknown as Item[]).map((item) => [item.name, item]),
+		);
+		const itemByClass = new Map(
+			(items as unknown as Item[]).map((item) => [item.class_name, item]),
+		);
+		const abilityNamesOf = new Map(
+			(heroes as unknown as Hero[]).map(({ name, items: slots }) => [
+				name,
+				ABILITY_SLOTS.flatMap((slot) => {
+					const ability = itemByClass.get(slots?.[slot]);
+					return ability ? [ability.name] : [];
+				}),
+			]),
+		);
+		itemChanges = mergeItemChanges(
+			readJsonOr<StoredItemChanges>("item-changes.json", {
+				added: [],
+				removed: [],
+				changed: [],
+			}),
+			buildItems,
+			itemByName,
+		);
+		abilityTiers = mergeAbilityTiers(
+			readJsonOr<Record<string, TierDiff[]>>("ability-tiers.json", {}),
+			buildTiers,
+		);
+		heroChanges = mergeHeroChanges(
+			readJsonOr<Record<string, HeroChanges>>("hero-changes.json", {}),
+			buildHeroes,
+			abilityTiers,
+			abilityNamesOf,
+		);
+	}
+
+	const { added, removed, changed } = itemChanges;
+	console.log(
+		`  items: ${added.length} added, ${removed.length} removed, ` +
+			`${changed.length} changed`,
 	);
 	console.log(`  heroes: ${Object.keys(heroChanges).length} changed`);
 
@@ -399,12 +482,14 @@ async function ingest() {
 	);
 	write(
 		"patch-notes.json",
-		pickNotes(patches, version_datetime, knownNames),
+		// The balance note is the patch's, not its latest hotfix's.
+		pickNotes(patches, patchWindow.startedAt, knownNames),
 	);
 	write("patch-meta.json", {
 		clientVersion: client_version,
 		versionDatetime: version_datetime,
 		ingestedAt: new Date().toISOString(),
+		window: patchWindow,
 		counts: {
 			// The badge counts what the page shows, so it counts all three groups.
 			items: added.length + removed.length + changed.length,
@@ -415,7 +500,46 @@ async function ingest() {
 		},
 	});
 
+	// Every new build gets a GitHub issue - the workflow opens it after the data
+	// is pushed. A re-published build (same number) is not news.
+	if (prevMeta?.clientVersion !== client_version) {
+		const names = (list: Array<{ name: string }>) =>
+			list.map(({ name }) => name);
+		notify(
+			patchNotification({
+				build: client_version,
+				buildTime: version_datetime,
+				action,
+				window: patchWindow,
+				// This build's own changes, not the merged window.
+				items: {
+					added: names(buildItems.added),
+					removed: names(buildItems.removed),
+					changed: names(buildItems.changed),
+				},
+				heroes: Object.keys(buildHeroes),
+				note: pickNotes(patches, version_datetime, knownNames).balance,
+			}),
+		);
+	}
+
 	console.log("Done.");
+}
+
+/**
+ * Hands the issue to the workflow: the body as a file, and `notify=true` plus
+ * the title as step outputs. Outside GitHub Actions it only logs.
+ */
+function notify({ title, body }: { title: string; body: string }) {
+	const { GITHUB_OUTPUT, RUNNER_TEMP } = process.env;
+	console.log(`Notification: ${title}`);
+	if (!GITHUB_OUTPUT || !RUNNER_TEMP) return;
+	const bodyFile = path.join(RUNNER_TEMP, "patch-notification.md");
+	fs.writeFileSync(bodyFile, body);
+	fs.appendFileSync(
+		GITHUB_OUTPUT,
+		`notify=true\ntitle=${title}\nbody_file=${bodyFile}\n`,
+	);
 }
 
 ingest().catch((error) => {

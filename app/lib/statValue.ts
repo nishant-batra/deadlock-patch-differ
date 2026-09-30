@@ -8,8 +8,11 @@
  * numeric check; anything else non-numeric (a range like "0 / 0.75") is a
  * real value.
  */
-export const isEmptyStatValue = (value: unknown) =>
-	value === undefined ||
-	value === null ||
-	value === "" ||
-	Number(String(value).replace(/\s*[a-z%]+$/i, "")) === 0;
+export const isEmptyStatValue = (value: unknown) => {
+	if (value === undefined || value === null || value === "") return true;
+	if (typeof value !== "number" && typeof value !== "string") return false;
+	// Only a unit is stripped - a word ("Slows") must not strip down to "" and
+	// read as 0.
+	const number = String(value).replace(/\s*[a-z%]+$/i, "");
+	return number.trim() !== "" && Number(number) === 0;
+};

@@ -267,6 +267,18 @@ export interface PatchMeta {
 	ingestedAt: string;
 	/** `upcomingHeroes` is absent in metas ingested before it existed. */
 	counts: { items: number; heroes: number; upcomingHeroes?: number };
+	/** The patch the page shows, hotfixes included. Absent before windows existed. */
+	window?: PatchWindow;
+}
+
+/** A patch and the hotfixes that followed it - see `app/lib/patchWindow.ts`. */
+export interface PatchWindow {
+	/** The build that opened the window: the patch itself. */
+	startBuild: number;
+	/** That build's `version_datetime`; the window runs 6 days from it. */
+	startedAt: string;
+	/** Every build merged into the page, `startBuild` first. */
+	builds: number[];
 }
 
 export interface PatchNote {

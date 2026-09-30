@@ -25,6 +25,9 @@ describe("isEmptyStatValue", () => {
 		"0.05",
 		"0 / 0.75",
 		"0 / 0",
+		"m",
+		"Slows",
+		["A"],
 	])("treats %j as a real value", (value) => {
 		expect(isEmptyStatValue(value)).toBe(false);
 	});
