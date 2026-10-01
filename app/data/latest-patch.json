@@ -45016,7 +45016,8 @@
 		"behaviours": [
 			"CITADEL_ABILITY_BEHAVIOR_DONT_BREAK_INVISIBILITY",
 			"CITADEL_ABILITY_BEHAVIOR_CHANNELLED",
-			"CITADEL_ABILITY_BEHAVIOR_NOT_SILENCABLE"
+			"CITADEL_ABILITY_BEHAVIOR_NOT_SILENCABLE",
+			"CITADEL_ABILITY_BEHAVIOR_CANNOT_CANCEL_DURING_CHANNEL"
 		],
 		"description": {},
 		"ability_type": "innate"
@@ -85627,6 +85628,9 @@
 					"class_name": "scale_function_tech_range",
 					"subclass_name": "bouncerangesf"
 				},
+				"label": "Bounce Range",
+				"postfix": "m",
+				"postvalue_label": "Bounce Range",
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
 			},
 			"Damage": {
@@ -112400,7 +112404,7 @@
 				},
 				{
 					"name": "BuildUpPerShot",
-					"bonus": "0.3"
+					"bonus": "-0.2"
 				}
 			],
 			"excluded_penalties": []
@@ -121482,7 +121486,7 @@
 				},
 				{
 					"name": "BuildUpPerShot",
-					"bonus": "0.72"
+					"bonus": "-0.48"
 				},
 				{
 					"name": "HealAmpReceivePenaltyPercent",
@@ -195613,6 +195617,9 @@
 					"class_name": "scale_function_tech_range",
 					"subclass_name": "dazzle_orb_bounce_range_sf"
 				},
+				"label": "Bounce Range",
+				"postfix": "m",
+				"postvalue_label": "Bounce Range",
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
 			},
 			"PriorityBounceRadius": {

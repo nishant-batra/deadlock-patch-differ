@@ -1,7 +1,14 @@
 {
-	"clientVersion": 6722,
-	"versionDatetime": "2026-09-29T15:55:11",
-	"ingestedAt": "2026-09-30T04:55:06.683Z",
+	"clientVersion": 6726,
+	"versionDatetime": "2026-09-30T15:24:48",
+	"ingestedAt": "2026-10-01T05:46:22.509Z",
+	"window": {
+		"startBuild": 6722,
+		"startedAt": "2026-09-29T15:55:11",
+		"builds": [
+			6722
+		]
+	},
 	"counts": {
 		"items": 9,
 		"heroes": 15,

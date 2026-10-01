@@ -115947,6 +115947,9 @@
 						"class_name": "scale_function_tech_range",
 						"subclass_name": "dazzle_orb_bounce_range_sf"
 					},
+					"label": "Bounce Range",
+					"postfix": "m",
+					"postvalue_label": "Bounce Range",
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
 				},
 				"PriorityBounceRadius": {
