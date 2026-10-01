@@ -19,8 +19,8 @@
   "dependencies": {
     "@fontsource-variable/space-grotesk": "^5.2.10",
     "@tailwindcss/vite": "^4.1.18",
-    "@tanstack/react-router": "latest",
-    "@tanstack/react-start": "latest",
+    "@tanstack/react-router": "^1.170.41",
+    "@tanstack/react-start": "^1.168.60",
     "@tanstack/router-plugin": "^1.132.0",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^2.0.0",
