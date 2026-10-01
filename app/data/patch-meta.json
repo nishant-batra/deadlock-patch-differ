@@ -1,17 +1,18 @@
 {
-	"clientVersion": 6728,
-	"versionDatetime": "2026-10-01T09:50:36",
-	"ingestedAt": "2026-10-01T18:51:17.206Z",
+	"clientVersion": 6730,
+	"versionDatetime": "2026-10-01T12:17:19",
+	"ingestedAt": "2026-10-01T23:09:39.488Z",
 	"window": {
 		"startBuild": 6722,
 		"startedAt": "2026-09-29T15:55:11",
 		"builds": [
-			6722
+			6722,
+			6730
 		]
 	},
 	"counts": {
 		"items": 9,
-		"heroes": 15,
+		"heroes": 19,
 		"upcomingHeroes": 6
 	}
 }

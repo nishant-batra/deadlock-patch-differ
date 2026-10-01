@@ -2083,7 +2083,11 @@
 					"new": 1,
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "-20.0 Cooldown and +1.0s Duration",
+				"new": "-20.0s Cooldown and +1.0s Duration"
+			}
 		},
 		{
 			"tier": 3,
@@ -4829,7 +4833,11 @@
 					"new": "3",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "Heros killed within 3s grant +200 souls",
+				"new": "Heroes killed within 3s grant +200 souls"
+			}
 		},
 		{
 			"tier": 3,
@@ -5693,7 +5701,11 @@
 					"kind": "equal",
 					"new": 1
 				}
-			]
+			],
+			"text": {
+				"old": "Prevents all healing+13.0 DPS with increase Spirit scaling",
+				"new": "Prevents all healing+13.0 DPS with increased Spirit scaling"
+			}
 		}
 	],
 	"Protector's Hand": [
