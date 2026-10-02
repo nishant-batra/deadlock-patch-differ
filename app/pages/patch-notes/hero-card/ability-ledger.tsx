@@ -31,7 +31,7 @@ export default function AbilityLedger({
 							alt=""
 							width={26}
 							height={26}
-							className="cut-double size-6.5 [--cut:var(--cut-xs)]"
+							className="cut-double ability-icon-light ability-icon-changed size-6.5 [--cut:var(--cut-xs)]"
 						/>
 						{/* Stretched over the whole block, so any row opens the popover
 						    while the button itself stays the one accessible control. */}

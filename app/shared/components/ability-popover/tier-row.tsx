@@ -1,16 +1,21 @@
-import {
-	resolvePrefix,
-	shouldAppendPostfix,
-} from "#/shared/utils/statFormatting";
+import { shouldAppendPostfix } from "#/shared/utils/statFormatting";
 import type { TierDiff } from "#/types";
 import ScalingIcon from "./scaling-icon";
 import { formatBonus } from "./utils";
 
 type Row = TierDiff["rows"][number];
 
-/** `prefix` + the formatted bonus + `postfix`, same rendering as a `PropertyList` chip. */
-const withUnits = (value: Row["old"] | Row["new"], row: Row) =>
-	`${resolvePrefix(row.prefix)}${formatBonus(value)}${shouldAppendPostfix(value, row.postfix) ? row.postfix : ""}`;
+/**
+ * An upgrade bonus is always a delta on top of the base value, so its sign
+ * comes from the number itself. The property's own `prefix` describes the base
+ * value and is ignored here - it's missing on most stats (no `+`), and
+ * `{s:sign}`/`-` on a delta produce `+-10` or flip a positive bonus.
+ */
+const withUnits = (value: Row["old"] | Row["new"], { postfix }: Row) => {
+	const text = formatBonus(value);
+	const sign = Number.parseFloat(text) > 0 && !text.startsWith("+") ? "+" : "";
+	return `${sign}${text}${shouldAppendPostfix(value, postfix) ? postfix : ""}`;
+};
 
 export default function TierRowView({
 	row,

@@ -36,7 +36,7 @@ export default function HeroAbilities({
 							alt={ability.name}
 							width={44}
 							height={44}
-							className="rounded ring-1 ring-white/15"
+							className="ability-icon-light rounded ring-1 ring-white/15"
 						/>
 						<p className="font-bold">{ability.name}</p>
 					</div>

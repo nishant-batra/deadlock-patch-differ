@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { hasTierChanges } from "#/lib/abilityUpgrades";
 import AbilityPopover from "#/shared/components/ability-popover";
 import CutFrame from "#/shared/components/cut-frame";
@@ -55,7 +56,10 @@ export default function AbilityRow({
 									alt={ability.name}
 									width={44}
 									height={44}
-									className="cut-double size-full"
+									className={clsx(
+										"cut-double ability-icon-light size-full",
+										isChanged && "ability-icon-changed",
+									)}
 								/>
 							</CutFrame>
 							{isChanged && <span className="sr-only">Changed this patch</span>}

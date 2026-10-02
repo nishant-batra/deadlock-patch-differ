@@ -5126,7 +5126,8 @@
 					"key": "BleedDPSPerStack|EAddToScale#0",
 					"label": "Bleed DPS Per Stack",
 					"kind": "equal",
-					"new": 0.07
+					"new": 0.07,
+					"scaling": "ETechPower"
 				}
 			]
 		}
@@ -5692,6 +5693,7 @@
 					"label": "DPS",
 					"kind": "equal",
 					"new": 0.1,
+					"scaling": "ETechPower",
 					"prefix": "",
 					"postfix": ""
 				},
@@ -6197,7 +6199,8 @@
 					"key": "DamageHeavyMelee|EAddToScale#0",
 					"label": "Damage Heavy Melee",
 					"kind": "equal",
-					"new": 0.6
+					"new": 0.6,
+					"scaling": "EHeavyMeleeDamage"
 				},
 				{
 					"key": "DamageHeavyMelee|#0",
@@ -6209,7 +6212,8 @@
 					"key": "Damage|EMultiplyScale#0",
 					"label": "Damage",
 					"kind": "equal",
-					"new": 0
+					"new": 0,
+					"scaling": "ELightMeleeDamage"
 				},
 				{
 					"key": "Damage|#0",
@@ -6620,7 +6624,8 @@
 					"key": "MagicDamagePerBullet|EAddToScale#0",
 					"label": "Magic Damage Per Bullet",
 					"kind": "equal",
-					"new": "0.045"
+					"new": "0.045",
+					"scaling": "EAddToScale"
 				},
 				{
 					"key": "UnlimitedAmmo|#0",
@@ -6656,7 +6661,8 @@
 					"key": "Damage|EAddToScale#0",
 					"label": "Damage",
 					"kind": "equal",
-					"new": "0.4"
+					"new": "0.4",
+					"scaling": "ETechPower"
 				}
 			]
 		},
@@ -10313,7 +10319,8 @@
 					"key": "HeavyMeleeDamage|EAddToScale#0",
 					"label": "Heavy Melee Damage",
 					"kind": "equal",
-					"new": 0.5
+					"new": 0.5,
+					"scaling": "EHeavyMeleeDamage"
 				},
 				{
 					"key": "HeavyMeleeDamage|#0",
@@ -10325,7 +10332,8 @@
 					"key": "MeleeDamage|EMultiplyScale#0",
 					"label": "Melee Damage",
 					"kind": "equal",
-					"new": 0
+					"new": 0,
+					"scaling": "ELightMeleeDamage"
 				},
 				{
 					"key": "MeleeDamage|#0",
@@ -10401,13 +10409,15 @@
 					"key": "DamageHeavyMelee|EAddToScale#0",
 					"label": "Damage Heavy Melee",
 					"kind": "equal",
-					"new": 0.55
+					"new": 0.55,
+					"scaling": "EHeavyMeleeDamage"
 				},
 				{
 					"key": "Damage|EMultiplyScale#0",
 					"label": "Damage",
 					"kind": "equal",
-					"new": 0
+					"new": 0,
+					"scaling": "ELightMeleeDamage"
 				}
 			]
 		}

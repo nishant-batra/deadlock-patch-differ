@@ -1,6 +1,6 @@
 import { TierBlock } from "#/shared/components/ability-popover";
-import { CHANGED_COLOR } from "#/shared/components/ability-row/constants";
-import CutFrame from "#/shared/components/cut-frame";
+import AbilityRow from "#/shared/components/ability-row";
+import type { useOpenAbility } from "#/shared/components/ability-row/useOpenAbility";
 import Swatch from "#/shared/components/legend-swatch";
 import type { Item, TierDiff } from "#/types";
 import AbilityLedger from "../hero-card/ability-ledger";
@@ -14,7 +14,8 @@ import WordingLine from "../hero-card/wording-line";
  * New/Removed mean isn't shown those swatches twice - only the language unique
  * to abilities lives here.
  *
- * Swatches render the *real* `AbilityLedger`, `WordingLine` and `TierBlock`,
+ * Swatches render the *real* `AbilityLedger`, `WordingLine`, `AbilityRow` and
+ * `TierBlock`,
  * same reasoning as `CardLegend`: a drawn mock would drift the first time the
  * card or popover markup changes. Their buttons are inert here - there is no
  * popover to open.
@@ -22,14 +23,31 @@ import WordingLine from "../hero-card/wording-line";
 
 const tier = (rows: TierDiff["rows"]): TierDiff => ({ tier: 2, rows });
 
-/** A grey square standing in for an ability icon. */
+/** A white disc on transparency standing in for an ability icon - the same
+ * kind of asset as the real ones, so the icon styling treats it the same. */
 const PLACEHOLDER_ICON =
-	"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='%23ffffff1a'/%3E%3C/svg%3E";
+	"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Ccircle cx='5' cy='5' r='2.5' fill='white'/%3E%3C/svg%3E";
 
 const ability = (id: number, name: string) =>
 	({ id, name, class_name: `legend_${id}`, image: PLACEHOLDER_ICON }) as Item;
 
 const noop = () => {};
+
+/** Open state that never opens anything - there is no popover in the legend. */
+const inertOpenState: ReturnType<typeof useOpenAbility> = {
+	openAbility: null,
+	toggleAbility: noop,
+	closeAbility: noop,
+	setAnchorRef: () => noop,
+	anchorRefFor: () => ({ current: null }),
+};
+
+/** One moved tier bonus, so `AbilityRow` marks the icon as changed. */
+const changedTiers = [
+	tier([
+		{ key: "health", label: "Bonus Health", kind: "changed", old: 40, new: 60 },
+	]),
+];
 
 export default function HeroLegend() {
 	return (
@@ -92,11 +110,23 @@ export default function HeroLegend() {
 						</div>
 					</Swatch>
 
-					<Swatch caption="The icon row along the bottom: an amber border means that ability changed. Click any icon, changed or not, to see its full stats and upgrade tiers">
-						<div className="flex justify-center p-3">
-							<CutFrame cut="sm" color={CHANGED_COLOR} className="flex size-12">
-								<span className="cut-double block size-full bg-white/10" />
-							</CutFrame>
+					<Swatch caption="The icon row along the bottom: an amber icon means that ability changed, a light one that it didn't. Click any icon, changed or not, to see its full stats and upgrade tiers">
+						<div className="flex justify-center">
+							<AbilityRow
+								abilities={[
+									{
+										ability: ability(4, "Changed ability"),
+										changes: [],
+										tiers: changedTiers,
+									},
+									{
+										ability: ability(5, "Unchanged ability"),
+										changes: [],
+										tiers: [],
+									},
+								]}
+								openState={inertOpenState}
+							/>
 						</div>
 					</Swatch>
 

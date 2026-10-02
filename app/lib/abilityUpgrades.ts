@@ -16,7 +16,7 @@
 // alone silently merges them and loses half the changes.
 
 import { humaniseStatKey } from "#/shared/utils/statLabels";
-import type { Item, PropertyUpgrade, Upgrade } from "#/types";
+import type { Item, PropertyUpgrade, ScaleFunction, Upgrade } from "#/types";
 import { toDiffText } from "./htmlDiff";
 
 /** Abilities always have three tiers; 220 of 278 in the catalog do. */
@@ -70,6 +70,23 @@ const keyOf = (
 };
 
 /**
+ * Which stat a bonus scales with. Most scaling upgrades name it in
+ * `scale_stat_filter`, but 10 `EAddToScale`/`EMultiplyScale` entries (Card
+ * Trick T2, Puddle Punch T3, ...) leave it out and rely on the property's own
+ * `scale_function`. Full Auto T3 has neither, so the bare `upgrade_type` is
+ * returned - it renders as the generic scaling marker rather than nothing.
+ */
+const scalingOf = (
+	filter: string | undefined,
+	upgradeType: string | undefined,
+	scaleFunction: ScaleFunction | undefined,
+) => {
+	if (filter) return filter;
+	if (!upgradeType?.endsWith("Scale")) return undefined;
+	return scaleFunction?.specific_stat_scale_type ?? upgradeType;
+};
+
+/**
  * `upgrade.name` is a key into the ability's own `properties` dict - the
  * same dict `PropertyList`/`StatDelta` read `prefix`/`postfix` from for
  * items. Verified against the current catalog: 1072 of 1073
@@ -83,12 +100,12 @@ const projectTier = (
 	const seen = new Map<string, number>();
 	const out = new Map<string, Projected>();
 	for (const upgrade of tier?.property_upgrades ?? []) {
-		const { name, bonus, scale_stat_filter } = upgrade;
-		const { prefix, postfix } = properties?.[name] ?? {};
+		const { name, bonus, scale_stat_filter, upgrade_type } = upgrade;
+		const { prefix, postfix, scale_function } = properties?.[name] ?? {};
 		out.set(keyOf(upgrade, seen), {
 			label: humaniseStatKey(name),
 			bonus,
-			scaling: scale_stat_filter,
+			scaling: scalingOf(scale_stat_filter, upgrade_type, scale_function),
 			prefix,
 			postfix,
 		});

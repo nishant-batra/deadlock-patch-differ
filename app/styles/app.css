@@ -92,6 +92,23 @@ section[id] {
    default is zero-specificity so the override then wins on specificity too,
    regardless of stylesheet source order. */
 @layer utilities {
+	/* Ability icons are a white glyph on transparency. Inverting the whole
+	   image (fill included) gives a black glyph on a `--ability-tile` tile, so
+	   the fill is set to the tile's own inverse. It goes on the image itself so
+	   it follows any cut-corner clip. */
+	.ability-icon-light {
+		--ability-tile: #e8e4d8;
+		background-color: rgb(
+			from var(--ability-tile) calc(255 - r) calc(255 - g) calc(255 - b)
+		);
+		filter: invert(1);
+	}
+	/* Changed this patch - the tile carries the marker, since a thin amber
+	   frame barely shows against a light tile. */
+	.ability-icon-changed {
+		--ability-tile: var(--color-amber-400);
+	}
+
 	/* Top-right + bottom-left corners clipped - card shells, avatars, icons. */
 	:where(.cut-double) {
 		--cut: var(--cut-lg);
