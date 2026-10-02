@@ -20,8 +20,9 @@
 import type { DisplayChange, HeroChanges, Item } from "#/types";
 import { hasTierChanges, type TierDiff, type TierRow } from "./abilityUpgrades";
 import type { Change, ChangeValue } from "./diffEngine";
+import { toDiffText } from "./htmlDiff";
 import { isEmptyStatValue } from "./statValue";
-import { diffItems, prose } from "./tooltipProjection";
+import { diffItems } from "./tooltipProjection";
 
 /** `undefined` is "absent": the stat did not exist on that side. */
 type Value = ChangeValue | undefined;
@@ -37,7 +38,7 @@ export type StoredItemChanges = {
 const normalise = (value: Value) =>
 	value !== null && typeof value === "object"
 		? JSON.stringify(value)
-		: prose(String(value)).toLowerCase();
+		: toDiffText(String(value)).toLowerCase();
 
 /**
  * Same rules the diffs themselves use: missing and 0 are both "nothing", and
@@ -299,7 +300,9 @@ function mergeTier(first: TierDiff | undefined, second: TierDiff): TierDiff {
 	const before = first?.text ? first.text.old : second.text?.old;
 	const after = second.text ? second.text.new : first?.text?.new;
 	const text =
-		before !== undefined && after !== undefined && before !== after
+		before !== undefined &&
+		after !== undefined &&
+		toDiffText(before) !== toDiffText(after)
 			? { old: before, new: after }
 			: undefined;
 

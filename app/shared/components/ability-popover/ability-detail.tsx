@@ -1,13 +1,11 @@
 ﻿import { isScaleChange, isStatChange, statKeyOf } from "#/lib/diffEngine";
-import { prose } from "#/lib/tooltipProjection";
 import { NEUTRAL } from "#/shared/components/item-card/constants";
 import PropertyList from "#/shared/components/property-list";
 import StatDelta, { type DeltaRow } from "#/shared/components/stat-delta";
 import TextChange from "#/shared/components/text-change";
-import { isNegativeProperty } from "#/shared/utils/negativeProperties";
 import { humaniseStatKey } from "#/shared/utils/statLabels";
 import type { Change, Item } from "#/types";
-import { renderedKeys, sectionPropertyKeys } from "./utils";
+import { abilityDeltaRow, renderedKeys, sectionPropertyKeys } from "./utils";
 
 const OTHER_LIMIT = 4;
 
@@ -86,45 +84,14 @@ export default function AbilityDetail({
 	);
 	const orphanRows: DeltaRow[] = statChanges
 		.filter((change) => !isInlined(change))
-		.map((change) => {
-			const { path, kind, old, new: next } = change;
-			const key = statKeyOf(change);
-			const { label, negative_attribute, prefix, postfix } =
-				allProperties[key] ?? {};
-			return {
-				id: path.join("."),
-				label: label ?? humaniseStatKey(key),
-				kind:
-					kind === "added" ? "added" : kind === "removed" ? "removed" : "stat",
-				old: old as string | number | undefined,
-				new: next as string | number | undefined,
-				// AbilityCooldown and siblings carry no `negative_attribute` in the
-				// payload at all - see negativeProperties.ts.
-				negativeAttribute: negative_attribute ?? isNegativeProperty(key),
-				prefix,
-				postfix,
-			};
-		});
+		.map((change) => abilityDeltaRow(change, allProperties));
 
 	// The property's own `value` never moves here - only the multiplier it
 	// scales with (e.g. spirit power) did - so this can never be inlined onto
 	// the tooltip chip the way a `.value` change is; it always needs its own row.
-	const scaleRows: DeltaRow[] = scaleChanges.map((change) => {
-		const { path, old, new: next } = change;
-		const key = statKeyOf(change);
-		const { label, negative_attribute } = allProperties[key] ?? {};
-		return {
-			id: path.join("."),
-			label: `${label ?? humaniseStatKey(key)} Scaling`,
-			kind: "stat",
-			old: old as string | number | undefined,
-			new: next as string | number | undefined,
-			negativeAttribute: negative_attribute ?? isNegativeProperty(key),
-			// No prefix/postfix here on purpose - `stat_scale` is a unitless
-			// per-point multiplier, not the property's own displayed value, so the
-			// property's "%"/"m" postfix does not apply to it.
-		};
-	});
+	const scaleRows: DeltaRow[] = scaleChanges.map((change) =>
+		abilityDeltaRow(change, allProperties),
+	);
 
 	return (
 		<div
@@ -147,8 +114,8 @@ export default function AbilityDetail({
 					{removedTextChanges.map(({ path, old, new: next }) => (
 						<TextChange
 							key={path.join(".")}
-							before={prose(String(old ?? ""))}
-							after={prose(String(next ?? ""))}
+							before={String(old ?? "")}
+							after={String(next ?? "")}
 						/>
 					))}
 				</div>
@@ -175,8 +142,8 @@ export default function AbilityDetail({
 						{loc_string &&
 							(textChange ? (
 								<TextChange
-									before={prose(String(textChange.old ?? ""))}
-									after={prose(String(textChange.new ?? ""))}
+									before={String(textChange.old ?? "")}
+									after={String(textChange.new ?? "")}
 								/>
 							) : (
 								<div

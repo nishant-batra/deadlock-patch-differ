@@ -14,9 +14,14 @@ export type WordDiffOp = { op: "equal" | "insert" | "delete"; text: string };
 
 // A "word" keeps %, apostrophes and internal hyphens so "non-ultimate",
 // "self-cast" and "150%" stay single tokens. Everything else is either a
-// whitespace run or one punctuation character.
+// whitespace run or one punctuation character. An icon placeholder (`$svg$`,
+// see htmlDiff) is one token, so "$svg$" -> "$img$" never half-matches.
 const WORD = "[A-Za-z0-9'’%-]+";
-const TOKEN = new RegExp(`${WORD}|\\s+|[^\\sA-Za-z0-9'’%-]`, "g");
+const PLACEHOLDER = "\\$[a-z][\\w-]*\\$";
+const TOKEN = new RegExp(
+	`${PLACEHOLDER}|${WORD}|\\s+|[^\\sA-Za-z0-9'’%-]`,
+	"g",
+);
 
 const tokenize = (text: string): string[] => text.match(TOKEN) ?? [];
 
@@ -32,16 +37,19 @@ export function diffWords(before: string, after: string): WordDiffOp[] {
 	const m = a.length;
 	const n = b.length;
 
-	// dp[i][j] = LCS length of a[i:] and b[j:].
+	// dp[i][j] = LCS weight of a[i:] and b[j:]. Whitespace weighs next to
+	// nothing, so lining up the spaces between rewritten words never beats
+	// keeping a real word (or icon) in place - but still wins a tie, so a space
+	// stays unchanged rather than drifting into a marked run.
+	const weight = (token: string) => (/^\s+$/.test(token) ? 0.01 : 1);
 	const dp: number[][] = Array.from({ length: m + 1 }, () =>
 		new Array(n + 1).fill(0),
 	);
 	for (let i = m - 1; i >= 0; i--) {
 		for (let j = n - 1; j >= 0; j--) {
+			const skip = Math.max(dp[i + 1][j], dp[i][j + 1]);
 			dp[i][j] =
-				a[i] === b[j]
-					? dp[i + 1][j + 1] + 1
-					: Math.max(dp[i + 1][j], dp[i][j + 1]);
+				a[i] === b[j] ? Math.max(dp[i + 1][j + 1] + weight(a[i]), skip) : skip;
 		}
 	}
 
@@ -55,7 +63,7 @@ export function diffWords(before: string, after: string): WordDiffOp[] {
 	let i = 0;
 	let j = 0;
 	while (i < m && j < n) {
-		if (a[i] === b[j]) {
+		if (a[i] === b[j] && dp[i][j] === dp[i + 1][j + 1] + weight(a[i])) {
 			push("equal", a[i]);
 			i++;
 			j++;

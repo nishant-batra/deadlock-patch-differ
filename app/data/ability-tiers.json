@@ -775,8 +775,8 @@
 				}
 			],
 			"text": {
-				"old": "+40 Impact Damage+13.3333 Burn Damage per Second-5 Charge TimeImproved Spirit Scaling",
-				"new": "+40 Impact Damage+13.3333 Burn Damage per Second-5s Charge TimeImproved Spirit Scaling"
+				"old": "<span class=\"highlight\">+40</span> Impact Damage<br><span class=\"highlight\">+13.3333</span> Burn Damage per Second<br><span class=\"highlight\">-5</span> Charge Time<br><span class=\"highlight\">Improved Spirit Scaling</span>",
+				"new": "<span class=\"highlight\">+40</span> Impact Damage<br><span class=\"highlight\">+13.3333</span> Burn Damage per Second<br><span class=\"highlight\">-5</span>s Charge Time<br><span class=\"highlight\">Improved Spirit Scaling</span>"
 			}
 		}
 	],
@@ -1789,8 +1789,8 @@
 				}
 			],
 			"text": {
-				"old": "2.3s Silence Duration +35.0% Weapon Damage",
-				"new": "Silences enemies for 2.3s+35.0% Weapon Damage"
+				"old": "<span class=\"highlight\">2.3s</span> Silence Duration <br><span class=\"highlight\">+35.0%</span> Weapon Damage",
+				"new": "Silences enemies for <span class=\"highlight\">2.3s</span><br><span class=\"highlight\">+35.0%</span> Weapon Damage"
 			}
 		},
 		{
@@ -3307,8 +3307,8 @@
 				}
 			],
 			"text": {
-				"old": "Applies -35% Healing Reduction",
-				"new": "Reduces Incoming Healing by -35%"
+				"old": "Applies <span class=\"highlight\">-35%</span> Healing Reduction",
+				"new": "Reduces <span class=\"highlight\">Incoming Healing</span> by <span class=\"highlight\">-35%</span>"
 			}
 		},
 		{
@@ -4309,7 +4309,7 @@
 			],
 			"text": {
 				"old": "",
-				"new": "+1 Charge+2s Duration"
+				"new": "+1 Charge<br>+2s Duration"
 			}
 		},
 		{
@@ -4332,7 +4332,7 @@
 			],
 			"text": {
 				"old": "",
-				"new": "-15% Damage Penalty Increased Spirit scaling"
+				"new": "-15% Damage Penalty <br>Increased Spirit scaling"
 			}
 		}
 	],
@@ -4493,8 +4493,8 @@
 				}
 			],
 			"text": {
-				"old": "+4s Burrow time and +2 radius",
-				"new": "+4s Burrow time and +2m radius"
+				"old": "<span class=\"highlight\">+4s</span> Burrow time and +2 radius",
+				"new": "<span class=\"highlight\">+4s</span> Burrow time and +2m radius"
 			}
 		},
 		{
@@ -4835,8 +4835,8 @@
 				}
 			],
 			"text": {
-				"old": "Heros killed within 3s grant +200 souls",
-				"new": "Heroes killed within 3s grant +200 souls"
+				"old": "Heros killed within 3s grant <span class=\"highlight\">+200</span> souls",
+				"new": "Heroes killed within 3s grant <span class=\"highlight\">+200</span> souls"
 			}
 		},
 		{
@@ -5703,8 +5703,8 @@
 				}
 			],
 			"text": {
-				"old": "Prevents all healing+13.0 DPS with increase Spirit scaling",
-				"new": "Prevents all healing+13.0 DPS with increased Spirit scaling"
+				"old": "<span class=\"highlight\">Prevents all healing</span><br><span class=\"highlight\">+13.0</span> DPS with increase Spirit scaling",
+				"new": "<span class=\"highlight\">Prevents all healing</span><br><span class=\"highlight\">+13.0</span> DPS with increased Spirit scaling"
 			}
 		}
 	],
@@ -7244,8 +7244,8 @@
 				}
 			],
 			"text": {
-				"old": "-40% Healing Reduction and -12s Cooldown",
-				"new": "-40% Incoming Healing and -12s Cooldown"
+				"old": "<span class=\"highlight\">-40%</span> Healing Reduction and <span class=\"highlight\">-12s</span> Cooldown",
+				"new": "<span class=\"highlight\">-40%</span> Incoming Healing and <span class=\"highlight\">-12s</span> Cooldown"
 			}
 		},
 		{
@@ -10471,8 +10471,8 @@
 				}
 			],
 			"text": {
-				"old": "+1.5% Bleed and -40.0% Healing Reduction",
-				"new": "+1.5% Bleed and -40.0% Incoming Healing"
+				"old": "<span class=\"highlight\">+1.5% Bleed</span> and <span class=\"highlight\">-40.0% Healing Reduction</span>",
+				"new": "<span class=\"highlight\">+1.5% Bleed</span> and <span class=\"highlight\">-40.0% Incoming Healing</span>"
 			}
 		}
 	],
@@ -10910,8 +10910,8 @@
 				}
 			],
 			"text": {
-				"old": "-20% Healing Reduction and allow Charges",
-				"new": "-20% Incoming Healing and allow Charges"
+				"old": "<span class=\"highlight\">-20%</span> Healing Reduction and allow Charges",
+				"new": "<span class=\"highlight\">-20%</span> Incoming Healing and allow Charges"
 			}
 		}
 	],

@@ -59,7 +59,29 @@ export default function ItemCard({
 	const deltaRows = stripChanges.length
 		? resolveDeltaRows(stripChanges, allProperties)
 		: [];
-	const textChanges = changes?.filter((c) => c.kind === "text") ?? [];
+	// A rewritten section replaces its plain copy in the tooltip rather than
+	// printing both - same as abilities. Item text changes carry only the
+	// section type, which can repeat, so a change is placed by its new text: it
+	// is that section's loc_strings joined, exactly as the projection builds it.
+	// One with no matching section (a removed item's snapshot) stays in the strip.
+	const sectionTexts = (tooltip_sections ?? []).map(({ section_attributes }) =>
+		(section_attributes ?? []).flatMap(({ loc_string }) =>
+			loc_string ? [loc_string] : [],
+		),
+	);
+	const textChangeAt = new Map<
+		number,
+		Extract<DisplayChange, { kind: "text" }>
+	>();
+	const stripTextChanges: Extract<DisplayChange, { kind: "text" }>[] = [];
+	for (const change of changes ?? []) {
+		if (change.kind !== "text") continue;
+		const index = sectionTexts.findIndex(
+			(texts, at) => !textChangeAt.has(at) && texts.join(" ") === change.new,
+		);
+		if (index === -1) stripTextChanges.push(change);
+		else textChangeAt.set(index, change);
+	}
 	const flagged = isNew || isRemoved || isChanged;
 	const framed = Boolean(changes?.length || flagged);
 
@@ -109,7 +131,7 @@ export default function ItemCard({
 					alt={name}
 				/>
 
-				{(deltaRows.length > 0 || textChanges.length > 0) && (
+				{(deltaRows.length > 0 || stripTextChanges.length > 0) && (
 					<div
 						className="mx-2 mt-2 flex flex-col border-l-2 py-1"
 						style={{
@@ -120,17 +142,15 @@ export default function ItemCard({
 						{deltaRows.map((row) => (
 							<StatDelta key={row.id} row={row} />
 						))}
-						{textChanges.map((change, index) =>
-							change.kind === "text" ? (
-								<TextChange
-									// Positional: an item can carry two sections of the same type.
-									// biome-ignore lint/suspicious/noArrayIndexKey: the list is derived from a static payload and never reorders
-									key={`text-${index}-${change.section}`}
-									before={change.old}
-									after={change.new}
-								/>
-							) : null,
-						)}
+						{stripTextChanges.map(({ section, old, new: next }, index) => (
+							<TextChange
+								// Positional: an item can carry two sections of the same type.
+								// biome-ignore lint/suspicious/noArrayIndexKey: the list is derived from a static payload and never reorders
+								key={`text-${index}-${section}`}
+								before={old}
+								after={next}
+							/>
+						))}
 					</div>
 				)}
 
@@ -149,6 +169,12 @@ export default function ItemCard({
 							? allProperties.AbilityCooldown
 							: undefined;
 						const hasCooldown = cooldown && +cooldown.value > 0;
+						// The diff covers every loc_string in the section, so it takes the
+						// first one's slot and the rest are not printed again.
+						const textChange = textChangeAt.get(sectionIndex);
+						const firstTextAt =
+							section_attributes?.findIndex(({ loc_string }) => loc_string) ??
+							-1;
 						return (
 							// biome-ignore lint/suspicious/noArrayIndexKey: `section_type` repeats within a card and the list never reorders
 							<div key={`${section_type}-${sectionIndex}`} className="pb-4">
@@ -198,13 +224,19 @@ export default function ItemCard({
 												key={`${loc_string ?? "attrs"}-${attributeIndex}`}
 												className="w-full"
 											>
-												{loc_string && (
-													<div
-														className="my-1 p-2 text-gray-300"
-														// biome-ignore lint/security/noDangerouslySetInnerHtml: first-party API copy
-														dangerouslySetInnerHTML={{ __html: loc_string }}
-													/>
-												)}
+												{loc_string &&
+													(!textChange ? (
+														<div
+															className="my-1 p-2 text-gray-300"
+															// biome-ignore lint/security/noDangerouslySetInnerHtml: first-party API copy
+															dangerouslySetInnerHTML={{ __html: loc_string }}
+														/>
+													) : attributeIndex === firstTextAt ? (
+														<TextChange
+															before={textChange.old}
+															after={textChange.new}
+														/>
+													) : null)}
 												<div className="mt-2 flex flex-col gap-0.5">
 													{important_properties && (
 														<PropertyList

@@ -13,16 +13,21 @@ import { useOpenAbility } from "./useOpenAbility";
  */
 export default function AbilityRow({
 	abilities,
+	openState,
 }: {
 	abilities: AbilityChange[];
+	/** Pass when something outside the row (the changed-hero card's change
+	 * list) also needs to open these popovers; otherwise the row owns it. */
+	openState?: ReturnType<typeof useOpenAbility>;
 }) {
+	const ownState = useOpenAbility();
 	const {
 		openAbility,
 		toggleAbility,
 		closeAbility,
 		setAnchorRef,
 		anchorRefFor,
-	} = useOpenAbility();
+	} = openState ?? ownState;
 
 	return (
 		<ul className="flex list-none gap-2 p-2.5">

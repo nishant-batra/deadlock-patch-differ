@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 import type { Item } from "#/types";
-import { diffAbilityTiersByClass, hasTierChanges } from "./abilityUpgrades";
+import {
+	diffAbilityTiers,
+	diffAbilityTiersByClass,
+	hasTierChanges,
+} from "./abilityUpgrades";
 
 const ability = (
 	class_name: string,
@@ -63,5 +67,25 @@ describe("diffAbilityTiersByClass", () => {
 			new Set(["ability_ice_dome"]),
 		);
 		expect(hasTierChanges(tiers["Frozen Shelter"])).toBe(false);
+	});
+});
+
+describe("diffAbilityTiers - tier descriptions", () => {
+	const described = (t1_desc: string) =>
+		({ ...FROZEN_SHELTER, description: { t1_desc } }) as unknown as Item;
+
+	it("ignores a tier description that only gained line breaks and highlights", () => {
+		const [tier1] = diffAbilityTiers(
+			described("+1 Charge +2s Duration"),
+			described('<span class="highlight">+1</span> Charge<br>+2s Duration'),
+		);
+		expect(tier1.text).toBeUndefined();
+	});
+
+	it("reports a reworded tier description as HTML", () => {
+		const before = '<span class="highlight">-5</span> Charge Time';
+		const after = '<span class="highlight">-5</span>s Charge Time';
+		const [tier1] = diffAbilityTiers(described(before), described(after));
+		expect(tier1.text).toEqual({ old: before, new: after });
 	});
 });

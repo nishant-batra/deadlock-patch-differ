@@ -1,8 +1,11 @@
 ﻿import AbilityRow from "#/shared/components/ability-row";
+import { useOpenAbility } from "#/shared/components/ability-row/useOpenAbility";
 import HeroAvatar from "#/shared/components/hero-avatar";
 import StatDelta from "#/shared/components/stat-delta";
 import type { ChangedHero } from "#/types";
-import { heroStatRows } from "./utils";
+import AbilityLedger from "./ability-ledger";
+import { abilityLedger, heroStatRows } from "./utils";
+import WordingLine from "./wording-line";
 
 export default function HeroCard({
 	hero,
@@ -11,6 +14,9 @@ export default function HeroCard({
 	weaponChanges,
 }: ChangedHero) {
 	const statRows = heroStatRows(statChanges, weaponChanges);
+	const { sections, wording } = abilityLedger(abilities);
+	const openState = useOpenAbility();
+	const { openAbility, toggleAbility } = openState;
 
 	return (
 		<article
@@ -30,7 +36,18 @@ export default function HeroCard({
 				</div>
 			)}
 
-			<AbilityRow abilities={abilities} />
+			<AbilityLedger
+				sections={sections}
+				openAbility={openAbility}
+				onOpen={toggleAbility}
+			/>
+			<WordingLine
+				wording={wording}
+				openAbility={openAbility}
+				onOpen={toggleAbility}
+			/>
+
+			<AbilityRow abilities={abilities} openState={openState} />
 		</article>
 	);
 }

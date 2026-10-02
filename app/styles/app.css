@@ -54,6 +54,22 @@ section[id] {
 	scroll-margin-top: var(--nav-height);
 }
 
+/* Tailwind v4's preflight resets buttons to the default arrow. Restore the
+   pointer for everything clickable; in the base layer so a `cursor-*`
+   utility on the element still wins. */
+@layer base {
+	a[href],
+	button:not(:disabled),
+	[role="button"]:not([aria-disabled="true"]),
+	summary,
+	select:not(:disabled),
+	label[for],
+	input[type="checkbox"]:not(:disabled),
+	input[type="radio"]:not(:disabled) {
+		cursor: pointer;
+	}
+}
+
 /* --------------------------------------------------------------------------
    "Cut steel" geometry (1b) - clipped corners standing in for Deadlock's
    angular UI plating, applied via className rather than drawn per-component

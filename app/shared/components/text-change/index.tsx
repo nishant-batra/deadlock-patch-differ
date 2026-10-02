@@ -1,4 +1,4 @@
-﻿import { diffWords } from "#/shared/utils/wordDiff";
+import { renderHtmlDiff } from "#/lib/htmlDiff";
 
 /**
  * A prose rewrite, diffed at the word level. Deadlock writes balance changes
@@ -8,8 +8,8 @@
  * line and printing the whole new one buries that, so only the words that moved
  * are marked: removed words struck through, added words emphasised.
  *
- * Both sides are plain text - the projection strips tags before comparing - so
- * there is no markup to render and nothing unsafe here.
+ * Both sides are the game's own description HTML, rendered with its icons and
+ * highlights - the same first-party copy the tooltip body renders.
  *
  * Neutral treatment on purpose: the stat rows on this same card use emerald/rose
  * for buff/nerf, so colouring prose green/red would imply a direction the text
@@ -27,32 +27,11 @@ export default function TextChange({
 			<span className="font-medium text-gray-400 text-xs uppercase tracking-wide">
 				Description
 			</span>
-			<p className="mt-0.5">
-				{diffWords(before, after).map((part, index) => {
-					if (part.op === "delete") {
-						return (
-							// biome-ignore lint/suspicious/noArrayIndexKey: derived from static payload text, never reorders
-							<s key={index} className="text-gray-500">
-								{part.text}
-							</s>
-						);
-					}
-					if (part.op === "insert") {
-						return (
-							// biome-ignore lint/suspicious/noArrayIndexKey: derived from static payload text, never reorders
-							<span key={index} className="font-medium text-gray-100">
-								{part.text}
-							</span>
-						);
-					}
-					return (
-						// biome-ignore lint/suspicious/noArrayIndexKey: derived from static payload text, never reorders
-						<span key={index} className="text-gray-400">
-							{part.text}
-						</span>
-					);
-				})}
-			</p>
+			<p
+				className="mt-0.5 text-gray-400"
+				// biome-ignore lint/security/noDangerouslySetInnerHtml: first-party API copy
+				dangerouslySetInnerHTML={{ __html: renderHtmlDiff(before, after) }}
+			/>
 		</div>
 	);
 }

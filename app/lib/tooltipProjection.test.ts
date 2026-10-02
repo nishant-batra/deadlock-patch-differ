@@ -187,3 +187,34 @@ describe("diffItems - rows judged by value, not listing", () => {
 		expect(diffItems(before, after)).toEqual([]);
 	});
 });
+
+describe("diffItems - description text", () => {
+	const described = (loc_string: string) =>
+		item({}, [
+			{
+				section_type: "passive",
+				section_attributes: [{ loc_string }],
+			} as unknown as TooltipSection,
+		]);
+
+	it("ignores a description whose only change is markup (Bleed)", () => {
+		expect(
+			diffItems(
+				described("Your bullets build up a Bleed on enemies."),
+				described(
+					'Your bullets build up a <span class="highlight">Bleed</span> on enemies.',
+				),
+			),
+		).toEqual([]);
+	});
+
+	it("reports a reworded description with its HTML kept for display", () => {
+		const before =
+			'Landing a <span class="highlight">Headshot</span> applies <span class="highlight">Healing Reduction</span>.';
+		const after =
+			'Landing a <span class="highlight">Headshot</span> reduces <span class="highlight">Incoming Healing</span>.';
+		expect(diffItems(described(before), described(after))).toEqual([
+			{ kind: "text", section: "passive", old: before, new: after },
+		]);
+	});
+});

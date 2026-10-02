@@ -1,4 +1,42 @@
-import type { InfoSection } from "#/types";
+import { type ChangeValue, isScaleChange, statKeyOf } from "#/lib/diffEngine";
+import type { DeltaRow } from "#/shared/components/stat-delta";
+import { isNegativeProperty } from "#/shared/utils/negativeProperties";
+import { humaniseStatKey } from "#/shared/utils/statLabels";
+import type { Change, InfoSection, Item } from "#/types";
+
+/** Property values are scalars; anything else has no delta row to show. */
+const scalarOnly = (value: ChangeValue | undefined) =>
+	typeof value === "string" || typeof value === "number" ? value : undefined;
+
+/**
+ * One `properties.X.value` or `properties.X.scale_function.stat_scale` change
+ * as a `StatDelta` row. Shared by the popover's strip and the hero card's
+ * ability list, so both label and colour a move the same way.
+ */
+export function abilityDeltaRow(
+	change: Change,
+	allProperties: Item["properties"],
+): DeltaRow {
+	const { path, kind, old, new: next } = change;
+	const key = statKeyOf(change);
+	const { label, negative_attribute, prefix, postfix } =
+		allProperties[key] ?? {};
+	const name = label ?? humaniseStatKey(key);
+	const scale = isScaleChange(change);
+	return {
+		id: path.join("."),
+		label: scale ? `${name} Scaling` : name,
+		kind: kind === "added" ? "added" : kind === "removed" ? "removed" : "stat",
+		old: scalarOnly(old),
+		new: scalarOnly(next),
+		// AbilityCooldown and siblings carry no `negative_attribute` in the
+		// payload at all - see negativeProperties.ts.
+		negativeAttribute: negative_attribute ?? isNegativeProperty(key),
+		// `stat_scale` is a unitless per-point multiplier, not the property's own
+		// displayed value, so the property's "%"/"m" units do not apply to it.
+		...(scale ? {} : { prefix, postfix }),
+	};
+}
 
 export const formatBonus = (value: string | number | undefined) => {
 	if (value === undefined || value === null) return "—";

@@ -1,6 +1,67 @@
+import type { TierRow } from "#/lib/abilityUpgrades";
+import { isScaleChange, isStatChange } from "#/lib/diffEngine";
+import { abilityDeltaRow } from "#/shared/components/ability-popover/utils";
 import type { DeltaRow } from "#/shared/components/stat-delta";
 import { isNegativeHeroStat, labelForStatKey } from "#/shared/utils/statLabels";
-import type { Change } from "#/types";
+import type { AbilityChange, Change, Item } from "#/types";
+
+export type LedgerSection = {
+	ability: Item;
+	rows: DeltaRow[];
+	tierRows: TierRow[];
+};
+
+export type WordingEntry = { ability: Item };
+
+const isTextChange = ({ path }: Change) => path.at(-1) === "loc_string";
+
+/** Upgrade moves the per-tier diff already covers - same split as the popover. */
+const isTierCovered = ({ path }: Change) =>
+	path[0] === "upgrades" ||
+	(path[0] === "description" && /^t\d_desc$/.test(path[1]));
+
+/**
+ * Splits a hero's ability changes into what the card spells out and what it
+ * only names. Number moves (property values, spirit scaling, upgrade-tier
+ * bonuses) go in `sections`, one per ability, in kit order. Wording rewrites -
+ * description and tier text - plus anything else unrecognised go in `wording`,
+ * which the card collapses to a single line of ability names. An ability with
+ * both lands in both.
+ */
+export function abilityLedger(abilities: AbilityChange[]) {
+	const sections: LedgerSection[] = [];
+	const wording: WordingEntry[] = [];
+
+	for (const { ability, changes, tiers } of abilities) {
+		const rows = changes
+			.filter((change) => isStatChange(change) || isScaleChange(change))
+			.map((change) => abilityDeltaRow(change, ability.properties ?? {}));
+		const tierRows = tiers.flatMap(({ tier, rows }) =>
+			rows
+				.filter(({ kind }) => kind !== "equal")
+				.map((row) => ({
+					...row,
+					key: `t${tier}.${row.key}`,
+					label: `T${tier} · ${row.label}`,
+				})),
+		);
+		const hasWording =
+			changes.some(isTextChange) || tiers.some(({ text }) => text);
+		const hasOther = changes.some(
+			(change) =>
+				!isStatChange(change) &&
+				!isScaleChange(change) &&
+				!isTextChange(change) &&
+				!isTierCovered(change),
+		);
+
+		if (rows.length || tierRows.length)
+			sections.push({ ability, rows, tierRows });
+		if (hasWording || hasOther) wording.push({ ability });
+	}
+
+	return { sections, wording };
+}
 
 /**
  * The `starting_stats` / `standard_level_up_upgrades` / `weapon_info` key a

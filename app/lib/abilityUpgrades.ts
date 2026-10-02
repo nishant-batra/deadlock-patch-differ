@@ -17,7 +17,7 @@
 
 import { humaniseStatKey } from "#/shared/utils/statLabels";
 import type { Item, PropertyUpgrade, Upgrade } from "#/types";
-import { prose } from "./tooltipProjection";
+import { toDiffText } from "./htmlDiff";
 
 /** Abilities always have three tiers; 220 of 278 in the catalog do. */
 const TIERS = [1, 2, 3] as const;
@@ -99,7 +99,7 @@ const projectTier = (
 const same = (a: unknown, b: unknown) => String(a) === String(b);
 
 const tierDescription = (item: Item | undefined, tier: TierNumber) =>
-	prose(item?.description?.[`t${tier}_desc`] ?? "");
+	item?.description?.[`t${tier}_desc`] ?? "";
 
 /**
  * Three tiers, each with its bonus rows and its own description rewrite.
@@ -175,7 +175,10 @@ export function diffAbilityTiers(
 		return {
 			tier,
 			rows,
-			text: oldText !== newText ? { old: oldText, new: newText } : undefined,
+			text:
+				toDiffText(oldText) !== toDiffText(newText)
+					? { old: oldText, new: newText }
+					: undefined,
 		};
 	});
 }

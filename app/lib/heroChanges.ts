@@ -29,9 +29,9 @@
 import type { Hero, HeroChanges, Item } from "#/types";
 import { hasTierChanges, type TierDiff } from "./abilityUpgrades";
 import type { Change } from "./diffEngine";
+import { toDiffText } from "./htmlDiff";
 import { ABILITY_SLOTS, isLiveHero, WEAPON_SLOT } from "./roster";
 import { isEmptyStatValue } from "./statValue";
-import { prose } from "./tooltipProjection";
 
 type StatValue = string | number;
 type StatEntry = { path: string[]; value: StatValue };
@@ -186,7 +186,7 @@ function diffEntries(
 }
 
 /** Casing-only rewrites are not a change - same rule as `diffItems`. */
-const sectionText = (html: string) => prose(html).toLowerCase();
+const sectionText = (html: string) => toDiffText(html).toLowerCase();
 
 /**
  * Section-by-section diff of the ability's tooltip text. Sections are matched
