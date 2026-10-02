@@ -1,13 +1,18 @@
 ﻿import { isScaleChange, isStatChange, statKeyOf } from "#/lib/diffEngine";
+import { prose } from "#/lib/tooltipProjection";
 import { NEUTRAL } from "#/shared/components/item-card/constants";
 import PropertyList from "#/shared/components/property-list";
 import StatDelta, { type DeltaRow } from "#/shared/components/stat-delta";
+import TextChange from "#/shared/components/text-change";
 import { isNegativeProperty } from "#/shared/utils/negativeProperties";
 import { humaniseStatKey } from "#/shared/utils/statLabels";
 import type { Change, Item } from "#/types";
 import { renderedKeys, sectionPropertyKeys } from "./utils";
 
 const OTHER_LIMIT = 4;
+
+const isTextChange = ({ path }: Change) => path.at(-1) === "loc_string";
+const textSectionIndex = ({ path }: Change) => Number(path.at(-2));
 
 /**
  * Everything that moved on an ability but is not a displayable
@@ -49,8 +54,20 @@ export default function AbilityDetail({
 }) {
 	const statChanges = changes.filter(isStatChange);
 	const scaleChanges = changes.filter(isScaleChange);
-	const { tooltip_details, properties: allProperties = {}, description } = item;
+	const { tooltip_details, properties: allProperties = {} } = item;
 	const sections = tooltip_details?.info_sections ?? [];
+
+	// A rewritten section replaces its plain copy in the tooltip rather than
+	// printing both. Text changes are keyed by section position. A section the
+	// patch removed has no slot left to render in, so those go in the strip
+	// instead and the change is never dropped.
+	const textChanges = changes.filter(isTextChange);
+	const textChangeAt = new Map(
+		textChanges.map((change) => [textSectionIndex(change), change]),
+	);
+	const removedTextChanges = textChanges.filter(
+		(change) => textSectionIndex(change) >= sections.length,
+	);
 
 	// Every changed key with a chip gets its delta rendered there instead
 	// (PropertyList's `previousValues`) - only orphans, changed keys the
@@ -114,7 +131,9 @@ export default function AbilityDetail({
 			className="mt-2 flex flex-col gap-1 rounded-md p-2"
 			style={{ background: NEUTRAL.description }}
 		>
-			{(orphanRows.length > 0 || scaleRows.length > 0) && (
+			{(orphanRows.length > 0 ||
+				scaleRows.length > 0 ||
+				removedTextChanges.length > 0) && (
 				<div
 					className="flex flex-col rounded-sm py-1"
 					style={{ background: NEUTRAL.highlight }}
@@ -125,26 +144,26 @@ export default function AbilityDetail({
 					{scaleRows.map((row) => (
 						<StatDelta key={row.id} row={row} />
 					))}
+					{removedTextChanges.map(({ path, old, new: next }) => (
+						<TextChange
+							key={path.join(".")}
+							before={prose(String(old ?? ""))}
+							after={prose(String(next ?? ""))}
+						/>
+					))}
 				</div>
 			)}
 			<OtherChanges
-				changes={changes.filter((c) => !isStatChange(c) && !isScaleChange(c))}
+				changes={changes.filter(
+					(c) => !isStatChange(c) && !isScaleChange(c) && !isTextChange(c),
+				)}
 			/>
-
-			{/* The first info section usually repeats `desc` verbatim - only fall
-			    back to it when there are no sections at all. */}
-			{sections.length === 0 && description?.desc && (
-				<div
-					className="text-gray-300 text-sm"
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: first-party API copy
-					dangerouslySetInnerHTML={{ __html: description.desc }}
-				/>
-			)}
 
 			{sections.map((section, index) => {
 				// De-duplicated: a property can appear as both a basic property and
 				// an important property of a block, which would collide as a key.
 				const { loc_string } = section;
+				const textChange = textChangeAt.get(index);
 				const properties = [...new Set(sectionPropertyKeys(section))];
 				if (!loc_string && properties.length === 0) return null;
 				return (
@@ -153,13 +172,19 @@ export default function AbilityDetail({
 						key={`${loc_string ?? "section"}-${index}`}
 						className="flex flex-col"
 					>
-						{loc_string && (
-							<div
-								className="my-1 text-gray-300 text-sm"
-								// biome-ignore lint/security/noDangerouslySetInnerHtml: first-party API copy
-								dangerouslySetInnerHTML={{ __html: loc_string }}
-							/>
-						)}
+						{loc_string &&
+							(textChange ? (
+								<TextChange
+									before={prose(String(textChange.old ?? ""))}
+									after={prose(String(textChange.new ?? ""))}
+								/>
+							) : (
+								<div
+									className="my-1 text-gray-300 text-sm"
+									// biome-ignore lint/security/noDangerouslySetInnerHtml: first-party API copy
+									dangerouslySetInnerHTML={{ __html: loc_string }}
+								/>
+							))}
 						{properties.length > 0 && (
 							<PropertyList
 								allProperties={allProperties}
@@ -174,7 +199,7 @@ export default function AbilityDetail({
 				);
 			})}
 
-			{sections.length === 0 && !description?.desc && (
+			{sections.length === 0 && (
 				<p className="text-gray-500 text-sm">No detail available.</p>
 			)}
 		</div>

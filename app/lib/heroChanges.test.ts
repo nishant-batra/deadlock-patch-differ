@@ -44,7 +44,8 @@ const weapon = (heroName: string, info: Record<string, unknown>): Item =>
 
 type AbilityOverrides = {
 	properties?: Record<string, { value: string | number; stat_scale?: number }>;
-	desc?: string;
+	/** Tooltip text, one entry per info section. */
+	sections?: string[];
 };
 
 const ability = (
@@ -65,7 +66,11 @@ const ability = (
 				],
 			),
 		),
-		description: { desc: overrides.desc ?? "Does a thing." },
+		tooltip_details: {
+			info_sections: (overrides.sections ?? ["Does a thing."]).map(
+				(loc_string) => ({ loc_string }),
+			),
+		},
 	}) as unknown as Item;
 
 /** One hero's full item set: weapon plus four default abilities, overridable. */
@@ -390,24 +395,56 @@ describe("buildHeroChanges - abilities", () => {
 		).toBeUndefined();
 	});
 
-	it("ignores casing-only and markup-only description edits", () => {
+	it("ignores casing-only and markup-only text edits", () => {
 		expect(
 			abilityChanges(
-				{ desc: "Deals <b>Spirit Damage</b>." },
-				{ desc: "Deals spirit damage." },
+				{ sections: ["Deals <b>Spirit Damage</b>."] },
+				{ sections: ["Deals spirit damage."] },
 			),
 		).toBeUndefined();
 	});
 
-	it("reports a real description rewrite (Time Wall lost its silence)", () => {
+	it("reports a real text rewrite (Time Wall lost its silence)", () => {
 		expect(
 			abilityChanges(
-				{ desc: "Enemies are slowed and silenced." },
-				{ desc: "Enemies are slowed." },
+				{ sections: ["Enemies are slowed and silenced."] },
+				{ sections: ["Enemies are slowed."] },
 			),
 		).toEqual([
-			expect.objectContaining({ path: ["description"], kind: "modified" }),
+			expect.objectContaining({
+				path: ["tooltip_details", "info_sections", "0", "loc_string"],
+				kind: "modified",
+			}),
 		]);
+	});
+
+	it("reports a rewrite of a later section (Djinn's Mark)", () => {
+		expect(
+			abilityChanges(
+				{ sections: ["Marks an enemy.", "Deals 50 damage."] },
+				{ sections: ["Marks an enemy.", "Deals 60 damage."] },
+			),
+		).toEqual([
+			expect.objectContaining({
+				path: ["tooltip_details", "info_sections", "1", "loc_string"],
+				kind: "modified",
+			}),
+		]);
+	});
+
+	it("reports a section added or removed by the patch", () => {
+		expect(
+			abilityChanges(
+				{ sections: ["One."] },
+				{ sections: ["One.", "Two."] },
+			),
+		).toEqual([expect.objectContaining({ kind: "added", new: "Two." })]);
+		expect(
+			abilityChanges(
+				{ sections: ["One.", "Two."] },
+				{ sections: ["One."] },
+			),
+		).toEqual([expect.objectContaining({ kind: "removed", old: "Two." })]);
 	});
 
 	it("flags a hero whose only change is an upgrade tier", () => {

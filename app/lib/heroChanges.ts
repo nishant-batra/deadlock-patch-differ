@@ -11,7 +11,8 @@
 //   weapon    every numeric weapon_info field (ranges and spread penalties
 //             included), minus derived duplicates and the recoil RNG seed
 //   ability   properties.*.value and properties.*.scale_function.stat_scale,
-//             the description text, and the upgrade tiers
+//             the tooltip text (each info section's `loc_string`), and the
+//             upgrade tiers
 //
 // and judges each value, not its presence in the payload:
 //
@@ -185,10 +186,29 @@ function diffEntries(
 }
 
 /** Casing-only rewrites are not a change - same rule as `diffItems`. */
-const descriptionOf = (ability: Item | undefined) =>
-	ability?.description?.desc
-		? prose(ability.description.desc).toLowerCase()
-		: "";
+const sectionText = (html: string) => prose(html).toLowerCase();
+
+/**
+ * Section-by-section diff of the ability's tooltip text. Sections are matched
+ * by position; one that exists on only one side is added/removed.
+ */
+function textChanges(before: Item, after: Item): Change[] {
+	const previous = before.tooltip_details?.info_sections ?? [];
+	const current = after.tooltip_details?.info_sections ?? [];
+	const changes: Change[] = [];
+	for (let index = 0; index < Math.max(previous.length, current.length); index++) {
+		const oldHtml = previous[index]?.loc_string ?? "";
+		const newHtml = current[index]?.loc_string ?? "";
+		if (sectionText(oldHtml) === sectionText(newHtml)) continue;
+		changes.push({
+			path: ["tooltip_details", "info_sections", String(index), "loc_string"],
+			kind: !oldHtml ? "added" : !newHtml ? "removed" : "modified",
+			...(oldHtml && { old: oldHtml }),
+			...(newHtml && { new: newHtml }),
+		});
+	}
+	return changes;
+}
 
 /**
  * Everything the Changes page renders per hero, for live heroes that changed.
@@ -280,16 +300,7 @@ export function buildHeroChanges(
 				propertyFields.prev,
 				propertyFields.next,
 			);
-			const oldText = descriptionOf(previousAbility);
-			const newText = descriptionOf(ability);
-			if (oldText !== newText) {
-				changes.push({
-					path: ["description"],
-					kind: "modified",
-					old: previousAbility.description?.desc ?? "",
-					new: ability.description?.desc ?? "",
-				});
-			}
+			changes.push(...textChanges(previousAbility, ability));
 			if (changes.length > 0) abilities[ability.name] = changes;
 			if (hasTierChanges(tiersByName[ability.name] ?? [])) tiersChanged = true;
 		}

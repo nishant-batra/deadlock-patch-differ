@@ -156,13 +156,11 @@ export interface PropertyUpgrade {
 	upgrade_type?: string;
 }
 
+/** Only the upgrade-tier texts: the base description is each ability's first tooltip section. */
 export interface Description {
-	desc?: string;
 	t1_desc?: string;
 	t2_desc?: string;
 	t3_desc?: string;
-	active?: string;
-	passive?: string;
 }
 
 export interface TooltipSection {

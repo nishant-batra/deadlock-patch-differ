@@ -15,10 +15,8 @@ import type { AbilityChange } from "#/types";
  * tooltip/property detail with no diff noise - exactly what a "what does this
  * ability do" page needs.
  *
- * No separate description blurb under the heading: `AbilityDetail`'s first
- * tooltip section already repeats the same text (Valve's own tooltip data
- * duplicates `desc` onto the first section's `loc_string`), so showing it here
- * too would just be the same sentence twice on the page.
+ * No separate description blurb under the heading: the description is the
+ * first tooltip section's text, which `AbilityDetail` already renders.
  */
 export default function HeroAbilities({
 	abilities,

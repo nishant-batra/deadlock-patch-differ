@@ -99,11 +99,7 @@ const projectTier = (
 const same = (a: unknown, b: unknown) => String(a) === String(b);
 
 const tierDescription = (item: Item | undefined, tier: TierNumber) =>
-	prose(
-		(item?.description as Record<string, string> | undefined)?.[
-			`t${tier}_desc`
-		] ?? "",
-	);
+	prose(item?.description?.[`t${tier}_desc`] ?? "");
 
 /**
  * Three tiers, each with its bonus rows and its own description rewrite.

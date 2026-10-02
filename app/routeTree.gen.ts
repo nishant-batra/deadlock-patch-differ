@@ -11,9 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as LayoutRouteImport } from './routes/_layout'
 import { Route as LayoutIndexRouteImport } from './routes/_layout.index'
-import { Route as LayoutItemsRouteImport } from './routes/_layout.items'
-import { Route as LayoutHeroesRouteImport } from './routes/_layout.heroes'
 import { Route as LayoutCompareRouteImport } from './routes/_layout.compare'
+import { Route as LayoutHeroesRouteImport } from './routes/_layout.heroes'
+import { Route as LayoutItemsRouteImport } from './routes/_layout.items'
 import { Route as LayoutHeroesHeroSlugRouteImport } from './routes/_layout.heroes_.$heroSlug'
 
 const LayoutRoute = LayoutRouteImport.update({
@@ -25,9 +25,9 @@ const LayoutIndexRoute = LayoutIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LayoutRoute,
 } as any)
-const LayoutItemsRoute = LayoutItemsRouteImport.update({
-  id: '/items',
-  path: '/items',
+const LayoutCompareRoute = LayoutCompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
   getParentRoute: () => LayoutRoute,
 } as any)
 const LayoutHeroesRoute = LayoutHeroesRouteImport.update({
@@ -35,9 +35,9 @@ const LayoutHeroesRoute = LayoutHeroesRouteImport.update({
   path: '/heroes',
   getParentRoute: () => LayoutRoute,
 } as any)
-const LayoutCompareRoute = LayoutCompareRouteImport.update({
-  id: '/compare',
-  path: '/compare',
+const LayoutItemsRoute = LayoutItemsRouteImport.update({
+  id: '/items',
+  path: '/items',
   getParentRoute: () => LayoutRoute,
 } as any)
 const LayoutHeroesHeroSlugRoute = LayoutHeroesHeroSlugRouteImport.update({
@@ -104,11 +104,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutIndexRouteImport
       parentRoute: typeof LayoutRoute
     }
-    '/_layout/items': {
-      id: '/_layout/items'
-      path: '/items'
-      fullPath: '/items'
-      preLoaderRoute: typeof LayoutItemsRouteImport
+    '/_layout/compare': {
+      id: '/_layout/compare'
+      path: '/compare'
+      fullPath: '/compare'
+      preLoaderRoute: typeof LayoutCompareRouteImport
       parentRoute: typeof LayoutRoute
     }
     '/_layout/heroes': {
@@ -118,11 +118,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutHeroesRouteImport
       parentRoute: typeof LayoutRoute
     }
-    '/_layout/compare': {
-      id: '/_layout/compare'
-      path: '/compare'
-      fullPath: '/compare'
-      preLoaderRoute: typeof LayoutCompareRouteImport
+    '/_layout/items': {
+      id: '/_layout/items'
+      path: '/items'
+      fullPath: '/items'
+      preLoaderRoute: typeof LayoutItemsRouteImport
       parentRoute: typeof LayoutRoute
     }
     '/_layout/heroes_/$heroSlug': {

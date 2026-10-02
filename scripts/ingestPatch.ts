@@ -64,7 +64,6 @@ const SHOP_FIELDS = [
 	"is_active_item",
 	"properties",
 	"tooltip_sections",
-	"description",
 	"component_items",
 ];
 
@@ -78,9 +77,10 @@ const ABILITY_FIELDS = [
 	"ability_type",
 	"properties",
 	"tooltip_details",
-	"description",
 	"upgrades",
 ];
+
+const TIER_DESCRIPTION_FIELDS = ["t1_desc", "t2_desc", "t3_desc"];
 
 const HERO_VIEW_FIELDS = [
 	"id",
@@ -175,7 +175,14 @@ function buildItemsView(items: Json[], heroes: Json[]) {
 		items: items.filter(isShopItem).map((item) => pick(item, SHOP_FIELDS)),
 		abilities: items
 			.filter((item) => heroAbilityClasses.has(item.class_name as string))
-			.map((item) => pick(item, ABILITY_FIELDS)),
+			.map((item) => ({
+				...pick(item, ABILITY_FIELDS),
+				// Only the tier texts: `desc` repeats the first tooltip section.
+				description: pick(
+					(item.description as Json) ?? {},
+					TIER_DESCRIPTION_FIELDS,
+				),
+			})),
 	};
 }
 
