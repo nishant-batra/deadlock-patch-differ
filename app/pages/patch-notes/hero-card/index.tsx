@@ -19,11 +19,11 @@ export default function ChangedHeroCard({
 	const openState = useOpenAbility();
 	const { openAbility, toggleAbility } = openState;
 
+	// No `content-visibility: auto` here: with the router's view transitions it
+	// crashes Chrome's renderer (STATUS_BREAKPOINT) on home -> hero -> back ->
+	// hero.
 	return (
-		<HeroCard
-			hero={hero}
-			className="m-3 min-w-0 max-w-100 [content-visibility:auto]"
-		>
+		<HeroCard hero={hero} className="m-3 min-w-0 max-w-100">
 			{isNew && (
 				<div className="cut-corner bg-emerald-500/25 px-2.5 py-1 text-center font-bold text-[11px] text-emerald-200 uppercase tracking-widest">
 					New hero this patch
