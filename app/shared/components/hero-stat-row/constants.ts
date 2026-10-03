@@ -2,7 +2,7 @@
  * The 8 `starting_stats` keys a player actually compares heroes on, out of
  * 23 total. Verified against every live hero: all 23 keys are present on
  * every hero's `starting_stats`, so this is a fixed subset, not a fallback.
- * The rest live behind the card's "All stats" toggle.
+ * The rest live behind the hero page's "All stats" toggle.
  */
 export const PRIMARY_STATS = [
 	"max_health",

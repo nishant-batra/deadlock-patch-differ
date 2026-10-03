@@ -1,6 +1,7 @@
-import ScalingIcon from "#/shared/components/ability-popover/scaling-icon";
+import StatRow from "#/shared/components/hero-stat-row";
+import ScalingIcon from "#/shared/components/scaling-icon";
+import { scalingRows } from "#/shared/utils/heroDisplayRows";
 import type { HeroStatScaling } from "#/types";
-import { scalingRows } from "./utils";
 
 /**
  * Base stats that grow with another stat - e.g. Haze's clip size rises with
@@ -19,17 +20,13 @@ export default function HeroScaling({
 		<section className="mb-8">
 			<h2 className="mb-2 font-bold text-xl">Stat Scaling</h2>
 			<div className="flex flex-col gap-0.5 rounded-md bg-[#1b1b24] py-1">
-				{rows.map(({ key, label, scale, scalingStat, sourceLabel }) => (
-					<div
+				{rows.map(({ key, label, value, scalingStat }) => (
+					<StatRow
 						key={key}
-						className="flex items-baseline justify-between gap-2 px-2 py-1 text-sm"
-					>
-						<span className="text-gray-300">{label}</span>
-						<span className="font-bold text-gray-100">
-							+{scale} per {sourceLabel}
-							<ScalingIcon filter={scalingStat} />
-						</span>
-					</div>
+						label={label}
+						value={value}
+						icon={<ScalingIcon filter={scalingStat} />}
+					/>
 				))}
 			</div>
 		</section>

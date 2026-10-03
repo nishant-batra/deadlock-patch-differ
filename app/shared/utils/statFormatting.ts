@@ -22,3 +22,19 @@ export const shouldAppendPostfix = (value: unknown, postfix?: string) =>
 	Boolean(postfix) &&
 	postfix?.trim() !== "m" &&
 	!String(value ?? "").endsWith(postfix as string);
+
+/**
+ * A property still gated behind an unpurchased ability upgrade tier renders at
+ * its base value of 0 - real information, but only the tier that unlocks it
+ * says so; a bare "0" with no context is noise. Diffed properties are exempt:
+ * a change *to* or *from* 0 is still a real delta worth showing. So are
+ * `tooltip_is_elevated` properties - Valve marked them worth featuring
+ * regardless of value, so hiding them at 0 would hide that call.
+ */
+export const isPlaceholderZero = (
+	{
+		value,
+		tooltip_is_elevated,
+	}: { value?: string | number; tooltip_is_elevated?: boolean },
+	changed: boolean,
+) => !changed && !tooltip_is_elevated && (value === 0 || value === "0");

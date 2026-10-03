@@ -1,5 +1,5 @@
-import TierRowView from "#/shared/components/ability-popover/tier-row";
 import StatDelta from "#/shared/components/stat-delta";
+import TierDelta from "./tier-delta";
 import type { LedgerSection } from "./utils";
 
 /**
@@ -51,7 +51,7 @@ export default function AbilityLedger({
 						{tierRows.length > 0 && (
 							<div className="px-2 text-sm">
 								{tierRows.map((row) => (
-									<TierRowView key={row.key} row={row} />
+									<TierDelta key={row.key} row={row} />
 								))}
 							</div>
 						)}

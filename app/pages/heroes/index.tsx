@@ -1,25 +1,18 @@
-import { useMemo, useState } from "react";
-import CutFrame from "#/shared/components/cut-frame";
-import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
 import UpcomingHeroes from "#/shared/components/upcoming-heroes";
 import type { Hero, HeroEntry } from "#/types";
 import HeroProfileCard from "./hero-profile-card";
 
 export default function Heroes({
 	heroesData,
-	changedNames,
 	upcoming,
 }: {
 	heroesData: HeroEntry[];
-	changedNames: string[];
 	/** Announced, not yet playable - shown above the live roster. */
 	upcoming: Hero[];
 }) {
-	const [expandAll, setExpandAll] = useState(false);
 	const sorted = [...heroesData].sort(({ hero: a }, { hero: b }) =>
 		a.name.localeCompare(b.name),
 	);
-	const changedSet = useMemo(() => new Set(changedNames), [changedNames]);
 
 	return (
 		<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
@@ -34,29 +27,12 @@ export default function Heroes({
 					<UpcomingHeroes heroes={upcoming} />
 				</section>
 			)}
-			<div className="mb-4 flex items-center justify-between">
-				<p className="text-gray-400 text-sm">
-					{sorted.length} live hero{sorted.length === 1 ? "" : "es"}
-				</p>
-				<CutFrame color={AMBER_BORDER}>
-					<button
-						type="button"
-						onClick={() => setExpandAll((current) => !current)}
-						className="cut-corner px-3 py-1.5 font-bold"
-					>
-						{expandAll ? "Collapse all" : "Expand all stats"}
-					</button>
-				</CutFrame>
-			</div>
+			<p className="mb-4 text-gray-400 text-sm">
+				{sorted.length} live hero{sorted.length === 1 ? "" : "es"}
+			</p>
 			<div className="masonary">
 				{sorted.map(({ hero, abilities }) => (
-					<HeroProfileCard
-						key={hero.id}
-						hero={hero}
-						abilities={abilities}
-						expandAll={expandAll}
-						isChanged={changedSet.has(hero.name)}
-					/>
+					<HeroProfileCard key={hero.id} hero={hero} abilities={abilities} />
 				))}
 			</div>
 		</main>

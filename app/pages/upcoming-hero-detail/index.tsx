@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import CutFrame from "#/shared/components/cut-frame";
-import { accentOf, textOn } from "#/shared/components/upcoming-heroes/utils";
+import { accentOf, textOn } from "#/shared/utils/heroAccent";
 import type { Hero } from "#/types";
 
 /**

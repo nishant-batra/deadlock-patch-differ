@@ -1,22 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Heroes from "#/pages/heroes";
-import {
-	fetchChangedHeroNames,
-	fetchHeroes,
-	fetchUpcomingHeroes,
-} from "#/server/heroes";
+import { fetchHeroes, fetchUpcomingHeroes } from "#/server/heroes";
 import type { Hero, HeroEntry } from "#/types";
 
 type HeroesLoaderData = {
 	heroes: HeroEntry[];
-	changedNames: string[];
 	upcoming: Hero[];
 };
 
 export const Route = createFileRoute("/_layout/heroes")({
 	head: ({ loaderData }: { loaderData?: HeroesLoaderData }) => {
 		const heroCount = loaderData?.heroes.length ?? 0;
-		const title = `All ${heroCount > 0 ? `${heroCount} ` : ""}Deadlock Heroes — Base Stats, Abilities & Upgrades | Deadlock Patch Comparator`;
+		const title = `All ${heroCount > 0 ? `${heroCount} ` : ""}Deadlock Heroes - Base Stats, Abilities & Upgrades | Deadlock Patch Comparator`;
 		const description = `Complete catalog of all ${heroCount > 0 ? `${heroCount} ` : ""}live Deadlock heroes. View starting stats, leveling growth, weapon info, and ability upgrade tiers.`;
 
 		return {
@@ -43,12 +38,11 @@ export const Route = createFileRoute("/_layout/heroes")({
 		};
 	},
 	loader: async () => {
-		const [heroes, changedNames, upcoming] = await Promise.all([
+		const [heroes, upcoming] = await Promise.all([
 			fetchHeroes(),
-			fetchChangedHeroNames(),
 			fetchUpcomingHeroes(),
 		]);
-		return { heroes, changedNames, upcoming };
+		return { heroes, upcoming };
 	},
 	component: RouteComponent,
 });
@@ -56,13 +50,6 @@ export const Route = createFileRoute("/_layout/heroes")({
 function RouteComponent() {
 	// Annotated for the same reason as the other routes: the generated route
 	// tree and `useLoaderData()` reference each other, so inference yields `any`.
-	const { heroes, changedNames, upcoming }: HeroesLoaderData =
-		Route.useLoaderData();
-	return (
-		<Heroes
-			heroesData={heroes}
-			changedNames={changedNames}
-			upcoming={upcoming}
-		/>
-	);
+	const { heroes, upcoming }: HeroesLoaderData = Route.useLoaderData();
+	return <Heroes heroesData={heroes} upcoming={upcoming} />;
 }

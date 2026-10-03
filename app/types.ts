@@ -187,6 +187,8 @@ export interface InfoSection {
 }
 
 export interface PropertiesBlock {
+	/** The block's own heading, e.g. Rule, Ratannia!'s "Banner Aura". */
+	loc_string?: string;
 	properties: PropertyInfo[];
 }
 
@@ -272,6 +274,9 @@ export interface HeroDescription {
 
 /** The hero's gun - its `weapon_primary` entry, trimmed to what the page shows. */
 export type HeroWeapon = Pick<Item, "name"> & { weapon_info: WeaponInfo };
+
+/** One `/compare` column: stats and the gun, no ability kit. */
+export type CompareHero = { hero: Hero; weapon?: HeroWeapon };
 
 /** What `/heroes/$heroSlug` renders: a full live hero, or an announced one. */
 export type HeroPage =

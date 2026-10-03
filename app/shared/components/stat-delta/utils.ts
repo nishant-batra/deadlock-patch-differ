@@ -132,14 +132,25 @@ const asNumber = (value: unknown) => {
  * which way is bad, so a rise in a negative stat is a nerf and vice versa.
  * Unknown / non-numeric moves stay neutral rather than guessing.
  */
-export function toneOfDeltaRow(row: DeltaRow) {
-	if (row.kind === "added") return "text-emerald-300";
-	if (row.kind === "removed") return "text-rose-300";
-	const before = asNumber(row.old);
-	const after = asNumber(row.new);
-	if (before === null || after === null || before === after) {
-		return "text-gray-200";
-	}
-	const better = row.negativeAttribute ? after < before : after > before;
-	return better ? "text-emerald-300" : "text-rose-300";
+export function deltaDirection({
+	kind,
+	old,
+	new: next,
+	negativeAttribute,
+}: DeltaRow): "better" | "worse" | "neutral" {
+	if (kind === "added") return "better";
+	if (kind === "removed") return "worse";
+	const before = asNumber(old);
+	const after = asNumber(next);
+	if (before === null || after === null || before === after) return "neutral";
+	const better = negativeAttribute ? after < before : after > before;
+	return better ? "better" : "worse";
 }
+
+const TONES = {
+	better: "text-emerald-300",
+	worse: "text-rose-300",
+	neutral: "text-gray-200",
+} as const;
+
+export const toneOfDeltaRow = (row: DeltaRow) => TONES[deltaDirection(row)];

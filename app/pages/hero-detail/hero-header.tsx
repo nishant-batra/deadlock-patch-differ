@@ -1,10 +1,8 @@
 import CutFrame from "#/shared/components/cut-frame";
-import { accentOf } from "#/shared/components/upcoming-heroes/utils";
+import { accentOf } from "#/shared/utils/heroAccent";
+import { COMPLEXITY_MAX } from "#/shared/utils/heroDisplayRows";
 import type { Hero } from "#/types";
 import HeroPortrait from "./hero-portrait";
-
-/** Highest `complexity` in the catalog (Sinclair); everyone else is 1-3. */
-const COMPLEXITY_MAX = 4;
 
 /**
  * Portrait framed in the hero's own theme colour, name, one-line role, and

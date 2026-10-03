@@ -6,6 +6,7 @@ import {
 } from "#/shared/components/stat-delta";
 import { isNegativeProperty } from "#/shared/utils/negativeProperties";
 import {
+	isPlaceholderZero,
 	resolvePrefix,
 	shouldAppendPostfix,
 } from "#/shared/utils/statFormatting";
@@ -93,15 +94,7 @@ export default function PropertyList({
 				const previousValue = previousValues?.get(property);
 				const changed = previousValue !== undefined;
 
-				// A property still gated behind an unpurchased ability upgrade tier
-				// renders here at its base value of 0 - real information, but only
-				// the tier that unlocks it (shown separately) says so; a bare "0"
-				// chip with no context is noise. Diffed properties are exempt: a
-				// change *to* or *from* 0 is still a real delta worth showing. So are
-				// `tooltip_is_elevated` properties - Valve marked them worth featuring
-				// regardless of value, so hiding them at 0 would hide that call.
-				if (!changed && !tooltip_is_elevated && (value === 0 || value === "0"))
-					return null;
+				if (isPlaceholderZero(displayProperty, changed)) return null;
 
 				const chip = (
 					<div

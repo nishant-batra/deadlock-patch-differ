@@ -1,14 +1,15 @@
 import clsx from "clsx";
 import HeroAvatar from "#/shared/components/hero-avatar";
-import type { Hero } from "#/types";
+import type { CompareHero } from "#/types";
 import { compareSections } from "./utils";
 
 /**
  * Every stat heading for the current selection, one column per hero. A plain
- * prop-driven table - as `heroes` grows from 1 to 3, `heroes.map` adds a
+ * prop-driven table - as `entries` grows from 1 to 3, `heroes.map` adds a
  * column on the next render, nothing else to wire up.
  */
-export default function StatTable({ heroes }: { heroes: Hero[] }) {
+export default function StatTable({ entries }: { entries: CompareHero[] }) {
+	const heroes = entries.map(({ hero }) => hero);
 	return (
 		<div className="overflow-x-auto rounded-md bg-[#1b1b24]">
 			<table className="w-full min-w-[480px] border-collapse text-sm">
@@ -25,7 +26,7 @@ export default function StatTable({ heroes }: { heroes: Hero[] }) {
 						))}
 					</tr>
 				</thead>
-				{compareSections(heroes).map((section) => (
+				{compareSections(entries).map((section) => (
 					<tbody key={section.title}>
 						<tr>
 							<th

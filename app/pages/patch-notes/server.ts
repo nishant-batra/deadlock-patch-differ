@@ -69,33 +69,35 @@ export function getChangedHeroes(): ChangedHero[] {
 
 	const tiersByName = abilityTiersJson as unknown as Record<string, TierDiff[]>;
 
-	return heroes.flatMap((hero) => {
-		const changes = heroChanges[hero.name];
-		// Unreleased and experimental heroes ship in the catalog but are not in
-		// play - Raven was rendering as a changed hero.
-		if (!changes || !isLiveHero(hero)) return [];
-		const { abilities: abilityDiffs, stats, weapon, isNew } = changes;
+	return heroes
+		.flatMap((hero) => {
+			const changes = heroChanges[hero.name];
+			// Unreleased and experimental heroes ship in the catalog but are not in
+			// play - Raven was rendering as a changed hero.
+			if (!changes || !isLiveHero(hero)) return [];
+			const { abilities: abilityDiffs, stats, weapon, isNew } = changes;
 
-		const abilityChanges = joinAbilities(
-			hero,
-			abilityByClass,
-			tiersByName,
-			abilityDiffs,
-		);
-		if (!abilityChanges) return [];
-
-		return [
-			{
+			const abilityChanges = joinAbilities(
 				hero,
-				abilities: abilityChanges,
-				statChanges: stats,
-				weaponChanges: weapon,
-				...(isNew && { isNew }),
-			},
-		];
-		// Newly released heroes lead the list; sort() is stable, so the rest
-		// keep catalog order.
-	}).sort((a, b) => Number(Boolean(b.isNew)) - Number(Boolean(a.isNew)));
+				abilityByClass,
+				tiersByName,
+				abilityDiffs,
+			);
+			if (!abilityChanges) return [];
+
+			return [
+				{
+					hero,
+					abilities: abilityChanges,
+					statChanges: stats,
+					weaponChanges: weapon,
+					...(isNew && { isNew }),
+				},
+			];
+			// Newly released heroes lead the list; sort() is stable, so the rest
+			// keep catalog order.
+		})
+		.sort((a, b) => Number(Boolean(b.isNew)) - Number(Boolean(a.isNew)));
 }
 
 export type ChangesPayload = {

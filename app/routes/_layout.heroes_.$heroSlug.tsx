@@ -34,8 +34,8 @@ export const Route = createFileRoute("/_layout/heroes_/$heroSlug")({
 		const slug = heroSlug(name);
 		const upcoming = loaderData?.kind === "upcoming";
 		const title = upcoming
-			? `${name} — Upcoming Deadlock Hero | Deadlock Patch Comparator`
-			: `${name} — Deadlock Hero Stats, Abilities & Upgrades | Deadlock Patch Comparator`;
+			? `${name} - Upcoming Deadlock Hero | Deadlock Patch Comparator`
+			: `${name} - Deadlock Hero Stats, Abilities & Upgrades | Deadlock Patch Comparator`;
 		const tagline = tags?.length ? ` (${tags.join(", ")})` : "";
 		const description = upcoming
 			? `${name}${tagline} is an upcoming Deadlock hero. Stats, abilities and upgrades will be listed here as soon as ${name} is released.`

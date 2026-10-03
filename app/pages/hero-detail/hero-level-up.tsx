@@ -3,15 +3,9 @@ import { labelForStatKey } from "#/shared/utils/statLabels";
 import type { Hero } from "#/types";
 
 /**
- * Level-up growth stats, as their own always-visible section - unlike
- * `HeroProfileCard`, which folds these into the same collapsed "All stats"
- * details as the secondary starting stats, the detail page gives them their
- * own heading since they're conceptually distinct (what a hero gains per
- * level, not what it starts with).
- *
- * `standard_level_up_upgrades` is full of zero-valued entries a hero simply
- * doesn't use - filtered out the same way `HeroProfileCard` already does, so
- * this section never shows dead rows.
+ * Level-up growth stats - what a hero gains per level, not what it starts
+ * with. `standard_level_up_upgrades` is full of zero-valued entries a hero
+ * simply doesn't use; they're filtered out so this never shows dead rows.
  */
 export default function HeroLevelUp({ hero }: { hero: Hero }) {
 	const rows = Object.entries(hero.standard_level_up_upgrades)

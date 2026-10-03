@@ -3,6 +3,9 @@ import type { HeroStatScaling, WeaponInfo } from "#/types";
 
 export type DisplayRow = { key: string; label: string; value: string | number };
 
+/** Highest `complexity` in the catalog (Sinclair); everyone else is 1-3. */
+export const COMPLEXITY_MAX = 4;
+
 /** Source 2 world units are inches - the game's own "m" readouts divide by this. */
 const UNITS_PER_METRE = 39.37;
 
@@ -115,13 +118,8 @@ const SCALING_SOURCE_LABELS: Record<string, string> = {
 	EWeaponPower: "Weapon Power",
 };
 
-export type ScalingRow = {
-	key: string;
-	label: string;
-	scale: number;
-	scalingStat: string;
-	sourceLabel: string;
-};
+/** A display row plus the stat it scales with, for the caller's icon. */
+export type ScalingRow = DisplayRow & { scalingStat: string };
 
 export const scalingRows = (
 	scalingStats: Record<string, HeroStatScaling>,
@@ -129,8 +127,6 @@ export const scalingRows = (
 	Object.entries(scalingStats).map(([key, { scaling_stat, scale }]) => ({
 		key,
 		label: labelForStatKey(SCALED_STAT_KEYS[key] ?? key.replace(/^E/, "")),
-		scale,
+		value: `+${scale} per ${SCALING_SOURCE_LABELS[scaling_stat] ?? scaling_stat.replace(/^E/, "")}`,
 		scalingStat: scaling_stat,
-		sourceLabel:
-			SCALING_SOURCE_LABELS[scaling_stat] ?? scaling_stat.replace(/^E/, ""),
 	}));

@@ -18,7 +18,7 @@ export const Route = createFileRoute("/_layout/items")({
 	loaderDeps: ({ search }) => ({ type: search.type }),
 	head: ({ loaderData }: { loaderData?: ItemsPage }) => {
 		const itemCount = loaderData?.totalCount ?? 0;
-		const title = `All ${itemCount > 0 ? `${itemCount} ` : ""}Deadlock Shop Items — Weapon, Vitality & Spirit Tiers | Deadlock Patch Comparator`;
+		const title = `All ${itemCount > 0 ? `${itemCount} ` : ""}Deadlock Shop Items - Weapon, Vitality & Spirit Tiers | Deadlock Patch Comparator`;
 		const description = `Browse all ${itemCount > 0 ? `${itemCount} ` : ""}Deadlock shop items. View item costs, component trees, active abilities, and stat scalings across Weapon, Vitality, and Spirit tiers.`;
 
 		return {

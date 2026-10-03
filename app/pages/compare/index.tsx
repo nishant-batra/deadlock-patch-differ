@@ -1,21 +1,21 @@
-import type { Hero, HeroEntry } from "#/types";
+import type { CompareHero } from "#/types";
 import HeroSelect from "./hero-select";
 import StatTable from "./stat-table";
 import { useCompareSelection } from "./useCompareSelection";
 
-export default function Compare({ heroes }: { heroes: HeroEntry[] }) {
+export default function Compare({ heroes }: { heroes: CompareHero[] }) {
 	const { slots, setSlot, selected } = useCompareSelection();
 
 	const sortedHeroes = heroes
-		.map((entry) => entry.hero)
+		.map(({ hero }) => hero)
 		.sort((a, b) => a.name.localeCompare(b.name));
-	const heroByClassName = new Map(
-		sortedHeroes.map((hero) => [hero.class_name, hero]),
+	const entryByClassName = new Map(
+		heroes.map((entry) => [entry.hero.class_name, entry]),
 	);
 	// An unknown class name in the URL (stale link, hand-edited) just drops out.
-	const selectedHeroes = selected
-		.map((className) => heroByClassName.get(className))
-		.filter((hero): hero is Hero => Boolean(hero));
+	const selectedEntries = selected
+		.map((className) => entryByClassName.get(className))
+		.filter((entry): entry is CompareHero => Boolean(entry));
 
 	return (
 		<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
@@ -46,8 +46,8 @@ export default function Compare({ heroes }: { heroes: HeroEntry[] }) {
 					))}
 				</div>
 
-				{selectedHeroes.length > 0 ? (
-					<StatTable heroes={selectedHeroes} />
+				{selectedEntries.length > 0 ? (
+					<StatTable entries={selectedEntries} />
 				) : (
 					<p className="text-gray-400">
 						Pick two or three heroes to compare their stats.

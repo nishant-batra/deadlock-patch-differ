@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Hero } from "#/types";
-import { accentOf, textOn } from "./utils";
+import { accentOf, textOn } from "./heroAccent";
 
 const withColor = (style_hex?: string) =>
 	({ colors: style_hex ? { style_hex } : undefined }) as Hero;

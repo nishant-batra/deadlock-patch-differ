@@ -12,7 +12,7 @@ export const Route = createFileRoute("/_layout/")({
 			(loaderData?.items?.removed?.length ?? 0) +
 			(loaderData?.items?.changed?.length ?? 0);
 
-		const title = `Deadlock Patch Notes (${patchTitle}) — ${heroCount} Heroes, ${itemCount} Items Changed | Deadlock Patch Comparator`;
+		const title = `Deadlock Patch Notes (${patchTitle}) - ${heroCount} Heroes, ${itemCount} Items Changed | Deadlock Patch Comparator`;
 		const description = `Interactive visual breakdown of ${patchTitle}, the latest Deadlock update. Compare stat changes, ability upgrades, and item buffs/nerfs across ${heroCount} heroes and ${itemCount} items in this Deadlock patch visualizer.`;
 
 		return {

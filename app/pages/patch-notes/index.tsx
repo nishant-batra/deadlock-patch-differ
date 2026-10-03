@@ -133,7 +133,7 @@ export default function Changes({
 			    the whole reason for this split. */}
 			<SectionHeading source={general}>General</SectionHeading>
 			{general ? (
-				<article className="prose prose-invert max-w-none">
+				<article className="prose prose-invert max-w-none [overflow-wrap:anywhere]">
 					<p className="text-gray-400 text-sm">
 						<span className="rounded-full bg-white/10 px-2 py-0.5 text-xs">
 							{general.source}

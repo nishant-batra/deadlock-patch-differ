@@ -1,6 +1,6 @@
 import StatRow from "#/shared/components/hero-stat-row";
+import { weaponRows } from "#/shared/utils/heroDisplayRows";
 import type { HeroWeapon as HeroWeaponData } from "#/types";
-import { weaponRows } from "./utils";
 
 /**
  * The hero's gun - its name and the stats from its `weapon_info`. Bullet

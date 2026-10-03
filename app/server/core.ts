@@ -12,11 +12,10 @@
 // fresh Vercel build (that's what the ingest cron is for), so bundling the
 // JSON at build time costs nothing over reading it at request time.
 import heroChangesJson from "#/data/hero-changes.json";
-import heroesViewJson from "#/data/heroes-view.json";
 import itemChangesJson from "#/data/item-changes.json";
 import itemsViewJson from "#/data/items-view.json";
 import type { TierDiff } from "#/lib/abilityUpgrades";
-import { ABILITY_SLOTS, isLiveHero } from "#/lib/roster";
+import { ABILITY_SLOTS } from "#/lib/roster";
 import type { DisplayChange } from "#/lib/tooltipProjection";
 import type {
 	AbilityChange,
@@ -47,19 +46,6 @@ type RawItemChanges = {
 export function itemChangesByName(): Map<string, DisplayChange[]> {
 	const { changed } = itemChangesJson as unknown as RawItemChanges;
 	return new Map(changed.map(({ name, changes }) => [name, changes]));
-}
-
-/**
- * Names of every live hero with a hero-changes.json entry, in roster order -
- * the same file ingest's badge count and `getChangedHeroes()` read, so the
- * three always agree. Cheap on purpose: `/heroes` only needs to flag cards.
- */
-export function changedHeroNames(): string[] {
-	const heroes = heroesViewJson as unknown as Hero[];
-	const changes = readHeroChanges();
-	return heroes
-		.filter((hero) => isLiveHero(hero) && Object.hasOwn(changes, hero.name))
-		.map(({ name }) => name);
 }
 
 /**

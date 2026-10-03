@@ -5,7 +5,12 @@
 import { type DeltaRow, formatDeltaValue, toneOfDeltaRow } from "./utils";
 
 export type { DeltaRow } from "./utils";
-export { formatDeltaValue, resolveDeltaRows, toneOfDeltaRow } from "./utils";
+export {
+	deltaDirection,
+	formatDeltaValue,
+	resolveDeltaRows,
+	toneOfDeltaRow,
+} from "./utils";
 
 /** `prefix` + the formatted number/string + `postfix`, same rendering as a `PropertyList` chip. */
 const withUnits = (value: unknown, { prefix, postfix }: DeltaRow) =>

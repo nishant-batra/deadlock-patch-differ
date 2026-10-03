@@ -24,7 +24,7 @@ export const Route = createRootRoute({
 			{ name: "viewport", content: "width=device-width, initial-scale=1" },
 			{
 				title:
-					"Deadlock Patch Comparator — Visual Patch Notes, Hero & Item Changes",
+					"Deadlock Patch Comparator - Visual Patch Notes, Hero & Item Changes",
 			},
 			{
 				name: "description",
@@ -51,7 +51,7 @@ export const Route = createRootRoute({
 			{ property: "og:image:type", content: "image/webp" },
 			{
 				property: "og:image:alt",
-				content: "Deadlock — Valve's hero shooter",
+				content: "Deadlock - Valve's hero shooter",
 			},
 			{ name: "twitter:card", content: "summary_large_image" },
 			{
@@ -60,7 +60,7 @@ export const Route = createRootRoute({
 			},
 			{
 				name: "twitter:image:alt",
-				content: "Deadlock — Valve's hero shooter",
+				content: "Deadlock - Valve's hero shooter",
 			},
 		],
 		links: [{ rel: "stylesheet", href: styles }],

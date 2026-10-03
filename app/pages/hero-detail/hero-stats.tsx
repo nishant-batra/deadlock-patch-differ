@@ -1,17 +1,12 @@
 import StatRow from "#/shared/components/hero-stat-row";
 import { PRIMARY_STATS } from "#/shared/components/hero-stat-row/constants";
+import { isPrimaryStat } from "#/shared/components/hero-stat-row/utils";
 import { labelForStatKey } from "#/shared/utils/statLabels";
 import type { Hero } from "#/types";
 
-const isPrimary = (key: string): key is (typeof PRIMARY_STATS)[number] =>
-	(PRIMARY_STATS as readonly string[]).includes(key);
-
 /**
- * Starting stats for the hero detail page - same primary/secondary split
- * `HeroProfileCard` uses (`PRIMARY_STATS`, `StatRow`, `labelForStatKey`), just
- * laid out as its own section instead of a compact card. Secondary stats sit
- * behind a collapsed `<details>`, uncontrolled - there is no "expand all"
- * concept on a single-hero page, so no state is needed here.
+ * Starting stats for the hero detail page - the `PRIMARY_STATS` up top,
+ * everything else behind a collapsed, uncontrolled `<details>`.
  */
 export default function HeroStats({ hero }: { hero: Hero }) {
 	const primaryRows = PRIMARY_STATS.flatMap((key) => {
@@ -21,7 +16,7 @@ export default function HeroStats({ hero }: { hero: Hero }) {
 			: [];
 	});
 	const otherStatRows = Object.entries(hero.starting_stats)
-		.filter(([key]) => !isPrimary(key))
+		.filter(([key]) => !isPrimaryStat(key))
 		.map(([key, stat]) => ({
 			key,
 			label: labelForStatKey(key),

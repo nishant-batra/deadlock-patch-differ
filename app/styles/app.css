@@ -5,6 +5,12 @@
 
 /* 1. Import the font package */
 @import "@fontsource-variable/space-grotesk";
+@import "@fontsource/bree-serif";
+
+/* The in-game ability card's slab-serif title face. */
+@theme {
+	--font-display: "Bree Serif", Georgia, serif;
+}
 
 /* Registered here because Tailwind v4 has no tailwind.config plugins array.
    Biome's CSS parser does not know Tailwind's `@plugin` at-rule and flags it. */

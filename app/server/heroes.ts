@@ -11,6 +11,7 @@ import { currentTiers, type TierDiff } from "#/lib/abilityUpgrades";
 import { isLiveHero, isUpcomingHero, WEAPON_SLOT } from "#/lib/roster";
 import { heroSlug } from "#/shared/utils/heroSlug";
 import type {
+	CompareHero,
 	Hero,
 	HeroDescription,
 	HeroEntry,
@@ -18,7 +19,7 @@ import type {
 	HeroWeapon,
 	Item,
 } from "#/types";
-import { changedHeroNames, joinAbilities, readItemsView } from "./core";
+import { joinAbilities, readItemsView } from "./core";
 
 /** No ability changes - the roster pages show each kit as it stands. */
 const NO_CHANGES = {};
@@ -139,9 +140,12 @@ export const fetchHeroPage = createServerFn({ method: "GET" })
 	);
 
 /**
- * Serialized as `string[]`, not a `Set` - server-fn results cross a network
- * boundary and a `Set` doesn't survive that round-trip intact.
+ * `/compare` reads stats and the gun, never the ability kit - so it gets the
+ * hero plus its weapon instead of the full `HeroEntry` roster.
  */
-export const fetchChangedHeroNames = createServerFn({ method: "GET" }).handler(
-	async (): Promise<string[]> => changedHeroNames(),
+export const fetchCompareHeroes = createServerFn({ method: "GET" }).handler(
+	async (): Promise<CompareHero[]> =>
+		readHeroes()
+			.filter(isLiveHero)
+			.map((hero) => ({ hero, weapon: heroWeapon(hero) })),
 );

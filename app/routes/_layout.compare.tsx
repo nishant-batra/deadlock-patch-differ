@@ -1,7 +1,7 @@
 import { createFileRoute, stripSearchParams } from "@tanstack/react-router";
 import Compare from "#/pages/compare";
-import { fetchHeroes } from "#/server/heroes";
-import type { HeroEntry } from "#/types";
+import { fetchCompareHeroes } from "#/server/heroes";
+import type { CompareHero } from "#/types";
 
 const MAX_HEROES = 3;
 
@@ -37,7 +37,7 @@ export const Route = createFileRoute("/_layout/compare")({
 		meta: [
 			{
 				title:
-					"Hero Comparison Tool — Compare Deadlock Hero Stats | Deadlock Patch Comparator",
+					"Hero Comparison Tool - Compare Deadlock Hero Stats | Deadlock Patch Comparator",
 			},
 			{
 				name: "description",
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/_layout/compare")({
 			{
 				property: "og:title",
 				content:
-					"Hero Comparison Tool — Compare Deadlock Hero Stats | Deadlock Patch Comparator",
+					"Hero Comparison Tool - Compare Deadlock Hero Stats | Deadlock Patch Comparator",
 			},
 			{
 				property: "og:description",
@@ -66,7 +66,7 @@ export const Route = createFileRoute("/_layout/compare")({
 			{
 				name: "twitter:title",
 				content:
-					"Hero Comparison Tool — Compare Deadlock Hero Stats | Deadlock Patch Comparator",
+					"Hero Comparison Tool - Compare Deadlock Hero Stats | Deadlock Patch Comparator",
 			},
 			{
 				name: "twitter:description",
@@ -78,13 +78,13 @@ export const Route = createFileRoute("/_layout/compare")({
 			{ rel: "canonical", href: "https://deadlockpatch.vercel.app/compare" },
 		],
 	}),
-	loader: async () => fetchHeroes(),
+	loader: async () => fetchCompareHeroes(),
 	component: RouteComponent,
 });
 
 function RouteComponent() {
 	// Annotated for the same reason as the other routes: the generated route
 	// tree and `useLoaderData()` reference each other, so inference yields `any`.
-	const heroesData: HeroEntry[] = Route.useLoaderData();
+	const heroesData: CompareHero[] = Route.useLoaderData();
 	return <Compare heroes={heroesData} />;
 }

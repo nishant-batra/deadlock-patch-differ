@@ -1,6 +1,6 @@
-import { TierBlock } from "#/shared/components/ability-popover";
 import AbilityRow from "#/shared/components/ability-row";
 import type { useOpenAbility } from "#/shared/components/ability-row/useOpenAbility";
+import AbilityTier from "#/shared/components/ability-tier";
 import Swatch from "#/shared/components/legend-swatch";
 import type { Item, TierDiff } from "#/types";
 import AbilityLedger from "../hero-card/ability-ledger";
@@ -15,7 +15,7 @@ import WordingLine from "../hero-card/wording-line";
  * to abilities lives here.
  *
  * Swatches render the *real* `AbilityLedger`, `WordingLine`, `AbilityRow` and
- * `TierBlock`,
+ * `AbilityTier`,
  * same reasoning as `CardLegend`: a drawn mock would drift the first time the
  * card or popover markup changes. Their buttons are inert here - there is no
  * popover to open.
@@ -131,7 +131,7 @@ export default function HeroLegend() {
 					</Swatch>
 
 					<Swatch caption="Inside the popover, an upgrade tier that changed - amber just means something moved, not buff or nerf. The spirit icon marks a bonus that scales with a stat instead of being flat">
-						<TierBlock
+						<AbilityTier
 							tier={tier([
 								{
 									key: "added",

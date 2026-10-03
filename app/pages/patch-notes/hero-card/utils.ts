@@ -1,6 +1,6 @@
 import type { TierRow } from "#/lib/abilityUpgrades";
 import { isScaleChange, isStatChange } from "#/lib/diffEngine";
-import { abilityDeltaRow } from "#/shared/components/ability-popover/utils";
+import { abilityDeltaRow } from "#/shared/components/ability-card/utils";
 import type { DeltaRow } from "#/shared/components/stat-delta";
 import { isNegativeHeroStat, labelForStatKey } from "#/shared/utils/statLabels";
 import type { AbilityChange, Change, Item } from "#/types";
