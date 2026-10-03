@@ -1,5 +1,7 @@
 // app/routes/__root.tsx
 /// <reference types="vite/client" />
+
+import spaceGrotesk from "@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2?url";
 import {
 	createRootRoute,
 	HeadContent,
@@ -12,7 +14,6 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import type { ReactNode } from "react";
 import RouteLoadingBar from "#/layout/route-loading-bar";
 import { SITE_URL } from "#/lib/patchNotification";
-import { ADSENSE_PUBLISHER_ID } from "#/shared/components/ad-slot/constants";
 import CutFrame from "#/shared/components/cut-frame";
 import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
 import styles from "../styles/app.css?url";
@@ -63,17 +64,19 @@ export const Route = createRootRoute({
 				content: "Deadlock - Valve's hero shooter",
 			},
 		],
-		links: [{ rel: "stylesheet", href: styles }],
+		links: [
+			// The body face. Without a preload it is only discovered once app.css
+			// has downloaded and parsed, which holds back the first text paint.
+			{
+				rel: "preload",
+				href: spaceGrotesk,
+				as: "font",
+				type: "font/woff2",
+				crossOrigin: "anonymous",
+			},
+			{ rel: "stylesheet", href: styles },
+		],
 		scripts: [
-			...(ADSENSE_PUBLISHER_ID
-				? [
-						{
-							src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`,
-							async: true,
-							crossOrigin: "anonymous" as const,
-						},
-					]
-				: []),
 			{
 				type: "application/ld+json",
 				children: JSON.stringify({

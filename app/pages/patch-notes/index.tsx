@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import AdSlot from "#/shared/components/ad-slot";
 import CardLegend from "#/shared/components/card-legend";
 import EmptyState from "#/shared/components/empty-state";
 import ItemCard from "#/shared/components/item-card";
@@ -133,7 +132,7 @@ export default function Changes({
 										>
 											{note.title}
 										</a>{" "}
-										<span className="text-gray-500">
+										<span className="text-gray-400">
 											{formatPatchDate(note.pubDate)}
 										</span>
 									</li>
@@ -172,16 +171,8 @@ export default function Changes({
 				</section>
 			)}
 			<CardLegend />
-			{blocks.map(({ id }, index) => (
-				<Fragment key={id}>
-					{byId[id]}
-					{index < blocks.length - 1 && (
-						<AdSlot
-							slotId={`TODO-ad-unit-in-content-${index + 1}`}
-							className="mb-12"
-						/>
-					)}
-				</Fragment>
+			{blocks.map(({ id }) => (
+				<Fragment key={id}>{byId[id]}</Fragment>
 			))}
 		</main>
 	);

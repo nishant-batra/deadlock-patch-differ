@@ -25,6 +25,7 @@ export default function HeroAvatar({
 			alt={hero.name}
 			width={size}
 			height={size}
+			loading="lazy"
 			className={className}
 		/>
 	);

@@ -132,6 +132,7 @@ export default function ItemCard({
 					src={shop_image_webp}
 					width={80}
 					height={80}
+					loading="lazy"
 					className="cut-double mx-auto mt-2 [--cut:var(--cut-md)]"
 					alt={name}
 				/>

@@ -56,6 +56,7 @@ export default function AbilityRow({
 									alt={ability.name}
 									width={44}
 									height={44}
+									loading="lazy"
 									className={clsx(
 										"cut-double ability-icon-light size-full",
 										isChanged && "ability-icon-changed",

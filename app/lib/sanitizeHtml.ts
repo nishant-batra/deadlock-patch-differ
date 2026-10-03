@@ -127,6 +127,12 @@ function keepOnly(tag: string, rawAttrs: string, allowed: string[]): string {
 			kept.push(`${name}="${escapeAttr(value)}"`);
 		}
 	}
+	// Steam's images are full-size PNGs (1.7 MB seen) far down the page, and
+	// usually carry no alt. Decorative by default, and fetched only near view.
+	if (tag === "img") {
+		if (!attrs.has("alt")) kept.push('alt=""');
+		kept.push('loading="lazy"', 'decoding="async"');
+	}
 	return kept.length > 0 ? ` ${kept.join(" ")}` : "";
 }
 
