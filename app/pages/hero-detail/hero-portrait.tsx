@@ -40,7 +40,7 @@ export default function HeroPortrait({
 			alt={hero.name}
 			width={140}
 			height={190}
-			className="rounded-lg object-cover"
+			className="cut-double object-cover"
 		/>
 	);
 }

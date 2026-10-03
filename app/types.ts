@@ -248,11 +248,39 @@ export interface Hero {
 	development_state?: string;
 	/** Three personality words, e.g. Rat King: Scrappy, Regal, Tenacious. */
 	tags?: string[];
+	/** The gun's archetype, e.g. "Rapid Fire". Missing for Rem. */
+	gun_tag?: string;
+	/** 1 (simplest) to 4 - only Sinclair is at 4 today. */
+	complexity?: number;
+	/** Base stats that grow with a hero stat, keyed by the game's `E…` stat name. */
+	scaling_stats?: Record<string, HeroStatScaling>;
 }
+
+/** e.g. Haze's `EClipSize`: +0.5 magazine per point of `ETechPower`. */
+export interface HeroStatScaling {
+	scaling_stat: string;
+	scale: number;
+}
+
+/** hero-descriptions.json, keyed by hero `class_name`. Only `lore` is guaranteed. */
+export interface HeroDescription {
+	lore?: string;
+	/** One-line pitch, e.g. "Sneaks in and sprays bullets". */
+	role?: string;
+	playstyle?: string;
+}
+
+/** The hero's gun - its `weapon_primary` entry, trimmed to what the page shows. */
+export type HeroWeapon = Pick<Item, "name"> & { weapon_info: WeaponInfo };
 
 /** What `/heroes/$heroSlug` renders: a full live hero, or an announced one. */
 export type HeroPage =
-	| { kind: "live"; entry: HeroEntry }
+	| {
+			kind: "live";
+			entry: HeroEntry;
+			weapon?: HeroWeapon;
+			description?: HeroDescription;
+	  }
 	| { kind: "upcoming"; hero: Hero };
 
 // ---------------------------------------------------------------------------

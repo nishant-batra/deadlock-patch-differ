@@ -5,7 +5,7 @@ export default function StatRow({
 	value,
 }: {
 	label: string;
-	value: number;
+	value: number | string;
 }) {
 	return (
 		<div className="flex items-baseline justify-between gap-2 px-2 py-1 text-sm">

@@ -14,7 +14,11 @@ export const resolvePrefix = (prefix?: string) =>
 
 /**
  * Some values already carry their unit in the string itself (`"70m"`), so the
- * postfix would double up if appended blindly.
+ * postfix would double up if appended blindly. Metre values always carry it,
+ * and their postfix is sometimes `" m"` (leading space) which the suffix
+ * check misses - so an `m` postfix is never appended.
  */
 export const shouldAppendPostfix = (value: unknown, postfix?: string) =>
-	Boolean(postfix) && !String(value ?? "").endsWith(postfix as string);
+	Boolean(postfix) &&
+	postfix?.trim() !== "m" &&
+	!String(value ?? "").endsWith(postfix as string);

@@ -78,6 +78,8 @@ const ABILITY_FIELDS = [
 	"properties",
 	"tooltip_details",
 	"upgrades",
+	// Only `weapon_primary` entries carry this - the hero page's gun stats.
+	"weapon_info",
 ];
 
 const TIER_DESCRIPTION_FIELDS = ["t1_desc", "t2_desc", "t3_desc"];
@@ -98,6 +100,10 @@ const HERO_VIEW_FIELDS = [
 	// piece of real copy they ship with.
 	"development_state",
 	"tags",
+	// The hero page's header chips and spirit-scaling section.
+	"gun_tag",
+	"complexity",
+	"scaling_stats",
 ];
 
 /** Every file `ingest()` writes. Used to detect a missing artifact. */
@@ -109,6 +115,7 @@ const ARTIFACTS = [
 	"hero-changes.json",
 	"items-view.json",
 	"heroes-view.json",
+	"hero-descriptions.json",
 	"patch-notes.json",
 	"patch-meta.json",
 ];
@@ -478,6 +485,16 @@ async function ingest() {
 	write(
 		"heroes-view.json",
 		heroes.map((hero) => pick(hero, HERO_VIEW_FIELDS)),
+	);
+	// Its own file rather than a heroes-view field: only the hero page reads
+	// it, and the lore would otherwise ride along on every roster payload.
+	write(
+		"hero-descriptions.json",
+		Object.fromEntries(
+			heroes
+				.filter((hero) => hero.description)
+				.map((hero) => [hero.class_name, hero.description]),
+		),
 	);
 	// Hero and shop-item names, used to strip balance lines out of an unheaded
 	// note. Both payloads are already in memory, so this costs nothing.

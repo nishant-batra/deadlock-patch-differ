@@ -1,13 +1,25 @@
 import { Link } from "@tanstack/react-router";
 import CutFrame from "#/shared/components/cut-frame";
 import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
-import type { HeroEntry } from "#/types";
+import type {
+	HeroDescription,
+	HeroEntry,
+	HeroWeapon as HeroWeaponData,
+} from "#/types";
 import HeroAbilities from "./hero-abilities";
+import HeroAbout from "./hero-about";
+import HeroHeader from "./hero-header";
 import HeroLevelUp from "./hero-level-up";
-import HeroPortrait from "./hero-portrait";
+import HeroScaling from "./hero-scaling";
 import HeroStats from "./hero-stats";
+import HeroWeapon from "./hero-weapon";
 
-export default function HeroDetail({ hero, abilities }: HeroEntry) {
+export default function HeroDetail({
+	hero,
+	abilities,
+	weapon,
+	description,
+}: HeroEntry & { weapon?: HeroWeaponData; description?: HeroDescription }) {
 	return (
 		<main className="mx-auto max-w-4xl px-4 py-6 sm:px-8">
 			<div className="mb-4 flex flex-wrap items-center justify-between gap-2">
@@ -28,15 +40,23 @@ export default function HeroDetail({ hero, abilities }: HeroEntry) {
 				</CutFrame>
 			</div>
 
-			<header className="mb-6 flex items-center gap-4">
-				<HeroPortrait hero={hero} />
-				<h1 className="font-extrabold text-3xl">{hero.name}</h1>
-			</header>
+			<HeroHeader hero={hero} role={description?.role} />
+
+			{description && <HeroAbout description={description} />}
 
 			<section className="mb-8">
 				<h2 className="mb-2 font-bold text-xl">Starting Stats</h2>
 				<HeroStats hero={hero} />
 			</section>
+
+			{weapon && (
+				<section className="mb-8">
+					<h2 className="mb-2 font-bold text-xl">Weapon</h2>
+					<HeroWeapon weapon={weapon} />
+				</section>
+			)}
+
+			<HeroScaling scalingStats={hero.scaling_stats} />
 
 			<section className="mb-8">
 				<h2 className="mb-2 font-bold text-xl">Level-Up Growth</h2>

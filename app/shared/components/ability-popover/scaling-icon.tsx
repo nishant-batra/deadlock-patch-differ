@@ -3,9 +3,8 @@ import { scalingIcon } from "#/shared/utils/scaling";
 /**
  * Marks a tier row's bonus as scaling with a stat (spirit/weapon/melee/boon)
  * rather than being flat. Falls back to the old `✦` glyph with the raw
- * `scale_stat_filter` in its title when the filter isn't one of the four
- * known scaling types - only `ETechPower` (spirit) is confirmed in the
- * current catalog, so the fallback is the common case for anything new.
+ * `scale_stat_filter` in its title when the filter isn't a known scaling
+ * stat (see `SCALING_ICONS`), so a new filter value never renders blank.
  */
 export default function ScalingIcon({ filter }: { filter: string }) {
 	const icon = scalingIcon(filter);

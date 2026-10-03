@@ -6625,7 +6625,7 @@
 					"label": "Magic Damage Per Bullet",
 					"kind": "equal",
 					"new": "0.045",
-					"scaling": "EAddToScale"
+					"scaling": "ETechPower"
 				},
 				{
 					"key": "UnlimitedAmmo|#0",
@@ -12337,7 +12337,7 @@
 					"label": "Big Explosion Slow Percent",
 					"kind": "equal",
 					"new": "0.12",
-					"scaling": "EAddToScale",
+					"scaling": "ETechPower",
 					"postfix": "%"
 				}
 			]

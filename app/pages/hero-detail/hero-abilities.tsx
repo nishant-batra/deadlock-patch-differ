@@ -41,14 +41,14 @@ export default function HeroAbilities({
 						<p className="font-bold">{ability.name}</p>
 					</div>
 
+					<div className="mt-3">
+						<AbilityDetail item={ability} changes={changes} />
+					</div>
+
 					<div className="mt-3 flex flex-col gap-1.5">
 						{tiers.map((tier) => (
 							<TierBlock key={tier.tier} tier={tier} />
 						))}
-					</div>
-
-					<div className="mt-2">
-						<AbilityDetail item={ability} changes={changes} />
 					</div>
 				</li>
 			))}

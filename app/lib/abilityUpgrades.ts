@@ -73,8 +73,10 @@ const keyOf = (
  * Which stat a bonus scales with. Most scaling upgrades name it in
  * `scale_stat_filter`, but 10 `EAddToScale`/`EMultiplyScale` entries (Card
  * Trick T2, Puddle Punch T3, ...) leave it out and rely on the property's own
- * `scale_function`. Full Auto T3 has neither, so the bare `upgrade_type` is
- * returned - it renders as the generic scaling marker rather than nothing.
+ * `scale_function`. A `scale_function_tech_damage` with no stat named (Full
+ * Auto T3, Scrap Grenade T3) is spirit scaling - "tech" is spirit. Anything
+ * else falls back to the bare `upgrade_type`, which renders as the generic
+ * scaling marker rather than nothing.
  */
 const scalingOf = (
 	filter: string | undefined,
@@ -83,7 +85,10 @@ const scalingOf = (
 ) => {
 	if (filter) return filter;
 	if (!upgradeType?.endsWith("Scale")) return undefined;
-	return scaleFunction?.specific_stat_scale_type ?? upgradeType;
+	const { specific_stat_scale_type, class_name } = scaleFunction ?? {};
+	if (specific_stat_scale_type) return specific_stat_scale_type;
+	if (class_name === "scale_function_tech_damage") return "ETechPower";
+	return upgradeType;
 };
 
 /**

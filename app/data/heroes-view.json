@@ -169,7 +169,10 @@
 			"Arsonist",
 			"Explosive",
 			"Burn Rubber"
-		]
+		],
+		"gun_tag": "Rapid Fire",
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 2,
@@ -341,7 +344,10 @@
 			"High Voltage",
 			"Merciless",
 			"Area Denial"
-		]
+		],
+		"gun_tag": "Burst Fire",
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 3,
@@ -513,7 +519,15 @@
 			"Sniper",
 			"Soaring",
 			"One Shot Kill"
-		]
+		],
+		"gun_tag": "Long Range",
+		"complexity": 1,
+		"scaling_stats": {
+			"EBulletDamage": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.022
+			}
+		}
 	},
 	{
 		"id": 4,
@@ -685,7 +699,10 @@
 			"Lifesteal",
 			"Self Damage",
 			"Fatale"
-		]
+		],
+		"gun_tag": "Pistol",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 6,
@@ -857,7 +874,10 @@
 			"Tank",
 			"Brawler",
 			"Bull-Headed"
-		]
+		],
+		"gun_tag": "Shotgun",
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 7,
@@ -1029,7 +1049,15 @@
 			"Duelist",
 			"Isolator",
 			"Telekinetic"
-		]
+		],
+		"gun_tag": "Rapid Fire",
+		"complexity": 1,
+		"scaling_stats": {
+			"ESprintSpeed": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.05
+			}
+		}
 	},
 	{
 		"id": 8,
@@ -1201,7 +1229,10 @@
 			"Inventor",
 			"Support",
 			"Disruption"
-		]
+		],
+		"gun_tag": "Heavy Artillery",
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 10,
@@ -1373,7 +1404,10 @@
 			"Calculated",
 			"Disruptor",
 			"Tactician"
-		]
+		],
+		"gun_tag": "Burst Fire",
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 11,
@@ -1545,7 +1579,10 @@
 			"Teamplay",
 			"Initiator",
 			"Clutch"
-		]
+		],
+		"gun_tag": "Pistol",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 12,
@@ -1717,7 +1754,10 @@
 			"Protector",
 			"Explorer",
 			"Ice Cold"
-		]
+		],
+		"gun_tag": "Heavy Hitter",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 13,
@@ -1889,7 +1929,15 @@
 			"Assassin",
 			"Stealthy",
 			"Lethal"
-		]
+		],
+		"gun_tag": "Rapid Fire",
+		"complexity": 1,
+		"scaling_stats": {
+			"EClipSize": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.5
+			}
+		}
 	},
 	{
 		"id": 14,
@@ -2061,7 +2109,10 @@
 			"Crackshot",
 			"Explosive",
 			"Apprehender"
-		]
+		],
+		"gun_tag": "Pistol",
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 15,
@@ -2233,7 +2284,10 @@
 			"Hook",
 			"Bomb",
 			"Punch"
-		]
+		],
+		"gun_tag": "Beam Weapon",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 16,
@@ -2405,7 +2459,10 @@
 			"Tricksy",
 			"Slippery",
 			"Burst Damage"
-		]
+		],
+		"gun_tag": "Spreadshot",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 17,
@@ -2577,7 +2634,19 @@
 			"Precision",
 			"Hunter",
 			"Area Denial"
-		]
+		],
+		"gun_tag": "Bow",
+		"complexity": 2,
+		"scaling_stats": {
+			"EMaxMoveSpeed": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.0084
+			},
+			"EBulletDamage": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.08
+			}
+		}
 	},
 	{
 		"id": 18,
@@ -2749,7 +2818,10 @@
 			"Tag-Team",
 			"Initiator",
 			"Burrower"
-		]
+		],
+		"gun_tag": "Spreadshot",
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 19,
@@ -2922,7 +2994,10 @@
 			"Rage",
 			"Bleed",
 			"Repeat"
-		]
+		],
+		"gun_tag": "Spreadshot",
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 20,
@@ -3094,7 +3169,10 @@
 			"Team-up",
 			"Disruptor",
 			"Rock Solid"
-		]
+		],
+		"gun_tag": "Rapid Fire",
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 21,
@@ -3252,7 +3330,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": false,
-		"tags": []
+		"tags": [],
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 25,
@@ -3424,7 +3504,19 @@
 			"Initiator",
 			"Fearless",
 			"One Man Army"
-		]
+		],
+		"gun_tag": "Heavy Hitter",
+		"complexity": 2,
+		"scaling_stats": {
+			"ERoundsPerSecond": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.008
+			},
+			"EFireRate": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.21
+			}
+		}
 	},
 	{
 		"id": 27,
@@ -3597,7 +3689,15 @@
 			"Relentless",
 			"Acrobatics",
 			"Pursuer"
-		]
+		],
+		"gun_tag": "Spreadshot",
+		"complexity": 3,
+		"scaling_stats": {
+			"EClipSize": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.15
+			}
+		}
 	},
 	{
 		"id": 31,
@@ -3773,7 +3873,10 @@
 			"Initiator",
 			"High Flying",
 			"Arrogant"
-		]
+		],
+		"gun_tag": "Burst Fire",
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 35,
@@ -3946,7 +4049,10 @@
 			"Evasive",
 			"Disruptor",
 			"Gooey"
-		]
+		],
+		"gun_tag": "Projectile",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 38,
@@ -4098,7 +4204,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 39,
@@ -4250,7 +4358,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 48,
@@ -4410,7 +4520,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 49,
@@ -4562,7 +4674,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 50,
@@ -4738,7 +4852,10 @@
 			"Trickster",
 			"Burst Damage",
 			"Frogs"
-		]
+		],
+		"gun_tag": "Spreadshot",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 51,
@@ -4890,7 +5007,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 52,
@@ -5062,7 +5181,10 @@
 			"Bodyguard",
 			"Traveller",
 			"Focused"
-		]
+		],
+		"gun_tag": "Pistol",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 53,
@@ -5216,7 +5338,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 54,
@@ -5368,7 +5492,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 56,
@@ -5513,7 +5639,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 57,
@@ -5658,7 +5786,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 58,
@@ -5830,7 +5960,15 @@
 			"Gunner",
 			"Slippery",
 			"Rat-a-Tat"
-		]
+		],
+		"gun_tag": "Rapid Fire",
+		"complexity": 1,
+		"scaling_stats": {
+			"EMaxMoveSpeed": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.0138
+			}
+		}
 	},
 	{
 		"id": 59,
@@ -5984,7 +6122,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 60,
@@ -6156,7 +6296,15 @@
 			"Trickster",
 			"Copycat",
 			"Versatile"
-		]
+		],
+		"gun_tag": "Burst Fire",
+		"complexity": 4,
+		"scaling_stats": {
+			"EMaxMoveSpeed": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.0138
+			}
+		}
 	},
 	{
 		"id": 61,
@@ -6314,7 +6462,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 62,
@@ -6468,7 +6618,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 63,
@@ -6640,7 +6792,10 @@
 			"Harasser",
 			"Nimble",
 			"Vexing"
-		]
+		],
+		"gun_tag": "Pistol",
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 64,
@@ -6812,7 +6967,10 @@
 			"Stalker",
 			"Bloodthirsty",
 			"Cruel"
-		]
+		],
+		"gun_tag": "Spreadshot",
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 65,
@@ -6984,7 +7142,19 @@
 			"Devout",
 			"Arms Expert",
 			"Tactical"
-		]
+		],
+		"gun_tag": "Crossbow",
+		"complexity": 2,
+		"scaling_stats": {
+			"ETechArmorDamageReduction": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.12178
+			},
+			"EBulletArmorDamageReduction": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.12178
+			}
+		}
 	},
 	{
 		"id": 66,
@@ -7160,7 +7330,15 @@
 			"You",
 			"Can't",
 			"Kill Me"
-		]
+		],
+		"gun_tag": "Pistol",
+		"complexity": 2,
+		"scaling_stats": {
+			"EBaseHealthRegen": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.08
+			}
+		}
 	},
 	{
 		"id": 67,
@@ -7332,7 +7510,15 @@
 			"Helpful",
 			"Protector",
 			"Booksmart"
-		]
+		],
+		"gun_tag": "Projectile",
+		"complexity": 1,
+		"scaling_stats": {
+			"EHeavyMeleeDamage": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.45
+			}
+		}
 	},
 	{
 		"id": 68,
@@ -7480,7 +7666,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 69,
@@ -7652,7 +7840,10 @@
 			"Disorienting",
 			"Map Control",
 			"Mind Games"
-		]
+		],
+		"gun_tag": "Pistol",
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 70,
@@ -7811,7 +8002,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 71,
@@ -7965,7 +8158,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 72,
@@ -8137,7 +8332,10 @@
 			"Punk",
 			"Chaotic",
 			"G.O.A.T."
-		]
+		],
+		"gun_tag": "Close Range",
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 73,
@@ -8291,7 +8489,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 74,
@@ -8449,7 +8649,10 @@
 			"Harasser",
 			"Nimble",
 			"Vexing"
-		]
+		],
+		"gun_tag": "Pistol",
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 75,
@@ -8607,7 +8810,15 @@
 			"Duelist",
 			"Isolator",
 			"Telekinetic"
-		]
+		],
+		"gun_tag": "Pistol",
+		"complexity": 1,
+		"scaling_stats": {
+			"ESprintSpeed": {
+				"scaling_stat": "ETechPower",
+				"scale": 0.06
+			}
+		}
 	},
 	{
 		"id": 76,
@@ -8779,7 +8990,10 @@
 			"Morbid",
 			"Area Denial",
 			"Necromancer"
-		]
+		],
+		"gun_tag": "Pistol",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 77,
@@ -8951,7 +9165,10 @@
 			"Finesse",
 			"Mobility",
 			"A Cut Above"
-		]
+		],
+		"gun_tag": "Spreadshot",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 78,
@@ -9111,7 +9328,9 @@
 			"Reckless",
 			"High-flying",
 			"Explosive"
-		]
+		],
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 79,
@@ -9283,7 +9502,9 @@
 			"Helpful",
 			"Tiny",
 			"zZzzZ"
-		]
+		],
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 80,
@@ -9455,7 +9676,10 @@
 			"Feral",
 			"Hot Mess",
 			"Transformation"
-		]
+		],
+		"gun_tag": "Long Range",
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 81,
@@ -9627,7 +9851,10 @@
 			"Performer",
 			"Disruptive",
 			"Dazzling"
-		]
+		],
+		"gun_tag": "Burst Fire",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 82,
@@ -9772,7 +9999,9 @@
 		"player_selectable": false,
 		"disabled": true,
 		"in_development": true,
-		"tags": []
+		"tags": [],
+		"complexity": 1,
+		"scaling_stats": {}
 	},
 	{
 		"id": 83,
@@ -9935,7 +10164,10 @@
 			"Tricksy",
 			"Slippery",
 			"Burst Damage"
-		]
+		],
+		"gun_tag": "Spreadshot",
+		"complexity": 2,
+		"scaling_stats": {}
 	},
 	{
 		"id": 84,
@@ -10109,7 +10341,10 @@
 			"Scrappy",
 			"Regal",
 			"Tenacious"
-		]
+		],
+		"gun_tag": "Spreadshot",
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 85,
@@ -10269,7 +10504,9 @@
 			"Strategist",
 			"Focused",
 			"Checkmate"
-		]
+		],
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 86,
@@ -10429,7 +10666,9 @@
 			"Ambitious",
 			"Nimble",
 			"Creative"
-		]
+		],
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 87,
@@ -10589,7 +10828,9 @@
 			"Strict",
 			"Terrifying",
 			"Savior"
-		]
+		],
+		"complexity": 3,
+		"scaling_stats": {}
 	},
 	{
 		"id": 88,
@@ -10749,6 +10990,8 @@
 			"Cackling",
 			"Beady",
 			"Hexing"
-		]
+		],
+		"complexity": 3,
+		"scaling_stats": {}
 	}
 ]

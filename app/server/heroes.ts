@@ -5,11 +5,19 @@
 // drift.
 import { createServerFn } from "@tanstack/react-start";
 import abilityTiersJson from "#/data/ability-tiers.json";
+import heroDescriptionsJson from "#/data/hero-descriptions.json";
 import heroesViewJson from "#/data/heroes-view.json";
 import { currentTiers, type TierDiff } from "#/lib/abilityUpgrades";
-import { isLiveHero, isUpcomingHero } from "#/lib/roster";
+import { isLiveHero, isUpcomingHero, WEAPON_SLOT } from "#/lib/roster";
 import { heroSlug } from "#/shared/utils/heroSlug";
-import type { Hero, HeroEntry, HeroPage, Item } from "#/types";
+import type {
+	Hero,
+	HeroDescription,
+	HeroEntry,
+	HeroPage,
+	HeroWeapon,
+	Item,
+} from "#/types";
 import { changedHeroNames, joinAbilities, readItemsView } from "./core";
 
 /** No ability changes - the roster pages show each kit as it stands. */
@@ -76,15 +84,37 @@ export function getUpcomingHeroes(): Hero[] {
 }
 
 /**
+ * The hero's gun, trimmed to its name and stats - the catalog entry also
+ * carries a full property bag the page never reads.
+ */
+function heroWeapon({ items }: Hero): HeroWeapon | undefined {
+	const weapon = abilityByClass().get(items?.[WEAPON_SLOT]);
+	if (!weapon?.weapon_info) return undefined;
+	const { name, weapon_info } = weapon;
+	return { name, weapon_info };
+}
+
+/**
  * The hero at `/heroes/$heroSlug`. One Map lookup and one ability join,
- * instead of building the whole roster to find a single hero.
+ * instead of building the whole roster to find a single hero. The gun and
+ * description are attached here only - the roster pages never show them.
  */
 export function getHeroPage(slug: string): HeroPage | undefined {
 	const hero = heroBySlug().get(slug);
 	if (!hero) return undefined;
 	if (isLiveHero(hero)) {
 		const entry = liveEntry(hero);
-		return entry ? { kind: "live", entry } : undefined;
+		if (!entry) return undefined;
+		const descriptions = heroDescriptionsJson as Record<
+			string,
+			HeroDescription
+		>;
+		return {
+			kind: "live",
+			entry,
+			weapon: heroWeapon(hero),
+			description: descriptions[hero.class_name],
+		};
 	}
 	return isUpcomingHero(hero) ? { kind: "upcoming", hero } : undefined;
 }

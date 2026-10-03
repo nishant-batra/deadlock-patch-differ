@@ -86,7 +86,11 @@ function RouteComponent() {
 	// tree and `useLoaderData()` reference each other, so inference yields `any`.
 	const page: HeroPage = Route.useLoaderData();
 	return page.kind === "live" ? (
-		<HeroDetail {...page.entry} />
+		<HeroDetail
+			{...page.entry}
+			weapon={page.weapon}
+			description={page.description}
+		/>
 	) : (
 		<UpcomingHeroDetail hero={page.hero} />
 	);

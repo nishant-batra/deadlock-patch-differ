@@ -5,7 +5,10 @@ import {
 	toneOfDeltaRow,
 } from "#/shared/components/stat-delta";
 import { isNegativeProperty } from "#/shared/utils/negativeProperties";
-import { resolvePrefix } from "#/shared/utils/statFormatting";
+import {
+	resolvePrefix,
+	shouldAppendPostfix,
+} from "#/shared/utils/statFormatting";
 import type { ImportantPropertiesWithIcon, Item } from "#/types";
 import StatusChip from "./status-chip";
 
@@ -84,10 +87,9 @@ export default function PropertyList({
 				const isStatusEffect =
 					importantPropertyWithIcon?.name.includes("StatusEffect");
 				const showPostfix =
-					postfix &&
 					value &&
 					typeof value === "string" &&
-					value?.slice(value?.length - postfix?.length) !== postfix;
+					shouldAppendPostfix(value, postfix);
 				const previousValue = previousValues?.get(property);
 				const changed = previousValue !== undefined;
 
