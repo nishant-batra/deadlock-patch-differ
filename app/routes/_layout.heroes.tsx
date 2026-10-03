@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Heroes from "#/pages/heroes";
 import { fetchHeroes, fetchUpcomingHeroes } from "#/server/heroes";
+import { seoHead } from "#/shared/utils/seoHead";
 import type { Hero, HeroEntry } from "#/types";
 
 type HeroesLoaderData = {
@@ -14,28 +15,7 @@ export const Route = createFileRoute("/_layout/heroes")({
 		const title = `All ${heroCount > 0 ? `${heroCount} ` : ""}Deadlock Heroes - Base Stats, Abilities & Upgrades | Deadlock Patch Comparator`;
 		const description = `Complete catalog of all ${heroCount > 0 ? `${heroCount} ` : ""}live Deadlock heroes. View starting stats, leveling growth, weapon info, and ability upgrade tiers.`;
 
-		return {
-			meta: [
-				{ title },
-				{ name: "description", content: description },
-				{
-					name: "robots",
-					content:
-						"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-				},
-				{ property: "og:title", content: title },
-				{ property: "og:description", content: description },
-				{
-					property: "og:url",
-					content: "https://deadlockpatch.vercel.app/heroes",
-				},
-				{ name: "twitter:title", content: title },
-				{ name: "twitter:description", content: description },
-			],
-			links: [
-				{ rel: "canonical", href: "https://deadlockpatch.vercel.app/heroes" },
-			],
-		};
+		return seoHead({ title, description, path: "/heroes" });
 	},
 	loader: async () => {
 		const [heroes, upcoming] = await Promise.all([

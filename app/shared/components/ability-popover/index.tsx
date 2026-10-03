@@ -1,3 +1,4 @@
+import { ViewTransition } from "react";
 import { createPortal } from "react-dom";
 import AbilityCard from "#/shared/components/ability-card";
 import AbilityHiddenChanges from "#/shared/components/ability-hidden-changes";
@@ -25,32 +26,38 @@ export default function AbilityPopover({
 }) {
 	const { ref, style } = useDismissablePopover(anchorRef, onClose);
 
+	// Before the layout effect has measured, park the dialog at the viewport's
+	// corner rather than off-screen: React skips the enter animation for
+	// elements outside the viewport, and it measures before layout effects run.
+	// The layout effect still moves it into place before paint.
 	return createPortal(
-		<div
-			ref={ref}
-			role="dialog"
-			aria-label={`${ability.name} upgrades`}
-			style={style ?? { position: "fixed", top: -9999, left: -9999 }}
-			className="z-40 max-h-[calc(100dvh-16px)] w-[min(30rem,calc(100vw-16px))] overflow-auto shadow-2xl"
-		>
-			<AbilityCard
-				ability={ability}
-				changes={changes}
-				tiers={tiers}
-				headerEnd={
-					<button
-						type="button"
-						onClick={onClose}
-						aria-label="Close"
-						className="-mt-1 px-1 text-gray-400 text-xl leading-none hover:text-white"
-					>
-						&times;
-					</button>
-				}
+		<ViewTransition>
+			<div
+				ref={ref}
+				role="dialog"
+				aria-label={`${ability.name} upgrades`}
+				style={style ?? { position: "fixed", top: 0, left: 0 }}
+				className="z-40 max-h-[calc(100dvh-16px)] w-[min(30rem,calc(100vw-16px))] overflow-auto shadow-2xl"
 			>
-				<AbilityHiddenChanges ability={ability} changes={changes} />
-			</AbilityCard>
-		</div>,
+				<AbilityCard
+					ability={ability}
+					changes={changes}
+					tiers={tiers}
+					headerEnd={
+						<button
+							type="button"
+							onClick={onClose}
+							aria-label="Close"
+							className="-mt-1 px-1 text-gray-400 text-xl leading-none hover:text-white"
+						>
+							&times;
+						</button>
+					}
+				>
+					<AbilityHiddenChanges ability={ability} changes={changes} />
+				</AbilityCard>
+			</div>
+		</ViewTransition>,
 		document.body,
 	);
 }

@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
+import ComingSoonBadge from "#/shared/components/coming-soon-badge";
 import CutFrame from "#/shared/components/cut-frame";
-import { accentOf, textOn } from "#/shared/utils/heroAccent";
+import HeroTags from "#/shared/components/hero-tags";
+import { accentOf } from "#/shared/utils/heroAccent";
 import { heroSlug } from "#/shared/utils/heroSlug";
 import type { Hero } from "#/types";
 
@@ -34,22 +36,12 @@ export default function UpcomingHeroCard({ hero }: { hero: Hero }) {
 					/>
 				)}
 				<div className="flex min-w-0 flex-col gap-1.5">
-					<span
-						className="cut-corner self-start px-2 py-0.5 font-bold text-[11px] uppercase tracking-widest"
-						style={{ background: accent, color: textOn(accent) }}
-					>
-						Coming soon
-					</span>
+					<ComingSoonBadge
+						accent={accent}
+						className="px-2 py-0.5 text-[11px]"
+					/>
 					<h3 className="font-extrabold text-lg leading-tight">{name}</h3>
-					{tags && tags.length > 0 && (
-						<ul className="flex flex-wrap gap-1 text-gray-300 text-xs">
-							{tags.map((tag) => (
-								<li key={tag} className="rounded bg-white/10 px-1.5 py-0.5">
-									{tag}
-								</li>
-							))}
-						</ul>
-					)}
+					<HeroTags tags={tags} className="gap-1 text-gray-300 text-xs" />
 				</div>
 			</Link>
 		</CutFrame>

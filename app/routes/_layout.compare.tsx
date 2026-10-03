@@ -1,6 +1,7 @@
 import { createFileRoute, stripSearchParams } from "@tanstack/react-router";
 import Compare from "#/pages/compare";
 import { fetchCompareHeroes } from "#/server/heroes";
+import { seoHead } from "#/shared/utils/seoHead";
 import type { CompareHero } from "#/types";
 
 const MAX_HEROES = 3;
@@ -33,51 +34,14 @@ export const Route = createFileRoute("/_layout/compare")({
 	// An empty selection is the default state - keep `?heroes=[]` out of the
 	// URL rather than leaving a no-op query string behind.
 	search: { middlewares: [stripSearchParams({ heroes: [] })] },
-	head: () => ({
-		meta: [
-			{
-				title:
-					"Hero Comparison Tool - Compare Deadlock Hero Stats | Deadlock Patch Comparator",
-			},
-			{
-				name: "description",
-				content:
-					"Side-by-side base stat and ability comparison tool for Deadlock heroes. Compare health, weapon damage, spirit scaling, and mobility stats.",
-			},
-			{
-				name: "robots",
-				content:
-					"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-			},
-			{
-				property: "og:title",
-				content:
-					"Hero Comparison Tool - Compare Deadlock Hero Stats | Deadlock Patch Comparator",
-			},
-			{
-				property: "og:description",
-				content:
-					"Side-by-side base stat and ability comparison tool for Deadlock heroes. Compare health, weapon damage, spirit scaling, and mobility stats.",
-			},
-			{
-				property: "og:url",
-				content: "https://deadlockpatch.vercel.app/compare",
-			},
-			{
-				name: "twitter:title",
-				content:
-					"Hero Comparison Tool - Compare Deadlock Hero Stats | Deadlock Patch Comparator",
-			},
-			{
-				name: "twitter:description",
-				content:
-					"Side-by-side base stat and ability comparison tool for Deadlock heroes. Compare health, weapon damage, spirit scaling, and mobility stats.",
-			},
-		],
-		links: [
-			{ rel: "canonical", href: "https://deadlockpatch.vercel.app/compare" },
-		],
-	}),
+	head: () =>
+		seoHead({
+			title:
+				"Hero Comparison Tool - Compare Deadlock Hero Stats | Deadlock Patch Comparator",
+			description:
+				"Side-by-side base stat and ability comparison tool for Deadlock heroes. Compare health, weapon damage, spirit scaling, and mobility stats.",
+			path: "/compare",
+		}),
 	loader: async () => fetchCompareHeroes(),
 	component: RouteComponent,
 });

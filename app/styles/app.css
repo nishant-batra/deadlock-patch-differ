@@ -55,9 +55,13 @@ html {
 	--nav-height: 4.5rem;
 }
 
-/* Without this the sticky navbar covers whatever you jump to. */
-section[id] {
-	scroll-margin-top: var(--nav-height);
+/* Without this the sticky navbar covers whatever you jump to. In the base
+   layer so a section under a second sticky bar can add to it with a
+   `scroll-mt-*` utility - unlayered, this would beat that utility. */
+@layer base {
+	section[id] {
+		scroll-margin-top: var(--nav-height);
+	}
 }
 
 /* Tailwind v4's preflight resets buttons to the default arrow. Restore the
@@ -236,4 +240,18 @@ html::-webkit-scrollbar-thumb {
 
 html::-webkit-scrollbar-thumb:hover {
 	background: rgba(100, 100, 100, 0.7);
+}
+
+/* React <ViewTransition> animations (e.g. the ability popover) render as
+   document-level ::view-transition pseudo-elements, so this has to be global. */
+@media (prefers-reduced-motion: reduce) {
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation: none;
+	}
+
+	html {
+		scroll-behavior: auto;
+	}
 }

@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import CutFrame from "#/shared/components/cut-frame";
 import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
+import HeroBreadcrumb from "#/shared/components/hero-breadcrumb";
+import HeroHeader from "#/shared/components/hero-header";
 import type {
 	HeroDescription,
 	HeroEntry,
@@ -8,7 +10,6 @@ import type {
 } from "#/types";
 import HeroAbilities from "./hero-abilities";
 import HeroAbout from "./hero-about";
-import HeroHeader from "./hero-header";
 import HeroLevelUp from "./hero-level-up";
 import HeroScaling from "./hero-scaling";
 import HeroStats from "./hero-stats";
@@ -22,12 +23,7 @@ export default function HeroDetail({
 }: HeroEntry & { weapon?: HeroWeaponData; description?: HeroDescription }) {
 	return (
 		<main className="mx-auto max-w-4xl px-4 py-6 sm:px-8">
-			<p className="mb-4 text-gray-400 text-sm">
-				<Link to="/heroes" className="underline hover:text-white">
-					Heroes
-				</Link>{" "}
-				/ <span className="text-gray-100">{hero.name}</span>
-			</p>
+			<HeroBreadcrumb name={hero.name} />
 
 			<HeroHeader hero={hero} role={description?.role} />
 

@@ -11,10 +11,10 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import type { ReactNode } from "react";
 import RouteLoadingBar from "#/layout/route-loading-bar";
+import { SITE_URL } from "#/lib/patchNotification";
 import { ADSENSE_PUBLISHER_ID } from "#/shared/components/ad-slot/constants";
 import CutFrame from "#/shared/components/cut-frame";
 import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
-import { itemTypes } from "#/shared/components/item-card/constants";
 import styles from "../styles/app.css?url";
 
 export const Route = createRootRoute({
@@ -46,7 +46,7 @@ export const Route = createRootRoute({
 			{ property: "og:locale", content: "en_US" },
 			{
 				property: "og:image",
-				content: "https://deadlockpatch.vercel.app/og-image.webp",
+				content: `${SITE_URL}/og-image.webp`,
 			},
 			{ property: "og:image:type", content: "image/webp" },
 			{
@@ -56,7 +56,7 @@ export const Route = createRootRoute({
 			{ name: "twitter:card", content: "summary_large_image" },
 			{
 				name: "twitter:image",
-				content: "https://deadlockpatch.vercel.app/og-image.webp",
+				content: `${SITE_URL}/og-image.webp`,
 			},
 			{
 				name: "twitter:image:alt",
@@ -116,11 +116,7 @@ export const Route = createRootRoute({
 					</Link>
 				</CutFrame>
 				<CutFrame color={AMBER_BORDER}>
-					<Link
-						to="/items"
-						search={{ type: itemTypes[0] }}
-						className="cut-corner px-3 py-1.5 font-bold"
-					>
+					<Link to="/items" className="cut-corner px-3 py-1.5 font-bold">
 						Items
 					</Link>
 				</CutFrame>

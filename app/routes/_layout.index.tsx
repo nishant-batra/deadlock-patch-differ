@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Changes from "#/pages/patch-notes";
 import { type ChangesPayload, fetchChanges } from "#/pages/patch-notes/server";
+import { seoHead } from "#/shared/utils/seoHead";
 
 export const Route = createFileRoute("/_layout/")({
 	head: ({ loaderData }: { loaderData?: ChangesPayload }) => {
@@ -15,23 +16,7 @@ export const Route = createFileRoute("/_layout/")({
 		const title = `Deadlock Patch Notes (${patchTitle}) - ${heroCount} Heroes, ${itemCount} Items Changed | Deadlock Patch Comparator`;
 		const description = `Interactive visual breakdown of ${patchTitle}, the latest Deadlock update. Compare stat changes, ability upgrades, and item buffs/nerfs across ${heroCount} heroes and ${itemCount} items in this Deadlock patch visualizer.`;
 
-		return {
-			meta: [
-				{ title },
-				{ name: "description", content: description },
-				{
-					name: "robots",
-					content:
-						"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-				},
-				{ property: "og:title", content: title },
-				{ property: "og:description", content: description },
-				{ property: "og:url", content: "https://deadlockpatch.vercel.app/" },
-				{ name: "twitter:title", content: title },
-				{ name: "twitter:description", content: description },
-			],
-			links: [{ rel: "canonical", href: "https://deadlockpatch.vercel.app/" }],
-		};
+		return seoHead({ title, description, path: "/" });
 	},
 	loader: async () => fetchChanges(),
 	component: RouteComponent,

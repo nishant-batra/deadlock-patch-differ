@@ -1,4 +1,5 @@
 ﻿import clsx from "clsx";
+import type { Ref } from "react";
 import { statusEffectDurations } from "#/lib/statusEffects";
 import CutFrame from "#/shared/components/cut-frame";
 import PropertyList from "#/shared/components/property-list";
@@ -14,6 +15,7 @@ export default function ItemCard({
 	isNew,
 	isRemoved,
 	isChanged,
+	ref,
 }: {
 	item: Item;
 	/** When present, the card gets a change strip and a ring. */
@@ -27,6 +29,8 @@ export default function ItemCard({
 	 * there would be redundant - only `/items` (which mixes changed and
 	 * unchanged items) opts in. */
 	isChanged?: boolean;
+	/** On the outer frame - the `/items` search scrolls to it. */
+	ref?: Ref<HTMLSpanElement>;
 }) {
 	const {
 		name,
@@ -87,6 +91,7 @@ export default function ItemCard({
 
 	return (
 		<CutFrame
+			ref={ref}
 			color={colors.primary}
 			width={framed ? 2 : 0}
 			className={clsx(
@@ -96,7 +101,7 @@ export default function ItemCard({
 		>
 			<div
 				className="cut-double flex flex-1 flex-col overflow-hidden"
-				style={{ background: colors.description, contentVisibility: "auto" }}
+				style={{ background: colors.description }}
 			>
 				{flagged && (
 					<div

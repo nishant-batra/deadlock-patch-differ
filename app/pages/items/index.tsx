@@ -1,19 +1,20 @@
-import clsx from "clsx";
-import CutFrame from "#/shared/components/cut-frame";
-import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
-import ItemCard from "#/shared/components/item-card";
-import { itemTypes } from "#/shared/components/item-card/constants";
-import type { ItemSlotType, ItemsPage } from "#/types";
+import { colorsFor, itemTypes } from "#/shared/components/item-card/constants";
+import SearchInput from "#/shared/components/search-input";
+import { useScrollTargets } from "#/shared/components/search-input/useScrollTargets";
+import type { ItemsPage } from "#/types";
+import ItemSection from "./item-section";
+import SlotSwitch from "./slot-switch";
 
-export default function Items({
-	items,
-	type,
-	onTypeChange,
-}: {
-	items: ItemsPage["items"];
-	type: ItemSlotType;
-	onTypeChange: (type: ItemSlotType) => void;
-}) {
+export default function Items({ items }: { items: ItemsPage["items"] }) {
+	const { targetRef, scrollTo } = useScrollTargets();
+	const entries = items.map(
+		({ item: { name, shop_image_webp, item_slot_type } }) => ({
+			name,
+			icon: shop_image_webp,
+			color: colorsFor(item_slot_type).primary,
+		}),
+	);
+
 	return (
 		<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
 			<h1 className="mb-1 font-extrabold text-2xl">All Deadlock Items</h1>
@@ -22,35 +23,24 @@ export default function Items({
 				trees, active abilities, and stat scaling across Weapon, Vitality, and
 				Spirit tiers.
 			</p>
-			<div className="mb-4 flex gap-2">
-				{itemTypes.map((itemType) => (
-					<CutFrame key={itemType} color={AMBER_BORDER}>
-						<button
-							type="button"
-							aria-pressed={type === itemType}
-							className={clsx(
-								"cut-corner px-3 py-1.5 capitalize",
-								type === itemType && "bg-amber-500/20 font-bold",
-							)}
-							onClick={() => onTypeChange(itemType)}
-						>
-							{itemType}
-						</button>
-					</CutFrame>
-				))}
-			</div>
-			<div className="masonary">
-				{[...items]
-					.sort((a, b) => (a.item?.cost ?? 0) - (b.item?.cost ?? 0))
-					.map(({ item, changes }) => (
-						<ItemCard
-							item={item}
-							changes={changes}
-							isChanged={Boolean(changes?.length)}
-							key={item.id}
-						/>
-					))}
-			</div>
+			<SlotSwitch>
+				<SearchInput
+					entries={entries}
+					onSelect={scrollTo}
+					placeholder="Search items"
+					className="ml-auto w-full sm:w-72"
+				/>
+			</SlotSwitch>
+			{itemTypes.map((type) => (
+				<ItemSection
+					key={type}
+					type={type}
+					items={items
+						.filter(({ item }) => item.item_slot_type === type)
+						.sort((a, b) => (a.item.cost ?? 0) - (b.item.cost ?? 0))}
+					targetRef={targetRef}
+				/>
+			))}
 		</main>
 	);
 }

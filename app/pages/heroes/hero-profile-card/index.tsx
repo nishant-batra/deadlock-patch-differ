@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import type { Ref } from "react";
 import AbilityRow from "#/shared/components/ability-row";
 import CutFrame from "#/shared/components/cut-frame";
 import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
@@ -12,9 +13,17 @@ import type { HeroEntry } from "#/types";
  * row `HeroCard` uses (tiers render the hero's real upgrades, with `equal`
  * rows since nothing is being diffed). Stats live on the hero page.
  */
-export default function HeroProfileCard({ hero, abilities }: HeroEntry) {
+export default function HeroProfileCard({
+	hero,
+	abilities,
+	ref,
+}: HeroEntry & {
+	/** On the outer frame - the roster search scrolls to it. */
+	ref?: Ref<HTMLSpanElement>;
+}) {
 	return (
 		<CutFrame
+			ref={ref}
 			color={accentOf(hero)}
 			width={2}
 			className="m-3 flex min-w-80 max-w-100"

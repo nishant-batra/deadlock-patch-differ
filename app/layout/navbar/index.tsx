@@ -1,6 +1,5 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import Badge from "#/shared/components/badge";
-import { itemTypes } from "#/shared/components/item-card/constants";
 import { formatPatchDate } from "#/shared/utils/formatPatchDate";
 import type { PatchMeta } from "#/types";
 import { useNavHeight } from "./useNavHeight";
@@ -37,7 +36,7 @@ export default function Navbar({ meta }: { meta: PatchMeta | null }) {
 				<Link to="/" className={CHIP}>
 					Changes
 				</Link>
-				<Link to="/items" search={{ type: itemTypes[0] }} className={CHIP}>
+				<Link to="/items" className={CHIP}>
 					All items
 				</Link>
 				<Link to="/heroes" className={CHIP}>

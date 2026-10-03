@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { CSSProperties, ReactNode } from "react";
+import type { CSSProperties, ReactNode, Ref } from "react";
 import styles from "./styles.module.css";
 
 type CutSize = "lg" | "md" | "sm" | "xs";
@@ -16,6 +16,7 @@ export default function CutFrame({
 	width = 1,
 	cut,
 	className = "inline-flex",
+	ref,
 	children,
 }: {
 	color: string;
@@ -26,6 +27,7 @@ export default function CutFrame({
 	cut?: CutSize | (string & {});
 	/** Layout only (display, margin, sizing) - never the shape. */
 	className?: string;
+	ref?: Ref<HTMLSpanElement>;
 	children: ReactNode;
 }) {
 	const style = {
@@ -39,7 +41,7 @@ export default function CutFrame({
 	} as CSSProperties;
 
 	return (
-		<span className={clsx(styles.frame, className)} style={style}>
+		<span ref={ref} className={clsx(styles.frame, className)} style={style}>
 			{children}
 		</span>
 	);

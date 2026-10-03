@@ -5,6 +5,7 @@ import { fetchHeroPage } from "#/server/heroes";
 import CutFrame from "#/shared/components/cut-frame";
 import { AMBER_BORDER } from "#/shared/components/cut-frame/constants";
 import { heroSlug } from "#/shared/utils/heroSlug";
+import { seoHead } from "#/shared/utils/seoHead";
 import type { HeroPage } from "#/types";
 
 export const Route = createFileRoute("/_layout/heroes_/$heroSlug")({
@@ -41,31 +42,7 @@ export const Route = createFileRoute("/_layout/heroes_/$heroSlug")({
 			? `${name}${tagline} is an upcoming Deadlock hero. Stats, abilities and upgrades will be listed here as soon as ${name} is released.`
 			: `${name}'s Deadlock stats and abilities: starting stats, leveling growth, and all ability upgrade tiers.`;
 
-		return {
-			meta: [
-				{ title },
-				{ name: "description", content: description },
-				{
-					name: "robots",
-					content:
-						"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-				},
-				{ property: "og:title", content: title },
-				{ property: "og:description", content: description },
-				{
-					property: "og:url",
-					content: `https://deadlockpatch.vercel.app/heroes/${slug}`,
-				},
-				{ name: "twitter:title", content: title },
-				{ name: "twitter:description", content: description },
-			],
-			links: [
-				{
-					rel: "canonical",
-					href: `https://deadlockpatch.vercel.app/heroes/${slug}`,
-				},
-			],
-		};
+		return seoHead({ title, description, path: `/heroes/${slug}` });
 	},
 	notFoundComponent: () => (
 		<main className="mx-auto max-w-7xl px-4 py-16 text-center">
