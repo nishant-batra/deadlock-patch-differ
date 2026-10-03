@@ -1,9 +1,7 @@
-import { Link } from "@tanstack/react-router";
 import ComingSoonBadge from "#/shared/components/coming-soon-badge";
-import CutFrame from "#/shared/components/cut-frame";
+import HeroCard from "#/shared/components/hero-card";
 import HeroTags from "#/shared/components/hero-tags";
 import { accentOf } from "#/shared/utils/heroAccent";
-import { heroSlug } from "#/shared/utils/heroSlug";
 import type { Hero } from "#/types";
 
 /**
@@ -18,12 +16,8 @@ export default function UpcomingHeroCard({ hero }: { hero: Hero }) {
 		images?.top_bar_vertical_image_webp ?? images?.top_bar_vertical_image;
 
 	return (
-		<CutFrame color={accent} width={2} className="flex min-w-0 flex-1">
-			<Link
-				to="/heroes/$heroSlug"
-				params={{ heroSlug: heroSlug(name) }}
-				className="cut-double flex flex-1 items-center gap-3 bg-[#1b1b24] p-2.5 hover:bg-[#22222c]"
-			>
+		<HeroCard hero={hero} className="min-w-0 flex-1">
+			<HeroCard.Header hero={hero}>
 				{portrait && (
 					<img
 						src={portrait}
@@ -40,10 +34,10 @@ export default function UpcomingHeroCard({ hero }: { hero: Hero }) {
 						accent={accent}
 						className="px-2 py-0.5 text-[11px]"
 					/>
-					<h3 className="font-extrabold text-lg leading-tight">{name}</h3>
+					<HeroCard.Name name={name} />
 					<HeroTags tags={tags} className="gap-1 text-gray-300 text-xs" />
 				</div>
-			</Link>
-		</CutFrame>
+			</HeroCard.Header>
+		</HeroCard>
 	);
 }

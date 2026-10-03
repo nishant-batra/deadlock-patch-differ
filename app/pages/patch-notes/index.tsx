@@ -5,7 +5,7 @@ import EmptyState from "#/shared/components/empty-state";
 import ItemCard from "#/shared/components/item-card";
 import UpcomingHeroes from "#/shared/components/upcoming-heroes";
 import { formatPatchDate } from "#/shared/utils/formatPatchDate";
-import HeroCard from "./hero-card";
+import ChangedHeroCard from "./hero-card";
 import HeroLegend from "./hero-legend";
 import SectionHeading from "./section-heading";
 import type { ChangesPayload } from "./server";
@@ -83,7 +83,7 @@ export default function Changes({
 					<HeroLegend />
 					<div className="masonary">
 						{heroes.map((changed) => (
-							<HeroCard key={changed.hero.id} {...changed} />
+							<ChangedHeroCard key={changed.hero.id} {...changed} />
 						))}
 					</div>
 				</>
