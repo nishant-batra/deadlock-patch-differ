@@ -40693,7 +40693,6 @@
 					"value": "50"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -40719,7 +40718,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 639385332,
@@ -40933,7 +40933,6 @@
 					"value": "0.15"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -40959,7 +40958,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 1613872264,
@@ -41151,7 +41151,6 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/heal.svg"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -41177,7 +41176,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 363299194,
@@ -41399,7 +41399,6 @@
 					"value": "2m"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -41425,7 +41424,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 4260284622,
@@ -41656,7 +41656,6 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -41692,7 +41691,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 21628267,
@@ -41955,7 +41955,6 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/condition_slow.svg"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -41985,7 +41984,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3219375905,
@@ -42188,7 +42188,6 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/heal.svg"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -42214,7 +42213,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 488392205,
@@ -42437,7 +42437,6 @@
 					"value": "-45"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -42467,7 +42466,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2984400727,
@@ -42650,7 +42650,6 @@
 					"postfix": "%"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -42676,7 +42675,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3577477084,
@@ -42889,7 +42889,6 @@
 					"postvalue_label": "Weapon Damage"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -42915,7 +42914,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3908497730,
@@ -43138,7 +43138,6 @@
 					"postvalue_label": "Stun Duration"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -43164,7 +43163,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 1584495732,
@@ -43357,7 +43357,6 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -43387,7 +43386,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 348689004,
@@ -43582,7 +43582,6 @@
 					"value": "1m"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -43612,7 +43611,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2086284285,
@@ -43860,7 +43860,6 @@
 					"value": "0.5"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -43886,7 +43885,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2489807574,
@@ -44061,7 +44061,6 @@
 					"value": "0.2"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -44087,7 +44086,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2563620507,
@@ -44272,7 +44272,6 @@
 					"value": "350"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -44298,7 +44297,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2082220949,
@@ -44748,9 +44748,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+40</span> Impact Damage<br><span class=\"highlight\">+13.3333</span> Burn Damage per Second<br><span class=\"highlight\">-5</span>s Charge Time<br><span class=\"highlight\">Improved Spirit Scaling</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -44796,7 +44793,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+40</span> Impact Damage<br><span class=\"highlight\">+13.3333</span> Burn Damage per Second<br><span class=\"highlight\">-5</span>s Charge Time<br><span class=\"highlight\">Improved Spirit Scaling</span>"
+			}
 		},
 		{
 			"id": 2240607294,
@@ -45086,11 +45086,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">-10s</span> Cooldown",
-				"t2_desc": "You and allies gain a +4m/s move speed bonus for 4s on landing",
-				"t3_desc": "<span class=\"highlight\">+0.7s</span> Stomp Stun"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -45120,7 +45115,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">-10s</span> Cooldown",
+				"t2_desc": "You and allies gain a +4m/s move speed bonus for 4s on landing",
+				"t3_desc": "<span class=\"highlight\">+0.7s</span> Stomp Stun"
+			}
 		},
 		{
 			"id": 3190606822,
@@ -45369,7 +45369,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -45395,7 +45394,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 4179229681,
@@ -45664,11 +45664,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">-20%</span> Fading Move Speed",
-				"t2_desc": "<span class=\"highlight\">+49.5</span> Damage and <span class=\"highlight\">-6%</span> Bullet Resist for <span class=\"highlight\">5s</span>",
-				"t3_desc": "<span class=\"highlight\">-6s</span> Cooldown on Hero Headshots. -3s on NPC Headshots"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -45706,7 +45701,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">-20%</span> Fading Move Speed",
+				"t2_desc": "<span class=\"highlight\">+49.5</span> Damage and <span class=\"highlight\">-6%</span> Bullet Resist for <span class=\"highlight\">5s</span>",
+				"t3_desc": "<span class=\"highlight\">-6s</span> Cooldown on Hero Headshots. -3s on NPC Headshots"
+			}
 		},
 		{
 			"id": 3609948706,
@@ -46163,11 +46163,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "Applies <span class=\"highlight\">+32.0%</span> Slow for <span class=\"highlight\">3s</span>",
-				"t2_desc": "On Wall Hit: <span class=\"highlight\">+0.8s</span> Stun Duration",
-				"t3_desc": "<span class=\"highlight\">-18s</span> Cooldown <br>On Hero Collide: <span class=\"highlight\">+1.5</span> Weapon Damage for <span class=\"highlight\">6</span>s"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -46205,7 +46200,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Applies <span class=\"highlight\">+32.0%</span> Slow for <span class=\"highlight\">3s</span>",
+				"t2_desc": "On Wall Hit: <span class=\"highlight\">+0.8s</span> Stun Duration",
+				"t3_desc": "<span class=\"highlight\">-18s</span> Cooldown <br>On Hero Collide: <span class=\"highlight\">+1.5</span> Weapon Damage for <span class=\"highlight\">6</span>s"
+			}
 		},
 		{
 			"id": 715762406,
@@ -46457,9 +46457,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+20%</span> Debuff Resist and <span class=\"highlight\">+9%</span> Damage Regenerated"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -46489,7 +46486,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+20%</span> Debuff Resist and <span class=\"highlight\">+9%</span> Damage Regenerated"
+			}
 		},
 		{
 			"id": 509856396,
@@ -46797,9 +46797,6 @@
 					"ImpactRadius"
 				]
 			},
-			"description": {
-				"t3_desc": "On cast, become <span class=\"highlight\">Unstoppable</span> for 5s and <span class=\"highlight\">+6m</span> Impact Radius"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -46829,7 +46826,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "On cast, become <span class=\"highlight\">Unstoppable</span> for 5s and <span class=\"highlight\">+6m</span> Impact Radius"
+			}
 		},
 		{
 			"id": 4072270083,
@@ -47071,9 +47071,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+2m</span> Radius and <span class=\"highlight\">+18.0</span> DPS with improved Spirit scaling</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -47109,7 +47106,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+2m</span> Radius and <span class=\"highlight\">+18.0</span> DPS with improved Spirit scaling</span>"
+			}
 		},
 		{
 			"id": 3764085067,
@@ -47644,10 +47644,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "On Hero Hit: Gain <span class=\"highlight\">fast spin-up time, 2x weapon range and +30% weapon damage</span> for 9s",
-				"t3_desc": "On Hero Hit: Set <span class=\"highlight\">Grapple Arm cooldown to 0</span> and restores <span class=\"highlight\">+18%</span> of your missing health"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -47681,7 +47677,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "On Hero Hit: Gain <span class=\"highlight\">fast spin-up time, 2x weapon range and +30% weapon damage</span> for 9s",
+				"t3_desc": "On Hero Hit: Set <span class=\"highlight\">Grapple Arm cooldown to 0</span> and restores <span class=\"highlight\">+18%</span> of your missing health"
+			}
 		},
 		{
 			"id": 2521902222,
@@ -48069,9 +48069,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "On Cast: <span class=\"highlight\">+5m</span> Move Speed and <span class=\"highlight\">+25%</span> Debuff Resistance for <span class=\"highlight\">6s</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -48105,7 +48102,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "On Cast: <span class=\"highlight\">+5m</span> Move Speed and <span class=\"highlight\">+25%</span> Debuff Resistance for <span class=\"highlight\">6s</span>"
+			}
 		},
 		{
 			"id": 3832675871,
@@ -48401,9 +48401,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "Hyper Beam heals Bebop for <span class=\"highlight\">65%</span> of its damage on Heroes. 20% on non-hero"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -48433,7 +48430,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "Hyper Beam heals Bebop for <span class=\"highlight\">65%</span> of its damage on Heroes. 20% on non-hero"
+			}
 		},
 		{
 			"id": 1928108461,
@@ -48683,9 +48683,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+20% weapon damage</span> against victims for 6s"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -48715,7 +48712,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+20% weapon damage</span> against victims for 6s"
+			}
 		},
 		{
 			"id": 2605652378,
@@ -49081,7 +49081,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -49107,7 +49106,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3875361929,
@@ -49269,7 +49269,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -49295,7 +49294,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 4081662205,
@@ -49457,7 +49457,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -49483,7 +49482,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3232290270,
@@ -49654,7 +49654,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -49680,7 +49679,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3155417712,
@@ -50031,7 +50031,6 @@
 					"postfix": "s"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -50057,7 +50056,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 957095276,
@@ -50269,7 +50269,6 @@
 					"postfix": "s"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -50295,7 +50294,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 421275722,
@@ -50508,7 +50508,6 @@
 					"postvalue_label": "Dash Distance"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -50534,7 +50533,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 599532073,
@@ -50737,7 +50737,6 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
 				}
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -50763,7 +50762,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2390964381,
@@ -51196,10 +51196,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+20.0</span> Pulse Damage and increased Spirit scaling",
-				"t3_desc": "<span class=\"highlight\">+4.0%</span> Damage Amp and <span class=\"highlight\">+1.6s</span> Duration"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -51235,7 +51231,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+20.0</span> Pulse Damage and increased Spirit scaling",
+				"t3_desc": "<span class=\"highlight\">+4.0%</span> Damage Amp and <span class=\"highlight\">+1.6s</span> Duration"
+			}
 		},
 		{
 			"id": 1366719170,
@@ -51509,11 +51509,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+3.5s</span> Duration <br><span class=\"highlight\">+3m</span> Width<br><span class=\"highlight\">+1m</span> Height",
-				"t2_desc": "Silences enemies for <span class=\"highlight\">2.3s</span><br><span class=\"highlight\">+35.0%</span> Weapon Damage",
-				"t3_desc": "<span class=\"highlight\">+2</span> Ability Charges"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -51555,7 +51550,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+3.5s</span> Duration <br><span class=\"highlight\">+3m</span> Width<br><span class=\"highlight\">+1m</span> Height",
+				"t2_desc": "Silences enemies for <span class=\"highlight\">2.3s</span><br><span class=\"highlight\">+35.0%</span> Weapon Damage",
+				"t3_desc": "<span class=\"highlight\">+2</span> Ability Charges"
+			}
 		},
 		{
 			"id": 1128670012,
@@ -51870,10 +51870,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "-12.0s Cooldown<br>Increases Speed Scaling",
-				"t3_desc": "+2s Charge Hold Duration and +55% Damage Scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -51911,7 +51907,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "-12.0s Cooldown<br>Increases Speed Scaling",
+				"t3_desc": "+2s Charge Hold Duration and +55% Damage Scaling"
+			}
 		},
 		{
 			"id": 2917891787,
@@ -52168,11 +52168,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">200 Barrier</span> for 8s. Barrier scales with Spirit",
-				"t2_desc": "<span class=\"highlight\">-30s</span> Cooldown and <span class=\"highlight\">+13m</span> Cast Range",
-				"t3_desc": "Swaps all enemies within <span class=\"highlight\">7m</span> of hit target and <span class=\"highlight\">+10%</span> Max Health Damage"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -52216,7 +52211,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">200 Barrier</span> for 8s. Barrier scales with Spirit",
+				"t2_desc": "<span class=\"highlight\">-30s</span> Cooldown and <span class=\"highlight\">+13m</span> Cast Range",
+				"t3_desc": "Swaps all enemies within <span class=\"highlight\">7m</span> of hit target and <span class=\"highlight\">+10%</span> Max Health Damage"
+			}
 		},
 		{
 			"id": 602440127,
@@ -52701,11 +52701,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+1</span> Charge",
-				"t2_desc": "On Hit: <span class=\"highlight\">-15%</span> Bullet Resist and <span class=\"highlight\">-24%</span> Move Speed<span class=\"highlight\"> for 4s</span>",
-				"t3_desc": "<span class=\"highlight\">+135.0</span> Damage and <span class=\"highlight\">+20m</span> Cast Range"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -52743,7 +52738,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+1</span> Charge",
+				"t2_desc": "On Hit: <span class=\"highlight\">-15%</span> Bullet Resist and <span class=\"highlight\">-24%</span> Move Speed<span class=\"highlight\"> for 4s</span>",
+				"t3_desc": "<span class=\"highlight\">+135.0</span> Damage and <span class=\"highlight\">+20m</span> Cast Range"
+			}
 		},
 		{
 			"id": 2031714424,
@@ -52959,9 +52959,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "Reduces non-ult debuffs by <span class=\"highlight\">50%</span><br>Replenishes <span class=\"highlight\">1</span> Charge"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -52991,7 +52988,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "Reduces non-ult debuffs by <span class=\"highlight\">50%</span><br>Replenishes <span class=\"highlight\">1</span> Charge"
+			}
 		},
 		{
 			"id": 492030745,
@@ -53235,11 +53235,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "Aura provides +4m Move Speed during channel",
-				"t2_desc": "-20.0s Cooldown and +1.0s Duration",
-				"t3_desc": "<span class=\"highlight\">Full move and ability use</span> and additionally heals <span class=\"highlight\">+2.5% of Max Health</span> per second"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -53277,7 +53272,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Aura provides +4m Move Speed during channel",
+				"t2_desc": "-20.0s Cooldown and +1.0s Duration",
+				"t3_desc": "<span class=\"highlight\">Full move and ability use</span> and additionally heals <span class=\"highlight\">+2.5% of Max Health</span> per second"
+			}
 		},
 		{
 			"id": 249410288,
@@ -53517,7 +53517,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -53543,7 +53542,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 1975078202,
@@ -53961,11 +53961,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+1.5s</span> Duration",
-				"t2_desc": "<span class=\"highlight\">-20.0s</span> Cooldown and provides <span class=\"highlight\">+100.0%</span> Stamina Recovery",
-				"t3_desc": "<span class=\"highlight\">+2.0%</span> Max HP Regen <br><span class=\"highlight\">+3m</span> Heal Radius <br><span class=\"highlight\">+40%</span> Spirit Resist"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -54003,7 +53998,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+1.5s</span> Duration",
+				"t2_desc": "<span class=\"highlight\">-20.0s</span> Cooldown and provides <span class=\"highlight\">+100.0%</span> Stamina Recovery",
+				"t3_desc": "<span class=\"highlight\">+2.0%</span> Max HP Regen <br><span class=\"highlight\">+3m</span> Heal Radius <br><span class=\"highlight\">+40%</span> Spirit Resist"
+			}
 		},
 		{
 			"id": 3133377790,
@@ -54340,10 +54340,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+10</span> Turret DPS and <span class=\"highlight\">+10m</span> Attack Range",
-				"t3_desc": "<span class=\"highlight\">+25%</span> Turret Fire Rate and <span class=\"highlight\">+12s</span> Turret Lifetime"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -54377,7 +54373,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+10</span> Turret DPS and <span class=\"highlight\">+10m</span> Attack Range",
+				"t3_desc": "<span class=\"highlight\">+25%</span> Turret Fire Rate and <span class=\"highlight\">+12s</span> Turret Lifetime"
+			}
 		},
 		{
 			"id": 1725685134,
@@ -54684,11 +54684,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "Amplifies McGinnis's damage by <span class=\"highlight\">+20%</span> on hit enemies for 7s",
-				"t2_desc": "<span class=\"highlight\">-20.0s Cooldown</span> and <span class=\"highlight\">+2.0s Duration</span>",
-				"t3_desc": "Deploy <span class=\"highlight\">2 Mini Turrets</span> near the wall for 8s<br><span class=\"highlight\">+24% Slow</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -54730,7 +54725,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Amplifies McGinnis's damage by <span class=\"highlight\">+20%</span> on hit enemies for 7s",
+				"t2_desc": "<span class=\"highlight\">-20.0s Cooldown</span> and <span class=\"highlight\">+2.0s Duration</span>",
+				"t3_desc": "Deploy <span class=\"highlight\">2 Mini Turrets</span> near the wall for 8s<br><span class=\"highlight\">+24% Slow</span>"
+			}
 		},
 		{
 			"id": 3503044146,
@@ -55037,11 +55037,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "Applies <span class=\"highlight\">24% movement and dash slow</span> for 1s",
-				"t2_desc": "<span class=\"highlight\">-45.0s</span> Cooldown and <span class=\"highlight\">+6.0s</span> Duration",
-				"t3_desc": "<span class=\"highlight\">+2m</span> Radius and <span class=\"highlight\">+15.0</span> Damage per Rocket with increased spirit scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -55089,7 +55084,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Applies <span class=\"highlight\">24% movement and dash slow</span> for 1s",
+				"t2_desc": "<span class=\"highlight\">-45.0s</span> Cooldown and <span class=\"highlight\">+6.0s</span> Duration",
+				"t3_desc": "<span class=\"highlight\">+2m</span> Radius and <span class=\"highlight\">+15.0</span> Damage per Rocket with increased spirit scaling"
+			}
 		},
 		{
 			"id": 1558668879,
@@ -55501,10 +55501,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "+<span class=\"highlight\">2m</span> Radius and +<span class=\"highlight\">50.0</span> Damage.",
-				"t3_desc": "Bombs leave a toxic mess on the ground, dealing <span class=\"highlight\">30.0%</span> of the original <span class=\"highlight\">damage per second</span>, for <span class=\"highlight\">6s</span>."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -55538,7 +55534,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "+<span class=\"highlight\">2m</span> Radius and +<span class=\"highlight\">50.0</span> Damage.",
+				"t3_desc": "Bombs leave a toxic mess on the ground, dealing <span class=\"highlight\">30.0%</span> of the original <span class=\"highlight\">damage per second</span>, for <span class=\"highlight\">6s</span>."
+			}
 		},
 		{
 			"id": 3230530872,
@@ -55816,10 +55816,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+25.199999</span> Damage and +4 Blood Shards",
-				"t3_desc": "<span class=\"highlight\">+8%</span> Damage Amp"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -55853,7 +55849,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+25.199999</span> Damage and +4 Blood Shards",
+				"t3_desc": "<span class=\"highlight\">+8%</span> Damage Amp"
+			}
 		},
 		{
 			"id": 218284420,
@@ -56089,9 +56089,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "Enables and Grants <span class=\"highlight\">+2</span> Charges. Increases spirit scaling."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -56127,7 +56124,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "Enables and Grants <span class=\"highlight\">+2</span> Charges. Increases spirit scaling."
+			}
 		},
 		{
 			"id": 1307289689,
@@ -56423,10 +56423,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">Silence</span> enemies within 25m for 3s",
-				"t3_desc": "On cast, <span class=\"highlight\">+60</span> Spirit Power, <span class=\"highlight\">+40%</span> Fire Rate and <span class=\"highlight\">+50%</span> Spirit Resistance for 8s."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -56468,7 +56464,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">Silence</span> enemies within 25m for 3s",
+				"t3_desc": "On cast, <span class=\"highlight\">+60</span> Spirit Power, <span class=\"highlight\">+40%</span> Fire Rate and <span class=\"highlight\">+50%</span> Spirit Resistance for 8s."
+			}
 		},
 		{
 			"id": 2695625322,
@@ -56868,10 +56868,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">-28%</span> move speed on hit targets and <span class=\"highlight\">+1s</span> Lifetime",
-				"t3_desc": "+58.5 DPS and +1.75m radius"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -56905,7 +56901,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">-28%</span> move speed on hit targets and <span class=\"highlight\">+1s</span> Lifetime",
+				"t3_desc": "+58.5 DPS and +1.75m radius"
+			}
 		},
 		{
 			"id": 1074714947,
@@ -57142,10 +57142,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+7m</span> Radius <br><span class=\"highlight\">+5m</span> Cast range",
-				"t3_desc": "<span class=\"highlight\">+0.9s</span> Stun Duration <br><span class=\"highlight\">+160</span> Damage"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -57179,7 +57175,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+7m</span> Radius <br><span class=\"highlight\">+5m</span> Cast range",
+				"t3_desc": "<span class=\"highlight\">+0.9s</span> Stun Duration <br><span class=\"highlight\">+160</span> Damage"
+			}
 		},
 		{
 			"id": 539192269,
@@ -57436,10 +57436,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+3m</span> Move Speed <br><span class=\"highlight\">+8</span> Damage and increased scaling",
-				"t3_desc": "+10s Duration<br>Applies <span class=\"highlight\">-15%</span> Spirit Resist"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -57493,7 +57489,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+3m</span> Move Speed <br><span class=\"highlight\">+8</span> Damage and increased scaling",
+				"t3_desc": "+10s Duration<br>Applies <span class=\"highlight\">-15%</span> Spirit Resist"
+			}
 		},
 		{
 			"id": 2061574352,
@@ -57791,11 +57791,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+55% Bullet Resist</span> while channeling Storm Cloud",
-				"t2_desc": "<span class=\"highlight\">+7s</span> Channel Time <br><span class=\"highlight\">+10m</span> Final Radius<br><span class=\"highlight\">+5m</span> Initial Radius",
-				"t3_desc": "<span class=\"highlight\">+65.0</span> DPS<br><span class=\"highlight\">+4m</span> Flight Speed"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -57833,7 +57828,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+55% Bullet Resist</span> while channeling Storm Cloud",
+				"t2_desc": "<span class=\"highlight\">+7s</span> Channel Time <br><span class=\"highlight\">+10m</span> Final Radius<br><span class=\"highlight\">+5m</span> Initial Radius",
+				"t3_desc": "<span class=\"highlight\">+65.0</span> DPS<br><span class=\"highlight\">+4m</span> Flight Speed"
+			}
 		},
 		{
 			"id": 2679155647,
@@ -58345,11 +58345,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">-10.0%</span> Bullet Resist Reduction for 6.0s on wake-up",
-				"t2_desc": "<span class=\"highlight\">+1s</span> Sleep Duration<br>Applies <span class=\"highlight\">15.0</span> Fixation Stacks",
-				"t3_desc": "<span class=\"highlight\">-17.0s</span> Cooldown <br><span class=\"highlight\">-40%</span> Move and Dash Speed for <span class=\"highlight\">3s</span> on wake-up"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -58395,7 +58390,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">-10.0%</span> Bullet Resist Reduction for 6.0s on wake-up",
+				"t2_desc": "<span class=\"highlight\">+1s</span> Sleep Duration<br>Applies <span class=\"highlight\">15.0</span> Fixation Stacks",
+				"t3_desc": "<span class=\"highlight\">-17.0s</span> Cooldown <br><span class=\"highlight\">-40%</span> Move and Dash Speed for <span class=\"highlight\">3s</span> on wake-up"
+			}
 		},
 		{
 			"id": 2414191464,
@@ -58687,10 +58687,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "Enable <span class=\"highlight\">2</span> Ability Charges",
-				"t3_desc": "Dispels non-ult debuffs<br>Grants <span class=\"highlight\">+50% Bullet Lifesteal</span> for 5s"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -58728,7 +58724,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "Enable <span class=\"highlight\">2</span> Ability Charges",
+				"t3_desc": "Dispels non-ult debuffs<br>Grants <span class=\"highlight\">+50% Bullet Lifesteal</span> for 5s"
+			}
 		},
 		{
 			"id": 1080948381,
@@ -58972,11 +58972,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">40.0</span> Spirit damage and <span class=\"highlight\">12%</span> slow for 2s to target every <span class=\"highlight\">20</span> stacks",
-				"t2_desc": "<span class=\"highlight\">+40</span> Max Stacks and <span class=\"highlight\">+5s</span> Duration",
-				"t3_desc": "<span class=\"highlight\">+0.11</span>/ per Stack<br>Scales with Weapon Damage"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -59030,7 +59025,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">40.0</span> Spirit damage and <span class=\"highlight\">12%</span> slow for 2s to target every <span class=\"highlight\">20</span> stacks",
+				"t2_desc": "<span class=\"highlight\">+40</span> Max Stacks and <span class=\"highlight\">+5s</span> Duration",
+				"t3_desc": "<span class=\"highlight\">+0.11</span>/ per Stack<br>Scales with Weapon Damage"
+			}
 		},
 		{
 			"id": 731943444,
@@ -59290,10 +59290,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+10.0%</span> Fire Rate <br><span class=\"highlight\">+3m</span> Movespeed",
-				"t3_desc": "<span class=\"highlight\">+40.0%</span> Evasion <br><span class=\"highlight\">-65s</span> Cooldown"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -59327,7 +59323,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+10.0%</span> Fire Rate <br><span class=\"highlight\">+3m</span> Movespeed",
+				"t3_desc": "<span class=\"highlight\">+40.0%</span> Evasion <br><span class=\"highlight\">-65s</span> Cooldown"
+			}
 		},
 		{
 			"id": 3510968490,
@@ -59738,9 +59738,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+0.75s</span> Tether Duration and <span class=\"highlight\">+2m</span> Capture Radius"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -59770,7 +59767,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+0.75s</span> Tether Duration and <span class=\"highlight\">+2m</span> Capture Radius"
+			}
 		},
 		{
 			"id": 1796564033,
@@ -60019,10 +60019,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+50%</span> base Ammo while flying",
-				"t3_desc": "Hero Kills <span class=\"highlight\">Refresh</span> Duration. <br><span class=\"highlight\">+10.0</span> Spirit Damage with increased Spirit scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -60058,7 +60054,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+50%</span> base Ammo while flying",
+				"t3_desc": "Hero Kills <span class=\"highlight\">Refresh</span> Duration. <br><span class=\"highlight\">+10.0</span> Spirit Damage with increased Spirit scaling"
+			}
 		},
 		{
 			"id": 2048438176,
@@ -60348,11 +60348,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "Reduces <span class=\"highlight\">Incoming Healing</span> by <span class=\"highlight\">-35%</span>",
-				"t2_desc": "<span class=\"highlight\">+0.5%</span> Bleed Damage <br><span class=\"highlight\">-16.0s</span> Cooldown",
-				"t3_desc": "<span class=\"highlight\">+2s</span> Duration <br><span class=\"highlight\">-8% Bullet Resist</span> <br><span class=\"highlight\">-8% Spirit Resist</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -60394,7 +60389,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Reduces <span class=\"highlight\">Incoming Healing</span> by <span class=\"highlight\">-35%</span>",
+				"t2_desc": "<span class=\"highlight\">+0.5%</span> Bleed Damage <br><span class=\"highlight\">-16.0s</span> Cooldown",
+				"t3_desc": "<span class=\"highlight\">+2s</span> Duration <br><span class=\"highlight\">-8% Bullet Resist</span> <br><span class=\"highlight\">-8% Spirit Resist</span>"
+			}
 		},
 		{
 			"id": 775377419,
@@ -60670,7 +60670,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -60696,7 +60695,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 556186193,
@@ -61162,10 +61162,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">-65.0s</span> Cooldown and <span class=\"highlight\">+100.0%</span> Explosion Lifesteal",
-				"t3_desc": "<span class=\"highlight\">+0.9s</span> Stun Duration and <span class=\"highlight\">+10m</span> Radius"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -61199,7 +61195,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">-65.0s</span> Cooldown and <span class=\"highlight\">+100.0%</span> Explosion Lifesteal",
+				"t3_desc": "<span class=\"highlight\">+0.9s</span> Stun Duration and <span class=\"highlight\">+10m</span> Radius"
+			}
 		},
 		{
 			"id": 3516947824,
@@ -61508,10 +61508,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+1.0s</span> Trail Duration and <span class=\"highlight\">+20.0 DPS</span>",
-				"t3_desc": "Enable <span class=\"highlight\">2 Ability Charges</span> with <span class=\"highlight\">14s</span> Recharge time"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -61545,7 +61541,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+1.0s</span> Trail Duration and <span class=\"highlight\">+20.0 DPS</span>",
+				"t3_desc": "Enable <span class=\"highlight\">2 Ability Charges</span> with <span class=\"highlight\">14s</span> Recharge time"
+			}
 		},
 		{
 			"id": 491391007,
@@ -61865,10 +61865,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "Napalm Effect: +<span class=\"highlight\">15% Lifesteal</span>",
-				"t3_desc": "Napalm Effect: <span class=\"highlight\">+17%</span> Damage Taken and <span class=\"highlight\">-33%</span> Healing"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -61902,7 +61898,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "Napalm Effect: +<span class=\"highlight\">15% Lifesteal</span>",
+				"t3_desc": "Napalm Effect: <span class=\"highlight\">+17%</span> Damage Taken and <span class=\"highlight\">-33%</span> Healing"
+			}
 		},
 		{
 			"id": 1593133799,
@@ -62188,10 +62188,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "Burn Effect: <span class=\"highlight\">-35%</span> Spirit Damage",
-				"t3_desc": "<span class=\"highlight\">+3.0s</span> Max Burn Duration"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -62217,7 +62213,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "Burn Effect: <span class=\"highlight\">-35%</span> Spirit Damage",
+				"t3_desc": "<span class=\"highlight\">+3.0s</span> Max Burn Duration"
+			}
 		},
 		{
 			"id": 3576988085,
@@ -62711,11 +62711,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">-20.0%</span> to Fire Rate and Move Speed",
-				"t2_desc": "<span class=\"highlight\">+20.0</span> DPS and increased Spirit Scaling",
-				"t3_desc": "<span class=\"highlight\">-13s</span> Cooldown and Fires <span class=\"highlight\">2 additional Arctic Beams</span> within 10m of the last target hit."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -62765,7 +62760,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">-20.0%</span> to Fire Rate and Move Speed",
+				"t2_desc": "<span class=\"highlight\">+20.0</span> DPS and increased Spirit Scaling",
+				"t3_desc": "<span class=\"highlight\">-13s</span> Cooldown and Fires <span class=\"highlight\">2 additional Arctic Beams</span> within 10m of the last target hit."
+			}
 		},
 		{
 			"id": 1963397252,
@@ -63133,10 +63133,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+2m</span> Move Speed and <span class=\"highlight\">+35%</span> Bullet Resist for Kelvin while on Ice Path",
-				"t3_desc": "<span class=\"highlight\">+35%</span> Spirit and <span class=\"highlight\">+20</span> Spirit for Kelvin while on Ice Path"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -63170,7 +63166,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+2m</span> Move Speed and <span class=\"highlight\">+35%</span> Bullet Resist for Kelvin while on Ice Path",
+				"t3_desc": "<span class=\"highlight\">+35%</span> Spirit and <span class=\"highlight\">+20</span> Spirit for Kelvin while on Ice Path"
+			}
 		},
 		{
 			"id": 18921423,
@@ -63447,11 +63447,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+30</span> Damage and <span class=\"highlight\">+30</span> Heal Amount",
-				"t2_desc": "<span class=\"highlight\">-10</span> Cooldown and debuff now <span class=\"highlight\">freezes Stamina Regen</span>",
-				"t3_desc": "<span class=\"highlight\">+2m</span> Radius. Damage and Heal Spirit Scaling increased."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -63497,7 +63492,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+30</span> Damage and <span class=\"highlight\">+30</span> Heal Amount",
+				"t2_desc": "<span class=\"highlight\">-10</span> Cooldown and debuff now <span class=\"highlight\">freezes Stamina Regen</span>",
+				"t3_desc": "<span class=\"highlight\">+2m</span> Radius. Damage and Heal Spirit Scaling increased."
+			}
 		},
 		{
 			"id": 3826390464,
@@ -63758,9 +63758,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">Purges</span> non-ult debuffs for you and your allies. <br><span class=\"highlight\">+65</span> Health Regen and increased Spirit Scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -63796,7 +63793,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">Purges</span> non-ult debuffs for you and your allies. <br><span class=\"highlight\">+65</span> Health Regen and increased Spirit Scaling"
+			}
 		},
 		{
 			"id": 2896288811,
@@ -64205,10 +64205,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+20m</span> Cast Range and gain <span class=\"highlight\">+7.0</span> Weapon Damage for 6s",
-				"t3_desc": "<span class=\"highlight\">+1</span> Charges<br>OnCast : <span class=\"highlight\">+1</span> Stamina and <span class=\"highlight\">+60%</span> Air Control"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -64250,7 +64246,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+20m</span> Cast Range and gain <span class=\"highlight\">+7.0</span> Weapon Damage for 6s",
+				"t3_desc": "<span class=\"highlight\">+1</span> Charges<br>OnCast : <span class=\"highlight\">+1</span> Stamina and <span class=\"highlight\">+60%</span> Air Control"
+			}
 		},
 		{
 			"id": 3561817145,
@@ -64538,10 +64538,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "Struck enemies are <span class=\"highlight\">knocked up</span> and slowed by <span class=\"highlight\">40%</span> for <span class=\"highlight\">3s</span>",
-				"t3_desc": "<span class=\"highlight\">Damage Per Meter</span> +120% and improved scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -64597,7 +64593,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "Struck enemies are <span class=\"highlight\">knocked up</span> and slowed by <span class=\"highlight\">40%</span> for <span class=\"highlight\">3s</span>",
+				"t3_desc": "<span class=\"highlight\">Damage Per Meter</span> +120% and improved scaling"
+			}
 		},
 		{
 			"id": 397010810,
@@ -64902,9 +64902,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">Stun</span> enemies in Radius for 1.2s<br><span class=\"highlight\">+6m</span> Cast Range"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -64934,7 +64931,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">Stun</span> enemies in Radius for 1.2s<br><span class=\"highlight\">+6m</span> Cast Range"
+			}
 		},
 		{
 			"id": 519124136,
@@ -65199,11 +65199,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "Apply <span class=\"highlight\">-28%</span> Move speed for 3s",
-				"t2_desc": "Apply <span class=\"highlight\">-30%</span> Fire Rate <br><span class=\"highlight\">-16.0s</span> Cooldown",
-				"t3_desc": "<span class=\"highlight\">+80.0</span> Damage <br><span class=\"highlight\">+25.0</span> Attack angle<br><span class=\"highlight\">+15.0%</span> Heal"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -65249,7 +65244,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Apply <span class=\"highlight\">-28%</span> Move speed for 3s",
+				"t2_desc": "Apply <span class=\"highlight\">-30%</span> Fire Rate <br><span class=\"highlight\">-16.0s</span> Cooldown",
+				"t3_desc": "<span class=\"highlight\">+80.0</span> Damage <br><span class=\"highlight\">+25.0</span> Attack angle<br><span class=\"highlight\">+15.0%</span> Heal"
+			}
 		},
 		{
 			"id": 2942562744,
@@ -65745,11 +65745,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+60</span> Damage",
-				"t2_desc": "<br><span class=\"highlight\">-12s</span> Cooldown<br><span class=\"highlight\">+30%</span> Evasion",
-				"t3_desc": "Recast within <span class=\"highlight\">6s</span>.<br>Increases spirit scaling."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -65785,7 +65780,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+60</span> Damage",
+				"t2_desc": "<br><span class=\"highlight\">-12s</span> Cooldown<br><span class=\"highlight\">+30%</span> Evasion",
+				"t3_desc": "Recast within <span class=\"highlight\">6s</span>.<br>Increases spirit scaling."
+			}
 		},
 		{
 			"id": 2221949202,
@@ -66101,11 +66101,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "On Proc: Apply a fading <span class=\"highlight\">48%</span> Slow for <span class=\"highlight\">0.8s</span>",
-				"t2_desc": "<span class=\"highlight\">+20</span> Base Damage and <span class=\"highlight\">+3s</span> Multiplier Duration",
-				"t3_desc": "<span class=\"highlight\">-0.75s</span> Cooldown <br><span class=\"highlight\">+1</span> Max Marks <br>Stun Victim for <span class=\"highlight\">0.5s</span> on Max Marks"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -66151,7 +66146,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "On Proc: Apply a fading <span class=\"highlight\">48%</span> Slow for <span class=\"highlight\">0.8s</span>",
+				"t2_desc": "<span class=\"highlight\">+20</span> Base Damage and <span class=\"highlight\">+3s</span> Multiplier Duration",
+				"t3_desc": "<span class=\"highlight\">-0.75s</span> Cooldown <br><span class=\"highlight\">+1</span> Max Marks <br>Stun Victim for <span class=\"highlight\">0.5s</span> on Max Marks"
+			}
 		},
 		{
 			"id": 3733594387,
@@ -66374,10 +66374,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "+1 Charge<br>+2s Duration",
-				"t3_desc": "-15% Damage Penalty <br>Increased Spirit scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -66413,7 +66409,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "+1 Charge<br>+2s Duration",
+				"t3_desc": "-15% Damage Penalty <br>Increased Spirit scaling"
+			}
 		},
 		{
 			"id": 2604653402,
@@ -66691,10 +66691,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "+3m Move Speed and +20% Fire Rate for 12s",
-				"t2_desc": "400 Barrier that scales with Spirit"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -66734,7 +66730,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "+3m Move Speed and +20% Fire Rate for 12s",
+				"t2_desc": "400 Barrier that scales with Spirit"
+			}
 		},
 		{
 			"id": 1895060499,
@@ -67136,10 +67136,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">-5.0s Cooldown</span> <br><span class=\"highlight\">+1m Radius</span>",
-				"t3_desc": "Adds a debuff to enemies that lets Mo & Krill deal <span class=\"highlight\">+15% Damage</span> to them. Stacks and lasts 16s."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -67173,7 +67169,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">-5.0s Cooldown</span> <br><span class=\"highlight\">+1m Radius</span>",
+				"t3_desc": "Adds a debuff to enemies that lets Mo & Krill deal <span class=\"highlight\">+15% Damage</span> to them. Stacks and lasts 16s."
+			}
 		},
 		{
 			"id": 2406758797,
@@ -67476,11 +67476,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+50.0</span> Spin DPS",
-				"t2_desc": "<span class=\"highlight\">+4s</span> Burrow time and +2m radius",
-				"t3_desc": "<span class=\"highlight\">-20.0</span> Cooldown and <span class=\"highlight\">+4m/s</span> Move Speed"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -67514,7 +67509,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+50.0</span> Spin DPS",
+				"t2_desc": "<span class=\"highlight\">+4s</span> Burrow time and +2m radius",
+				"t3_desc": "<span class=\"highlight\">-20.0</span> Cooldown and <span class=\"highlight\">+4m/s</span> Move Speed"
+			}
 		},
 		{
 			"id": 1914797280,
@@ -67734,11 +67734,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+50</span> Damage and <span class=\"highlight\">+5m</span> Range",
-				"t2_desc": "Slow targets by <span class=\"highlight\">-24% and reduces dash distances by -26%</span>",
-				"t3_desc": "<span class=\"highlight\">+1.5s</span> Duration and <span class=\"highlight\">-25.0</span> Cooldown"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -67776,7 +67771,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+50</span> Damage and <span class=\"highlight\">+5m</span> Range",
+				"t2_desc": "Slow targets by <span class=\"highlight\">-24% and reduces dash distances by -26%</span>",
+				"t3_desc": "<span class=\"highlight\">+1.5s</span> Duration and <span class=\"highlight\">-25.0</span> Cooldown"
+			}
 		},
 		{
 			"id": 1917840730,
@@ -68005,11 +68005,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+100% lifesteal</span>",
-				"t2_desc": "<span class=\"highlight\">-30.0s Cooldown</span> and <span class=\"highlight\">+50.0% Bullet Resist</span>",
-				"t3_desc": "<span class=\"highlight\">+0.7s</span> Duration and <span class=\"highlight\">+40.0</span> Damage Per Second and increased scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -68049,7 +68044,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+100% lifesteal</span>",
+				"t2_desc": "<span class=\"highlight\">-30.0s Cooldown</span> and <span class=\"highlight\">+50.0% Bullet Resist</span>",
+				"t3_desc": "<span class=\"highlight\">+0.7s</span> Duration and <span class=\"highlight\">+40.0</span> Damage Per Second and increased scaling"
+			}
 		},
 		{
 			"id": 3108987282,
@@ -68459,10 +68459,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+15</span> Health Regen & <span class=\"highlight\">+40%</span> Max Move Speed",
-				"t3_desc": "Gain Damage Amp over time, up to <span class=\"highlight\">18%</span>. Lingers for 6s"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -68500,7 +68496,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+15</span> Health Regen & <span class=\"highlight\">+40%</span> Max Move Speed",
+				"t3_desc": "Gain Damage Amp over time, up to <span class=\"highlight\">18%</span>. Lingers for 6s"
+			}
 		},
 		{
 			"id": 4131517918,
@@ -68773,9 +68773,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "Per Bomb Touch : <span class=\"highlight\">-6%</span> Melee Resist for 6s</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -68805,7 +68802,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "Per Bomb Touch : <span class=\"highlight\">-6%</span> Melee Resist for 6s</span>"
+			}
 		},
 		{
 			"id": 2054144742,
@@ -69077,10 +69077,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+75</span> Damage and <span class=\"highlight\">+20%</span> Move Speed",
-				"t3_desc": "On Completion: Heal for <span class=\"highlight\">450</span> and <span class=\"highlight\">refund</span> all ability cooldowns"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -69114,7 +69110,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+75</span> Damage and <span class=\"highlight\">+20%</span> Move Speed",
+				"t3_desc": "On Completion: Heal for <span class=\"highlight\">450</span> and <span class=\"highlight\">refund</span> all ability cooldowns"
+			}
 		},
 		{
 			"id": 1426567660,
@@ -69402,10 +69402,6 @@
 					"SlashRadius"
 				]
 			},
-			"description": {
-				"t2_desc": "Heroes killed within 3s grant <span class=\"highlight\">+200</span> souls",
-				"t3_desc": "<span class=\"highlight\">+60</span> Damage & On Hero Hit: <span class=\"highlight\">50%</span> Cooldown Refund"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -69439,7 +69435,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "Heroes killed within 3s grant <span class=\"highlight\">+200</span> souls",
+				"t3_desc": "<span class=\"highlight\">+60</span> Damage & On Hero Hit: <span class=\"highlight\">50%</span> Cooldown Refund"
+			}
 		},
 		{
 			"id": 2402901451,
@@ -69794,10 +69794,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+54.0 Damage</span>",
-				"t3_desc": "<span class=\"highlight\">Improved damage scaling</span> and <span class=\"highlight\">-3s</span> Charge Delay"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -69831,7 +69827,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+54.0 Damage</span>",
+				"t3_desc": "<span class=\"highlight\">Improved damage scaling</span> and <span class=\"highlight\">-3s</span> Charge Delay"
+			}
 		},
 		{
 			"id": 3452399392,
@@ -70151,10 +70151,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "While airborne, <span class=\"highlight\">+3</span> Weapon Damage and weapon damage applies <span class=\"highlight\">24%</span> movement slow for 1.5s",
-				"t3_desc": "While airborne, <span class=\"highlight\">+30%</span> Bullet Lifesteal, <span class=\"highlight\">+30%</span> Spirit Lifesteal and <span class=\"highlight\">+30%</span> Bullet Evasion"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -70196,7 +70192,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "While airborne, <span class=\"highlight\">+3</span> Weapon Damage and weapon damage applies <span class=\"highlight\">24%</span> movement slow for 1.5s",
+				"t3_desc": "While airborne, <span class=\"highlight\">+30%</span> Bullet Lifesteal, <span class=\"highlight\">+30%</span> Spirit Lifesteal and <span class=\"highlight\">+30%</span> Bullet Evasion"
+			}
 		},
 		{
 			"id": 512733154,
@@ -70523,10 +70523,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "Applies <span class=\"highlight\">-15%</span> Bullet Resist for 10s",
-				"t3_desc": "<span class=\"highlight\">+1s</span> Curse Duration and <span class=\"highlight\">+1.5m</span> Radius"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -70560,7 +70556,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "Applies <span class=\"highlight\">-15%</span> Bullet Resist for 10s",
+				"t3_desc": "<span class=\"highlight\">+1s</span> Curse Duration and <span class=\"highlight\">+1.5m</span> Radius"
+			}
 		},
 		{
 			"id": 3242902780,
@@ -70794,9 +70794,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "After hit, kills enemies that are below <span class=\"highlight\">22% Health</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -70822,7 +70819,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "After hit, kills enemies that are below <span class=\"highlight\">22% Health</span>"
+			}
 		},
 		{
 			"id": 3121968594,
@@ -71232,10 +71232,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "+2 Charges",
-				"t3_desc": "+12.0 Bleed DPS with increased Spirit scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -71266,7 +71262,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "+2 Charges",
+				"t3_desc": "+12.0 Bleed DPS with increased Spirit scaling"
+			}
 		},
 		{
 			"id": 1458044103,
@@ -71574,10 +71574,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">-4%</span> Spirit Resist<br><span class=\"highlight\">+2m</span> Dash Range",
-				"t3_desc": "<span class=\"highlight\">+50</span> Impact Damage<br><span class=\"highlight\">-2s</span> Cooldown per Hero hit."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -71619,7 +71615,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">-4%</span> Spirit Resist<br><span class=\"highlight\">+2m</span> Dash Range",
+				"t3_desc": "<span class=\"highlight\">+50</span> Impact Damage<br><span class=\"highlight\">-2s</span> Cooldown per Hero hit."
+			}
 		},
 		{
 			"id": 1537272748,
@@ -71854,7 +71854,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -71880,7 +71879,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 1835738020,
@@ -72178,11 +72178,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+6 m</span> Range<br><span class=\"highlight\">+2 m/s</span> in Full Rage.",
-				"t2_desc": "<span class=\"highlight\">+16%</span> Full Rage Bonus Damage<br><span class=\"highlight\">-25s</span> Cooldown",
-				"t3_desc": "<span class=\"highlight\">+10%</span> Enemy Health Threshold"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -72216,7 +72211,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+6 m</span> Range<br><span class=\"highlight\">+2 m/s</span> in Full Rage.",
+				"t2_desc": "<span class=\"highlight\">+16%</span> Full Rage Bonus Damage<br><span class=\"highlight\">-25s</span> Cooldown",
+				"t3_desc": "<span class=\"highlight\">+10%</span> Enemy Health Threshold"
+			}
 		},
 		{
 			"id": 215719738,
@@ -72532,7 +72532,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -72558,7 +72557,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2322200384,
@@ -72720,7 +72720,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -72746,7 +72745,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 1105433407,
@@ -72908,7 +72908,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -72934,7 +72933,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2824729668,
@@ -73105,7 +73105,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -73131,7 +73130,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2080724972,
@@ -73679,10 +73679,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+5.0</span> Weapon Damage for 6s</span>",
-				"t3_desc": "<span class=\"highlight\">+1.6s</span> Lifetime and <span class=\"highlight\">-10s</span> Cooldown."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -73716,7 +73712,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+5.0</span> Weapon Damage for 6s</span>",
+				"t3_desc": "<span class=\"highlight\">+1.6s</span> Lifetime and <span class=\"highlight\">-10s</span> Cooldown."
+			}
 		},
 		{
 			"id": 3747867012,
@@ -73970,9 +73970,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+1.5s</span> Duration<br><span class=\"highlight\">+4m</span> Radius<br><span class=\"highlight\">-32%</span> Move Speed and Fire Rate for 4.0s"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -74014,7 +74011,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+1.5s</span> Duration<br><span class=\"highlight\">+4m</span> Radius<br><span class=\"highlight\">-32%</span> Move Speed and Fire Rate for 4.0s"
+			}
 		},
 		{
 			"id": 938149308,
@@ -74309,9 +74309,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+4%</span> Amp Per Stack and <span class=\"highlight\">3m</span> Radius"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -74341,7 +74338,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+4%</span> Amp Per Stack and <span class=\"highlight\">3m</span> Radius"
+			}
 		},
 		{
 			"id": 2954330093,
@@ -74609,10 +74609,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+3s</span> Duration and <span class=\"highlight\">+4m</span> Radius",
-				"t3_desc": "<span class=\"highlight\">Prevents all healing</span><br><span class=\"highlight\">+13.0</span> DPS with increased Spirit scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -74651,7 +74647,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+3s</span> Duration and <span class=\"highlight\">+4m</span> Radius",
+				"t3_desc": "<span class=\"highlight\">Prevents all healing</span><br><span class=\"highlight\">+13.0</span> DPS with increased Spirit scaling"
+			}
 		},
 		{
 			"id": 1961353863,
@@ -75078,10 +75078,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+8%</span> Fire Rate and <span class=\"highlight\">+8%</span> Bullet Lifesteal",
-				"t3_desc": "Ability is always active"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -75115,7 +75111,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+8%</span> Fire Rate and <span class=\"highlight\">+8%</span> Bullet Lifesteal",
+				"t3_desc": "Ability is always active"
+			}
 		},
 		{
 			"id": 4111222521,
@@ -75351,10 +75351,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+2m</span> Radius and increased DPS Spirit scaling",
-				"t3_desc": "Enemies caught in thorns for 2.0s are <span class=\"highlight\">Immobilized</span> for <span class=\"highlight\">+1.6s</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -75390,7 +75386,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+2m</span> Radius and increased DPS Spirit scaling",
+				"t3_desc": "Enemies caught in thorns for 2.0s are <span class=\"highlight\">Immobilized</span> for <span class=\"highlight\">+1.6s</span>"
+			}
 		},
 		{
 			"id": 3642273386,
@@ -75658,9 +75658,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+0.75s</span> Stun Duration and increased Damage spirit scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -75692,7 +75689,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+0.75s</span> Stun Duration and increased Damage spirit scaling"
+			}
 		},
 		{
 			"id": 1247583368,
@@ -76044,11 +76044,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "On Fly End : <span class=\"highlight\">300</span> Barrier to Ivy and ally that scales with Spirit",
-				"t2_desc": "<span class=\"highlight\">+32%</span> Slow for <span class=\"highlight\">3s</span> on enemies hit",
-				"t3_desc": "<span class=\"highlight\">Silence</span> for <span class=\"highlight\">3s</span> on enemies hit.<br>Increases damage and barrier scaling."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -76096,7 +76091,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "On Fly End : <span class=\"highlight\">300</span> Barrier to Ivy and ally that scales with Spirit",
+				"t2_desc": "<span class=\"highlight\">+32%</span> Slow for <span class=\"highlight\">3s</span> on enemies hit",
+				"t3_desc": "<span class=\"highlight\">Silence</span> for <span class=\"highlight\">3s</span> on enemies hit.<br>Increases damage and barrier scaling."
+			}
 		},
 		{
 			"id": 3413773852,
@@ -76527,10 +76527,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "+36.0 Damage and +1.5m Radius",
-				"t3_desc": "+1 Bounces and improved Spirit Scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -76566,7 +76562,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "+36.0 Damage and +1.5m Radius",
+				"t3_desc": "+1 Bounces and improved Spirit Scaling"
+			}
 		},
 		{
 			"id": 3788152387,
@@ -76854,11 +76854,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "Increases Move Speed and Stamina Recovery",
-				"t2_desc": "+25 Health Regen and +1s Duration",
-				"t3_desc": "<span class=\"highlight\">Removes all non-ult Debuffs</span> and <span class=\"highlight\">-20.0s</span> Cooldown"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -76900,7 +76895,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Increases Move Speed and Stamina Recovery",
+				"t2_desc": "+25 Health Regen and +1s Duration",
+				"t3_desc": "<span class=\"highlight\">Removes all non-ult Debuffs</span> and <span class=\"highlight\">-20.0s</span> Cooldown"
+			}
 		},
 		{
 			"id": 4206531918,
@@ -77190,10 +77190,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "+70 Damage and +20% Resists",
-				"t3_desc": "+7s Duration, +0.3s Stun Duration, and +0.2 Spirit Scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -77237,7 +77233,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "+70 Damage and +20% Resists",
+				"t3_desc": "+7s Duration, +0.3s Stun Duration, and +0.2 Spirit Scaling"
+			}
 		},
 		{
 			"id": 1020817390,
@@ -77539,11 +77539,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "+1 Charge and +20 Damage",
-				"t2_desc": "+1.5m Radius and +60% Lifesteal",
-				"t3_desc": "-14.0s Cooldown and now deals <span class=\"highlight\">Heavy Melee Damage</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -77599,7 +77594,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "+1 Charge and +20 Damage",
+				"t2_desc": "+1.5m Radius and +60% Lifesteal",
+				"t3_desc": "-14.0s Cooldown and now deals <span class=\"highlight\">Heavy Melee Damage</span>"
+			}
 		},
 		{
 			"id": 816395058,
@@ -78007,11 +78007,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "Warden deals <span class=\"highlight\">+20% more Bullet Damage</span> to trapped Heroes for <span class=\"highlight\">5s</span>",
-				"t2_desc": "+0.75s Duration",
-				"t3_desc": "-14s Cooldown <br>Silences enemies until they escape or are immobilized"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -78045,7 +78040,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Warden deals <span class=\"highlight\">+20% more Bullet Damage</span> to trapped Heroes for <span class=\"highlight\">5s</span>",
+				"t2_desc": "+0.75s Duration",
+				"t3_desc": "-14s Cooldown <br>Silences enemies until they escape or are immobilized"
+			}
 		},
 		{
 			"id": 2751689917,
@@ -78260,10 +78260,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "-24s Cooldown and +2s Duration",
-				"t3_desc": "<span class=\"highlight\">+30%</span> Debuff Resistance and improved Barrier scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -78299,7 +78295,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "-24s Cooldown and +2s Duration",
+				"t3_desc": "<span class=\"highlight\">+30%</span> Debuff Resistance and improved Barrier scaling"
+			}
 		},
 		{
 			"id": 2656490109,
@@ -78606,11 +78606,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "Hit enemies lose <span class=\"highlight\">1 Stamina</span>",
-				"t2_desc": "<span class=\"highlight\">+35 Damage</span> and <span class=\"highlight\">-25% Weapon Damage</span>",
-				"t3_desc": "<span class=\"highlight\">-7s</span> Cooldown and <span class=\"highlight\">+2m</span> Radius<br> Applies <span class=\"highlight\">-30%</span> Fire Rate"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -78648,7 +78643,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Hit enemies lose <span class=\"highlight\">1 Stamina</span>",
+				"t2_desc": "<span class=\"highlight\">+35 Damage</span> and <span class=\"highlight\">-25% Weapon Damage</span>",
+				"t3_desc": "<span class=\"highlight\">-7s</span> Cooldown and <span class=\"highlight\">+2m</span> Radius<br> Applies <span class=\"highlight\">-30%</span> Fire Rate"
+			}
 		},
 		{
 			"id": 2702908623,
@@ -78946,10 +78946,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "+40.5 DPS<br>-30.0s Cooldown",
-				"t3_desc": "+4s Duration<br>Unstoppable and +30% Resists while channeling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -78991,7 +78987,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "+40.5 DPS<br>-30.0s Cooldown",
+				"t3_desc": "+4s Duration<br>Unstoppable and +30% Resists while channeling"
+			}
 		},
 		{
 			"id": 1427059555,
@@ -79392,9 +79392,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "+1.5s Debuff Duration and +6m Throw and Cast Range"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -79428,7 +79425,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "+1.5s Debuff Duration and +6m Throw and Cast Range"
+			}
 		},
 		{
 			"id": 4147641675,
@@ -79640,9 +79640,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">300 Barrier</span> for 5s. Barrier scales with Spirit Power."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -79678,7 +79675,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">300 Barrier</span> for 5s. Barrier scales with Spirit Power."
+			}
 		},
 		{
 			"id": 1842576017,
@@ -79936,10 +79936,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+10% Fire Rate</span> and <span class=\"highlight\">+3s Duration</span>",
-				"t3_desc": "<span class=\"highlight\">Unlimited Ammo</span> and Increased Scaling on Spirit Damage Per Bullet"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -79975,7 +79971,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+10% Fire Rate</span> and <span class=\"highlight\">+3s Duration</span>",
+				"t3_desc": "<span class=\"highlight\">Unlimited Ammo</span> and Increased Scaling on Spirit Damage Per Bullet"
+			}
 		},
 		{
 			"id": 1999680326,
@@ -80336,10 +80336,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "+40 Damage and increased Spirit Scaling",
-				"t3_desc": "All suits are improved and higher chance for <span class=\"highlight\">Jokers</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -80392,7 +80388,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "+40 Damage and increased Spirit Scaling",
+				"t3_desc": "All suits are improved and higher chance for <span class=\"highlight\">Jokers</span>"
+			}
 		},
 		{
 			"id": 495487721,
@@ -80815,9 +80815,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+2</span> additional targets"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -80843,7 +80840,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+2</span> additional targets"
+			}
 		},
 		{
 			"id": 3422822440,
@@ -81059,7 +81059,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -81085,7 +81084,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3426178920,
@@ -81364,7 +81364,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -81394,7 +81393,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2153275594,
@@ -81625,7 +81625,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -81651,7 +81650,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 440716503,
@@ -82101,11 +82101,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+32%</span> Movement Slow for <span class=\"highlight\">3s</span>",
-				"t2_desc": "<span class=\"highlight\">-4s</span> Ability Cooldown",
-				"t3_desc": "<span class=\"highlight\">+8m</span> Cast Range <br>+150.0 Damage and Increases Spirit Power scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -82145,7 +82140,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+32%</span> Movement Slow for <span class=\"highlight\">3s</span>",
+				"t2_desc": "<span class=\"highlight\">-4s</span> Ability Cooldown",
+				"t3_desc": "<span class=\"highlight\">+8m</span> Cast Range <br>+150.0 Damage and Increases Spirit Power scaling"
+			}
 		},
 		{
 			"id": 2566573207,
@@ -82404,10 +82404,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "Gain <span class=\"highlight\">+35</span> Spirit Power for <span class=\"highlight\">6s</span>",
-				"t3_desc": "Alt-Cast to Grapple allies<br><span class=\"highlight\">+15m</span> Cast Range<br>Gains <span class=\"highlight\">1 extra charge</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -82449,7 +82445,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "Gain <span class=\"highlight\">+35</span> Spirit Power for <span class=\"highlight\">6s</span>",
+				"t3_desc": "Alt-Cast to Grapple allies<br><span class=\"highlight\">+15m</span> Cast Range<br>Gains <span class=\"highlight\">1 extra charge</span>"
+			}
 		},
 		{
 			"id": 2366960452,
@@ -82723,11 +82723,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "On Hit : <span class=\"highlight\">+30%</span> Melee Damage for 4s",
-				"t2_desc": "On Hero Hit : <span class=\"highlight\">+6%</span> Max Health Heal",
-				"t3_desc": "<span class=\"highlight\">-10s</span> Cooldown and increases scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -82769,7 +82764,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "On Hit : <span class=\"highlight\">+30%</span> Melee Damage for 4s",
+				"t2_desc": "On Hero Hit : <span class=\"highlight\">+6%</span> Max Health Heal",
+				"t3_desc": "<span class=\"highlight\">-10s</span> Cooldown and increases scaling"
+			}
 		},
 		{
 			"id": 3319782965,
@@ -83055,10 +83055,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "+4m Move Speed and -20 Cooldown",
-				"t3_desc": "+3.0s Duration<br>+30% Bullet Resist<br>+30% Spirit Resist"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -83096,7 +83092,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "+4m Move Speed and -20 Cooldown",
+				"t3_desc": "+3.0s Duration<br>+30% Bullet Resist<br>+30% Spirit Resist"
+			}
 		},
 		{
 			"id": 988091080,
@@ -83477,9 +83477,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "On Slide: <span class=\"highlight\">Gain 180</span> barrier for <span class=\"highlight\">4s</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -83519,7 +83516,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "On Slide: <span class=\"highlight\">Gain 180</span> barrier for <span class=\"highlight\">4s</span>"
+			}
 		},
 		{
 			"id": 3428732129,
@@ -83796,10 +83796,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">-40%</span> Incoming Healing and <span class=\"highlight\">-12s</span> Cooldown",
-				"t3_desc": "Bullets also build up <span class=\"highlight\">Lethal Venom</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -83833,7 +83829,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">-40%</span> Incoming Healing and <span class=\"highlight\">-12s</span> Cooldown",
+				"t3_desc": "Bullets also build up <span class=\"highlight\">Lethal Venom</span>"
+			}
 		},
 		{
 			"id": 645773760,
@@ -84133,10 +84133,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "On Hit: <span class=\"highlight\">-8%</span> Bullet Resist and <span class=\"highlight\">-6%</span> Bullet Resist per Stack",
-				"t3_desc": "+<span class=\"highlight\">2</span> Max Stacks<br><span class=\"highlight\">-2s</span> Charge Delay<br>On Hit: Refund <span class=\"highlight\">55%</span> Charge Cooldown"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -84174,7 +84170,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "On Hit: <span class=\"highlight\">-8%</span> Bullet Resist and <span class=\"highlight\">-6%</span> Bullet Resist per Stack",
+				"t3_desc": "+<span class=\"highlight\">2</span> Max Stacks<br><span class=\"highlight\">-2s</span> Charge Delay<br>On Hit: Refund <span class=\"highlight\">55%</span> Charge Cooldown"
+			}
 		},
 		{
 			"id": 1594727071,
@@ -84433,9 +84433,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "+<span class=\"highlight\">1.0s</span> Petrify Duration. Petrifies all enemies in the area.</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -84461,7 +84458,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "+<span class=\"highlight\">1.0s</span> Petrify Duration. Petrifies all enemies in the area.</span>"
+			}
 		},
 		{
 			"id": 2207852489,
@@ -84805,7 +84805,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -84831,7 +84830,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2833514487,
@@ -85072,7 +85072,6 @@
 					"HalfHeight"
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -85098,7 +85097,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 371372145,
@@ -85342,7 +85342,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -85368,7 +85367,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 916959628,
@@ -85558,7 +85558,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -85584,7 +85583,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2014234803,
@@ -86035,10 +86035,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "Bolts apply <span class=\"highlight\">-25%</span> Fire Rate for <span class=\"highlight\">5</span>s.",
-				"t3_desc": "<span class=\"highlight\">+126.0</span> Max Damage. +<span class=\"highlight\">50.0%</span> Assistant Damage."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -86074,7 +86070,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Bolts apply <span class=\"highlight\">-25%</span> Fire Rate for <span class=\"highlight\">5</span>s.",
+				"t3_desc": "<span class=\"highlight\">+126.0</span> Max Damage. +<span class=\"highlight\">50.0%</span> Assistant Damage."
+			}
 		},
 		{
 			"id": 12456023,
@@ -86303,10 +86303,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+7s Duration</span> & <span class=\"highlight\">5m Range</span>",
-				"t3_desc": "<span class=\"highlight\">+60% Fire Rate</span> and +<span class=\"highlight\">12.599999 Assistant Damage</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -86344,7 +86340,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+7s Duration</span> & <span class=\"highlight\">5m Range</span>",
+				"t3_desc": "<span class=\"highlight\">+60% Fire Rate</span> and +<span class=\"highlight\">12.599999 Assistant Damage</span>"
+			}
 		},
 		{
 			"id": 191022746,
@@ -86541,11 +86541,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">Upgrade</span> the Copy.",
-				"t2_desc": "<span class=\"highlight\">Upgrade</span> the Copy AGAIN!",
-				"t3_desc": "<span class=\"highlight\">Upgrade</span> the Copy ONCE AGAIN!"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": []
@@ -86556,7 +86551,12 @@
 				{
 					"property_upgrades": []
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">Upgrade</span> the Copy.",
+				"t2_desc": "<span class=\"highlight\">Upgrade</span> the Copy AGAIN!",
+				"t3_desc": "<span class=\"highlight\">Upgrade</span> the Copy ONCE AGAIN!"
+			}
 		},
 		{
 			"id": 2142213586,
@@ -86814,9 +86814,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+3m</span> Radius"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -86846,7 +86843,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+3m</span> Radius"
+			}
 		},
 		{
 			"id": 2390247986,
@@ -87251,9 +87251,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">-25</span>% Spirit Resist for enemies in the pool"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -87279,7 +87276,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">-25</span>% Spirit Resist for enemies in the pool"
+			}
 		},
 		{
 			"id": 2876116869,
@@ -87567,10 +87567,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "Additional <span class=\"highlight\">-3 Spirit</span> and <span class=\"highlight\">-3% Spirit Resistance</span>",
-				"t3_desc": "Summon <span class=\"highlight\">+5 Spiders</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -87604,7 +87600,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "Additional <span class=\"highlight\">-3 Spirit</span> and <span class=\"highlight\">-3% Spirit Resistance</span>",
+				"t3_desc": "Summon <span class=\"highlight\">+5 Spiders</span>"
+			}
 		},
 		{
 			"id": 3322902852,
@@ -87846,7 +87846,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -87872,7 +87871,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3360792911,
@@ -88157,9 +88157,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "+<span class=\"highlight\">2</span>s Debuff Duration. The Web also <span class=\"highlight\">Silences</span> for <span class=\"highlight\">2.5</span>s"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -88189,7 +88186,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "+<span class=\"highlight\">2</span>s Debuff Duration. The Web also <span class=\"highlight\">Silences</span> for <span class=\"highlight\">2.5</span>s"
+			}
 		},
 		{
 			"id": 3294175151,
@@ -88560,9 +88560,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "[Not Yet Implemented]"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -88588,7 +88585,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "[Not Yet Implemented]"
+			}
 		},
 		{
 			"id": 1773588524,
@@ -88824,7 +88824,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -88850,7 +88849,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 1101238302,
@@ -89121,7 +89121,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -89147,7 +89146,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3318975115,
@@ -89520,7 +89520,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -89546,7 +89545,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2839987102,
@@ -89816,7 +89816,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -89837,7 +89836,8 @@
 				{
 					"property_upgrades": []
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 289749826,
@@ -90051,8 +90051,8 @@
 					}
 				]
 			},
-			"description": {},
-			"upgrades": []
+			"upgrades": [],
+			"description": {}
 		},
 		{
 			"id": 2502155040,
@@ -90463,10 +90463,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "On Cast: Gain <span class=\"highlight\">+25%</span> Fire Rate for 8s and add <span class=\"highlight\">8</span> bullets",
-				"t3_desc": "<span class=\"highlight\">+1</span> Recast<br><span class=\"highlight\">+4m</span> Range"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -90504,7 +90500,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "On Cast: Gain <span class=\"highlight\">+25%</span> Fire Rate for 8s and add <span class=\"highlight\">8</span> bullets",
+				"t3_desc": "<span class=\"highlight\">+1</span> Recast<br><span class=\"highlight\">+4m</span> Range"
+			}
 		},
 		{
 			"id": 1233782561,
@@ -90808,11 +90808,6 @@
 					"PerTargetCooldown"
 				]
 			},
-			"description": {
-				"t1_desc": "On Proc: <span class=\"highlight\">+24%</span> Slow for 3s",
-				"t2_desc": "<span class=\"highlight\">+3.0</span> Spirit Damage per Bullet & <br><span class=\"highlight\">+45.0</span> Bonus Damage",
-				"t3_desc": "<span class=\"highlight\">-5</span> Cooldown <br>On Proc: <span class=\"highlight\">+25%</span> Fire Rate for 5s"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -90854,7 +90849,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "On Proc: <span class=\"highlight\">+24%</span> Slow for 3s",
+				"t2_desc": "<span class=\"highlight\">+3.0</span> Spirit Damage per Bullet & <br><span class=\"highlight\">+45.0</span> Bonus Damage",
+				"t3_desc": "<span class=\"highlight\">-5</span> Cooldown <br>On Proc: <span class=\"highlight\">+25%</span> Fire Rate for 5s"
+			}
 		},
 		{
 			"id": 3379486147,
@@ -91187,9 +91187,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "On Hit: Deal <span class=\"highlight\">+0.5%</span> Current Health as Damage"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -91215,7 +91212,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "On Hit: Deal <span class=\"highlight\">+0.5%</span> Current Health as Damage"
+			}
 		},
 		{
 			"id": 193508101,
@@ -91485,10 +91485,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+30.0</span> Heal per Kill <br><span class=\"highlight\">-8.0s</span> Cooldown",
-				"t3_desc": "<span class=\"highlight\">+7.0%</span> Missing health damage and increased Heal per Kill Spirit scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -91524,7 +91520,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+30.0</span> Heal per Kill <br><span class=\"highlight\">-8.0s</span> Cooldown",
+				"t3_desc": "<span class=\"highlight\">+7.0%</span> Missing health damage and increased Heal per Kill Spirit scaling"
+			}
 		},
 		{
 			"id": 1590129566,
@@ -91873,7 +91873,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -91899,7 +91898,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3793541808,
@@ -92061,7 +92061,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -92087,7 +92086,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2674556961,
@@ -92249,7 +92249,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -92275,7 +92274,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 1815345037,
@@ -92524,7 +92524,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -92560,7 +92559,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 1761919638,
@@ -92904,7 +92904,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -92930,7 +92929,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 682591488,
@@ -93104,7 +93104,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -93130,7 +93129,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 1418303954,
@@ -93334,7 +93334,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -93360,7 +93359,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 1048488396,
@@ -93531,7 +93531,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -93557,7 +93556,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3977811669,
@@ -93955,7 +93955,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -93981,7 +93980,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3449758496,
@@ -94160,7 +94160,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -94186,7 +94185,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 201562678,
@@ -94368,7 +94368,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -94394,7 +94393,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 122168569,
@@ -94722,7 +94722,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -94748,7 +94747,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2082403219,
@@ -94910,7 +94910,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -94936,7 +94935,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2800600819,
@@ -95096,7 +95096,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -95122,7 +95121,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2510227556,
@@ -95293,7 +95293,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -95319,7 +95318,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 581038282,
@@ -95635,7 +95635,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -95661,7 +95660,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 4197612718,
@@ -95823,7 +95823,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -95849,7 +95848,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2949458312,
@@ -96011,7 +96011,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -96037,7 +96036,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2561043068,
@@ -96208,7 +96208,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -96234,7 +96233,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3877402249,
@@ -96579,7 +96579,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -96605,7 +96604,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3803152704,
@@ -96767,7 +96767,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -96793,7 +96792,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 620778714,
@@ -96955,7 +96955,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -96981,7 +96980,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3632058121,
@@ -97152,7 +97152,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -97178,7 +97177,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2079380905,
@@ -97576,10 +97576,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+70</span> Total HP Regen and <span class=\"highlight\">-8s</span> Cooldown",
-				"t3_desc": "<span class=\"highlight\">+1</span> Charge<br><span class=\"highlight\">+50%</span> Debuff Resistance<br>Increases spirit scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -97619,7 +97615,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+70</span> Total HP Regen and <span class=\"highlight\">-8s</span> Cooldown",
+				"t3_desc": "<span class=\"highlight\">+1</span> Charge<br><span class=\"highlight\">+50%</span> Debuff Resistance<br>Increases spirit scaling"
+			}
 		},
 		{
 			"id": 1472593493,
@@ -97934,11 +97934,6 @@
 					"MaxRadius"
 				]
 			},
-			"description": {
-				"t1_desc": "Enemies receive <span class=\"highlight\">20%</span> Move and Dash Slow",
-				"t2_desc": "<span class=\"highlight\">+6</span> Min DPS and <span class=\"highlight\">+34.0</span> Max DPS",
-				"t3_desc": "<span class=\"highlight\">+1m</span> Radius<br>Enemies take <span class=\"highlight\">+15%</span> Damage"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -97980,7 +97975,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Enemies receive <span class=\"highlight\">20%</span> Move and Dash Slow",
+				"t2_desc": "<span class=\"highlight\">+6</span> Min DPS and <span class=\"highlight\">+34.0</span> Max DPS",
+				"t3_desc": "<span class=\"highlight\">+1m</span> Radius<br>Enemies take <span class=\"highlight\">+15%</span> Damage"
+			}
 		},
 		{
 			"id": 3493884851,
@@ -98341,10 +98341,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "While On Cooldown: Gain <span class=\"highlight\">+15%</span> Fire Rate and <span class=\"highlight\">6.0</span> Spirit Damage per Bullet",
-				"t3_desc": "<span class=\"highlight\">+175</span> Damage<br><span class=\"highlight\">+1.5</span> Stun <br><span class=\"highlight\">-95.0s</span> Cooldown"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -98388,7 +98384,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "While On Cooldown: Gain <span class=\"highlight\">+15%</span> Fire Rate and <span class=\"highlight\">6.0</span> Spirit Damage per Bullet",
+				"t3_desc": "<span class=\"highlight\">+175</span> Damage<br><span class=\"highlight\">+1.5</span> Stun <br><span class=\"highlight\">-95.0s</span> Cooldown"
+			}
 		},
 		{
 			"id": 2043074967,
@@ -98670,10 +98670,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "On Hit: Apply <span class=\"highlight\">32%</span> Slow for <span class=\"highlight\">2ss</span>",
-				"t3_desc": "On Hero Hit: Heal for <span class=\"highlight\">15%</span> of your missing health and increased Spirit scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -98709,7 +98705,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "On Hit: Apply <span class=\"highlight\">32%</span> Slow for <span class=\"highlight\">2ss</span>",
+				"t3_desc": "On Hero Hit: Heal for <span class=\"highlight\">15%</span> of your missing health and increased Spirit scaling"
+			}
 		},
 		{
 			"id": 604448162,
@@ -99005,11 +99005,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">-12s</span> Cooldown",
-				"t2_desc": "<span class=\"highlight\">+1.0</span> Charge<br><span class=\"highlight\">+2s</span> Trail Duration <br><span class=\"highlight\">+1m</span> Radius<br>",
-				"t3_desc": "<span class=\"highlight\">+12m</span> Travel Range<br><span class=\"highlight\">+100.0</span> Damage <br><span class=\"highlight\">+30.0</span> DPS"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -99051,7 +99046,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">-12s</span> Cooldown",
+				"t2_desc": "<span class=\"highlight\">+1.0</span> Charge<br><span class=\"highlight\">+2s</span> Trail Duration <br><span class=\"highlight\">+1m</span> Radius<br>",
+				"t3_desc": "<span class=\"highlight\">+12m</span> Travel Range<br><span class=\"highlight\">+100.0</span> Damage <br><span class=\"highlight\">+30.0</span> DPS"
+			}
 		},
 		{
 			"id": 3054993162,
@@ -99319,9 +99319,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+2m</span> Radius<br>On Hit: Reduce Spirit Resist by <span class=\"highlight\">-18%</span> for <span class=\"highlight\">6s</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -99355,7 +99352,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+2m</span> Radius<br>On Hit: Reduce Spirit Resist by <span class=\"highlight\">-18%</span> for <span class=\"highlight\">6s</span>"
+			}
 		},
 		{
 			"id": 3553292912,
@@ -99629,11 +99629,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "On Barrier: <span class=\"highlight\">+14%</span> Fire Rate",
-				"t2_desc": "<span class=\"highlight\">+100</span> Barrier and <span class=\"highlight\">+2s</span> Duration",
-				"t3_desc": "Affects up to <span class=\"highlight\">2</span> additional allies.<br>Increases barrier scaling."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -99679,7 +99674,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "On Barrier: <span class=\"highlight\">+14%</span> Fire Rate",
+				"t2_desc": "<span class=\"highlight\">+100</span> Barrier and <span class=\"highlight\">+2s</span> Duration",
+				"t3_desc": "Affects up to <span class=\"highlight\">2</span> additional allies.<br>Increases barrier scaling."
+			}
 		},
 		{
 			"id": 1841901343,
@@ -100065,10 +100065,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "Increase width by <span class=\"highlight\">+4 Steeds</span><br><span class=\"highlight\">-45</span> Cooldown",
-				"t3_desc": "<span class=\"highlight\">+160.0</span> Damage <br><span class=\"highlight\">+0.5s</span> Stun Duration<br><span class=\"highlight\">+70%</span> Max Amp"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -100110,7 +100106,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "Increase width by <span class=\"highlight\">+4 Steeds</span><br><span class=\"highlight\">-45</span> Cooldown",
+				"t3_desc": "<span class=\"highlight\">+160.0</span> Damage <br><span class=\"highlight\">+0.5s</span> Stun Duration<br><span class=\"highlight\">+70%</span> Max Amp"
+			}
 		},
 		{
 			"id": 4260448939,
@@ -100647,10 +100647,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "Grants a Barrier first time traveling through doors",
-				"t3_desc": "+30m Cast Range. +40m Doorway Distance<br> and scales with Spirit Power."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -100696,7 +100692,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "Grants a Barrier first time traveling through doors",
+				"t3_desc": "+30m Cast Range. +40m Doorway Distance<br> and scales with Spirit Power."
+			}
 		},
 		{
 			"id": 1719512318,
@@ -100925,10 +100925,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "+25m Cast Range<br>+75 Damage on wall impact",
-				"t3_desc": "-15s Cooldown and 1.25s <svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_4922_2543)\">\n<path d=\"M24.0093 49.1694C23.9893 49.9594 23.4473 50.2273 22.5893 49.7978C20.8094 48.9074 19.0274 48.017 17.2895 47.0517C16.5055 46.6164 15.8816 46.5868 15.0796 47.0438C13.4097 47.9953 11.6837 48.8523 9.95379 49.6934C9.5798 49.8747 8.96582 50.0067 8.68583 49.8254C8.43584 49.6639 8.37385 49.0217 8.43184 48.6218C8.71983 46.6439 9.04582 44.67 9.42181 42.708C9.5478 42.0461 9.40381 41.5831 8.91983 41.13C7.44788 39.7491 5.98794 38.3563 4.56599 36.9301C4.274 36.6385 3.90601 36.016 4.02601 35.821C4.236 35.4841 4.78198 35.2438 5.22197 35.1709C7.22389 34.834 9.24581 34.6154 11.2397 34.249C11.7037 34.1623 12.2517 33.7466 12.4817 33.331C13.4197 31.6329 14.2236 29.8638 15.1356 28.1519C15.3616 27.7284 15.8056 27.4191 16.1496 27.0566C16.5175 27.4329 16.9975 27.752 17.2355 28.1953C18.1195 29.8481 18.9474 31.5304 19.7474 33.2246C20.0614 33.8924 20.5014 34.2135 21.2494 34.3061C23.2313 34.5504 25.2072 34.8419 27.1751 35.1709C27.5871 35.2398 28.1671 35.4703 28.2871 35.7737C28.3991 36.0534 28.0931 36.6228 27.8091 36.9084C26.4812 38.246 25.1372 39.5698 23.7213 40.8148C22.9473 41.4964 22.7793 42.1879 22.9913 43.165C23.3733 44.9261 23.6193 46.7149 23.9213 48.4918C23.9593 48.7183 23.9813 48.9468 24.0113 49.1753L24.0093 49.1694Z\" fill=\"white\"/>\n<path d=\"M29.7871 10C34.5509 10.0374 39.0187 11.1406 43.1186 13.5696C44.4285 14.3457 44.5445 15.8055 43.3646 16.5048C42.6346 16.9382 41.9706 16.7018 41.3026 16.3157C37.7388 14.2591 33.8689 13.278 29.7591 13.3135C24.1913 13.3627 19.2115 14.9978 15.1456 18.9003C13.4157 20.5609 12.2117 22.5388 11.5398 24.8279C11.3378 25.5174 11.0438 26.1261 10.2398 26.2975C8.86386 26.593 7.91189 25.5154 8.30388 24.0497C8.94986 21.6287 10.1358 19.4755 11.8057 17.5981C15.9336 12.9549 21.2594 10.7131 27.3932 10.1202C28.1871 10.0433 28.9891 10.0374 29.7891 10H29.7871Z\" fill=\"white\"/>\n<path d=\"M45.7304 29.3611C45.9004 28.4175 46.0624 27.4128 46.2684 26.4199C46.4144 25.7147 46.2724 25.1769 45.6784 24.6883C44.9385 24.0835 44.2705 23.3901 43.5985 22.7085C43.0565 22.1589 43.1725 21.7905 43.9465 21.6546C44.9925 21.4714 46.0624 21.4064 47.0944 21.17C47.5064 21.0754 47.9704 20.7386 48.1884 20.382C48.7343 19.4876 49.1423 18.5125 49.6283 17.5807C49.9703 16.9247 50.3563 16.9661 50.6843 17.5965C51.1822 18.5578 51.6182 19.5546 52.1662 20.4884C52.3482 20.7977 52.7662 21.0853 53.1242 21.1601C54.1621 21.3788 55.2261 21.4655 56.272 21.6487C56.54 21.696 56.914 21.8555 56.99 22.0545C57.056 22.2278 56.812 22.5706 56.628 22.7696C56.1561 23.2759 55.6901 23.8117 55.1301 24.2076C54.0401 24.9799 53.7581 25.9294 54.1381 27.1705C54.3381 27.8245 54.4281 28.5159 54.5181 29.1956C54.6321 30.0565 54.3761 30.2436 53.5941 29.8634C52.7002 29.43 51.8562 28.8824 50.9323 28.5238C50.4763 28.3485 49.8343 28.3406 49.3823 28.5179C48.4303 28.8902 47.5564 29.4536 46.6304 29.8969C45.9864 30.2042 45.7244 30.0427 45.7304 29.3611Z\" fill=\"white\"/>\n<path d=\"M33.2129 47.0647C32.251 46.9781 31.551 46.4147 31.439 45.5636C31.321 44.6712 31.875 43.966 32.8669 43.7532C34.5229 43.3986 36.2168 43.1701 37.8267 42.6698C42.3906 41.2494 45.9724 38.59 48.1864 34.3053C48.7203 33.2691 49.6843 32.946 50.5783 33.4307C51.4122 33.8837 51.6402 34.8175 51.1242 35.8242C48.2763 41.3716 43.5365 44.5471 37.6087 46.1802C36.1728 46.5762 34.6809 46.7732 33.2149 47.0628L33.2129 47.0647Z\" fill=\"white\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_4922_2543\">\n<rect width=\"53\" height=\"40\" fill=\"white\" transform=\"translate(4 10)\"/>\n</clipPath>\n</defs>\n</svg>\n<span class=\"inline-attribute-label Stun\">stun</span> on wall impact"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -100969,7 +100965,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "+25m Cast Range<br>+75 Damage on wall impact",
+				"t3_desc": "-15s Cooldown and 1.25s <svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_4922_2543)\">\n<path d=\"M24.0093 49.1694C23.9893 49.9594 23.4473 50.2273 22.5893 49.7978C20.8094 48.9074 19.0274 48.017 17.2895 47.0517C16.5055 46.6164 15.8816 46.5868 15.0796 47.0438C13.4097 47.9953 11.6837 48.8523 9.95379 49.6934C9.5798 49.8747 8.96582 50.0067 8.68583 49.8254C8.43584 49.6639 8.37385 49.0217 8.43184 48.6218C8.71983 46.6439 9.04582 44.67 9.42181 42.708C9.5478 42.0461 9.40381 41.5831 8.91983 41.13C7.44788 39.7491 5.98794 38.3563 4.56599 36.9301C4.274 36.6385 3.90601 36.016 4.02601 35.821C4.236 35.4841 4.78198 35.2438 5.22197 35.1709C7.22389 34.834 9.24581 34.6154 11.2397 34.249C11.7037 34.1623 12.2517 33.7466 12.4817 33.331C13.4197 31.6329 14.2236 29.8638 15.1356 28.1519C15.3616 27.7284 15.8056 27.4191 16.1496 27.0566C16.5175 27.4329 16.9975 27.752 17.2355 28.1953C18.1195 29.8481 18.9474 31.5304 19.7474 33.2246C20.0614 33.8924 20.5014 34.2135 21.2494 34.3061C23.2313 34.5504 25.2072 34.8419 27.1751 35.1709C27.5871 35.2398 28.1671 35.4703 28.2871 35.7737C28.3991 36.0534 28.0931 36.6228 27.8091 36.9084C26.4812 38.246 25.1372 39.5698 23.7213 40.8148C22.9473 41.4964 22.7793 42.1879 22.9913 43.165C23.3733 44.9261 23.6193 46.7149 23.9213 48.4918C23.9593 48.7183 23.9813 48.9468 24.0113 49.1753L24.0093 49.1694Z\" fill=\"white\"/>\n<path d=\"M29.7871 10C34.5509 10.0374 39.0187 11.1406 43.1186 13.5696C44.4285 14.3457 44.5445 15.8055 43.3646 16.5048C42.6346 16.9382 41.9706 16.7018 41.3026 16.3157C37.7388 14.2591 33.8689 13.278 29.7591 13.3135C24.1913 13.3627 19.2115 14.9978 15.1456 18.9003C13.4157 20.5609 12.2117 22.5388 11.5398 24.8279C11.3378 25.5174 11.0438 26.1261 10.2398 26.2975C8.86386 26.593 7.91189 25.5154 8.30388 24.0497C8.94986 21.6287 10.1358 19.4755 11.8057 17.5981C15.9336 12.9549 21.2594 10.7131 27.3932 10.1202C28.1871 10.0433 28.9891 10.0374 29.7891 10H29.7871Z\" fill=\"white\"/>\n<path d=\"M45.7304 29.3611C45.9004 28.4175 46.0624 27.4128 46.2684 26.4199C46.4144 25.7147 46.2724 25.1769 45.6784 24.6883C44.9385 24.0835 44.2705 23.3901 43.5985 22.7085C43.0565 22.1589 43.1725 21.7905 43.9465 21.6546C44.9925 21.4714 46.0624 21.4064 47.0944 21.17C47.5064 21.0754 47.9704 20.7386 48.1884 20.382C48.7343 19.4876 49.1423 18.5125 49.6283 17.5807C49.9703 16.9247 50.3563 16.9661 50.6843 17.5965C51.1822 18.5578 51.6182 19.5546 52.1662 20.4884C52.3482 20.7977 52.7662 21.0853 53.1242 21.1601C54.1621 21.3788 55.2261 21.4655 56.272 21.6487C56.54 21.696 56.914 21.8555 56.99 22.0545C57.056 22.2278 56.812 22.5706 56.628 22.7696C56.1561 23.2759 55.6901 23.8117 55.1301 24.2076C54.0401 24.9799 53.7581 25.9294 54.1381 27.1705C54.3381 27.8245 54.4281 28.5159 54.5181 29.1956C54.6321 30.0565 54.3761 30.2436 53.5941 29.8634C52.7002 29.43 51.8562 28.8824 50.9323 28.5238C50.4763 28.3485 49.8343 28.3406 49.3823 28.5179C48.4303 28.8902 47.5564 29.4536 46.6304 29.8969C45.9864 30.2042 45.7244 30.0427 45.7304 29.3611Z\" fill=\"white\"/>\n<path d=\"M33.2129 47.0647C32.251 46.9781 31.551 46.4147 31.439 45.5636C31.321 44.6712 31.875 43.966 32.8669 43.7532C34.5229 43.3986 36.2168 43.1701 37.8267 42.6698C42.3906 41.2494 45.9724 38.59 48.1864 34.3053C48.7203 33.2691 49.6843 32.946 50.5783 33.4307C51.4122 33.8837 51.6402 34.8175 51.1242 35.8242C48.2763 41.3716 43.5365 44.5471 37.6087 46.1802C36.1728 46.5762 34.6809 46.7732 33.2149 47.0628L33.2129 47.0647Z\" fill=\"white\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_4922_2543\">\n<rect width=\"53\" height=\"40\" fill=\"white\" transform=\"translate(4 10)\"/>\n</clipPath>\n</defs>\n</svg>\n<span class=\"inline-attribute-label Stun\">stun</span> on wall impact"
+			}
 		},
 		{
 			"id": 103496908,
@@ -101256,11 +101256,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "+1 Charge",
-				"t2_desc": "+30 Impact Damage<br>+40 Explosion Damage",
-				"t3_desc": "+4.5m Radius<br>+26s Bell Lifetime<br>Improved Scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -101306,7 +101301,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "+1 Charge",
+				"t2_desc": "+30 Impact Damage<br>+40 Explosion Damage",
+				"t3_desc": "+4.5m Radius<br>+26s Bell Lifetime<br>Improved Scaling"
+			}
 		},
 		{
 			"id": 1703045691,
@@ -101560,11 +101560,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "1 Stamina Drain and -20 Cooldown",
-				"t2_desc": "+150 Damage<br>+1.5s Stun on Failure to Check Out",
-				"t3_desc": "Unstoppable while the Baroness is occupied.<br>15s Cooldown on Failure to Check Out."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -101606,7 +101601,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "1 Stamina Drain and -20 Cooldown",
+				"t2_desc": "+150 Damage<br>+1.5s Stun on Failure to Check Out",
+				"t3_desc": "Unstoppable while the Baroness is occupied.<br>15s Cooldown on Failure to Check Out."
+			}
 		},
 		{
 			"id": 3395613043,
@@ -102137,11 +102137,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "While Blasted: <span class=\"highlight\">+2.25m/s</span> <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M81.5143 72.4711L117.08 34.3552L68.8057 2L57.0343 31.8506L11 87.2257L34.7257 103.141L43.3657 96.9254L58.4286 118.989L83.2514 124.977L108.646 125L114.269 116.666L95.96 103.665L81.5143 72.4711Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label BonusMoveSpeed\" style=\"color: #0F9;\">bonus move speed</span>",
-				"t2_desc": "<span class=\"highlight\">+1 Bashdown Charge</span> on use and +7% Wrecked Bullet Amp",
-				"t3_desc": "+50 Melee Bonus Health and increases spirit scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -102177,7 +102172,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "While Blasted: <span class=\"highlight\">+2.25m/s</span> <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M81.5143 72.4711L117.08 34.3552L68.8057 2L57.0343 31.8506L11 87.2257L34.7257 103.141L43.3657 96.9254L58.4286 118.989L83.2514 124.977L108.646 125L114.269 116.666L95.96 103.665L81.5143 72.4711Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label BonusMoveSpeed\" style=\"color: #0F9;\">bonus move speed</span>",
+				"t2_desc": "<span class=\"highlight\">+1 Bashdown Charge</span> on use and +7% Wrecked Bullet Amp",
+				"t3_desc": "+50 Melee Bonus Health and increases spirit scaling"
+			}
 		},
 		{
 			"id": 3762861984,
@@ -102513,10 +102513,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "+40% <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_tech_armor.png\" class=\"inline-attribute SpiritResist\" alt=\"spirit resist\"/><span class=\"inline-attribute-label SpiritResist\" style=\"color: #CE90FF;\">spirit resist</span> & <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_bullet_armor.png\" class=\"inline-attribute BulletResist\" alt=\"bullet resist\"/><span class=\"inline-attribute-label BulletResist\" style=\"color: #EC9719;\">bullet resist</span>",
-				"t3_desc": "<span class=\"highlight\">+5m</span> Range <br><span class=\"highlight\">+1.3s</span> of <span class=\"highlight\">Unstoppable</span> Per Hero pulled in"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -102550,7 +102546,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "+40% <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_tech_armor.png\" class=\"inline-attribute SpiritResist\" alt=\"spirit resist\"/><span class=\"inline-attribute-label SpiritResist\" style=\"color: #CE90FF;\">spirit resist</span> & <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_bullet_armor.png\" class=\"inline-attribute BulletResist\" alt=\"bullet resist\"/><span class=\"inline-attribute-label BulletResist\" style=\"color: #EC9719;\">bullet resist</span>",
+				"t3_desc": "<span class=\"highlight\">+5m</span> Range <br><span class=\"highlight\">+1.3s</span> of <span class=\"highlight\">Unstoppable</span> Per Hero pulled in"
+			}
 		},
 		{
 			"id": 1792773251,
@@ -102882,9 +102882,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "On Impact: +25.0% <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M32.0027 9C40.8042 9 48.6533 13.3022 53.7875 20.0238H53.7766C57.1324 24.4142 58.5664 26.6091 59.9993 26.6084C61.4318 26.6078 62.8632 24.4129 66.2125 20.0238C71.3467 13.3022 79.1958 9 87.9973 9C103.466 9 116 22.2789 116 38.6558C116 38.7707 115.999 38.8854 115.998 39H4.00155C4.00052 38.8854 4 38.7707 4 38.6558C4 22.2789 16.5345 9 32.0027 9Z\" fill=\"white\"/>\n<path d=\"M24.5608 79C27.3761 82.0873 30.3317 85.1748 33.3264 88.303C41.7966 97.1509 50.5788 106.325 57.3782 116.742C58.8889 119.051 61.1111 119.051 62.6218 116.742C69.4174 106.328 78.1987 97.1556 86.6692 88.3073C89.6652 85.1778 92.6222 82.0889 95.4388 79H24.5608Z\" fill=\"white\"/>\n<path d=\"M123 59.0055C123 59.0055 117.403 49 100.88 49H75V69H100.88C117.413 69 123 58.9945 123 58.9945V59.0055Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label WeaponDamage\">weapon damage</span> for 5s"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -102922,7 +102919,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "On Impact: +25.0% <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M32.0027 9C40.8042 9 48.6533 13.3022 53.7875 20.0238H53.7766C57.1324 24.4142 58.5664 26.6091 59.9993 26.6084C61.4318 26.6078 62.8632 24.4129 66.2125 20.0238C71.3467 13.3022 79.1958 9 87.9973 9C103.466 9 116 22.2789 116 38.6558C116 38.7707 115.999 38.8854 115.998 39H4.00155C4.00052 38.8854 4 38.7707 4 38.6558C4 22.2789 16.5345 9 32.0027 9Z\" fill=\"white\"/>\n<path d=\"M24.5608 79C27.3761 82.0873 30.3317 85.1748 33.3264 88.303C41.7966 97.1509 50.5788 106.325 57.3782 116.742C58.8889 119.051 61.1111 119.051 62.6218 116.742C69.4174 106.328 78.1987 97.1556 86.6692 88.3073C89.6652 85.1778 92.6222 82.0889 95.4388 79H24.5608Z\" fill=\"white\"/>\n<path d=\"M123 59.0055C123 59.0055 117.403 49 100.88 49H75V69H100.88C117.413 69 123 58.9945 123 58.9945V59.0055Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label WeaponDamage\">weapon damage</span> for 5s"
+			}
 		},
 		{
 			"id": 1841661392,
@@ -103289,11 +103289,6 @@
 					"WaveEndRadius"
 				]
 			},
-			"description": {
-				"t1_desc": "-10s Cooldown",
-				"t2_desc": "+1 Charge and +2m Radius",
-				"t3_desc": "-3.0s Charge Time<br>Now deals <span class=\"highlight\">50% Heavy Melee Damage</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -103349,7 +103344,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "-10s Cooldown",
+				"t2_desc": "+1 Charge and +2m Radius",
+				"t3_desc": "-3.0s Charge Time<br>Now deals <span class=\"highlight\">50% Heavy Melee Damage</span>"
+			}
 		},
 		{
 			"id": 160782216,
@@ -103845,10 +103845,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "-8.0s Cooldown",
-				"t3_desc": "Deals 55% Heavy Melee Damage<br>Silences enemies for 2s if close range"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -103888,7 +103884,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "-8.0s Cooldown",
+				"t3_desc": "Deals 55% Heavy Melee Damage<br>Silences enemies for 2s if close range"
+			}
 		},
 		{
 			"id": 1264175662,
@@ -104207,11 +104207,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">-8%</span> Bullet Resist",
-				"t2_desc": "<span class=\"highlight\">-10s Cooldown and +3s</span> Duration",
-				"t3_desc": "<span class=\"highlight\">+1.5% Bleed</span> and <span class=\"highlight\">-40.0% Incoming Healing</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -104249,7 +104244,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">-8%</span> Bullet Resist",
+				"t2_desc": "<span class=\"highlight\">-10s Cooldown and +3s</span> Duration",
+				"t3_desc": "<span class=\"highlight\">+1.5% Bleed</span> and <span class=\"highlight\">-40.0% Incoming Healing</span>"
+			}
 		},
 		{
 			"id": 1033019133,
@@ -104604,10 +104604,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "+3m/s Move Speed when around an isolated enemy hero",
-				"t2_desc": "On isolated hero death: Heal 24% of your missing health and restores 2 Stamina"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -104637,7 +104633,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "+3m/s Move Speed when around an isolated enemy hero",
+				"t2_desc": "On isolated hero death: Heal 24% of your missing health and restores 2 Stamina"
+			}
 		},
 		{
 			"id": 1168182161,
@@ -104903,9 +104903,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "+2.5s Duration and +1 Max Target."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -104935,7 +104932,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "+2.5s Duration and +1 Max Target."
+			}
 		},
 		{
 			"id": 1866303329,
@@ -105251,7 +105251,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -105277,7 +105276,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 1777250969,
@@ -105439,7 +105439,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -105465,7 +105464,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 3819597066,
@@ -105627,7 +105627,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -105653,7 +105652,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 463497510,
@@ -105824,7 +105824,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -105850,7 +105849,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2029849853,
@@ -106302,10 +106302,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">-10s</span> Ability Cooldown and <span class=\"highlight\">+0.4s</span> Stun Duration",
-				"t3_desc": "On Wall Stun: Your next heavy melee is <span class=\"highlight\">blessed</span>"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -106335,7 +106331,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">-10s</span> Ability Cooldown and <span class=\"highlight\">+0.4s</span> Stun Duration",
+				"t3_desc": "On Wall Stun: Your next heavy melee is <span class=\"highlight\">blessed</span>"
+			}
 		},
 		{
 			"id": 2918874166,
@@ -106619,11 +106619,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "While Active: Gain <span class=\"highlight\">1.2 m/s</span> Move Speed",
-				"t2_desc": "<span class=\"highlight\">-15s</span> Ability Cooldown and <span class=\"highlight\">+65</span> Bonus Damage",
-				"t3_desc": "All Stakes are Blessed"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -106653,7 +106648,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "While Active: Gain <span class=\"highlight\">1.2 m/s</span> Move Speed",
+				"t2_desc": "<span class=\"highlight\">-15s</span> Ability Cooldown and <span class=\"highlight\">+65</span> Bonus Damage",
+				"t3_desc": "All Stakes are Blessed"
+			}
 		},
 		{
 			"id": 911307831,
@@ -106978,10 +106978,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+1.5m</span> Radius & <span class=\"highlight\">+1.0s</span> Burn Duration",
-				"t3_desc": "<span class=\"highlight\">-20%</span> Incoming Healing and allow Charges"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -107027,7 +107023,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+1.5m</span> Radius & <span class=\"highlight\">+1.0s</span> Burn Duration",
+				"t3_desc": "<span class=\"highlight\">-20%</span> Incoming Healing and allow Charges"
+			}
 		},
 		{
 			"id": 11154161,
@@ -107340,9 +107340,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+1</span> Charge<br>Deal <span class=\"highlight\">+30%</span> damage against revealed targets"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -107372,7 +107369,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+1</span> Charge<br>Deal <span class=\"highlight\">+30%</span> damage against revealed targets"
+			}
 		},
 		{
 			"id": 1961336982,
@@ -107797,10 +107797,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "+2m Radius and applies -35% Fire Rate",
-				"t3_desc": "+100 Damage and +1 Charge"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -107834,7 +107830,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "+2m Radius and applies -35% Fire Rate",
+				"t3_desc": "+100 Damage and +1 Charge"
+			}
 		},
 		{
 			"id": 2396527575,
@@ -108120,11 +108120,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "-1 Stamina On Wake and no Stamina Regen while sleeping",
-				"t2_desc": "+3m Radius and +0.75s Sleep Duration",
-				"t3_desc": "-55s cooldown <br>Reduced damage and unstoppable while channeling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -108166,7 +108161,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "-1 Stamina On Wake and no Stamina Regen while sleeping",
+				"t2_desc": "+3m Radius and +0.75s Sleep Duration",
+				"t3_desc": "-55s cooldown <br>Reduced damage and unstoppable while channeling"
+			}
 		},
 		{
 			"id": 536278136,
@@ -108526,11 +108526,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "+1 Helper<br>+1.5m/s Move Speed",
-				"t2_desc": "+1 Helper<br>+15% Trooper Damage and Resist",
-				"t3_desc": "+1 Helper<br>+15% Spirit Resist"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -108568,7 +108563,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "+1 Helper<br>+1.5m/s Move Speed",
+				"t2_desc": "+1 Helper<br>+15% Trooper Damage and Resist",
+				"t3_desc": "+1 Helper<br>+15% Spirit Resist"
+			}
 		},
 		{
 			"id": 1568845221,
@@ -108889,10 +108889,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "35% Bonus Item Range, Duration, and Barrier Effectiveness while napping",
-				"t3_desc": "+15% Spirit Power and +35 Spirit Power while napping and for 10s after napping<br>Improved Spirit Scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -108946,7 +108942,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "35% Bonus Item Range, Duration, and Barrier Effectiveness while napping",
+				"t3_desc": "+15% Spirit Power and +35 Spirit Power while napping and for 10s after napping<br>Improved Spirit Scaling"
+			}
 		},
 		{
 			"id": 1769657144,
@@ -109426,11 +109426,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "Gain +25% Fire Rate and +25% Bullet Speed for 8s",
-				"t2_desc": "On Player Hit: +1 stamina restored and resets Air Jump/Dash limit",
-				"t3_desc": "Can be Recast within 4s"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -109468,7 +109463,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Gain +25% Fire Rate and +25% Bullet Speed for 8s",
+				"t2_desc": "On Player Hit: +1 stamina restored and resets Air Jump/Dash limit",
+				"t3_desc": "Can be Recast within 4s"
+			}
 		},
 		{
 			"id": 2006773718,
@@ -109846,10 +109846,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">-25%</span> Melee Resist and <span class=\"highlight\">+0.4s</span> Stun Duration",
-				"t3_desc": "Gain <span class=\"highlight\">75%</span> Bullet, Spirit &amp; Melee Lifesteal against the Riposte target for 13s"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -109883,7 +109879,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">-25%</span> Melee Resist and <span class=\"highlight\">+0.4s</span> Stun Duration",
+				"t3_desc": "Gain <span class=\"highlight\">75%</span> Bullet, Spirit &amp; Melee Lifesteal against the Riposte target for 13s"
+			}
 		},
 		{
 			"id": 147493976,
@@ -110259,11 +110259,6 @@
 					"SlashLength"
 				]
 			},
-			"description": {
-				"t1_desc": "Perfect Hit on Hero: Heal 35",
-				"t2_desc": "-12s Cooldown. Gain <span class=\"highlight\">+60%</span> Bullet Resist during lunge",
-				"t3_desc": "+65 Perfect Damage with improved Spirit scaling.<br>Increased lunge speed & distance."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -110337,7 +110332,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Perfect Hit on Hero: Heal 35",
+				"t2_desc": "-12s Cooldown. Gain <span class=\"highlight\">+60%</span> Bullet Resist during lunge",
+				"t3_desc": "+65 Perfect Damage with improved Spirit scaling.<br>Increased lunge speed & distance."
+			}
 		},
 		{
 			"id": 494112189,
@@ -110743,7 +110743,6 @@
 					"DashRange"
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -110769,7 +110768,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
 		},
 		{
 			"id": 2834635521,
@@ -111286,10 +111286,6 @@
 					"ZombieWallLength"
 				]
 			},
-			"description": {
-				"t2_desc": "<span class=\"highlight\">+90</span> Damage and <span class=\"highlight\">+10m</span> Wall Length",
-				"t3_desc": "<span class=\"highlight\">+1</span> Ghouls Raised <br><span class=\"highlight\">-14s</span> Cooldown<br><span class=\"highlight\">+0.75s</span> Immobilize Duration"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -111327,7 +111323,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">+90</span> Damage and <span class=\"highlight\">+10m</span> Wall Length",
+				"t3_desc": "<span class=\"highlight\">+1</span> Ghouls Raised <br><span class=\"highlight\">-14s</span> Cooldown<br><span class=\"highlight\">+0.75s</span> Immobilize Duration"
+			}
 		},
 		{
 			"id": 3214055642,
@@ -111777,11 +111777,6 @@
 					"SkullLifetime"
 				]
 			},
-			"description": {
-				"t1_desc": "Collecting death heals <span class=\"highlight\">5</span> health per pickup",
-				"t2_desc": "On Hit: Apply <span class=\"highlight\">24%</span> Slow for 1s",
-				"t3_desc": "<span class=\"highlight\">+2</span> Deadheads<br><span class=\"highlight\">+4s</span> Deadhead Lifetime"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -111821,7 +111816,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "Collecting death heals <span class=\"highlight\">5</span> health per pickup",
+				"t2_desc": "On Hit: Apply <span class=\"highlight\">24%</span> Slow for 1s",
+				"t3_desc": "<span class=\"highlight\">+2</span> Deadheads<br><span class=\"highlight\">+4s</span> Deadhead Lifetime"
+			}
 		},
 		{
 			"id": 4110547059,
@@ -112333,11 +112333,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+25%</span> Ghoul Speed<br><span class=\"highlight\">-15s</span> Cooldown",
-				"t2_desc": "<span class=\"highlight\">+10s</span> Duration<br><span class=\"highlight\">-0.3s</span> Time To Spawn",
-				"t3_desc": "On Death: Deal <span class=\"highlight\">+5%</span> Current Health as Damage"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -112371,7 +112366,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+25%</span> Ghoul Speed<br><span class=\"highlight\">-15s</span> Cooldown",
+				"t2_desc": "<span class=\"highlight\">+10s</span> Duration<br><span class=\"highlight\">-0.3s</span> Time To Spawn",
+				"t3_desc": "On Death: Deal <span class=\"highlight\">+5%</span> Current Health as Damage"
+			}
 		},
 		{
 			"id": 629925354,
@@ -112656,9 +112656,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+1</span> Max Steal Targets<br>All <span class=\"highlight\">Summons</span> now apply Essence Theft"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -112696,7 +112693,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+1</span> Max Steal Targets<br>All <span class=\"highlight\">Summons</span> now apply Essence Theft"
+			}
 		},
 		{
 			"id": 3922245490,
@@ -113159,9 +113159,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "If you hit all shots, deal <span class=\"highlight\">+7%</span> current health as damage"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -113195,7 +113192,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "If you hit all shots, deal <span class=\"highlight\">+7%</span> current health as damage"
+			}
 		},
 		{
 			"id": 2717130900,
@@ -113531,10 +113531,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "On Hero Hit: Restore <span class=\"highlight\">2</span> Stamina",
-				"t3_desc": "<span class=\"highlight\">+80</span> Bonus Damage and kicked enemies deal <span class=\"highlight\">-35%</span> Damage for 5s"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -113568,7 +113564,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "On Hero Hit: Restore <span class=\"highlight\">2</span> Stamina",
+				"t3_desc": "<span class=\"highlight\">+80</span> Bonus Damage and kicked enemies deal <span class=\"highlight\">-35%</span> Damage for 5s"
+			}
 		},
 		{
 			"id": 3983754897,
@@ -113827,9 +113827,6 @@
 					}
 				]
 			},
-			"description": {
-				"t3_desc": "<span class=\"highlight\">+0.75s</span> Debuff Duration.<br>Bola ricochets to <span class=\"highlight\">2</span> additional targets"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -113863,7 +113860,10 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t3_desc": "<span class=\"highlight\">+0.75s</span> Debuff Duration.<br>Bola ricochets to <span class=\"highlight\">2</span> additional targets"
+			}
 		},
 		{
 			"id": 515791019,
@@ -114250,11 +114250,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "<span class=\"highlight\">+15%</span> Bullet & Spirit Resistance",
-				"t2_desc": "<span class=\"highlight\">+4 m/s</span> Move Speed and <span class=\"highlight\">200</span> Bonus Health",
-				"t3_desc": "On Hero Kill: Refresh abilities and duration"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -114292,7 +114287,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "<span class=\"highlight\">+15%</span> Bullet & Spirit Resistance",
+				"t2_desc": "<span class=\"highlight\">+4 m/s</span> Move Speed and <span class=\"highlight\">200</span> Bonus Health",
+				"t3_desc": "On Hero Kill: Refresh abilities and duration"
+			}
 		},
 		{
 			"id": 3744272782,
@@ -114715,10 +114715,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "-10s Cooldown and +3m Cast Range",
-				"t3_desc": "+22 Damage and Increased Spirit Scaling"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -114754,7 +114750,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "-10s Cooldown and +3m Cast Range",
+				"t3_desc": "+22 Damage and Increased Spirit Scaling"
+			}
 		},
 		{
 			"id": 1950738949,
@@ -115027,10 +115027,6 @@
 					}
 				]
 			},
-			"description": {
-				"t2_desc": "+70 Barrier and Increased Barrier Spirit Scaling",
-				"t3_desc": "+1.25 Silence Duration and -20s Cooldown. Allows Shining Wonder Bounce."
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -115066,7 +115062,11 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t2_desc": "+70 Barrier and Increased Barrier Spirit Scaling",
+				"t3_desc": "+1.25 Silence Duration and -20s Cooldown. Allows Shining Wonder Bounce."
+			}
 		},
 		{
 			"id": 2590796390,
@@ -115326,11 +115326,6 @@
 					}
 				]
 			},
-			"description": {
-				"t1_desc": "-16% Move Speed and -14% Dash Distance",
-				"t2_desc": "+90 Damage and Increased Spirit Scaling",
-				"t3_desc": "+6 Max Bounces and -30s Cooldown"
-			},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -115370,7 +115365,12 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {
+				"t1_desc": "-16% Move Speed and -14% Dash Distance",
+				"t2_desc": "+90 Damage and Increased Spirit Scaling",
+				"t3_desc": "+6 Max Bounces and -30s Cooldown"
+			}
 		},
 		{
 			"id": 1011349580,
@@ -115651,7 +115651,6 @@
 					}
 				]
 			},
-			"description": {},
 			"upgrades": [
 				{
 					"property_upgrades": [
@@ -115685,7 +115684,1419 @@
 						}
 					]
 				}
-			]
+			],
+			"description": {}
+		},
+		{
+			"id": 3435805738,
+			"class_name": "citadel_weapon_ratking_set",
+			"name": "Sovereign's Decree",
+			"image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/weapon_damage.webp",
+			"image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/weapon_damage.png",
+			"hero": 84,
+			"properties": {
+				"AbilityCooldown": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cooldown",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCooldown_scale_function",
+						"specific_stat_scale_type": "ETechCooldown"
+					},
+					"label": "Cooldown",
+					"postfix": "s",
+					"postvalue_label": "Cooldown",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/cooldown.svg"
+				},
+				"AbilityDuration": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "duration",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityDuration_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"label": "Duration",
+					"postfix": "s",
+					"postvalue_label": "Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"AbilityCastRange": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "range",
+					"display_units": "EDisplayUnit_Meters",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCastRange_scale_function",
+						"specific_stat_scale_type": "ETechRange"
+					},
+					"label": "Cast Range",
+					"postfix": "m",
+					"postvalue_label": "Cast Range",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/upgrades/property_range.svg"
+				},
+				"AbilityUnitTargetLimit": {
+					"value": "1",
+					"can_set_token_override": true
+				},
+				"AbilityCastDelay": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"label": "Cast Delay",
+					"postfix": "s",
+					"postvalue_label": "Cast Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityChannelTime": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_multi_stats",
+						"subclass_name": "scale_duration",
+						"scaling_stats": [
+							"EChannelDuration",
+							"ETechDuration"
+						]
+					},
+					"label": "Channel Duration",
+					"postfix": "s",
+					"postvalue_label": "Channel Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityPostCastDuration": {
+					"value": "0",
+					"disable_value": "0"
+				},
+				"AbilityCharges": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "-1",
+					"scale_function": {
+						"class_name": "scale_function_ability_charges",
+						"subclass_name": "AbilityCharges_scale_function"
+					},
+					"label": "Charges",
+					"postvalue_label": "Charges",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityCooldownBetweenCharge": {
+					"value": "-1.0",
+					"can_set_token_override": true,
+					"css_class": "charge_cooldown",
+					"disable_value": "-2",
+					"scale_function": {
+						"class_name": "scale_function_ability_recharge_time",
+						"subclass_name": "scale_function_ability_recharge_time"
+					},
+					"label": "Charge Delay",
+					"postfix": "s",
+					"postvalue_label": "Charge Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/recharge.svg"
+				},
+				"ChannelMoveSpeed": {
+					"value": "-1",
+					"can_set_token_override": true,
+					"css_class": "move_speed",
+					"display_units": "EDisplayUnit_MetersPerSecond",
+					"postfix": "m",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"AbilityResourceCost": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"TechPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Spirit Power",
+					"postfix": "",
+					"postvalue_label": "Spirit Power"
+				},
+				"WeaponPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Weapon Damage",
+					"postfix": "%",
+					"postvalue_label": "Weapon Damage"
+				}
+			},
+			"description": {}
+		},
+		{
+			"id": 3681399397,
+			"class_name": "ability_ratking_ratnibble",
+			"name": "Rat Swarm",
+			"image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/ratking/ratking_swarm.webp",
+			"image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/ratking/ratking_swarm.png",
+			"hero": 84,
+			"ability_type": "signature",
+			"properties": {
+				"AbilityCooldown": {
+					"value": "28",
+					"can_set_token_override": true,
+					"css_class": "cooldown",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCooldown_scale_function",
+						"specific_stat_scale_type": "ETechCooldown"
+					},
+					"label": "Cooldown",
+					"postfix": "s",
+					"postvalue_label": "Cooldown",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/cooldown.svg"
+				},
+				"AbilityDuration": {
+					"value": "6",
+					"can_set_token_override": true,
+					"css_class": "duration",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityDuration_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"label": "Duration",
+					"postfix": "s",
+					"postvalue_label": "Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"AbilityCastRange": {
+					"value": "50m",
+					"can_set_token_override": true,
+					"css_class": "range",
+					"display_units": "EDisplayUnit_Meters",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCastRange_scale_function",
+						"specific_stat_scale_type": "ETechRange"
+					},
+					"label": "Cast Range",
+					"postfix": "m",
+					"postvalue_label": "Cast Range",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/upgrades/property_range.svg"
+				},
+				"AbilityUnitTargetLimit": {
+					"value": "1",
+					"can_set_token_override": true
+				},
+				"AbilityCastDelay": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"label": "Cast Delay",
+					"postfix": "s",
+					"postvalue_label": "Cast Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityChannelTime": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_multi_stats",
+						"subclass_name": "scale_duration",
+						"scaling_stats": [
+							"EChannelDuration",
+							"ETechDuration"
+						]
+					},
+					"label": "Channel Duration",
+					"postfix": "s",
+					"postvalue_label": "Channel Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityPostCastDuration": {
+					"value": "0",
+					"disable_value": "0"
+				},
+				"AbilityCharges": {
+					"value": "1",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "-1",
+					"scale_function": {
+						"class_name": "scale_function_ability_charges",
+						"subclass_name": "AbilityCharges_scale_function"
+					},
+					"label": "Charges",
+					"postvalue_label": "Charges",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityCooldownBetweenCharge": {
+					"value": "8",
+					"can_set_token_override": true,
+					"css_class": "charge_cooldown",
+					"disable_value": "-2",
+					"scale_function": {
+						"class_name": "scale_function_ability_recharge_time",
+						"subclass_name": "scale_function_ability_recharge_time"
+					},
+					"label": "Charge Delay",
+					"postfix": "s",
+					"postvalue_label": "Charge Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/recharge.svg"
+				},
+				"ChannelMoveSpeed": {
+					"value": "-1",
+					"can_set_token_override": true,
+					"css_class": "move_speed",
+					"display_units": "EDisplayUnit_MetersPerSecond",
+					"postfix": "m",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"AbilityResourceCost": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"TechPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Spirit Power",
+					"postfix": "",
+					"postvalue_label": "Spirit Power"
+				},
+				"WeaponPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Weapon Damage",
+					"postfix": "%",
+					"postvalue_label": "Weapon Damage"
+				},
+				"DamagePerBite": {
+					"value": "8",
+					"css_class": "tech_damage",
+					"scale_function": {
+						"class_name": "scale_function_tech_damage",
+						"subclass_name": "rat_nibble_dps_sf",
+						"stat_scale": 0.08
+					},
+					"label": "Damage per Bite",
+					"postvalue_label": "Damage per Bite",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg"
+				},
+				"BiteInterval": {
+					"value": "1",
+					"label": "Bite Interval per Rat",
+					"postfix": "s",
+					"postvalue_label": "Bite Interval"
+				},
+				"Radius": {
+					"value": "10m",
+					"label": "Radius",
+					"postfix": "m",
+					"postvalue_label": "Radius"
+				},
+				"RatsAttached": {
+					"value": "2",
+					"label": "Rats Attached",
+					"postvalue_label": "Rats Attached"
+				},
+				"ArmorReductionPerBite": {
+					"value": "-1",
+					"provided_property_type": "MODIFIER_VALUE_BULLET_AND_MELEE_RESIST_REDUCTION",
+					"css_class": "bullet_armor_down",
+					"label": "Bullet Resist per Bite",
+					"postfix": "%",
+					"postvalue_label": "Bullet Resist per Bite",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/armor_bullet_color.svg"
+				},
+				"DebuffDuration": {
+					"value": "4",
+					"css_class": "duration",
+					"scale_function": {
+						"class_name": "scale_function_tech_duration",
+						"subclass_name": "nibble_linger_duration_sf"
+					},
+					"label": "Debuff Duration",
+					"postfix": "s",
+					"postvalue_label": "Debuff Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"ThrowSpeed": {
+					"value": "22m"
+				},
+				"ThrowAngle": {
+					"value": "30"
+				},
+				"ThrowJitterSpeed": {
+					"value": "2m"
+				},
+				"RatSwarmWidth": {
+					"value": "400"
+				},
+				"RatSwarmRows": {
+					"value": "3"
+				},
+				"RatSwarmCols": {
+					"value": "3"
+				},
+				"RatSwarmRowSpeedStep": {
+					"value": "4m"
+				},
+				"MaxRats": {
+					"value": "5",
+					"label": "Max Attached Rats",
+					"postvalue_label": "Max Attached Rats"
+				}
+			},
+			"tooltip_details": {
+				"info_sections": [
+					{
+						"loc_string": "Call forth a swarm of <span class=\"highlight\">rats</span> that leap onto enemies, dealing <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDPS\">spirit damage over time</span> and reducing their <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_bullet_armor.png\" class=\"inline-attribute BulletResist\" alt=\"bullet resist\"/><span class=\"inline-attribute-label BulletResist\" style=\"color: #EC9719;\">bullet resist</span> with every bite. The more rats are attached, the faster they will bite the target.<br><br>Enemies can have multiple rats attached, but can shake off a <span class=\"highlight\">rat</span> early by performing a <span class=\"highlight\">ground or air dash</span>.",
+						"properties_block": [
+							{
+								"properties": [
+									{
+										"important_property": "DamagePerBite"
+									},
+									{
+										"important_property": "ArmorReductionPerBite"
+									}
+								]
+							}
+						],
+						"basic_properties": [
+							"BiteInterval",
+							"DebuffDuration",
+							"MaxRats"
+						]
+					}
+				]
+			},
+			"upgrades": [
+				{
+					"property_upgrades": [
+						{
+							"name": "AbilityCharges",
+							"bonus": "1"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "RatSwarmCols",
+							"bonus": "2"
+						},
+						{
+							"name": "RatSwarmRows",
+							"bonus": "1"
+						},
+						{
+							"name": "RatSwarmWidth",
+							"bonus": "100"
+						},
+						{
+							"name": "DebuffDuration",
+							"bonus": "4"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "ArmorReductionPerBite",
+							"bonus": "-1"
+						},
+						{
+							"name": "DamagePerBite",
+							"bonus": "8"
+						}
+					]
+				}
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">Increased Swarm Size</span><br><span class=\"highlight\">+4s</span> Debuff Duration",
+				"t3_desc": "<span class=\"highlight\">+8</span> Damage and <span class=\"highlight\">-1%</span> Bullet Resist per Bite"
+			}
+		},
+		{
+			"id": 3002308408,
+			"class_name": "ability_ratking_scrap_grenade",
+			"name": "Scrap Grenade",
+			"image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/ratking/ratking_grenade.webp",
+			"image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/ratking/ratking_grenade.png",
+			"hero": 84,
+			"ability_type": "signature",
+			"properties": {
+				"AbilityCooldown": {
+					"value": "26",
+					"can_set_token_override": true,
+					"css_class": "cooldown",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCooldown_scale_function",
+						"specific_stat_scale_type": "ETechCooldown"
+					},
+					"label": "Cooldown",
+					"postfix": "s",
+					"postvalue_label": "Cooldown",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/cooldown.svg"
+				},
+				"AbilityDuration": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "duration",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityDuration_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"label": "Duration",
+					"postfix": "s",
+					"postvalue_label": "Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"AbilityCastRange": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "range",
+					"display_units": "EDisplayUnit_Meters",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCastRange_scale_function",
+						"specific_stat_scale_type": "ETechRange"
+					},
+					"label": "Cast Range",
+					"postfix": "m",
+					"postvalue_label": "Cast Range",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/upgrades/property_range.svg"
+				},
+				"AbilityUnitTargetLimit": {
+					"value": "1",
+					"can_set_token_override": true
+				},
+				"AbilityCastDelay": {
+					"value": "0.0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"label": "Cast Delay",
+					"postfix": "s",
+					"postvalue_label": "Cast Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityChannelTime": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_multi_stats",
+						"subclass_name": "scale_duration",
+						"scaling_stats": [
+							"EChannelDuration",
+							"ETechDuration"
+						]
+					},
+					"label": "Channel Duration",
+					"postfix": "s",
+					"postvalue_label": "Channel Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityPostCastDuration": {
+					"value": "0",
+					"disable_value": "0"
+				},
+				"AbilityCharges": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "-1",
+					"scale_function": {
+						"class_name": "scale_function_ability_charges",
+						"subclass_name": "AbilityCharges_scale_function"
+					},
+					"label": "Charges",
+					"postvalue_label": "Charges",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityCooldownBetweenCharge": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "charge_cooldown",
+					"disable_value": "-2",
+					"scale_function": {
+						"class_name": "scale_function_ability_recharge_time",
+						"subclass_name": "scale_function_ability_recharge_time"
+					},
+					"label": "Charge Delay",
+					"postfix": "s",
+					"postvalue_label": "Charge Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/recharge.svg"
+				},
+				"ChannelMoveSpeed": {
+					"value": "-1",
+					"can_set_token_override": true,
+					"css_class": "move_speed",
+					"display_units": "EDisplayUnit_MetersPerSecond",
+					"postfix": "m",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"AbilityResourceCost": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"TechPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Spirit Power",
+					"postfix": "",
+					"postvalue_label": "Spirit Power"
+				},
+				"WeaponPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Weapon Damage",
+					"postfix": "%",
+					"postvalue_label": "Weapon Damage"
+				},
+				"DamagePerShrapnel": {
+					"value": "65",
+					"css_class": "bullet_damage",
+					"scale_function": {
+						"class_name": "scale_function_ability_weapon_damage",
+						"subclass_name": "damage_sf",
+						"specific_stat_scale_type": "EBaseWeaponDamageIncrease",
+						"stat_scale": 0.6
+					},
+					"label": "Detonation Damage",
+					"postvalue_label": "Detonation Damage",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_bullet_color.svg"
+				},
+				"BigExplosionDamage": {
+					"value": "0",
+					"css_class": "bullet_damage",
+					"scale_function": {
+						"class_name": "scale_function_ability_weapon_damage",
+						"subclass_name": "big_damage_sf",
+						"specific_stat_scale_type": "EBaseWeaponDamageIncrease",
+						"stat_scale": 0
+					},
+					"label": "Big Detonation Damage",
+					"postvalue_label": "Big Detonation Damage",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_bullet_color.svg"
+				},
+				"ArmorReductionPerStackNonHero": {
+					"value": "-3",
+					"css_class": "bullet_armor_down",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/armor_bullet_color.svg"
+				},
+				"SlowPercent": {
+					"value": "20",
+					"provided_property_type": "MODIFIER_VALUE_MOVEMENT_SPEED_SLOW_PERCENT",
+					"css_class": "slow",
+					"scale_function": {
+						"class_name": "scale_function_tech_damage",
+						"subclass_name": "scrap_grenade_slow_sf",
+						"stat_scale": 0.08
+					},
+					"prefix": "-",
+					"label": "Move Speed",
+					"postfix": "%",
+					"postvalue_label": "Move Speed",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/condition_slow.svg"
+				},
+				"BigExplosionSlowPercent": {
+					"value": "40",
+					"provided_property_type": "MODIFIER_VALUE_MOVEMENT_SPEED_SLOW_PERCENT",
+					"css_class": "slow",
+					"scale_function": {
+						"class_name": "scale_function_tech_damage",
+						"subclass_name": "big_slow_sf",
+						"stat_scale": 0
+					},
+					"label": "Big Detonation Move Speed",
+					"postfix": "%",
+					"postvalue_label": "Big Detonation Move Speed",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/condition_slow.svg"
+				},
+				"SlowDuration": {
+					"value": "4",
+					"css_class": "duration",
+					"scale_function": {
+						"class_name": "scale_function_tech_duration",
+						"subclass_name": "scrap_grenade_slow_duration_sf"
+					},
+					"label": "Slow Duration",
+					"postfix": "s",
+					"postvalue_label": "Slow Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"BounceGrenadeSpeed": {
+					"value": "1200"
+				},
+				"ShrapnelSphereRadius": {
+					"value": "8m",
+					"scale_function": {
+						"class_name": "scale_function_tech_range",
+						"subclass_name": "sphere_radius_sf"
+					},
+					"label": "Detonation Radius",
+					"postfix": "m",
+					"postvalue_label": "Detonation Radius"
+				},
+				"BigExplosionRadius": {
+					"value": "0",
+					"css_class": "distance",
+					"display_units": "EDisplayUnit_Meters",
+					"scale_function": {
+						"class_name": "scale_function_tech_range",
+						"subclass_name": "big_explosion_radius_sf",
+						"stat_scale": 0
+					},
+					"label": "Big Detonation Radius",
+					"postfix": "m",
+					"postvalue_label": "Big Detonation Radius",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
+				},
+				"Detonations": {
+					"value": "3",
+					"label": "Detonations",
+					"postvalue_label": "Detonations"
+				},
+				"FirstBounceDetonateTimer": {
+					"value": "0.8"
+				},
+				"AdditionalBounceDetonateTimer": {
+					"value": "0.7"
+				},
+				"FinalBounceDetonateTimer": {
+					"value": "1.5"
+				},
+				"MeleeImpulseLight": {
+					"value": "750"
+				},
+				"MeleeImpulseHeavy": {
+					"value": "1000"
+				},
+				"MeleeImpulseUpScale": {
+					"value": "0.45"
+				}
+			},
+			"tooltip_details": {
+				"info_sections": [
+					{
+						"loc_string": "Throw a grenade of scrap that detonates multiple times, dealing <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M32.0027 9C40.8042 9 48.6533 13.3022 53.7875 20.0238H53.7766C57.1324 24.4142 58.5664 26.6091 59.9993 26.6084C61.4318 26.6078 62.8632 24.4129 66.2125 20.0238C71.3467 13.3022 79.1958 9 87.9973 9C103.466 9 116 22.2789 116 38.6558C116 38.7707 115.999 38.8854 115.998 39H4.00155C4.00052 38.8854 4 38.7707 4 38.6558C4 22.2789 16.5345 9 32.0027 9Z\" fill=\"white\"/>\n<path d=\"M24.5608 79C27.3761 82.0873 30.3317 85.1748 33.3264 88.303C41.7966 97.1509 50.5788 106.325 57.3782 116.742C58.8889 119.051 61.1111 119.051 62.6218 116.742C69.4174 106.328 78.1987 97.1556 86.6692 88.3073C89.6652 85.1778 92.6222 82.0889 95.4388 79H24.5608Z\" fill=\"white\"/>\n<path d=\"M123 59.0055C123 59.0055 117.403 49 100.88 49H75V69H100.88C117.413 69 123 58.9945 123 58.9945V59.0055Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label BulletDamage\">bullet damage</span> and applying <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_slow_large.png\" class=\"inline-attribute Slow\" alt=\"slow\"/><span class=\"inline-attribute-label Slow\">slow</span>.<br><br><span class=\"diminish\">The grenade can be meleed to knock it away.</span>",
+						"properties_block": [
+							{
+								"properties": [
+									{
+										"important_property": "DamagePerShrapnel"
+									},
+									{
+										"important_property": "SlowPercent"
+									}
+								]
+							}
+						],
+						"basic_properties": [
+							"Detonations",
+							"ShrapnelSphereRadius",
+							"SlowDuration"
+						]
+					},
+					{
+						"loc_string": "The final detonation has a longer fuse but increased detonation radius, deals increased <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M32.0027 9C40.8042 9 48.6533 13.3022 53.7875 20.0238H53.7766C57.1324 24.4142 58.5664 26.6091 59.9993 26.6084C61.4318 26.6078 62.8632 24.4129 66.2125 20.0238C71.3467 13.3022 79.1958 9 87.9973 9C103.466 9 116 22.2789 116 38.6558C116 38.7707 115.999 38.8854 115.998 39H4.00155C4.00052 38.8854 4 38.7707 4 38.6558C4 22.2789 16.5345 9 32.0027 9Z\" fill=\"white\"/>\n<path d=\"M24.5608 79C27.3761 82.0873 30.3317 85.1748 33.3264 88.303C41.7966 97.1509 50.5788 106.325 57.3782 116.742C58.8889 119.051 61.1111 119.051 62.6218 116.742C69.4174 106.328 78.1987 97.1556 86.6692 88.3073C89.6652 85.1778 92.6222 82.0889 95.4388 79H24.5608Z\" fill=\"white\"/>\n<path d=\"M123 59.0055C123 59.0055 117.403 49 100.88 49H75V69H100.88C117.413 69 123 58.9945 123 58.9945V59.0055Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label BulletDamage\">bullet damage</span> and applies a stronger <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_slow_large.png\" class=\"inline-attribute Slow\" alt=\"slow\"/><span class=\"inline-attribute-label Slow\">slow</span>.",
+						"property_upgrade_required": "BigExplosionDamage",
+						"properties_block": [
+							{
+								"properties": [
+									{
+										"important_property": "BigExplosionDamage"
+									},
+									{
+										"important_property": "BigExplosionRadius"
+									},
+									{
+										"important_property": "BigExplosionSlowPercent"
+									}
+								]
+							}
+						],
+						"basic_properties": [
+							"SlowDuration"
+						]
+					}
+				]
+			},
+			"upgrades": [
+				{
+					"property_upgrades": [
+						{
+							"name": "AbilityCooldown",
+							"bonus": "-8"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "DamagePerShrapnel",
+							"bonus": "65"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "Detonations",
+							"bonus": "1"
+						},
+						{
+							"name": "BigExplosionDamage",
+							"bonus": "300"
+						},
+						{
+							"name": "BigExplosionDamage",
+							"bonus": "1.0",
+							"upgrade_type": "EAddToScale"
+						},
+						{
+							"name": "BigExplosionRadius",
+							"bonus": "14m"
+						},
+						{
+							"name": "BigExplosionRadius",
+							"bonus": "1",
+							"scale_stat_filter": "ETechRange",
+							"upgrade_type": "EAddToScale"
+						},
+						{
+							"name": "BigExplosionSlowPercent",
+							"bonus": "0.12",
+							"upgrade_type": "EAddToScale"
+						}
+					]
+				}
+			],
+			"description": {
+				"t3_desc": "Add an additional final Bigger Detonation"
+			}
+		},
+		{
+			"id": 690412829,
+			"class_name": "ability_ratking_ratarmor",
+			"name": "Royal Pestments",
+			"image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/ratking/ratking_shield.webp",
+			"image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/ratking/ratking_shield.png",
+			"hero": 84,
+			"ability_type": "signature",
+			"properties": {
+				"AbilityCooldown": {
+					"value": 22,
+					"can_set_token_override": true,
+					"css_class": "cooldown",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCooldown_scale_function",
+						"specific_stat_scale_type": "ETechCooldown"
+					},
+					"label": "Cooldown",
+					"postfix": "s",
+					"postvalue_label": "Cooldown",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/cooldown.svg"
+				},
+				"AbilityDuration": {
+					"value": "6",
+					"can_set_token_override": true,
+					"css_class": "duration",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityDuration_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"label": "Duration",
+					"postfix": "s",
+					"postvalue_label": "Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"AbilityCastRange": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "range",
+					"display_units": "EDisplayUnit_Meters",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCastRange_scale_function",
+						"specific_stat_scale_type": "ETechRange"
+					},
+					"label": "Cast Range",
+					"postfix": "m",
+					"postvalue_label": "Cast Range",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/upgrades/property_range.svg"
+				},
+				"AbilityUnitTargetLimit": {
+					"value": "1",
+					"can_set_token_override": true
+				},
+				"AbilityCastDelay": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"label": "Cast Delay",
+					"postfix": "s",
+					"postvalue_label": "Cast Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityChannelTime": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_multi_stats",
+						"subclass_name": "scale_duration",
+						"scaling_stats": [
+							"EChannelDuration",
+							"ETechDuration"
+						]
+					},
+					"label": "Channel Duration",
+					"postfix": "s",
+					"postvalue_label": "Channel Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityPostCastDuration": {
+					"value": "0",
+					"disable_value": "0"
+				},
+				"AbilityCharges": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "-1",
+					"scale_function": {
+						"class_name": "scale_function_ability_charges",
+						"subclass_name": "AbilityCharges_scale_function"
+					},
+					"label": "Charges",
+					"postvalue_label": "Charges",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityCooldownBetweenCharge": {
+					"value": "-1.0",
+					"can_set_token_override": true,
+					"css_class": "charge_cooldown",
+					"disable_value": "-2",
+					"scale_function": {
+						"class_name": "scale_function_ability_recharge_time",
+						"subclass_name": "scale_function_ability_recharge_time"
+					},
+					"label": "Charge Delay",
+					"postfix": "s",
+					"postvalue_label": "Charge Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/recharge.svg"
+				},
+				"ChannelMoveSpeed": {
+					"value": "-1",
+					"can_set_token_override": true,
+					"css_class": "move_speed",
+					"display_units": "EDisplayUnit_MetersPerSecond",
+					"postfix": "m",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"AbilityResourceCost": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"TechPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Spirit Power",
+					"postfix": "",
+					"postvalue_label": "Spirit Power"
+				},
+				"WeaponPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Weapon Damage",
+					"postfix": "%",
+					"postvalue_label": "Weapon Damage"
+				},
+				"RatCount": {
+					"value": "7",
+					"label": "Rat Count",
+					"postvalue_label": "Rat Count"
+				},
+				"MaxHealthPct": {
+					"value": "15",
+					"css_class": "health",
+					"label": "Max Health as Barrier",
+					"postfix": "%",
+					"postvalue_label": "Max Health as Barrier",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/health.svg"
+				},
+				"MaxDamagePerHit": {
+					"value": "0",
+					"label": "Damage Cap",
+					"postvalue_label": "Damage Cap"
+				},
+				"ReturnFireChance": {
+					"value": "15",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "return_fire_chance_sf",
+						"specific_stat_scale_type": "ETechPower",
+						"stat_scale": 0.1
+					},
+					"label": "Bullet Return Chance",
+					"postfix": "%",
+					"postvalue_label": "Bullet Return Chance"
+				},
+				"BulletDamageReflectedPct": {
+					"value": "100",
+					"scale_function": {},
+					"label": "Bullet Damage Returned",
+					"postfix": "%",
+					"postvalue_label": "Bullet Damage Returned"
+				},
+				"StatusResistancePercent": {
+					"value": "0",
+					"provided_property_type": "MODIFIER_VALUE_STATUS_RESISTANCE",
+					"css_class": "duration",
+					"prefix": "{s:sign}",
+					"label": "Debuff Resist",
+					"postfix": "%",
+					"postvalue_label": "Debuff Resist",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				}
+			},
+			"tooltip_details": {
+				"info_sections": [
+					{
+						"loc_string": "Adorn scrappy armor, gaining <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_bullet_armor.png\" class=\"inline-attribute CombatBarrier\" alt=\"barrier\"/><span class=\"inline-attribute-label CombatBarrier\" style=\"color: #FFEFD7;\">barrier</span> based on your <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M92.0059 9C107.475 9.00022 120 22.237 120 38.6592C120 68.2957 85.5894 87.6846 66.6162 116.752C65.1163 119.062 62.8837 119.062 61.3838 116.752C42.4106 87.6846 8.00022 68.2957 8 38.6592C8 22.2808 20.5245 9.00022 35.9941 9C40.2312 9.02587 44.4049 10.0351 48.1855 11.9482C49.3884 12.5569 50.5406 13.2524 51.6343 14.0271C52.9137 14.9332 52.473 16.8509 51.0109 17.4168C37.5479 22.6271 28 35.6977 28 51C28 70.8823 44.1177 87 64 87C83.8823 87 100 70.8823 100 51C100 35.6974 90.4516 22.6267 76.9882 17.4167C75.5261 16.8509 75.0854 14.9333 76.3648 14.0273C77.4588 13.2526 78.6113 12.557 79.8145 11.9482C83.5951 10.0351 87.7688 9.02587 92.0059 9Z\" fill=\"#0F9\"/>\n<path d=\"M69 46H84V56H69V71H59V56H44V46H59V31H69V46Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label MaxHealth\" style=\"color: #0F9;\">max health</span>. As long as the armor holds, bullets have a chance to be <span class=\"highlight\">deflected</span> back towards the attacker.<br><br><span class=\"diminish\">The barrier does not benefit from resists.</span>",
+						"properties_block": [
+							{
+								"properties": [
+									{
+										"important_property": "MaxHealthPct"
+									},
+									{
+										"important_property": "ReturnFireChance"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"upgrades": [
+				{
+					"property_upgrades": [
+						{
+							"name": "AbilityDuration",
+							"bonus": "4"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "ReturnFireChance",
+							"bonus": "15"
+						},
+						{
+							"name": "AbilityCooldown",
+							"bonus": "-8"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "MaxHealthPct",
+							"bonus": "10"
+						},
+						{
+							"name": "MaxDamagePerHit",
+							"bonus": "250"
+						}
+					]
+				}
+			],
+			"description": {
+				"t2_desc": "<span class=\"highlight\">-8s</span> Cooldown<br><span class=\"highlight\">+15%</span> Bullet Return Chance",
+				"t3_desc": "Reduce all damage to a max of <span class=\"highlight\">250</span><br><span class=\"highlight\">+10%</span> Max Health as Barrier"
+			}
+		},
+		{
+			"id": 1627989937,
+			"class_name": "ability_ratking_standard_bearer",
+			"name": "Rule, Ratannia!",
+			"image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/ratking/ratking_flag.webp",
+			"image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/ratking/ratking_flag.png",
+			"hero": 84,
+			"ability_type": "ultimate",
+			"properties": {
+				"AbilityCooldown": {
+					"value": "130",
+					"can_set_token_override": true,
+					"css_class": "cooldown",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCooldown_scale_function",
+						"specific_stat_scale_type": "ETechCooldown"
+					},
+					"label": "Cooldown",
+					"postfix": "s",
+					"postvalue_label": "Cooldown",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/cooldown.svg"
+				},
+				"AbilityDuration": {
+					"value": "12",
+					"can_set_token_override": true,
+					"css_class": "duration",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityDuration_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"label": "Duration",
+					"postfix": "s",
+					"postvalue_label": "Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"AbilityCastRange": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "range",
+					"display_units": "EDisplayUnit_Meters",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCastRange_scale_function",
+						"specific_stat_scale_type": "ETechRange"
+					},
+					"label": "Cast Range",
+					"postfix": "m",
+					"postvalue_label": "Cast Range",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/upgrades/property_range.svg"
+				},
+				"AbilityUnitTargetLimit": {
+					"value": "1",
+					"can_set_token_override": true
+				},
+				"AbilityCastDelay": {
+					"value": "2.0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"label": "Cast Delay",
+					"postfix": "s",
+					"postvalue_label": "Cast Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityChannelTime": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_multi_stats",
+						"subclass_name": "scale_duration",
+						"scaling_stats": [
+							"EChannelDuration",
+							"ETechDuration"
+						]
+					},
+					"label": "Channel Duration",
+					"postfix": "s",
+					"postvalue_label": "Channel Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityPostCastDuration": {
+					"value": "0",
+					"disable_value": "0"
+				},
+				"AbilityCharges": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "-1",
+					"scale_function": {
+						"class_name": "scale_function_ability_charges",
+						"subclass_name": "AbilityCharges_scale_function"
+					},
+					"label": "Charges",
+					"postvalue_label": "Charges",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityCooldownBetweenCharge": {
+					"value": "-1.0",
+					"can_set_token_override": true,
+					"css_class": "charge_cooldown",
+					"disable_value": "-2",
+					"scale_function": {
+						"class_name": "scale_function_ability_recharge_time",
+						"subclass_name": "scale_function_ability_recharge_time"
+					},
+					"label": "Charge Delay",
+					"postfix": "s",
+					"postvalue_label": "Charge Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/recharge.svg"
+				},
+				"ChannelMoveSpeed": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "move_speed",
+					"display_units": "EDisplayUnit_MetersPerSecond",
+					"postfix": "m",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"AbilityResourceCost": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"TechPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Spirit Power",
+					"postfix": "",
+					"postvalue_label": "Spirit Power"
+				},
+				"WeaponPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Weapon Damage",
+					"postfix": "%",
+					"postvalue_label": "Weapon Damage"
+				},
+				"Damage": {
+					"value": "200",
+					"css_class": "bullet_damage",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "damage_sf",
+						"specific_stat_scale_type": "EBaseWeaponDamageIncrease",
+						"stat_scale": 1.2
+					},
+					"label": "Damage",
+					"postvalue_label": "Damage",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_bullet_color.svg"
+				},
+				"Radius": {
+					"value": "24m",
+					"scale_function": {
+						"class_name": "scale_function_tech_range",
+						"subclass_name": "aura_radius_sf"
+					},
+					"label": "Radius",
+					"postfix": "m",
+					"postvalue_label": "Radius"
+				},
+				"FlagDuration": {
+					"value": "12",
+					"scale_function": {
+						"class_name": "scale_function_tech_duration",
+						"subclass_name": "flag_duration_sf"
+					},
+					"label": "Flag Duration",
+					"postfix": "s",
+					"postvalue_label": "Flag Duration"
+				},
+				"TossDuration": {
+					"value": "1.2",
+					"label": "Duration",
+					"postfix": "s",
+					"postvalue_label": "Duration"
+				},
+				"BonusMoveSpeed": {
+					"value": "3m",
+					"provided_property_type": "MODIFIER_VALUE_MOVEMENT_SPEED_MAX",
+					"css_class": "move_speed",
+					"display_units": "EDisplayUnit_MetersPerSecond",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "move_speed_sf",
+						"specific_stat_scale_type": "ETechPower",
+						"stat_scale": 0.05
+					},
+					"prefix": "{s:sign}",
+					"label": "Move Speed",
+					"postfix": " m",
+					"postvalue_label": "Move Speed",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"AllyDamageReduction": {
+					"value": "20",
+					"provided_property_type": "MODIFIER_VALUE_ALL_DAMAGE_TAKEN_REDUCTION",
+					"label": "Damage Reduction",
+					"postfix": "%",
+					"postvalue_label": "Damage Reduction"
+				},
+				"SlowPercent": {
+					"value": "40",
+					"provided_property_type": "MODIFIER_VALUE_MOVEMENT_SPEED_SLOW_PERCENT",
+					"css_class": "move_speed",
+					"prefix": "-",
+					"label": "Move Speed",
+					"postfix": "%",
+					"postvalue_label": "Move Speed",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"DashSlowPercent": {
+					"value": "-20",
+					"provided_property_type": "MODIFIER_VALUE_MOVEMENT_GROUND_DASH_REDUCTION_PERCENT",
+					"label": "Dash Distance",
+					"postfix": "%",
+					"postvalue_label": "Dash Distance"
+				}
+			},
+			"tooltip_details": {
+				"info_sections": [
+					{
+						"loc_string": "Charge up and summon the banner of Ratannia, granting all nearby allies increased <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M81.5143 72.4711L117.08 34.3552L68.8057 2L57.0343 31.8506L11 87.2257L34.7257 103.141L43.3657 96.9254L58.4286 118.989L83.2514 124.977L108.646 125L114.269 116.666L95.96 103.665L81.5143 72.4711Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label MoveSpeed\" style=\"color: #0F9;\">move speed</span>, <span class=\"highlight\">immunity from slows</span>, and <span class=\"highlight\">reduced incoming damage</span> while near the banner.",
+						"properties_block": [
+							{
+								"loc_string": "Banner Aura",
+								"properties": [
+									{
+										"important_property": "BonusMoveSpeed"
+									},
+									{
+										"important_property": "AllyDamageReduction"
+									}
+								]
+							}
+						],
+						"basic_properties": [
+							"Radius"
+						]
+					},
+					{
+						"loc_string": "Slam the banner into the ground causing the sewers below to violently erupt, dealing <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M32.0027 9C40.8042 9 48.6533 13.3022 53.7875 20.0238H53.7766C57.1324 24.4142 58.5664 26.6091 59.9993 26.6084C61.4318 26.6078 62.8632 24.4129 66.2125 20.0238C71.3467 13.3022 79.1958 9 87.9973 9C103.466 9 116 22.2789 116 38.6558C116 38.7707 115.999 38.8854 115.998 39H4.00155C4.00052 38.8854 4 38.7707 4 38.6558C4 22.2789 16.5345 9 32.0027 9Z\" fill=\"white\"/>\n<path d=\"M24.5608 79C27.3761 82.0873 30.3317 85.1748 33.3264 88.303C41.7966 97.1509 50.5788 106.325 57.3782 116.742C58.8889 119.051 61.1111 119.051 62.6218 116.742C69.4174 106.328 78.1987 97.1556 86.6692 88.3073C89.6652 85.1778 92.6222 82.0889 95.4388 79H24.5608Z\" fill=\"white\"/>\n<path d=\"M123 59.0055C123 59.0055 117.403 49 100.88 49H75V69H100.88C117.413 69 123 58.9945 123 58.9945V59.0055Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label BulletDamage\">bullet damage</span> while applying <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#FFEFD7\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M9.51518 108.266H46.7033V108.147V108.029L38.8617 93.5336L20.2082 88.8999C15.0993 87.593 12.0102 82.4841 13.3172 77.3752C14.3865 73.0979 18.1884 70.1276 22.5845 70.1276C23.2974 70.1276 24.129 70.2464 24.8419 70.3652L47.535 75.9494C50.1488 76.5435 52.4063 78.3256 53.5944 80.7019L60.7231 93.89H78.3073L63.4558 67.8702C60.8419 63.3553 62.5053 57.5336 67.0201 54.9197C68.4459 54.088 70.1092 53.7316 71.6538 53.7316C75.0993 53.7316 78.1884 55.6326 79.9706 58.6029L100.169 94.2464C100.882 95.4346 101.238 96.8603 101.357 98.286C101.357 98.5237 101.357 98.6425 101.357 98.8801V101.494C104.089 98.6425 107.773 96.8603 111.931 96.5039C103.971 44.7019 59.1785 4.8999 5.11914 4.8999V109.336C6.54488 108.623 7.97062 108.266 9.51518 108.266Z\" fill=\"#FFEFD7\" fill-opacity=\"0.5\"/>\n<path d=\"M69.4297 58.9833C71.7133 57.6893 74.6135 58.4915 75.9075 60.775L96.1055 96.4186C96.6022 97.2952 96.7901 98.2626 96.7038 99.1951V122.583H51.5553V122.524H9.51517C6.89045 122.524 4.7627 120.396 4.7627 117.771C4.7627 115.147 6.89045 113.019 9.51517 113.019H51.5553V106.637C51.331 106.38 51.1312 106.093 50.9615 105.781L42.1019 89.449L21.4488 84.3668C18.9002 83.7396 17.3425 81.1651 17.9696 78.6164C18.5968 76.0677 21.1713 74.51 23.72 75.1372L46.4131 80.7213C47.7124 81.0411 48.8168 81.8938 49.4549 83.07L57.9996 98.8211L86.542 98.8211L67.638 65.4611C66.344 63.1775 67.1461 60.2773 69.4297 58.9833Z\" fill=\"#FFEFD7\"/>\n<path d=\"M125.238 113.019C125.238 119.581 119.919 124.9 113.357 124.9C106.795 124.9 101.476 119.581 101.476 113.019C101.476 106.457 106.795 101.138 113.357 101.138C119.919 101.138 125.238 106.457 125.238 113.019Z\" fill=\"#FFEFD7\"/>\n</svg>\n<span class=\"inline-attribute-label KnockUp\" style=\"color: #FFEFD7;\">knockup</span> and <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_slow_large.png\" class=\"inline-attribute Slow\" alt=\"slow\"/><span class=\"inline-attribute-label Slow\">slow</span> to all enemies in the area. Rats will swarm out of the sewers, applying <span class=\"highlight\">Rat Swarm</span> to enemies they hit.",
+						"properties_block": [
+							{
+								"loc_string": "Banner Slam",
+								"properties": [
+									{
+										"important_property": "Damage"
+									},
+									{
+										"important_property": "SlowPercent"
+									}
+								]
+							}
+						],
+						"basic_properties": [
+							"FlagDuration",
+							"Radius"
+						]
+					}
+				]
+			},
+			"upgrades": [
+				{
+					"property_upgrades": [
+						{
+							"name": "AbilityCooldown",
+							"bonus": "-20"
+						},
+						{
+							"name": "BonusMoveSpeed",
+							"bonus": "1m"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "FlagDuration",
+							"bonus": "8"
+						},
+						{
+							"name": "Radius",
+							"bonus": "8m"
+						},
+						{
+							"name": "AbilityDuration",
+							"bonus": "8"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "Damage",
+							"bonus": "150"
+						},
+						{
+							"name": "AllyDamageReduction",
+							"bonus": "15"
+						}
+					]
+				}
+			],
+			"description": {
+				"t1_desc": "-20s Cooldown and +1m Move Speed",
+				"t2_desc": "+8s Charge Duration<br>+8s Flag Duration<br>+8m Radius",
+				"t3_desc": "+150 Damage and +15% Damage Reduction"
+			}
 		}
 	]
 }
