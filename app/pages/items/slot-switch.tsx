@@ -6,8 +6,7 @@ import { useActiveSlot } from "./useActiveSlot";
 
 /**
  * Sticky Weapon / Spirit / Vitality switch - plain `#slot` anchors, so the
- * browser does the jump (smooth via `scroll-behavior` on `html`, offset by
- * each section's `scroll-margin-top`). The section currently in view is
+ * browser does the jump (offset by each section's `scroll-margin-top`). The section currently in view is
  * filled with its slot colour.
  *
  * Plain anchors, not router `Link`s: `Link` stamps `aria-current="page"` on

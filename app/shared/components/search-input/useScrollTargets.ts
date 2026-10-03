@@ -28,10 +28,9 @@ export function useScrollTargets() {
 	const scrollTo = (name: string) => {
 		const target = targets.current.get(name);
 		if (!target) return;
-		// Smooth via `scroll-behavior` on `html`. Top-aligned, so a card taller
-		// than the screen still shows its name - the caller gives the card a
-		// scroll-margin that clears the sticky bars.
-		target.scrollIntoView({ block: "start" });
+		// Top-aligned, so a card taller than the screen still shows its name -
+		// the caller gives the card a scroll-margin that clears the sticky bars.
+		target.scrollIntoView({ block: "start", behavior: "smooth" });
 		// A filter, not an outline: cards are clip-pathed, which would cut a
 		// ring off at the corners.
 		target.animate(

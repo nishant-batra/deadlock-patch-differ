@@ -44,7 +44,6 @@ svg {
 }
 
 html {
-	scroll-behavior: smooth;
 	scrollbar-width: thin;
 	scrollbar-color: rgba(100, 100, 100, 0.4) transparent;
 }
@@ -212,9 +211,5 @@ html::-webkit-scrollbar-thumb:hover {
 	::view-transition-old(*),
 	::view-transition-new(*) {
 		animation: none;
-	}
-
-	html {
-		scroll-behavior: auto;
 	}
 }
