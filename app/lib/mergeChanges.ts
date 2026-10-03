@@ -347,6 +347,12 @@ export function mergeHeroChanges(
 	for (const name of names) {
 		const earlier = first[name] ?? EMPTY_HERO;
 		const hotfix = second[name] ?? EMPTY_HERO;
+		// Released in this window: there is no pre-patch baseline, so hotfix
+		// tweaks are not changes a player could compare against.
+		if (earlier.isNew || hotfix.isNew) {
+			out[name] = { ...EMPTY_HERO, isNew: true };
+			continue;
+		}
 
 		const abilities: Record<string, Change[]> = {};
 		const abilityNames = new Set([

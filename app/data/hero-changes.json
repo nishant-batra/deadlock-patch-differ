@@ -351,77 +351,9 @@
 		}
 	},
 	"Rat King": {
-		"stats": [
-			{
-				"path": [
-					"starting_stats",
-					"max_move_speed",
-					"value"
-				],
-				"kind": "modified",
-				"old": 7.2,
-				"new": 6.8
-			},
-			{
-				"path": [
-					"starting_stats",
-					"max_health",
-					"value"
-				],
-				"kind": "modified",
-				"old": 780,
-				"new": 800
-			},
-			{
-				"path": [
-					"starting_stats",
-					"stamina_regen_per_second",
-					"value"
-				],
-				"kind": "modified",
-				"old": 0.222222,
-				"new": 0.263
-			},
-			{
-				"path": [
-					"starting_stats",
-					"ground_dash_duration",
-					"value"
-				],
-				"kind": "modified",
-				"old": 0.68,
-				"new": 0.72
-			},
-			{
-				"path": [
-					"starting_stats",
-					"air_dash_duration",
-					"value"
-				],
-				"kind": "modified",
-				"old": 0.47,
-				"new": 0.51
-			},
-			{
-				"path": [
-					"standard_level_up_upgrades",
-					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
-				],
-				"kind": "modified",
-				"old": 0.15,
-				"new": 0.18
-			},
-			{
-				"path": [
-					"standard_level_up_upgrades",
-					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
-				],
-				"kind": "modified",
-				"old": 44,
-				"new": 50
-			}
-		],
+		"stats": [],
 		"weapon": [],
-		"abilities": {}
+		"abilities": {},
+		"isNew": true
 	}
 }

@@ -74,7 +74,7 @@ export function getChangedHeroes(): ChangedHero[] {
 		// Unreleased and experimental heroes ship in the catalog but are not in
 		// play - Raven was rendering as a changed hero.
 		if (!changes || !isLiveHero(hero)) return [];
-		const { abilities: abilityDiffs, stats, weapon } = changes;
+		const { abilities: abilityDiffs, stats, weapon, isNew } = changes;
 
 		const abilityChanges = joinAbilities(
 			hero,
@@ -90,9 +90,12 @@ export function getChangedHeroes(): ChangedHero[] {
 				abilities: abilityChanges,
 				statChanges: stats,
 				weaponChanges: weapon,
+				...(isNew && { isNew }),
 			},
 		];
-	});
+		// Newly released heroes lead the list; sort() is stable, so the rest
+		// keep catalog order.
+	}).sort((a, b) => Number(Boolean(b.isNew)) - Number(Boolean(a.isNew)));
 }
 
 export type ChangesPayload = {

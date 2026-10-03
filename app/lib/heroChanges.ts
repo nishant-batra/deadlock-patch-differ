@@ -212,8 +212,12 @@ function textChanges(before: Item, after: Item): Change[] {
 
 /**
  * Everything the Changes page renders per hero, for live heroes that changed.
- * Heroes absent from `prevHeroes` are skipped - there is no baseline to diff
- * (the same rule the raw diff applied: only `modified` heroes counted).
+ *
+ * A hero that was not live in `prevHeroes` (absent, or announced with
+ * placeholder stats) was released by this build: it gets an `isNew` entry with
+ * no changes. Diffing it against the placeholder made Rat King (build 6739)
+ * render as a changed hero. On a first run there is no previous build at all,
+ * so nothing is new.
  */
 export function buildHeroChanges(
 	prevHeroes: Hero[],
@@ -254,7 +258,12 @@ export function buildHeroChanges(
 		if (!isLiveHero(hero)) continue;
 		const { name, items: slots } = hero;
 		const previousHero = prevHeroByName.get(name);
-		if (!previousHero) continue;
+		if (!previousHero || !isLiveHero(previousHero)) {
+			if (prevHeroes.length > 0) {
+				out[name] = { stats: [], weapon: [], abilities: {}, isNew: true };
+			}
+			continue;
+		}
 		// The page drops a hero whose ability slot fails to resolve rather than
 		// render it half-empty, so it must not count toward the badge either.
 		const slotClasses = ABILITY_SLOTS.map((slot) => slots?.[slot]).filter(

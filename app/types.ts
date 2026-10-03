@@ -346,12 +346,15 @@ export interface HeroChanges {
 	weapon: Change[];
 	/** Ability name -> its property/scaling/description moves. */
 	abilities: Record<string, Change[]>;
+	/** Released this patch - no playable baseline to diff, so no changes. */
+	isNew?: true;
 }
 
 export interface ChangedHero extends HeroEntry {
 	statChanges: Change[];
 	/** Changes to the hero's weapon (`weapon_info.*`) - not an ability. */
 	weaponChanges: Change[];
+	isNew?: true;
 }
 
 export interface ChangedItem {
