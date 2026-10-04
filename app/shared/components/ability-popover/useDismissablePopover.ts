@@ -1,6 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
-
-export type PopoverStyle = { position: "fixed"; top: number; left: number };
+import { useLayoutEffect, useRef } from "react";
 
 const MARGIN = 8;
 
@@ -18,13 +16,20 @@ const MARGIN = 8;
  * positioning removes it from page flow, so it can no longer add scroll
  * height or push anything else. Recomputed on scroll/resize so it stays
  * pinned to the anchor.
+ *
+ * The position is written straight onto the dialog as `--popover-top` /
+ * `--popover-left` (read by its `top-(…)` / `left-(…)` classes), not kept in
+ * React state. A state update from a layout effect is held back until after
+ * the view transition has started, so the enter animation's snapshot was
+ * taken at the unpositioned corner and the dialog jumped into place once it
+ * finished. A direct write lands before the browser takes that snapshot -
+ * and scrolling no longer re-renders the whole card.
  */
 export function useDismissablePopover(
 	anchorRef: React.RefObject<HTMLElement | null>,
 	onClose: () => void,
 ) {
 	const ref = useRef<HTMLDivElement>(null);
-	const [style, setStyle] = useState<PopoverStyle | null>(null);
 
 	// Read via a ref rather than depending on `onClose` directly: its identity
 	// changes every render (`useOpenAbility` recreates it each time), which
@@ -44,13 +49,10 @@ export function useDismissablePopover(
 		const place = () => {
 			const anchor = anchorRef.current;
 			const dialog = ref.current;
-			if (!anchor) return;
+			if (!anchor || !dialog) return;
 			const anchorBox = anchor.getBoundingClientRect();
-			// Width is unknown until the dialog itself has rendered once; a fixed
-			// w-80 (320px) is set in the dialog's className, so this can compute
-			// against that even on the first layout pass.
-			const width = dialog?.offsetWidth || 320;
-			const height = dialog?.offsetHeight || 0;
+			const width = dialog.offsetWidth;
+			const height = dialog.offsetHeight;
 
 			let left = anchorBox.left;
 			left = Math.min(left, window.innerWidth - width - MARGIN);
@@ -63,7 +65,8 @@ export function useDismissablePopover(
 				: anchorBox.bottom + MARGIN;
 			top = Math.max(top, MARGIN);
 
-			setStyle({ position: "fixed", top, left });
+			dialog.style.setProperty("--popover-top", `${top}px`);
+			dialog.style.setProperty("--popover-left", `${left}px`);
 		};
 
 		// useLayoutEffect runs after the dialog is committed to the DOM but
@@ -95,5 +98,5 @@ export function useDismissablePopover(
 		};
 	}, []);
 
-	return { ref, style };
+	return ref;
 }

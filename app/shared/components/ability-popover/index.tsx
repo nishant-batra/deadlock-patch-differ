@@ -24,20 +24,20 @@ export default function AbilityPopover({
 	anchorRef: React.RefObject<HTMLElement | null>;
 	onClose: () => void;
 }) {
-	const { ref, style } = useDismissablePopover(anchorRef, onClose);
+	const ref = useDismissablePopover(anchorRef, onClose);
 
-	// Before the layout effect has measured, park the dialog at the viewport's
-	// corner rather than off-screen: React skips the enter animation for
-	// elements outside the viewport, and it measures before layout effects run.
-	// The layout effect still moves it into place before paint.
+	// Until the layout effect sets the position variables, the `0` fallbacks
+	// park the dialog at the viewport's corner rather than off-screen: React
+	// skips the enter animation for elements outside the viewport, and it
+	// measures before layout effects run. The layout effect still moves it
+	// into place before paint.
 	return createPortal(
 		<ViewTransition>
 			<div
 				ref={ref}
 				role="dialog"
 				aria-label={`${ability.name} upgrades`}
-				style={style ?? { position: "fixed", top: 0, left: 0 }}
-				className="z-40 max-h-[calc(100dvh-16px)] w-[min(30rem,calc(100vw-16px))] overflow-auto shadow-2xl"
+				className="fixed top-(--popover-top,0) left-(--popover-left,0) z-40 max-h-[calc(100dvh-16px)] w-[min(30rem,calc(100vw-16px))] overflow-auto shadow-2xl"
 			>
 				<AbilityCard
 					ability={ability}
