@@ -1,22 +1,56 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SITE_URL } from "#/lib/patchNotification";
 import Changes from "#/pages/patch-notes";
 import { type ChangesPayload, fetchChanges } from "#/pages/patch-notes/server";
+import { latestNoteDate } from "#/pages/patch-notes/utils";
+import { formatPatchDate } from "#/shared/utils/formatPatchDate";
 import { seoHead } from "#/shared/utils/seoHead";
 
 export const Route = createFileRoute("/_layout/")({
 	head: ({ loaderData }: { loaderData?: ChangesPayload }) => {
-		const patchTitle =
-			loaderData?.notes?.balance?.title || "Latest Valve Deadlock Patch";
 		const heroCount = loaderData?.heroes?.length ?? 0;
 		const itemCount =
 			(loaderData?.items?.added?.length ?? 0) +
 			(loaderData?.items?.removed?.length ?? 0) +
 			(loaderData?.items?.changed?.length ?? 0);
+		const patchDate = loaderData && latestNoteDate(loaderData.notes);
+		const dateLabel = patchDate ? formatPatchDate(patchDate) : undefined;
 
-		const title = `Deadlock Patch Notes (${patchTitle}) - ${heroCount} Heroes, ${itemCount} Items Changed | Deadlock Patch Comparator`;
-		const description = `Interactive visual breakdown of ${patchTitle}, the latest Deadlock update. Compare stat changes, ability upgrades, and item buffs/nerfs across ${heroCount} heroes and ${itemCount} items in this Deadlock patch visualizer.`;
+		// Date, not the note's flavour title ("Listen up, Crumbums!...") - the
+		// date is what people search for, and this keeps the title under
+		// Google's ~60 character cut-off.
+		const title = `Deadlock Patch Notes – ${dateLabel ?? "Latest Update"} | Hero & Item Changes`;
+		const description = `Everything that changed in the ${dateLabel ? `${dateLabel} ` : "latest "}Deadlock update: ${heroCount} heroes and ${itemCount} items, with stat changes, ability upgrades and item buffs/nerfs shown side by side.`;
 
-		return seoHead({ title, description, path: "/" });
+		const head = seoHead({ title, description, path: "/" });
+		if (!patchDate) return head;
+
+		// Lets Google show the patch date next to the result.
+		const publisher = {
+			"@type": "Organization",
+			name: "Deadlock Patch Comparator",
+			url: SITE_URL,
+		};
+		return {
+			...head,
+			scripts: [
+				{
+					type: "application/ld+json",
+					children: JSON.stringify({
+						"@context": "https://schema.org",
+						"@type": "Article",
+						headline: `Deadlock Patch Notes – ${dateLabel}`,
+						description,
+						image: `${SITE_URL}/og-image.webp`,
+						datePublished: patchDate,
+						dateModified: patchDate,
+						mainEntityOfPage: `${SITE_URL}/`,
+						author: publisher,
+						publisher,
+					}),
+				},
+			],
+		};
 	},
 	loader: async () => fetchChanges(),
 	component: RouteComponent,

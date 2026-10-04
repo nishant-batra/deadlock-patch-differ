@@ -8,6 +8,7 @@ import ChangedHeroCard from "./hero-card";
 import HeroLegend from "./hero-legend";
 import SectionHeading from "./section-heading";
 import type { ChangesPayload } from "./server";
+import { latestNoteDate } from "./utils";
 
 export default function Changes({
 	items,
@@ -17,6 +18,7 @@ export default function Changes({
 }: ChangesPayload) {
 	const { added, removed, changed } = items;
 	const { balance, general, recent } = notes;
+	const patchDate = latestNoteDate(notes);
 
 	// The item/hero diff and the general notes can come from different updates -
 	// a rework changes no items, a balance patch carries no general text - so the
@@ -153,7 +155,14 @@ export default function Changes({
 	return (
 		<main className="mx-auto max-w-7xl px-4 py-6 sm:px-8">
 			<h1 className="mb-1 font-extrabold text-2xl">
-				Deadlock Patch Notes &amp; Update Visualizer
+				Deadlock Patch Notes
+				{patchDate && (
+					<>
+						{" "}
+						&mdash;{" "}
+						<time dateTime={patchDate}>{formatPatchDate(patchDate)}</time>
+					</>
+				)}
 			</h1>
 			<p className="mb-6 text-gray-400 text-sm">
 				See exactly what changed in the latest Deadlock update — hero stat
