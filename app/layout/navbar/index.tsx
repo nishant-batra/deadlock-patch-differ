@@ -4,8 +4,12 @@ import { formatPatchDate } from "#/shared/utils/formatPatchDate";
 import type { PatchMeta } from "#/types";
 import { useNavHeight } from "./useNavHeight";
 
+const BUY_ME_A_COFFEE_URL = "https://buymeacoffee.com/nishten";
+
+// Horizontal padding shrinks with the viewport below ~394px (12px → 4px) so all
+// four chips stay on one row without their labels wrapping.
 const CHIP =
-	"cut-corner px-3 py-1.5 font-bold text-gray-300 hover:text-white [&.active]:bg-amber-400 [&.active]:text-black";
+	"cut-corner px-[clamp(4px,12.5vw_-_37.5px,12px)] py-1.5 font-bold text-gray-300 hover:text-white [&.active]:bg-amber-400 [&.active]:text-black";
 
 /**
  * Sticky across every route (mounted once by the `_layout` route rather than
@@ -23,13 +27,21 @@ export default function Navbar({ meta }: { meta: PatchMeta | null }) {
 			ref={ref}
 			className="sticky top-0 z-20 border-white/10 border-b bg-[#0e0e13]/95 backdrop-blur [view-transition-name:navbar]"
 		>
-			<div className="mx-auto max-w-7xl px-4 pt-4 sm:px-8">
+			<div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 pt-4 sm:px-8">
 				<Link
 					to="/"
 					className="font-extrabold text-2xl tracking-tight hover:text-gray-200"
 				>
 					Deadlock Patch Comparator
 				</Link>
+				<a
+					href={BUY_ME_A_COFFEE_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="cut-corner shrink-0 bg-amber-400 px-3 py-1.5 font-bold text-black text-sm hover:bg-amber-300"
+				>
+					☕ Buy me a coffee
+				</a>
 			</div>
 
 			<nav className="mx-auto flex max-w-7xl gap-2 px-4 py-2.5 text-sm sm:px-8">

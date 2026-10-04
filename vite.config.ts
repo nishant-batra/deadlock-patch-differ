@@ -23,7 +23,7 @@ const HERO_PAGE_SITEMAP = { priority: 0.6, changefreq: "weekly" } as const;
 
 const config = defineConfig({
 	server: {
-		port: process.env.PORT ? Number(process.env.PORT) : 5173,
+		port: process.env.PORT ? Number(process.env.PORT) : 3000,
 	},
 	plugins: [
 		devtools(),
