@@ -31,7 +31,7 @@ export default function Navbar({ meta }: { meta: PatchMeta | null }) {
 			<div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 pt-3 sm:gap-4 sm:px-8 sm:pt-4">
 				<Link
 					to="/"
-					className="min-w-0 truncate font-extrabold text-lg tracking-tight hover:text-gray-200 sm:text-2xl"
+					className="min-w-0 truncate font-extrabold text-[clamp(1.125rem,5.5vw,1.5rem)] tracking-tight hover:text-gray-200 sm:text-3xl"
 				>
 					Deadlock Patch Comparator
 				</Link>
