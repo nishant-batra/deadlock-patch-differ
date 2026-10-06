@@ -209,5 +209,7 @@
 	"hero_chessmaster": {},
 	"hero_artist": {},
 	"hero_nurse": {},
-	"hero_baba": {}
+	"hero_baba": {
+		"lore": "There are a few things most denizens of The Cursed Apple hope to experience at some point in their lives.\n\nSee a Broadway show.\nIce Skate at Rockefeller Center during Christmas season.\nGet yelled at by the Central Park Pigeon Lady.\n\nBecause Baba is more than just an old woman that feeds spirit pigeons in the park... she's an institution.  A force of nature woven into the very lore of New York City.  Is it true that she's sat at the same bench every day for the past 50 years, rain or shine?  Maybe.  Is she REALLY the leader of The Soho Coven?  Who's to say.  One thing's for sure though... she's a New Yorker.  And she's not going to sit back and watch a bunch of tourists tear apart Manhattan in pursuit of power."
+	}
 }
