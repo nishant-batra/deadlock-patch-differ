@@ -245,9 +245,56 @@
 				"kind": "modified",
 				"old": 0,
 				"new": 0.55
+			},
+			{
+				"path": [
+					"starting_stats",
+					"base_health_regen",
+					"value"
+				],
+				"kind": "modified",
+				"old": 2,
+				"new": 1
 			}
 		],
-		"weapon": [],
+		"weapon": [
+			{
+				"path": [
+					"weapon_info",
+					"bullet_damage"
+				],
+				"kind": "modified",
+				"old": 17.76,
+				"new": 16.5
+			},
+			{
+				"path": [
+					"weapon_info",
+					"damage_falloff_end_range"
+				],
+				"kind": "modified",
+				"old": 2400,
+				"new": 2362.205
+			},
+			{
+				"path": [
+					"weapon_info",
+					"damage_falloff_start_range"
+				],
+				"kind": "modified",
+				"old": 1000,
+				"new": 787.402
+			},
+			{
+				"path": [
+					"weapon_info",
+					"damage_per_second"
+				],
+				"kind": "modified",
+				"old": 48.3265306122449,
+				"new": 44.89795918367347
+			}
+		],
 		"abilities": {
 			"Rabbit Hex": [
 				{
@@ -260,6 +307,38 @@
 					"kind": "modified",
 					"old": "Hex a target area and transforming all enemies into a <span class=\"highlight\">Rabbit</span> for a limited duration.<br><br> Rabbits are small and <Panel class=\"AbilityPropertyIcon prop_move_speed\"> <span class=\"highlight\">move faster</span>, but take increased <Panel class=\"AbilityPropertyIcon prop_damage\"><span class=\"highlight\">Damage</span> and are <Panel class=\"AbilityPropertyIcon prop_cast\"><span class=\"highlight\">unable to perform most actions</span>.<br><span class=\"diminish\">Hex does not interrupt abilities.</span>",
 					"new": "Hex a target area and transform all enemies into a <span class=\"highlight\">Rabbit</span> for a limited duration.<br><br> Rabbits are small and <Panel class=\"AbilityPropertyIcon prop_move_speed\"> <span class=\"highlight\">move faster</span>, but take increased <Panel class=\"AbilityPropertyIcon prop_damage\"><span class=\"highlight\">Damage</span> and are <Panel class=\"AbilityPropertyIcon prop_cast\"><span class=\"highlight\">unable to perform most actions</span>.<br><span class=\"diminish\">Hex does not interrupt abilities.</span>"
+				},
+				{
+					"path": [
+						"properties",
+						"Radius",
+						"value"
+					],
+					"kind": "modified",
+					"old": "6.5m",
+					"new": "6m"
+				}
+			],
+			"Audience Participation": [
+				{
+					"path": [
+						"properties",
+						"CopiedUltWindow",
+						"value"
+					],
+					"kind": "modified",
+					"old": "12",
+					"new": "9"
+				},
+				{
+					"path": [
+						"properties",
+						"CopyCooldownPercentage",
+						"value"
+					],
+					"kind": "modified",
+					"old": "40",
+					"new": "60"
 				}
 			]
 		}

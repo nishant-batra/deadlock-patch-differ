@@ -7696,8 +7696,9 @@
 				{
 					"key": "Radius|#0",
 					"label": "Radius",
-					"kind": "equal",
-					"new": "3m",
+					"kind": "changed",
+					"old": "3m",
+					"new": "2m",
 					"postfix": "m"
 				},
 				{
@@ -7707,7 +7708,11 @@
 					"new": "7",
 					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+3m</span> Radius",
+				"new": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+2m</span> Radius"
+			}
 		}
 	],
 	"Civil Servant": [
@@ -12290,8 +12295,9 @@
 				{
 					"key": "DamagePerShrapnel|#0",
 					"label": "Damage Per Shrapnel",
-					"kind": "equal",
-					"new": "65"
+					"kind": "changed",
+					"old": "65",
+					"new": "70"
 				}
 			]
 		},
@@ -12399,21 +12405,26 @@
 			"tier": 1,
 			"rows": [
 				{
-					"key": "AbilityCooldown|#0",
-					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": "-20",
-					"postfix": "s"
-				},
-				{
 					"key": "BonusMoveSpeed|#0",
 					"label": "Bonus Move Speed",
-					"kind": "equal",
-					"new": "1m",
+					"kind": "changed",
+					"old": "1m",
+					"new": "2m",
 					"prefix": "{s:sign}",
 					"postfix": " m"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "removed",
+					"old": "-20",
+					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "-20s Cooldown and +1m Move Speed",
+				"new": "+2m Move Speed"
+			}
 		},
 		{
 			"tier": 2,
@@ -12421,8 +12432,9 @@
 				{
 					"key": "FlagDuration|#0",
 					"label": "Flag Duration",
-					"kind": "equal",
-					"new": "8",
+					"kind": "changed",
+					"old": "8",
+					"new": "5",
 					"postfix": "s"
 				},
 				{
@@ -12435,11 +12447,15 @@
 				{
 					"key": "AbilityDuration|#0",
 					"label": "Ability Duration",
-					"kind": "equal",
-					"new": "8",
+					"kind": "removed",
+					"old": "8",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "+8s Charge Duration<br>+8s Flag Duration<br>+8m Radius",
+				"new": "+5s Flag Duration<br>+8m Radius"
+			}
 		},
 		{
 			"tier": 3,
@@ -12453,11 +12469,16 @@
 				{
 					"key": "AllyDamageReduction|#0",
 					"label": "Ally Damage Reduction",
-					"kind": "equal",
-					"new": "15",
+					"kind": "changed",
+					"old": "15",
+					"new": "10",
 					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "+150 Damage and +15% Damage Reduction",
+				"new": "+150 Damage and +10% Damage Reduction"
+			}
 		}
 	]
 }

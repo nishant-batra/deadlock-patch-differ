@@ -73987,7 +73987,7 @@
 		},
 		"weapon_info": {
 			"can_zoom": true,
-			"bullet_damage": 17.76,
+			"bullet_damage": 16.5,
 			"bullet_gravity_scale": 0,
 			"bullet_inherit_shooter_velocity_scale": 0,
 			"bullet_lifetime": 2,
@@ -74003,9 +74003,9 @@
 			"cycle_time": 0.525,
 			"intra_burst_cycle_time": 0.105,
 			"damage_falloff_bias": 0.5,
-			"damage_falloff_end_range": 2400,
+			"damage_falloff_end_range": 2362.205,
 			"damage_falloff_end_scale": 0.3,
-			"damage_falloff_start_range": 1000,
+			"damage_falloff_start_range": 787.402,
 			"damage_falloff_start_scale": 1,
 			"horizontal_punch": 0,
 			"range": 7000,
@@ -74055,10 +74055,10 @@
 			"shots_per_second_with_reload": 1.8768328445747804,
 			"bullets_per_second": 2.7210884353741496,
 			"bullets_per_second_with_reload": 1.8768328445747804,
-			"damage_per_second": 48.3265306122449,
-			"damage_per_second_with_reload": 33.332551319648104,
-			"damage_per_shot": 17.76,
-			"damage_per_magazine": 284.16
+			"damage_per_second": 44.89795918367347,
+			"damage_per_second_with_reload": 30.967741935483875,
+			"damage_per_shot": 16.5,
+			"damage_per_magazine": 264
 		},
 		"type": "weapon"
 	},
@@ -74600,7 +74600,7 @@
 			}
 		],
 		"ability_type": "signature",
-		"boss_damage_scale": 1,
+		"boss_damage_scale": 0.5,
 		"dependent_abilities": {
 			"ability_magician_magicbolt_trigger": null
 		}
@@ -76820,7 +76820,7 @@
 				"postvalue_label": "Weapon Damage"
 			},
 			"CopiedUltWindow": {
-				"value": "12",
+				"value": "9",
 				"css_class": "time",
 				"scale_function": {
 					"class_name": "scale_function_tech_duration",
@@ -76834,7 +76834,7 @@
 				"value": "0.5"
 			},
 			"CopyCooldownPercentage": {
-				"value": "40",
+				"value": "60",
 				"css_class": "cooldown",
 				"label": "Copied Cooldown",
 				"postfix": "%",
@@ -77064,7 +77064,7 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_crit.svg"
 			},
 			"Radius": {
-				"value": "6.5m",
+				"value": "6m",
 				"css_class": "distance",
 				"scale_function": {
 					"class_name": "scale_function_single_stat",
@@ -77136,7 +77136,7 @@
 		],
 		"description": {
 			"desc": "Hex a target area and transform all enemies into a <span class=\"highlight\">Rabbit</span> for a limited duration.<br><br> Rabbits are small and <Panel class=\"AbilityPropertyIcon prop_move_speed\"> <span class=\"highlight\">move faster</span>, but take increased <Panel class=\"AbilityPropertyIcon prop_damage\"><span class=\"highlight\">Damage</span> and are <Panel class=\"AbilityPropertyIcon prop_cast\"><span class=\"highlight\">unable to perform most actions</span>.<br><span class=\"diminish\">Hex does not interrupt abilities.</span>",
-			"t3_desc": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+3m</span> Radius"
+			"t3_desc": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+2m</span> Radius"
 		},
 		"tooltip_details": {
 			"info_sections": [
@@ -77187,7 +77187,7 @@
 				"property_upgrades": [
 					{
 						"name": "Radius",
-						"bonus": "3m"
+						"bonus": "2m"
 					},
 					{
 						"name": "DamageAmpPercentage",
@@ -196491,7 +196491,7 @@
 		"update_time": 0,
 		"properties": {
 			"AbilityCooldown": {
-				"value": "28",
+				"value": "24",
 				"can_set_token_override": true,
 				"css_class": "cooldown",
 				"disable_value": "0",
@@ -196949,7 +196949,7 @@
 				"postvalue_label": "Weapon Damage"
 			},
 			"DamagePerShrapnel": {
-				"value": "65",
+				"value": "70",
 				"css_class": "bullet_damage",
 				"scale_function": {
 					"class_name": "scale_function_ability_weapon_damage",
@@ -197143,7 +197143,7 @@
 				"property_upgrades": [
 					{
 						"name": "DamagePerShrapnel",
-						"bonus": "65"
+						"bonus": "70"
 					}
 				]
 			},
@@ -197795,7 +197795,7 @@
 		"update_time": 0,
 		"properties": {
 			"AbilityCooldown": {
-				"value": "130",
+				"value": "160",
 				"can_set_token_override": true,
 				"css_class": "cooldown",
 				"disable_value": "0",
@@ -197810,7 +197810,7 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/cooldown.svg"
 			},
 			"AbilityDuration": {
-				"value": "12",
+				"value": "10",
 				"can_set_token_override": true,
 				"css_class": "duration",
 				"disable_value": "0",
@@ -197951,7 +197951,7 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_bullet_color.svg"
 			},
 			"Radius": {
-				"value": "24m",
+				"value": "20m",
 				"scale_function": {
 					"class_name": "scale_function_tech_range",
 					"subclass_name": "aura_radius_sf"
@@ -197981,12 +197981,7 @@
 				"provided_property_type": "MODIFIER_VALUE_MOVEMENT_SPEED_MAX",
 				"css_class": "move_speed",
 				"display_units": "EDisplayUnit_MetersPerSecond",
-				"scale_function": {
-					"class_name": "scale_function_single_stat",
-					"subclass_name": "move_speed_sf",
-					"specific_stat_scale_type": "ETechPower",
-					"stat_scale": 0.05
-				},
+				"scale_function": {},
 				"prefix": "{s:sign}",
 				"label": "Move Speed",
 				"postfix": " m",
@@ -197994,7 +197989,7 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
 			},
 			"AllyDamageReduction": {
-				"value": "20",
+				"value": "15",
 				"provided_property_type": "MODIFIER_VALUE_ALL_DAMAGE_TAKEN_REDUCTION",
 				"label": "Damage Reduction",
 				"postfix": "%",
@@ -198027,9 +198022,9 @@
 		],
 		"description": {
 			"desc": "Charge up and summon the banner of Ratannia, granting all nearby allies increased <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M81.5143 72.4711L117.08 34.3552L68.8057 2L57.0343 31.8506L11 87.2257L34.7257 103.141L43.3657 96.9254L58.4286 118.989L83.2514 124.977L108.646 125L114.269 116.666L95.96 103.665L81.5143 72.4711Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label MoveSpeed\" style=\"color: #0F9;\">move speed</span>, <span class=\"highlight\">immunity from slows</span>, and <span class=\"highlight\">reduced incoming damage</span> while near the banner.",
-			"t1_desc": "-20s Cooldown and +1m Move Speed",
-			"t2_desc": "+8s Charge Duration<br>+8s Flag Duration<br>+8m Radius",
-			"t3_desc": "+150 Damage and +15% Damage Reduction"
+			"t1_desc": "+2m Move Speed",
+			"t2_desc": "+5s Flag Duration<br>+8m Radius",
+			"t3_desc": "+150 Damage and +10% Damage Reduction"
 		},
 		"tooltip_details": {
 			"info_sections": [
@@ -198078,12 +198073,8 @@
 			{
 				"property_upgrades": [
 					{
-						"name": "AbilityCooldown",
-						"bonus": "-20"
-					},
-					{
 						"name": "BonusMoveSpeed",
-						"bonus": "1m"
+						"bonus": "2m"
 					}
 				]
 			},
@@ -198091,15 +198082,11 @@
 				"property_upgrades": [
 					{
 						"name": "FlagDuration",
-						"bonus": "8"
+						"bonus": "5"
 					},
 					{
 						"name": "Radius",
 						"bonus": "8m"
-					},
-					{
-						"name": "AbilityDuration",
-						"bonus": "8"
 					}
 				]
 			},
@@ -198111,7 +198098,7 @@
 					},
 					{
 						"name": "AllyDamageReduction",
-						"bonus": "15"
+						"bonus": "10"
 					}
 				]
 			}

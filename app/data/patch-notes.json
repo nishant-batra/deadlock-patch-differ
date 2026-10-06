@@ -1,23 +1,30 @@
 {
 	"general": {
-		"title": "Listen up, Crumbums! Your King is here.",
-		"pubDate": "2026-10-02T20:59:51Z",
-		"link": "https://store.steampowered.com/news/app/1422450/view/703281025618281704",
+		"title": "Minor Update - 10-05-2026",
+		"pubDate": "2026-10-05T23:05:32Z",
+		"link": "https://store.steampowered.com/news/app/1422450/view/703281025618282632",
 		"source": "steam",
-		"html": "<img src=\"https://clan.fastly.steamstatic.com/images/45164767/40a0a47432b4e8c857d40152295f1551702c1012.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" /><br /><br />Out of the sewers and into the streets, the rightful King of the Rats is here at last. Rodent-hating citizens of Manhattan won't be prepared to see his <i>Scrap Grenade</i> bouncing down Broadway, nor for his <i>Swarm of Rats</i> biting at their heels. By donning his <i>Royal Pestments</i>, the Rat King shakes off incoming damage, allowing him to bravely lead the charge into battle. His loyal subjects will feel awed and inspired when they see the great <i>Banner of Rattania</i> waving in the middle of combat, and those who oppose him will rue the day they ever thought they could overthrow the king. - <i>\"Oh the rats are taking over, baby!\"</i><br /><br />The Rat King is available to play now! Have a great weekend and keep those votes coming, as our next hero will be joining us on Tuesday at 2pm PDT. We'll see you then!"
+		"html": "<p>- Fixed bugs that were causing troopers to walk too slowly in lane</p><p></p><p></p>"
 	},
 	"balance": {
-		"title": "Listen up, Crumbums! Your King is here.",
-		"pubDate": "2026-10-02T20:59:51Z",
-		"link": "https://store.steampowered.com/news/app/1422450/view/703281025618281704"
+		"title": "Minor Update - 10-05-2026",
+		"pubDate": "2026-10-05T23:05:32Z",
+		"link": "https://store.steampowered.com/news/app/1422450/view/703281025618282632"
 	},
 	"recent": [
+		{
+			"title": "Minor Update - 10-05-2026",
+			"pubDate": "2026-10-05T23:05:32Z",
+			"link": "https://store.steampowered.com/news/app/1422450/view/703281025618282632",
+			"source": "steam",
+			"html": "<p>- Fixed bugs that were causing troopers to walk too slowly in lane</p><p></p><p>- Rat King: Scrap Grenade - Fixed some bugs with bouncing targeting</p><p>- Rat King: Scrap Grenade - Damage increased from 65 to 70</p><p>- Rat King: Scrap Grenade - T2 Damage increased from 65 to 70</p><p>- Rat King: Rat Swarm - Base Cooldown reduced from 28s to 24s</p><p>- Rat King: Rule, Ratannia! - Cooldown increased from 130 to 160</p><p>- Rat King: Rule, Ratannia! - Damage Reduction reduced from 20% to 15%</p><p>- Rat King: Rule, Ratannia! - Radius reduced from 24m to 20m</p><p>- Rat King: Rule, Ratannia! - Charge Duration reduced from 12s to 10s</p><p>- Rat King: Rule, Ratannia! - Bonus Move speed no longer scales with Spirit</p><p>- Rat King: Rule, Ratannia! - Now falls faster while charging</p><p>- Rat King: Rule, Ratannia! - T1 +1m/s Move Speed to +2m/s Move Speed</p><p>- Rat King: Rule, Ratannia! - T1 No longer gives -20s cooldown (Total cooldown from 110s to 160s)</p><p>- Rat King: Rule, Ratannia! - T2 No longer grants +8s Charge Duration (Total charge duration from 20s to 10s)</p><p>- Rat King: Rule, Ratannia! - T2 Flag Duration reduced from +8s to +5s</p><p>- Rat King: Rule, Ratannia! - T3 Damage Reduction reduced from 15% to 10% (Total Damage Reduction from 35% to 25%)</p><p></p><p>- Sinclair: Base HP Regen reduced from 2 to 1</p><p>- Sinclair: Gun - Falloff range reduced from 25-61 to 20-60</p><p>- Sinclair: Gun - Reduced bullet base damage from 17.76 to 16.5</p><p>- Sinclair: Vexing Bolt - Now does half damage to objectives</p><p>- Sinclair: Spectral Assistant - Gun falloff range reduced from 25-61 to 20-60</p><p>- Sinclair: Rabbit Hex - Radius reduced from 6.5m to 6m</p><p>- Sinclair: Rabbit Hex - T3 reduced from +3m Radius to +2m</p><p>- Sinclair: Audience Participation - Copy duration reduced from 12s to 9s</p><p>- Sinclair: Audience Participation - Copied cooldown increased from 40% to 60%</p>"
+		},
 		{
 			"title": "Listen up, Crumbums! Your King is here.",
 			"pubDate": "2026-10-02T20:59:51Z",
 			"link": "https://store.steampowered.com/news/app/1422450/view/703281025618281704",
 			"source": "steam",
-			"html": "<img src=\"https://clan.fastly.steamstatic.com/images/45164767/40a0a47432b4e8c857d40152295f1551702c1012.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" /><br /><br />Out of the sewers and into the streets, the rightful King of the Rats is here at last. Rodent-hating citizens of Manhattan won't be prepared to see his <i>Scrap Grenade</i> bouncing down Broadway, nor for his <i>Swarm of Rats</i> biting at their heels. By donning his <i>Royal Pestments</i>, the Rat King shakes off incoming damage, allowing him to bravely lead the charge into battle. His loyal subjects will feel awed and inspired when they see the great <i>Banner of Rattania</i> waving in the middle of combat, and those who oppose him will rue the day they ever thought they could overthrow the king. - <i>\"Oh the rats are taking over, baby!\"</i><br /><br />The Rat King is available to play now! Have a great weekend and keep those votes coming, as our next hero will be joining us on Tuesday at 2pm PDT. We'll see you then!"
+			"html": "<p><img src=\"https://clan.fastly.steamstatic.com/images/45164767/40a0a47432b4e8c857d40152295f1551702c1012.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" /><br />Out of the sewers and into the streets, the rightful King of the Rats is here at last. Rodent-hating citizens of Manhattan won't be prepared to see his <i>Scrap Grenade</i> bouncing down Broadway, nor for his <i>Swarm of Rats</i> biting at their heels. By donning his <i>Royal Pestments</i>, the Rat King shakes off incoming damage, allowing him to bravely lead the charge into battle. His loyal subjects will feel awed and inspired when they see the great <i>Banner of Ratannia</i> waving in the middle of combat, and those who oppose him will rue the day they ever thought they could overthrow the king. - <i>\"Oh the rats are taking over, baby!\"</i><br /><br />The Rat King is available to play now! Have a great weekend and keep those votes coming, as our next hero will be joining us on Tuesday at 2pm PDT. We'll see you then!</p>"
 		},
 		{
 			"title": "City Never Sleeps",
@@ -39,13 +46,6 @@
 			"link": "https://store.steampowered.com/news/app/1422450/view/676255623445218601",
 			"source": "steam",
 			"html": "<p>- Radiant Regeneration: Heal on cast reduced from 70 to 65</p><p>- Restorative Locket: Spirit Resistance reduced from 10% to 8%</p><p>- Celeste: Dazzling Trick cooldown increased from 32s to 34s</p><p>- Celeste: Dazzling Trick T2 barrier rescaled from \"+80 and +0.7 scaling\" to \"+70 and +0.76\"</p><p>- Celeste: Dazzling Trick T3 cooldown increased from -18s to -20s</p><p>- Celeste: Dazzling Trick T3 reduced from +1.5s Silence to +1.25s</p><p>- Celeste: Radiant Daggers Spirit Amp per stack reduced from +8% to +7%</p><p>- Celeste: Radiant Daggers T3 Spirit Amp per stack increased from +3% to +4%</p><p>- Celeste: Shining Wonder bounce range reduced from 17.5m to 16.5m</p><p>- Celeste: Shining Wonder damage reduced from 165 to 140</p><p>- Celeste: Shining Wonder spirit scaling reduced from 0.9 to 0.6</p><p>- Celeste: Shining Wonder T2 now also increases spirit scaling by +0.45</p>"
-		},
-		{
-			"title": "Minor Update - 08-12-2026",
-			"pubDate": "2026-08-12T22:57:44Z",
-			"link": "https://store.steampowered.com/news/app/1422450/view/708906085669405228",
-			"source": "steam",
-			"html": "<p>- Apollo: Riposte melee resist reduction increased from -22% to -25%<br />- Apollo: Riposte T2 changed from \"-30% Melee Resist\" to \"-25% Melee Resist and +0.4s Stun Duration\"<br />- Apollo: Riposte T3 increased from 60% Lifesteal for 7s to 75% Lifesteal for 13s<br />- Apollo: Fixed Itani Lo Sahn being canceled with movement abilities<br />- Billy: Base health regen reduced from 2.5 to 2.0<br />- Billy: Rising Ram T3 changed from \"On Impact: Deal 7% max health as spirit damage\" to \"On hero hit: +10% Max HP for 16s\"<br />- Billy: Chain Gang spirit scaling reduced from 1 to 0.7<br />- Doorman: Doorway range reduced from 70m to 65m<br />- Doorman: Walker will no longer consider Luggage Cart dragged enemies as valid targets to trigger the stomp on until soon after they are dropped off<br />- Doorman: Similar to the Walker change above, the turrets in the healing area in base now also wait on considering valid targets<br />- Drifter: Rend spirit scaling reduced from 1.7 to 1.4<br />- Drifter: Stalker's Mark cooldown increased from 24s to 26s<br />- Drifter: Stalker's Mark T2 reduced from -12s Cooldown to -10s<br />- Holliday: Powder Keg now does half its damage immediately and half over 3s as a damage over time burn (same overall damage, multiple instances stack)<br />- Ivy: Stone Form T3 stun duration reduced from +1s to +0.75s<br />- Lash: Falloff range reduced from 20m->58m to 18m->54m<br />- McGinnis: Bullet damage base and growth values reduced by 5%<br />- McGinnis: Spirit Resist per boon reduced from +0.625% to +0.35%<br />- McGinnis: Mini Turrets no longer shoots heroes on ziplines<br />- McGinnis: Mini Turrets no longer have 80% decaying resist for the first 6s<br />- McGinnis: Mini Turrets health increased from 90 + 7.8/boon to 100 + 9/boon<br />- McGinnis: Medicinal Specter T1 changed from \"Provides +40% Spirit Resist\" to \"+1.5s Duration\"<br />- McGinnis: Medicinal Specter T3 no longer increases duration by +1.5s<br />- McGinnis: Medicinal Specter T3 now also increases spirit resistance by +40%<br />- Paige: Plot Armor weapon damage scaling increased from 0.2 to 0.3<br />- Seven: Lightning Ball T3 radius increased from +1.5m to +1.75m<br />- Vindicta: Stake T1 reduced from +65 Damage to +45<br />- Vyper: Petrifying Bola radius increased from 8m to 12m<br />- Vyper: Petrifying Bola petrify duration increased from 2s to 2.2s<br />- Wraith: Card Trick Heart heal spirit scaling reduced from 1 to 0.75<br />- Wraith: Full Auto T3 spirit scaling reduced from +0.06 to +0.045</p>"
 		}
 	]
 }

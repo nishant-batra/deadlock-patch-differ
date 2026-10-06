@@ -1,14 +1,15 @@
 {
-	"clientVersion": 6739,
-	"versionDatetime": "2026-10-02T14:31:08",
-	"ingestedAt": "2026-10-03T00:27:20.378Z",
+	"clientVersion": 6753,
+	"versionDatetime": "2026-10-05T15:40:16",
+	"ingestedAt": "2026-10-06T00:46:34.607Z",
 	"window": {
 		"startBuild": 6722,
 		"startedAt": "2026-09-29T15:55:11",
 		"builds": [
 			6722,
 			6730,
-			6739
+			6739,
+			6753
 		]
 	},
 	"counts": {
