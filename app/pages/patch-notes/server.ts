@@ -7,23 +7,40 @@ import itemChangesJson from "#/data/item-changes.json";
 import patchNotesJson from "#/data/patch-notes.json";
 import type { TierDiff } from "#/lib/abilityUpgrades";
 import { isLiveHero } from "#/lib/roster";
-import {
-	itemChangesByName,
-	joinAbilities,
-	readHeroChanges,
-	readItemsView,
-} from "#/server/core";
+import { joinAbilities, readHeroChanges, readItemsView } from "#/server/core";
 import { getUpcomingHeroes } from "#/server/heroes";
-import type { ChangedHero, Hero, Item, ItemChanges, PatchNotes } from "#/types";
+import type {
+	ChangedHero,
+	DisplayChange,
+	Hero,
+	Item,
+	ItemChanges,
+	PatchNotes,
+} from "#/types";
 
 export function getPatchNotes(): PatchNotes {
 	return patchNotesJson as unknown as PatchNotes;
 }
 
 type RawItemChanges = {
-	added: Array<{ name: string }>;
-	removed: Array<{ name: string; snapshot: Item }>;
+	added: Tagged[];
+	removed: Array<Tagged & { snapshot: Item }>;
+	changed: Array<Tagged & { changes: DisplayChange[] }>;
 };
+
+/** `hotfix` is set on what the window's newest hotfix touched. */
+type Tagged = { name: string; hotfix?: number };
+
+/**
+ * The page's two sections: the newest hotfix, above, and the rest of the
+ * patch. Each hero or item belongs to exactly one - ingest tags the hotfix's.
+ */
+export type Section = "patch" | "hotfix";
+
+const inSection =
+	(section: Section) =>
+	({ hotfix }: { hotfix?: number }) =>
+		(hotfix !== undefined) === (section === "hotfix");
 
 /**
  * Shop items only - ability changes surface through `getChangedHeroes()`.
@@ -36,18 +53,20 @@ type RawItemChanges = {
  * Removed items come from the snapshot ingest carried forward - they are absent
  * from items-view.json, which is built from the new payload.
  */
-export function getItemChanges(): ItemChanges {
+export function getItemChanges(section: Section = "patch"): ItemChanges {
 	const { items } = readItemsView();
 	const byName = new Map(items.map((item) => [item.name, item]));
-	const { added, removed } = itemChangesJson as unknown as RawItemChanges;
+	const { added, removed, changed } =
+		itemChangesJson as unknown as RawItemChanges;
+	const ofSection = inSection(section);
 
 	return {
-		added: added.flatMap(({ name }) => {
+		added: added.filter(ofSection).flatMap(({ name }) => {
 			const item = byName.get(name);
 			return item ? [item] : [];
 		}),
-		removed: removed.map(({ snapshot }) => snapshot),
-		changed: [...itemChangesByName()].flatMap(([name, changes]) => {
+		removed: removed.filter(ofSection).map(({ snapshot }) => snapshot),
+		changed: changed.filter(ofSection).flatMap(({ name, changes }) => {
 			const item = byName.get(name);
 			return item ? [{ item, changes }] : [];
 		}),
@@ -61,20 +80,21 @@ export function getItemChanges(): ItemChanges {
  * Whether a hero counts as "changed" was decided at ingest: it is changed iff
  * it has a hero-changes.json entry (see lib/heroChanges.ts).
  */
-export function getChangedHeroes(): ChangedHero[] {
+export function getChangedHeroes(section: Section = "patch"): ChangedHero[] {
 	const heroes = heroesViewJson as unknown as Hero[];
 	const { abilities } = readItemsView();
 	const abilityByClass = new Map(abilities.map((a) => [a.class_name, a]));
 	const heroChanges = readHeroChanges();
 
 	const tiersByName = abilityTiersJson as unknown as Record<string, TierDiff[]>;
+	const ofSection = inSection(section);
 
 	return heroes
 		.flatMap((hero) => {
 			const changes = heroChanges[hero.name];
 			// Unreleased and experimental heroes ship in the catalog but are not in
 			// play - Raven was rendering as a changed hero.
-			if (!changes || !isLiveHero(hero)) return [];
+			if (!changes || !isLiveHero(hero) || !ofSection(changes)) return [];
 			const { abilities: abilityDiffs, stats, weapon, isNew } = changes;
 
 			const abilityChanges = joinAbilities(
@@ -101,8 +121,11 @@ export function getChangedHeroes(): ChangedHero[] {
 }
 
 export type ChangesPayload = {
+	/** The patch, minus what its newest hotfix touched. */
 	items: ItemChanges;
 	heroes: ChangedHero[];
+	/** What the newest hotfix touched - patch and hotfix changes together. */
+	hotfix: { items: ItemChanges; heroes: ChangedHero[] };
 	/** Announced, not yet playable - the "New heroes" block. */
 	upcomingHeroes: Hero[];
 	notes: PatchNotes;
@@ -117,6 +140,10 @@ export const fetchChanges = createServerFn({ method: "GET" }).handler(
 		return {
 			items: getItemChanges(),
 			heroes: getChangedHeroes(),
+			hotfix: {
+				items: getItemChanges("hotfix"),
+				heroes: getChangedHeroes("hotfix"),
+			},
 			upcomingHeroes: getUpcomingHeroes(),
 			notes: getPatchNotes(),
 		};

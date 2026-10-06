@@ -23,7 +23,7 @@ import { sanitizeNotesHtml } from "../app/lib/sanitizeHtml";
 import {
 	generalHtml,
 	hasGeneralContent,
-	titleDate,
+	noteForBuild,
 } from "../app/lib/noteSections";
 import { diffItems } from "../app/lib/tooltipProjection";
 import {
@@ -34,12 +34,21 @@ import {
 	mergeAbilityTiers,
 	mergeHeroChanges,
 	mergeItemChanges,
+	nextHotfix,
+	readHotfix,
 	type StoredItemChanges,
+	tagHotfix,
 } from "../app/lib/mergeChanges";
 import { patchNotification } from "../app/lib/patchNotification";
 import { placeBuild } from "../app/lib/patchWindow";
 import { ABILITY_SLOTS, isUpcomingHero, WEAPON_SLOT } from "../app/lib/roster";
-import type { Hero, HeroChanges, Item, PatchMeta } from "../app/types";
+import type {
+	Hero,
+	HeroChanges,
+	Item,
+	PatchMeta,
+	PatchNotes,
+} from "../app/types";
 
 const API = "https://api.deadlock-api.com";
 const DATA_DIR = path.join(process.cwd(), "app", "data");
@@ -289,8 +298,8 @@ const toNote = (patch: RawPatch | undefined) => {
  * plus a link-unfurl card, 447 chars of noise. Preferring Steam replaces the old
  * ">40 chars of prose" heuristic, which was arbitrary and let that stub through.
  *
- * `balance` is the note describing the item/hero diff, joined by the date its
- * title embeds - the feed carries no build number. `general` is the most recent
+ * `balance` is the note describing the build at `versionDatetime` - see
+ * `noteForBuild`, the feed carries no build number. `general` is the most recent
  * note with content that is not item/hero changes, which can be a *newer,
  * different* update: a rework like "Matchmaking Update" touches no items at all,
  * while a pure balance patch has no general content. Both are surfaced so the
@@ -310,9 +319,10 @@ function pickNotes(
 			({ pub_date: a }, { pub_date: b }) => Date.parse(b) - Date.parse(a),
 		);
 
-	const buildDate = versionDatetime.slice(0, 10);
-	const balance =
-		steam.find(({ title }) => titleDate(title) === buildDate) ?? steam[0];
+	const balance = noteForBuild(
+		steam.map((patch) => ({ ...patch, pubDate: patch.pub_date })),
+		versionDatetime,
+	);
 
 	const general = steam.find(({ content }) =>
 		hasGeneralContent(content, knownNames),
@@ -426,6 +436,16 @@ async function ingest() {
 			`builds ${patchWindow.builds.join(", ")})`,
 	);
 
+	const prevItemChanges = readJsonOr<StoredItemChanges>("item-changes.json", {
+		added: [],
+		removed: [],
+		changed: [],
+	});
+	const prevHeroChanges = readJsonOr<Record<string, HeroChanges>>(
+		"hero-changes.json",
+		{},
+	);
+
 	let itemChanges = buildItems;
 	let abilityTiers = buildTiers;
 	let heroChanges = buildHeroes;
@@ -448,11 +468,7 @@ async function ingest() {
 			]),
 		);
 		itemChanges = mergeItemChanges(
-			readJsonOr<StoredItemChanges>("item-changes.json", {
-				added: [],
-				removed: [],
-				changed: [],
-			}),
+			prevItemChanges,
 			buildItems,
 			itemByName,
 		);
@@ -461,12 +477,38 @@ async function ingest() {
 			buildTiers,
 		);
 		heroChanges = mergeHeroChanges(
-			readJsonOr<Record<string, HeroChanges>>("hero-changes.json", {}),
+			prevHeroChanges,
 			buildHeroes,
 			abilityTiers,
 			abilityNamesOf,
 		);
 	}
+
+	// The newest hotfix's heroes and items get their own section on the page.
+	({ heroes: heroChanges, items: itemChanges } = tagHotfix(
+		heroChanges,
+		itemChanges,
+		nextHotfix(
+			action,
+			patchWindow.startBuild,
+			readHotfix(prevHeroChanges, prevItemChanges),
+			client_version,
+			{
+				heroes: Object.keys(buildHeroes),
+				items: [
+					...buildItems.added,
+					...buildItems.removed,
+					...buildItems.changed,
+				].map(({ name }) => name),
+			},
+		),
+	));
+	const hotfix = readHotfix(heroChanges, itemChanges);
+	console.log(
+		hotfix
+			? `  hotfix ${hotfix.build}: ${[...hotfix.heroes, ...hotfix.items].join(", ")}`
+			: "  no hotfix",
+	);
 
 	const { added, removed, changed } = itemChanges;
 	console.log(
@@ -504,11 +546,16 @@ async function ingest() {
 			...items.filter(isShopItem).map((item) => item.name),
 		].filter(Boolean) as string[],
 	);
-	write(
-		"patch-notes.json",
+	write("patch-notes.json", {
 		// The balance note is the patch's, not its latest hotfix's.
-		pickNotes(patches, patchWindow.startedAt, knownNames),
-	);
+		...pickNotes(patches, patchWindow.startedAt, knownNames),
+		// A kept hotfix keeps its note: only the build being ingested has its
+		// release time at hand.
+		hotfix:
+			hotfix?.build === client_version
+				? pickNotes(patches, version_datetime, knownNames).balance
+				: hotfix && readJsonOr<PatchNotes | null>("patch-notes.json", null)?.hotfix,
+	});
 	write("patch-meta.json", {
 		clientVersion: client_version,
 		versionDatetime: version_datetime,

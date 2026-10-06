@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
 	generalHtml,
 	hasGeneralContent,
+	noteForBuild,
 	splitSections,
 	titleDate,
 } from "./noteSections";
@@ -87,5 +88,36 @@ describe("titleDate", () => {
 
 	it("returns null for titles without a date", () => {
 		expect(titleDate("City Never Sleeps")).toBeNull();
+	});
+});
+
+describe("noteForBuild", () => {
+	// Newest first, as the feed is sorted.
+	const notes = [
+		{ title: "Minor Update - 10-05-2026", pubDate: "2026-10-05T23:05:32Z" },
+		{ title: "Listen up, Crumbums!", pubDate: "2026-10-02T20:59:51Z" },
+		{ title: "City Never Sleeps", pubDate: "2026-09-29T20:25:11Z" },
+		{ title: "Minor Update - 09-16-2026", pubDate: "2026-09-16T20:16:43Z" },
+	];
+
+	it("matches a dated title by the build's date", () => {
+		expect(noteForBuild(notes, "2026-10-05T15:40:16")?.title).toBe(
+			"Minor Update - 10-05-2026",
+		);
+	});
+
+	it("gives a build without a dated note the first note published after it", () => {
+		expect(noteForBuild(notes, "2026-09-29T15:55:11")?.title).toBe(
+			"City Never Sleeps",
+		);
+		expect(noteForBuild(notes, "2026-10-02T14:31:08")?.title).toBe(
+			"Listen up, Crumbums!",
+		);
+	});
+
+	it("falls back to the newest note when none came after the build", () => {
+		expect(noteForBuild(notes, "2026-10-09T10:00:00")?.title).toBe(
+			"Minor Update - 10-05-2026",
+		);
 	});
 });

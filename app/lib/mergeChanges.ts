@@ -28,11 +28,14 @@ import { diffItems } from "./tooltipProjection";
 type Value = ChangeValue | undefined;
 type Step = { id: string; before: Value; after: Value };
 
+/** `hotfix`: the build of the window's newest hotfix, if it touched this. */
+type Tagged = { name: string; hotfix?: number };
+
 /** item-changes.json as ingest writes it. */
 export type StoredItemChanges = {
-	added: Array<{ name: string }>;
-	removed: Array<{ name: string; snapshot: Item }>;
-	changed: Array<{ name: string; changes: DisplayChange[] }>;
+	added: Tagged[];
+	removed: Array<Tagged & { snapshot: Item }>;
+	changed: Array<Tagged & { changes: DisplayChange[] }>;
 };
 
 const normalise = (value: Value) =>
@@ -347,12 +350,15 @@ export function mergeHeroChanges(
 	for (const name of names) {
 		const earlier = first[name] ?? EMPTY_HERO;
 		const hotfix = second[name] ?? EMPTY_HERO;
-		// Released in this window: there is no pre-patch baseline, so hotfix
-		// tweaks are not changes a player could compare against.
-		if (earlier.isNew || hotfix.isNew) {
+		// Released by this build: there is nothing earlier to compare against.
+		if (hotfix.isNew) {
 			out[name] = { ...EMPTY_HERO, isNew: true };
 			continue;
 		}
+		// Released earlier in the window: its release is the baseline, so later
+		// hotfixes still show - "Scrap Grenade 65 -> 70" a few days after launch
+		// is exactly what the hotfix did. It stays new, changed or not.
+		const { isNew } = earlier;
 
 		const abilities: Record<string, Change[]> = {};
 		const abilityNames = new Set([
@@ -373,13 +379,107 @@ export function mergeHeroChanges(
 			hasTierChanges(tiersByName[ability] ?? []),
 		);
 		if (
+			isNew ||
 			stats.length > 0 ||
 			weapon.length > 0 ||
 			tiersChanged ||
 			Object.keys(abilities).length > 0
 		) {
-			out[name] = { stats, weapon, abilities };
+			out[name] = { stats, weapon, abilities, ...(isNew && { isNew }) };
 		}
 	}
 	return out;
+}
+
+// --- Hotfix tags --------------------------------------------------------------
+
+export type HotfixNames = { build: number; heroes: string[]; items: string[] };
+
+const itemEntries = ({ added, removed, changed }: StoredItemChanges) => [
+	...added,
+	...removed,
+	...changed,
+];
+
+/** What the stored files tag as the newest hotfix, if anything. */
+export function readHotfix(
+	heroes: Record<string, HeroChanges>,
+	items: StoredItemChanges,
+): HotfixNames | undefined {
+	const tagged = [
+		...Object.entries(heroes).map(([name, { hotfix }]) => ({ name, hotfix })),
+		...itemEntries(items),
+	].find(({ hotfix }) => hotfix !== undefined);
+	if (!tagged?.hotfix) return undefined;
+	const { hotfix: build } = tagged;
+	return {
+		build,
+		heroes: Object.keys(heroes).filter((name) => heroes[name].hotfix === build),
+		items: itemEntries(items)
+			.filter(({ hotfix }) => hotfix === build)
+			.map(({ name }) => name),
+	};
+}
+
+const tag = <T extends { hotfix?: number }>(
+	{ hotfix: _, ...entry }: T,
+	build: number | undefined,
+) => (build === undefined ? entry : { ...entry, hotfix: build }) as T;
+
+/**
+ * Tags what the newest hotfix touched with its build, and clears every other
+ * tag - only one hotfix is shown on its own. The cards keep the whole window's
+ * change; the tag only moves them into the hotfix section. A name no longer on
+ * the page (the hotfix reverted it) is simply not there to tag.
+ */
+export function tagHotfix(
+	heroes: Record<string, HeroChanges>,
+	items: StoredItemChanges,
+	hotfix: HotfixNames | undefined,
+) {
+	const heroNames = new Set(hotfix?.heroes);
+	const itemNames = new Set(hotfix?.items);
+	const buildFor = (names: Set<string>, name: string) =>
+		names.has(name) ? hotfix?.build : undefined;
+	const tagItem = <T extends Tagged>(entry: T) =>
+		tag(entry, buildFor(itemNames, entry.name));
+
+	return {
+		heroes: Object.fromEntries(
+			Object.entries(heroes).map(([name, changes]) => [
+				name,
+				tag(changes, buildFor(heroNames, name)),
+			]),
+		),
+		items: {
+			added: items.added.map(tagItem),
+			removed: items.removed.map(tagItem),
+			changed: items.changed.map(tagItem),
+		},
+	};
+}
+
+/**
+ * The newest hotfix after ingesting `build`.
+ *
+ * - open: a new patch has no hotfix yet.
+ * - keep, or the patch itself re-published: the current hotfix stays.
+ * - merge: this build is the hotfix. The API re-publishing it adds to what it
+ *   touched rather than replacing it.
+ */
+export function nextHotfix(
+	action: "open" | "keep" | "merge",
+	startBuild: number,
+	previous: HotfixNames | undefined,
+	build: number,
+	touched: { heroes: string[]; items: string[] },
+): HotfixNames | undefined {
+	if (action === "open") return undefined;
+	if (action === "keep" || build === startBuild) return previous;
+	const earlier = previous?.build === build ? previous : undefined;
+	return {
+		build,
+		heroes: [...new Set([...(earlier?.heroes ?? []), ...touched.heroes])],
+		items: [...new Set([...(earlier?.items ?? []), ...touched.items])],
+	};
 }

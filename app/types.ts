@@ -335,8 +335,10 @@ export interface PatchNotes {
 	 * `balance` - a rework like "Matchmaking Update" changes no items at all.
 	 */
 	general?: PatchNote;
-	/** The update the item/hero diff came from, matched by date in its title. */
+	/** The patch the item/hero diff came from - the window's first build. */
 	balance?: NoteRef;
+	/** The newest hotfix's note, while the page has hotfix-tagged changes. */
+	hotfix?: NoteRef;
 	recent: PatchNote[];
 }
 
@@ -378,8 +380,13 @@ export interface HeroChanges {
 	weapon: Change[];
 	/** Ability name -> its property/scaling/description moves. */
 	abilities: Record<string, Change[]>;
-	/** Released this patch - no playable baseline to diff, so no changes. */
+	/**
+	 * Released this window. Its release is the baseline, so only hotfixes after
+	 * it show as changes.
+	 */
 	isNew?: true;
+	/** Build of the window's newest hotfix, when that hotfix changed this hero. */
+	hotfix?: number;
 }
 
 export interface ChangedHero extends HeroEntry {

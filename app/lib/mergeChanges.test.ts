@@ -8,7 +8,10 @@ import {
 	mergeDisplayChanges,
 	mergeHeroChanges,
 	mergeItemChanges,
+	nextHotfix,
+	readHotfix,
 	type StoredItemChanges,
+	tagHotfix,
 } from "./mergeChanges";
 
 const PATH = ["properties", "Damage", "value"];
@@ -420,5 +423,89 @@ describe("mergeHeroChanges", () => {
 				new Map([["Haze", ["Sleep"]]]),
 			),
 		).toEqual({ Haze: hero() });
+	});
+
+	it("keeps a hero released earlier in the window new, with its later changes", () => {
+		const isNew = true as const;
+		expect(
+			mergeHeroChanges(
+				{ RatKing: hero({ isNew }), Haze: hero({ isNew }) },
+				{
+					RatKing: hero({ abilities: { Grenade: [modified(65, 70)] } }),
+					Calico: hero({ isNew }),
+				},
+				noTiers,
+				new Map(),
+			),
+		).toEqual({
+			RatKing: hero({ isNew, abilities: { Grenade: [modified(65, 70)] } }),
+			Haze: hero({ isNew }),
+			Calico: hero({ isNew }),
+		});
+	});
+});
+
+describe("hotfix tags", () => {
+	const hero = (hotfix?: number): HeroChanges => ({
+		stats: [],
+		weapon: [],
+		abilities: {},
+		...(hotfix && { hotfix }),
+	});
+	const items = (hotfix?: number): StoredItemChanges => ({
+		added: [{ name: "New", ...(hotfix && { hotfix }) }],
+		removed: [],
+		changed: [{ name: "Healbane", changes: [] }],
+	});
+
+	it("tags only the newest hotfix's names, clearing older tags", () => {
+		const { heroes, items: tagged } = tagHotfix(
+			{ Sinclair: hero(), Haze: hero(6739) },
+			items(6739),
+			{ build: 6753, heroes: ["Sinclair", "Gone"], items: ["Healbane"] },
+		);
+		expect(heroes).toEqual({ Sinclair: hero(6753), Haze: hero() });
+		expect(tagged.added).toEqual([{ name: "New" }]);
+		expect(tagged.changed).toEqual([
+			{ name: "Healbane", changes: [], hotfix: 6753 },
+		]);
+		expect(readHotfix(heroes, tagged)).toEqual({
+			build: 6753,
+			heroes: ["Sinclair"],
+			items: ["Healbane"],
+		});
+	});
+
+	it("reads no hotfix from untagged files", () => {
+		expect(readHotfix({ Haze: hero() }, items())).toBeUndefined();
+	});
+
+	describe("nextHotfix", () => {
+		const previous = { build: 6739, heroes: ["Haze"], items: [] };
+		const touched = { heroes: ["Sinclair"], items: ["Healbane"] };
+
+		it("makes a merged build the hotfix, replacing the previous one", () => {
+			expect(nextHotfix("merge", 6722, previous, 6753, touched)).toEqual({
+				build: 6753,
+				...touched,
+			});
+		});
+
+		it("adds to the hotfix when the API re-publishes its build", () => {
+			expect(nextHotfix("merge", 6722, previous, 6739, touched)).toEqual({
+				build: 6739,
+				heroes: ["Haze", "Sinclair"],
+				items: ["Healbane"],
+			});
+		});
+
+		it("keeps the hotfix when nothing visible moved or the patch is re-published", () => {
+			expect(nextHotfix("keep", 6722, previous, 6760, touched)).toBe(previous);
+			expect(nextHotfix("merge", 6722, previous, 6722, touched)).toBe(previous);
+		});
+
+		it("has no hotfix once a new patch opens a window", () => {
+			expect(nextHotfix("open", 6800, previous, 6800, touched)).toBeUndefined();
+		});
 	});
 });

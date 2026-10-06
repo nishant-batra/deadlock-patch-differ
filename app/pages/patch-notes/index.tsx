@@ -1,11 +1,11 @@
 import { Fragment } from "react";
 import CardLegend from "#/shared/components/card-legend";
 import EmptyState from "#/shared/components/empty-state";
-import ItemCard from "#/shared/components/item-card";
 import UpcomingHeroes from "#/shared/components/upcoming-heroes";
 import { formatPatchDate } from "#/shared/utils/formatPatchDate";
-import ChangedHeroCard from "./hero-card";
-import HeroLegend from "./hero-legend";
+import HeroChanges from "./hero-changes";
+import HotfixSection from "./hotfix-section";
+import ItemChanges from "./item-changes";
 import SectionHeading from "./section-heading";
 import type { ChangesPayload } from "./server";
 import { latestNoteDate } from "./utils";
@@ -13,10 +13,10 @@ import { latestNoteDate } from "./utils";
 export default function Changes({
 	items,
 	heroes,
+	hotfix,
 	upcomingHeroes,
 	notes,
 }: ChangesPayload) {
-	const { added, removed, changed } = items;
 	const { balance, general, recent } = notes;
 	const patchDate = latestNoteDate(notes);
 
@@ -35,60 +35,17 @@ export default function Changes({
 
 	const itemsBlock = (
 		<section id="items" className="mb-12">
-			{added.length > 0 && (
-				<div className="mb-10">
-					<SectionHeading count={added.length}>Added items</SectionHeading>
-					<div className="masonary">
-						{added.map((item) => (
-							<ItemCard item={item} isNew key={item.id} />
-						))}
-					</div>
-				</div>
-			)}
-
-			{removed.length > 0 && (
-				<div className="mb-10">
-					<SectionHeading count={removed.length}>Removed items</SectionHeading>
-					<div className="masonary">
-						{removed.map((item) => (
-							<ItemCard item={item} isRemoved key={item.id} />
-						))}
-					</div>
-				</div>
-			)}
-
-			<SectionHeading count={changed.length} source={balance}>
-				Item changes
-			</SectionHeading>
-			{changed.length === 0 ? (
-				<EmptyState>No item changes in this patch.</EmptyState>
-			) : (
-				<div className="masonary">
-					{changed.map(({ item, changes }) => (
-						<ItemCard item={item} changes={changes} key={item.id} />
-					))}
-				</div>
-			)}
+			<ItemChanges items={items} source={balance} />
 		</section>
 	);
 
 	const heroesBlock = (
 		<section id="heroes" className="mb-12">
-			<SectionHeading count={heroes.length} source={balance}>
-				Hero changes
-			</SectionHeading>
-			{heroes.length === 0 ? (
-				<EmptyState>No hero changes in this patch.</EmptyState>
-			) : (
-				<>
-					<HeroLegend />
-					<div className="masonary">
-						{heroes.map((changed) => (
-							<ChangedHeroCard key={changed.hero.id} {...changed} />
-						))}
-					</div>
-				</>
-			)}
+			<HeroChanges
+				heroes={heroes}
+				source={balance}
+				legend={hotfix.heroes.length === 0}
+			/>
 		</section>
 	);
 
@@ -169,6 +126,9 @@ export default function Changes({
 				changes, item buffs and nerfs, and full patch notes, visualized side by
 				side.
 			</p>
+			<CardLegend />
+			{/* First: the newest changes. What it touched is not repeated below. */}
+			<HotfixSection hotfix={hotfix} note={notes.hotfix} />
 			{/* Pinned above the dated blocks: announced heroes are the headline
 			    of the patch that reveals them, and stay listed until release. */}
 			{upcomingHeroes.length > 0 && (
@@ -179,7 +139,6 @@ export default function Changes({
 					<UpcomingHeroes heroes={upcomingHeroes} />
 				</section>
 			)}
-			<CardLegend />
 			{blocks.map(({ id }) => (
 				<Fragment key={id}>{byId[id]}</Fragment>
 			))}

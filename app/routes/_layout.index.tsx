@@ -8,11 +8,20 @@ import { seoHead } from "#/shared/utils/seoHead";
 
 export const Route = createFileRoute("/_layout/")({
 	head: ({ loaderData }: { loaderData?: ChangesPayload }) => {
-		const heroCount = loaderData?.heroes?.length ?? 0;
-		const itemCount =
-			(loaderData?.items?.added?.length ?? 0) +
-			(loaderData?.items?.removed?.length ?? 0) +
-			(loaderData?.items?.changed?.length ?? 0);
+		// The hotfix's heroes and items are left out of the patch lists.
+		const sections = [loaderData, loaderData?.hotfix];
+		const heroCount = sections.reduce(
+			(sum, section) => sum + (section?.heroes?.length ?? 0),
+			0,
+		);
+		const itemCount = sections.reduce(
+			(sum, section) =>
+				sum +
+				(section?.items?.added?.length ?? 0) +
+				(section?.items?.removed?.length ?? 0) +
+				(section?.items?.changed?.length ?? 0),
+			0,
+		);
 		const patchDate = loaderData && latestNoteDate(loaderData.notes);
 		const dateLabel = patchDate ? formatPatchDate(patchDate) : undefined;
 

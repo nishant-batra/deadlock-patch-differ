@@ -7,9 +7,9 @@
 		"html": "<p>- Fixed bugs that were causing troopers to walk too slowly in lane</p><p></p><p></p>"
 	},
 	"balance": {
-		"title": "Minor Update - 10-05-2026",
-		"pubDate": "2026-10-05T23:05:32Z",
-		"link": "https://store.steampowered.com/news/app/1422450/view/703281025618282632"
+		"title": "City Never Sleeps",
+		"pubDate": "2026-09-29T20:25:11Z",
+		"link": "https://store.steampowered.com/news/app/1422450/view/694273194214819790"
 	},
 	"recent": [
 		{
@@ -47,5 +47,10 @@
 			"source": "steam",
 			"html": "<p>- Radiant Regeneration: Heal on cast reduced from 70 to 65</p><p>- Restorative Locket: Spirit Resistance reduced from 10% to 8%</p><p>- Celeste: Dazzling Trick cooldown increased from 32s to 34s</p><p>- Celeste: Dazzling Trick T2 barrier rescaled from \"+80 and +0.7 scaling\" to \"+70 and +0.76\"</p><p>- Celeste: Dazzling Trick T3 cooldown increased from -18s to -20s</p><p>- Celeste: Dazzling Trick T3 reduced from +1.5s Silence to +1.25s</p><p>- Celeste: Radiant Daggers Spirit Amp per stack reduced from +8% to +7%</p><p>- Celeste: Radiant Daggers T3 Spirit Amp per stack increased from +3% to +4%</p><p>- Celeste: Shining Wonder bounce range reduced from 17.5m to 16.5m</p><p>- Celeste: Shining Wonder damage reduced from 165 to 140</p><p>- Celeste: Shining Wonder spirit scaling reduced from 0.9 to 0.6</p><p>- Celeste: Shining Wonder T2 now also increases spirit scaling by +0.45</p>"
 		}
-	]
+	],
+	"hotfix": {
+		"title": "Minor Update - 10-05-2026",
+		"pubDate": "2026-10-05T23:05:32Z",
+		"link": "https://store.steampowered.com/news/app/1422450/view/703281025618282632"
+	}
 }

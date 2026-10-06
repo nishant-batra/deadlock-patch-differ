@@ -341,7 +341,8 @@
 					"new": "60"
 				}
 			]
-		}
+		},
+		"hotfix": 6753
 	},
 	"Drifter": {
 		"stats": [],
@@ -432,7 +433,75 @@
 	"Rat King": {
 		"stats": [],
 		"weapon": [],
-		"abilities": {},
-		"isNew": true
+		"abilities": {
+			"Scrap Grenade": [
+				{
+					"path": [
+						"properties",
+						"DamagePerShrapnel",
+						"value"
+					],
+					"kind": "modified",
+					"old": "65",
+					"new": "70"
+				}
+			],
+			"Rat Swarm": [
+				{
+					"path": [
+						"properties",
+						"AbilityCooldown",
+						"value"
+					],
+					"kind": "modified",
+					"old": "28",
+					"new": "24"
+				}
+			],
+			"Rule, Ratannia!": [
+				{
+					"path": [
+						"properties",
+						"AbilityCooldown",
+						"value"
+					],
+					"kind": "modified",
+					"old": "130",
+					"new": "160"
+				},
+				{
+					"path": [
+						"properties",
+						"AbilityDuration",
+						"value"
+					],
+					"kind": "modified",
+					"old": "12",
+					"new": "10"
+				},
+				{
+					"path": [
+						"properties",
+						"Radius",
+						"value"
+					],
+					"kind": "modified",
+					"old": "24m",
+					"new": "20m"
+				},
+				{
+					"path": [
+						"properties",
+						"AllyDamageReduction",
+						"value"
+					],
+					"kind": "modified",
+					"old": "20",
+					"new": "15"
+				}
+			]
+		},
+		"isNew": true,
+		"hotfix": 6753
 	}
 }
