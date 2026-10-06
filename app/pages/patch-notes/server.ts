@@ -3,27 +3,30 @@ import { createServerFn } from "@tanstack/react-start";
 import { setResponseHeader } from "@tanstack/react-start/server";
 import abilityTiersJson from "#/data/ability-tiers.json";
 import heroesViewJson from "#/data/heroes-view.json";
+import hotfixJson from "#/data/hotfix.json";
 import itemChangesJson from "#/data/item-changes.json";
 import patchNotesJson from "#/data/patch-notes.json";
+import { getPatchMeta } from "#/layout/server";
 import type { TierDiff } from "#/lib/abilityUpgrades";
+import { readHotfix } from "#/lib/hotfix";
 import { isLiveHero } from "#/lib/roster";
-import {
-	itemChangesByName,
-	joinAbilities,
-	readHeroChanges,
-	readItemsView,
-} from "#/server/core";
+import { joinAbilities, readHeroChanges, readItemsView } from "#/server/core";
 import { getUpcomingHeroes } from "#/server/heroes";
-import type { ChangedHero, Hero, Item, ItemChanges, PatchNotes } from "#/types";
+import type {
+	ChangedHero,
+	Hero,
+	HeroChanges,
+	Hotfix,
+	ItemChanges,
+	NoteRef,
+	PatchNote,
+	PatchNotes,
+	StoredItemChanges,
+} from "#/types";
 
 export function getPatchNotes(): PatchNotes {
 	return patchNotesJson as unknown as PatchNotes;
 }
-
-type RawItemChanges = {
-	added: Array<{ name: string }>;
-	removed: Array<{ name: string; snapshot: Item }>;
-};
 
 /**
  * Shop items only - ability changes surface through `getChangedHeroes()`.
@@ -36,10 +39,11 @@ type RawItemChanges = {
  * Removed items come from the snapshot ingest carried forward - they are absent
  * from items-view.json, which is built from the new payload.
  */
-export function getItemChanges(): ItemChanges {
+export function getItemChanges(
+	{ added, removed, changed }: StoredItemChanges = itemChangesJson as unknown as StoredItemChanges,
+): ItemChanges {
 	const { items } = readItemsView();
 	const byName = new Map(items.map((item) => [item.name, item]));
-	const { added, removed } = itemChangesJson as unknown as RawItemChanges;
 
 	return {
 		added: added.flatMap(({ name }) => {
@@ -47,7 +51,7 @@ export function getItemChanges(): ItemChanges {
 			return item ? [item] : [];
 		}),
 		removed: removed.map(({ snapshot }) => snapshot),
-		changed: [...itemChangesByName()].flatMap(([name, changes]) => {
+		changed: changed.flatMap(({ name, changes }) => {
 			const item = byName.get(name);
 			return item ? [{ item, changes }] : [];
 		}),
@@ -59,15 +63,18 @@ export function getItemChanges(): ItemChanges {
  * unreleased) is dropped entirely rather than rendered half-empty. A missing
  * weapon slot does not drop the hero - it just yields no weapon changes.
  * Whether a hero counts as "changed" was decided at ingest: it is changed iff
- * it has a hero-changes.json entry (see lib/heroChanges.ts).
+ * it has an entry in `heroChanges` (see lib/heroChanges.ts).
  */
-export function getChangedHeroes(): ChangedHero[] {
+export function getChangedHeroes(
+	heroChanges: Record<string, HeroChanges> = readHeroChanges(),
+	tiersByName: Record<string, TierDiff[]> = abilityTiersJson as unknown as Record<
+		string,
+		TierDiff[]
+	>,
+): ChangedHero[] {
 	const heroes = heroesViewJson as unknown as Hero[];
 	const { abilities } = readItemsView();
 	const abilityByClass = new Map(abilities.map((a) => [a.class_name, a]));
-	const heroChanges = readHeroChanges();
-
-	const tiersByName = abilityTiersJson as unknown as Record<string, TierDiff[]>;
 
 	return heroes
 		.flatMap((hero) => {
@@ -100,9 +107,47 @@ export function getChangedHeroes(): ChangedHero[] {
 		.sort((a, b) => Number(Boolean(b.isNew)) - Number(Boolean(a.isNew)));
 }
 
-export type ChangesPayload = {
+export type HotfixChanges = {
+	builds: number[];
+	builtAt: string;
+	note?: NoteRef;
+	general?: PatchNote;
 	items: ItemChanges;
 	heroes: ChangedHero[];
+};
+
+/**
+ * Every hotfix since the patch, in the same shapes as the patch. The data is a
+ * static import, so it is read once per server instance.
+ */
+let hotfixCache: HotfixChanges | null | undefined;
+export function getHotfixChanges(): HotfixChanges | null {
+	if (hotfixCache !== undefined) return hotfixCache;
+	const hotfix = hotfixJson as unknown as Hotfix | null;
+	if (!hotfix) {
+		hotfixCache = null;
+		return hotfixCache;
+	}
+	const { builds, builtAt, note, general } = hotfix;
+	const { items, heroes, tiers } = readHotfix(hotfix, readItemsView().abilities);
+	hotfixCache = {
+		builds,
+		builtAt,
+		note,
+		general,
+		items: getItemChanges(items),
+		heroes: getChangedHeroes(heroes, tiers),
+	};
+	return hotfixCache;
+}
+
+export type ChangesPayload = {
+	/** The patch: the build that opened the window, and when. */
+	patch?: { build: number; builtAt: string };
+	items: ItemChanges;
+	heroes: ChangedHero[];
+	/** Every hotfix since the patch, merged; shown above it. */
+	hotfix: HotfixChanges | null;
 	/** Announced, not yet playable - the "New heroes" block. */
 	upcomingHeroes: Hero[];
 	notes: PatchNotes;
@@ -114,9 +159,20 @@ export const fetchChanges = createServerFn({ method: "GET" }).handler(
 	async (): Promise<ChangesPayload> => {
 		// Rebuilt by the deploy hook whenever new artifacts are committed.
 		setResponseHeader("Cache-Control", "public, s-maxage=31536000, immutable");
+		const meta = getPatchMeta();
+		const patchWindow =
+			meta &&
+			(meta.window ?? {
+				startBuild: meta.clientVersion,
+				startedAt: meta.versionDatetime,
+			});
 		return {
+			patch: patchWindow
+				? { build: patchWindow.startBuild, builtAt: patchWindow.startedAt }
+				: undefined,
 			items: getItemChanges(),
 			heroes: getChangedHeroes(),
+			hotfix: getHotfixChanges(),
 			upcomingHeroes: getUpcomingHeroes(),
 			notes: getPatchNotes(),
 		};

@@ -4,10 +4,9 @@
 // all of them render the same roster, and separate definitions would let them
 // drift.
 import { createServerFn } from "@tanstack/react-start";
-import abilityTiersJson from "#/data/ability-tiers.json";
 import heroDescriptionsJson from "#/data/hero-descriptions.json";
 import heroesViewJson from "#/data/heroes-view.json";
-import { currentTiers, type TierDiff } from "#/lib/abilityUpgrades";
+import { diffAbilityTiers, type TierDiff } from "#/lib/abilityUpgrades";
 import { isLiveHero, isUpcomingHero, WEAPON_SLOT } from "#/lib/roster";
 import { heroSlug } from "#/shared/utils/heroSlug";
 import type {
@@ -38,6 +37,22 @@ const abilityByClass = () => {
 	return abilityByClassCache;
 };
 
+/**
+ * Every ability's upgrades as they stand, as all-`equal` tiers. Built from the
+ * current catalog rather than ability-tiers.json: that file is the patch's
+ * diff, and does not follow the hotfixes after it.
+ */
+let currentTiersCache: Record<string, TierDiff[]> | undefined;
+const currentTiersByName = () => {
+	currentTiersCache ??= Object.fromEntries(
+		readItemsView().abilities.map((ability) => [
+			ability.name,
+			diffAbilityTiers(ability, ability),
+		]),
+	);
+	return currentTiersCache;
+};
+
 let heroBySlugCache: Map<string, Hero> | undefined;
 const heroBySlug = () => {
 	heroBySlugCache ??= new Map(
@@ -55,17 +70,10 @@ function liveEntry(hero: Hero): HeroEntry | undefined {
 	const abilities = joinAbilities(
 		hero,
 		abilityByClass(),
-		abilityTiersJson as unknown as Record<string, TierDiff[]>,
+		currentTiersByName(),
 		NO_CHANGES,
 	);
-	if (!abilities) return undefined;
-	return {
-		hero,
-		abilities: abilities.map(({ tiers, ...ability }) => ({
-			...ability,
-			tiers: currentTiers(tiers),
-		})),
-	};
+	return abilities && { hero, abilities };
 }
 
 /** Every live hero, unfiltered by whether anything changed. */

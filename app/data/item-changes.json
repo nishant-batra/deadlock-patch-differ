@@ -234,10 +234,7 @@
 							}
 						]
 					}
-				],
-				"description": {
-					"desc": "Your bullets apply a debuff that reduces the <span class=\"highlight\">Spirit Resist</span> of the target and grants you and your allies <span class=\"highlight\">Spirit Lifesteal</span> against them."
-				}
+				]
 			}
 		},
 		{
@@ -455,9 +452,6 @@
 						]
 					}
 				],
-				"description": {
-					"desc": "Your Bullets have a chance to become unavoidable, <span class=\"highlight\">piercing through</span> enemies and <span class=\"highlight\">ignoring their Bullet Resistance</span>."
-				},
 				"component_items": [
 					"upgrade_high_velocity_mag"
 				]

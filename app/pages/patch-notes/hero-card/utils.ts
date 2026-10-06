@@ -1,15 +1,8 @@
-import type { TierRow } from "#/lib/abilityUpgrades";
+import type { TierDiff } from "#/lib/abilityUpgrades";
 import { isScaleChange, isStatChange } from "#/lib/diffEngine";
-import { abilityDeltaRow } from "#/shared/components/ability-card/utils";
 import type { DeltaRow } from "#/shared/components/stat-delta";
 import { isNegativeHeroStat, labelForStatKey } from "#/shared/utils/statLabels";
 import type { AbilityChange, Change, Item } from "#/types";
-
-export type LedgerSection = {
-	ability: Item;
-	rows: DeltaRow[];
-	tierRows: TierRow[];
-};
 
 export type WordingEntry = { ability: Item };
 
@@ -21,32 +14,26 @@ const isTierCovered = ({ path }: Change) =>
 	(path[0] === "description" && /^t\d_desc$/.test(path[1]));
 
 /**
- * Splits a hero's ability changes into what the card spells out and what it
- * only names. Number moves (property values, spirit scaling, upgrade-tier
- * bonuses) go in `sections`, one per ability, in kit order. Wording rewrites -
- * description and tier text - plus anything else unrecognised go in `wording`,
- * which the card collapses to a single line of ability names. An ability with
- * both lands in both.
+ * A tier blurb ("+150 Damage and +15% Damage Reduction") restates that tier's
+ * bonuses, so when a bonus moved the rewrite is just the number again - the
+ * tier rows already show it. Only a rewrite with every bonus unchanged is
+ * real wording. The popover still shows the text diff either way.
  */
-export function abilityLedger(abilities: AbilityChange[]) {
-	const sections: LedgerSection[] = [];
+const isTierRewording = ({ text, rows }: TierDiff) =>
+	Boolean(text) && rows.every(({ kind }) => kind === "equal");
+
+/**
+ * The abilities the card names on its Wording line: description and tier text
+ * rewrites whose bonuses did not move, plus anything else unrecognised. Number
+ * moves (property values, spirit scaling, upgrade-tier bonuses) are left to the
+ * ability popover - the amber icon already says the ability changed.
+ */
+export function abilityWording(abilities: AbilityChange[]): WordingEntry[] {
 	const wording: WordingEntry[] = [];
 
 	for (const { ability, changes, tiers } of abilities) {
-		const rows = changes
-			.filter((change) => isStatChange(change) || isScaleChange(change))
-			.map((change) => abilityDeltaRow(change, ability.properties ?? {}));
-		const tierRows = tiers.flatMap(({ tier, rows }) =>
-			rows
-				.filter(({ kind }) => kind !== "equal")
-				.map((row) => ({
-					...row,
-					key: `t${tier}.${row.key}`,
-					label: `T${tier} · ${row.label}`,
-				})),
-		);
 		const hasWording =
-			changes.some(isTextChange) || tiers.some(({ text }) => text);
+			changes.some(isTextChange) || tiers.some(isTierRewording);
 		const hasOther = changes.some(
 			(change) =>
 				!isStatChange(change) &&
@@ -55,12 +42,10 @@ export function abilityLedger(abilities: AbilityChange[]) {
 				!isTierCovered(change),
 		);
 
-		if (rows.length || tierRows.length)
-			sections.push({ ability, rows, tierRows });
 		if (hasWording || hasOther) wording.push({ ability });
 	}
 
-	return { sections, wording };
+	return wording;
 }
 
 /**

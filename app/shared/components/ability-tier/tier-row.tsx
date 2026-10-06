@@ -19,7 +19,7 @@ export default function TierRow({
 	const value = (
 		<span className="inline-flex items-baseline gap-1.5">
 			{kind === "changed" && (
-				<s className="font-medium text-[0.75em] text-gray-400 decoration-[#e0716a] decoration-[1.5px]">
+				<s className="font-medium text-[0.9em] text-gray-400 decoration-[#e0716a] decoration-[1.5px]">
 					{formatTierBonus(old, row)}
 				</s>
 			)}

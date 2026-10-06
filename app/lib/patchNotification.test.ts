@@ -4,14 +4,8 @@ import { type BuildSummary, patchNotification } from "./patchNotification";
 const summary = (partial: Partial<BuildSummary> = {}): BuildSummary => ({
 	build: 6730,
 	buildTime: "2026-10-01T18:00:00",
-	action: "open",
-	window: {
-		startBuild: 6730,
-		startedAt: "2026-10-01T18:00:00",
-		builds: [6730],
-	},
 	items: { added: [], removed: [], changed: [] },
-	heroes: [],
+	heroes: ["Haze"],
 	...partial,
 });
 
@@ -21,10 +15,10 @@ describe("patchNotification", () => {
 			"Deadlock build 6730: new patch",
 		);
 		expect(
-			patchNotification(summary({ build: 6731, action: "merge" })).title,
+			patchNotification(summary({ build: 6731, hotfixTo: 6730 })).title,
 		).toBe("Deadlock build 6731: hotfix to 6730");
 		expect(
-			patchNotification(summary({ build: 6731, action: "keep" })).title,
+			patchNotification(summary({ build: 6731, heroes: [] })).title,
 		).toBe("Deadlock build 6731: no player-facing changes");
 	});
 
@@ -59,7 +53,7 @@ describe("patchNotification", () => {
 	});
 
 	it("says so when a build changed nothing visible", () => {
-		expect(patchNotification(summary({ action: "keep" })).body).toContain(
+		expect(patchNotification(summary({ heroes: [] })).body).toContain(
 			"Nothing a player would see changed",
 		);
 	});

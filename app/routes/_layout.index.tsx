@@ -8,19 +8,16 @@ import { seoHead } from "#/shared/utils/seoHead";
 
 export const Route = createFileRoute("/_layout/")({
 	head: ({ loaderData }: { loaderData?: ChangesPayload }) => {
-		const heroCount = loaderData?.heroes?.length ?? 0;
-		const itemCount =
-			(loaderData?.items?.added?.length ?? 0) +
-			(loaderData?.items?.removed?.length ?? 0) +
-			(loaderData?.items?.changed?.length ?? 0);
-		const patchDate = loaderData && latestNoteDate(loaderData.notes);
+		const patchDate =
+			loaderData &&
+			latestNoteDate(loaderData.notes, loaderData.hotfix?.note);
 		const dateLabel = patchDate ? formatPatchDate(patchDate) : undefined;
 
 		// Date, not the note's flavour title ("Listen up, Crumbums!...") - the
 		// date is what people search for, and this keeps the title under
 		// Google's ~60 character cut-off.
 		const title = `Deadlock Patch Notes – ${dateLabel ?? "Latest Update"} | Hero & Item Changes`;
-		const description = `Everything that changed in the ${dateLabel ? `${dateLabel} ` : "latest "}Deadlock update: ${heroCount} heroes and ${itemCount} items, with stat changes, ability upgrades and item buffs/nerfs shown side by side.`;
+		const description = `Everything that changed in the ${dateLabel ? `${dateLabel} ` : "latest "}Deadlock update and its hotfixes: hero stat changes, ability upgrades and item buffs/nerfs shown side by side.`;
 
 		const head = seoHead({ title, description, path: "/" });
 		if (!patchDate) return head;

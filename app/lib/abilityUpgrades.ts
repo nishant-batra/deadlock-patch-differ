@@ -212,30 +212,6 @@ export const hasTierChanges = (tiers: TierDiff[]) =>
 	);
 
 /**
- * Collapses a diff down to the ability's current upgrades, dropping the
- * previous-patch comparison entirely - for views like the all-heroes roster
- * that show a hero's kit as it stands today, not what moved last patch.
- * `removed` rows (bonuses that no longer exist) are dropped; everything else
- * becomes an `equal` row carrying only its current value.
- */
-export function currentTiers(tiers: TierDiff[]): TierDiff[] {
-	return tiers.map(({ tier, rows }) => ({
-		tier,
-		rows: rows
-			.filter(({ kind }) => kind !== "removed")
-			.map(({ key, label, new: value, scaling, prefix, postfix }) => ({
-				key,
-				label,
-				kind: "equal" as const,
-				new: value,
-				scaling,
-				prefix,
-				postfix,
-			})),
-	}));
-}
-
-/**
  * Tier diffs for every ability in `abilityClasses`, keyed by ability name (the
  * key the popover looks them up by).
  *

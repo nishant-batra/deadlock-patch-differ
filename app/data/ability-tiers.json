@@ -2083,11 +2083,7 @@
 					"new": 1,
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "-20.0 Cooldown and +1.0s Duration",
-				"new": "-20.0s Cooldown and +1.0s Duration"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -4833,11 +4829,7 @@
 					"new": "3",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "Heros killed within 3s grant <span class=\"highlight\">+200</span> souls",
-				"new": "Heroes killed within 3s grant <span class=\"highlight\">+200</span> souls"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -5703,11 +5695,7 @@
 					"kind": "equal",
 					"new": 1
 				}
-			],
-			"text": {
-				"old": "<span class=\"highlight\">Prevents all healing</span><br><span class=\"highlight\">+13.0</span> DPS with increase Spirit scaling",
-				"new": "<span class=\"highlight\">Prevents all healing</span><br><span class=\"highlight\">+13.0</span> DPS with increased Spirit scaling"
-			}
+			]
 		}
 	],
 	"Protector's Hand": [
@@ -7696,9 +7684,8 @@
 				{
 					"key": "Radius|#0",
 					"label": "Radius",
-					"kind": "changed",
-					"old": "3m",
-					"new": "2m",
+					"kind": "equal",
+					"new": "3m",
 					"postfix": "m"
 				},
 				{
@@ -7708,11 +7695,7 @@
 					"new": "7",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+3m</span> Radius",
-				"new": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+2m</span> Radius"
-			}
+			]
 		}
 	],
 	"Civil Servant": [
@@ -12199,286 +12182,6 @@
 					"postfix": "%"
 				}
 			]
-		}
-	],
-	"Sovereign's Decree": [
-		{
-			"tier": 1,
-			"rows": []
-		},
-		{
-			"tier": 2,
-			"rows": []
-		},
-		{
-			"tier": 3,
-			"rows": []
-		}
-	],
-	"Rat Swarm": [
-		{
-			"tier": 1,
-			"rows": [
-				{
-					"key": "AbilityCharges|#0",
-					"label": "Ability Charges",
-					"kind": "equal",
-					"new": "1"
-				}
-			]
-		},
-		{
-			"tier": 2,
-			"rows": [
-				{
-					"key": "RatSwarmCols|#0",
-					"label": "Rat Swarm Cols",
-					"kind": "equal",
-					"new": "2"
-				},
-				{
-					"key": "RatSwarmRows|#0",
-					"label": "Rat Swarm Rows",
-					"kind": "equal",
-					"new": "1"
-				},
-				{
-					"key": "RatSwarmWidth|#0",
-					"label": "Rat Swarm Width",
-					"kind": "equal",
-					"new": "100"
-				},
-				{
-					"key": "DebuffDuration|#0",
-					"label": "Debuff Duration",
-					"kind": "equal",
-					"new": "4",
-					"postfix": "s"
-				}
-			]
-		},
-		{
-			"tier": 3,
-			"rows": [
-				{
-					"key": "ArmorReductionPerBite|#0",
-					"label": "Armor Reduction Per Bite",
-					"kind": "equal",
-					"new": "-1",
-					"postfix": "%"
-				},
-				{
-					"key": "DamagePerBite|#0",
-					"label": "Damage Per Bite",
-					"kind": "equal",
-					"new": "8"
-				}
-			]
-		}
-	],
-	"Scrap Grenade": [
-		{
-			"tier": 1,
-			"rows": [
-				{
-					"key": "AbilityCooldown|#0",
-					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": "-8",
-					"postfix": "s"
-				}
-			]
-		},
-		{
-			"tier": 2,
-			"rows": [
-				{
-					"key": "DamagePerShrapnel|#0",
-					"label": "Damage Per Shrapnel",
-					"kind": "changed",
-					"old": "65",
-					"new": "70"
-				}
-			]
-		},
-		{
-			"tier": 3,
-			"rows": [
-				{
-					"key": "Detonations|#0",
-					"label": "Detonations",
-					"kind": "equal",
-					"new": "1"
-				},
-				{
-					"key": "BigExplosionDamage|#0",
-					"label": "Big Explosion Damage",
-					"kind": "equal",
-					"new": "300"
-				},
-				{
-					"key": "BigExplosionDamage|EAddToScale#0",
-					"label": "Big Explosion Damage",
-					"kind": "equal",
-					"new": "1.0",
-					"scaling": "EBaseWeaponDamageIncrease"
-				},
-				{
-					"key": "BigExplosionRadius|#0",
-					"label": "Big Explosion Radius",
-					"kind": "equal",
-					"new": "14m",
-					"postfix": "m"
-				},
-				{
-					"key": "BigExplosionRadius|EAddToScale#0",
-					"label": "Big Explosion Radius",
-					"kind": "equal",
-					"new": "1",
-					"scaling": "ETechRange",
-					"postfix": "m"
-				},
-				{
-					"key": "BigExplosionSlowPercent|EAddToScale#0",
-					"label": "Big Explosion Slow Percent",
-					"kind": "equal",
-					"new": "0.12",
-					"scaling": "ETechPower",
-					"postfix": "%"
-				}
-			]
-		}
-	],
-	"Royal Pestments": [
-		{
-			"tier": 1,
-			"rows": [
-				{
-					"key": "AbilityDuration|#0",
-					"label": "Ability Duration",
-					"kind": "equal",
-					"new": "4",
-					"postfix": "s"
-				}
-			]
-		},
-		{
-			"tier": 2,
-			"rows": [
-				{
-					"key": "ReturnFireChance|#0",
-					"label": "Return Fire Chance",
-					"kind": "equal",
-					"new": "15",
-					"postfix": "%"
-				},
-				{
-					"key": "AbilityCooldown|#0",
-					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": "-8",
-					"postfix": "s"
-				}
-			]
-		},
-		{
-			"tier": 3,
-			"rows": [
-				{
-					"key": "MaxHealthPct|#0",
-					"label": "Max Health Pct",
-					"kind": "equal",
-					"new": "10",
-					"postfix": "%"
-				},
-				{
-					"key": "MaxDamagePerHit|#0",
-					"label": "Max Damage Per Hit",
-					"kind": "equal",
-					"new": "250"
-				}
-			]
-		}
-	],
-	"Rule, Ratannia!": [
-		{
-			"tier": 1,
-			"rows": [
-				{
-					"key": "BonusMoveSpeed|#0",
-					"label": "Bonus Move Speed",
-					"kind": "changed",
-					"old": "1m",
-					"new": "2m",
-					"prefix": "{s:sign}",
-					"postfix": " m"
-				},
-				{
-					"key": "AbilityCooldown|#0",
-					"label": "Ability Cooldown",
-					"kind": "removed",
-					"old": "-20",
-					"postfix": "s"
-				}
-			],
-			"text": {
-				"old": "-20s Cooldown and +1m Move Speed",
-				"new": "+2m Move Speed"
-			}
-		},
-		{
-			"tier": 2,
-			"rows": [
-				{
-					"key": "FlagDuration|#0",
-					"label": "Flag Duration",
-					"kind": "changed",
-					"old": "8",
-					"new": "5",
-					"postfix": "s"
-				},
-				{
-					"key": "Radius|#0",
-					"label": "Radius",
-					"kind": "equal",
-					"new": "8m",
-					"postfix": "m"
-				},
-				{
-					"key": "AbilityDuration|#0",
-					"label": "Ability Duration",
-					"kind": "removed",
-					"old": "8",
-					"postfix": "s"
-				}
-			],
-			"text": {
-				"old": "+8s Charge Duration<br>+8s Flag Duration<br>+8m Radius",
-				"new": "+5s Flag Duration<br>+8m Radius"
-			}
-		},
-		{
-			"tier": 3,
-			"rows": [
-				{
-					"key": "Damage|#0",
-					"label": "Damage",
-					"kind": "equal",
-					"new": "150"
-				},
-				{
-					"key": "AllyDamageReduction|#0",
-					"label": "Ally Damage Reduction",
-					"kind": "changed",
-					"old": "15",
-					"new": "10",
-					"postfix": "%"
-				}
-			],
-			"text": {
-				"old": "+150 Damage and +15% Damage Reduction",
-				"new": "+150 Damage and +10% Damage Reduction"
-			}
 		}
 	]
 }

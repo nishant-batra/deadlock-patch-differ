@@ -7,9 +7,12 @@ import { isTierTouched, TIER_COST } from "./utils";
 /**
  * One upgrade tier, as the in-game card draws it: the ability-point cost under
  * a green diamond, then what the tier does. The game describes a tier with its
- * own `t{n}_desc` copy where it has one, so that leads; the per-bonus rows are
- * the fallback - and, for a changed tier, the exact numbers that moved, since
- * the copy only shows the new ones.
+ * own `t{n}_desc` copy where it has one, and the per-bonus rows are the
+ * fallback - one or the other, never both, same as an unpatched tier. A changed
+ * tier marks the change on whichever it shows: the copy's word diff already
+ * strikes the old numbers. Only when bonuses moved under unchanged copy (it
+ * does not mention them) are the moved rows added, since nothing else would
+ * show them.
  */
 export default function AbilityTier({
 	tier,
@@ -22,7 +25,7 @@ export default function AbilityTier({
 	const { tier: number, rows, text } = tier;
 	const touched = isTierTouched(tier);
 	const allNew = rows.length > 0 && rows.every(({ kind }) => kind === "added");
-	const moved = rows.filter(({ kind }) => kind !== "equal");
+	const moved = text ? [] : rows.filter(({ kind }) => kind !== "equal");
 	const copy = text?.new ?? desc;
 
 	return (

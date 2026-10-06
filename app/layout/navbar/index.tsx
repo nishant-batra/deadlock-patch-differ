@@ -1,6 +1,5 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { Coffee } from "lucide-react";
-import Badge from "#/shared/components/badge";
 import { formatPatchDate } from "#/shared/utils/formatPatchDate";
 import type { PatchMeta } from "#/types";
 import { useNavHeight } from "./useNavHeight";
@@ -64,51 +63,26 @@ export default function Navbar({ meta }: { meta: PatchMeta | null }) {
 				</Link>
 			</nav>
 
-			<div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-4 gap-y-1.5 border-white/10 border-t px-4 py-1.5 text-gray-400 text-xs sm:px-8 sm:py-2">
-				{meta ? (
-					<>
-						<p>
-							Patch{" "}
-							<span className="font-bold text-white">
-								{formatPatchDate(meta.versionDatetime)}
+			{/* The Changes page shows this per section, in its sticky bars. */}
+			{!onChangesPage && (
+				<div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-4 gap-y-1.5 border-white/10 border-t px-4 py-1.5 text-gray-400 text-xs sm:px-8 sm:py-2">
+					{meta ? (
+						<>
+							<p>
+								Patch{" "}
+								<span className="font-bold text-white">
+									{formatPatchDate(meta.versionDatetime)}
+								</span>
+							</p>
+							<span className="cut-corner bg-white/10 px-2 py-0.5 font-medium">
+								build {meta.clientVersion}
 							</span>
-						</p>
-						<span className="cut-corner bg-white/10 px-2 py-0.5 font-medium">
-							build {meta.clientVersion}
-						</span>
-					</>
-				) : (
-					<p>No patch data ingested yet.</p>
-				)}
-
-				{onChangesPage && meta && (
-					<div className="ml-auto flex flex-wrap gap-3">
-						{(meta.counts.upcomingHeroes ?? 0) > 0 && (
-							<a
-								className="flex items-center gap-1.5 hover:text-white"
-								href="#new-heroes"
-							>
-								New heroes <Badge>{meta.counts.upcomingHeroes}</Badge>
-							</a>
-						)}
-						<a
-							className="flex items-center gap-1.5 hover:text-white"
-							href="#items"
-						>
-							Items <Badge>{meta.counts.items}</Badge>
-						</a>
-						<a
-							className="flex items-center gap-1.5 hover:text-white"
-							href="#heroes"
-						>
-							Heroes <Badge>{meta.counts.heroes}</Badge>
-						</a>
-						<a className="hover:text-white" href="#general">
-							General
-						</a>
-					</div>
-				)}
-			</div>
+						</>
+					) : (
+						<p>No patch data ingested yet.</p>
+					)}
+				</div>
+			)}
 		</header>
 	);
 }

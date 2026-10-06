@@ -22,32 +22,45 @@ type Flattened = {
 };
 
 const PIECE = /<svg\b[\s\S]*?<\/svg>|<\/?([a-zA-Z][\w-]*)[^>]*>|[^<]+|</gi;
-const CLOSER = /<\/([a-zA-Z][\w-]*)/g;
 
 /**
- * A tag that stands on its own - an icon, a line break - flattens to
- * `$name$`, so one kind of icon replacing another still counts as a change
- * and new tags need no mapping. "Stands on its own" means an `<svg>` (its
- * insides are noise) or any tag the string never closes: `<img>`, `<br>`, and
- * the game's own `<Panel>`, which arrives unclosed. Tags that do close, like
- * `<span>`, are wrappers that take no room in the text.
+ * Tags that draw something with no text of their own: icons (the game's
+ * `<Panel>` is one) and line breaks. `<svg>` is matched whole, insides and all.
+ */
+const ATOMS = new Set(["img", "br", "panel"]);
+
+/**
+ * An icon or line break flattens to `$name$`, so one kind of icon replacing
+ * another still counts as a change. Every other tag (`<span>`, and anything
+ * new) is a wrapper that takes no room in the text, closed or not: Valve
+ * leaves some `<span>`s unclosed and closes some `<Panel>`s, so whether a
+ * string closes a tag says nothing about what the tag is.
  */
 function flattenHtml(html: string): Flattened {
-	const source = String(html);
-	const closed = new Set(
-		Array.from(source.matchAll(CLOSER), ([, tag]) => tag.toLowerCase()),
-	);
 	let text = "";
 	const marks: Mark[] = [];
 	const atoms = new Map<number, Atom>();
-	for (const [piece, name] of source.matchAll(PIECE)) {
+	let lastAtom: { at: number; atom: Atom } | undefined;
+	for (const [piece, name] of String(html).matchAll(PIECE)) {
 		const tag = name?.toLowerCase();
 		const closing = piece.startsWith("</");
 		const isSvg = /^<svg\b/i.test(piece);
-		if (isSvg || (tag && !closing && !closed.has(tag))) {
+		const openAtom =
+			closing && lastAtom && lastAtom.at + lastAtom.atom.length === text.length
+				? lastAtom.atom
+				: undefined;
+		if (tag && ATOMS.has(tag) && openAtom) {
+			// `</Panel>` right after its icon goes out with it.
+			openAtom.html += piece;
+		} else if (isSvg || (tag && ATOMS.has(tag) && (!closing || tag === "br"))) {
+			// Browsers read a stray `</br>` as a line break too.
 			const placeholder = `$${isSvg ? "svg" : tag}$`;
-			atoms.set(text.length, { html: piece, length: placeholder.length });
+			const atom = { html: piece, length: placeholder.length };
+			atoms.set(text.length, atom);
+			lastAtom = { at: text.length, atom };
 			text += placeholder;
+		} else if (tag && ATOMS.has(tag)) {
+			// Any other stray closer (`</Panel>`, `</img>`) closes nothing.
 		} else if (tag) {
 			marks.push({ at: text.length, html: piece, closing });
 		} else {

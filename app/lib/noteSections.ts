@@ -20,6 +20,7 @@
 // `<b>\[…]</b>` pattern silently matched nothing during the dry run. Chunking
 // and comparing plain text is harder to get quietly wrong.
 
+import { parseBuildTime } from "./patchWindow";
 import { stripTags } from "./sanitizeHtml";
 
 /** Sections whose content is already rendered as diff cards. */
@@ -128,4 +129,25 @@ export function titleDate(title: string): string | null {
 	if (!match) return null;
 	const [, month, day, year] = match;
 	return `${year}-${month}-${day}`;
+}
+
+/**
+ * The Steam note describing the build released at `buildTime`
+ * (`version_datetime`, zoneless UTC). `notes` is newest first.
+ *
+ * A dated title ("Minor Update - 10-05-2026") is matched by its date. A named
+ * one ("City Never Sleeps") carries no date, so the build gets the first note
+ * published after it - Valve pushes the build, then posts the note a few hours
+ * later. Falls back to the newest note.
+ */
+export function noteForBuild<N extends { title: string; pubDate: string }>(
+	notes: N[],
+	buildTime: string,
+): N | undefined {
+	const built = parseBuildTime(buildTime);
+	return (
+		notes.find(({ title }) => titleDate(title) === buildTime.slice(0, 10)) ??
+		[...notes].reverse().find(({ pubDate }) => Date.parse(pubDate) >= built) ??
+		notes[0]
+	);
 }

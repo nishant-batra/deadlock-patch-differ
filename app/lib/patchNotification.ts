@@ -2,11 +2,9 @@
 //
 // The GitHub issue the ingest workflow opens for every new build - GitHub's own
 // notification email is the alert, so no mail credentials are involved. The
-// issue lists what this build changed on its own, not the merged window: for
-// a hotfix that is the part worth reading.
+// issue lists what this build changed on its own, not the merged hotfixes.
 
-import type { NoteRef, PatchWindow } from "#/types";
-import type { WindowStep } from "./patchWindow";
+import type { NoteRef } from "#/types";
 
 export const SITE_URL = "https://deadlockpatch.vercel.app";
 
@@ -14,8 +12,8 @@ export type BuildSummary = {
 	build: number;
 	/** `version_datetime`, zoneless UTC. */
 	buildTime: string;
-	action: WindowStep["action"];
-	window: PatchWindow;
+	/** The patch's build, when this build is one of its hotfixes. */
+	hotfixTo?: number;
 	items: { added: string[]; removed: string[]; changed: string[] };
 	heroes: string[];
 	note?: NoteRef;
@@ -27,24 +25,22 @@ const list = (label: string, names: string[]) =>
 export function patchNotification({
 	build,
 	buildTime,
-	action,
-	window: { startBuild },
+	hotfixTo,
 	items: { added, removed, changed },
 	heroes,
 	note,
 }: BuildSummary): { title: string; body: string } {
-	const kind =
-		action === "open"
-			? "new patch"
-			: action === "merge"
-				? `hotfix to ${startBuild}`
-				: "no player-facing changes";
 	const itemLines = [
 		...list("New", added),
 		...list("Removed", removed),
 		...list("Changed", changed),
 	];
 	const nothing = heroes.length === 0 && itemLines.length === 0;
+	const kind = nothing
+		? "no player-facing changes"
+		: hotfixTo
+			? `hotfix to ${hotfixTo}`
+			: "new patch";
 
 	const body = [
 		`**Build ${build}** · ${buildTime.replace("T", " ").slice(0, 16)} UTC · ${kind}`,

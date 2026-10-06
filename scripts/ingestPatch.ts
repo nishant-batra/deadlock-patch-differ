@@ -23,23 +23,22 @@ import { sanitizeNotesHtml } from "../app/lib/sanitizeHtml";
 import {
 	generalHtml,
 	hasGeneralContent,
-	titleDate,
+	noteForBuild,
 } from "../app/lib/noteSections";
 import { diffItems } from "../app/lib/tooltipProjection";
-import {
-	diffAbilityTiersByClass,
-	type TierDiff,
-} from "../app/lib/abilityUpgrades";
-import {
-	mergeAbilityTiers,
-	mergeHeroChanges,
-	mergeItemChanges,
-	type StoredItemChanges,
-} from "../app/lib/mergeChanges";
+import { diffAbilityTiersByClass } from "../app/lib/abilityUpgrades";
+import { mergeHotfix, toHotfixChanges } from "../app/lib/hotfix";
 import { patchNotification } from "../app/lib/patchNotification";
-import { placeBuild } from "../app/lib/patchWindow";
-import { ABILITY_SLOTS, isUpcomingHero, WEAPON_SLOT } from "../app/lib/roster";
-import type { Hero, HeroChanges, Item, PatchMeta } from "../app/types";
+import { isNewPatch } from "../app/lib/patchWindow";
+import { ABILITY_SLOTS, WEAPON_SLOT } from "../app/lib/roster";
+import type {
+	Hero,
+	Hotfix,
+	Item,
+	PatchMeta,
+	PatchWindow,
+	StoredItemChanges,
+} from "../app/types";
 
 const API = "https://api.deadlock-api.com";
 const DATA_DIR = path.join(process.cwd(), "app", "data");
@@ -113,6 +112,7 @@ const ARTIFACTS = [
 	"latest-patch.json",
 	"latest-heroes.json",
 	"hero-changes.json",
+	"hotfix.json",
 	"items-view.json",
 	"heroes-view.json",
 	"hero-descriptions.json",
@@ -281,6 +281,18 @@ const toNote = (patch: RawPatch | undefined) => {
 	};
 };
 
+/** A note's content that is not item/hero changes, if it has any. */
+const generalOf = (patch: RawPatch | undefined, knownNames: Set<string>) =>
+	patch && hasGeneralContent(patch.content, knownNames)
+		? {
+				title: patch.title.trim(),
+				pubDate: patch.pub_date,
+				link: patch.link,
+				source: patch.source,
+				html: sanitizeNotesHtml(generalHtml(patch.content, knownNames)),
+			}
+		: undefined;
+
 /**
  * Splits the feed into the two things the page needs.
  *
@@ -289,17 +301,18 @@ const toNote = (patch: RawPatch | undefined) => {
  * plus a link-unfurl card, 447 chars of noise. Preferring Steam replaces the old
  * ">40 chars of prose" heuristic, which was arbitrary and let that stub through.
  *
- * `balance` is the note describing the item/hero diff, joined by the date its
- * title embeds - the feed carries no build number. `general` is the most recent
+ * `balance` is the note describing the build at `versionDatetime` - see
+ * `noteForBuild`, the feed carries no build number. `general` is the most recent
  * note with content that is not item/hero changes, which can be a *newer,
  * different* update: a rework like "Matchmaking Update" touches no items at all,
- * while a pure balance patch has no general content. Both are surfaced so the
- * page can always show both blocks, ordered by their own dates.
+ * while a pure balance patch has no general content. The hotfix's general note
+ * (`skip`) is shown with the hotfix, so it is passed over here.
  */
 function pickNotes(
 	patches: RawPatch[],
 	versionDatetime: string,
 	knownNames: Set<string>,
+	skip = new Set<string>(),
 ) {
 	const steam = patches
 		.filter(
@@ -310,22 +323,18 @@ function pickNotes(
 			({ pub_date: a }, { pub_date: b }) => Date.parse(b) - Date.parse(a),
 		);
 
-	const buildDate = versionDatetime.slice(0, 10);
-	const balance =
-		steam.find(({ title }) => titleDate(title) === buildDate) ?? steam[0];
+	const balance = noteForBuild(
+		steam.map((patch) => ({ ...patch, pubDate: patch.pub_date })),
+		versionDatetime,
+	);
 
-	const general = steam.find(({ content }) =>
-		hasGeneralContent(content, knownNames),
+	const general = steam.find(
+		({ link, content }) =>
+			!skip.has(link) && hasGeneralContent(content, knownNames),
 	);
 
 	return {
-		general: general && {
-			title: general.title.trim(),
-			pubDate: general.pub_date,
-			link: general.link,
-			source: general.source,
-			html: sanitizeNotesHtml(generalHtml(general.content, knownNames)),
-		},
+		general: generalOf(general, knownNames),
 		balance: balance && {
 			title: balance.title.trim(),
 			pubDate: balance.pub_date,
@@ -405,36 +414,51 @@ async function ingest() {
 			buildItems.changed.length >
 			0 || Object.keys(buildHeroes).length > 0;
 
-	// A hotfix within the window merges into the page instead of replacing it.
-	// Metas written before windows existed: the build on the page opened one.
+	// A build within 6 days of the patch is one of its hotfixes: it goes into
+	// hotfix.json and leaves the patch's diff as it is. A build with nothing a
+	// player would see changes neither. Metas written before windows existed:
+	// the build on the page opened one.
 	const prevMeta = readJsonOr<PatchMeta | null>("patch-meta.json", null);
-	const currentWindow =
-		prevMeta &&
-		(prevMeta.window ?? {
-			startBuild: prevMeta.clientVersion,
-			startedAt: prevMeta.versionDatetime,
-			builds: [prevMeta.clientVersion],
-		});
-	const { action, window: patchWindow } = placeBuild(
-		currentWindow ?? undefined,
-		client_version,
-		version_datetime,
-		hasVisibleChanges,
-	);
+	const currentWindow: PatchWindow | undefined = prevMeta
+		? (prevMeta.window ?? {
+				startBuild: prevMeta.clientVersion,
+				startedAt: prevMeta.versionDatetime,
+			})
+		: undefined;
+	const newPatch = hasVisibleChanges && isNewPatch(currentWindow, version_datetime);
+	const patchWindow: PatchWindow =
+		newPatch || !currentWindow
+			? { startBuild: client_version, startedAt: version_datetime }
+			: currentWindow;
+	const hotfixTo =
+		hasVisibleChanges && !newPatch ? patchWindow.startBuild : undefined;
 	console.log(
-		`  build ${client_version}: ${action} (window of ${patchWindow.startBuild}, ` +
-			`builds ${patchWindow.builds.join(", ")})`,
+		`  build ${client_version}: ` +
+			(newPatch
+				? "new patch"
+				: hotfixTo
+					? `hotfix to ${hotfixTo}`
+					: "nothing visible changed"),
 	);
 
-	let itemChanges = buildItems;
-	let abilityTiers = buildTiers;
-	let heroChanges = buildHeroes;
-	if (action !== "open") {
-		// "keep" merges too: with nothing visible in this build the merge leaves
-		// the page as it is, but the tiers still pick up the current upgrades.
-		const itemByName = new Map(
-			(items as unknown as Item[]).map((item) => [item.name, item]),
-		);
+	// Hero and shop-item names, used to strip balance lines out of an unheaded
+	// note. Both payloads are already in memory, so this costs nothing.
+	const knownNames = new Set(
+		[
+			...heroes.map((hero) => hero.name),
+			...items.filter(isShopItem).map((item) => item.name),
+		].filter(Boolean) as string[],
+	);
+	const buildNote = pickNotes(patches, version_datetime, knownNames).balance;
+	const buildGeneral = generalOf(
+		patches.find(({ link }) => link === buildNote?.link),
+		knownNames,
+	);
+
+	let hotfix = readJsonOr<Hotfix | null>("hotfix.json", null);
+	if (newPatch) {
+		hotfix = null;
+	} else if (hotfixTo) {
 		const itemByClass = new Map(
 			(items as unknown as Item[]).map((item) => [item.class_name, item]),
 		);
@@ -447,38 +471,51 @@ async function ingest() {
 				}),
 			]),
 		);
-		itemChanges = mergeItemChanges(
-			readJsonOr<StoredItemChanges>("item-changes.json", {
-				added: [],
-				removed: [],
-				changed: [],
-			}),
-			buildItems,
-			itemByName,
-		);
-		abilityTiers = mergeAbilityTiers(
-			readJsonOr<Record<string, TierDiff[]>>("ability-tiers.json", {}),
-			buildTiers,
-		);
-		heroChanges = mergeHeroChanges(
-			readJsonOr<Record<string, HeroChanges>>("hero-changes.json", {}),
-			buildHeroes,
-			abilityTiers,
-			abilityNamesOf,
-		);
+		hotfix = {
+			builds: [
+				...(hotfix?.builds.filter((build) => build !== client_version) ?? []),
+				client_version,
+			],
+			builtAt: version_datetime,
+			note: buildNote,
+			// A hotfix note with nothing but balance lines keeps the last one's.
+			general: buildGeneral ?? hotfix?.general,
+			...mergeHotfix(
+				hotfix ?? undefined,
+				toHotfixChanges(buildItems, buildHeroes, buildTiers, abilityNamesOf),
+			),
+		};
 	}
-
-	const { added, removed, changed } = itemChanges;
 	console.log(
-		`  items: ${added.length} added, ${removed.length} removed, ` +
-			`${changed.length} changed`,
+		hotfix
+			? `  hotfix ${hotfix.builds.join(", ")}: ${Object.keys(hotfix.after).length} changed values`
+			: "  no hotfix",
 	);
-	console.log(`  heroes: ${Object.keys(heroChanges).length} changed`);
 
 	console.log("Writing artifacts:");
-	write("item-changes.json", itemChanges);
-	write("ability-tiers.json", abilityTiers);
-	write("hero-changes.json", heroChanges);
+	if (newPatch) {
+		const { added, removed, changed } = buildItems;
+		console.log(
+			`  items: ${added.length} added, ${removed.length} removed, ` +
+				`${changed.length} changed`,
+		);
+		console.log(`  heroes: ${Object.keys(buildHeroes).length} changed`);
+		write("item-changes.json", buildItems);
+		write("ability-tiers.json", buildTiers);
+		write("hero-changes.json", buildHeroes);
+	} else {
+		// Only a new patch writes these; a missing one is rebuilt empty so the
+		// page still loads.
+		const empty = {
+			"item-changes.json": { added: [], removed: [], changed: [] },
+			"ability-tiers.json": {},
+			"hero-changes.json": {},
+		};
+		for (const [file, data] of Object.entries(empty)) {
+			if (missing.includes(file)) write(file, data);
+		}
+	}
+	write("hotfix.json", hotfix);
 	write("latest-patch.json", items);
 	write("latest-heroes.json", heroes);
 	write("items-view.json", buildItemsView(items, heroes));
@@ -496,32 +533,22 @@ async function ingest() {
 				.map((hero) => [hero.class_name, hero.description]),
 		),
 	);
-	// Hero and shop-item names, used to strip balance lines out of an unheaded
-	// note. Both payloads are already in memory, so this costs nothing.
-	const knownNames = new Set(
-		[
-			...heroes.map((hero) => hero.name),
-			...items.filter(isShopItem).map((item) => item.name),
-		].filter(Boolean) as string[],
-	);
+	// The balance note is the patch's, not its latest hotfix's, and the
+	// hotfix's general note stays with the hotfix.
 	write(
 		"patch-notes.json",
-		// The balance note is the patch's, not its latest hotfix's.
-		pickNotes(patches, patchWindow.startedAt, knownNames),
+		pickNotes(
+			patches,
+			patchWindow.startedAt,
+			knownNames,
+			new Set(hotfix?.general ? [hotfix.general.link] : []),
+		),
 	);
 	write("patch-meta.json", {
 		clientVersion: client_version,
 		versionDatetime: version_datetime,
 		ingestedAt: new Date().toISOString(),
 		window: patchWindow,
-		counts: {
-			// The badge counts what the page shows, so it counts all three groups.
-			items: added.length + removed.length + changed.length,
-			// Same file the page reads, so the badge always matches the cards.
-			heroes: Object.keys(heroChanges).length,
-			upcomingHeroes: (heroes as unknown as Hero[]).filter(isUpcomingHero)
-				.length,
-		},
 	});
 
 	// Every new build gets a GitHub issue - the workflow opens it after the data
@@ -533,16 +560,15 @@ async function ingest() {
 			patchNotification({
 				build: client_version,
 				buildTime: version_datetime,
-				action,
-				window: patchWindow,
-				// This build's own changes, not the merged window.
+				hotfixTo,
+				// This build's own changes, not the merged hotfixes.
 				items: {
 					added: names(buildItems.added),
 					removed: names(buildItems.removed),
 					changed: names(buildItems.changed),
 				},
 				heroes: Object.keys(buildHeroes),
-				note: pickNotes(patches, version_datetime, knownNames).balance,
+				note: buildNote,
 			}),
 		);
 	}

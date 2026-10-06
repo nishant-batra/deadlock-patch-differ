@@ -296,20 +296,36 @@ export interface PatchMeta {
 	clientVersion: number;
 	versionDatetime: string;
 	ingestedAt: string;
-	/** `upcomingHeroes` is absent in metas ingested before it existed. */
-	counts: { items: number; heroes: number; upcomingHeroes?: number };
-	/** The patch the page shows, hotfixes included. Absent before windows existed. */
+	/** The patch the page shows. Absent before windows existed. */
 	window?: PatchWindow;
 }
 
-/** A patch and the hotfixes that followed it - see `app/lib/patchWindow.ts`. */
+/** A patch and its 6-day hotfix window - see `app/lib/patchWindow.ts`. */
 export interface PatchWindow {
 	/** The build that opened the window: the patch itself. */
 	startBuild: number;
 	/** That build's `version_datetime`; the window runs 6 days from it. */
 	startedAt: string;
-	/** Every build merged into the page, `startBuild` first. */
+}
+
+/**
+ * hotfix.json: every hotfix in the window since the patch, merged. `null` in
+ * the file when there is none. See `app/lib/hotfix.ts` for the key format.
+ */
+export interface Hotfix {
+	/** Oldest first. */
 	builds: number[];
+	/** The newest build's `version_datetime`. */
+	builtAt: string;
+	/** The newest build's Steam note. */
+	note?: NoteRef;
+	/**
+	 * The newest hotfix note's content that is not item/hero changes. The
+	 * patch's own `PatchNotes.general` never repeats it.
+	 */
+	general?: PatchNote;
+	before: Record<string, unknown>;
+	after: Record<string, unknown>;
 }
 
 export interface PatchNote {
@@ -331,11 +347,12 @@ export interface NoteRef {
 export interface PatchNotes {
 	/**
 	 * The most recent note with content that is not item/hero changes, with
-	 * those sections already stripped. May be a different (newer) update than
-	 * `balance` - a rework like "Matchmaking Update" changes no items at all.
+	 * those sections already stripped - other than the hotfix's own, which is
+	 * `Hotfix.general`. May be a different (newer) update than `balance` - a
+	 * rework like "Matchmaking Update" changes no items at all.
 	 */
 	general?: PatchNote;
-	/** The update the item/hero diff came from, matched by date in its title. */
+	/** The patch the item/hero diff came from - the window's first build. */
 	balance?: NoteRef;
 	recent: PatchNote[];
 }
@@ -378,8 +395,16 @@ export interface HeroChanges {
 	weapon: Change[];
 	/** Ability name -> its property/scaling/description moves. */
 	abilities: Record<string, Change[]>;
-	/** Released this patch - no playable baseline to diff, so no changes. */
+	/** Released by this build - no playable baseline to diff, so no changes. */
 	isNew?: true;
+}
+
+/** item-changes.json as ingest writes it. */
+export interface StoredItemChanges {
+	added: Array<{ name: string }>;
+	/** Carries the card data: a removed item is gone from items-view.json. */
+	removed: Array<{ name: string; snapshot: Item }>;
+	changed: Array<{ name: string; changes: DisplayChange[] }>;
 }
 
 export interface ChangedHero extends HeroEntry {

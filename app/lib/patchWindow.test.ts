@@ -1,11 +1,10 @@
 import { describe, expect, it } from "vitest";
 import type { PatchWindow } from "#/types";
-import { parseBuildTime, placeBuild } from "./patchWindow";
+import { isNewPatch, parseBuildTime } from "./patchWindow";
 
 const OPENED: PatchWindow = {
 	startBuild: 6712,
 	startedAt: "2026-09-24T18:00:00",
-	builds: [6712],
 };
 
 describe("parseBuildTime", () => {
@@ -25,57 +24,17 @@ describe("parseBuildTime", () => {
 	});
 });
 
-describe("placeBuild", () => {
-	it("opens the first window", () => {
-		expect(placeBuild(undefined, 6722, "2026-09-29T15:55:11", true)).toEqual({
-			action: "open",
-			window: {
-				startBuild: 6722,
-				startedAt: "2026-09-29T15:55:11",
-				builds: [6722],
-			},
-		});
+describe("isNewPatch", () => {
+	it("makes the first build a patch", () => {
+		expect(isNewPatch(undefined, "2026-09-29T15:55:11")).toBe(true);
 	});
 
-	it("merges a hotfix 5 days in and records its build", () => {
-		expect(placeBuild(OPENED, 6722, "2026-09-29T18:00:00", true)).toEqual({
-			action: "merge",
-			window: { ...OPENED, builds: [6712, 6722] },
-		});
+	it("makes a build within 6 days a hotfix", () => {
+		expect(isNewPatch(OPENED, "2026-09-29T18:00:00")).toBe(false);
 	});
 
-	it("opens a new window exactly 6 days in", () => {
-		expect(placeBuild(OPENED, 6730, "2026-09-30T18:00:00", true).action).toBe(
-			"open",
-		);
-	});
-
-	it("opens a new window 7 days in", () => {
-		expect(placeBuild(OPENED, 6730, "2026-10-01T18:00:00", true)).toEqual({
-			action: "open",
-			window: {
-				startBuild: 6730,
-				startedAt: "2026-10-01T18:00:00",
-				builds: [6730],
-			},
-		});
-	});
-
-	it("keeps page and window when a build has nothing visible, even late", () => {
-		expect(placeBuild(OPENED, 6722, "2026-09-29T18:00:00", false)).toEqual({
-			action: "keep",
-			window: OPENED,
-		});
-		expect(placeBuild(OPENED, 6730, "2026-10-09T18:00:00", false)).toEqual({
-			action: "keep",
-			window: OPENED,
-		});
-	});
-
-	it("merges a build already in the window however late it is re-published", () => {
-		expect(placeBuild(OPENED, 6712, "2026-10-09T18:00:00", true)).toEqual({
-			action: "merge",
-			window: OPENED,
-		});
+	it("makes a build 6 days in or later a new patch", () => {
+		expect(isNewPatch(OPENED, "2026-09-30T18:00:00")).toBe(true);
+		expect(isNewPatch(OPENED, "2026-10-01T18:00:00")).toBe(true);
 	});
 });
