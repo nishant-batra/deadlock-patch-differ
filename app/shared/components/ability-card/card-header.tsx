@@ -21,8 +21,18 @@ function Chip({
 					"outline-2 outline-[#f2c14e] outline-offset-2",
 			)}
 		>
+			{/* `lazy` opts out of React holding the popover's <ViewTransition>
+			    until every image decodes - on slow mobile networks that wait
+			    ran to its 800ms timeout before the popover appeared. */}
 			{icon && (
-				<img src={icon} alt="" width={14} height={14} className="opacity-75" />
+				<img
+					src={icon}
+					alt=""
+					width={14}
+					height={14}
+					loading="lazy"
+					className="opacity-75"
+				/>
 			)}
 			<PropertyValue property={property} previous={previous} />
 		</span>

@@ -69,8 +69,16 @@ export default function StatBox({
 					title={scaling.icon?.label}
 					className="absolute top-1.5 right-2 flex items-center gap-1 font-semibold text-[#d2cbbb] text-[10px]"
 				>
+					{/* `lazy` keeps these icons from delaying the popover's
+					    <ViewTransition> - see card-header.tsx. */}
 					{scaling.icon && (
-						<img src={scaling.icon.src} alt="" width={14} height={14} />
+						<img
+							src={scaling.icon.src}
+							alt=""
+							width={14}
+							height={14}
+							loading="lazy"
+						/>
 					)}
 					{previousScale !== undefined && (
 						<PreviousValue value={previousScale} />
@@ -79,7 +87,9 @@ export default function StatBox({
 				</span>
 			)}
 			<span className="flex items-center gap-1.5 font-bold text-[#f4efe4] text-[1.75rem] leading-none">
-				{icon && <img src={icon} alt="" width={22} height={22} />}
+				{icon && (
+					<img src={icon} alt="" width={22} height={22} loading="lazy" />
+				)}
 				<PropertyValue
 					property={property}
 					previous={previous}
