@@ -90,12 +90,28 @@ describe("abilityLedger", () => {
 			change(["tooltip_details", "info_sections", "0", "loc_string"], "a", "b"),
 		]),
 		entry("TierText", [], tiers({ text: { old: "a", new: "b" } })),
+		entry(
+			"TierRestated",
+			[],
+			tiers({
+				rows: [
+					{ key: "Cooldown", label: "Cooldown", kind: "removed", old: -20 },
+				],
+				text: {
+					old: "-20s Cooldown and +1m Move Speed",
+					new: "+1m Move Speed",
+				},
+			}),
+		),
 		entry("Other", [change(["activation"], "press", "instant_cast")]),
 		entry("TierOnly", [change(["upgrades", "0", "property_upgrades"], [], [])]),
 	]);
 
 	it("spells out number moves, prefixing tier rows and skipping equal ones", () => {
-		expect(sections).toHaveLength(1);
+		expect(sections.map(({ ability }) => ability.name)).toEqual([
+			"Numbers",
+			"TierRestated",
+		]);
 		const [{ ability, rows, tierRows }] = sections;
 		expect(ability.name).toBe("Numbers");
 		expect(rows.map(({ label }) => label)).toEqual(["Damage"]);
@@ -110,7 +126,7 @@ describe("abilityLedger", () => {
 		]);
 	});
 
-	it("names abilities with wording or unrecognised changes, but not tier-only moves", () => {
+	it("names abilities with wording or unrecognised changes, but not tier-only moves or tier text restating them", () => {
 		expect(wording.map(({ ability }) => ability.name)).toEqual([
 			"Reworded",
 			"TierText",

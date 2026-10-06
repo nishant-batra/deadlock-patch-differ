@@ -1,4 +1,4 @@
-import type { TierRow } from "#/lib/abilityUpgrades";
+import type { TierDiff, TierRow } from "#/lib/abilityUpgrades";
 import { isScaleChange, isStatChange } from "#/lib/diffEngine";
 import { abilityDeltaRow } from "#/shared/components/ability-card/utils";
 import type { DeltaRow } from "#/shared/components/stat-delta";
@@ -21,12 +21,21 @@ const isTierCovered = ({ path }: Change) =>
 	(path[0] === "description" && /^t\d_desc$/.test(path[1]));
 
 /**
+ * A tier blurb ("+150 Damage and +15% Damage Reduction") restates that tier's
+ * bonuses, so when a bonus moved the rewrite is just the number again - the
+ * tier rows already show it. Only a rewrite with every bonus unchanged is
+ * real wording. The popover still shows the text diff either way.
+ */
+const isTierRewording = ({ text, rows }: TierDiff) =>
+	Boolean(text) && rows.every(({ kind }) => kind === "equal");
+
+/**
  * Splits a hero's ability changes into what the card spells out and what it
  * only names. Number moves (property values, spirit scaling, upgrade-tier
  * bonuses) go in `sections`, one per ability, in kit order. Wording rewrites -
- * description and tier text - plus anything else unrecognised go in `wording`,
- * which the card collapses to a single line of ability names. An ability with
- * both lands in both.
+ * description and tier text whose bonuses did not move - plus anything else
+ * unrecognised go in `wording`, which the card collapses to a single line of
+ * ability names. An ability with both lands in both.
  */
 export function abilityLedger(abilities: AbilityChange[]) {
 	const sections: LedgerSection[] = [];
@@ -46,7 +55,7 @@ export function abilityLedger(abilities: AbilityChange[]) {
 				})),
 		);
 		const hasWording =
-			changes.some(isTextChange) || tiers.some(({ text }) => text);
+			changes.some(isTextChange) || tiers.some(isTierRewording);
 		const hasOther = changes.some(
 			(change) =>
 				!isStatChange(change) &&
