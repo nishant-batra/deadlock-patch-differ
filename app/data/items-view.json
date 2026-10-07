@@ -121266,9 +121266,6 @@
 				"RisingGravityScalePercent": {
 					"value": "50"
 				},
-				"HeavyMeleeEndGraceTime": {
-					"value": "0.6"
-				},
 				"EndLaunchMaxLingerTime": {
 					"value": "3"
 				},
