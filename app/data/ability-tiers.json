@@ -175,8 +175,7 @@
 				{
 					"key": "MovementSlow|#0",
 					"label": "Movement Slow",
-					"kind": "changed",
-					"old": "25",
+					"kind": "equal",
 					"new": "20",
 					"postfix": "%"
 				}
@@ -213,8 +212,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "30",
+					"kind": "equal",
 					"new": "24",
 					"prefix": "-",
 					"postfix": "%"
@@ -266,8 +264,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "30",
+					"kind": "equal",
 					"new": "24",
 					"prefix": "-",
 					"postfix": "%"
@@ -773,11 +770,7 @@
 					"prefix": "",
 					"postfix": ""
 				}
-			],
-			"text": {
-				"old": "<span class=\"highlight\">+40</span> Impact Damage<br><span class=\"highlight\">+13.3333</span> Burn Damage per Second<br><span class=\"highlight\">-5</span> Charge Time<br><span class=\"highlight\">Improved Spirit Scaling</span>",
-				"new": "<span class=\"highlight\">+40</span> Impact Damage<br><span class=\"highlight\">+13.3333</span> Burn Damage per Second<br><span class=\"highlight\">-5</span>s Charge Time<br><span class=\"highlight\">Improved Spirit Scaling</span>"
-			}
+			]
 		}
 	],
 	"Bounce Pad": [
@@ -1606,8 +1599,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "26",
+					"kind": "equal",
 					"new": "32",
 					"prefix": "-",
 					"postfix": "%"
@@ -1787,11 +1779,7 @@
 					"new": "2.3",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "<span class=\"highlight\">2.3s</span> Silence Duration <br><span class=\"highlight\">+35.0%</span> Weapon Damage",
-				"new": "Silences enemies for <span class=\"highlight\">2.3s</span><br><span class=\"highlight\">+35.0%</span> Weapon Damage"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -3301,11 +3289,7 @@
 					"new": "-35",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "Applies <span class=\"highlight\">-35%</span> Healing Reduction",
-				"new": "Reduces <span class=\"highlight\">Incoming Healing</span> by <span class=\"highlight\">-35%</span>"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -4302,11 +4286,7 @@
 					"new": "2",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "",
-				"new": "+1 Charge<br>+2s Duration"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -4325,11 +4305,7 @@
 					"new": "0.13",
 					"scaling": "ETechPower"
 				}
-			],
-			"text": {
-				"old": "",
-				"new": "-15% Damage Penalty <br>Increased Spirit scaling"
-			}
+			]
 		}
 	],
 	"Traveler": [
@@ -4487,11 +4463,7 @@
 					"new": "2m",
 					"postfix": "m"
 				}
-			],
-			"text": {
-				"old": "<span class=\"highlight\">+4s</span> Burrow time and +2 radius",
-				"new": "<span class=\"highlight\">+4s</span> Burrow time and +2m radius"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -5990,11 +5962,7 @@
 					"new": 0.9,
 					"scaling": "ETechPower"
 				}
-			],
-			"text": {
-				"old": "Bounces 1 times and improves Spirit Scaling",
-				"new": "+1 Bounces and improved Spirit Scaling"
-			}
+			]
 		}
 	],
 	"The Cube": [
@@ -6782,8 +6750,7 @@
 				{
 					"key": "EnemyMoveSlow|#0",
 					"label": "Enemy Move Slow",
-					"kind": "changed",
-					"old": "13",
+					"kind": "equal",
 					"new": "16",
 					"postfix": "%"
 				}
@@ -7236,11 +7203,7 @@
 					"new": "-12",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "<span class=\"highlight\">-40%</span> Healing Reduction and <span class=\"highlight\">-12s</span> Cooldown",
-				"new": "<span class=\"highlight\">-40%</span> Incoming Healing and <span class=\"highlight\">-12s</span> Cooldown"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -7684,8 +7647,9 @@
 				{
 					"key": "Radius|#0",
 					"label": "Radius",
-					"kind": "equal",
-					"new": "3m",
+					"kind": "changed",
+					"old": "3m",
+					"new": "2m",
 					"postfix": "m"
 				},
 				{
@@ -7695,7 +7659,11 @@
 					"new": "7",
 					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+3m</span> Radius",
+				"new": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+2m</span> Radius"
+			}
 		}
 	],
 	"Civil Servant": [
@@ -7719,8 +7687,7 @@
 				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "changed",
-					"old": "14",
+					"kind": "equal",
 					"new": "16",
 					"prefix": "-",
 					"postfix": "%"
@@ -10467,11 +10434,7 @@
 					"new": -40,
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "<span class=\"highlight\">+1.5% Bleed</span> and <span class=\"highlight\">-40.0% Healing Reduction</span>",
-				"new": "<span class=\"highlight\">+1.5% Bleed</span> and <span class=\"highlight\">-40.0% Incoming Healing</span>"
-			}
+			]
 		}
 	],
 	"Bloodscent": [
@@ -10561,11 +10524,7 @@
 					"kind": "equal",
 					"new": "1"
 				}
-			],
-			"text": {
-				"old": "+2.5s Duration and +1 Max Targets.",
-				"new": "+2.5s Duration and +1 Max Target."
-			}
+			]
 		}
 	],
 	"Opera Gun": [
@@ -10906,11 +10865,7 @@
 					"new": "3",
 					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "<span class=\"highlight\">-20%</span> Healing Reduction and allow Charges",
-				"new": "<span class=\"highlight\">-20%</span> Incoming Healing and allow Charges"
-			}
+			]
 		}
 	],
 	"Hex-Lined Snap Trap": [
@@ -12182,6 +12137,540 @@
 					"postfix": "%"
 				}
 			]
+		}
+	],
+	"Bunko-Night Special": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Threadsap": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MagicDamagePerBullet|#0",
+					"label": "Magic Damage Per Bullet",
+					"kind": "equal",
+					"new": "8"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-12",
+					"postfix": "s"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "8",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "PullDistance|#0",
+					"label": "Pull Distance",
+					"kind": "equal",
+					"new": "7m"
+				}
+			]
+		}
+	],
+	"Granny Long Legs": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "equal",
+					"new": "2.5m",
+					"prefix": "{s:sign}",
+					"postfix": " m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -7,
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "StatusResistancePercent|#0",
+					"label": "Status Resistance Percent",
+					"kind": "equal",
+					"new": "15",
+					"prefix": "{s:sign}",
+					"postfix": "%"
+				},
+				{
+					"key": "MeleeResist|#0",
+					"label": "Melee Resist",
+					"kind": "equal",
+					"new": "15",
+					"prefix": "+",
+					"postfix": "%"
+				},
+				{
+					"key": "MeleeLifesteal|#0",
+					"label": "Melee Lifesteal",
+					"kind": "equal",
+					"new": "50",
+					"postfix": "%"
+				}
+			]
+		}
+	],
+	"Baba's Brew": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "3m",
+					"postfix": "m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-12",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BrewEffectiveness|#0",
+					"label": "Brew Effectiveness",
+					"kind": "equal",
+					"new": "33.33"
+				},
+				{
+					"key": "DamagePerSecond|EMultiplyBase#0",
+					"label": "Damage Per Second",
+					"kind": "equal",
+					"new": "33.33"
+				},
+				{
+					"key": "DamagePerSecond|EMultiplyScale#0",
+					"label": "Damage Per Second",
+					"kind": "equal",
+					"new": 1.3333,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "CombatBarrier|EMultiplyBase#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "33.33"
+				},
+				{
+					"key": "CombatBarrier|EMultiplyScale#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": 1.3333,
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "SilenceDuration|EMultiplyBase#0",
+					"label": "Silence Duration",
+					"kind": "equal",
+					"new": "33.33",
+					"postfix": "s"
+				},
+				{
+					"key": "SpiritResistReduction|EMultiplyBase#0",
+					"label": "Spirit Resist Reduction",
+					"kind": "equal",
+					"new": "33.33",
+					"prefix": "{s:sign}",
+					"postfix": "%"
+				}
+			]
+		}
+	],
+	"Feed The Birds": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MaxSlow|#0",
+					"label": "Max Slow",
+					"kind": "equal",
+					"new": "32",
+					"postfix": "%"
+				},
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "4m",
+					"postfix": "m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-55",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BarrageMaxDamage|#0",
+					"label": "Barrage Max Damage",
+					"kind": "equal",
+					"new": "125"
+				},
+				{
+					"key": "HexDuration|#0",
+					"label": "Hex Duration",
+					"kind": "equal",
+					"new": "0.5",
+					"postfix": "s"
+				},
+				{
+					"key": "BarrageMaxDamage|EAddToScale#0",
+					"label": "Barrage Max Damage",
+					"kind": "equal",
+					"new": 1.5,
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Sovereign's Decree": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Rat Swarm": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "RatSwarmCols|#0",
+					"label": "Rat Swarm Cols",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "RatSwarmRows|#0",
+					"label": "Rat Swarm Rows",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "RatSwarmWidth|#0",
+					"label": "Rat Swarm Width",
+					"kind": "equal",
+					"new": "100"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "4",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ArmorReductionPerBite|#0",
+					"label": "Armor Reduction Per Bite",
+					"kind": "equal",
+					"new": "-1",
+					"postfix": "%"
+				},
+				{
+					"key": "DamagePerBite|#0",
+					"label": "Damage Per Bite",
+					"kind": "equal",
+					"new": "8"
+				}
+			]
+		}
+	],
+	"Scrap Grenade": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-8",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "DamagePerShrapnel|#0",
+					"label": "Damage Per Shrapnel",
+					"kind": "changed",
+					"old": "65",
+					"new": "70"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Detonations|#0",
+					"label": "Detonations",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "BigExplosionDamage|#0",
+					"label": "Big Explosion Damage",
+					"kind": "equal",
+					"new": "300"
+				},
+				{
+					"key": "BigExplosionDamage|EAddToScale#0",
+					"label": "Big Explosion Damage",
+					"kind": "equal",
+					"new": "1.0",
+					"scaling": "EBaseWeaponDamageIncrease"
+				},
+				{
+					"key": "BigExplosionRadius|#0",
+					"label": "Big Explosion Radius",
+					"kind": "equal",
+					"new": "14m",
+					"postfix": "m"
+				},
+				{
+					"key": "BigExplosionRadius|EAddToScale#0",
+					"label": "Big Explosion Radius",
+					"kind": "equal",
+					"new": "1",
+					"scaling": "ETechRange",
+					"postfix": "m"
+				},
+				{
+					"key": "BigExplosionSlowPercent|EAddToScale#0",
+					"label": "Big Explosion Slow Percent",
+					"kind": "equal",
+					"new": "0.12",
+					"scaling": "ETechPower",
+					"postfix": "%"
+				}
+			]
+		}
+	],
+	"Royal Pestments": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "4",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "ReturnFireChance|#0",
+					"label": "Return Fire Chance",
+					"kind": "equal",
+					"new": "15",
+					"postfix": "%"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-8",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxHealthPct|#0",
+					"label": "Max Health Pct",
+					"kind": "equal",
+					"new": "10",
+					"postfix": "%"
+				},
+				{
+					"key": "MaxDamagePerHit|#0",
+					"label": "Max Damage Per Hit",
+					"kind": "equal",
+					"new": "250"
+				}
+			]
+		}
+	],
+	"Rule, Ratannia!": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BonusMoveSpeed|#0",
+					"label": "Bonus Move Speed",
+					"kind": "changed",
+					"old": "1m",
+					"new": "2m",
+					"prefix": "{s:sign}",
+					"postfix": " m"
+				},
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "removed",
+					"old": "-20",
+					"postfix": "s"
+				}
+			],
+			"text": {
+				"old": "-20s Cooldown and +1m Move Speed",
+				"new": "+2m Move Speed"
+			}
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "FlagDuration|#0",
+					"label": "Flag Duration",
+					"kind": "changed",
+					"old": "8",
+					"new": "5",
+					"postfix": "s"
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "8m",
+					"postfix": "m"
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "removed",
+					"old": "8",
+					"postfix": "s"
+				}
+			],
+			"text": {
+				"old": "+8s Charge Duration<br>+8s Flag Duration<br>+8m Radius",
+				"new": "+5s Flag Duration<br>+8m Radius"
+			}
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "150"
+				},
+				{
+					"key": "AllyDamageReduction|#0",
+					"label": "Ally Damage Reduction",
+					"kind": "changed",
+					"old": "15",
+					"new": "10",
+					"postfix": "%"
+				}
+			],
+			"text": {
+				"old": "+150 Damage and +15% Damage Reduction",
+				"new": "+150 Damage and +10% Damage Reduction"
+			}
 		}
 	]
 }

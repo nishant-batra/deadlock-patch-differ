@@ -26,15 +26,18 @@ export const ABILITY_SLOTS = [
  *
  * The catalog ships every hero Valve has in the build, including unreleased and
  * experimental ones - Raven was rendering as a changed hero despite not being in
- * play. Measured on the current catalog of 57:
+ * play. Measured on the build 6757 catalog of 65:
  *
- *   player_selectable && !disabled && !in_development  -> 38  (the live roster)
- *   !player_selectable                                 -> 14  (Raven, Fathom, Kali, …)
- *   player_selectable && disabled && in_development    ->  5  (Hero Labs: Boho,
- *                                                             Skyrunner, Swan, Graf, Fortuna)
+ *   player_selectable && !disabled                -> 40  (the live roster)
+ *   !player_selectable && disabled                -> 21  (Hero Labs and scrapped:
+ *                                                         Raven, Boho, Fathom, …)
+ *   !player_selectable && !disabled               ->  4  (announced, see below)
  *
- * Hero Labs heroes are excluded too: `disabled` is the game's own signal that
- * they are not in normal play.
+ * `in_development` is deliberately NOT checked: Baba shipped in build 6757 as
+ * `player_selectable`, `development_state: "release"` and still
+ * `in_development: true`, and requiring it to be false dropped Baba from both
+ * the roster and the Changes page. `disabled` is the game's own signal that a
+ * hero is not in normal play, and every Hero Labs / scrapped hero carries it.
  *
  * Shared by ingest (which heroes get a hero-changes.json entry) and every
  * roster page - if they disagree, the nav badge stops matching the cards.
@@ -42,13 +45,10 @@ export const ABILITY_SLOTS = [
 export const isLiveHero = ({
 	player_selectable,
 	disabled,
-	in_development,
 }: {
 	player_selectable?: boolean;
 	disabled?: boolean;
-	in_development?: boolean;
-}) =>
-	player_selectable === true && disabled !== true && in_development !== true;
+}) => player_selectable === true && disabled !== true;
 
 /**
  * An announced hero that is not playable yet. Valve ships these in the catalog
