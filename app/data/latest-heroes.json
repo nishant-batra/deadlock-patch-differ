@@ -432,6 +432,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/infernus_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/infernus.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/inferno/inferno/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_inferno_set",
 			"weapon_melee": "ability_melee_inferno",
@@ -2439,6 +2442,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/seven_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/seven.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/gigawatt_prisoner/gigawatt_prisoner/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_gigawatt_set",
 			"weapon_melee": "citadel_ability_melee_gigawatt",
@@ -4373,6 +4379,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/vindicta_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/vindicta_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/vindicta.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/hornet_v3/hornet/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_hornet_set",
@@ -6337,6 +6346,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/geist_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/geist_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/lady_geist.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/geist/geist/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_ghost_set",
@@ -8321,6 +8333,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/abrams_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/abrams.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/abrams/abrams/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_bull_set",
 			"weapon_melee": "citadel_ability_melee_bull",
@@ -10237,6 +10252,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/wraith_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/wraith_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/wraith.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/wraith/wraith/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_wraith_set",
@@ -12244,6 +12262,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/mcginnis_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/mcginnis.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/mcginnis/mcginnis/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_engineer_set",
 			"weapon_melee": "citadel_ability_melee_engineer",
@@ -14233,6 +14254,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/paradox_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/paradox.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/chrono/chrono/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_chrono_set",
 			"weapon_melee": "citadel_ability_melee_chrono",
@@ -16191,6 +16215,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/dynamo_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/dynamo_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/dynamo.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/dynamo/dynamo/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_sumo_set",
@@ -18152,6 +18179,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/kelvin_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/kelvin.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/kelvin_v2/kelvin/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_kelvin_set",
 			"weapon_melee": "ability_melee_kelvin",
@@ -20105,6 +20135,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/haze_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/haze_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/haze.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/haze/haze/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_haze_set",
@@ -22118,6 +22151,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/astro_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/holliday.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/astro/astro/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_astro_set",
 			"weapon_melee": "ability_melee_astro",
@@ -24125,6 +24161,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/bebop_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/bebop.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/bebop/bebop/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_bebop_set",
 			"weapon_melee": "citadel_ability_melee_bebop",
@@ -25987,6 +26026,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/calico_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/calico_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/calico.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/nano/nano_v2/nano/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_nano_set",
@@ -27886,6 +27928,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/grey_talon_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/grey_talon_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/grey_talon.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/archer/archer/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_archer_set",
@@ -29818,6 +29863,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/krill_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/krill_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/mo_krill.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/digger/digger/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_digger_set",
@@ -31761,6 +31809,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/shiv_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/shiv_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/shiv.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/shiv/shiv/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_shiv_set",
@@ -33782,6 +33833,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/ivy_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/ivy.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/ivy/ivy/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_tengu_set",
 			"weapon_melee": "citadel_ability_melee_tengu",
@@ -35270,6 +35324,9 @@
 			"icon_image_small_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/kali_sm.webp",
 			"minimap_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/kali_mm.png",
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/kali_mm.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_kali_set",
@@ -37212,6 +37269,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/warden_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/warden_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/warden.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/warden/warden/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_warden_set",
@@ -39199,6 +39259,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/yamato_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/yamato.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/yamato_v2/yamato/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_yamato_set",
 			"weapon_melee": "ability_melee_yamato",
@@ -41103,6 +41166,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/lash_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/lash_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/lash.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/lash/lash/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_lash_set",
@@ -43139,6 +43205,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/viscous_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/viscous.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/viscous/viscous/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_viscous_set",
 			"weapon_melee": "ability_melee_viscous",
@@ -44629,6 +44698,9 @@
 			"minimap_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/gunslinger_mm.png",
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/gunslinger_mm.webp"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/chrono/chrono/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_gunslinger2_set",
 			"weapon_melee": "citadel_ability_melee_gunslinger",
@@ -46106,6 +46178,9 @@
 			"icon_image_small_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/yakuza_sm.webp",
 			"minimap_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/yakuza_mm.png",
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/yakuza_mm.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_yakuza_set",
@@ -47590,6 +47665,9 @@
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/wrecker_mm.webp",
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/wrecker_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/wrecker_vertical.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/wrecker/wrecker/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_wrecker_set",
@@ -49076,6 +49154,9 @@
 			"icon_image_small_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/rutger_sm.webp",
 			"minimap_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/rutger_mm.png",
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/rutger_mm.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_rutger_set",
@@ -50983,6 +51064,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/pocket_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/pocket.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/pocket/pocket/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_synth_set",
 			"weapon_melee": "citadel_ability_melee_genericperson",
@@ -52475,6 +52559,9 @@
 			"icon_image_small_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/thumper_sm.webp",
 			"minimap_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/thumper_mm.png",
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/thumper_mm.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_thumper_set",
@@ -54322,6 +54409,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/mirage_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/mirage.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/mirage_v2/mirage/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_mirage_set",
 			"weapon_melee": "ability_melee_mirage",
@@ -55817,6 +55907,9 @@
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/slork_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/slork_vertical.webp"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_slork_set",
 			"weapon_melee": "citadel_ability_melee_genericperson",
@@ -57300,6 +57393,9 @@
 			"minimap_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/cadence_mm.png",
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/cadence_mm.webp"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_cadence_set",
 			"weapon_melee": "citadel_ability_melee_cadence",
@@ -58771,6 +58867,9 @@
 		"complexity": 1,
 		"skin": 0,
 		"images": {},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_bomber_set",
 			"weapon_melee": "ability_melee_bomber",
@@ -60242,6 +60341,9 @@
 		"complexity": 1,
 		"skin": 0,
 		"images": {},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_shieldguy_set",
 			"weapon_melee": "ability_melee_shieldguy",
@@ -62202,6 +62304,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/vyper_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/vyper.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/viper/viper/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_viper_set",
 			"weapon_melee": "ability_melee_viper",
@@ -63697,6 +63802,9 @@
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/vandal_mm.webp",
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/vandal_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/vandal_vertical.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_vandal_set",
@@ -65650,6 +65758,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/magician_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/sinclair.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/magician_v2/magician/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_magician_set",
 			"weapon_melee": "ability_melee_magician",
@@ -67151,6 +67262,9 @@
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/trapper_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/trapper_vertical.webp"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_trapper_set",
 			"weapon_melee": "ability_melee_trapper",
@@ -68643,6 +68757,9 @@
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/operative_mm.webp",
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/operative_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/operative_vertical.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/operative/operative/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_operative_set",
@@ -70478,6 +70595,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/mina_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/mina_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/mina.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/vampirebat/vampirebat/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_vampirebat_set",
@@ -72520,6 +72640,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/drifter_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/drifter.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/drifter/drifter/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_drifter_set",
 			"weapon_melee": "ability_melee_drifter",
@@ -74470,6 +74593,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/priest_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/priest_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/priest.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/priest/priest/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_priest_set",
@@ -76430,6 +76556,9 @@
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/victor_bg.png",
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/victor_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/victor.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/frank/frank/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_frank_set2",
@@ -78427,6 +78556,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/patience_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/paige.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/bookworm/bookworm/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_bookworm_set2",
 			"weapon_melee": "ability_melee_bookworm",
@@ -79918,6 +80050,7 @@
 			"icon_image_small": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/hornet_sm.png",
 			"icon_image_small_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/hornet_sm.webp"
 		},
+		"models": {},
 		"items": {
 			"weapon_primary": "citadel_weapon_boho_set",
 			"weapon_melee": "ability_melee_boho",
@@ -81857,6 +81990,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/doorman_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/doorman.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/doorman_v2/doorman/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_doorman_set",
 			"weapon_melee": "ability_melee_doorman",
@@ -83349,6 +83485,9 @@
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/skyrunner_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/skyrunner_vertical.webp"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/lash/lash/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_skyrunner_set",
 			"weapon_melee": "ability_melee_skyrunner",
@@ -84839,6 +84978,9 @@
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/swan_mm.webp",
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/swan_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/swan_vertical.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/chrono/chrono/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_swan_set",
@@ -86815,6 +86957,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/billy_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/billy.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/punkgoat/punkgoat/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_punkgoat_set",
 			"weapon_melee": "ability_melee_punkgoat",
@@ -88306,6 +88451,7 @@
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/druid_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/druid_vertical.webp"
 		},
+		"models": {},
 		"items": {
 			"weapon_primary": "citadel_weapon_druid_set",
 			"weapon_melee": "ability_melee_druid",
@@ -89793,6 +89939,7 @@
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/graf_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/graf_vertical.webp"
 		},
+		"models": {},
 		"items": {
 			"weapon_primary": "citadel_weapon_graf_set",
 			"weapon_melee": "ability_melee_graf",
@@ -91282,6 +91429,7 @@
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/fortuna_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/fortuna_vertical.webp"
 		},
+		"models": {},
 		"items": {
 			"weapon_primary": "citadel_weapon_fortuna_set",
 			"weapon_melee": "ability_melee_fortuna",
@@ -93244,6 +93392,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/necro_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/necro.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/necro/necro/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_necro_set",
 			"weapon_melee": "ability_melee_necro",
@@ -95189,6 +95340,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/fencer_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/fencer.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/fencer/fencer/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_fencer_set",
 			"weapon_melee": "ability_melee_fencer",
@@ -96684,6 +96838,9 @@
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/deadpack.svg",
 			"vote_sticker": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_deadpack.png",
 			"vote_sticker_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_deadpack.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/deadpack/deadpack/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_inferno_set",
@@ -98698,6 +98855,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/familiar_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/familiar.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/familiar/familiar_wip/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "ability_familiar_primary_weapon_bubblegun",
 			"weapon_melee": "ability_melee_familiar",
@@ -100673,6 +100833,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/werewolf_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/werewolf.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/werewolf/werewolf/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_werewolf_rifle",
 			"weapon_melee": "ability_melee_werewolf",
@@ -102636,6 +102799,9 @@
 			"background_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/unicorn_bg.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/unicorn.svg"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/unicorn/unicorn/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_unicorn_set",
 			"weapon_melee": "ability_melee_unicorn",
@@ -104119,6 +104285,9 @@
 		"complexity": 1,
 		"skin": 0,
 		"images": {},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_opera_set",
 			"weapon_melee": "ability_melee_opera",
@@ -105610,6 +105779,9 @@
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/nano_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/nano_vertical.webp",
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/calico.svg"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_staging/nano/nano_v2/nano/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_testhero_set",
@@ -107575,6 +107747,9 @@
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/ratking.svg",
 			"vote_sticker": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_ratking.png",
 			"vote_sticker_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_ratking.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/ratking/ratking/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_ratking_set",
@@ -109555,6 +109730,9 @@
 			"vote_sticker": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_chessmaster.png",
 			"vote_sticker_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_chessmaster.webp"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/chessmaster/chessmaster/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_chessmaster_shotgun",
 			"weapon_melee": "ability_melee_chessmaster",
@@ -111056,6 +111234,9 @@
 			"vote_sticker": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_artist.png",
 			"vote_sticker_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_artist.webp"
 		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/artist/artist/hero_select.glb"
+		},
 		"items": {
 			"weapon_primary": "citadel_weapon_inferno_set",
 			"weapon_melee": "ability_melee_inferno",
@@ -112542,6 +112723,9 @@
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/nurse.svg",
 			"vote_sticker": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_nurse.png",
 			"vote_sticker_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_nurse.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/nurse/nurse/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_inferno_set",
@@ -114600,6 +114784,9 @@
 			"name_image": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/heroes/hero_names/baba.svg",
 			"vote_sticker": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_baba.png",
 			"vote_sticker_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/events/voting_sept2026/sticker_baba.webp"
+		},
+		"models": {
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/baba/baba/hero_select.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_baba_set",
