@@ -206,7 +206,9 @@
 	"hero_ratking": {
 		"lore": "The cryptid ruler of the New York Warrens,  The Rat King towers over his subjects in size, strength, and ambition.  No longer content with hiding underground, the king has revealed his bold vision for a future where he and his subjects can walk the surface without fear of the pest control vans that roam the streets of New York (or as the rats call them: human death squads)\n\nStep 1: Take control of Long Island\nStep 2: Declare Long Island as the new sovereign nation of Ratannia\nStep 3: Execute every human that refuses to leave this new rat utopia\n\nBut air tight as this plan is, the king of rats didn't want to take chances: and so he’s decided to the summon the patron to help hedge his bets."
 	},
-	"hero_chessmaster": {},
+	"hero_chessmaster": {
+		"lore": "In a world that moves too fast, Solomon is content to stop and listen. Offering a friendly ear and good counsel, Solomon has found himself sitting across the chess table from tourists, criminals, and titans of industry.  But no matter his opponent, Solomon remains un-phased… because to him, chess is so much more than a game.  It's an equalizer.  A way for him to connect to people from all walks of life on an even playing field."
+	},
 	"hero_artist": {},
 	"hero_nurse": {},
 	"hero_baba": {
