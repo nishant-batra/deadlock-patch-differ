@@ -35326,7 +35326,8 @@
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/kali_mm.webp"
 		},
 		"models": {
-			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb",
+			"idle": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/idle.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_kali_set",
@@ -46180,7 +46181,8 @@
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/yakuza_mm.webp"
 		},
 		"models": {
-			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb",
+			"idle": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/idle.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_yakuza_set",
@@ -49156,7 +49158,8 @@
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/rutger_mm.webp"
 		},
 		"models": {
-			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb",
+			"idle": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/idle.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_rutger_set",
@@ -52561,7 +52564,8 @@
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/thumper_mm.webp"
 		},
 		"models": {
-			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb",
+			"idle": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/idle.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_thumper_set",
@@ -55908,7 +55912,8 @@
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/slork_vertical.webp"
 		},
 		"models": {
-			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb",
+			"idle": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/idle.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_slork_set",
@@ -57394,7 +57399,8 @@
 			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/cadence_mm.webp"
 		},
 		"models": {
-			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb",
+			"idle": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/idle.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_cadence_set",
@@ -58868,7 +58874,8 @@
 		"skin": 0,
 		"images": {},
 		"models": {
-			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb",
+			"idle": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/idle.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_bomber_set",
@@ -60342,7 +60349,8 @@
 		"skin": 0,
 		"images": {},
 		"models": {
-			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb",
+			"idle": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/idle.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_shieldguy_set",
@@ -63804,7 +63812,8 @@
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/vandal_vertical.webp"
 		},
 		"models": {
-			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb",
+			"idle": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/idle.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_vandal_set",
@@ -67263,7 +67272,8 @@
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/trapper_vertical.webp"
 		},
 		"models": {
-			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb",
+			"idle": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/idle.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_trapper_set",
@@ -104286,7 +104296,8 @@
 		"skin": 0,
 		"images": {},
 		"models": {
-			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb"
+			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/hero_select.glb",
+			"idle": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/gen_man/gen_man/idle.glb"
 		},
 		"items": {
 			"weapon_primary": "citadel_weapon_opera_set",
