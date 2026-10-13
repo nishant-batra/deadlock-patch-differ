@@ -7647,8 +7647,7 @@
 				{
 					"key": "Radius|#0",
 					"label": "Radius",
-					"kind": "changed",
-					"old": "3m",
+					"kind": "equal",
 					"new": "2m",
 					"postfix": "m"
 				},
@@ -7659,11 +7658,7 @@
 					"new": "7",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+3m</span> Radius",
-				"new": "<span class=\"highlight\">+7%</span> Damage Amp and <span class=\"highlight\">+2m</span> Radius"
-			}
+			]
 		}
 	],
 	"Civil Servant": [
@@ -12393,6 +12388,499 @@
 			]
 		}
 	],
+	"Alekhine's Gun": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Setup Bishop": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "MoveDistance|#0",
+					"label": "Move Distance",
+					"kind": "equal",
+					"new": "5m",
+					"postfix": "m"
+				},
+				{
+					"key": "FadingSlowPercent|#0",
+					"label": "Fading Slow Percent",
+					"kind": "equal",
+					"new": "15",
+					"prefix": "-",
+					"postfix": "%"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "MaxPieces|#0",
+					"label": "Max Pieces",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "RecastWindow|#0",
+					"label": "Recast Window",
+					"kind": "equal",
+					"new": "8",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "TechArmorDamageReductionPerStack|#0",
+					"label": "Tech Armor Damage Reduction Per Stack",
+					"kind": "equal",
+					"new": "-2.5",
+					"postfix": "%"
+				},
+				{
+					"key": "MaxStacks|#0",
+					"label": "Max Stacks",
+					"kind": "equal",
+					"new": "10"
+				},
+				{
+					"key": "StackDuration|#0",
+					"label": "Stack Duration",
+					"kind": "equal",
+					"new": "10",
+					"postfix": "s"
+				},
+				{
+					"key": "TileSteps|#0",
+					"label": "Tile Steps",
+					"kind": "equal",
+					"new": "1",
+					"postfix": ""
+				}
+			]
+		}
+	],
+	"Kingside Knight": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-8",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Stamina|EAddToBase#0",
+					"label": "Stamina",
+					"kind": "equal",
+					"new": "1",
+					"prefix": "{s:sign}"
+				},
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "equal",
+					"new": "80"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxPieces|#0",
+					"label": "Max Pieces",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "BonusTargetRadius|#0",
+					"label": "Bonus Target Radius",
+					"kind": "equal",
+					"new": "20m"
+				},
+				{
+					"key": "RemoveDebuffs|#0",
+					"label": "Remove Debuffs",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Rook Battery": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "FireRateSlow|#0",
+					"label": "Fire Rate Slow",
+					"kind": "equal",
+					"new": "25",
+					"prefix": "-",
+					"postfix": "%"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "equal",
+					"new": "5",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "CurrentHealthPercent|#0",
+					"label": "Current Health Percent",
+					"kind": "equal",
+					"new": "5",
+					"postfix": "%"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|EAddToBase#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-12",
+					"postfix": "s"
+				},
+				{
+					"key": "ImmobilizeDuration|#0",
+					"label": "Immobilize Duration",
+					"kind": "equal",
+					"new": "0.5",
+					"postfix": "s"
+				},
+				{
+					"key": "MaxReflectCount|#0",
+					"label": "Max Reflect Count",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Develop Queen": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-40",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "CheckmateThreshold|#0",
+					"label": "Checkmate Threshold",
+					"kind": "equal",
+					"new": "200"
+				},
+				{
+					"key": "CheckmateThreshold|EAddToScale#0",
+					"label": "Checkmate Threshold",
+					"kind": "equal",
+					"new": "5",
+					"scaling": "ELevelUpBoons"
+				},
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "15",
+					"prefix": "-",
+					"postfix": "%"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "TileSteps|EAddToBase#0",
+					"label": "Tile Steps",
+					"kind": "equal",
+					"new": "1",
+					"scaling": "ETechPower",
+					"postfix": ""
+				},
+				{
+					"key": "QueenBonusMoves|#0",
+					"label": "Queen Bonus Moves",
+					"kind": "equal",
+					"new": "2"
+				}
+			]
+		}
+	],
+	"Chimera Peace Bringer": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Chimera Mk1": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "HeatDrainRate|#0",
+					"label": "Heat Drain Rate",
+					"kind": "equal",
+					"new": "-4"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "HealOnHit|#0",
+					"label": "Heal On Hit",
+					"kind": "equal",
+					"new": "150"
+				},
+				{
+					"key": "SelfDamageReductionOnPlayerHitPercent|#0",
+					"label": "Self Damage Reduction On Player Hit Percent",
+					"kind": "equal",
+					"new": "100"
+				},
+				{
+					"key": "HealOnHit|EAddToScale#0",
+					"label": "Heal On Hit",
+					"kind": "equal",
+					"new": "1.0",
+					"scaling": "ETechPower"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ExplosionDamage|#0",
+					"label": "Explosion Damage",
+					"kind": "equal",
+					"new": "120",
+					"postfix": ""
+				},
+				{
+					"key": "OverheatLockoutDurationReductionOnPlayerHitPercent|#0",
+					"label": "Overheat Lockout Duration Reduction On Player Hit Percent",
+					"kind": "equal",
+					"new": "40"
+				}
+			]
+		}
+	],
+	"Strix Salvo": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-12",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "20"
+				},
+				{
+					"key": "CoatedDamage|#0",
+					"label": "Coated Damage",
+					"kind": "equal",
+					"new": "35"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MarksTotal|#0",
+					"label": "Marks Total",
+					"kind": "equal",
+					"new": "2"
+				},
+				{
+					"key": "Range|#0",
+					"label": "Range",
+					"kind": "equal",
+					"new": "14m",
+					"postfix": "m"
+				},
+				{
+					"key": "CoatedDamage|EAddToScale#0",
+					"label": "Coated Damage",
+					"kind": "equal",
+					"new": "0.2",
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "0.225",
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Close The Deal": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": 50
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": -35,
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "DamagePerMeter|#0",
+					"label": "Damage Per Meter",
+					"kind": "equal",
+					"new": 8,
+					"postfix": " / meter"
+				},
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": 0.5,
+					"postfix": "s"
+				}
+			]
+		}
+	],
+	"Jettison Fuel": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-8",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "ScorchDamage|#0",
+					"label": "Scorch Damage",
+					"kind": "equal",
+					"new": "60"
+				},
+				{
+					"key": "BonusFireRate|#0",
+					"label": "Bonus Fire Rate",
+					"kind": "equal",
+					"new": "18",
+					"prefix": "{s:sign}",
+					"postfix": "%"
+				},
+				{
+					"key": "BuffDuration|#0",
+					"label": "Buff Duration",
+					"kind": "equal",
+					"new": "7",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BulletResistReduction|#0",
+					"label": "Bullet Resist Reduction",
+					"kind": "equal",
+					"new": "-10",
+					"postfix": "%"
+				},
+				{
+					"key": "BurstMarkStacks|#0",
+					"label": "Burst Mark Stacks",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
 	"Sovereign's Decree": [
 		{
 			"tier": 1,
@@ -12487,8 +12975,7 @@
 				{
 					"key": "DamagePerShrapnel|#0",
 					"label": "Damage Per Shrapnel",
-					"kind": "changed",
-					"old": "65",
+					"kind": "equal",
 					"new": "70"
 				}
 			]
@@ -12599,24 +13086,12 @@
 				{
 					"key": "BonusMoveSpeed|#0",
 					"label": "Bonus Move Speed",
-					"kind": "changed",
-					"old": "1m",
+					"kind": "equal",
 					"new": "2m",
 					"prefix": "{s:sign}",
 					"postfix": " m"
-				},
-				{
-					"key": "AbilityCooldown|#0",
-					"label": "Ability Cooldown",
-					"kind": "removed",
-					"old": "-20",
-					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "-20s Cooldown and +1m Move Speed",
-				"new": "+2m Move Speed"
-			}
+			]
 		},
 		{
 			"tier": 2,
@@ -12624,8 +13099,7 @@
 				{
 					"key": "FlagDuration|#0",
 					"label": "Flag Duration",
-					"kind": "changed",
-					"old": "8",
+					"kind": "equal",
 					"new": "5",
 					"postfix": "s"
 				},
@@ -12635,19 +13109,8 @@
 					"kind": "equal",
 					"new": "8m",
 					"postfix": "m"
-				},
-				{
-					"key": "AbilityDuration|#0",
-					"label": "Ability Duration",
-					"kind": "removed",
-					"old": "8",
-					"postfix": "s"
 				}
-			],
-			"text": {
-				"old": "+8s Charge Duration<br>+8s Flag Duration<br>+8m Radius",
-				"new": "+5s Flag Duration<br>+8m Radius"
-			}
+			]
 		},
 		{
 			"tier": 3,
@@ -12661,16 +13124,11 @@
 				{
 					"key": "AllyDamageReduction|#0",
 					"label": "Ally Damage Reduction",
-					"kind": "changed",
-					"old": "15",
+					"kind": "equal",
 					"new": "10",
 					"postfix": "%"
 				}
-			],
-			"text": {
-				"old": "+150 Damage and +15% Damage Reduction",
-				"new": "+150 Damage and +10% Damage Reduction"
-			}
+			]
 		}
 	]
 }

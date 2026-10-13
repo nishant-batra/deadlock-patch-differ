@@ -1,9 +1,9 @@
 {
-	"clientVersion": 6774,
-	"versionDatetime": "2026-10-09T16:19:46",
-	"ingestedAt": "2026-10-11T15:37:08.488Z",
+	"clientVersion": 6779,
+	"versionDatetime": "2026-10-13T13:33:25",
+	"ingestedAt": "2026-10-13T23:16:33.256Z",
 	"window": {
-		"startBuild": 6753,
-		"startedAt": "2026-10-05T15:40:16"
+		"startBuild": 6779,
+		"startedAt": "2026-10-13T13:33:25"
 	}
 }

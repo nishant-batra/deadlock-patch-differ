@@ -4,7 +4,7 @@
 		"class_name": "hero_inferno",
 		"name": "Infernus",
 		"description": {
-			"lore": "Like most teenagers; Infernus was wild, rebellious, and impetuous.  Unlike most teenagers, Infernus was a creature from another plane and had a supernatural mastery over fire.  Needless to say:  his youth was filled with no small amount of arson, murder, and evidence disposal.  But that was then.  Now an adult, Infernus has mellowed out considerably.  He’s happy working at a bar with good live music, and talking to interesting people.  That being said when someone at the bar gets belligerent or violent, he’s not afraid to dust off the skills he once honed.",
+			"lore": "Like most teenagers; Infernus was wild, rebellious, and impetuous.  Unlike most teenagers, Infernus was a creature from another plane and had a supernatural mastery over fire.  Needless to say:  his youth was filled with no small amount of arson, murder, and evidence disposal.  But that was then.  Now an adult, Infernus has mellowed out considerably.  He's happy working at a bar with good live music, and talking to interesting people.  That being said when someone at the bar gets belligerent or violent, he's not afraid to dust off the skills he once honed.",
 			"role": "Lights up enemies and watches them burn",
 			"playstyle": "Infernus has many ways to deal damage over time, burning foes before swooping in for the kill. Due to Infernus' blazing speed, his enemies won't be able to escape the flames."
 		},
@@ -1906,7 +1906,7 @@
 		"class_name": "hero_gigawatt",
 		"name": "Seven",
 		"description": {
-			"lore": "When mystic energy awoke on Earth, the world changed... anything was possible.  But just because anything WAS possible, didn’t mean that anything SHOULD be possible.  And so the government made rules.   Laws.  A means for US citizens to enjoy the benefits of the supernatural world in safety.  But rules and laws are for lesser men.  Men with limitations.  Men who were not Seven.  \n\nThere are many rumors about what Seven did to land himself in Lost Whisper, an oubliette for the most dangerous of occultists.  But there is no doubt about what happened on the night of his execution. \n\nWards placed by the most powerful ritualists of 7 different nations… wards designed to not just prevent mystical interference with the execution, but to simultaneously obliterate Seven's soul so that it could never be contacted, resurrected, or otherwise be used by someone looking to follow in his footsteps... failed.\n\nOnlookers viewed in horror as the strongest mentalist employed by the US Army’s head popped like a grape.  They screamed as Scotland Yard’s premiere occult investigator, the one who allegedly captured Seven, crumbled to ash.  Seven's body buckled and writhed against his restraints; his skin burning from eldritch electricity... and yet he would not die.  He laughed.\n\nHe laughed as he tore himself free from his bondage.\n\nHe laughed as his captors cowered in fear.\n\nHe laughed as he massacred his tormentors.\n\nHe laughed as he tasted the fresh air that was denied to him for years.\n\nAnd he laughed when he thought about what he was going to do once he reached New York City.",
+			"lore": "When mystic energy awoke on Earth, the world changed... anything was possible.  But just because anything WAS possible, didn't mean that anything SHOULD be possible.  And so the government made rules.   Laws.  A means for US citizens to enjoy the benefits of the supernatural world in safety.  But rules and laws are for lesser men.  Men with limitations.  Men who were not Seven.  <br><br>There are many rumors about what Seven did to land himself in Lost Whisper, an oubliette for the most dangerous of occultists.  But there is no doubt about what happened on the night of his execution. <br><br>Wards placed by the most powerful ritualists of 7 different nations... wards designed to not just prevent mystical interference with the execution, but to simultaneously obliterate Seven's soul so that it could never be contacted, resurrected, or otherwise be used by someone looking to follow in his footsteps... failed.<br><br>Onlookers viewed in horror as the strongest mentalist employed by the US Army's head popped like a grape.  They screamed as Scotland Yard's premiere occult investigator, the one who allegedly captured Seven, crumbled to ash.  Seven's body buckled and writhed against his restraints; his skin burning from eldritch electricity... and yet he would not die.  He laughed.<br><br>He laughed as he tore himself free from his bondage.<br><br>He laughed as his captors cowered in fear.<br><br>He laughed as he massacred his tormentors.<br><br>He laughed as he tasted the fresh air that was denied to him for years.<br><br>And he laughed when he thought about what he was going to do once he reached New York City.",
 			"role": "Electrocutes crowds of enemies",
 			"playstyle": "Seven thrives in a skirmish waiting for the time to strike. Then he rolls into the fight like a storm and batters his enemies with a cascade of lightning."
 		},
@@ -3916,7 +3916,7 @@
 		"class_name": "hero_hornet",
 		"name": "Vindicta",
 		"description": {
-			"lore": "A victim of John Hathorne during the Salem Witch Trials, Vindicta got a second chance of life when her spirit was brought back to the mortal plane during the first Maelstrom (the event that introduced the supernatural to the public at large).\n\nWaging a one ghost war against \"The Friends of Humanity\", a neo inquisition formed by Hathorne's descendants; Vindicta looks to keep the supernatural safe from Hathorne's ilk, and she isn't afraid to stack as many bodies as needed to do it.",
+			"lore": "A victim of John Hathorne during the Salem Witch Trials, Vindicta got a second chance of life when her spirit was brought back to the mortal plane during the first Maelstrom (the event that introduced the supernatural to the public at large).<br><br>Waging a one ghost war against \"The Friends of Humanity\", a neo inquisition formed by Hathorne's descendants; Vindicta looks to keep the supernatural safe from Hathorne's ilk, and she isn't afraid to stack as many bodies as needed to do it.",
 			"role": "Snipes the unsuspecting",
 			"playstyle": "Vindicta has the mobility to engage at her leisure, picking at her prey and bleeding them out slowly. Injured enemies at any distance should fear being picked off when she is on the map."
 		},
@@ -5859,7 +5859,7 @@
 		"class_name": "hero_ghost",
 		"name": "Lady Geist",
 		"description": {
-			"lore": "Once, Lady Jeanne Geist was the toast of the town.  But as time passed and her beauty faded she found herself further and further from her glory days in High Society until finally she was nothing more than a frail woman in a nursing home, telling stories of a glorious past.  And that’s when Oathkeeper revealed himself.  A powerful spirit from another plane, Oathkeeper offered her a path to reclaim her past glories… he could restore her youth; all she had to do was drain the essence of the living to sustain herself. \n\nGeist was torn.  Obviously murder was ghoulish business, and undoubtedly Oathkeeper was not an entity that could be trusted… but still, the thought of having a second chance of reliving her youth was too good to pass up.  And so she concocted a plan: after making a pact with Oathkeeper she would bind and ward him, limiting his influence and pull over her.  Oathkeeper would still get fed; but on her terms, not his.\n\nHowever, as years have turned to decades; the strength of the Ward has weakened, and Oathkeeper hungers more than he ever has in the past… ",
+			"lore": "Once, Lady Jeanne Geist was the toast of the town.  But as time passed and her beauty faded she found herself further and further from her glory days in High Society until finally she was nothing more than a frail woman in a nursing home, telling stories of a glorious past.  And that's when Oathkeeper revealed himself.  A powerful spirit from another plane, Oathkeeper offered her a path to reclaim her past glories... he could restore her youth; all she had to do was drain the essence of the living to sustain herself. <br><br>Geist was torn.  Obviously murder was ghoulish business, and undoubtedly Oathkeeper was not an entity that could be trusted... but still, the thought of having a second chance of reliving her youth was too good to pass up.  And so she concocted a plan: after making a pact with Oathkeeper she would bind and ward him, limiting his influence and pull over her.  Oathkeeper would still get fed; but on her terms, not his.<br><br>However, as years have turned to decades; the strength of the Ward has weakened, and Oathkeeper hungers more than he ever has in the past...",
 			"role": "Sacrifices health then drains it back",
 			"playstyle": "Expending health to achieve devastating effects is the source of Lady Geist's power. When running low, she can drain the life out of her rivals."
 		},
@@ -7821,7 +7821,7 @@
 		"class_name": "hero_atlas",
 		"name": "Abrams",
 		"description": {
-			"lore": "Hard hitting, hard headed, and hard drinking; Detective Abrams has been a fixture on the New York investigating scene for years.  From stolen art, to missing persons, to ritual murders; Abrams didn't just take any case that came across his desk... he solved them.\n\nBut his days of following cheating spouses came to an end the day he opened his office door and found The Tome sitting on his desk.\n\nNo instruction was left for him save for a brief note scrawled in onyx blood that read \"Don't let them have it\".  Abrams hasn't figured where the thing came from; but seeing as his home has been broken into, his office tossed on 3 different occasions, and his car firebombed he has a vested interest in figuring out what the hell is going on.",
+			"lore": "Hard hitting, hard headed, and hard drinking; Detective Abrams has been a fixture on the New York investigating scene for years.  From stolen art, to missing persons, to ritual murders; Abrams didn't just take any case that came across his desk... he solved them.<br><br>But his days of following cheating spouses came to an end the day he opened his office door and found The Tome sitting on his desk.<br><br>No instruction was left for him save for a brief note scrawled in onyx blood that read \"Don't let them have it\".  Abrams hasn't figured where the thing came from; but seeing as his home has been broken into, his office tossed on 3 different occasions, and his car firebombed he has a vested interest in figuring out what the hell is going on.",
 			"role": "Charges into close combat",
 			"playstyle": "Abrams has the bulk and sustain to lead from the front, often running into the middle of his foes and watching them scatter. If his enemies waste their fire on him, his backline teammates can lay out damage with impunity."
 		},
@@ -11732,7 +11732,7 @@
 		"class_name": "hero_forge",
 		"name": "McGinnis",
 		"description": {
-			"lore": "Maggie McGinnis always had a knack for building things. At 4 she was using Lincoln Logs to recreate architectural marvels. At 10 she built and rewired a custom light fixture for her parents' anniversary. At 15 she designed a machine that refined the souls of the dead...that last one got a little more attention than the Lincoln Logs.\n\nNow the head of Fairfax Industries Military R&D department, McGinnis spends her time in the machine shop, not in a lab. She's not interested in theory, to her science is magic you can touch.",
+			"lore": "Maggie McGinnis always had a knack for building things. At 4 she was using Lincoln Logs to recreate architectural marvels. At 10 she built and rewired a custom light fixture for her parents' anniversary. At 15 she designed a machine that refined the souls of the dead...that last one got a little more attention than the Lincoln Logs.<br><br>Now the head of Fairfax Industries Military R&D department, McGinnis spends her time in the machine shop, not in a lab. She's not interested in theory, to her science is magic you can touch.",
 			"role": "Controls the battle with combat turrets",
 			"playstyle": "Precise placement is everything for McGinnis, whether she's creating a killzone or splitting the enemy team. She can help keep her team running making them hard to dislodge when entrenched."
 		},
@@ -13736,7 +13736,7 @@
 		"class_name": "hero_chrono",
 		"name": "Paradox",
 		"description": {
-			"lore": "Paradox.  An artifact of time, and the name of a notorious thieves' guild... one that prides themselves on constructing elaborate heists that target the most untouchable of individuals and institutions.  What does Paradox do with the countless artifacts, state secrets, and celebrity paternity tests that they have stolen?  Put it on display at pop-up museums, so that they can show the world that no one is out of Paradox’s reach.\n\nShrouded in mystery, each member of Paradox dons a mask and takes on the organization's name.  They are everywhere.  They are nowhere.  And if they want something, they are inevitable.",
+			"lore": "Paradox.  An artifact of time, and the name of a notorious thieves' guild... one that prides themselves on constructing elaborate heists that target the most untouchable of individuals and institutions.  What does Paradox do with the countless artifacts, state secrets, and celebrity paternity tests that they have stolen?  Put it on display at pop-up museums, so that they can show the world that no one is out of Paradox's reach.<br><br>Shrouded in mystery, each member of Paradox dons a mask and takes on the organization's name.  They are everywhere.  They are nowhere.  And if they want something, they are inevitable.",
 			"role": "Manipulates Space and Time",
 			"playstyle": "Manipulating time lets Paradox outpace an enemy in one on one combat. She thrives by subjecting her enemies to timely swaps into a waiting pulse grenade, her wall, or into the middle of her teammates."
 		},
@@ -15728,7 +15728,7 @@
 		"class_name": "hero_dynamo",
 		"name": "Dynamo",
 		"description": {
-			"lore": "As a Scientist, Professor Dynamo always had an inquisitive mind.  So when a rift in space and time opened up in central park he was first on the scene to investigate – and while he expected such a majestic sight to be life changing, he was thinking more in a metaphorical way as opposed to having his body atomized and reduced to a tiny dying star.\n\nBut while his body is gone, his spirit and lust for knowledge lives on.  A tenured professor at Columbia College, Dynamo looks to learn more about his condition while maintaining his class load, after all: he has future minds to inspire.",
+			"lore": "As a Scientist, Professor Dynamo always had an inquisitive mind.  So when a rift in space and time opened up in central park he was first on the scene to investigate - and while he expected such a majestic sight to be life changing, he was thinking more in a metaphorical way as opposed to having his body atomized and reduced to a tiny dying star.<br><br>But while his body is gone, his spirit and lust for knowledge lives on.  A tenured professor at Columbia College, Dynamo looks to learn more about his condition while maintaining his class load, after all: he has future minds to inspire.",
 			"role": "Locks down the enemy team",
 			"playstyle": "Dynamo keeps himself and his allies healthy while waiting for his moment. Few things can warp a team fight more than a well-coordinated use of Singularity."
 		},
@@ -17691,7 +17691,7 @@
 		"class_name": "hero_kelvin",
 		"name": "Kelvin",
 		"description": {
-			"lore": "A famed adventuring scientist, Kelvin made it his life's mission to explore and understand the unknowable.  So naturally when rumors surfaced regarding an 8th astral gate hidden in the arctic, Kelvin couldn't build an expedition team fast enough.  Assembling the brightest minds of his generation, Kelvin and his team set forth with much fanfare.\n\nThey never returned.\n\nA year and a half later the frozen body of Kelvin was found by a fishing trawler, his corpse clutching a rock etched with glowing runes.  The crew chipped away at the ice, looking to get a closer look at the body and were shocked when Kelvin opened his eyes.  They checked his vitals... there was no pulse.  They sought to bandage his open wounds... there was no blood.  And yet, impossibly, Kelvin was \"alive\".\n\nHaving no memory of what happened on the expedition, Kelvin is looking for answers.",
+			"lore": "A famed adventuring scientist, Kelvin made it his life's mission to explore and understand the unknowable.  So naturally when rumors surfaced regarding an 8th astral gate hidden in the arctic, Kelvin couldn't build an expedition team fast enough.  Assembling the brightest minds of his generation, Kelvin and his team set forth with much fanfare.<br><br>They never returned.<br><br>A year and a half later the frozen body of Kelvin was found by a fishing trawler, his corpse clutching a rock etched with glowing runes.  The crew chipped away at the ice, looking to get a closer look at the body and were shocked when Kelvin opened his eyes.  They checked his vitals... there was no pulse.  They sought to bandage his open wounds... there was no blood.  And yet, impossibly, Kelvin was \"alive\".<br><br>Having no memory of what happened on the expedition, Kelvin is looking for answers.",
 			"role": "Freezes enemies in their tracks",
 			"playstyle": "Timely heals and splitting a teamfight properly is the difference between an easy victory or a ruinous defeat. Gliding around slowing enemies gives Kelvin's team the maneuvering advantage to make this happen."
 		},
@@ -19654,7 +19654,7 @@
 		"class_name": "hero_haze",
 		"name": "Haze",
 		"description": {
-			"lore": "The Occult Security and Investigation Commission is a black box government organization that makes the CIA look transparent.  It falls on the men, women, and entities of the OSIC to keep the country safe from sinister forces that are beyond the capabilities of local law enforcement.\n\nAs a member of the notorious Sandman Division, Haze is routinely tasked with infiltrating the dreams of persons of interest, to assess their threat level, and if needed... to put them to sleep.",
+			"lore": "The Occult Security and Investigation Commission is a black box government organization that makes the CIA look transparent.  It falls on the men, women, and entities of the OSIC to keep the country safe from sinister forces that are beyond the capabilities of local law enforcement.<br><br>As a member of the notorious Sandman Division, Haze is routinely tasked with infiltrating the dreams of persons of interest, to assess their threat level, and if needed... to put them to sleep.",
 			"role": "Sneaks in and sprays bullets",
 			"playstyle": "When Haze fixates on a target she can hold her own in a firefight. She prefers to create one sided exchanges, avoiding damage then picking off unsuspecting targets up close."
 		},
@@ -21615,7 +21615,7 @@
 		"class_name": "hero_astro",
 		"name": "Holliday",
 		"description": {
-			"lore": "There are people who spent their whole lives dreaming about moving to New York.  Holliday isn't one of those people.  Content with being a Sheriff in a small town, Holliday enjoyed a career where the only time she had to use her gun was when trick shooting at the county fair...then the murders started.\n\nGrisly and inhumane; the bodies were found with their ribcages ripped open... their innards picked apart as if by birds.  Holliday tracked down the killer, a travelling folk musician that the media dubbed \"The Troubadour\", but when she confronted him he exploded into a murder of crows and flew away.\n\nThat was 6 months ago, and while the murders in central Illinois have stopped, Holliday's investigation has not.  She believes that The Troubadour is travelling to New York, and when she finds him she's going to kill that evil son of a bitch.",
+			"lore": "There are people who spent their whole lives dreaming about moving to New York.  Holliday isn't one of those people.  Content with being a Sheriff in a small town, Holliday enjoyed a career where the only time she had to use her gun was when trick shooting at the county fair...then the murders started.<br><br>Grisly and inhumane; the bodies were found with their ribcages ripped open... their innards picked apart as if by birds.  Holliday tracked down the killer, a travelling folk musician that the media dubbed \"The Troubadour\", but when she confronted him he exploded into a murder of crows and flew away.<br><br>That was 6 months ago, and while the murders in central Illinois have stopped, Holliday's investigation has not.  She believes that The Troubadour is travelling to New York, and when she finds him she's going to kill that evil son of a bitch.",
 			"role": "Bounces about dispensing trick shots",
 			"playstyle": "Holliday depends on her skills as a crack shot, shooting things she's bounced into the air. With good aim she can lay out heavy damage. Her movement skills let her isolate her enemies or beat a hasty retreat."
 		},
@@ -25635,7 +25635,7 @@
 		"class_name": "hero_nano",
 		"name": "Calico",
 		"description": {
-			"lore": "Once a decorated member of The Baxter Society, Calico left the august order once she realized that killing monsters for free was less profitable than killing people for money.\n\nNow an in demand contract killer, Calico is living her best life ending someone else's.",
+			"lore": "Once a decorated member of The Baxter Society, Calico left the august order once she realized that killing monsters for free was less profitable than killing people for money.<br><br>Now an in demand contract killer, Calico is living her best life ending someone else's.",
 			"role": "Wreaks havoc from the sidelines",
 			"playstyle": "Calico uses the shadows to her advantage, weaving in and out of combat to hunt down her enemies one by one."
 		},
@@ -27501,7 +27501,7 @@
 		"class_name": "hero_orion",
 		"name": "Grey Talon",
 		"description": {
-			"lore": "A founding member of \"The Baxter Society\", Wesley Grey Talon spent close to 40 years hunting monsters that preyed on man before finally deciding to find a replacement and lay down his bow. Grey Talon's duties had meant that he never spent much time with his wife and kid, and now that his son had started a family of his own he realized that this was his last chance to reconnect with the people he loved.\n\nRetirement suited Wesley.  He made up for lost time with his wife.  He doted on his grandkids.  He cooked dinner for the whole family every Wednesday.  He was happy.\n\nThen he got the call.\n\nThe authorities claimed that it was a freak accident... that the fire consumed his son's house before anyone got a chance to escape.  But Wesley knew better.  His son's wife was an Ixian who could snuff out flame with a thought.  If their bodies were found burned they had to be dead long before there was a fire.\n\nAnd so Grey Talon has picked up his bow once more, and when he finds who's responsible there will be a bloody reckoning.",
+			"lore": "A founding member of \"The Baxter Society\", Wesley Grey Talon spent close to 40 years hunting monsters that preyed on man before finally deciding to find a replacement and lay down his bow. Grey Talon's duties had meant that he never spent much time with his wife and kid, and now that his son had started a family of his own he realized that this was his last chance to reconnect with the people he loved.<br><br>Retirement suited Wesley.  He made up for lost time with his wife.  He doted on his grandkids.  He cooked dinner for the whole family every Wednesday.  He was happy.<br><br>Then he got the call.<br><br>The authorities claimed that it was a freak accident... that the fire consumed his son's house before anyone got a chance to escape.  But Wesley knew better.  His son's wife was an Ixian who could snuff out flame with a thought.  If their bodies were found burned they had to be dead long before there was a fire.<br><br>And so Grey Talon has picked up his bow once more, and when he finds who's responsible there will be a bloody reckoning.",
 			"role": "Delivers long range skill-shots",
 			"playstyle": "A cunning predator, Grey Talon uses a combination of deadly accuracy, traps, and clever positioning to bring down the toughest of opponents."
 		},
@@ -31340,7 +31340,7 @@
 		"class_name": "hero_shiv",
 		"name": "Shiv",
 		"description": {
-			"lore": "A loyal member of \"The Baxter Society\", an international order of monster hunters, Shiv travels across North America looking to put down creatures that prey on the living.\n\nWhile his less polished nature and criminal past make some of the more traditional members of the Society wary, no one can deny his effectiveness.",
+			"lore": "A loyal member of \"The Baxter Society\", an international order of monster hunters, Shiv travels across North America looking to put down creatures that prey on the living.<br><br>While his less polished nature and criminal past make some of the more traditional members of the Society wary, no one can deny his effectiveness.",
 			"role": "Bleeds out foes, then goes in for a kill",
 			"playstyle": "Shiv has zero interest in playing fair, which is why he relies on hit and run tactics to weaken enemies before he dives in for the kill."
 		},
@@ -33285,7 +33285,7 @@
 		"class_name": "hero_tengu",
 		"name": "Ivy",
 		"description": {
-			"lore": "The gargoyle didn't know what was happening when it sprang to life...  just that a big human and a small human were being hurt.  And so the gargoyle leapt to action, sending the attackers fleeing in horror.  The small human said thank you and asked the gargoyle's name.  The gargoyle didn't have one.  And so the small human said, \"I'm going to call you Ivy.\"  The gargoyle, being covered in ivy at the time, thought it was a bit obvious, but decided to go along with it for the small human's sake.\n\nThe humans asked if Ivy would come home with them so they could show their appreciation, and so Ivy walked with them.  That night she learned much.  The family were called The Arroyo's.  The little one, Sophia.  Mofongo is what they called a plate of deliciousness.  But most importantly, she learned that the people attacking them were called \"The Mendoza Syndicate\", and they were hurting people...nice people like The Arroyo's.\n\n18 years have passed since the day the Arroyo's took Ivy home... and during that time she made it her mission to dismantle the Mendoza Syndicate and free Spanish Harlem from its grasp.  However the thing about dedicating your life to a single pursuit for nearly 2 decades is that you don't really know what to do once you achieve it.  For the first time in her life, Ivy is prepared to venture outside of Spanish Harlem and see what the world has to offer beyond vigilante justice.",
+			"lore": "The gargoyle didn't know what was happening when it sprang to life...  just that a big human and a small human were being hurt.  And so the gargoyle leapt to action, sending the attackers fleeing in horror.  The small human said thank you and asked the gargoyle's name.  The gargoyle didn't have one.  And so the small human said, \"I'm going to call you Ivy.\"  The gargoyle, being covered in ivy at the time, thought it was a bit obvious, but decided to go along with it for the small human's sake.<br><br>The humans asked if Ivy would come home with them so they could show their appreciation, and so Ivy walked with them.  That night she learned much.  The family were called The Arroyo's.  The little one, Sophia.  Mofongo is what they called a plate of deliciousness.  But most importantly, she learned that the people attacking them were called \"The Mendoza Syndicate\", and they were hurting people...nice people like The Arroyo's.<br><br>18 years have passed since the day the Arroyo's took Ivy home... and during that time she made it her mission to dismantle the Mendoza Syndicate and free Spanish Harlem from its grasp.  However the thing about dedicating your life to a single pursuit for nearly 2 decades is that you don't really know what to do once you achieve it.  For the first time in her life, Ivy is prepared to venture outside of Spanish Harlem and see what the world has to offer beyond vigilante justice.",
 			"role": "Sets up a power duo with a lucky ally",
 			"playstyle": "Ivy has disruptive combat tricks that slow and stun enemies. She's most effective when linking up with an ally, empowering her and her ally's guns as well as sharing heals."
 		},
@@ -36795,7 +36795,7 @@
 		"class_name": "hero_warden",
 		"name": "Warden",
 		"description": {
-			"lore": "Most people think the supernatural came into the world 50 years ago.  They’re wrong.  Its presence shaped folklore for generations… and as long as there have been people afraid of the shadows, there have been those who dedicated their lives to fighting in them.\n\nComing from a lineage of militant alchemists, Warden’s family always trained for the day they would have to stave off a mystic apocalypse… but as time passed the importance of the lessons seemed less and less important.  What once was viewed as a sincere warning slowly morphed into being perceived as amusing anecdotes told by their superstitious grandparents.\n\nWhen the portal opened in Central Park, Warden’s parents realized not only was everything they were told was true, they were unprepared.  Refusing to let the next generation fall asleep on the job, Warden was trained since birth to be a supernatural killing machine with one purpose: stopping the Patrons from ever entering our world.",
+			"lore": "Most people think the supernatural came into the world 50 years ago.  They're wrong.  Its presence shaped folklore for generations... and as long as there have been people afraid of the shadows, there have been those who dedicated their lives to fighting in them.<br><br>Coming from a lineage of militant alchemists, Warden's family always trained for the day they would have to stave off a mystic apocalypse... but as time passed the importance of the lessons seemed less and less important.  What once was viewed as a sincere warning slowly morphed into being perceived as amusing anecdotes told by their superstitious grandparents.<br><br>When the portal opened in Central Park, Warden's parents realized not only was everything they were told was true, they were unprepared.  Refusing to let the next generation fall asleep on the job, Warden was trained since birth to be a supernatural killing machine with one purpose: stopping the Patrons from ever entering our world.",
 			"role": "Weakens his enemies and chases them down",
 			"playstyle": "Warden leads from the front, jumping into the fray and hindering his opponents' ability to fight effectively. But what Warden considers brave, others consider reckless, and if he's not careful he can easily find himself in over his head."
 		},
@@ -38754,7 +38754,7 @@
 		"class_name": "hero_yamato",
 		"name": "Yamato",
 		"description": {
-			"lore": "犯罪組織のボスの家に生まれた花桜梨とその兄の大和にとって、\n父の死後に「セブンスムーン」の跡目を継ぐのは自明のことでもあった。\nそして何年もの間、かれらは対等の立場で組織を率いて利益と成功を\nもたらし、やがてはアメリカへの進出をも目論むようになった。\n\n思い描いていた計画は単純で、 大和がアメリカに渡って花桜梨の\n国際的な存在感を高め、その間花桜梨は日本に残って国内を統制する、\nといったものだった。 兄妹にとって不運だったのは、花桜梨が日本で\n指揮をとるという計画を快く思わない部下たちがいたことだった。\n\nそして迅速かつ暴力的な形で、反乱は発生した。大和は花桜梨を\n守るために命を落とし、花桜梨と数人の忠実な部下たちは、\nその大和の犠牲のおかげもあって、日本からアメリカへと\n逃げ延びることに成功した。\n\nアメリカに着いた花桜梨たちを出迎えたのは、本来であれば大和が\n会う予定となっていた男であった。彼は日本人の名前になじみが\nなかったため性別の区別がついておらず、花桜梨のことを\n「ヤマト」と呼んだ。花桜梨は男の間違いを正そうと思ったが、\n結局そのままにした。兄の記憶を残し続けるためにも、その名を名乗り、\nその夢を受け継ぐことが最善の道であろうと考えたからだ。",
+			"lore": "犯罪組織のボスの家に生まれた花桜梨とその兄の大和にとって、<br>父の死後に「セブンスムーン」の跡目を継ぐのは自明のことでもあった。<br>そして何年もの間、かれらは対等の立場で組織を率いて利益と成功を<br>もたらし、やがてはアメリカへの進出をも目論むようになった。<br><br>思い描いていた計画は単純で、 大和がアメリカに渡って花桜梨の<br>国際的な存在感を高め、その間花桜梨は日本に残って国内を統制する、<br>といったものだった。 兄妹にとって不運だったのは、花桜梨が日本で<br>指揮をとるという計画を快く思わない部下たちがいたことだった。<br><br>そして迅速かつ暴力的な形で、反乱は発生した。大和は花桜梨を<br>守るために命を落とし、花桜梨と数人の忠実な部下たちは、<br>その大和の犠牲のおかげもあって、日本からアメリカへと<br>逃げ延びることに成功した。<br><br>アメリカに着いた花桜梨たちを出迎えたのは、本来であれば大和が<br>会う予定となっていた男であった。彼は日本人の名前になじみが<br>なかったため性別の区別がついておらず、花桜梨のことを<br>「ヤマト」と呼んだ。花桜梨は男の間違いを正そうと思ったが、<br>結局そのままにした。兄の記憶を残し続けるためにも、その名を名乗り、<br>その夢を受け継ぐことが最善の道であろうと考えたからだ。",
 			"role": "Delivers charged attacks with finesse",
 			"playstyle": "Yamato uses precise strikes to decimate her rivals. However, such damaging attacks often will leave her exposed, so she needs to make every shot count."
 		},
@@ -42646,7 +42646,7 @@
 		"class_name": "hero_viscous",
 		"name": "Viscous",
 		"description": {
-			"lore": "The Bermuda Triangle was never a myth, it was a shadowline nexus deep underneath the Atlantic Ocean.  For the most part, the things that escaped this astral gate were benign (like Nessie), but now something dark and predatory known only as The Adversary hunts the seas... and ocean denizens are scared to death.\n\nOne of those inhabitants, a psychic sea anemone, wants to do something about it.  Summoning an ectoplasmic goo body to traverse the surface, Viscous is desperately trying to summon the Patrons in order to keep The Deep safe from the horror that lurks below.",
+			"lore": "The Bermuda Triangle was never a myth, it was a shadowline nexus deep underneath the Atlantic Ocean.  For the most part, the things that escaped this astral gate were benign (like Nessie), but now something dark and predatory known only as The Adversary hunts the seas... and ocean denizens are scared to death.<br><br>One of those inhabitants, a psychic sea anemone, wants to do something about it.  Summoning an ectoplasmic goo body to traverse the surface, Viscous is desperately trying to summon the Patrons in order to keep The Deep safe from the horror that lurks below.",
 			"role": "Rolls around deflecting bullets",
 			"playstyle": "Viscous vexes his opponents through clever evasion and strategic uses of healing, enabling him to withstand the most brutal of enemy attacks."
 		},
@@ -47644,7 +47644,7 @@
 		"class_name": "hero_wrecker",
 		"name": "Wrecker",
 		"description": {
-			"lore": "When the Maelstrom  first hit New York, it didn’t just usher in a new age of mysticism to the world… it changed geopolitics.  From CIA employed seers identifying threats decades before they rise to power to occult pacts made in smoky backrooms;  countless wars and atrocities have been prevented that would otherwise have shaped history.  But that doesn’t mean there is no war… just that war has changed.\n\nParanormal Military Companies have risen to prominence.  These groups, using a combination of extra-planar creatures and various blood magics; have found ways to circumvent the guardrails established by the nation’s watchdog oracles, allowing them to function as proxies for nations seeking to wage war.\n\nWrecker is one such soldier.\n\nEmployed by Eldritch Tactical Solutions (a subsidiary of Fairfax Industries), Wrecker is an elite soldier of fortune with a reputation for doing dirty work that other PMC’s don’t have the stomach for.",
+			"lore": "When the Maelstrom  first hit New York, it didn't just usher in a new age of mysticism to the world... it changed geopolitics.  From CIA employed seers identifying threats decades before they rise to power to occult pacts made in smoky backrooms;  countless wars and atrocities have been prevented that would otherwise have shaped history.  But that doesn't mean there is no war... just that war has changed.<br><br>Paranormal Military Companies have risen to prominence.  These groups, using a combination of extra-planar creatures and various blood magics; have found ways to circumvent the guardrails established by the nation's watchdog oracles, allowing them to function as proxies for nations seeking to wage war.<br><br>Wrecker is one such soldier.<br><br>Employed by Eldritch Tactical Solutions (a subsidiary of Fairfax Industries), Wrecker is an elite soldier of fortune with a reputation for doing dirty work that other PMC's don't have the stomach for.",
 			"role": "Salvages scrap to create weapons",
 			"playstyle": "Salvaging and scrapping for parts, Wrecker can disassemble troopers, crush foes with his Wrecking Ball, and capture all enemies in his Stasis Trap."
 		},
@@ -50621,7 +50621,7 @@
 		"class_name": "hero_synth",
 		"name": "Pocket",
 		"description": {
-			"lore": "Arin Fairfax, the eldest heir to Fairfax Industries, has been living in hiding for the past 5 years after being shot and left for dead on their 18th birthday.  Arin doesn't know who is trying to keep them from taking control of their parent's company... but in the avarice fueled viper's nest that is Fairfax Industries it could be anyone.\n\nTaking on the name \"Pocket\", Arin desperately wants to keep their true identity a secret… not only for their own protection; but because they want to forge their own identity separate from their parents.",
+			"lore": "Arin Fairfax, the eldest heir to Fairfax Industries, has been living in hiding for the past 5 years after being shot and left for dead on their 18th birthday.  Arin doesn't know who is trying to keep them from taking control of their parent's company... but in the avarice fueled viper's nest that is Fairfax Industries it could be anyone.<br><br>Taking on the name \"Pocket\", Arin desperately wants to keep their true identity a secret... not only for their own protection; but because they want to forge their own identity separate from their parents.",
 			"role": "Infiltrates and disrupts the backline",
 			"playstyle": "With a powerful shotgun and a thin frame, Pocket relies on their ability to briefly escape into a mystic suitcase and teleport via a flying cloak in order to survive close encounters."
 		},
@@ -54027,7 +54027,7 @@
 		"class_name": "hero_mirage",
 		"name": "Mirage",
 		"description": {
-			"lore": "The Djinn are one of the more curious groups of people in the modern world.  Possessing great power in controlled doses, Djinn are incapable of maintaining corporeal form for longer than 48 minutes without resting within a vessel.  As a result, most Djinn employ human bodyguards for transport, protection, and companionship.\n\nMirage is one such bodyguard.  Employed by Djinn ambassador Nashala Dion, Mirage is in New York on a diplomatic mission.  It's the hope of the Djinn that they can negotiate with the US government for a sale of part of Wyoming so that they can build a sovereign nation for their people.",
+			"lore": "The Djinn are one of the more curious groups of people in the modern world.  Possessing great power in controlled doses, Djinn are incapable of maintaining corporeal form for longer than 48 minutes without resting within a vessel.  As a result, most Djinn employ human bodyguards for transport, protection, and companionship.<br><br>Mirage is one such bodyguard.  Employed by Djinn ambassador Nashala Dion, Mirage is in New York on a diplomatic mission.  It's the hope of the Djinn that they can negotiate with the US government for a sale of part of Wyoming so that they can build a sovereign nation for their people.",
 			"role": "Times his shots and catches fleeing targets",
 			"playstyle": "Mirage can envelop himself in a violent tornado to catch up to enemies and lift them up. His scarabs help him sustain against multiple enemies, and he's always ready to help an ally or punish an enemy anywhere."
 		},
@@ -61812,7 +61812,7 @@
 		"class_name": "hero_viper",
 		"name": "Vyper",
 		"description": {
-			"lore": "When it comes to breaking the law, not getting caught is a pretty important part of the job.  Vyper never got that memo.  Luckily for her, if there’s one thing she’s better at than being arrested, it’s escaping out of jail.\n\nHaving done time in every major prison in the tri-state area, Vyper has built an impressive network of street level lowlifes that owe her one.  She’s also built an impressive network of street level lowlifes that want her dead, but she tries to focus on the positive.",
+			"lore": "When it comes to breaking the law, not getting caught is a pretty important part of the job.  Vyper never got that memo.  Luckily for her, if there's one thing she's better at than being arrested, it's escaping out of jail.<br><br>Having done time in every major prison in the tri-state area, Vyper has built an impressive network of street level lowlifes that owe her one.  She's also built an impressive network of street level lowlifes that want her dead, but she tries to focus on the positive.",
 			"role": "Slither in and assassinate enemies",
 			"playstyle": "With a powerful weapon (and deadly venom to match), Vyper can slither into the back of teams and assassinate high-priority targets in a storm of bullets."
 		},
@@ -65280,7 +65280,7 @@
 		"class_name": "hero_magician",
 		"name": "Sinclair",
 		"description": {
-			"lore": "Henry's parents told him he was too young and impulsive to mess with real magic, and so they gave him a deck of cards to play with.  He took to sleight of hand naturally and soon was dazzling his classmates with fantastic feats of illusions that were done without mystic artifacts or incantation.\n\nWhen he was in high school he met Savannah, and their mutual love of stage magic sparked a whirlwind romance.  Soon they fell in love and created an act together.  Obviously they were meant to be; and so at prom, Henry proposed to Savannah and they married soon after graduation.\n\nUnsurprisingly both sets of parents were not thrilled at this prospect, but Henry and Savannah knew they were soulmates.  And so they cemented their love for one another by having a blood mystic bind their souls for eternity.\n\nWhen an on-stage accident claimed both their lives, no one was sure who to blame.  Henry claims Savannah was out of position.  Savannah says Henry didn't wait for his cue.  But one thing's for sure, since their souls are tied to each other neither one of them have been able to move on.  Now a bickering pair of ghosts, Henry and Savannah need to work together if they want to have any chance of undoing their eternal union.",
+			"lore": "Henry's parents told him he was too young and impulsive to mess with real magic, and so they gave him a deck of cards to play with.  He took to sleight of hand naturally and soon was dazzling his classmates with fantastic feats of illusions that were done without mystic artifacts or incantation.<br><br>When he was in high school he met Savannah, and their mutual love of stage magic sparked a whirlwind romance.  Soon they fell in love and created an act together.  Obviously they were meant to be; and so at prom, Henry proposed to Savannah and they married soon after graduation.<br><br>Unsurprisingly both sets of parents were not thrilled at this prospect, but Henry and Savannah knew they were soulmates.  And so they cemented their love for one another by having a blood mystic bind their souls for eternity.<br><br>When an on-stage accident claimed both their lives, no one was sure who to blame.  Henry claims Savannah was out of position.  Savannah says Henry didn't wait for his cue.  But one thing's for sure, since their souls are tied to each other neither one of them have been able to move on.  Now a bickering pair of ghosts, Henry and Savannah need to work together if they want to have any chance of undoing their eternal union.",
 			"role": "Misdirect and hex enemies",
 			"playstyle": "With the help of their unwilling assistant, <i>The Magnificent Sinclair</i> can confuse enemies with curving hexes and rapid bolts."
 		},
@@ -68744,7 +68744,7 @@
 		"class_name": "hero_operative",
 		"name": "Raven",
 		"description": {
-			"lore": "Led by the specter of Catherine the Great, the Soviet Empire has flourished in a brave new world of mysticism.  But while her deeper motivations are often obfuscated from the world stage, one thing is for certain: she hates being a ghost.  To this end she has tasked The Empire’s spymaster with one goal: find a way to make her corporeal once more.\n\nRelentless in pursuit of his task; the operative known only as \"The Raven\" has scoured the Earth looking for strange artifacts, apocryphal writings, and wisdom of the life beyond. Now in New York, Raven looks to find a way to tether Catherine’s spirit to the mortal coil.",
+			"lore": "Led by the specter of Catherine the Great, the Soviet Empire has flourished in a brave new world of mysticism.  But while her deeper motivations are often obfuscated from the world stage, one thing is for certain: she hates being a ghost.  To this end she has tasked The Empire's spymaster with one goal: find a way to make her corporeal once more.<br><br>Relentless in pursuit of his task; the operative known only as \"The Raven\" has scoured the Earth looking for strange artifacts, apocryphal writings, and wisdom of the life beyond. Now in New York, Raven looks to find a way to tether Catherine's spirit to the mortal coil.",
 			"role": "Uses cunning to maximize damage",
 			"playstyle": "By impeding enemy movement and punishing those who look in his direction, Raven creates opportunites to stab his enemies in the back."
 		},
@@ -70234,7 +70234,7 @@
 		"class_name": "hero_vampirebat",
 		"name": "Mina",
 		"description": {
-			"lore": "Mina Ha had it all...rich parents, elite education, and an arranged marriage that would see her ascend from run-of-the-mill upper class to American royalty.  She was happy.\n\nThen her betrothed was assassinated.\n\nMina wept; not for the life of her fiancé, but for the future that was stolen from her.  Why couldn’t the killer just wait until after the wedding? Then she’d have the last name she always dreamed of and no one would even have to pretend to love anyone.  It could have been perfect, but life wasn’t fair...and so Mina did what she always does when things don’t go her way: she told her parents to fix it.\n\nMr. And Mrs. Ha knew that the only way to appease their daughter was to offer her something greater than what she lost... and marrying into one of the world’s most lauded families was a tall order to top.  They had to think big.  They had to think outside of the box.  They had to promise their daughter immortality.\n\nIt took a small fortune, but eventually they found a vampire who was willing to turn her.  Unsurprisingly, Mina thought the idea of eternal youth and a trust fund was an acceptable plan B and happily agreed to the proposal.  Now a fledgling vampire, Mina is quickly discovering that the clout she held as a human has no weight in vampire high society...and while at first that annoyed her, if there is one thing Mina has a knack for, it's learning the rules so she can subvert them.  She will be the Viscount of New York, the other vampires just don't know it yet."
+			"lore": "Mina Ha had it all...rich parents, elite education, and an arranged marriage that would see her ascend from run-of-the-mill upper class to American royalty.  She was happy.<br><br>Then her betrothed was assassinated.<br><br>Mina wept; not for the life of her fiancé, but for the future that was stolen from her.  Why couldn't the killer just wait until after the wedding? Then she'd have the last name she always dreamed of and no one would even have to pretend to love anyone.  It could have been perfect, but life wasn't fair...and so Mina did what she always does when things don't go her way: she told her parents to fix it.<br><br>Mr. And Mrs. Ha knew that the only way to appease their daughter was to offer her something greater than what she lost... and marrying into one of the world's most lauded families was a tall order to top.  They had to think big.  They had to think outside of the box.  They had to promise their daughter immortality.<br><br>It took a small fortune, but eventually they found a vampire who was willing to turn her.  Unsurprisingly, Mina thought the idea of eternal youth and a trust fund was an acceptable plan B and happily agreed to the proposal.  Now a fledgling vampire, Mina is quickly discovering that the clout she held as a human has no weight in vampire high society...and while at first that annoyed her, if there is one thing Mina has a knack for, it's learning the rules so she can subvert them.  She will be the Viscount of New York, the other vampires just don't know it yet."
 		},
 		"player_selectable": true,
 		"development_state": "release",
@@ -74124,7 +74124,7 @@
 		"class_name": "hero_priest",
 		"name": "Venator",
 		"description": {
-			"lore": "The Venators of St. Benedict are a Vatican-sanctioned order whose members are deployed to regions with a high concentration of supernatural predators.   Few in number, their modus operandi is to observe, identify, and exterminate. They are methodical, they are precise, and once they identify a threat to the flock they are relentless.\n\nBut even amongst those who are called The Sword Of St. Benedict, one stands apart from the others.  A man whose hardened heart has allowed him to pay terrible prices in the name of the greater good... and he has once again been dispatched to New York."
+			"lore": "The Venators of St. Benedict are a Vatican-sanctioned order whose members are deployed to regions with a high concentration of supernatural predators. Few in number, their modus operandi is to observe, identify, and exterminate. They are methodical, they are precise, and once they identify a threat to the flock they are relentless.<br><br>But even amongst those who are called The Sword Of St. Benedict, one stands apart from the others. A man whose hardened heart has allowed him to pay terrible prices in the name of the greater good... and he has once again been dispatched to New York."
 		},
 		"player_selectable": true,
 		"development_state": "release",
@@ -81526,7 +81526,7 @@
 		"class_name": "hero_doorman",
 		"name": "The Doorman",
 		"description": {
-			"lore": "He's proper, he's polite, but the humble Doorman of The Baroness Hotel is more than meets the eye.\n\nWhile he had only planned to experience life on this plane for a few weeks, The Doorman quickly discovered that the New York service industry was a great way to see the strange demands that please humans."
+			"lore": "He's proper, he's polite, but the humble Doorman of The Baroness Hotel is more than meets the eye.<br><br>While he had only planned to experience life on this plane for a few weeks, The Doorman quickly discovered that the New York service industry was a great way to see the strange demands that please humans."
 		},
 		"player_selectable": true,
 		"development_state": "release",
@@ -86457,7 +86457,7 @@
 		"class_name": "hero_punkgoat",
 		"name": "Billy",
 		"description": {
-			"lore": "Billy is a white hot ball of rage, furious at the very notion of...something.  Maybe it’s the cops.  Maybe it’s magic regulations.  Maybe it’s the service at the gyro place downtown.  (Not the good one.  The other one.)\n\nDon't ask him how he got the goat head."
+			"lore": "Billy is a white hot ball of rage, furious at the very notion of...something.  Maybe it's the cops. Maybe it's magic regulations. Maybe it's the service at the gyro place downtown.  (Not the good one.  The other one.)<br><br>Don't ask him how he got the goat head."
 		},
 		"player_selectable": true,
 		"development_state": "release",
@@ -90153,7 +90153,9 @@
 				"weapon_attributes": [
 					"EWeaponAttribute_BurstFire",
 					"EWeaponAttribute_MediumRange"
-				]
+				],
+				"weapon_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/guns/deadpack_gun.png",
+				"weapon_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/guns/deadpack_gun.webp"
 			}
 		},
 		"cost_bonuses": {
@@ -92910,7 +92912,7 @@
 		"class_name": "hero_necro",
 		"name": "Graves",
 		"description": {
-			"lore": "The daughter of high-power defense attorneys, Darcy Graves grew up in a home where every conversation was a debate, argument, or negotiation. It was exhausting. But while her parents were often too busy meeting with clients or working on cases to bond with her, the dead were always there to listen.\n\nGraves enjoyed her time in the cemetery.  It was a quiet place to calm her thoughts and talk through her problems...but one day her one-sided conversations started to change.\n\nIt began with a faint whisper.  A woman's voice that seemed to respond to Graves' complaints.  Intrigued, the teenager listened...and followed the voice's instructions until it guided her to a lead-lined box buried in Van Cortlandt Park.  But while most high school students would freak out if they were to unearth a severed lich hand, Graves was certainly not most teens.  The hand now free of its prison, the lich's voice grew stronger... It had spent years looking to find a student she could pass her knowledge to, and Graves was eager to learn.\n\nNow a fledgling necromancer, Darcy balances not only her homework at Blackmore Academy...but the demands of graveyard denizens, each of whom have their own unfinished business that they seek her aid in resolving."
+			"lore": "The daughter of high-power defense attorneys, Darcy Graves grew up in a home where every conversation was a debate, argument, or negotiation. It was exhausting. But while her parents were often too busy meeting with clients or working on cases to bond with her, the dead were always there to listen.<br><br>Graves enjoyed her time in the cemetery.  It was a quiet place to calm her thoughts and talk through her problems...but one day her one-sided conversations started to change.<br><br>It began with a faint whisper.  A woman's voice that seemed to respond to Graves' complaints.  Intrigued, the teenager listened...and followed the voice's instructions until it guided her to a lead-lined box buried in Van Cortlandt Park.  But while most high school students would freak out if they were to unearth a severed lich hand, Graves was certainly not most teens.  The hand now free of its prison, the lich's voice grew stronger... It had spent years looking to find a student she could pass her knowledge to, and Graves was eager to learn.<br><br>Now a fledgling necromancer, Darcy balances not only her homework at Blackmore Academy...but the demands of graveyard denizens, each of whom have their own unfinished business that they seek her aid in resolving."
 		},
 		"player_selectable": true,
 		"development_state": "release",
@@ -94876,7 +94878,7 @@
 		"class_name": "hero_fencer",
 		"name": "Apollo",
 		"description": {
-			"lore": "A land of beauty, tradition and conflict; North Ixia is no stranger to brutal political violence. So when Apollo was told that it was for his own safety he was being sent to New York for school, he knew the situation was serious.\n\nAdjusting to life at Blackmore Academy didn’t come easy to Apollo. His school was supposed to be filled with The Cursed Apple’s best and brightest but all he saw, with few exceptions, was a sea of aggressive mediocrity. Electing not to waste his time with frivolous things like parties and dances, he instead put his energy on the piste, where he rigorously trains as captain of the Blackmore fencing team.\n\nHowever, at the end of the day Apollo does not fret too much on the tedium of life in New York. He knows that eventually the time will come when his father will call on him to come home and he will get to show that he is worthy of wielding his family's ancestral blade."
+			"lore": "A land of beauty, tradition and conflict; North Ixia is no stranger to brutal political violence. So when Apollo was told that it was for his own safety he was being sent to New York for school, he knew the situation was serious.<br><br>Adjusting to life at Blackmore Academy didn't come easy to Apollo. His school was supposed to be filled with The Cursed Apple's best and brightest but all he saw, with few exceptions, was a sea of aggressive mediocrity. Electing not to waste his time with frivolous things like parties and dances, he instead put his energy on the piste, where he rigorously trains as captain of the Blackmore fencing team.<br><br>However, at the end of the day Apollo does not fret too much on the tedium of life in New York. He knows that eventually the time will come when his father will call on him to come home and he will get to show that he is worthy of wielding his family's ancestral blade."
 		},
 		"player_selectable": true,
 		"development_state": "release",
@@ -96823,9 +96825,11 @@
 		"id": 78,
 		"class_name": "hero_deadpack",
 		"name": "Deadman Danny",
-		"description": {},
-		"player_selectable": false,
-		"development_state": "pre_release",
+		"description": {
+			"lore": "\"Ladies and Gentlemen, I'm going to tell you a shocking secret: at Fairfax Industries we know nothing about safety. Now let me tell you something even MORE shocking... that's a good thing! Now in my tenure here I have been shot, stabbed, impaled, defenestrated, blown up, atomized, and decapitated-not once. not twice. not thrice. but quice. That's right, my head has been cut off enough times that I had to use a made up word to quantify it.<br><br>But I put myself through figurative and sometimes literal hell because it's not enough to THINK about how things go wrong, we need to KNOW how things go wrong.<br><br>Now the demonstration you are about to witness is extremely dangerous. So sit back. Put on your safety googles. And bear witness to the miracle of flight courtesy of Fairfax Industries, and the Chimera Mark 1.\"<br><br><span class=\"italics\">- This transcription of Danny's opening remarks at The Military Technology Expo has been provided by Fairfax Industries</span>"
+		},
+		"player_selectable": true,
+		"development_state": "release",
 		"disabled": false,
 		"in_development": false,
 		"needs_testing": false,
@@ -96835,12 +96839,412 @@
 			"High-flying",
 			"Explosive"
 		],
+		"hideout_rich_presence": "Testing Fine Fairfax Products In The Hideout",
+		"hero_type": "marksman",
+		"gender": "male",
 		"search_name": "Deadman Danny",
-		"prerelease_only": true,
+		"popular_items": {
+			"timestamp": 1791307974,
+			"early_game": [
+				{
+					"item_id": 1976391348,
+					"class_name": "upgrade_cold_front",
+					"pick_pct": 34.090908,
+					"winrate_pct": 20
+				},
+				{
+					"item_id": 2829638276,
+					"class_name": "upgrade_endurance",
+					"pick_pct": 40.909092,
+					"winrate_pct": 38.88889
+				},
+				{
+					"item_id": 690458959,
+					"class_name": "upgrade_express_shot",
+					"pick_pct": 9.090909,
+					"winrate_pct": 75
+				},
+				{
+					"item_id": 1672893796,
+					"class_name": "upgrade_grit",
+					"pick_pct": 6.818182,
+					"winrate_pct": 0
+				},
+				{
+					"item_id": 3077079169,
+					"class_name": "upgrade_high_velocity_mag",
+					"pick_pct": 86.36364,
+					"winrate_pct": 34.210526
+				},
+				{
+					"item_id": 968099481,
+					"class_name": "upgrade_improved_spirit",
+					"pick_pct": 20.454546,
+					"winrate_pct": 11.111111
+				},
+				{
+					"item_id": 4139877411,
+					"class_name": "upgrade_improved_stamina",
+					"pick_pct": 9.090909,
+					"winrate_pct": 0
+				},
+				{
+					"item_id": 3331811235,
+					"class_name": "upgrade_long_range",
+					"pick_pct": 31.818182,
+					"winrate_pct": 35.714287
+				},
+				{
+					"item_id": 1998374645,
+					"class_name": "upgrade_magic_burst",
+					"pick_pct": 18.181818,
+					"winrate_pct": 12.5
+				},
+				{
+					"item_id": 754480263,
+					"class_name": "upgrade_magic_reach",
+					"pick_pct": 6.818182,
+					"winrate_pct": 0
+				},
+				{
+					"item_id": 3970837787,
+					"class_name": "upgrade_magic_shield",
+					"pick_pct": 11.363636,
+					"winrate_pct": 40
+				},
+				{
+					"item_id": 3862866912,
+					"class_name": "upgrade_medic_bullets",
+					"pick_pct": 6.818182,
+					"winrate_pct": 33.333332
+				},
+				{
+					"item_id": 2064029594,
+					"class_name": "upgrade_pristine_emblem",
+					"pick_pct": 54.545456,
+					"winrate_pct": 41.666668
+				},
+				{
+					"item_id": 7409189,
+					"class_name": "upgrade_soaring_spirit",
+					"pick_pct": 13.636364,
+					"winrate_pct": 0
+				}
+			],
+			"mid_game": [
+				{
+					"item_id": 2971868509,
+					"class_name": "upgrade_bullet_resist_shredder",
+					"pick_pct": 34.090908,
+					"winrate_pct": 26.666666
+				},
+				{
+					"item_id": 3585132399,
+					"class_name": "upgrade_chonky",
+					"pick_pct": 11.363636,
+					"winrate_pct": 20
+				},
+				{
+					"item_id": 1976391348,
+					"class_name": "upgrade_cold_front",
+					"pick_pct": 6.818182,
+					"winrate_pct": 0
+				},
+				{
+					"item_id": 3261353684,
+					"class_name": "upgrade_cooldown_reduction",
+					"pick_pct": 6.818182,
+					"winrate_pct": 0
+				},
+				{
+					"item_id": 2829638276,
+					"class_name": "upgrade_endurance",
+					"pick_pct": 6.818182,
+					"winrate_pct": 33.333332
+				},
+				{
+					"item_id": 690458959,
+					"class_name": "upgrade_express_shot",
+					"pick_pct": 47.727272,
+					"winrate_pct": 38.095238
+				},
+				{
+					"item_id": 1672893796,
+					"class_name": "upgrade_grit",
+					"pick_pct": 11.363636,
+					"winrate_pct": 40
+				},
+				{
+					"item_id": 3633614685,
+					"class_name": "upgrade_health",
+					"pick_pct": 18.181818,
+					"winrate_pct": 37.5
+				},
+				{
+					"item_id": 968099481,
+					"class_name": "upgrade_improved_spirit",
+					"pick_pct": 56.81818,
+					"winrate_pct": 44
+				},
+				{
+					"item_id": 4139877411,
+					"class_name": "upgrade_improved_stamina",
+					"pick_pct": 13.636364,
+					"winrate_pct": 50
+				},
+				{
+					"item_id": 3331811235,
+					"class_name": "upgrade_long_range",
+					"pick_pct": 45.454544,
+					"winrate_pct": 40
+				},
+				{
+					"item_id": 1998374645,
+					"class_name": "upgrade_magic_burst",
+					"pick_pct": 59.090908,
+					"winrate_pct": 38.46154
+				},
+				{
+					"item_id": 754480263,
+					"class_name": "upgrade_magic_reach",
+					"pick_pct": 25,
+					"winrate_pct": 36.363636
+				},
+				{
+					"item_id": 3970837787,
+					"class_name": "upgrade_magic_shield",
+					"pick_pct": 43.18182,
+					"winrate_pct": 15.789474
+				},
+				{
+					"item_id": 2121044373,
+					"class_name": "upgrade_magic_shock",
+					"pick_pct": 38.636364,
+					"winrate_pct": 35.294117
+				},
+				{
+					"item_id": 380806748,
+					"class_name": "upgrade_magic_tempo",
+					"pick_pct": 25,
+					"winrate_pct": 36.363636
+				},
+				{
+					"item_id": 2064029594,
+					"class_name": "upgrade_pristine_emblem",
+					"pick_pct": 11.363636,
+					"winrate_pct": 0
+				},
+				{
+					"item_id": 3731635960,
+					"class_name": "upgrade_reduce_debuff_duration",
+					"pick_pct": 6.818182,
+					"winrate_pct": 66.666664
+				},
+				{
+					"item_id": 1235347618,
+					"class_name": "upgrade_regenerating_bullet_shield",
+					"pick_pct": 9.090909,
+					"winrate_pct": 0
+				},
+				{
+					"item_id": 2152872419,
+					"class_name": "upgrade_sharpshooter",
+					"pick_pct": 59.090908,
+					"winrate_pct": 26.923077
+				},
+				{
+					"item_id": 7409189,
+					"class_name": "upgrade_soaring_spirit",
+					"pick_pct": 72.72727,
+					"winrate_pct": 37.5
+				},
+				{
+					"item_id": 112198670,
+					"class_name": "upgrade_spirit_bubble",
+					"pick_pct": 25,
+					"winrate_pct": 27.272728
+				},
+				{
+					"item_id": 334300056,
+					"class_name": "upgrade_superior_stamina",
+					"pick_pct": 6.818182,
+					"winrate_pct": 66.666664
+				},
+				{
+					"item_id": 1193964439,
+					"class_name": "upgrade_tech_range",
+					"pick_pct": 13.636364,
+					"winrate_pct": 33.333332
+				},
+				{
+					"item_id": 805079544,
+					"class_name": "upgrade_weapon_shielding",
+					"pick_pct": 15.909091,
+					"winrate_pct": 14.285714
+				}
+			],
+			"late_game": [
+				{
+					"item_id": 3812615317,
+					"class_name": "upgrade_arctic_blast",
+					"pick_pct": 6.818182,
+					"winrate_pct": 33.333332
+				},
+				{
+					"item_id": 951866250,
+					"class_name": "upgrade_auto_cleanse",
+					"pick_pct": 6.818182,
+					"winrate_pct": 66.666664
+				},
+				{
+					"item_id": 2519598785,
+					"class_name": "upgrade_boundless_spirit",
+					"pick_pct": 36.363636,
+					"winrate_pct": 56.25
+				},
+				{
+					"item_id": 3585132399,
+					"class_name": "upgrade_chonky",
+					"pick_pct": 25,
+					"winrate_pct": 9.090909
+				},
+				{
+					"item_id": 3261353684,
+					"class_name": "upgrade_cooldown_reduction",
+					"pick_pct": 50,
+					"winrate_pct": 31.818182
+				},
+				{
+					"item_id": 1396247347,
+					"class_name": "upgrade_critshot",
+					"pick_pct": 20.454546,
+					"winrate_pct": 66.666664
+				},
+				{
+					"item_id": 1047818222,
+					"class_name": "upgrade_debuff_reducer",
+					"pick_pct": 11.363636,
+					"winrate_pct": 20
+				},
+				{
+					"item_id": 690458959,
+					"class_name": "upgrade_express_shot",
+					"pick_pct": 43.18182,
+					"winrate_pct": 36.842106
+				},
+				{
+					"item_id": 365620721,
+					"class_name": "upgrade_glass_cannon",
+					"pick_pct": 20.454546,
+					"winrate_pct": 22.222221
+				},
+				{
+					"item_id": 2603935618,
+					"class_name": "upgrade_healbane",
+					"pick_pct": 18.181818,
+					"winrate_pct": 25
+				},
+				{
+					"item_id": 3633614685,
+					"class_name": "upgrade_health",
+					"pick_pct": 13.636364,
+					"winrate_pct": 33.333332
+				},
+				{
+					"item_id": 876563814,
+					"class_name": "upgrade_health_stealing_magic",
+					"pick_pct": 31.818182,
+					"winrate_pct": 35.714287
+				},
+				{
+					"item_id": 754480263,
+					"class_name": "upgrade_magic_reach",
+					"pick_pct": 11.363636,
+					"winrate_pct": 40
+				},
+				{
+					"item_id": 2121044373,
+					"class_name": "upgrade_magic_shock",
+					"pick_pct": 34.090908,
+					"winrate_pct": 20
+				},
+				{
+					"item_id": 380806748,
+					"class_name": "upgrade_magic_tempo",
+					"pick_pct": 9.090909,
+					"winrate_pct": 50
+				},
+				{
+					"item_id": 3731635960,
+					"class_name": "upgrade_reduce_debuff_duration",
+					"pick_pct": 18.181818,
+					"winrate_pct": 12.5
+				},
+				{
+					"item_id": 2152872419,
+					"class_name": "upgrade_sharpshooter",
+					"pick_pct": 27.272728,
+					"winrate_pct": 33.333332
+				},
+				{
+					"item_id": 343572757,
+					"class_name": "upgrade_spirit_burn",
+					"pick_pct": 11.363636,
+					"winrate_pct": 40
+				},
+				{
+					"item_id": 3647584222,
+					"class_name": "upgrade_split_shot",
+					"pick_pct": 6.818182,
+					"winrate_pct": 33.333332
+				},
+				{
+					"item_id": 334300056,
+					"class_name": "upgrade_superior_stamina",
+					"pick_pct": 22.727272,
+					"winrate_pct": 30
+				},
+				{
+					"item_id": 2226497419,
+					"class_name": "upgrade_tech_overflow",
+					"pick_pct": 29.545454,
+					"winrate_pct": 30.76923
+				},
+				{
+					"item_id": 2163598980,
+					"class_name": "upgrade_tech_purge",
+					"pick_pct": 9.090909,
+					"winrate_pct": 25
+				},
+				{
+					"item_id": 1193964439,
+					"class_name": "upgrade_tech_range",
+					"pick_pct": 43.18182,
+					"winrate_pct": 42.105263
+				},
+				{
+					"item_id": 1644605047,
+					"class_name": "upgrade_vex_barrier",
+					"pick_pct": 9.090909,
+					"winrate_pct": 50
+				}
+			]
+		},
+		"prerelease_only": false,
 		"limited_testing": false,
-		"complexity": 3,
+		"complexity": 2,
 		"skin": 0,
 		"images": {
+			"icon_hero_card": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_card.png",
+			"icon_hero_card_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_card.webp",
+			"icon_image_small": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_sm.png",
+			"icon_image_small_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_sm.webp",
+			"minimap_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_mm.png",
+			"minimap_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_mm.webp",
+			"hero_card_critical": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_card_critical.png",
+			"hero_card_critical_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_card_critical.webp",
+			"hero_card_gloat": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_card_gloat.png",
+			"hero_card_gloat_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_card_gloat.webp",
 			"top_bar_vertical_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_vertical.png",
 			"top_bar_vertical_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_vertical.webp",
 			"background_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/backgrounds/deadpack_bg.png",
@@ -96853,21 +97257,25 @@
 			"hero_select": "https://assets-bucket.deadlock-api.com/assets-api-res/models/heroes_wip/deadpack/deadpack/hero_select.glb"
 		},
 		"items": {
-			"weapon_primary": "citadel_weapon_inferno_set",
-			"weapon_melee": "ability_melee_inferno",
+			"weapon_primary": "ability_deadpack_primary_weapon_charge",
+			"weapon_melee": "ability_melee_deadpack",
 			"ability_mantle": "citadel_ability_mantle",
 			"ability_jump": "citadel_ability_jump",
 			"ability_slide": "citadel_ability_slide",
-			"ability_zip_line": "citadel_ability_zip_line",
+			"ability_zip_line": "ability_deadpack_zip_line",
 			"ability_zip_line_boost": "citadel_ability_zipline_boost",
 			"ability_climb_rope": "citadel_ability_climb_rope",
 			"ability_innate1": "citadel_ability_dash",
 			"ability_innate2": "citadel_ability_sprint",
-			"ability_innate3": "citadel_ability_melee_parry"
+			"ability_innate3": "citadel_ability_melee_parry",
+			"signature1": "ability_deadpack_chargeblast",
+			"signature2": "ability_deadpack_rocketeer",
+			"signature3": "ability_deadpack_flamethrower",
+			"signature4": "ability_deadpack_ultimate"
 		},
 		"starting_stats": {
 			"max_move_speed": {
-				"value": 7.2,
+				"value": 6.4,
 				"display_stat_name": "EMaxMoveSpeed"
 			},
 			"sprint_speed": {
@@ -96891,7 +97299,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 680,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -96915,11 +97323,11 @@
 				"display_stat_name": "EStamina"
 			},
 			"base_health_regen": {
-				"value": 2,
+				"value": 2.5,
 				"display_stat_name": "EBaseHealthRegen"
 			},
 			"stamina_regen_per_second": {
-				"value": 0.222222,
+				"value": 0.2,
 				"display_stat_name": "EStaminaRegenPerSecond"
 			},
 			"ability_resource_max": {
@@ -96947,7 +97355,7 @@
 				"display_stat_name": "EGroundDashDistanceInMeters"
 			},
 			"ground_dash_duration": {
-				"value": 0.68,
+				"value": 0.62,
 				"display_stat_name": "EGroundDashDuration"
 			},
 			"air_dash_distance_in_meters": {
@@ -96955,7 +97363,7 @@
 				"display_stat_name": "EAirDashDistanceInMeters"
 			},
 			"air_dash_duration": {
-				"value": 0.47,
+				"value": 0.43,
 				"display_stat_name": "EAirDashDuration"
 			},
 			"ooc_health_regen": {
@@ -96991,9 +97399,9 @@
 		},
 		"colors": {
 			"ui": [
-				255,
-				255,
-				255
+				152,
+				57,
+				82
 			],
 			"style": [
 				206,
@@ -97054,7 +97462,12 @@
 					"ELightMeleeDamage",
 					"EHeavyMeleeDamage"
 				],
-				"weapon_attributes": []
+				"weapon_attributes": [
+					"EWeaponAttribute_BurstFire",
+					"EWeaponAttribute_MediumRange"
+				],
+				"weapon_image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/guns/deadpack_gun.png",
+				"weapon_image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/guns/deadpack_gun.webp"
 			}
 		},
 		"cost_bonuses": {
@@ -97644,7 +98057,7 @@
 				"weight": 1
 			},
 			"upgrade_arctic_blast": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_banshee_slugs": {
@@ -97656,7 +98069,7 @@
 				"weight": 1
 			},
 			"upgrade_blitz_bullets": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_blood_tribute": {
@@ -97664,7 +98077,7 @@
 				"weight": 1
 			},
 			"upgrade_boundless_spirit": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_boxing_glove": {
@@ -97732,7 +98145,7 @@
 				"weight": 1
 			},
 			"upgrade_cold_front": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_colossus": {
@@ -97744,7 +98157,7 @@
 				"weight": 1
 			},
 			"upgrade_cooldown_reduction": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_counterspell": {
@@ -97756,7 +98169,7 @@
 				"weight": 1
 			},
 			"upgrade_critshot": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_crushing_fists": {
@@ -97820,7 +98233,7 @@
 				"weight": 1
 			},
 			"upgrade_express_shot": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_extra_charge": {
@@ -97844,7 +98257,7 @@
 				"weight": 1
 			},
 			"upgrade_glass_cannon": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_glitch": {
@@ -97876,7 +98289,7 @@
 				"weight": 1
 			},
 			"upgrade_healbane": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_healbuff": {
@@ -97904,7 +98317,7 @@
 				"weight": 1
 			},
 			"upgrade_high_velocity_mag": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_hollow_point_rounds": {
@@ -97924,11 +98337,11 @@
 				"weight": 1
 			},
 			"upgrade_improved_spirit": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_improved_stamina": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_infinite_rounds": {
@@ -97960,11 +98373,11 @@
 				"weight": 1
 			},
 			"upgrade_long_range": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_magic_burst": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_magic_carpet": {
@@ -97972,15 +98385,15 @@
 				"weight": 1
 			},
 			"upgrade_magic_reach": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_magic_shield": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_magic_shock": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_magic_slow": {
@@ -97992,7 +98405,7 @@
 				"weight": 1
 			},
 			"upgrade_magic_tempo": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_magic_vulnerability": {
@@ -98056,7 +98469,7 @@
 				"weight": 1
 			},
 			"upgrade_pristine_emblem": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_proc_silence": {
@@ -98136,7 +98549,7 @@
 				"weight": 1
 			},
 			"upgrade_sharpshooter": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_shivas_bracelet": {
@@ -98156,7 +98569,7 @@
 				"weight": 1
 			},
 			"upgrade_soaring_spirit": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_spellbreaker": {
@@ -98168,11 +98581,11 @@
 				"weight": 1
 			},
 			"upgrade_spirit_bubble": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_spirit_burn": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_spirit_sap": {
@@ -98192,7 +98605,7 @@
 				"weight": 1
 			},
 			"upgrade_superior_stamina": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_suppressor": {
@@ -98220,7 +98633,7 @@
 				"weight": 1
 			},
 			"upgrade_tech_overflow": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_tech_purge": {
@@ -98228,7 +98641,7 @@
 				"weight": 1
 			},
 			"upgrade_tech_range": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_thermal_detonator": {
@@ -98244,11 +98657,11 @@
 				"weight": 1
 			},
 			"upgrade_toxic_bullets": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_transcendent_cooldown": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_trophy_collector": {
@@ -98292,7 +98705,7 @@
 				"weight": 1
 			},
 			"upgrade_weighted_shots": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			},
 			"upgrade_withering_whip": {
@@ -98304,7 +98717,7 @@
 				"weight": 1
 			},
 			"upgrade_grit": {
-				"bucket": "Normal",
+				"bucket": "Good",
 				"weight": 1
 			}
 		}
@@ -98314,7 +98727,7 @@
 		"class_name": "hero_familiar",
 		"name": "Rem",
 		"description": {
-			"lore": "An accidental stowaway from the world of dreams, Rem has found himself stranded in the city that never sleeps.  Driven by his curious nature, Rem and his helpful friends have been seen wandering across the five boroughs in search of a way back home.\n\nSo if you ever find yourself dozing off while taking the Blue line home from work, maybe you’ve just had an encounter with one of the Cursed Apple’s newest denizens."
+			"lore": "An accidental stowaway from the world of dreams, Rem has found himself stranded in the city that never sleeps.  Driven by his curious nature, Rem and his helpful friends have been seen wandering across the five boroughs in search of a way back home.<br><br>So if you ever find yourself dozing off while taking the Blue line home from work, maybe you've just had an encounter with one of the Cursed Apple's newest denizens."
 		},
 		"player_selectable": true,
 		"development_state": "release",
@@ -100339,7 +100752,7 @@
 		"class_name": "hero_werewolf",
 		"name": "Silver",
 		"description": {
-			"lore": "Lilah Silver is a mess.  She drinks too much, she smokes too much, and the less is said about her personal life the better.   But despite Silver's flaws she has managed to carve out a career as a successful bounty hunter, and while she would like to think that her successes are solely because she has incredible intuition, the fact that she’s a werewolf doesn’t hurt."
+			"lore": "Lilah Silver is a mess.  She drinks too much, she smokes too much, and the less is said about her personal life the better.   But despite Silver's flaws she has managed to carve out a career as a successful bounty hunter, and while she would like to think that her successes are solely because she has incredible intuition, the fact that she's a werewolf doesn't hurt."
 		},
 		"player_selectable": true,
 		"development_state": "release",
@@ -102317,7 +102730,7 @@
 		"class_name": "hero_unicorn",
 		"name": "Celeste",
 		"description": {
-			"lore": "Even in a world of magic, some things are still rare and unusual. So what is a unicorn to do?  Announce her presence to the world and potentially have poachers looking to saw off her horn? Or hide in plain sight at a Coney Island Side Show where most folk would assume her appearance was just part of an act?\n\nOver the years \"The Dazzling Celeste\" has grown into one of the more popular attractions on Coney, and while the applause from a cheering audience is appreciated; what keeps her waking up in the morning is the found family she's made at work.\n\nKeruba the Mermaid.\n\nBlockhead Lenny.\n\nChickenwing.\n\nTed.\n\nThese were her people.  So when she discovered that one of her own sold part of their soul in order to cover a gambling debt, Celeste knew it was time to step out of the shadows and do whatever it takes to get it back.  Is revealing her power to The Patrons a risk?  Yes.  But that's tomorrow's problem... her family needs help today."
+			"lore": "Even in a world of magic, some things are still rare and unusual. So what is a unicorn to do? Announce her presence to the world and potentially have poachers looking to saw off her horn? Or hide in plain sight at a Coney Island Side Show where most folk would assume her appearance was just part of an act?<br><br>Over the years \"The Dazzling Celeste\" has grown into one of the more popular attractions on Coney, and while the applause from a cheering audience is appreciated; what keeps her waking up in the morning is the found family she's made at work.<br><br>Keruba the Mermaid.<br><br>Blockhead Lenny.<br><br>Chickenwing.<br><br>Ted.<br><br>These were her people. So when she discovered that one of her own sold part of their soul in order to cover a gambling debt, Celeste knew it was time to step out of the shadows and do whatever it takes to get it back. Is revealing her power to The Patrons a risk? Yes. But that's tomorrow's problem... her family needs help today."
 		},
 		"player_selectable": true,
 		"development_state": "release",
@@ -107259,7 +107672,7 @@
 		"class_name": "hero_ratking",
 		"name": "Rat King",
 		"description": {
-			"lore": "The cryptid ruler of the New York Warrens,  The Rat King towers over his subjects in size, strength, and ambition.  No longer content with hiding underground, the king has revealed his bold vision for a future where he and his subjects can walk the surface without fear of the pest control vans that roam the streets of New York (or as the rats call them: human death squads)\n\nStep 1: Take control of Long Island\nStep 2: Declare Long Island as the new sovereign nation of Ratannia\nStep 3: Execute every human that refuses to leave this new rat utopia\n\nBut air tight as this plan is, the king of rats didn't want to take chances: and so he’s decided to the summon the patron to help hedge his bets."
+			"lore": "The cryptid ruler of the New York Warrens, The Rat King towers over his subjects in size, strength, and ambition. No longer content with hiding underground, the king has revealed his bold vision for a future where he and his subjects can walk the surface without fear of the pest control vans that roam the streets of New York (or as the rats call them: human death squads)<br><br>Step 1: Take control of Long Island<br>Step 2: Declare Long Island as the new sovereign nation of Ratannia<br>Step 3: Execute every human that refuses to leave this new rat utopia<br><br>But air tight as this plan is, the king of rats didn't want to take chances: and so he's decided to summon the patron to help hedge his bets."
 		},
 		"player_selectable": true,
 		"development_state": "release",
@@ -109235,7 +109648,7 @@
 		"class_name": "hero_chessmaster",
 		"name": "Solomon",
 		"description": {
-			"lore": "In a world that moves too fast, Solomon is content to stop and listen. Offering a friendly ear and good counsel, Solomon has found himself sitting across the chess table from tourists, criminals, and titans of industry.  But no matter his opponent, Solomon remains un-phased… because to him, chess is so much more than a game.  It's an equalizer.  A way for him to connect to people from all walks of life on an even playing field."
+			"lore": "In a world that moves too fast, Solomon is content to stop and listen. Offering a friendly ear and good counsel, Solomon has found himself sitting across the chess table from tourists, criminals, and titans of industry.  But no matter his opponent, Solomon remains un-phased... because to him, chess is so much more than a game. It's an equalizer. A way for him to connect to people from all walks of life on an even playing field."
 		},
 		"player_selectable": true,
 		"development_state": "release",
@@ -114200,7 +114613,7 @@
 		"class_name": "hero_baba",
 		"name": "Baba",
 		"description": {
-			"lore": "There are a few things most denizens of The Cursed Apple hope to experience at some point in their lives.\n\nSee a Broadway show.\nIce Skate at Rockefeller Center during Christmas season.\nGet yelled at by the Central Park Pigeon Lady.\n\nBecause Baba is more than just an old woman that feeds spirit pigeons in the park... she's an institution.  A force of nature woven into the very lore of New York City.  Is it true that she's sat at the same bench every day for the past 50 years, rain or shine?  Maybe.  Is she REALLY the leader of The Soho Coven?  Who's to say.  One thing's for sure though... she's a New Yorker.  And she's not going to sit back and watch a bunch of tourists tear apart Manhattan in pursuit of power."
+			"lore": "There are a few things most denizens of The Cursed Apple hope to experience at some point in their lives.<br><br>See a Broadway show.<br>Ice Skate at Rockefeller Center during Christmas season.<br>Get yelled at by the Central Park Pigeon Lady.<br><br>Because Baba is more than just an old woman that feeds spirit pigeons in the park... she's an institution. A force of nature woven into the very lore of New York City. Is it true that she's sat at the same bench every day for the past 50 years, rain or shine? Maybe. Is she REALLY the leader of The Soho Coven? Who's to say. One thing's for sure though... she's a New Yorker.  And she's not going to sit back and watch a bunch of tourists tear apart Manhattan in pursuit of power."
 		},
 		"player_selectable": true,
 		"development_state": "release",
