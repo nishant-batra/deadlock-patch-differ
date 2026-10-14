@@ -1,1 +1,38 @@
-null
+{
+	"builds": [
+		6779
+	],
+	"builtAt": "2026-10-13T13:33:25",
+	"note": {
+		"title": "Fairfax Industries Employee Spotlight",
+		"pubDate": "2026-10-13T20:59:55Z",
+		"link": "https://store.steampowered.com/news/app/1422450/view/703281660030880788"
+	},
+	"general": {
+		"title": "Fairfax Industries Employee Spotlight",
+		"pubDate": "2026-10-13T20:59:55Z",
+		"link": "https://store.steampowered.com/news/app/1422450/view/703281660030880788",
+		"source": "steam",
+		"html": "<img src=\"https://clan.akamai.steamstatic.com/images/45164767/02829fc9750a193799ea05d6e0ab0ef78b0cffa0.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" /><br /><br />Today, Fairfax Industries is proud to introduce their most valuable salesman: Deadman Danny. Wielding a rocket launcher and flying high above the streets of New York (courtesy of the <i>Chimera Mk1</i> - the latest and greatest in self-adhered aviation technology), Danny rains his <i>Strix Salvo</i> missiles down upon foes, marking them for future attacks. <i>Jettison Fuel</i> is a handy trick that both expels heat from the Chimera System, while also dousing nearby enemies in the warm embrace of a fiery inferno. Yet his most impressive tactic has always been his ability to <i>Close the Deal</i>, wowing prospective customers with an explosive hands-on demonstration of all that Fairfax has to offer. - <i>\"At Fairfax Industries we say \"All's Fair\", but that's not true! Because with the Fairfax Chimera Mark 1, <u>you</u> have the advantage.\"</i><br /><br />Take flight with Deadman Danny, available in-game now! With only two hero releases remaining, keep your votes coming to help determine who will be joining us on <b>Friday October 16th at 2pm PDT.</b>"
+	},
+	"before": {
+		"hero/Wraith/weapon/weapon_info/damage_per_second": 59.68253968253968,
+		"hero/Dynamo/weapon/weapon_info/bullets_per_second": 3.8095238095238098,
+		"hero/Kelvin/weapon/weapon_info/bullets_per_second": 3.8095238095238098,
+		"hero/Mo & Krill/weapon/weapon_info/damage_per_second": 59.68253968253968,
+		"hero/Warden/weapon/weapon_info/bullets_per_second": 3.8095238095238098,
+		"hero/Yamato/weapon/weapon_info/bullets_per_second": 11.904761904761903,
+		"hero/Mina/weapon/weapon_info/bullets_per_second": 3.968253968253968,
+		"hero/Mina/weapon/weapon_info/damage_per_second": 29.007936507936503
+	},
+	"after": {
+		"hero/Wraith/weapon/weapon_info/damage_per_second": 59.682539682539684,
+		"hero/Dynamo/weapon/weapon_info/bullets_per_second": 3.8095238095238093,
+		"hero/Kelvin/weapon/weapon_info/bullets_per_second": 3.8095238095238093,
+		"hero/Mo & Krill/weapon/weapon_info/damage_per_second": 59.682539682539684,
+		"hero/Warden/weapon/weapon_info/bullets_per_second": 3.8095238095238093,
+		"hero/Yamato/weapon/weapon_info/bullets_per_second": 11.904761904761905,
+		"hero/Mina/weapon/weapon_info/bullets_per_second": 3.9682539682539684,
+		"hero/Mina/weapon/weapon_info/damage_per_second": 29.007936507936506
+	}
+}

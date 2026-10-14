@@ -4647,7 +4647,7 @@
 			"damage_per_second": 57.00000000000001,
 			"damage_per_second_with_reload": 34.487394957983206,
 			"damage_per_shot": 34.2,
-			"damage_per_magazine": 205.2
+			"damage_per_magazine": 205.20000000000002
 		},
 		"type": "weapon"
 	},
@@ -16514,7 +16514,7 @@
 			"shots_per_second": 1.5873015873015872,
 			"shots_per_second_with_reload": 1.434834595456357,
 			"bullets_per_second": 14.285714285714285,
-			"bullets_per_second_with_reload": 12.913511359107211,
+			"bullets_per_second_with_reload": 12.913511359107213,
 			"damage_per_second": 51.42857142857142,
 			"damage_per_second_with_reload": 46.488640892785966,
 			"damage_per_shot": 32.4,
@@ -21963,7 +21963,7 @@
 			"damage_per_second": 28.000000000000004,
 			"damage_per_second_with_reload": 18.51968503937008,
 			"damage_per_shot": 4.9,
-			"damage_per_magazine": 117.6
+			"damage_per_magazine": 117.60000000000001
 		},
 		"type": "weapon"
 	},
@@ -25352,9 +25352,9 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 3.8095238095238098,
+			"shots_per_second": 3.8095238095238093,
 			"shots_per_second_with_reload": 2.547770700636943,
-			"bullets_per_second": 3.8095238095238098,
+			"bullets_per_second": 3.8095238095238093,
 			"bullets_per_second_with_reload": 2.547770700636943,
 			"damage_per_second": 47.99999999999999,
 			"damage_per_second_with_reload": 32.10191082802548,
@@ -27314,7 +27314,7 @@
 			"damage_per_second": 28.952380952380953,
 			"damage_per_second_with_reload": 23.062068965517245,
 			"damage_per_shot": 6.08,
-			"damage_per_magazine": 401.28
+			"damage_per_magazine": 401.28000000000003
 		},
 		"type": "weapon"
 	},
@@ -29759,7 +29759,7 @@
 			"damage_per_second": 43.80952380952382,
 			"damage_per_second_with_reload": 26.28571428571429,
 			"damage_per_shot": 20.7,
-			"damage_per_magazine": 186.3
+			"damage_per_magazine": 186.29999999999998
 		},
 		"type": "weapon"
 	},
@@ -39228,9 +39228,9 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 3.8095238095238098,
+			"shots_per_second": 3.8095238095238093,
 			"shots_per_second_with_reload": 2.150537634408602,
-			"bullets_per_second": 3.8095238095238098,
+			"bullets_per_second": 3.8095238095238093,
 			"bullets_per_second_with_reload": 2.150537634408602,
 			"damage_per_second": 70.85714285714286,
 			"damage_per_second_with_reload": 40,
@@ -44905,8 +44905,8 @@
 			"shots_per_second": 5.291005291005291,
 			"shots_per_second_with_reload": 2.9197080291970803,
 			"bullets_per_second": 21.164021164021165,
-			"bullets_per_second_with_reload": 11.67883211678832,
-			"damage_per_second": 59.68253968253968,
+			"bullets_per_second_with_reload": 11.678832116788321,
+			"damage_per_second": 59.682539682539684,
 			"damage_per_second_with_reload": 32.934306569343065,
 			"damage_per_shot": 11.28,
 			"damage_per_magazine": 225.6
@@ -46708,7 +46708,7 @@
 			"shots_per_second_with_reload": 0.9022556390977444,
 			"bullets_per_second": 1.6666666666666667,
 			"bullets_per_second_with_reload": 0.9022556390977444,
-			"damage_per_second": 116.66666666666669,
+			"damage_per_second": 116.66666666666667,
 			"damage_per_second_with_reload": 63.15789473684211,
 			"damage_per_shot": 70,
 			"damage_per_magazine": 420
@@ -46938,7 +46938,7 @@
 				"burst_slope": 0
 			},
 			"shots_per_second": 4.761904761904762,
-			"shots_per_second_with_reload": 2.23463687150838,
+			"shots_per_second_with_reload": 2.2346368715083798,
 			"bullets_per_second": 42.857142857142854,
 			"bullets_per_second_with_reload": 20.111731843575416,
 			"damage_per_second": 78.85714285714286,
@@ -47182,7 +47182,7 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 1.9047619047619049,
+			"shots_per_second": 1.9047619047619047,
 			"shots_per_second_with_reload": 1.3733905579399142,
 			"bullets_per_second": 9.523809523809524,
 			"bullets_per_second_with_reload": 6.866952789699571,
@@ -51403,7 +51403,7 @@
 			"bullets_per_second": 1.6666666666666667,
 			"bullets_per_second_with_reload": 1.328125,
 			"damage_per_second": 39.18333333333334,
-			"damage_per_second_with_reload": 31.22421875,
+			"damage_per_second_with_reload": 31.224218750000002,
 			"damage_per_shot": 23.51,
 			"damage_per_magazine": 399.67
 		},
@@ -56299,7 +56299,7 @@
 			},
 			"shots_per_second": 2.2222222222222223,
 			"shots_per_second_with_reload": 2.03125,
-			"bullets_per_second": 15.555555555555555,
+			"bullets_per_second": 15.555555555555557,
 			"bullets_per_second_with_reload": 14.21875,
 			"damage_per_second": 56.00000000000001,
 			"damage_per_second_with_reload": 51.1875,
@@ -56528,7 +56528,7 @@
 				"burst_slope": 0
 			},
 			"recycle_time": 1,
-			"shots_per_second": 1.9047619047619049,
+			"shots_per_second": 1.9047619047619047,
 			"shots_per_second_with_reload": 1.2436404748445449,
 			"bullets_per_second": 13.333333333333332,
 			"bullets_per_second_with_reload": 8.705483323911814,
@@ -58210,7 +58210,7 @@
 			"bullets_per_second": 13.60544217687075,
 			"bullets_per_second_with_reload": 6.445941986522121,
 			"damage_per_second": 60.544217687074834,
-			"damage_per_second_with_reload": 28.68444184002344,
+			"damage_per_second_with_reload": 28.684441840023442,
 			"damage_per_shot": 4.45,
 			"damage_per_magazine": 146.85
 		},
@@ -62210,9 +62210,9 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 3.8095238095238098,
+			"shots_per_second": 3.8095238095238093,
 			"shots_per_second_with_reload": 2.229069691208287,
-			"bullets_per_second": 3.8095238095238098,
+			"bullets_per_second": 3.8095238095238093,
 			"bullets_per_second_with_reload": 2.229069691208287,
 			"damage_per_second": 66.05714285714285,
 			"damage_per_second_with_reload": 38.6520684455517,
@@ -63924,7 +63924,7 @@
 			"shots_per_second_with_reload": 6.513026052104208,
 			"bullets_per_second": 10.582010582010582,
 			"bullets_per_second_with_reload": 6.513026052104208,
-			"damage_per_second": 59.68253968253968,
+			"damage_per_second": 59.682539682539684,
 			"damage_per_second_with_reload": 36.73346693386773,
 			"damage_per_shot": 5.64,
 			"damage_per_magazine": 293.28
@@ -68235,7 +68235,7 @@
 			},
 			"shots_per_second": 2.380952380952381,
 			"shots_per_second_with_reload": 1.5515903801396431,
-			"bullets_per_second": 11.904761904761903,
+			"bullets_per_second": 11.904761904761905,
 			"bullets_per_second_with_reload": 7.757951900698216,
 			"damage_per_second": 63.21428571428571,
 			"damage_per_second_with_reload": 41.19472459270752,
@@ -68466,9 +68466,9 @@
 				"burst_slope": 0
 			},
 			"recycle_time": 2,
-			"shots_per_second": 0.9523809523809524,
+			"shots_per_second": 0.9523809523809523,
 			"shots_per_second_with_reload": 0.7627118644067796,
-			"bullets_per_second": 0.9523809523809524,
+			"bullets_per_second": 0.9523809523809523,
 			"bullets_per_second_with_reload": 0.7627118644067796,
 			"damage_per_second": 47.61904761904761,
 			"damage_per_second_with_reload": 38.13559322033898,
@@ -77485,9 +77485,9 @@
 			"shots_per_second": 1.6666666666666667,
 			"shots_per_second_with_reload": 1.0165184243964422,
 			"bullets_per_second": 21.666666666666668,
-			"bullets_per_second_with_reload": 13.214739517153747,
+			"bullets_per_second_with_reload": 13.214739517153749,
 			"damage_per_second": 86.66666666666667,
-			"damage_per_second_with_reload": 52.85895806861499,
+			"damage_per_second_with_reload": 52.858958068614996,
 			"damage_per_shot": 52,
 			"damage_per_magazine": 416
 		},
@@ -82634,11 +82634,11 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 3.968253968253968,
-			"shots_per_second_with_reload": 2.41254523522316,
-			"bullets_per_second": 3.968253968253968,
-			"bullets_per_second_with_reload": 2.41254523522316,
-			"damage_per_second": 29.007936507936503,
+			"shots_per_second": 3.9682539682539684,
+			"shots_per_second_with_reload": 2.4125452352231602,
+			"bullets_per_second": 3.9682539682539684,
+			"bullets_per_second_with_reload": 2.4125452352231602,
+			"damage_per_second": 29.007936507936506,
 			"damage_per_second_with_reload": 17.6357056694813,
 			"damage_per_shot": 7.31,
 			"damage_per_magazine": 87.72
@@ -84858,10 +84858,10 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 3.968253968253968,
-			"shots_per_second_with_reload": 2.41254523522316,
+			"shots_per_second": 3.9682539682539684,
+			"shots_per_second_with_reload": 2.4125452352231602,
 			"bullets_per_second": 7.936507936507937,
-			"bullets_per_second_with_reload": 4.82509047044632,
+			"bullets_per_second_with_reload": 4.8250904704463204,
 			"damage_per_second": 27.77777777777778,
 			"damage_per_second_with_reload": 16.887816646562122,
 			"damage_per_shot": 7,
@@ -87755,7 +87755,7 @@
 			"bullets_per_second": 2.8860028860028857,
 			"bullets_per_second_with_reload": 1.4711290915777857,
 			"damage_per_second": 28.860028860028855,
-			"damage_per_second_with_reload": 14.711290915777855,
+			"damage_per_second_with_reload": 14.711290915777857,
 			"damage_per_shot": 10,
 			"damage_per_magazine": 80
 		},
@@ -99167,9 +99167,9 @@
 				"burst_slope": 0
 			},
 			"shots_per_second": 1.4705882352941175,
-			"shots_per_second_with_reload": 0.9950248756218903,
+			"shots_per_second_with_reload": 0.9950248756218905,
 			"bullets_per_second": 1.4705882352941175,
-			"bullets_per_second_with_reload": 0.9950248756218903,
+			"bullets_per_second_with_reload": 0.9950248756218905,
 			"damage_per_second": 35.29411764705882,
 			"damage_per_second_with_reload": 23.88059701492537,
 			"damage_per_shot": 24,
@@ -103721,9 +103721,9 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 0.9523809523809524,
+			"shots_per_second": 0.9523809523809523,
 			"shots_per_second_with_reload": 0.7627118644067796,
-			"bullets_per_second": 0.9523809523809524,
+			"bullets_per_second": 0.9523809523809523,
 			"bullets_per_second_with_reload": 0.7627118644067796,
 			"damage_per_second": 60.34285714285714,
 			"damage_per_second_with_reload": 48.325423728813554,
@@ -183507,9 +183507,9 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 1.9354838709677415,
+			"shots_per_second": 1.9354838709677418,
 			"shots_per_second_with_reload": 1.4634146341463414,
-			"bullets_per_second": 1.9354838709677415,
+			"bullets_per_second": 1.9354838709677418,
 			"bullets_per_second_with_reload": 1.4634146341463414,
 			"damage_per_second": 27.096774193548384,
 			"damage_per_second_with_reload": 20.48780487804878,
@@ -190116,7 +190116,7 @@
 			"damage_per_second": 42,
 			"damage_per_second_with_reload": 38.44615384615384,
 			"damage_per_shot": 35.699999999999996,
-			"damage_per_magazine": 249.9
+			"damage_per_magazine": 249.89999999999998
 		},
 		"type": "weapon",
 		"use_custom_crosshair_settings": true,
@@ -194644,11 +194644,11 @@
 				"burst_slope": 0
 			},
 			"shots_per_second": 1.7241379310344829,
-			"shots_per_second_with_reload": 1.161103047895501,
+			"shots_per_second_with_reload": 1.1611030478955007,
 			"bullets_per_second": 1.7241379310344829,
-			"bullets_per_second_with_reload": 1.161103047895501,
+			"bullets_per_second_with_reload": 1.1611030478955007,
 			"damage_per_second": 31.03448275862069,
-			"damage_per_second_with_reload": 20.899854862119017,
+			"damage_per_second_with_reload": 20.899854862119014,
 			"damage_per_shot": 18,
 			"damage_per_magazine": 144
 		},
@@ -196351,8 +196351,8 @@
 			"bullets_per_second": 9.67741935483871,
 			"bullets_per_second_with_reload": 6.081081081081081,
 			"damage_per_second": 85.16129032258065,
-			"damage_per_second_with_reload": 53.51351351351352,
-			"damage_per_shot": 26.4,
+			"damage_per_second_with_reload": 53.513513513513516,
+			"damage_per_shot": 26.400000000000002,
 			"damage_per_magazine": 396.00000000000006
 		},
 		"type": "weapon"
@@ -198741,9 +198741,9 @@
 				"burst_slope": 0
 			},
 			"shots_per_second": 1.7391304347826089,
-			"shots_per_second_with_reload": 1.0289389067524115,
+			"shots_per_second_with_reload": 1.0289389067524117,
 			"bullets_per_second": 1.7391304347826089,
-			"bullets_per_second_with_reload": 1.0289389067524115,
+			"bullets_per_second_with_reload": 1.0289389067524117,
 			"damage_per_second": 52.173913043478265,
 			"damage_per_second_with_reload": 30.86816720257235,
 			"damage_per_shot": 30,
