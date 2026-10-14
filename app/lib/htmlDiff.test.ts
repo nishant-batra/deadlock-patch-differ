@@ -45,10 +45,8 @@ describe("toDiffText", () => {
 		expect(new Set([plain, svg, img, panel]).size).toBe(4);
 	});
 
-	it("treats any tag the string never closes as an icon, with no mapping", () => {
-		expect(toDiffText(`Range<hr class="rule">${hl("+2m")}`)).toBe(
-			"Range$hr$+2m",
-		);
+	it("treats a tag outside the icon list as a wrapper, closed or not", () => {
+		expect(toDiffText(`Range<hr class="rule">${hl("+2m")}`)).toBe("Range+2m");
 	});
 });
 
