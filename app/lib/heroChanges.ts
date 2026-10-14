@@ -31,7 +31,7 @@ import { hasTierChanges, type TierDiff } from "./abilityUpgrades";
 import type { Change } from "./diffEngine";
 import { toDiffText } from "./htmlDiff";
 import { ABILITY_SLOTS, isLiveHero, WEAPON_SLOT } from "./roster";
-import { isEmptyStatValue } from "./statValue";
+import { isEmptyStatValue, sameStatValue } from "./statValue";
 
 type StatValue = string | number;
 type StatEntry = { path: string[]; value: StatValue };
@@ -166,7 +166,7 @@ function diffEntries(
 			}
 		} else if (
 			!(isEmpty(previous.value) && isEmpty(value)) &&
-			String(previous.value) !== String(value)
+			!sameStatValue(previous.value, value)
 		) {
 			changes.push({
 				path,

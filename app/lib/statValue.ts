@@ -16,3 +16,17 @@ export const isEmptyStatValue = (value: unknown) => {
 	const number = String(value).replace(/\s*[a-z%]+$/i, "");
 	return number.trim() !== "" && Number(number) === 0;
 };
+
+/**
+ * A number with its floating-point noise dropped. The API derives rates like
+ * `bullets_per_second` by division, and re-deriving them in build 6779 moved
+ * 3.8095238095238098 -> 3.8095238095238093 - no change at all, but it showed
+ * seven heroes as hotfixed. 12 significant digits is far past anything a card
+ * shows.
+ */
+export const settleStatValue = (value: unknown) =>
+	typeof value === "number" ? Number(value.toPrecision(12)) : value;
+
+/** Whether two stat values are the same, ignoring floating-point noise. */
+export const sameStatValue = (a: unknown, b: unknown) =>
+	String(settleStatValue(a)) === String(settleStatValue(b));

@@ -35,7 +35,7 @@ import type {
 import { diffAbilityTiers, type TierDiff, type TierRow } from "./abilityUpgrades";
 import type { Change, ChangeValue } from "./diffEngine";
 import { toDiffText } from "./htmlDiff";
-import { isEmptyStatValue } from "./statValue";
+import { isEmptyStatValue, settleStatValue } from "./statValue";
 
 type Values = Record<string, unknown>;
 export type HotfixChanges = Pick<Hotfix, "before" | "after">;
@@ -66,7 +66,7 @@ function comparable(key: string, value: unknown): string {
 		const { bonus, value: rowValue } = value as { bonus?: unknown; value?: unknown };
 		return comparable(key, bonus ?? rowValue);
 	}
-	return isEmptyStatValue(value) ? "" : String(value);
+	return isEmptyStatValue(value) ? "" : String(settleStatValue(value));
 }
 
 /** `later` folded onto `earlier`. Spreads, then drops what came back equal. */
