@@ -1,1 +1,128 @@
-null
+{
+	"builds": [
+		6785
+	],
+	"builtAt": "2026-10-14T20:01:37",
+	"note": {
+		"title": "Minor Update - 10-14-2026",
+		"pubDate": "2026-10-15T03:11:58Z",
+		"link": "https://store.steampowered.com/news/app/1422450/view/669505296465396213"
+	},
+	"general": {
+		"title": "Minor Update - 10-14-2026",
+		"pubDate": "2026-10-15T03:11:58Z",
+		"link": "https://store.steampowered.com/news/app/1422450/view/669505296465396213",
+		"source": "steam",
+		"html": "<br />- Street Brawl: Baba Threadsap duration lasts 35% less<br /><br />"
+	},
+	"before": {
+		"hero/Deadman Danny/stats/starting_stats/max_health/value": 680,
+		"hero/Deadman Danny/stats/starting_stats/base_health_regen/value": 2.5,
+		"hero/Deadman Danny/weapon/weapon_info/bullet_damage": 12,
+		"hero/Deadman Danny/weapon/weapon_info/damage_per_second": 48,
+		"hero/Deadman Danny/ability/Strix Salvo/properties/AbilityCooldown/value": 30,
+		"hero/Deadman Danny/ability/Strix Salvo/properties/CoatedDamage/scale_function/stat_scale": 0.9,
+		"hero/Deadman Danny/ability/Chimera Mk1/properties/AbilityCooldown/scale_function/stat_scale": -0.25,
+		"hero/Deadman Danny/ability/Chimera Mk1/properties/MaxHealthSelfDamagePercent/value": "12",
+		"hero/Deadman Danny/ability/Chimera Mk1/properties/ExplosionBulletDamage/scale_function/stat_scale": 1.15,
+		"hero/Deadman Danny/ability/Close The Deal/properties/BonusDamagePercent/value": "50",
+		"hero/Deadman Danny/tier/Strix Salvo/2/row/Damage|#0": {
+			"label": "Damage",
+			"bonus": "20"
+		},
+		"hero/Deadman Danny/tier/Strix Salvo/2/row/CoatedDamage|#0": {
+			"label": "Coated Damage",
+			"bonus": "35"
+		},
+		"hero/Deadman Danny/tier/Strix Salvo/2/text": "+20 Damage<br>+35 Marked Damage",
+		"hero/Deadman Danny/tier/Strix Salvo/3/row/CoatedDamage|EAddToScale#0": {
+			"label": "Coated Damage",
+			"scaling": "ETechPower",
+			"bonus": "0.2"
+		},
+		"hero/Deadman Danny/tier/Strix Salvo/3/row/Damage|EAddToScale#0": {
+			"label": "Damage",
+			"scaling": "ETechPower",
+			"bonus": "0.225"
+		},
+		"hero/Deadman Danny/tier/Chimera Mk1/2/row/HealOnHit|EAddToScale#0": {
+			"label": "Heal On Hit",
+			"scaling": "ETechPower",
+			"bonus": "1.0"
+		},
+		"hero/Deadman Danny/tier/Chimera Mk1/3/row/OverheatLockoutDurationReductionOnPlayerHitPercent|#0": {
+			"label": "Overheat Lockout Duration Reduction On Player Hit Percent",
+			"bonus": "40"
+		},
+		"hero/Deadman Danny/tier/Chimera Mk1/3/text": "On Hero Hit: -40% Cooldown and +120 Spirit Damage",
+		"hero/Deadman Danny/tier/Close The Deal/1/row/Damage|#0": {
+			"label": "Damage",
+			"bonus": 50
+		},
+		"hero/Baba/ability/Threadsap/properties/AbilityCooldown/value": 26,
+		"hero/Baba/ability/Granny Long Legs/properties/AbilityCooldown/value": "30",
+		"hero/Baba/ability/Baba's Brew/properties/AbilityCooldown/value": 25,
+		"hero/Baba/ability/Baba's Brew/properties/CombatBarrier/value": "100",
+		"hero/Baba/ability/Baba's Brew/properties/CombatBarrier/scale_function/stat_scale": 1.2,
+		"hero/Baba/tier/Baba's Brew/2/row/AbilityCooldown|#0": {
+			"label": "Ability Cooldown",
+			"postfix": "s",
+			"bonus": "-12"
+		}
+	},
+	"after": {
+		"hero/Deadman Danny/stats/starting_stats/max_health/value": 730,
+		"hero/Deadman Danny/stats/starting_stats/base_health_regen/value": 3.25,
+		"hero/Deadman Danny/weapon/weapon_info/bullet_damage": 15,
+		"hero/Deadman Danny/weapon/weapon_info/damage_per_second": 60,
+		"hero/Deadman Danny/ability/Strix Salvo/properties/AbilityCooldown/value": 25,
+		"hero/Deadman Danny/ability/Strix Salvo/properties/CoatedDamage/scale_function/stat_scale": 1.1,
+		"hero/Deadman Danny/ability/Chimera Mk1/properties/AbilityCooldown/scale_function/stat_scale": -0.45,
+		"hero/Deadman Danny/ability/Chimera Mk1/properties/MaxHealthSelfDamagePercent/value": "10",
+		"hero/Deadman Danny/ability/Chimera Mk1/properties/ExplosionBulletDamage/scale_function/stat_scale": 1.4,
+		"hero/Deadman Danny/ability/Close The Deal/properties/BonusDamagePercent/value": "75",
+		"hero/Deadman Danny/tier/Strix Salvo/2/row/Damage|#0": {
+			"label": "Damage",
+			"bonus": "30"
+		},
+		"hero/Deadman Danny/tier/Strix Salvo/2/row/CoatedDamage|#0": {
+			"label": "Coated Damage",
+			"bonus": "45"
+		},
+		"hero/Deadman Danny/tier/Strix Salvo/2/text": "+30 Damage<br>+45 Marked Damage",
+		"hero/Deadman Danny/tier/Strix Salvo/3/row/CoatedDamage|EAddToScale#0": {
+			"label": "Coated Damage",
+			"scaling": "ETechPower",
+			"bonus": "0.35"
+		},
+		"hero/Deadman Danny/tier/Strix Salvo/3/row/Damage|EAddToScale#0": {
+			"label": "Damage",
+			"scaling": "ETechPower",
+			"bonus": "0.35"
+		},
+		"hero/Deadman Danny/tier/Chimera Mk1/2/row/HealOnHit|EAddToScale#0": {
+			"label": "Heal On Hit",
+			"scaling": "ETechPower",
+			"bonus": "2.0"
+		},
+		"hero/Deadman Danny/tier/Chimera Mk1/3/row/OverheatLockoutDurationReductionOnPlayerHitPercent|#0": {
+			"label": "Overheat Lockout Duration Reduction On Player Hit Percent",
+			"bonus": "50"
+		},
+		"hero/Deadman Danny/tier/Chimera Mk1/3/text": "On Hero Hit: -50% Cooldown and +120 Spirit Damage",
+		"hero/Deadman Danny/tier/Close The Deal/1/row/Damage|#0": {
+			"label": "Damage",
+			"bonus": 90
+		},
+		"hero/Baba/ability/Threadsap/properties/AbilityCooldown/value": 28,
+		"hero/Baba/ability/Granny Long Legs/properties/AbilityCooldown/value": "32",
+		"hero/Baba/ability/Baba's Brew/properties/AbilityCooldown/value": 27,
+		"hero/Baba/ability/Baba's Brew/properties/CombatBarrier/value": "90",
+		"hero/Baba/ability/Baba's Brew/properties/CombatBarrier/scale_function/stat_scale": 0.7,
+		"hero/Baba/tier/Baba's Brew/2/row/AbilityCooldown|#0": {
+			"label": "Ability Cooldown",
+			"postfix": "s",
+			"bonus": "-14"
+		}
+	}
+}

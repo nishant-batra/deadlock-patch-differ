@@ -9219,7 +9219,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 680,
+				"value": 730,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -9243,7 +9243,7 @@
 				"display_stat_name": "EStamina"
 			},
 			"base_health_regen": {
-				"value": 2.5,
+				"value": 3.25,
 				"display_stat_name": "EBaseHealthRegen"
 			},
 			"stamina_regen_per_second": {
@@ -10970,6 +10970,10 @@
 				"value": 1,
 				"display_stat_name": "ETechRange"
 			},
+			"bullet_armor_damage_reduction": {
+				"value": -7,
+				"display_stat_name": "EBulletArmorDamageReduction"
+			},
 			"ground_dash_distance_in_meters": {
 				"value": 10,
 				"display_stat_name": "EGroundDashDistanceInMeters"
@@ -11048,7 +11052,7 @@
 		"scaling_stats": {
 			"ETechArmorDamageReduction": {
 				"scaling_stat": "ETechPower",
-				"scale": 0.12
+				"scale": 0.1
 			}
 		}
 	}

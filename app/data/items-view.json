@@ -31574,7 +31574,7 @@
 					"scale_function": {
 						"class_name": "scale_function_healing_spirit_scale",
 						"subclass_name": "TotalHealthRegen_scale_function",
-						"stat_scale": 0.04
+						"stat_scale": 0.035
 					},
 					"label": "Regeneration",
 					"postfix": " HP/s",
@@ -120597,7 +120597,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": 26,
+					"value": 28,
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -120791,6 +120791,7 @@
 				},
 				"DebuffDuration": {
 					"value": "22",
+					"street_brawl_value": "14",
 					"css_class": "duration",
 					"scale_function": {
 						"class_name": "scale_function_tech_duration",
@@ -120936,7 +120937,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": "30",
+					"value": "32",
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -121419,7 +121420,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": 25,
+					"value": 27,
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -121651,7 +121652,7 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/armor_spirit_color.svg"
 				},
 				"CombatBarrier": {
-					"value": "100",
+					"value": "90",
 					"provided_property_type": "MODIFIER_VALUE_BARRIER_HEALTH",
 					"css_class": "combat_barrier",
 					"usage_flags": [
@@ -121661,7 +121662,7 @@
 						"class_name": "scale_function_tech_damage",
 						"subclass_name": "CombatBarrier_scale_function",
 						"specific_stat_scale_type": "ETechPower",
-						"stat_scale": 1.2
+						"stat_scale": 0.7
 					},
 					"label": "Barrier",
 					"postvalue_label": "Barrier",
@@ -121764,7 +121765,7 @@
 					"property_upgrades": [
 						{
 							"name": "AbilityCooldown",
-							"bonus": "-12"
+							"bonus": "-14"
 						}
 					]
 				},
@@ -124295,7 +124296,7 @@
 			},
 			"weapon_info": {
 				"can_zoom": true,
-				"bullet_damage": 12,
+				"bullet_damage": 15,
 				"bullet_gravity_scale": 0.05,
 				"bullet_inherit_shooter_velocity_scale": 0,
 				"bullet_lifetime": 2,
@@ -124391,10 +124392,10 @@
 				"shots_per_second_with_reload": 2.014388489208633,
 				"bullets_per_second": 4,
 				"bullets_per_second_with_reload": 2.014388489208633,
-				"damage_per_second": 48,
-				"damage_per_second_with_reload": 24.172661870503596,
-				"damage_per_shot": 12,
-				"damage_per_magazine": 168
+				"damage_per_second": 60,
+				"damage_per_second_with_reload": 30.215827338129493,
+				"damage_per_shot": 15,
+				"damage_per_magazine": 210
 			},
 			"description": {}
 		},
@@ -124417,10 +124418,10 @@
 						"subclass_name": "AbilityCooldown_sf",
 						"specific_stat_scale_type": "ELevelUpBoons",
 						"scaling_stats": [
-							"ETechCooldown",
-							"ELevelUpBoons"
+							"ELevelUpBoons",
+							"ETechCooldown"
 						],
-						"stat_scale": -0.25
+						"stat_scale": -0.45
 					},
 					"label": "Cooldown",
 					"postfix": "s",
@@ -124579,9 +124580,6 @@
 					"postfix": "/s",
 					"postvalue_label": "Heat Gain"
 				},
-				"HeatGainRateSlowPercentEffectiveness": {
-					"value": 75
-				},
 				"HeatGainRateVTOL": {
 					"value": 60
 				},
@@ -124620,7 +124618,7 @@
 					"value": "0"
 				},
 				"MaxHealthSelfDamagePercent": {
-					"value": "12",
+					"value": "10",
 					"label": "Self Damage",
 					"postfix": "% Max Health",
 					"postvalue_label": "Self Damage"
@@ -124649,7 +124647,7 @@
 						"class_name": "scale_function_ability_weapon_damage",
 						"subclass_name": "ExplosionBulletDamage_sf",
 						"specific_stat_scale_type": "EBaseWeaponDamageIncrease",
-						"stat_scale": 1.15
+						"stat_scale": 1.4
 					},
 					"label": "Explosion Damage",
 					"postvalue_label": "Explosion Damage",
@@ -124745,7 +124743,7 @@
 						},
 						{
 							"name": "HealOnHit",
-							"bonus": "1.0",
+							"bonus": "2.0",
 							"scale_stat_filter": "ETechPower",
 							"upgrade_type": "EAddToScale"
 						}
@@ -124759,7 +124757,7 @@
 						},
 						{
 							"name": "OverheatLockoutDurationReductionOnPlayerHitPercent",
-							"bonus": "40"
+							"bonus": "50"
 						}
 					]
 				}
@@ -124768,7 +124766,7 @@
 			"description": {
 				"t1_desc": "Heat vents faster while grounded",
 				"t2_desc": "On Hero Hit: Heal and take no self damage",
-				"t3_desc": "On Hero Hit: -40% Cooldown and +120 Spirit Damage"
+				"t3_desc": "On Hero Hit: -50% Cooldown and +120 Spirit Damage"
 			}
 		},
 		{
@@ -124781,7 +124779,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": 30,
+					"value": 25,
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -125010,7 +125008,7 @@
 						"class_name": "scale_function_tech_damage",
 						"subclass_name": "CoatedDamage_scale_function",
 						"specific_stat_scale_type": "ETechPower",
-						"stat_scale": 0.9
+						"stat_scale": 1.1
 					},
 					"label": "Marked Damage",
 					"postvalue_label": "Marked Damage",
@@ -125108,11 +125106,11 @@
 					"property_upgrades": [
 						{
 							"name": "Damage",
-							"bonus": "20"
+							"bonus": "30"
 						},
 						{
 							"name": "CoatedDamage",
-							"bonus": "35"
+							"bonus": "45"
 						}
 					]
 				},
@@ -125128,13 +125126,13 @@
 						},
 						{
 							"name": "CoatedDamage",
-							"bonus": "0.2",
+							"bonus": "0.35",
 							"scale_stat_filter": "ETechPower",
 							"upgrade_type": "EAddToScale"
 						},
 						{
 							"name": "Damage",
-							"bonus": "0.225",
+							"bonus": "0.35",
 							"scale_stat_filter": "ETechPower",
 							"upgrade_type": "EAddToScale"
 						}
@@ -125144,7 +125142,7 @@
 			"weapon_info": {},
 			"description": {
 				"t1_desc": "-12s Cooldown",
-				"t2_desc": "+20 Damage<br>+35 Marked Damage",
+				"t2_desc": "+30 Damage<br>+45 Marked Damage",
 				"t3_desc": "+2 Missiles, Longer Range, and Improved Spirit Scaling"
 			}
 		},
@@ -125364,7 +125362,7 @@
 					"postvalue_label": "Low Health Threshold"
 				},
 				"BonusDamagePercent": {
-					"value": "50",
+					"value": "75",
 					"loc_token_override": "DeadpackUltBonusTotalDamage",
 					"prefix": "+",
 					"label": "Bonus Damage",
@@ -125415,7 +125413,7 @@
 					"property_upgrades": [
 						{
 							"name": "Damage",
-							"bonus": 50
+							"bonus": 90
 						}
 					]
 				},
