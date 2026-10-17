@@ -8,6 +8,7 @@ import heroDescriptionsJson from "#/data/hero-descriptions.json";
 import heroesViewJson from "#/data/heroes-view.json";
 import { diffAbilityTiers, type TierDiff } from "#/lib/abilityUpgrades";
 import { isLiveHero, isUpcomingHero, WEAPON_SLOT } from "#/lib/roster";
+import { sanitizeNotesHtml } from "#/lib/sanitizeHtml";
 import { heroSlug } from "#/shared/utils/heroSlug";
 import type {
 	CompareHero,
@@ -114,15 +115,18 @@ export function getHeroPage(slug: string): HeroPage | undefined {
 	if (isLiveHero(hero)) {
 		const entry = liveEntry(hero);
 		if (!entry) return undefined;
-		const descriptions = heroDescriptionsJson as Record<
-			string,
-			HeroDescription
-		>;
+		const description = (
+			heroDescriptionsJson as Record<string, HeroDescription>
+		)[hero.class_name];
 		return {
 			kind: "live",
 			entry,
 			weapon: heroWeapon(hero),
-			description: descriptions[hero.class_name],
+			// Lore is rendered as HTML, so it is sanitized here on the server.
+			description: description && {
+				...description,
+				lore: sanitizeNotesHtml(description.lore ?? ""),
+			},
 		};
 	}
 	return isUpcomingHero(hero) ? { kind: "upcoming", hero } : undefined;

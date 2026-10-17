@@ -24,14 +24,12 @@ export default function HeroAbout({
 					<summary className="cursor-pointer select-none font-bold text-gray-300 text-sm">
 						Lore
 					</summary>
-					<div className="mt-2 flex flex-col gap-2 text-gray-300 text-sm">
-						{lore
-							.split(/\n\s*\n/)
-							.filter((paragraph) => paragraph.trim())
-							.map((paragraph) => (
-								<p key={paragraph}>{paragraph}</p>
-							))}
-					</div>
+					<div
+						className="mt-2 whitespace-pre-line text-gray-300 text-sm"
+						// Paragraphs are blank lines or `<br>` runs, hence pre-line.
+						// biome-ignore lint/security/noDangerouslySetInnerHtml: sanitized in getHeroPage
+						dangerouslySetInnerHTML={{ __html: lore }}
+					/>
 				</details>
 			)}
 		</section>
