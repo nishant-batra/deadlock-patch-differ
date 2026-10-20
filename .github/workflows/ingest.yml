@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: write
-  # A GitHub issue per new build; its notification email is the alert.
-  issues: write
 
 concurrency:
   group: ingest-patch-data
@@ -53,16 +51,20 @@ jobs:
             echo "No data changes, skipping commit."
           fi
 
-      # Runs only after the push succeeded, so the issue never announces data
-      # the site does not have. Assigning the repo owner makes GitHub email them
-      # even if they stop watching the repo.
-      - name: Open an issue for the new build
+      # Runs only after the push succeeded, so the email never announces data
+      # the site does not have. Without a verified domain, Resend only delivers
+      # to the account's own signup address, so NOTIFY_EMAIL must be that.
+      - name: Email the new build
         if: steps.ingest.outputs.notify == 'true'
         env:
-          GH_TOKEN: ${{ github.token }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
           TITLE: ${{ steps.ingest.outputs.title }}
           BODY_FILE: ${{ steps.ingest.outputs.body_file }}
         run: |
-          gh issue create --repo "$GITHUB_REPOSITORY" \
-            --title "$TITLE" --body-file "$BODY_FILE" \
-            --assignee "$GITHUB_REPOSITORY_OWNER"
+          jq -n --arg to "$NOTIFY_EMAIL" --arg subject "$TITLE" --rawfile text "$BODY_FILE" \
+            '{from: "Deadlock Patch <onboarding@resend.dev>", to: [$to], subject: $subject, text: $text}' |
+            curl --fail-with-body -sS https://api.resend.com/emails \
+              -H "Authorization: Bearer $RESEND_API_KEY" \
+              -H "Content-Type: application/json" \
+              --data-binary @-

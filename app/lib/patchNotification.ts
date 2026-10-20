@@ -1,8 +1,8 @@
 // app/lib/patchNotification.ts
 //
-// The GitHub issue the ingest workflow opens for every new build - GitHub's own
-// notification email is the alert, so no mail credentials are involved. The
-// issue lists what this build changed on its own, not the merged hotfixes.
+// The email the ingest workflow sends (via Resend) for every new build. The
+// body is Markdown sent as plain text. It lists what this build changed on its
+// own, not the merged hotfixes.
 
 import type { NoteRef } from "#/types";
 

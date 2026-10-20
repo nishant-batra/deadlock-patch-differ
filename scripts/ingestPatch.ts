@@ -551,8 +551,8 @@ async function ingest() {
 		window: patchWindow,
 	});
 
-	// Every new build gets a GitHub issue - the workflow opens it after the data
-	// is pushed. A re-published build (same number) is not news.
+	// Every new build gets an email - the workflow sends it after the data is
+	// pushed. A re-published build (same number) is not news.
 	if (prevMeta?.clientVersion !== client_version) {
 		const names = (list: Array<{ name: string }>) =>
 			list.map(({ name }) => name);
@@ -577,7 +577,7 @@ async function ingest() {
 }
 
 /**
- * Hands the issue to the workflow: the body as a file, and `notify=true` plus
+ * Hands the email to the workflow: the body as a file, and `notify=true` plus
  * the title as step outputs. Outside GitHub Actions it only logs.
  */
 function notify({ title, body }: { title: string; body: string }) {
