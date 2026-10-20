@@ -1,5 +1,17 @@
 {
 	"added": [],
 	"removed": [],
-	"changed": []
+	"changed": [
+		{
+			"name": "Indomitable",
+			"changes": [
+				{
+					"kind": "text",
+					"section": "",
+					"old": "The next <span class=\"highlight\">Stun, Chain, Immobilize, Sleep or Silence</span> is automatically cleansed. When this happens, you gain a <span class=\"highlight\">barrier</span> and all your <span class=\"highlight\">ability cooldowns</span> get reduced by 20%.",
+					"new": "The next <span class=\"highlight\">Stun, Chain, Immobilize, Sleep, Silence or Fear</span> is automatically cleansed. When this happens, you gain a <span class=\"highlight\">barrier</span> and all your <span class=\"highlight\">ability cooldowns</span> get reduced by 20%."
+				}
+			]
+		}
+	]
 }

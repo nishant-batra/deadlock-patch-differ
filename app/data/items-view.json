@@ -23673,18 +23673,6 @@
 					"tooltip_section": "active",
 					"tooltip_is_elevated": false,
 					"tooltip_is_important": false
-				},
-				"VelocityPitchScaleMin": {
-					"value": "0.8"
-				},
-				"VelocityPitchScaleMax": {
-					"value": "1.8"
-				},
-				"VelocityVolScaleMin": {
-					"value": "0.25"
-				},
-				"VelocityVolScaleMax": {
-					"value": "1.0"
 				}
 			},
 			"tooltip_sections": [
@@ -34853,7 +34841,7 @@
 				{
 					"section_attributes": [
 						{
-							"loc_string": "The next <span class=\"highlight\">Stun, Chain, Immobilize, Sleep or Silence</span> is automatically cleansed. When this happens, you gain a <span class=\"highlight\">barrier</span> and all your <span class=\"highlight\">ability cooldowns</span> get reduced by 20%.",
+							"loc_string": "The next <span class=\"highlight\">Stun, Chain, Immobilize, Sleep, Silence or Fear</span> is automatically cleansed. When this happens, you gain a <span class=\"highlight\">barrier</span> and all your <span class=\"highlight\">ability cooldowns</span> get reduced by 20%.",
 							"properties": [
 								"AbilityCooldown",
 								"AbilityDuration"
@@ -78844,7 +78832,7 @@
 			"weapon_info": {},
 			"description": {
 				"t1_desc": "+36.0 Damage and +1.5m Radius",
-				"t3_desc": "+1 Bounces and improved Spirit Scaling"
+				"t3_desc": "+1 Bounce and improved Spirit Scaling"
 			}
 		},
 		{
@@ -127657,6 +127645,1714 @@
 			"description": {
 				"t2_desc": "+60 Burst Damage<br>On Backblast Hit: +18% Fire Rate for 7s",
 				"t3_desc": "-10% Bullet Resist Shred<br>On Backblast Hit: Apply a Mark"
+			}
+		},
+		{
+			"id": 4180982524,
+			"class_name": "citadel_weapon_nurse_set",
+			"name": "Code Blue",
+			"image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/weapon_damage.webp",
+			"image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/weapon_damage.png",
+			"hero": 87,
+			"properties": {
+				"AbilityCooldown": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cooldown",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCooldown_scale_function",
+						"specific_stat_scale_type": "ETechCooldown"
+					},
+					"label": "Cooldown",
+					"postfix": "s",
+					"postvalue_label": "Cooldown",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/cooldown.svg"
+				},
+				"AbilityDuration": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "duration",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityDuration_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"label": "Duration",
+					"postfix": "s",
+					"postvalue_label": "Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"AbilityCastRange": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "range",
+					"display_units": "EDisplayUnit_Meters",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCastRange_scale_function",
+						"specific_stat_scale_type": "ETechRange"
+					},
+					"label": "Cast Range",
+					"postfix": "m",
+					"postvalue_label": "Cast Range",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/upgrades/property_range.svg"
+				},
+				"AbilityUnitTargetLimit": {
+					"value": "1",
+					"can_set_token_override": true
+				},
+				"AbilityCastDelay": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"label": "Cast Delay",
+					"postfix": "s",
+					"postvalue_label": "Cast Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityChannelTime": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_multi_stats",
+						"subclass_name": "scale_duration",
+						"scaling_stats": [
+							"EChannelDuration",
+							"ETechDuration"
+						]
+					},
+					"label": "Channel Duration",
+					"postfix": "s",
+					"postvalue_label": "Channel Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityPostCastDuration": {
+					"value": "0",
+					"disable_value": "0"
+				},
+				"AbilityCharges": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "-1",
+					"scale_function": {
+						"class_name": "scale_function_ability_charges",
+						"subclass_name": "AbilityCharges_scale_function"
+					},
+					"label": "Charges",
+					"postvalue_label": "Charges",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityCooldownBetweenCharge": {
+					"value": "-1.0",
+					"can_set_token_override": true,
+					"css_class": "charge_cooldown",
+					"disable_value": "-2",
+					"scale_function": {
+						"class_name": "scale_function_ability_recharge_time",
+						"subclass_name": "scale_function_ability_recharge_time"
+					},
+					"label": "Charge Delay",
+					"postfix": "s",
+					"postvalue_label": "Charge Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/recharge.svg"
+				},
+				"ChannelMoveSpeed": {
+					"value": "-1",
+					"can_set_token_override": true,
+					"css_class": "move_speed",
+					"display_units": "EDisplayUnit_MetersPerSecond",
+					"postfix": "m",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"AbilityResourceCost": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"TechPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Spirit Power",
+					"postfix": "",
+					"postvalue_label": "Spirit Power"
+				},
+				"WeaponPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Weapon Damage",
+					"postfix": "%",
+					"postvalue_label": "Weapon Damage"
+				}
+			},
+			"weapon_info": {
+				"can_zoom": true,
+				"bullet_damage": 14.858,
+				"bullet_gravity_scale": 0,
+				"bullet_inherit_shooter_velocity_scale": 0,
+				"bullet_lifetime": 2,
+				"bullet_radius": 10,
+				"bullet_radius_vs_world": 2,
+				"bullet_reflect_amount": 1,
+				"bullet_reflect_scale": 0,
+				"bullet_whiz_distance": 80,
+				"crit_bonus_against_npcs": 0,
+				"crit_bonus_end": 1.65,
+				"crit_bonus_end_range": 1500,
+				"crit_bonus_start": 1.65,
+				"crit_bonus_start_range": 500,
+				"cycle_time": 0.38,
+				"intra_burst_cycle_time": 0,
+				"damage_falloff_bias": 0.5,
+				"damage_falloff_end_range": 2264,
+				"damage_falloff_end_scale": 0.1,
+				"damage_falloff_start_range": 787,
+				"damage_falloff_start_scale": 1,
+				"horizontal_punch": 0,
+				"range": 7000,
+				"recoil_recovery_delay_factor": 0.05,
+				"bullet_speed": 20000,
+				"recoil_recovery_speed": 5,
+				"recoil_shot_index_recovery_time_factor": 0.25,
+				"recoil_speed": 5,
+				"reload_move_speed": 10000,
+				"scatter_yaw_scale": 1,
+				"aiming_shot_spread_penalty": [
+					0,
+					0.5
+				],
+				"shoot_move_speed_percent": 0.75,
+				"shoot_spread_penalty_decay": 3,
+				"shoot_spread_penalty_decay_delay": 0,
+				"shoot_spread_penalty_per_shot": 0.5,
+				"shooting_up_spread_penalty": 0,
+				"vertical_punch": 0.15,
+				"zoom_fov": 35,
+				"zoom_move_speed_percent": 1,
+				"bullets": 1,
+				"burst_shot_count": 1,
+				"clip_size": 11,
+				"spread": 0,
+				"standing_spread": 1.5,
+				"reload_duration": 1.9,
+				"horizontal_recoil": {
+					"range": [
+						0,
+						0
+					],
+					"burst_exponent": 0
+				},
+				"vertical_recoil": {
+					"range": [
+						0,
+						0
+					],
+					"burst_exponent": 0,
+					"burst_constant": 0,
+					"burst_slope": 0
+				},
+				"shots_per_second": 2.6315789473684212,
+				"shots_per_second_with_reload": 1.7377567140600316,
+				"bullets_per_second": 2.6315789473684212,
+				"bullets_per_second_with_reload": 1.7377567140600316,
+				"damage_per_second": 39.1,
+				"damage_per_second_with_reload": 25.81958925750395,
+				"damage_per_shot": 14.858,
+				"damage_per_magazine": 163.43800000000002
+			},
+			"description": {}
+		},
+		{
+			"id": 267712790,
+			"class_name": "ability_nurse_leech_therapy",
+			"name": "Leech Therapy",
+			"image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/nurse/leech.webp",
+			"image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/nurse/leech.png",
+			"hero": 87,
+			"ability_type": "signature",
+			"properties": {
+				"AbilityCooldown": {
+					"value": "30",
+					"can_set_token_override": true,
+					"css_class": "cooldown",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCooldown_scale_function",
+						"specific_stat_scale_type": "ETechCooldown"
+					},
+					"label": "Cooldown",
+					"postfix": "s",
+					"postvalue_label": "Cooldown",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/cooldown.svg"
+				},
+				"AbilityDuration": {
+					"value": "5",
+					"can_set_token_override": true,
+					"css_class": "duration",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityDuration_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"label": "Duration",
+					"postfix": "s",
+					"postvalue_label": "Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"AbilityCastRange": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "range",
+					"display_units": "EDisplayUnit_Meters",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCastRange_scale_function",
+						"specific_stat_scale_type": "ETechRange"
+					},
+					"label": "Cast Range",
+					"postfix": "m",
+					"postvalue_label": "Cast Range",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/upgrades/property_range.svg"
+				},
+				"AbilityUnitTargetLimit": {
+					"value": "1",
+					"can_set_token_override": true
+				},
+				"AbilityCastDelay": {
+					"value": "0.1",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"label": "Cast Delay",
+					"postfix": "s",
+					"postvalue_label": "Cast Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityChannelTime": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_multi_stats",
+						"subclass_name": "scale_duration",
+						"scaling_stats": [
+							"EChannelDuration",
+							"ETechDuration"
+						]
+					},
+					"label": "Channel Duration",
+					"postfix": "s",
+					"postvalue_label": "Channel Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityPostCastDuration": {
+					"value": "0.2",
+					"disable_value": "0"
+				},
+				"AbilityCharges": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "-1",
+					"scale_function": {
+						"class_name": "scale_function_ability_charges",
+						"subclass_name": "AbilityCharges_scale_function"
+					},
+					"label": "Charges",
+					"postvalue_label": "Charges",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityCooldownBetweenCharge": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "charge_cooldown",
+					"disable_value": "-1",
+					"scale_function": {
+						"class_name": "scale_function_ability_recharge_time",
+						"subclass_name": "scale_function_ability_recharge_time"
+					},
+					"label": "Charge Delay",
+					"postfix": "s",
+					"postvalue_label": "Charge Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/recharge.svg"
+				},
+				"ChannelMoveSpeed": {
+					"value": "5m",
+					"can_set_token_override": true,
+					"css_class": "move_speed",
+					"display_units": "EDisplayUnit_MetersPerSecond",
+					"postfix": "m",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"AbilityResourceCost": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"TechPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Spirit Power",
+					"postfix": "",
+					"postvalue_label": "Spirit Power"
+				},
+				"WeaponPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Weapon Damage",
+					"postfix": "%",
+					"postvalue_label": "Weapon Damage"
+				},
+				"Radius": {
+					"value": "6.5m",
+					"css_class": "distance",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "Radius_scale_function",
+						"specific_stat_scale_type": "ETechRadius"
+					},
+					"label": "Radius",
+					"postfix": "m",
+					"postvalue_label": "Radius",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
+				},
+				"DPS": {
+					"value": 23,
+					"css_class": "tech_damage",
+					"scale_function": {
+						"class_name": "scale_function_tech_damage",
+						"subclass_name": "DPS_scale_function",
+						"stat_scale": 0.19
+					},
+					"prefix": "",
+					"label": "Damage Per Second",
+					"postfix": "",
+					"postvalue_label": "Damage Per Second",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg"
+				},
+				"BurstDamage": {
+					"value": 0,
+					"label": "Burst Damage",
+					"postvalue_label": "Burst Damage"
+				},
+				"TickRate": {
+					"value": "0.38"
+				},
+				"LeechEatTickRate": {
+					"value": "0.38"
+				},
+				"LeechEatDurationPerSecond": {
+					"value": "0.65",
+					"css_class": "duration",
+					"label": "Buff Duration Drain Per Second",
+					"postfix": "s",
+					"postvalue_label": "Buff Duration Drain Per Second",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"LeechStaminaDrain": {
+					"value": "0",
+					"css_class": "stamina_recovery",
+					"label": "Stamina Drain",
+					"postfix": "/s",
+					"postvalue_label": "Stamina Drain",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_stamina_recharge.svg"
+				},
+				"LeechMoveSpeed": {
+					"value": "2m",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "LeechMoveSpeed_scale_function",
+						"specific_stat_scale_type": "ELevelUpBoons",
+						"stat_scale": 0.05
+					}
+				},
+				"LeechGroundLifetime": {
+					"value": "180"
+				},
+				"LeechCrawlRadius": {
+					"value": "8m",
+					"css_class": "distance",
+					"scale_function": {
+						"class_name": "scale_function_multi_stats",
+						"subclass_name": "LeechCrawlRadius_scale_function",
+						"specific_stat_scale_type": "ELevelUpBoons",
+						"scaling_stats": [
+							"ELevelUpBoons",
+							"ETechRange"
+						],
+						"stat_scale": 1.3
+					},
+					"label": "Leech Crawl Range",
+					"postfix": "m",
+					"postvalue_label": "Leech Crawl Range",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
+				},
+				"LeechCrawlRadiusExitGap": {
+					"value": "5m"
+				},
+				"LeechCount": {
+					"value": "4"
+				},
+				"LeechHuntLifetime": {
+					"value": "9",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "LeechHuntLifetime_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					}
+				},
+				"LeechLungeSpeed": {
+					"value": "15m"
+				},
+				"LeechLeapDuration": {
+					"value": "0.4"
+				},
+				"LeechLeapArcHeight": {
+					"value": "0.5m"
+				},
+				"LeechHuntCrawlSpeed": {
+					"value": "3m"
+				},
+				"LeechHuntSearchRadiusPercent": {
+					"value": "150"
+				},
+				"LeechHuntSearchInterval": {
+					"value": "0.2"
+				},
+				"LeechHuntLifetimeVariance": {
+					"value": "0.55"
+				},
+				"LeechHuntMaxDrop": {
+					"value": "3m"
+				},
+				"LeechSpawnSpreadPercent": {
+					"value": "58"
+				},
+				"LeechSpawnSpreadMinPercent": {
+					"value": "73"
+				},
+				"LeechSpawnAngleJitter": {
+					"value": "0.32"
+				},
+				"HealPercentOfLeechDamage": {
+					"value": "100"
+				},
+				"LeechPurgeBuffs": {
+					"value": "0"
+				},
+				"RegenPerLeechPickup": {
+					"value": "0.6",
+					"css_class": "healing",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "RegenPerLeechPickup_scale_function",
+						"specific_stat_scale_type": "ELevelUpBoons",
+						"stat_scale": 0.13
+					},
+					"prefix": "+",
+					"label": "Health Regen Per Leech",
+					"postvalue_label": "Health Regen Per Leech",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/heal.svg"
+				},
+				"FireRatePerLeechPickup": {
+					"value": "5",
+					"css_class": "fire_rate",
+					"prefix": "+",
+					"label": "Fire Rate Per Leech",
+					"postfix": "%",
+					"postvalue_label": "Fire Rate Per Leech",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/fire_rate.svg"
+				},
+				"SpiritPowerPerLeechStack": {
+					"value": "0",
+					"css_class": "tech_damage",
+					"prefix": "+",
+					"label": "Spirit Power Per Leech",
+					"postvalue_label": "Spirit Power Per Leech",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg"
+				},
+				"LeechStacksKeptOnDeathPercent": {
+					"value": "50"
+				},
+				"MaxLeechBonusStacks": {
+					"value": "10",
+					"label": "Max Leech Stacks",
+					"postvalue_label": "Max Leech Stacks"
+				},
+				"StacksLostOnDeathPercent": {
+					"value": "25"
+				}
+			},
+			"tooltip_details": {
+				"info_sections": [
+					{
+						"loc_string": "Throw a jar of leeches that attach to enemies, dealing <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDPS\">spirit damage over time</span> and <span class=\"highlight\">eating away at the duration of enemy buffs</span>.",
+						"properties_block": [
+							{
+								"properties": [
+									{
+										"important_property": "DPS"
+									},
+									{
+										"important_property": "LeechEatDurationPerSecond"
+									}
+								]
+							}
+						]
+					},
+					{
+						"loc_string": "Harrow can pick up leeches after they finish feeding, <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M92.0059 9C107.475 9.00022 120 22.237 120 38.6592C120 68.2957 85.5894 87.6846 66.6162 116.752C65.1163 119.062 62.8837 119.062 61.3838 116.752C42.4106 87.6846 8.00022 68.2957 8 38.6592C8 22.2808 20.5245 9.00022 35.9941 9C40.2312 9.02587 44.4049 10.0351 48.1855 11.9482C49.3884 12.5569 50.5406 13.2524 51.6343 14.0271C52.9137 14.9332 52.473 16.8509 51.0109 17.4168C37.5479 22.6271 28 35.6977 28 51C28 70.8823 44.1177 87 64 87C83.8823 87 100 70.8823 100 51C100 35.6974 90.4516 22.6267 76.9882 17.4167C75.5261 16.8509 75.0854 14.9333 76.3648 14.0273C77.4588 13.2526 78.6113 12.557 79.8145 11.9482C83.5951 10.0351 87.7688 9.02587 92.0059 9Z\" fill=\"#0F9\"/>\n<path d=\"M69 46H84V56H69V71H59V56H44V46H59V31H69V46Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label Healing\" style=\"color: #0F9;\">healing</span> her for the health drained and permanently granting <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M92.0059 9C107.475 9.00022 120 22.237 120 38.6592C120 68.2957 85.5894 87.6846 66.6162 116.752C65.1163 119.062 62.8837 119.062 61.3838 116.752C42.4106 87.6846 8.00022 68.2957 8 38.6592C8 22.2808 20.5245 9.00022 35.9941 9C40.2312 9.02587 44.4049 10.0351 48.1855 11.9482C49.3884 12.5569 50.5406 13.2524 51.6343 14.0271C52.9137 14.9332 52.473 16.8509 51.0109 17.4168C37.5479 22.6271 28 35.6977 28 51C28 70.8823 44.1177 87 64 87C83.8823 87 100 70.8823 100 51C100 35.6974 90.4516 22.6267 76.9882 17.4167C75.5261 16.8509 75.0854 14.9333 76.3648 14.0273C77.4588 13.2526 78.6113 12.557 79.8145 11.9482C83.5951 10.0351 87.7688 9.02587 92.0059 9Z\" fill=\"#0F9\"/>\n<path d=\"M69 46H84V56H69V71H59V56H44V46H59V31H69V46Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label Regen\" style=\"color: #0F9;\">regeneration</span> and <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#EC9719\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M78.6699 83C98.9999 83 103 91 103 91C103 91 98.9999 99 78.6699 99H51V83H78.6699ZM45.4199 88.5C46.5245 88.5 47.4199 89.3954 47.4199 90.5C47.4199 91.6046 46.5245 92.5 45.4199 92.5H13.4199C12.3154 92.5 11.4199 91.6046 11.4199 90.5C11.4199 89.3954 12.3154 88.5 13.4199 88.5H45.4199ZM98.6699 56C119 56 123 64 123 64C123 64 119 72 98.6699 72H71V56H98.6699ZM65 61.5C66.1046 61.5 67 62.3954 67 63.5C67 64.6046 66.1046 65.5 65 65.5H13C11.8954 65.5 11 64.6046 11 63.5C11 62.3954 11.8954 61.5 13 61.5H65ZM78.6699 29C98.9999 29 103 37 103 37C103 37 98.9999 45 78.6699 45H51V29H78.6699ZM45 35C46.1046 35 47 35.8954 47 37C47 38.1046 46.1046 39 45 39H13C11.8954 39 11 38.1046 11 37C11 35.8954 11.8954 35 13 35H45Z\" fill=\"#EC9719\"/>\n</svg>\n<span class=\"inline-attribute-label FireRate\" style=\"color: #EC9719;\">fire rate</span>. <br><br><span class=\"small_diminish\">25% of your leech stacks are lost on death.</span>",
+						"properties_block": [
+							{
+								"properties": [
+									{
+										"important_property": "RegenPerLeechPickup"
+									},
+									{
+										"important_property": "FireRatePerLeechPickup"
+									}
+								]
+							}
+						],
+						"basic_properties": [
+							"MaxLeechBonusStacks",
+							"LeechCrawlRadius",
+							"LeechStaminaDrain",
+							"SpiritPowerPerLeechStack"
+						]
+					}
+				]
+			},
+			"upgrades": [
+				{
+					"property_upgrades": [
+						{
+							"name": "LeechStaminaDrain",
+							"bonus": "0.3"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "AbilityCooldown",
+							"bonus": "-10"
+						},
+						{
+							"name": "SpiritPowerPerLeechStack",
+							"bonus": "4"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "MaxLeechBonusStacks",
+							"bonus": "8"
+						},
+						{
+							"name": "DPS",
+							"bonus": "0.3",
+							"scale_stat_filter": "ETechPower",
+							"upgrade_type": "EAddToScale"
+						},
+						{
+							"name": "Radius",
+							"bonus": "1m"
+						}
+					]
+				}
+			],
+			"weapon_info": {},
+			"description": {
+				"t1_desc": "Leeches drain stamina and restore it to you on pickup",
+				"t2_desc": "-10s Cooldown<br>+4 Spirit Power Per Leech",
+				"t3_desc": "+1m Radius<br>+0.3 Spirit Scaling<br>+8 Max Leech Stacks"
+			}
+		},
+		{
+			"id": 3427093887,
+			"class_name": "ability_nurse_fear",
+			"name": "Lurking Terrors",
+			"image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/nurse/medicine_bag.webp",
+			"image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/nurse/medicine_bag.png",
+			"hero": 87,
+			"ability_type": "ultimate",
+			"properties": {
+				"AbilityCooldown": {
+					"value": 200,
+					"can_set_token_override": true,
+					"css_class": "cooldown",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCooldown_scale_function",
+						"specific_stat_scale_type": "ETechCooldown"
+					},
+					"label": "Cooldown",
+					"postfix": "s",
+					"postvalue_label": "Cooldown",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/cooldown.svg"
+				},
+				"AbilityDuration": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "duration",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityDuration_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"label": "Duration",
+					"postfix": "s",
+					"postvalue_label": "Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"AbilityCastRange": {
+					"value": "35m",
+					"can_set_token_override": true,
+					"css_class": "range",
+					"display_units": "EDisplayUnit_Meters",
+					"scale_function": {
+						"class_name": "scale_function_tech_range",
+						"subclass_name": "FearCastRangeSF",
+						"specific_stat_scale_type": "ETechRange"
+					},
+					"label": "Cast Range",
+					"postfix": "m",
+					"postvalue_label": "Cast Range",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/upgrades/property_range.svg"
+				},
+				"AbilityUnitTargetLimit": {
+					"value": "1",
+					"can_set_token_override": true
+				},
+				"AbilityCastDelay": {
+					"value": "1.3",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"label": "Cast Delay",
+					"postfix": "s",
+					"postvalue_label": "Cast Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityChannelTime": {
+					"value": "7.0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_multi_stats",
+						"subclass_name": "scale_duration",
+						"scaling_stats": [
+							"EChannelDuration",
+							"ETechDuration"
+						]
+					},
+					"label": "Channel Duration",
+					"postfix": "s",
+					"postvalue_label": "Channel Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityPostCastDuration": {
+					"value": "0",
+					"disable_value": "0"
+				},
+				"AbilityCharges": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "-1",
+					"scale_function": {
+						"class_name": "scale_function_ability_charges",
+						"subclass_name": "AbilityCharges_scale_function"
+					},
+					"label": "Charges",
+					"postvalue_label": "Charges",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityCooldownBetweenCharge": {
+					"value": "-1.0",
+					"can_set_token_override": true,
+					"css_class": "charge_cooldown",
+					"disable_value": "-2",
+					"scale_function": {
+						"class_name": "scale_function_ability_recharge_time",
+						"subclass_name": "scale_function_ability_recharge_time"
+					},
+					"label": "Charge Delay",
+					"postfix": "s",
+					"postvalue_label": "Charge Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/recharge.svg"
+				},
+				"ChannelMoveSpeed": {
+					"value": "3.5m",
+					"can_set_token_override": true,
+					"css_class": "move_speed",
+					"display_units": "EDisplayUnit_MetersPerSecond",
+					"postfix": "m",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"AbilityResourceCost": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"TechPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Spirit Power",
+					"postfix": "",
+					"postvalue_label": "Spirit Power"
+				},
+				"WeaponPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Weapon Damage",
+					"postfix": "%",
+					"postvalue_label": "Weapon Damage"
+				},
+				"ConeAngle": {
+					"value": "180",
+					"label": "Cone Angle",
+					"postfix": " deg",
+					"postvalue_label": "Cone Angle"
+				},
+				"ExtraSweepConeAngle": {
+					"value": "40"
+				},
+				"ExtraSweepOffsetBehindCaster": {
+					"value": "40"
+				},
+				"ExtraSweepRange": {
+					"value": "4m",
+					"scale_function": {
+						"class_name": "scale_function_tech_range",
+						"subclass_name": "SweepFearCastRangeSF"
+					}
+				},
+				"TickRate": {
+					"value": "0.15"
+				},
+				"BuildupTickRate": {
+					"value": "0.075"
+				},
+				"DPS": {
+					"value": "60",
+					"css_class": "tech_damage",
+					"scale_function": {
+						"class_name": "scale_function_tech_damage",
+						"subclass_name": "DPS_scale_function",
+						"stat_scale": 0.3
+					},
+					"prefix": "",
+					"label": "Damage Per Second",
+					"postfix": "",
+					"postvalue_label": "Damage Per Second",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg"
+				},
+				"FacingAwayDamagePercent": {
+					"value": "50"
+				},
+				"DebuffDuration": {
+					"value": "2.2",
+					"css_class": "duration",
+					"loc_token_override": "FearDuration",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "DebuffDuration_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"label": "Fear Duration",
+					"postfix": "s",
+					"postvalue_label": "Fear Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"BuildupTime": {
+					"value": "1.3",
+					"css_class": "duration",
+					"loc_token_override": "FearBuildupTime",
+					"label": "Fear Buildup Time",
+					"postfix": "s",
+					"postvalue_label": "Fear Buildup Time",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"BuildupDecayTime": {
+					"value": "10.0",
+					"css_class": "duration",
+					"loc_token_override": "FearBuildupDecayTime",
+					"label": "Fear Buildup Decay Time",
+					"postfix": "s",
+					"postvalue_label": "Fear Buildup Decay Time",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"BuildupLookAngle": {
+					"value": "80",
+					"loc_token_override": "FearLookAngle",
+					"label": "Look Angle",
+					"postfix": "°",
+					"postvalue_label": "Look Angle"
+				},
+				"BuildupLookAngleFull": {
+					"value": "55"
+				},
+				"LookBuildupScalePercent": {
+					"value": "35"
+				},
+				"GazeLingerDuration": {
+					"value": "0.3",
+					"css_class": "duration",
+					"label": "Stamina Lock Linger",
+					"postfix": "s",
+					"postvalue_label": "Stamina Lock Linger",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"ImmunityDuration": {
+					"value": "0",
+					"label": "Immunity Duration",
+					"postfix": "s",
+					"postvalue_label": "Immunity Duration"
+				},
+				"FearMoveSpeedBonus": {
+					"value": "0m",
+					"css_class": "move_speed",
+					"prefix": "+",
+					"label": "Fleeing Enemy Move Speed",
+					"postfix": " m/s",
+					"postvalue_label": "Fleeing Enemy Move Speed",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"FallSpeedMax": {
+					"value": "1"
+				},
+				"AirDrag": {
+					"value": "3"
+				},
+				"AirControlAccelPercent": {
+					"value": "-50",
+					"prefix": "{s:sign}",
+					"label": "Air Acceleration",
+					"postfix": "%",
+					"postvalue_label": "Air Acceleration"
+				},
+				"LaunchHeight": {
+					"value": "7.8m"
+				},
+				"CameraTurnRateMax": {
+					"value": "15"
+				},
+				"TargetMantleAttemptInterval": {
+					"value": "0.5"
+				},
+				"FearDurationPerLeechStack": {
+					"value": "0.1",
+					"css_class": "duration",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "FearDurationPerLeechStack_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"prefix": "+",
+					"label": "Fear Duration Per Leech",
+					"postfix": "s",
+					"postvalue_label": "Fear Duration Per Leech",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"SlowPercent": {
+					"value": "30",
+					"provided_property_type": "MODIFIER_VALUE_MOVEMENT_SPEED_SLOW_PERCENT",
+					"css_class": "slow",
+					"prefix": "-",
+					"label": "Move Speed",
+					"postfix": "%",
+					"postvalue_label": "Move Speed",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/condition_slow.svg"
+				},
+				"ChannelDamageImmune": {
+					"value": "0"
+				},
+				"FireRateSlow": {
+					"value": "30",
+					"provided_property_type": "MODIFIER_VALUE_FIRE_RATE_SLOW",
+					"css_class": "fire_rate",
+					"usage_flags": [
+						"ConditionallyApplied"
+					],
+					"prefix": "-",
+					"label": "Fire Rate",
+					"postfix": "%",
+					"postvalue_label": "Fire Rate",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/fire_rate.svg"
+				},
+				"SlowLingerDuration": {
+					"value": "0.5"
+				},
+				"VolScaleMin": {
+					"value": "0.35"
+				},
+				"VolScaleMax": {
+					"value": "1.0"
+				},
+				"PitchScaleMin": {
+					"value": "1.0"
+				},
+				"PitchScaleMax": {
+					"value": "1.3"
+				}
+			},
+			"tooltip_details": {
+				"info_sections": [
+					{
+						"loc_string": "Open your bag and reveal the horrors you carry inside, dealing <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDPS\">spirit damage over time</span> to enemies in front of you. Enemies <span class=\"highlight\">looking at you</span> build up terror and <span class=\"highlight\">cannot use stamina or movement abilities</span>. At max terror, they <span class=\"highlight\">flee in fear away from you</span>.<br><br>Each leech you have collected adds <span class=\"highlight\">fear duration</span>.<br><span class=\"diminish\"><br>Enemies facing away from you take 50% damage unless feared.</span>",
+						"properties_block": [
+							{
+								"properties": [
+									{
+										"important_property": "DPS"
+									},
+									{
+										"important_property": "DebuffDuration"
+									}
+								]
+							}
+						],
+						"basic_properties": [
+							"BuildupTime",
+							"FearDurationPerLeechStack",
+							"SlowPercent",
+							"FireRateSlow"
+						]
+					}
+				]
+			},
+			"upgrades": [
+				{
+					"property_upgrades": [
+						{
+							"name": "AbilityCooldown",
+							"bonus": "-50"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "SlowPercent",
+							"bonus": "20"
+						},
+						{
+							"name": "FireRateSlow",
+							"bonus": "20"
+						},
+						{
+							"name": "DPS",
+							"bonus": "30"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "ChannelDamageImmune",
+							"bonus": "1"
+						},
+						{
+							"name": "AbilityChannelTime",
+							"bonus": "3.0"
+						},
+						{
+							"name": "DPS",
+							"bonus": "0.5",
+							"scale_stat_filter": "ETechPower",
+							"upgrade_type": "EAddToScale"
+						}
+					]
+				}
+			],
+			"weapon_info": {},
+			"description": {
+				"t2_desc": "-20% Move Speed and Fire Rate<br>+30 DPS",
+				"t3_desc": "+3.0s Channel Time<br>+0.5 Spirit Scaling<br>Immune to damage while channeling"
+			}
+		},
+		{
+			"id": 683490631,
+			"class_name": "ability_nurse_healing_needles",
+			"name": "Healing Needles",
+			"image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/nurse/needle.webp",
+			"image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/nurse/needle.png",
+			"hero": 87,
+			"ability_type": "signature",
+			"properties": {
+				"AbilityCooldown": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cooldown",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCooldown_scale_function",
+						"specific_stat_scale_type": "ETechCooldown"
+					},
+					"label": "Cooldown",
+					"postfix": "s",
+					"postvalue_label": "Cooldown",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/cooldown.svg"
+				},
+				"AbilityDuration": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "duration",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityDuration_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"label": "Duration",
+					"postfix": "s",
+					"postvalue_label": "Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"AbilityCastRange": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "range",
+					"display_units": "EDisplayUnit_Meters",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCastRange_scale_function",
+						"specific_stat_scale_type": "ETechRange"
+					},
+					"label": "Cast Range",
+					"postfix": "m",
+					"postvalue_label": "Cast Range",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/upgrades/property_range.svg"
+				},
+				"AbilityUnitTargetLimit": {
+					"value": "1",
+					"can_set_token_override": true
+				},
+				"AbilityCastDelay": {
+					"value": "0.1",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"label": "Cast Delay",
+					"postfix": "s",
+					"postvalue_label": "Cast Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityChannelTime": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_multi_stats",
+						"subclass_name": "scale_duration",
+						"scaling_stats": [
+							"EChannelDuration",
+							"ETechDuration"
+						]
+					},
+					"label": "Channel Duration",
+					"postfix": "s",
+					"postvalue_label": "Channel Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityPostCastDuration": {
+					"value": "0",
+					"disable_value": "0"
+				},
+				"AbilityCharges": {
+					"value": "1",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "-1",
+					"scale_function": {
+						"class_name": "scale_function_ability_charges",
+						"subclass_name": "AbilityCharges_scale_function"
+					},
+					"label": "Charges",
+					"postvalue_label": "Charges",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityCooldownBetweenCharge": {
+					"value": "-1.0",
+					"can_set_token_override": true,
+					"css_class": "charge_cooldown",
+					"disable_value": "-2",
+					"scale_function": {
+						"class_name": "scale_function_ability_recharge_time",
+						"subclass_name": "scale_function_ability_recharge_time"
+					},
+					"label": "Charge Delay",
+					"postfix": "s",
+					"postvalue_label": "Charge Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/recharge.svg"
+				},
+				"ChannelMoveSpeed": {
+					"value": "-1",
+					"can_set_token_override": true,
+					"css_class": "move_speed",
+					"display_units": "EDisplayUnit_MetersPerSecond",
+					"postfix": "m",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"AbilityResourceCost": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"TechPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Spirit Power",
+					"postfix": "",
+					"postvalue_label": "Spirit Power"
+				},
+				"WeaponPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Weapon Damage",
+					"postfix": "%",
+					"postvalue_label": "Weapon Damage"
+				},
+				"AbilityChargesConditionally": {
+					"value": "1"
+				},
+				"AbilityChargesInitial": {
+					"value": "1"
+				},
+				"ChargePercentPerBulletHit": {
+					"value": "1.26"
+				},
+				"ChargePercentPerHeadshot": {
+					"value": "2.52"
+				},
+				"ChargePercentPerLightMelee": {
+					"value": "7.56"
+				},
+				"ChargePercentPerHeavyMelee": {
+					"value": "15.12"
+				},
+				"ChargePercentPerAbilityHit": {
+					"value": "1.26"
+				},
+				"ChargeHitCooldown": {
+					"value": "0.15",
+					"css_class": "duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"NonHeroChargeScalePercent": {
+					"value": "35"
+				},
+				"ChargePercentPerSecondPerLeech": {
+					"value": "0.15",
+					"label": "Charge Per Leech",
+					"postfix": "%/s",
+					"postvalue_label": "Charge Per Leech"
+				},
+				"ChargeGenPctScale": {
+					"value": "100",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "ChargeGenPctScale_scale_function",
+						"specific_stat_scale_type": "ETechCooldown",
+						"stat_scale": -1
+					},
+					"label": "Charge Rate",
+					"postfix": "%",
+					"postvalue_label": "Charge Rate"
+				},
+				"SwapInDelay": {
+					"value": "1.3"
+				},
+				"SwapEndDelay": {
+					"value": "1.8"
+				},
+				"BuffDuration": {
+					"value": "0",
+					"label": "Buff Duration",
+					"postfix": "s",
+					"postvalue_label": "Buff Duration"
+				},
+				"BuffExtendMaxDurationPercent": {
+					"value": "200"
+				},
+				"BuffExtendPercentPerShot": {
+					"value": "0",
+					"css_class": "duration",
+					"label": "Buff Extension Per Shot",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"HealRegen": {
+					"value": "25",
+					"css_class": "healing",
+					"scale_function": {
+						"class_name": "scale_function_healing_spirit_scale",
+						"subclass_name": "HealRegen_scale_function",
+						"specific_stat_scale_type": "ETechPower",
+						"stat_scale": 0.2
+					},
+					"label": "Heal Per Shot",
+					"postvalue_label": "Heal Per Shot",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/heal.svg"
+				},
+				"HeadshotHealBonusPercent": {
+					"value": "15",
+					"css_class": "healing",
+					"prefix": "+",
+					"label": "Headshot Heal Bonus",
+					"postfix": "%",
+					"postvalue_label": "Headshot Heal Bonus",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/heal.svg"
+				},
+				"SecondaryShotHealPercent": {
+					"value": "50"
+				},
+				"BuildUpPerShot": {
+					"value": "0",
+					"loc_token_override": "NeedleBuildUpPerShot",
+					"label": "Buildup Per Shot",
+					"postfix": "%",
+					"postvalue_label": "Buildup Per Shot"
+				},
+				"BuildUpDuration": {
+					"value": "5",
+					"loc_token_override": "NeedleBuildUpDuration",
+					"label": "Buildup Duration",
+					"postfix": "s",
+					"postvalue_label": "Buildup Duration"
+				},
+				"StaminaRestorePerHit": {
+					"value": "0.0",
+					"provided_property_type": "MODIFIER_VALUE_STAMINA",
+					"css_class": "stamina_recovery",
+					"prefix": "+",
+					"label": "Stamina Per Shot",
+					"postvalue_label": "Stamina Per Shot",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_stamina_recharge.svg"
+				},
+				"HealMaxHealthPercentPerShot": {
+					"value": "0",
+					"label": "Max Health Heal / Shot",
+					"postfix": "%",
+					"postvalue_label": "Max Health Heal / Shot"
+				}
+			},
+			"tooltip_details": {
+				"info_sections": [
+					{
+						"loc_string": "Load your weapon with a full clip of syringes that <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M92.0059 9C107.475 9.00022 120 22.237 120 38.6592C120 68.2957 85.5894 87.6846 66.6162 116.752C65.1163 119.062 62.8837 119.062 61.3838 116.752C42.4106 87.6846 8.00022 68.2957 8 38.6592C8 22.2808 20.5245 9.00022 35.9941 9C40.2312 9.02587 44.4049 10.0351 48.1855 11.9482C49.3884 12.5569 50.5406 13.2524 51.6343 14.0271C52.9137 14.9332 52.473 16.8509 51.0109 17.4168C37.5479 22.6271 28 35.6977 28 51C28 70.8823 44.1177 87 64 87C83.8823 87 100 70.8823 100 51C100 35.6974 90.4516 22.6267 76.9882 17.4167C75.5261 16.8509 75.0854 14.9333 76.3648 14.0273C77.4588 13.2526 78.6113 12.557 79.8145 11.9482C83.5951 10.0351 87.7688 9.02587 92.0059 9Z\" fill=\"#0F9\"/>\n<path d=\"M69 46H84V56H69V71H59V56H44V46H59V31H69V46Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label Heal\" style=\"color: #0F9;\">heal</span> allies. <span class=\"highlight\">Dealing damage</span> recovers charges, and each leech you have collected slowly restores them.<br><br>Reloading spends a charge for a fresh clip.<br><br><span class=\"small_diminish\">Unused syringes are refunded as a partial charge. Recast to put them away.</span>",
+						"properties_block": [
+							{
+								"loc_string": "On Hit Friendly:",
+								"properties": [
+									{
+										"important_property": "HealRegen"
+									}
+								]
+							}
+						],
+						"basic_properties": [
+							"HeadshotHealBonusPercent",
+							"ChargePercentPerSecondPerLeech",
+							"StaminaRestorePerHit"
+						]
+					}
+				]
+			},
+			"upgrades": [
+				{
+					"property_upgrades": [
+						{
+							"name": "AbilityCharges",
+							"bonus": "1"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "StaminaRestorePerHit",
+							"bonus": "0.6"
+						},
+						{
+							"name": "HealRegen",
+							"bonus": "20"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "HealRegen",
+							"bonus": "0.4",
+							"scale_stat_filter": "ETechPower",
+							"upgrade_type": "EAddToScale"
+						},
+						{
+							"name": "BuffExtendPercentPerShot",
+							"bonus": "6"
+						}
+					]
+				}
+			],
+			"weapon_info": {},
+			"description": {
+				"t1_desc": "+1 Max Charge",
+				"t2_desc": "+20 Heal Per Shot<br>Shots restore 0.6 stamina",
+				"t3_desc": "+0.4 Spirit Scaling<br>Shots extend non-ultimate buff durations by 6%, up to their max duration"
+			}
+		},
+		{
+			"id": 3621314027,
+			"class_name": "ability_nurse_adrenaline_rush",
+			"name": "Wretched Vapors",
+			"image_webp": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/nurse/nurse_vapors.webp",
+			"image": "https://assets-bucket.deadlock-api.com/assets-api-res/images/abilities/nurse/nurse_vapors.png",
+			"hero": 87,
+			"ability_type": "signature",
+			"properties": {
+				"AbilityCooldown": {
+					"value": "40",
+					"can_set_token_override": true,
+					"css_class": "cooldown",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityCooldown_scale_function",
+						"specific_stat_scale_type": "ETechCooldown"
+					},
+					"label": "Cooldown",
+					"postfix": "s",
+					"postvalue_label": "Cooldown",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/cooldown.svg"
+				},
+				"AbilityDuration": {
+					"value": "4",
+					"can_set_token_override": true,
+					"css_class": "duration",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "AbilityDuration_scale_function",
+						"specific_stat_scale_type": "ETechDuration"
+					},
+					"label": "Duration",
+					"postfix": "s",
+					"postvalue_label": "Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"AbilityCastRange": {
+					"value": "13m",
+					"can_set_token_override": true,
+					"css_class": "range",
+					"display_units": "EDisplayUnit_Meters",
+					"scale_function": {
+						"class_name": "scale_function_tech_range",
+						"subclass_name": "rangesf",
+						"specific_stat_scale_type": "ETechRange"
+					},
+					"label": "Cast Range",
+					"postfix": "m",
+					"postvalue_label": "Cast Range",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/upgrades/property_range.svg"
+				},
+				"AbilityUnitTargetLimit": {
+					"value": "1",
+					"can_set_token_override": true
+				},
+				"AbilityCastDelay": {
+					"value": "0.2",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"label": "Cast Delay",
+					"postfix": "s",
+					"postvalue_label": "Cast Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityChannelTime": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"scale_function": {
+						"class_name": "scale_function_multi_stats",
+						"subclass_name": "scale_duration",
+						"scaling_stats": [
+							"EChannelDuration",
+							"ETechDuration"
+						]
+					},
+					"label": "Channel Duration",
+					"postfix": "s",
+					"postvalue_label": "Channel Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityPostCastDuration": {
+					"value": "0",
+					"disable_value": "0"
+				},
+				"AbilityCharges": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "-1",
+					"scale_function": {
+						"class_name": "scale_function_ability_charges",
+						"subclass_name": "AbilityCharges_scale_function"
+					},
+					"label": "Charges",
+					"postvalue_label": "Charges",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"AbilityCooldownBetweenCharge": {
+					"value": "-1.0",
+					"can_set_token_override": true,
+					"css_class": "charge_cooldown",
+					"disable_value": "-2",
+					"scale_function": {
+						"class_name": "scale_function_ability_recharge_time",
+						"subclass_name": "scale_function_ability_recharge_time"
+					},
+					"label": "Charge Delay",
+					"postfix": "s",
+					"postvalue_label": "Charge Delay",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/recharge.svg"
+				},
+				"ChannelMoveSpeed": {
+					"value": "-1",
+					"can_set_token_override": true,
+					"css_class": "move_speed",
+					"display_units": "EDisplayUnit_MetersPerSecond",
+					"postfix": "m",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"AbilityResourceCost": {
+					"value": "0",
+					"can_set_token_override": true,
+					"css_class": "cast",
+					"disable_value": "0",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_cast.png"
+				},
+				"TechPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_TECH_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Spirit Power",
+					"postfix": "",
+					"postvalue_label": "Spirit Power"
+				},
+				"WeaponPower": {
+					"value": "0",
+					"can_set_token_override": true,
+					"provided_property_type": "MODIFIER_VALUE_WEAPON_POWER",
+					"disable_value": "0",
+					"prefix": "{s:sign}",
+					"label": "Weapon Damage",
+					"postfix": "%",
+					"postvalue_label": "Weapon Damage"
+				},
+				"DamageSpiritThresholdPercent": {
+					"value": "6"
+				},
+				"DeferredDamagePercent": {
+					"value": "100",
+					"css_class": "bullet_armor_up",
+					"label": "Damage Deferred",
+					"postfix": "%",
+					"postvalue_label": "Damage Deferred",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/armor_bullet_color.svg"
+				},
+				"DeferredDamageBonusPercent": {
+					"value": "30",
+					"css_class": "damage",
+					"prefix": "+",
+					"label": "Extra Damage Taken",
+					"postfix": "%",
+					"postvalue_label": "Extra Damage Taken",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_crit.svg"
+				},
+				"RushTimeScaleBonusPercent": {
+					"value": "25",
+					"css_class": "move_speed",
+					"scale_function": {
+						"class_name": "scale_function_single_stat",
+						"subclass_name": "RushTimeScaleBonusPercent_scale_function",
+						"specific_stat_scale_type": "ETechPower",
+						"stat_scale": 0.06
+					},
+					"prefix": "+",
+					"label": "Rush Speed",
+					"postfix": "%",
+					"postvalue_label": "Rush Speed",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/move_speed.svg"
+				},
+				"CrashDuration": {
+					"value": "4",
+					"css_class": "duration",
+					"label": "Crash Duration",
+					"postfix": "s",
+					"postvalue_label": "Crash Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				},
+				"CrashTimeScalePenaltyPercent": {
+					"value": "20",
+					"css_class": "slow",
+					"prefix": "-",
+					"label": "Crash Slowdown",
+					"postfix": "%",
+					"postvalue_label": "Crash Slowdown",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/condition_slow.svg"
+				},
+				"DispelDebuffs": {
+					"value": "0"
+				},
+				"HealingEffectivenessPercent": {
+					"value": "0",
+					"provided_property_type": "MODIFIER_VALUE_HEAL_AMP_RECEIVE_PERCENT",
+					"css_class": "healing",
+					"usage_flags": [
+						"ConditionallyApplied"
+					],
+					"prefix": "+",
+					"label": "Healing Effectiveness",
+					"postfix": "%",
+					"postvalue_label": "Healing Effectiveness",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/heal.svg"
+				},
+				"HealAmpRegenPercent": {
+					"value": "0",
+					"provided_property_type": "MODIFIER_VALUE_HEAL_AMP_REGEN_PERCENT",
+					"usage_flags": [
+						"ConditionallyApplied"
+					],
+					"prefix": "{s:sign}",
+					"postfix": "%"
+				}
+			},
+			"tooltip_details": {
+				"info_sections": [
+					{
+						"loc_string": "Crack open a vial to release an ethereal vapor onto yourself or an ally that causes a rush, then a crash.<br><br><span class=\"diminish\">Specter Rush:</span> While it lasts, increases the speed of all actions and temporarily <span class=\"highlight\">numbs all incoming damage</span> creating looming specters.<br><br><span class=\"diminish\">Specter Crash:</span> When the vapors wear off, all actions are slower and any remaining specters <span class=\"highlight\">deal their delayed damage plus extra damage</span>.<br><br><span class=\"small_diminish\">Incoming healing will prioritize removing specters first, preventing them from dealing damage.</span>",
+						"properties_block": [
+							{
+								"properties": [
+									{
+										"important_property": "RushTimeScaleBonusPercent"
+									},
+									{
+										"important_property": "AbilityDuration"
+									},
+									{
+										"important_property": "DeferredDamageBonusPercent"
+									}
+								]
+							}
+						],
+						"basic_properties": [
+							"CrashDuration",
+							"CrashTimeScalePenaltyPercent"
+						]
+					}
+				]
+			},
+			"upgrades": [
+				{
+					"property_upgrades": [
+						{
+							"name": "AbilityCooldown",
+							"bonus": "-15"
+						},
+						{
+							"name": "AbilityCastRange",
+							"bonus": "7m"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "AbilityDuration",
+							"bonus": "1"
+						},
+						{
+							"name": "HealingEffectivenessPercent",
+							"bonus": "20"
+						},
+						{
+							"name": "HealAmpRegenPercent",
+							"bonus": "20"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
+							"name": "RushTimeScaleBonusPercent",
+							"bonus": "15"
+						},
+						{
+							"name": "DispelDebuffs",
+							"bonus": "1"
+						}
+					]
+				}
+			],
+			"weapon_info": {},
+			"description": {
+				"t1_desc": "-15s Cooldown<br>+7m Cast Range",
+				"t2_desc": "+1s Duration<br>+20% Healing Effectiveness",
+				"t3_desc": "+15% Rush Speed<br>Dispels non-ult debuffs"
 			}
 		},
 		{

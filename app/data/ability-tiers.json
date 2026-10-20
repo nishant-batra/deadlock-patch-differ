@@ -5962,7 +5962,11 @@
 					"new": 0.9,
 					"scaling": "ETechPower"
 				}
-			]
+			],
+			"text": {
+				"old": "+1 Bounces and improved Spirit Scaling",
+				"new": "+1 Bounce and improved Spirit Scaling"
+			}
 		}
 	],
 	"The Cube": [
@@ -12134,6 +12138,288 @@
 			]
 		}
 	],
+	"Creative Solutions": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Living Ink": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-4",
+					"postfix": "s"
+				},
+				{
+					"key": "MaxDrawDistance|#0",
+					"label": "Max Draw Distance",
+					"kind": "equal",
+					"new": "15m",
+					"postfix": "m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "MaxStacks|#0",
+					"label": "Max Stacks",
+					"kind": "equal",
+					"new": "5"
+				},
+				{
+					"key": "StackDuration|#0",
+					"label": "Stack Duration",
+					"kind": "equal",
+					"new": "10",
+					"postfix": "s"
+				},
+				{
+					"key": "BonusFireRatePerStack|#0",
+					"label": "Bonus Fire Rate Per Stack",
+					"kind": "equal",
+					"new": "10"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "BulletDamageMultiplier|#0",
+					"label": "Bullet Damage Multiplier",
+					"kind": "equal",
+					"new": "30",
+					"postfix": "%"
+				},
+				{
+					"key": "CooldownReductionPerHit|#0",
+					"label": "Cooldown Reduction Per Hit",
+					"kind": "equal",
+					"new": "1",
+					"postfix": "s"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "equal",
+					"new": "0.4",
+					"scaling": "ETechPower"
+				}
+			]
+		}
+	],
+	"Flow State": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "StaminaCooldownReduction|#0",
+					"label": "Stamina Cooldown Reduction",
+					"kind": "equal",
+					"new": "150",
+					"prefix": "{s:sign}",
+					"postfix": "%"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-6",
+					"postfix": "s"
+				},
+				{
+					"key": "ExplosionRadius|#0",
+					"label": "Explosion Radius",
+					"kind": "equal",
+					"new": "8m",
+					"postfix": "m"
+				},
+				{
+					"key": "GroundAuraDuration|#0",
+					"label": "Ground Aura Duration",
+					"kind": "equal",
+					"new": "4",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "OutgoingDamagePercent|#0",
+					"label": "Outgoing Damage Percent",
+					"kind": "equal",
+					"new": "20",
+					"prefix": "{s:sign}",
+					"postfix": "%"
+				},
+				{
+					"key": "DamageAmpBuildDuration|#0",
+					"label": "Damage Amp Build Duration",
+					"kind": "equal",
+					"new": "4"
+				},
+				{
+					"key": "DamageAmpDuration|#0",
+					"label": "Damage Amp Duration",
+					"kind": "equal",
+					"new": "6"
+				}
+			]
+		}
+	],
+	"Still Life": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "BuffDuration|#0",
+					"label": "Buff Duration",
+					"kind": "equal",
+					"new": "4",
+					"postfix": "s"
+				},
+				{
+					"key": "HealthRegen|#0",
+					"label": "Health Regen",
+					"kind": "equal",
+					"new": "15",
+					"prefix": "{s:sign}",
+					"postfix": ""
+				},
+				{
+					"key": "HealthRegen|EAddToScale#0",
+					"label": "Health Regen",
+					"kind": "equal",
+					"new": "0.25",
+					"scaling": "ETechPower",
+					"prefix": "{s:sign}",
+					"postfix": ""
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "OutgoingDamagePercent|EAddToBase#0",
+					"label": "Outgoing Damage Percent",
+					"kind": "equal",
+					"new": "-35",
+					"prefix": "{s:sign}",
+					"postfix": "%"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-11",
+					"postfix": "s"
+				},
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "equal",
+					"new": "0.35",
+					"postfix": "s"
+				},
+				{
+					"key": "BonusMoveSpeedPercent|#0",
+					"label": "Bonus Move Speed Percent",
+					"kind": "equal",
+					"new": "20",
+					"prefix": "{s:sign}",
+					"postfix": "%"
+				}
+			]
+		}
+	],
+	"Abstract Landscape": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-20",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityLifestealPercentHero|#0",
+					"label": "Ability Lifesteal Percent Hero",
+					"kind": "equal",
+					"new": "25",
+					"prefix": "{s:sign}",
+					"postfix": "%"
+				},
+				{
+					"key": "TechPower|#0",
+					"label": "Tech Power",
+					"kind": "equal",
+					"new": "15",
+					"prefix": "{s:sign}",
+					"postfix": ""
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "SilenceDuration|#0",
+					"label": "Silence Duration",
+					"kind": "equal",
+					"new": "1.25",
+					"postfix": "s"
+				},
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "4",
+					"postfix": "s"
+				},
+				{
+					"key": "DestroyOnDamage|#0",
+					"label": "Destroy On Damage",
+					"kind": "equal",
+					"new": "-1"
+				}
+			]
+		}
+	],
 	"Bunko-Night Special": [
 		{
 			"tier": 1,
@@ -12272,7 +12558,7 @@
 					"key": "AbilityCooldown|#0",
 					"label": "Ability Cooldown",
 					"kind": "equal",
-					"new": "-12",
+					"new": "-14",
 					"postfix": "s"
 				}
 			]
@@ -12692,7 +12978,7 @@
 					"key": "HealOnHit|EAddToScale#0",
 					"label": "Heal On Hit",
 					"kind": "equal",
-					"new": "1.0",
+					"new": "2.0",
 					"scaling": "ETechPower"
 				}
 			]
@@ -12711,7 +12997,7 @@
 					"key": "OverheatLockoutDurationReductionOnPlayerHitPercent|#0",
 					"label": "Overheat Lockout Duration Reduction On Player Hit Percent",
 					"kind": "equal",
-					"new": "40"
+					"new": "50"
 				}
 			]
 		}
@@ -12736,13 +13022,13 @@
 					"key": "Damage|#0",
 					"label": "Damage",
 					"kind": "equal",
-					"new": "20"
+					"new": "30"
 				},
 				{
 					"key": "CoatedDamage|#0",
 					"label": "Coated Damage",
 					"kind": "equal",
-					"new": "35"
+					"new": "45"
 				}
 			]
 		},
@@ -12766,14 +13052,14 @@
 					"key": "CoatedDamage|EAddToScale#0",
 					"label": "Coated Damage",
 					"kind": "equal",
-					"new": "0.2",
+					"new": "0.35",
 					"scaling": "ETechPower"
 				},
 				{
 					"key": "Damage|EAddToScale#0",
 					"label": "Damage",
 					"kind": "equal",
-					"new": "0.225",
+					"new": "0.35",
 					"scaling": "ETechPower"
 				}
 			]
@@ -12787,7 +13073,7 @@
 					"key": "Damage|#0",
 					"label": "Damage",
 					"kind": "equal",
-					"new": 50
+					"new": 90
 				}
 			]
 		},
@@ -12875,6 +13161,267 @@
 				{
 					"key": "BurstMarkStacks|#0",
 					"label": "Burst Mark Stacks",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		}
+	],
+	"Code Blue": [
+		{
+			"tier": 1,
+			"rows": []
+		},
+		{
+			"tier": 2,
+			"rows": []
+		},
+		{
+			"tier": 3,
+			"rows": []
+		}
+	],
+	"Leech Therapy": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "LeechStaminaDrain|#0",
+					"label": "Leech Stamina Drain",
+					"kind": "equal",
+					"new": "0.3",
+					"postfix": "/s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-10",
+					"postfix": "s"
+				},
+				{
+					"key": "SpiritPowerPerLeechStack|#0",
+					"label": "Spirit Power Per Leech Stack",
+					"kind": "equal",
+					"new": "4",
+					"prefix": "+"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "MaxLeechBonusStacks|#0",
+					"label": "Max Leech Bonus Stacks",
+					"kind": "equal",
+					"new": "8"
+				},
+				{
+					"key": "DPS|EAddToScale#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": "0.3",
+					"scaling": "ETechPower",
+					"prefix": "",
+					"postfix": ""
+				},
+				{
+					"key": "Radius|#0",
+					"label": "Radius",
+					"kind": "equal",
+					"new": "1m",
+					"postfix": "m"
+				}
+			]
+		}
+	],
+	"Lurking Terrors": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-50",
+					"postfix": "s"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "equal",
+					"new": "20",
+					"prefix": "-",
+					"postfix": "%"
+				},
+				{
+					"key": "FireRateSlow|#0",
+					"label": "Fire Rate Slow",
+					"kind": "equal",
+					"new": "20",
+					"prefix": "-",
+					"postfix": "%"
+				},
+				{
+					"key": "DPS|#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": "30",
+					"prefix": "",
+					"postfix": ""
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "ChannelDamageImmune|#0",
+					"label": "Channel Damage Immune",
+					"kind": "equal",
+					"new": "1"
+				},
+				{
+					"key": "AbilityChannelTime|#0",
+					"label": "Ability Channel Time",
+					"kind": "equal",
+					"new": "3.0",
+					"postfix": "s"
+				},
+				{
+					"key": "DPS|EAddToScale#0",
+					"label": "DPS",
+					"kind": "equal",
+					"new": "0.5",
+					"scaling": "ETechPower",
+					"prefix": "",
+					"postfix": ""
+				}
+			]
+		}
+	],
+	"Healing Needles": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCharges|#0",
+					"label": "Ability Charges",
+					"kind": "equal",
+					"new": "1"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "StaminaRestorePerHit|#0",
+					"label": "Stamina Restore Per Hit",
+					"kind": "equal",
+					"new": "0.6",
+					"prefix": "+"
+				},
+				{
+					"key": "HealRegen|#0",
+					"label": "Heal Regen",
+					"kind": "equal",
+					"new": "20"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "HealRegen|EAddToScale#0",
+					"label": "Heal Regen",
+					"kind": "equal",
+					"new": "0.4",
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "BuffExtendPercentPerShot|#0",
+					"label": "Buff Extend Percent Per Shot",
+					"kind": "equal",
+					"new": "6"
+				}
+			]
+		}
+	],
+	"Wretched Vapors": [
+		{
+			"tier": 1,
+			"rows": [
+				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "equal",
+					"new": "-15",
+					"postfix": "s"
+				},
+				{
+					"key": "AbilityCastRange|#0",
+					"label": "Ability Cast Range",
+					"kind": "equal",
+					"new": "7m",
+					"postfix": "m"
+				}
+			]
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AbilityDuration|#0",
+					"label": "Ability Duration",
+					"kind": "equal",
+					"new": "1",
+					"postfix": "s"
+				},
+				{
+					"key": "HealingEffectivenessPercent|#0",
+					"label": "Healing Effectiveness Percent",
+					"kind": "equal",
+					"new": "20",
+					"prefix": "+",
+					"postfix": "%"
+				},
+				{
+					"key": "HealAmpRegenPercent|#0",
+					"label": "Heal Amp Regen Percent",
+					"kind": "equal",
+					"new": "20",
+					"prefix": "{s:sign}",
+					"postfix": "%"
+				}
+			]
+		},
+		{
+			"tier": 3,
+			"rows": [
+				{
+					"key": "RushTimeScaleBonusPercent|#0",
+					"label": "Rush Time Scale Bonus Percent",
+					"kind": "equal",
+					"new": "15",
+					"prefix": "+",
+					"postfix": "%"
+				},
+				{
+					"key": "DispelDebuffs|#0",
+					"label": "Dispel Debuffs",
 					"kind": "equal",
 					"new": "1"
 				}
