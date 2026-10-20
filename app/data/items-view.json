@@ -120986,7 +120986,7 @@
 			],
 			"weapon_info": {},
 			"description": {
-				"t1_desc": "-4s Cooldown<br>15m Max Draw Distance",
+				"t1_desc": "-4s Cooldown<br>+15m Max Drawing Distance",
 				"t2_desc": "On Empower: Gain +10% Fire Rate for 10s, stacking 5 times",
 				"t3_desc": "+1s Cooldown Reduction Per Hit<br>Improve scaling"
 			}
