@@ -49,18 +49,17 @@ export function abilityWording(abilities: AbilityChange[]): WordingEntry[] {
 }
 
 /**
- * The `starting_stats` / `standard_level_up_upgrades` / `weapon_info` key a
- * change actually moved.
+ * The stat a change moved is always the key under its section.
  *   ['starting_stats','max_health','value']            -> max_health
  *   ['standard_level_up_upgrades','MODIFIER_VALUE_…']  -> MODIFIER_VALUE_…
+ *   ['scaling_stats','ETechArmorDamageReduction','scale'] -> ETechArmor…
  *   ['weapon_info','bullet_damage']                    -> bullet_damage
  */
-const statKeyOf = (path: string[]) =>
-	path.at(-1) === "value" && path.length > 1
-		? (path.at(-2) as string)
-		: (path.at(-1) as string);
+const statKeyOf = (path: string[]) => path[1];
 
-const labelForStat = (path: string[]) => labelForStatKey(statKeyOf(path));
+// A scaling row would otherwise read the same as the stat it scales.
+const labelForStat = (path: string[]) =>
+	labelForStatKey(statKeyOf(path)) + (path.at(-1) === "scale" ? " Scaling" : "");
 
 /**
  * The hero card's top strip: the hero's own stat moves plus its weapon's

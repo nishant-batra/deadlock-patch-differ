@@ -95,23 +95,6 @@ export function weaponRows({
 	);
 }
 
-/**
- * `scaling_stats` names stats the game's way (`EClipSize`); these map onto the
- * `starting_stats` / `weapon_info` keys `labelForStatKey` already knows, so the
- * label matches the rest of the page. Anything unmapped (`EFireRate`) drops
- * its `E` and is humanised.
- */
-const SCALED_STAT_KEYS: Record<string, string> = {
-	EBulletDamage: "bullet_damage",
-	EClipSize: "clip_size",
-	EMaxMoveSpeed: "max_move_speed",
-	ESprintSpeed: "sprint_speed",
-	EBaseHealthRegen: "base_health_regen",
-	EHeavyMeleeDamage: "heavy_melee_damage",
-	EBulletArmorDamageReduction: "bullet_armor_damage_reduction",
-	ETechArmorDamageReduction: "tech_armor_damage_reduction",
-};
-
 /** What a hero stat scales *with*. Every live hero scales off Spirit Power today. */
 const SCALING_SOURCE_LABELS: Record<string, string> = {
 	ETechPower: "Spirit Power",
@@ -126,7 +109,7 @@ export const scalingRows = (
 ): ScalingRow[] =>
 	Object.entries(scalingStats).map(([key, { scaling_stat, scale }]) => ({
 		key,
-		label: labelForStatKey(SCALED_STAT_KEYS[key] ?? key.replace(/^E/, "")),
+		label: labelForStatKey(key),
 		value: `+${scale} per ${SCALING_SOURCE_LABELS[scaling_stat] ?? scaling_stat.replace(/^E/, "")}`,
 		scalingStat: scaling_stat,
 	}));

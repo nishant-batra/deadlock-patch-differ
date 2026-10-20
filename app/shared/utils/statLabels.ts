@@ -121,5 +121,24 @@ export const humaniseStatKey = (key: string) =>
 		.map(TITLE_CASE)
 		.join(" ");
 
-export const labelForStatKey = (key: string) =>
-	HERO_STAT_LABELS[key] ?? humaniseStatKey(key);
+/**
+ * `scaling_stats` names stats the game's way (`EClipSize`); these map onto the
+ * `starting_stats` / `weapon_info` keys above, so a scaled stat reads the same
+ * as the stat itself. Anything unmapped (`EFireRate`) drops its `E` and is
+ * humanised.
+ */
+const GAME_STAT_KEYS: Record<string, string> = {
+	EBulletDamage: "bullet_damage",
+	EClipSize: "clip_size",
+	EMaxMoveSpeed: "max_move_speed",
+	ESprintSpeed: "sprint_speed",
+	EBaseHealthRegen: "base_health_regen",
+	EHeavyMeleeDamage: "heavy_melee_damage",
+	EBulletArmorDamageReduction: "bullet_armor_damage_reduction",
+	ETechArmorDamageReduction: "tech_armor_damage_reduction",
+};
+
+export const labelForStatKey = (key: string) => {
+	const ownKey = GAME_STAT_KEYS[key] ?? key.replace(/^E(?=[A-Z])/, "");
+	return HERO_STAT_LABELS[ownKey] ?? humaniseStatKey(ownKey);
+};

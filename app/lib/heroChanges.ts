@@ -7,7 +7,7 @@
 // of walking whatever moved, this compares an allowlist of player-facing
 // values:
 //
-//   hero      starting_stats.*.value, standard_level_up_upgrades.*
+//   hero      every number under HERO_STAT_SECTIONS
 //   weapon    every numeric weapon_info field (ranges and spread penalties
 //             included), minus derived duplicates and the recoil RNG seed
 //   ability   properties.*.value and properties.*.scale_function.stat_scale,
@@ -82,22 +82,29 @@ function weaponEntries(info: Item["weapon_info"] | undefined): StatEntries {
 	return entries;
 }
 
+/**
+ * The hero sections that hold balance numbers. In each one every number is a
+ * stat and every string a name (`display_stat_name`, `scaling_stat`), so any
+ * number found under them is diffed.
+ */
+const HERO_STAT_SECTIONS = [
+	"starting_stats",
+	"standard_level_up_upgrades",
+	"scaling_stats",
+] as const;
+
 function heroEntries(hero: Hero): StatEntries {
 	const entries: StatEntries = new Map();
-	for (const [stat, { value }] of Object.entries(hero.starting_stats ?? {})) {
-		entries.set(`starting_stats.${stat}`, {
-			path: ["starting_stats", stat, "value"],
-			value,
-		});
-	}
-	for (const [stat, value] of Object.entries(
-		hero.standard_level_up_upgrades ?? {},
-	)) {
-		entries.set(`standard_level_up_upgrades.${stat}`, {
-			path: ["standard_level_up_upgrades", stat],
-			value,
-		});
-	}
+	const walk = (node: unknown, path: string[]) => {
+		if (typeof node === "number") {
+			entries.set(path.join("."), { path, value: node });
+		} else if (node && typeof node === "object") {
+			for (const [key, child] of Object.entries(node)) {
+				walk(child, [...path, key]);
+			}
+		}
+	};
+	for (const section of HERO_STAT_SECTIONS) walk(hero[section], [section]);
 	return entries;
 }
 
