@@ -132570,7 +132570,7 @@
 		},
 		"disabled": false,
 		"description": {
-			"desc": "Gain bonus <span class=\"highlight\">Fire Rate</span>, <span class=\"highlight\">Spirit Power</span> and <span class=\"highlight\">Spirit Lifesteal</span> by <span class=\"highlight\">charging up</span> when shooting enemy heroes."
+			"desc": "Gain bonus <span class=\"highlight\">Fire Rate</span>, <span class=\"highlight\">Spirit Power</span> and <span class=\"highlight\">Spirit Lifesteal</span> by <span class=\"highlight\">charging up</span> when shooting heroes."
 		},
 		"activation": "passive",
 		"component_items": [
@@ -132595,7 +132595,7 @@
 				"section_type": "passive",
 				"section_attributes": [
 					{
-						"loc_string": "Gain bonus <span class=\"highlight\">Fire Rate</span>, <span class=\"highlight\">Spirit Power</span> and <span class=\"highlight\">Spirit Lifesteal</span> by <span class=\"highlight\">charging up</span> when shooting enemy heroes.",
+						"loc_string": "Gain bonus <span class=\"highlight\">Fire Rate</span>, <span class=\"highlight\">Spirit Power</span> and <span class=\"highlight\">Spirit Lifesteal</span> by <span class=\"highlight\">charging up</span> when shooting heroes.",
 						"properties": [
 							"BuildUpPerShot",
 							"AbilityDuration"
@@ -163832,7 +163832,7 @@
 			}
 		},
 		"description": {
-			"desc": "Grants <span class=\"highlight\">Bullet Resist</span> when your bullets hit an enemy hero. <span class=\"highlight\">Each shot can only grant one stack.</span>"
+			"desc": "Grants <span class=\"highlight\">Bullet Resist</span> when your bullets hit a hero. <span class=\"highlight\">Each shot can only grant one stack.</span>"
 		},
 		"activation": "passive",
 		"component_items": [
@@ -163857,7 +163857,7 @@
 				"section_type": "passive",
 				"section_attributes": [
 					{
-						"loc_string": "Grants <span class=\"highlight\">Bullet Resist</span> when your bullets hit an enemy hero. <span class=\"highlight\">Each shot can only grant one stack.</span>",
+						"loc_string": "Grants <span class=\"highlight\">Bullet Resist</span> when your bullets hit a hero. <span class=\"highlight\">Each shot can only grant one stack.</span>",
 						"properties": [
 							"BulletResistPerStack",
 							"BulletResistDuration"
