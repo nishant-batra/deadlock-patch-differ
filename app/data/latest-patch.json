@@ -63638,7 +63638,7 @@
 			"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST"
 		],
 		"description": {
-			"desc": "After charging for 2s, <span class=\"highlight\">release pulses that damage enemies and heal you</span> based on the damage done. <br>While channeling Last Stand you have greatly increased <span class=\"highlight\">bullet and spirit resist</span>.",
+			"desc": "After charging for 2s, <span class=\"highlight\">release pulses that damage enemies and heal you</span> based on the damage done. <br>While channeling Last Stand you have greatly increased <span class=\"highlight\">bullet and spirit resist</span>.<br><br><span class=\"small_diminish\">Immune to fear while Last Stand is active.</span>",
 			"quip": "Emit pulses that steal health from enemies",
 			"t2_desc": "+40.5 DPS<br>-30.0s Cooldown",
 			"t3_desc": "+4s Duration<br>Unstoppable and +30% Resists while channeling"
@@ -63646,7 +63646,7 @@
 		"tooltip_details": {
 			"info_sections": [
 				{
-					"loc_string": "After charging for 2s, <span class=\"highlight\">release pulses that damage enemies and heal you</span> based on the damage done. <br>While channeling Last Stand you have greatly increased <span class=\"highlight\">bullet and spirit resist</span>.",
+					"loc_string": "After charging for 2s, <span class=\"highlight\">release pulses that damage enemies and heal you</span> based on the damage done. <br>While channeling Last Stand you have greatly increased <span class=\"highlight\">bullet and spirit resist</span>.<br><br><span class=\"small_diminish\">Immune to fear while Last Stand is active.</span>",
 					"properties_block": [
 						{
 							"properties": [

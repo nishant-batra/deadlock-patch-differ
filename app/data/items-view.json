@@ -81268,7 +81268,7 @@
 			"tooltip_details": {
 				"info_sections": [
 					{
-						"loc_string": "After charging for 2s, <span class=\"highlight\">release pulses that damage enemies and heal you</span> based on the damage done. <br>While channeling Last Stand you have greatly increased <span class=\"highlight\">bullet and spirit resist</span>.",
+						"loc_string": "After charging for 2s, <span class=\"highlight\">release pulses that damage enemies and heal you</span> based on the damage done. <br>While channeling Last Stand you have greatly increased <span class=\"highlight\">bullet and spirit resist</span>.<br><br><span class=\"small_diminish\">Immune to fear while Last Stand is active.</span>",
 						"properties_block": [
 							{
 								"properties": [
