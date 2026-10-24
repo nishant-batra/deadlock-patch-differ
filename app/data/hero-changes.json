@@ -9,5 +9,24 @@
 		"weapon": [],
 		"abilities": {},
 		"isNew": true
+	},
+	"Warden": {
+		"stats": [],
+		"weapon": [],
+		"abilities": {
+			"Last Stand": [
+				{
+					"path": [
+						"tooltip_details",
+						"info_sections",
+						"0",
+						"loc_string"
+					],
+					"kind": "modified",
+					"old": "After charging for 2s, <span class=\"highlight\">release pulses that damage enemies and heal you</span> based on the damage done. <br>While channeling Last Stand you have greatly increased <span class=\"highlight\">bullet and spirit resist</span>.",
+					"new": "After charging for 2s, <span class=\"highlight\">release pulses that damage enemies and heal you</span> based on the damage done. <br>While channeling Last Stand you have greatly increased <span class=\"highlight\">bullet and spirit resist</span>.<br><br><span class=\"small_diminish\">Immune to fear while Last Stand is active.</span>"
+				}
+			]
+		}
 	}
 }

@@ -12,6 +12,28 @@
 					"new": "The next <span class=\"highlight\">Stun, Chain, Immobilize, Sleep, Silence or Fear</span> is automatically cleansed. When this happens, you gain a <span class=\"highlight\">barrier</span> and all your <span class=\"highlight\">ability cooldowns</span> get reduced by 20%."
 				}
 			]
+		},
+		{
+			"name": "Spiritual Overflow",
+			"changes": [
+				{
+					"kind": "text",
+					"section": "passive",
+					"old": "Gain bonus <span class=\"highlight\">Fire Rate</span>, <span class=\"highlight\">Spirit Power</span> and <span class=\"highlight\">Spirit Lifesteal</span> by <span class=\"highlight\">charging up</span> when shooting enemy heroes.",
+					"new": "Gain bonus <span class=\"highlight\">Fire Rate</span>, <span class=\"highlight\">Spirit Power</span> and <span class=\"highlight\">Spirit Lifesteal</span> by <span class=\"highlight\">charging up</span> when shooting heroes."
+				}
+			]
+		},
+		{
+			"name": "Escalating Resilience",
+			"changes": [
+				{
+					"kind": "text",
+					"section": "passive",
+					"old": "Grants <span class=\"highlight\">Bullet Resist</span> when your bullets hit an enemy hero. <span class=\"highlight\">Each shot can only grant one stack.</span>",
+					"new": "Grants <span class=\"highlight\">Bullet Resist</span> when your bullets hit a hero. <span class=\"highlight\">Each shot can only grant one stack.</span>"
+				}
+			]
 		}
 	]
 }
