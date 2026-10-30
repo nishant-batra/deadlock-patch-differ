@@ -3,13 +3,214 @@
 	"removed": [],
 	"changed": [
 		{
-			"name": "Indomitable",
+			"name": "High-Velocity Rounds",
 			"changes": [
 				{
-					"kind": "text",
+					"kind": "stat",
+					"section": "innate",
+					"key": "BonusBulletSpeedPercent",
+					"label": "Bullet Velocity",
+					"old": "60",
+					"new": "45"
+				}
+			]
+		},
+		{
+			"name": "Rebuttal",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "ParryCooldownReduction",
+					"label": "Parry Cooldown",
+					"old": "1.75",
+					"new": "1.25"
+				}
+			]
+		},
+		{
+			"name": "Silence Wave",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BonusHealth",
+					"label": "Bonus Health",
+					"old": "50",
+					"new": "90"
+				}
+			]
+		},
+		{
+			"name": "Crippling Headshot",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "HealAmpRegenPenaltyPercent",
+					"label": "Incoming Healing",
+					"old": "-35",
+					"new": "-40"
+				}
+			]
+		},
+		{
+			"name": "Point Blank",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "SlowDuration",
+					"label": "Slow Duration",
+					"old": "2",
+					"new": "2.5"
+				}
+			]
+		},
+		{
+			"name": "Toxic Bullets",
+			"changes": [
+				{
+					"kind": "stat",
 					"section": "",
-					"old": "The next <span class=\"highlight\">Stun, Chain, Immobilize, Sleep or Silence</span> is automatically cleansed. When this happens, you gain a <span class=\"highlight\">barrier</span> and all your <span class=\"highlight\">ability cooldowns</span> get reduced by 20%.",
-					"new": "The next <span class=\"highlight\">Stun, Chain, Immobilize, Sleep, Silence or Fear</span> is automatically cleansed. When this happens, you gain a <span class=\"highlight\">barrier</span> and all your <span class=\"highlight\">ability cooldowns</span> get reduced by 20%."
+					"key": "HealAmpReceivePenaltyPercent",
+					"label": "Incoming Healing",
+					"old": "-35",
+					"new": "-40"
+				}
+			]
+		},
+		{
+			"name": "Bullet Lifesteal",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BulletLifestealPercent",
+					"label": "Bullet Lifesteal",
+					"old": "13",
+					"new": "15"
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BaseAttackDamagePercent",
+					"label": "Weapon Damage",
+					"old": "6",
+					"new": "10"
+				}
+			]
+		},
+		{
+			"name": "Bullet Resilience",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BulletResist",
+					"label": "Bullet Resist",
+					"old": "30",
+					"new": "35"
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "OutOfCombatHealthRegen",
+					"label": "Out of Combat Regen",
+					"old": "3",
+					"new": "5"
+				}
+			]
+		},
+		{
+			"name": "Metal Skin",
+			"changes": [
+				{
+					"kind": "row-added",
+					"section": "active",
+					"key": "GravityScale",
+					"label": "Gravity Scale",
+					"value": "20",
+					"prefix": "+",
+					"postfix": "%",
+					"conditional": true
+				}
+			]
+		},
+		{
+			"name": "Healing Booster",
+			"changes": [
+				{
+					"kind": "components",
+					"old": [
+						"upgrade_endurance"
+					],
+					"new": []
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "OutOfCombatHealthRegen",
+					"label": "Out of Combat Regen",
+					"old": "1",
+					"new": "2"
+				},
+				{
+					"kind": "row-removed",
+					"section": "innate",
+					"key": "BonusHealthRegen",
+					"label": "Health Regen",
+					"value": "3",
+					"prefix": "{s:sign}",
+					"postfix": "",
+					"conditional": false
+				}
+			]
+		},
+		{
+			"name": "Leech",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "AbilityLifestealPercentHero",
+					"label": "Spirit Lifesteal",
+					"old": "28",
+					"new": "30"
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BulletLifestealPercent",
+					"label": "Bullet Lifesteal",
+					"old": "28",
+					"new": "30"
+				}
+			]
+		},
+		{
+			"name": "Spirit Shielding",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "TechResist",
+					"label": "Spirit Resist",
+					"old": "18",
+					"new": "15"
+				}
+			]
+		},
+		{
+			"name": "Battle Vest",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "BaseAttackDamagePercent",
+					"label": "Weapon Damage",
+					"old": "18",
+					"new": "22"
 				}
 			]
 		},
@@ -17,21 +218,348 @@
 			"name": "Spiritual Overflow",
 			"changes": [
 				{
-					"kind": "text",
-					"section": "passive",
-					"old": "Gain bonus <span class=\"highlight\">Fire Rate</span>, <span class=\"highlight\">Spirit Power</span> and <span class=\"highlight\">Spirit Lifesteal</span> by <span class=\"highlight\">charging up</span> when shooting enemy heroes.",
-					"new": "Gain bonus <span class=\"highlight\">Fire Rate</span>, <span class=\"highlight\">Spirit Power</span> and <span class=\"highlight\">Spirit Lifesteal</span> by <span class=\"highlight\">charging up</span> when shooting heroes."
+					"kind": "stat",
+					"section": "innate",
+					"key": "TechPower",
+					"label": "Spirit Power",
+					"old": "6",
+					"new": "8"
 				}
 			]
 		},
 		{
-			"name": "Escalating Resilience",
+			"name": "Spirit Lifesteal",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "AbilityLifestealPercentHero",
+					"label": "Spirit Lifesteal",
+					"old": "13",
+					"new": "15"
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "TechPower",
+					"label": "Spirit Power",
+					"old": "6",
+					"new": "8"
+				}
+			]
+		},
+		{
+			"name": "Healbane",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "HealOnKill",
+					"label": "Heal On Hero Kill",
+					"old": "275",
+					"new": "170"
+				}
+			]
+		},
+		{
+			"name": "Mystic Slow",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "GroundDashReductionPercent",
+					"label": "Dash Distance",
+					"old": "-10",
+					"new": "-12"
+				}
+			]
+		},
+		{
+			"name": "Spirit Sap",
+			"changes": [
+				{
+					"kind": "cooldown",
+					"section": "active",
+					"old": "18",
+					"new": "22"
+				},
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "AbilityCastRange",
+					"label": "Cast Range",
+					"old": "40m",
+					"new": "35m"
+				}
+			]
+		},
+		{
+			"name": "Focus Lens",
+			"changes": [
+				{
+					"kind": "cooldown",
+					"section": "active",
+					"old": "45",
+					"new": "40"
+				}
+			]
+		},
+		{
+			"name": "Decay",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "HealAmpReceivePenaltyPercent",
+					"label": "Incoming Healing",
+					"old": "-50",
+					"new": "-55"
+				}
+			]
+		},
+		{
+			"name": "Torment Pulse",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "MeleeResistPercent",
+					"label": "Melee Resist",
+					"old": "18",
+					"new": "22"
+				}
+			]
+		},
+		{
+			"name": "Shadow Weave",
 			"changes": [
 				{
 					"kind": "text",
+					"section": "active",
+					"old": "Become <span class=\"highlight\">Stealthed</span>. Whenever you take damage while Stealthed you get briefly revealed. <br>Attacking or using an ability will end your stealth and start an <span class=\"highlight\">ambush</span>, temporarily granting you bonus <span class=\"highlight\">Fire Rate</span>, <span class=\"highlight\">Spirit Power</span> and <span class=\"highlight\">Melee Damage</span>.",
+					"new": "Become <span class=\"highlight\">Stealthed</span>. Whenever you take damage while Stealthed you get briefly revealed. <br>Attacking or using an ability will end your stealth and start an <span class=\"highlight\">ambush</span>, temporarily granting you bonus <span class=\"highlight\">Weapon Damage</span> and <span class=\"highlight\">Spirit Power</span>."
+				},
+				{
+					"kind": "row-added",
+					"section": "active",
+					"key": "AmbushBonusWeaponDamage",
+					"label": "Ambush Weapon Damage",
+					"value": "50",
+					"prefix": "+",
+					"postfix": "%",
+					"conditional": true
+				},
+				{
+					"kind": "row-added",
+					"section": "active",
+					"key": "AmbushBuildUpDuration",
+					"label": "Time to Full Ambush",
+					"value": "6",
+					"prefix": "",
+					"postfix": "s",
+					"conditional": false
+				},
+				{
+					"kind": "row-removed",
+					"section": "active",
+					"key": "AmbushBonusFireRate",
+					"label": "Ambush Fire Rate",
+					"value": "25",
+					"prefix": "+",
+					"postfix": "%",
+					"conditional": true
+				},
+				{
+					"kind": "row-removed",
+					"section": "active",
+					"key": "AmbushBonusMeleeDamage",
+					"label": "Ambush Melee Damage",
+					"value": "25",
+					"prefix": "",
+					"postfix": "%",
+					"conditional": true
+				}
+			]
+		},
+		{
+			"name": "Infuser",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "AbilityLifestealPercentHeroPassive",
+					"label": "Spirit Lifesteal",
+					"old": "13",
+					"new": "15"
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "TechPower",
+					"label": "Spirit Power",
+					"old": "6",
+					"new": "8"
+				},
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "AbilityLifestealPercentHero",
+					"label": "Spirit Lifesteal",
+					"old": "70",
+					"new": "75"
+				}
+			]
+		},
+		{
+			"name": "Divine Barrier",
+			"changes": [
+				{
+					"kind": "cooldown",
+					"section": "active",
+					"old": "45",
+					"new": "55"
+				}
+			]
+		},
+		{
+			"name": "Glass Cannon",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BaseAttackDamagePercent",
+					"label": "Weapon Damage",
+					"old": "80",
+					"new": "85"
+				}
+			]
+		},
+		{
+			"name": "Fury Trance",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BulletLifestealPercent",
+					"label": "Bullet Lifesteal",
+					"old": "14",
+					"new": "15"
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BaseAttackDamagePercent",
+					"label": "Weapon Damage",
+					"old": "6",
+					"new": "10"
+				},
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "ActiveBonusMoveSpeed",
+					"label": "Move Speed",
+					"old": "1m",
+					"new": "1.5m"
+				}
+			]
+		},
+		{
+			"name": "Vampiric Burst",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BulletLifestealPercent",
+					"label": "Bullet Lifesteal",
+					"old": "13",
+					"new": "15"
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BaseAttackDamagePercent",
+					"label": "Weapon Damage",
+					"old": "6",
+					"new": "10"
+				},
+				{
+					"kind": "stat",
+					"section": "active",
+					"key": "ActiveBonusLifesteal",
+					"label": "Bullet Lifesteal",
+					"old": "70",
+					"new": "75"
+				}
+			]
+		},
+		{
+			"name": "Radiant Regeneration",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "",
+					"key": "HealingPerCast",
+					"label": "Healing on Ability Cast",
+					"old": "65",
+					"new": "40"
+				},
+				{
+					"kind": "text",
+					"section": "",
+					"old": "<span class=\"highlight\">Heal</span> and gain bonus <span class=\"highlight\">Movement Speed</span> for a short duration when you cast an ability.",
+					"new": "While in-combat, <span class=\"highlight\">Heal</span> and gain bonus <span class=\"highlight\">Movement Speed</span> for a short duration when you cast an ability."
+				}
+			]
+		},
+		{
+			"name": "Armor Piercer",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "",
+					"key": "ProcChance",
+					"label": "Proc Chance",
+					"old": "55",
+					"new": "60"
+				}
+			]
+		},
+		{
+			"name": "Juggernaut",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BonusHealthRegen",
+					"label": "Health Regen",
+					"old": "8",
+					"new": "15"
+				}
+			]
+		},
+		{
+			"name": "Express Shot",
+			"changes": [
+				{
+					"kind": "stat",
 					"section": "passive",
-					"old": "Grants <span class=\"highlight\">Bullet Resist</span> when your bullets hit an enemy hero. <span class=\"highlight\">Each shot can only grant one stack.</span>",
-					"new": "Grants <span class=\"highlight\">Bullet Resist</span> when your bullets hit a hero. <span class=\"highlight\">Each shot can only grant one stack.</span>"
+					"key": "ProcBaseAttackDamagePercentAltFire",
+					"label": "Secondary Fire Weapon Damage",
+					"old": "40",
+					"new": "38"
+				}
+			]
+		},
+		{
+			"name": "Golden Goose Egg",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "OutgoingDamagePenaltyPercent",
+					"label": "Damage Penalty",
+					"old": "-15",
+					"new": "-12"
 				}
 			]
 		}

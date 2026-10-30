@@ -1108,8 +1108,9 @@
 				{
 					"key": "DPS|#0",
 					"label": "DPS",
-					"kind": "equal",
-					"new": 18,
+					"kind": "changed",
+					"old": 18,
+					"new": 22,
 					"prefix": "",
 					"postfix": ""
 				},
@@ -1129,7 +1130,11 @@
 					"new": "2m",
 					"postfix": "m"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+2m</span> Radius and <span class=\"highlight\">+18.0</span> DPS with improved Spirit scaling</span>",
+				"new": "<span class=\"highlight\">+2m</span> Radius and <span class=\"highlight\">+22.0</span> DPS with improved Spirit scaling</span>"
+			}
 		}
 	],
 	"Humble Pie": [
@@ -2730,8 +2735,9 @@
 				{
 					"key": "StunDuration|#0",
 					"label": "Stun Duration",
-					"kind": "equal",
-					"new": "0.9",
+					"kind": "changed",
+					"old": "0.9",
+					"new": "1.1",
 					"postfix": "s"
 				},
 				{
@@ -2740,7 +2746,11 @@
 					"kind": "equal",
 					"new": "160"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+0.9s</span> Stun Duration <br><span class=\"highlight\">+160</span> Damage",
+				"new": "<span class=\"highlight\">+1.1s</span> Stun Duration <br><span class=\"highlight\">+160</span> Damage"
+			}
 		}
 	],
 	"Power Surge": [
@@ -3435,8 +3445,19 @@
 					"kind": "equal",
 					"new": "10m",
 					"postfix": "m"
+				},
+				{
+					"key": "Damage|EAddToScale#0",
+					"label": "Damage",
+					"kind": "added",
+					"new": "0.4",
+					"scaling": "ETechPower"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+0.9s</span> Stun Duration and <span class=\"highlight\">+10m</span> Radius",
+				"new": "<span class=\"highlight\">+0.9s</span> Stun Duration and <span class=\"highlight\">+10m</span> Radius<br>Increased Spirit Scaling"
+			}
 		}
 	],
 	"Flame Dash": [
@@ -3509,11 +3530,16 @@
 				{
 					"key": "LifestealPercentHero|#0",
 					"label": "Lifesteal Percent Hero",
-					"kind": "equal",
-					"new": "15",
+					"kind": "changed",
+					"old": "15",
+					"new": "20",
 					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "Napalm Effect: +<span class=\"highlight\">15% Lifesteal</span>",
+				"new": "Napalm Effect: +<span class=\"highlight\">20% Lifesteal</span>"
+			}
 		},
 		{
 			"tier": 3,
@@ -3798,8 +3824,9 @@
 				{
 					"key": "AbilityCooldown|#0",
 					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": "-20",
+					"kind": "changed",
+					"old": "-20",
+					"new": "-30",
 					"postfix": "s"
 				}
 			]
@@ -3813,8 +3840,20 @@
 					"kind": "equal",
 					"new": 1.5,
 					"postfix": "s"
+				},
+				{
+					"key": "FireRateSlow|#0",
+					"label": "Fire Rate Slow",
+					"kind": "added",
+					"new": "20",
+					"prefix": "-",
+					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "",
+				"new": "<span class=\"highlight\">+1.5s</span> Duration<br>Applies <span class=\"highlight\">-20%</span> Fire Rate"
+			}
 		},
 		{
 			"tier": 3,
@@ -3822,8 +3861,9 @@
 				{
 					"key": "BonusHealthRegen|#0",
 					"label": "Bonus Health Regen",
-					"kind": "equal",
-					"new": "65",
+					"kind": "changed",
+					"old": "65",
+					"new": "75",
 					"prefix": "{s:sign}",
 					"postfix": ""
 				},
@@ -3842,7 +3882,11 @@
 					"kind": "equal",
 					"new": "1"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">Purges</span> non-ult debuffs for you and your allies. <br><span class=\"highlight\">+65</span> Health Regen and increased Spirit Scaling",
+				"new": "<span class=\"highlight\">Purges</span> non-ult debuffs for you and your allies. <br><span class=\"highlight\">+75</span> Health Regen and increased Spirit Scaling"
+			}
 		}
 	],
 	"Tale of The Tape": [
@@ -3920,8 +3964,19 @@
 					"new": "60",
 					"prefix": "{s:sign}",
 					"postfix": "%"
+				},
+				{
+					"key": "JumpVelocity|#0",
+					"label": "Jump Velocity",
+					"kind": "added",
+					"new": "4m",
+					"postfix": "m"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+1</span> Charges<br>OnCast : <span class=\"highlight\">+1</span> Stamina and <span class=\"highlight\">+60%</span> Air Control",
+				"new": "<span class=\"highlight\">+1</span> Charges<br>OnCast : <span class=\"highlight\">+1</span> Stamina and <span class=\"highlight\">+60%</span> Air Control<br><span class=\"highlight\">+4m</span> Jump Velocity"
+			}
 		}
 	],
 	"Ground Strike": [
@@ -4331,41 +4386,73 @@
 				{
 					"key": "MovementSpeedBonusDuration|#0",
 					"label": "Movement Speed Bonus Duration",
-					"kind": "equal",
-					"new": "12",
+					"kind": "removed",
+					"old": "12",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "+3m Move Speed and +20% Fire Rate for 12s",
+				"new": "+3m Move Speed and +20% Fire Rate"
+			}
 		},
 		{
 			"tier": 2,
 			"rows": [
 				{
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "added",
+					"new": "-65",
+					"postfix": "s"
+				},
+				{
 					"key": "CombatBarrier|#0",
 					"label": "Combat Barrier",
-					"kind": "equal",
-					"new": "400"
+					"kind": "removed",
+					"old": "400"
 				},
 				{
 					"key": "CombatBarrier|EAddToScale#0",
 					"label": "Combat Barrier",
-					"kind": "equal",
-					"new": "0.6",
+					"kind": "removed",
+					"old": "0.6",
 					"scaling": "ETechPower"
 				}
-			]
+			],
+			"text": {
+				"old": "400 Barrier that scales with Spirit",
+				"new": ""
+			}
 		},
 		{
 			"tier": 3,
 			"rows": [
 				{
+					"key": "UninterruptibleByDamage|#0",
+					"label": "Uninterruptible By Damage",
+					"kind": "added",
+					"new": "1"
+				},
+				{
+					"key": "CombatBarrier|EAddToScale#0",
+					"label": "Combat Barrier",
+					"kind": "added",
+					"new": 0.8,
+					"scaling": "ETechPower"
+				},
+				{
 					"key": "AbilityCooldown|#0",
 					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": "-90",
+					"kind": "removed",
+					"old": "-90",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "",
+				"new": "Cannot be interrupted by damage<br>Barrier gains Spirit Scaling"
+			}
 		}
 	],
 	"Yellow Canary": [
@@ -4389,8 +4476,9 @@
 				{
 					"key": "Damage|#0",
 					"label": "Damage",
-					"kind": "equal",
-					"new": 35
+					"kind": "changed",
+					"old": 35,
+					"new": 30
 				}
 			]
 		},
@@ -4439,12 +4527,17 @@
 				{
 					"key": "DPS|#0",
 					"label": "DPS",
-					"kind": "equal",
-					"new": 50,
+					"kind": "changed",
+					"old": 50,
+					"new": 45,
 					"prefix": "",
 					"postfix": ""
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+50.0</span> Spin DPS",
+				"new": "<span class=\"highlight\">+45.0</span> Spin DPS"
+			}
 		},
 		{
 			"tier": 2,
@@ -4493,8 +4586,9 @@
 				{
 					"key": "Damage|#0",
 					"label": "Damage",
-					"kind": "equal",
-					"new": "50"
+					"kind": "changed",
+					"old": "50",
+					"new": "45"
 				},
 				{
 					"key": "AbilityCastRange|#0",
@@ -4503,7 +4597,11 @@
 					"new": "5m",
 					"postfix": "m"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+50</span> Damage and <span class=\"highlight\">+5m</span> Range",
+				"new": "<span class=\"highlight\">+45</span> Damage and <span class=\"highlight\">+5m</span> Range"
+			}
 		},
 		{
 			"tier": 2,
@@ -4589,21 +4687,27 @@
 				{
 					"key": "DPS|#0",
 					"label": "DPS",
-					"kind": "equal",
-					"new": 40,
+					"kind": "changed",
+					"old": 40,
+					"new": 35,
 					"prefix": "",
 					"postfix": ""
 				},
 				{
 					"key": "DPS|EAddToScale#0",
 					"label": "DPS",
-					"kind": "equal",
-					"new": 0.4,
+					"kind": "changed",
+					"old": 0.4,
+					"new": 0.36,
 					"scaling": "ETechPower",
 					"prefix": "",
 					"postfix": ""
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+0.7s</span> Duration and <span class=\"highlight\">+40.0</span> Damage Per Second and increased scaling",
+				"new": "<span class=\"highlight\">+0.7s</span> Duration and <span class=\"highlight\">+35.0</span> Damage Per Second and increased scaling"
+			}
 		}
 	],
 	"Sweetest Lie": [
@@ -4667,8 +4771,9 @@
 				{
 					"key": "DamageAmpDuration|#0",
 					"label": "Damage Amp Duration",
-					"kind": "equal",
-					"new": "6"
+					"kind": "changed",
+					"old": "6",
+					"new": "8"
 				},
 				{
 					"key": "DamageAmpBuildDuration|#0",
@@ -4676,7 +4781,11 @@
 					"kind": "equal",
 					"new": "10"
 				}
-			]
+			],
+			"text": {
+				"old": "Gain Damage Amp over time, up to <span class=\"highlight\">18%</span>. Lingers for 6s",
+				"new": "Gain Damage Amp over time, up to <span class=\"highlight\">18%</span>. Lingers for 8s"
+			}
 		}
 	],
 	"Gloom Bombs": [
@@ -4816,10 +4925,15 @@
 				{
 					"key": "ImpactDamage|#0",
 					"label": "Impact Damage",
-					"kind": "equal",
-					"new": "60"
+					"kind": "changed",
+					"old": "60",
+					"new": "90"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+60</span> Damage & On Hero Hit: <span class=\"highlight\">50%</span> Cooldown Refund",
+				"new": "<span class=\"highlight\">+90</span> Damage & On Hero Hit: <span class=\"highlight\">50%</span> Cooldown Refund"
+			}
 		}
 	],
 	"The Mourning Comes": [
@@ -4857,18 +4971,28 @@
 					"kind": "equal",
 					"new": 54,
 					"scaling": "ETechPower"
+				},
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "added",
+					"new": "-2",
+					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+54.0 Damage</span>",
+				"new": "<span class=\"highlight\">+54.0 Damage</span> and <span class=\"highlight\">-2s</span> Charge Delay"
+			}
 		},
 		{
 			"tier": 3,
 			"rows": [
 				{
-					"key": "AbilityCooldownBetweenCharge|#0",
-					"label": "Ability Cooldown Between Charge",
-					"kind": "equal",
-					"new": "-3",
-					"postfix": "s"
+					"key": "WallRicochet|#0",
+					"label": "Wall Ricochet",
+					"kind": "added",
+					"new": "1"
 				},
 				{
 					"key": "Damage|EAddToScale#0",
@@ -4876,8 +5000,19 @@
 					"kind": "equal",
 					"new": 1,
 					"scaling": "ETechPower"
+				},
+				{
+					"key": "AbilityCooldownBetweenCharge|#0",
+					"label": "Ability Cooldown Between Charge",
+					"kind": "removed",
+					"old": "-3",
+					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">Improved damage scaling</span> and <span class=\"highlight\">-3s</span> Charge Delay",
+				"new": "<span class=\"highlight\">Improved damage scaling</span> <br><span class=\"highlight\">Ricochets once off walls, floors, and ceilings</span>"
+			}
 		}
 	],
 	"Rain of Arrows": [
@@ -5092,6 +5227,14 @@
 					"kind": "equal",
 					"new": 0.07,
 					"scaling": "ETechPower"
+				},
+				{
+					"key": "FullRageCurrentHealthDamagePct|EAddToScale#0",
+					"label": "Full Rage Current Health Damage Pct",
+					"kind": "added",
+					"new": 0.01,
+					"scaling": "ETechPower",
+					"postfix": "%"
 				}
 			]
 		}
@@ -5922,8 +6065,9 @@
 				{
 					"key": "Damage|#0",
 					"label": "Damage",
-					"kind": "equal",
-					"new": 36
+					"kind": "changed",
+					"old": 36,
+					"new": 45
 				},
 				{
 					"key": "Radius|#0",
@@ -5932,7 +6076,11 @@
 					"new": "1.5m",
 					"postfix": "m"
 				}
-			]
+			],
+			"text": {
+				"old": "+36.0 Damage and +1.5m Radius",
+				"new": "+45.0 Damage and +1.5m Radius"
+			}
 		},
 		{
 			"tier": 2,
@@ -5962,11 +6110,7 @@
 					"new": 0.9,
 					"scaling": "ETechPower"
 				}
-			],
-			"text": {
-				"old": "+1 Bounces and improved Spirit Scaling",
-				"new": "+1 Bounce and improved Spirit Scaling"
-			}
+			]
 		}
 	],
 	"The Cube": [
@@ -6381,17 +6525,23 @@
 				{
 					"key": "PulseDPS|#0",
 					"label": "Pulse DPS",
-					"kind": "equal",
-					"new": 40.5
+					"kind": "changed",
+					"old": 40.5,
+					"new": 50
 				},
 				{
 					"key": "AbilityCooldown|#0",
 					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": -30,
+					"kind": "changed",
+					"old": -30,
+					"new": -40,
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "+40.5 DPS<br>-30.0s Cooldown",
+				"new": "+50.0 DPS<br>-40.0s Cooldown"
+			}
 		},
 		{
 			"tier": 3,
@@ -6900,8 +7050,9 @@
 				{
 					"key": "FullChargeDamage|EAddToScale#0",
 					"label": "Full Charge Damage",
-					"kind": "equal",
-					"new": 0.5,
+					"kind": "changed",
+					"old": 0.5,
+					"new": 0.53,
 					"scaling": "ETechPower"
 				},
 				{
@@ -6951,8 +7102,9 @@
 				{
 					"key": "AbilityCastRange|#0",
 					"label": "Ability Cast Range",
-					"kind": "equal",
-					"new": "15m",
+					"kind": "changed",
+					"old": "15m",
+					"new": "8m",
 					"postfix": "m"
 				},
 				{
@@ -6974,7 +7126,11 @@
 					"new": "5",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "Alt-Cast to Grapple allies<br><span class=\"highlight\">+15m</span> Cast Range<br>Gains <span class=\"highlight\">1 extra charge</span>",
+				"new": "Alt-Cast to Grapple allies<br><span class=\"highlight\">+8m</span> Cast Range<br>Gains <span class=\"highlight\">1 extra charge</span>"
+			}
 		}
 	],
 	"Crimson Slash": [
@@ -7062,11 +7218,16 @@
 				{
 					"key": "AbilityCooldown|#0",
 					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": "-20",
+					"kind": "changed",
+					"old": "-20",
+					"new": "-30",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "+4m Move Speed and -20 Cooldown",
+				"new": "+4m Move Speed and -30 Cooldown"
+			}
 		},
 		{
 			"tier": 3,
@@ -9389,8 +9550,9 @@
 				{
 					"key": "IncomingDamagePercent|#0",
 					"label": "Incoming Damage Percent",
-					"kind": "equal",
-					"new": "15",
+					"kind": "changed",
+					"old": "15",
+					"new": "16",
 					"prefix": "{s:sign}",
 					"postfix": "%"
 				},
@@ -9401,7 +9563,11 @@
 					"new": "1m",
 					"postfix": "m"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+1m</span> Radius<br>Enemies take <span class=\"highlight\">+15%</span> Damage",
+				"new": "<span class=\"highlight\">+1m</span> Radius<br>Enemies take <span class=\"highlight\">+16%</span> Damage"
+			}
 		}
 	],
 	"Shocking Reanimation": [
@@ -9887,8 +10053,9 @@
 				{
 					"key": "WallImpactDamage|#0",
 					"label": "Wall Impact Damage",
-					"kind": "equal",
-					"new": "75"
+					"kind": "changed",
+					"old": "75",
+					"new": "90"
 				},
 				{
 					"key": "WallImpactDamage|EAddToScale#0",
@@ -9897,7 +10064,11 @@
 					"new": 0.6,
 					"scaling": "ETechPower"
 				}
-			]
+			],
+			"text": {
+				"old": "+25m Cast Range<br>+75 Damage on wall impact",
+				"new": "+25m Cast Range<br>+90 Damage on wall impact"
+			}
 		},
 		{
 			"tier": 3,
@@ -9912,11 +10083,16 @@
 				{
 					"key": "AbilityCooldown|EAddToBase#0",
 					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": "-15",
+					"kind": "changed",
+					"old": "-15",
+					"new": "-18",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "-15s Cooldown and 1.25s <svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_4922_2543)\">\n<path d=\"M24.0093 49.1694C23.9893 49.9594 23.4473 50.2273 22.5893 49.7978C20.8094 48.9074 19.0274 48.017 17.2895 47.0517C16.5055 46.6164 15.8816 46.5868 15.0796 47.0438C13.4097 47.9953 11.6837 48.8523 9.95379 49.6934C9.5798 49.8747 8.96582 50.0067 8.68583 49.8254C8.43584 49.6639 8.37385 49.0217 8.43184 48.6218C8.71983 46.6439 9.04582 44.67 9.42181 42.708C9.5478 42.0461 9.40381 41.5831 8.91983 41.13C7.44788 39.7491 5.98794 38.3563 4.56599 36.9301C4.274 36.6385 3.90601 36.016 4.02601 35.821C4.236 35.4841 4.78198 35.2438 5.22197 35.1709C7.22389 34.834 9.24581 34.6154 11.2397 34.249C11.7037 34.1623 12.2517 33.7466 12.4817 33.331C13.4197 31.6329 14.2236 29.8638 15.1356 28.1519C15.3616 27.7284 15.8056 27.4191 16.1496 27.0566C16.5175 27.4329 16.9975 27.752 17.2355 28.1953C18.1195 29.8481 18.9474 31.5304 19.7474 33.2246C20.0614 33.8924 20.5014 34.2135 21.2494 34.3061C23.2313 34.5504 25.2072 34.8419 27.1751 35.1709C27.5871 35.2398 28.1671 35.4703 28.2871 35.7737C28.3991 36.0534 28.0931 36.6228 27.8091 36.9084C26.4812 38.246 25.1372 39.5698 23.7213 40.8148C22.9473 41.4964 22.7793 42.1879 22.9913 43.165C23.3733 44.9261 23.6193 46.7149 23.9213 48.4918C23.9593 48.7183 23.9813 48.9468 24.0113 49.1753L24.0093 49.1694Z\" fill=\"white\"/>\n<path d=\"M29.7871 10C34.5509 10.0374 39.0187 11.1406 43.1186 13.5696C44.4285 14.3457 44.5445 15.8055 43.3646 16.5048C42.6346 16.9382 41.9706 16.7018 41.3026 16.3157C37.7388 14.2591 33.8689 13.278 29.7591 13.3135C24.1913 13.3627 19.2115 14.9978 15.1456 18.9003C13.4157 20.5609 12.2117 22.5388 11.5398 24.8279C11.3378 25.5174 11.0438 26.1261 10.2398 26.2975C8.86386 26.593 7.91189 25.5154 8.30388 24.0497C8.94986 21.6287 10.1358 19.4755 11.8057 17.5981C15.9336 12.9549 21.2594 10.7131 27.3932 10.1202C28.1871 10.0433 28.9891 10.0374 29.7891 10H29.7871Z\" fill=\"white\"/>\n<path d=\"M45.7304 29.3611C45.9004 28.4175 46.0624 27.4128 46.2684 26.4199C46.4144 25.7147 46.2724 25.1769 45.6784 24.6883C44.9385 24.0835 44.2705 23.3901 43.5985 22.7085C43.0565 22.1589 43.1725 21.7905 43.9465 21.6546C44.9925 21.4714 46.0624 21.4064 47.0944 21.17C47.5064 21.0754 47.9704 20.7386 48.1884 20.382C48.7343 19.4876 49.1423 18.5125 49.6283 17.5807C49.9703 16.9247 50.3563 16.9661 50.6843 17.5965C51.1822 18.5578 51.6182 19.5546 52.1662 20.4884C52.3482 20.7977 52.7662 21.0853 53.1242 21.1601C54.1621 21.3788 55.2261 21.4655 56.272 21.6487C56.54 21.696 56.914 21.8555 56.99 22.0545C57.056 22.2278 56.812 22.5706 56.628 22.7696C56.1561 23.2759 55.6901 23.8117 55.1301 24.2076C54.0401 24.9799 53.7581 25.9294 54.1381 27.1705C54.3381 27.8245 54.4281 28.5159 54.5181 29.1956C54.6321 30.0565 54.3761 30.2436 53.5941 29.8634C52.7002 29.43 51.8562 28.8824 50.9323 28.5238C50.4763 28.3485 49.8343 28.3406 49.3823 28.5179C48.4303 28.8902 47.5564 29.4536 46.6304 29.8969C45.9864 30.2042 45.7244 30.0427 45.7304 29.3611Z\" fill=\"white\"/>\n<path d=\"M33.2129 47.0647C32.251 46.9781 31.551 46.4147 31.439 45.5636C31.321 44.6712 31.875 43.966 32.8669 43.7532C34.5229 43.3986 36.2168 43.1701 37.8267 42.6698C42.3906 41.2494 45.9724 38.59 48.1864 34.3053C48.7203 33.2691 49.6843 32.946 50.5783 33.4307C51.4122 33.8837 51.6402 34.8175 51.1242 35.8242C48.2763 41.3716 43.5365 44.5471 37.6087 46.1802C36.1728 46.5762 34.6809 46.7732 33.2149 47.0628L33.2129 47.0647Z\" fill=\"white\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_4922_2543\">\n<rect width=\"53\" height=\"40\" fill=\"white\" transform=\"translate(4 10)\"/>\n</clipPath>\n</defs>\n</svg>\n<span class=\"inline-attribute-label Stun\">stun</span> on wall impact",
+				"new": "-18s Cooldown and 1.25s <svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_4922_2543)\">\n<path d=\"M24.0093 49.1694C23.9893 49.9594 23.4473 50.2273 22.5893 49.7978C20.8094 48.9074 19.0274 48.017 17.2895 47.0517C16.5055 46.6164 15.8816 46.5868 15.0796 47.0438C13.4097 47.9953 11.6837 48.8523 9.95379 49.6934C9.5798 49.8747 8.96582 50.0067 8.68583 49.8254C8.43584 49.6639 8.37385 49.0217 8.43184 48.6218C8.71983 46.6439 9.04582 44.67 9.42181 42.708C9.5478 42.0461 9.40381 41.5831 8.91983 41.13C7.44788 39.7491 5.98794 38.3563 4.56599 36.9301C4.274 36.6385 3.90601 36.016 4.02601 35.821C4.236 35.4841 4.78198 35.2438 5.22197 35.1709C7.22389 34.834 9.24581 34.6154 11.2397 34.249C11.7037 34.1623 12.2517 33.7466 12.4817 33.331C13.4197 31.6329 14.2236 29.8638 15.1356 28.1519C15.3616 27.7284 15.8056 27.4191 16.1496 27.0566C16.5175 27.4329 16.9975 27.752 17.2355 28.1953C18.1195 29.8481 18.9474 31.5304 19.7474 33.2246C20.0614 33.8924 20.5014 34.2135 21.2494 34.3061C23.2313 34.5504 25.2072 34.8419 27.1751 35.1709C27.5871 35.2398 28.1671 35.4703 28.2871 35.7737C28.3991 36.0534 28.0931 36.6228 27.8091 36.9084C26.4812 38.246 25.1372 39.5698 23.7213 40.8148C22.9473 41.4964 22.7793 42.1879 22.9913 43.165C23.3733 44.9261 23.6193 46.7149 23.9213 48.4918C23.9593 48.7183 23.9813 48.9468 24.0113 49.1753L24.0093 49.1694Z\" fill=\"white\"/>\n<path d=\"M29.7871 10C34.5509 10.0374 39.0187 11.1406 43.1186 13.5696C44.4285 14.3457 44.5445 15.8055 43.3646 16.5048C42.6346 16.9382 41.9706 16.7018 41.3026 16.3157C37.7388 14.2591 33.8689 13.278 29.7591 13.3135C24.1913 13.3627 19.2115 14.9978 15.1456 18.9003C13.4157 20.5609 12.2117 22.5388 11.5398 24.8279C11.3378 25.5174 11.0438 26.1261 10.2398 26.2975C8.86386 26.593 7.91189 25.5154 8.30388 24.0497C8.94986 21.6287 10.1358 19.4755 11.8057 17.5981C15.9336 12.9549 21.2594 10.7131 27.3932 10.1202C28.1871 10.0433 28.9891 10.0374 29.7891 10H29.7871Z\" fill=\"white\"/>\n<path d=\"M45.7304 29.3611C45.9004 28.4175 46.0624 27.4128 46.2684 26.4199C46.4144 25.7147 46.2724 25.1769 45.6784 24.6883C44.9385 24.0835 44.2705 23.3901 43.5985 22.7085C43.0565 22.1589 43.1725 21.7905 43.9465 21.6546C44.9925 21.4714 46.0624 21.4064 47.0944 21.17C47.5064 21.0754 47.9704 20.7386 48.1884 20.382C48.7343 19.4876 49.1423 18.5125 49.6283 17.5807C49.9703 16.9247 50.3563 16.9661 50.6843 17.5965C51.1822 18.5578 51.6182 19.5546 52.1662 20.4884C52.3482 20.7977 52.7662 21.0853 53.1242 21.1601C54.1621 21.3788 55.2261 21.4655 56.272 21.6487C56.54 21.696 56.914 21.8555 56.99 22.0545C57.056 22.2278 56.812 22.5706 56.628 22.7696C56.1561 23.2759 55.6901 23.8117 55.1301 24.2076C54.0401 24.9799 53.7581 25.9294 54.1381 27.1705C54.3381 27.8245 54.4281 28.5159 54.5181 29.1956C54.6321 30.0565 54.3761 30.2436 53.5941 29.8634C52.7002 29.43 51.8562 28.8824 50.9323 28.5238C50.4763 28.3485 49.8343 28.3406 49.3823 28.5179C48.4303 28.8902 47.5564 29.4536 46.6304 29.8969C45.9864 30.2042 45.7244 30.0427 45.7304 29.3611Z\" fill=\"white\"/>\n<path d=\"M33.2129 47.0647C32.251 46.9781 31.551 46.4147 31.439 45.5636C31.321 44.6712 31.875 43.966 32.8669 43.7532C34.5229 43.3986 36.2168 43.1701 37.8267 42.6698C42.3906 41.2494 45.9724 38.59 48.1864 34.3053C48.7203 33.2691 49.6843 32.946 50.5783 33.4307C51.4122 33.8837 51.6402 34.8175 51.1242 35.8242C48.2763 41.3716 43.5365 44.5471 37.6087 46.1802C36.1728 46.5762 34.6809 46.7732 33.2149 47.0628L33.2129 47.0647Z\" fill=\"white\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_4922_2543\">\n<rect width=\"53\" height=\"40\" fill=\"white\" transform=\"translate(4 10)\"/>\n</clipPath>\n</defs>\n</svg>\n<span class=\"inline-attribute-label Stun\">stun</span> on wall impact"
+			}
 		}
 	],
 	"Call Bell": [
@@ -10202,15 +10378,17 @@
 				{
 					"key": "MaxHealthBuffPct|#0",
 					"label": "Max Health Buff Pct",
-					"kind": "equal",
-					"new": 10,
+					"kind": "changed",
+					"old": 10,
+					"new": 15,
 					"postfix": "%"
 				},
 				{
 					"key": "MaxHealthBuffDuration|#0",
 					"label": "Max Health Buff Duration",
-					"kind": "equal",
-					"new": 16,
+					"kind": "changed",
+					"old": 16,
+					"new": 20,
 					"postfix": "s"
 				},
 				{
@@ -10474,8 +10652,9 @@
 				{
 					"key": "AmpDamagePercent|#0",
 					"label": "Amp Damage Percent",
-					"kind": "equal",
-					"new": 11,
+					"kind": "changed",
+					"old": 11,
+					"new": 12,
 					"postfix": "%"
 				}
 			]
@@ -10513,8 +10692,9 @@
 				{
 					"key": "AbilityDuration|#0",
 					"label": "Ability Duration",
-					"kind": "equal",
-					"new": "2.5",
+					"kind": "changed",
+					"old": "2.5",
+					"new": "2.75",
 					"postfix": "s"
 				},
 				{
@@ -10523,7 +10703,11 @@
 					"kind": "equal",
 					"new": "1"
 				}
-			]
+			],
+			"text": {
+				"old": "+2.5s Duration and +1 Max Target.",
+				"new": "+2.75s Duration and +1 Max Target."
+			}
 		}
 	],
 	"Opera Gun": [
@@ -11277,11 +11461,16 @@
 				{
 					"key": "StunDuration|#0",
 					"label": "Stun Duration",
-					"kind": "equal",
-					"new": "0.4",
+					"kind": "changed",
+					"old": "0.4",
+					"new": "0.6",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">-25%</span> Melee Resist and <span class=\"highlight\">+0.4s</span> Stun Duration",
+				"new": "<span class=\"highlight\">-25%</span> Melee Resist and <span class=\"highlight\">+0.6s</span> Immobilize Duration"
+			}
 		},
 		{
 			"tier": 3,
@@ -11607,11 +11796,15 @@
 				{
 					"key": "SummonFrequency|#0",
 					"label": "Summon Frequency",
-					"kind": "equal",
-					"new": "-0.3",
+					"kind": "removed",
+					"old": "-0.3",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+10s</span> Duration<br><span class=\"highlight\">-0.3s</span> Time To Spawn",
+				"new": "<span class=\"highlight\">+10s</span> Duration"
+			}
 		},
 		{
 			"tier": 3,
@@ -11622,8 +11815,19 @@
 					"kind": "equal",
 					"new": "5",
 					"postfix": "%"
+				},
+				{
+					"key": "SummonFrequency|#0",
+					"label": "Summon Frequency",
+					"kind": "added",
+					"new": "-0.3",
+					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "On Death: Deal <span class=\"highlight\">+5%</span> Current Health as Damage",
+				"new": "On Death: Deal <span class=\"highlight\">+5%</span> Current Health as Damage<br><span class=\"highlight\">-0.3s</span> Time To Spawn"
+			}
 		}
 	],
 	"Essence Theft": [
@@ -12311,13 +12515,18 @@
 				{
 					"key": "HealthRegen|EAddToScale#0",
 					"label": "Health Regen",
-					"kind": "equal",
-					"new": "0.25",
+					"kind": "changed",
+					"old": "0.25",
+					"new": "0.15",
 					"scaling": "ETechPower",
 					"prefix": "{s:sign}",
 					"postfix": ""
 				}
-			]
+			],
+			"text": {
+				"old": "On Cast: Gain 15 Health Regen for 4s, refreshed on pickup",
+				"new": "While Drawing: Gain 15 Health Regen, refreshed for 4s on pickup"
+			}
 		},
 		{
 			"tier": 2,
@@ -12345,8 +12554,9 @@
 				{
 					"key": "StunDuration|#0",
 					"label": "Stun Duration",
-					"kind": "equal",
-					"new": "0.35",
+					"kind": "changed",
+					"old": "0.35",
+					"new": "0.45",
 					"postfix": "s"
 				},
 				{
@@ -12357,7 +12567,11 @@
 					"prefix": "{s:sign}",
 					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "+20% Move Speed<br>-11s Cooldown<br>+0.35s Stun Duration",
+				"new": "+20% Move Speed<br>-11s Cooldown<br>+0.45s Stun Duration"
+			}
 		}
 	],
 	"Abstract Landscape": [
@@ -12414,10 +12628,14 @@
 				{
 					"key": "DestroyOnDamage|#0",
 					"label": "Destroy On Damage",
-					"kind": "equal",
-					"new": "-1"
+					"kind": "removed",
+					"old": "-1"
 				}
-			]
+			],
+			"text": {
+				"old": "+1.25s Silence Duration<br>+4s Ability Duration<br>Ink is no longer destroyed",
+				"new": "+1.25s Silence Duration<br>+4s Ability Duration"
+			}
 		}
 	],
 	"Bunko-Night Special": [
@@ -12702,12 +12920,17 @@
 				{
 					"key": "FadingSlowPercent|#0",
 					"label": "Fading Slow Percent",
-					"kind": "equal",
-					"new": "15",
+					"kind": "changed",
+					"old": "15",
+					"new": "25",
 					"prefix": "-",
 					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "+5m Move Distance<br>+15% Fading Slow",
+				"new": "+5m Move Distance<br>+25% Fading Slow"
+			}
 		},
 		{
 			"tier": 2,
@@ -12733,15 +12956,17 @@
 				{
 					"key": "TechArmorDamageReductionPerStack|#0",
 					"label": "Tech Armor Damage Reduction Per Stack",
-					"kind": "equal",
-					"new": "-2.5",
+					"kind": "changed",
+					"old": "-2.5",
+					"new": "-5",
 					"postfix": "%"
 				},
 				{
 					"key": "MaxStacks|#0",
 					"label": "Max Stacks",
-					"kind": "equal",
-					"new": "10"
+					"kind": "changed",
+					"old": "10",
+					"new": "5"
 				},
 				{
 					"key": "StackDuration|#0",
@@ -12757,7 +12982,11 @@
 					"new": "1",
 					"postfix": ""
 				}
-			]
+			],
+			"text": {
+				"old": "+1 Square Range<br>Squares reduce Spirit Resist by -2.5%, stacking 10 times",
+				"new": "+1 Square Range<br>Impacts reduce Spirit Resist by -5%, stacking 5 times"
+			}
 		}
 	],
 	"Kingside Knight": [
@@ -12854,8 +13083,9 @@
 				{
 					"key": "AbilityCooldown|EAddToBase#0",
 					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": "-12",
+					"kind": "changed",
+					"old": "-12",
+					"new": "-10",
 					"postfix": "s"
 				},
 				{
@@ -12871,7 +13101,11 @@
 					"kind": "equal",
 					"new": "1"
 				}
-			]
+			],
+			"text": {
+				"old": "+1 Wall Reflects<br>-12s Cooldown<br>+0.5s Immobilize Duration",
+				"new": "+1 Wall Reflects<br>-10s Cooldown<br>+0.5s Immobilize Duration"
+			}
 		}
 	],
 	"Develop Queen": [
@@ -12893,15 +13127,9 @@
 				{
 					"key": "CheckmateThreshold|#0",
 					"label": "Checkmate Threshold",
-					"kind": "equal",
-					"new": "200"
-				},
-				{
-					"key": "CheckmateThreshold|EAddToScale#0",
-					"label": "Checkmate Threshold",
-					"kind": "equal",
-					"new": "5",
-					"scaling": "ELevelUpBoons"
+					"kind": "changed",
+					"old": "200",
+					"new": "150"
 				},
 				{
 					"key": "SlowPercent|#0",
@@ -12910,8 +13138,19 @@
 					"new": "15",
 					"prefix": "-",
 					"postfix": "%"
+				},
+				{
+					"key": "CheckmateThreshold|EAddToScale#0",
+					"label": "Checkmate Threshold",
+					"kind": "removed",
+					"old": "5",
+					"scaling": "ELevelUpBoons"
 				}
-			]
+			],
+			"text": {
+				"old": "+15% Slow. Checkmates heroes below 200 health, executing them.",
+				"new": "+15% Slow<br>+150 Checkmate Threshold"
+			}
 		},
 		{
 			"tier": 3,
@@ -13287,10 +13526,11 @@
 			"tier": 3,
 			"rows": [
 				{
-					"key": "ChannelDamageImmune|#0",
-					"label": "Channel Damage Immune",
-					"kind": "equal",
-					"new": "1"
+					"key": "DamageResistPctWhileChanneling|#0",
+					"label": "Damage Resist Pct While Channeling",
+					"kind": "added",
+					"new": "50",
+					"postfix": "%"
 				},
 				{
 					"key": "AbilityChannelTime|#0",
@@ -13307,8 +13547,18 @@
 					"scaling": "ETechPower",
 					"prefix": "",
 					"postfix": ""
+				},
+				{
+					"key": "ChannelDamageImmune|#0",
+					"label": "Channel Damage Immune",
+					"kind": "removed",
+					"old": "1"
 				}
-			]
+			],
+			"text": {
+				"old": "+3.0s Channel Time<br>+0.5 Spirit Scaling<br>Immune to damage while channeling",
+				"new": "+3.0s Channel Time<br>+0.5 Spirit Scaling<br>Takes 50% Reduced Damage while channeling"
+			}
 		}
 	],
 	"Healing Needles": [
@@ -13336,10 +13586,15 @@
 				{
 					"key": "HealRegen|#0",
 					"label": "Heal Regen",
-					"kind": "equal",
-					"new": "20"
+					"kind": "changed",
+					"old": "20",
+					"new": "16"
 				}
-			]
+			],
+			"text": {
+				"old": "+20 Heal Per Shot<br>Shots restore 0.6 stamina",
+				"new": "+16 Heal Per Shot<br>Shots restore 0.6 stamina"
+			}
 		},
 		{
 			"tier": 3,
@@ -13406,7 +13661,11 @@
 					"prefix": "{s:sign}",
 					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "+1s Duration<br>+20% Healing Effectiveness",
+				"new": "+1s Duration<br>+20% Incoming Healing"
+			}
 		},
 		{
 			"tier": 3,
@@ -13414,8 +13673,9 @@
 				{
 					"key": "RushTimeScaleBonusPercent|#0",
 					"label": "Rush Time Scale Bonus Percent",
-					"kind": "equal",
-					"new": "15",
+					"kind": "changed",
+					"old": "15",
+					"new": "20",
 					"prefix": "+",
 					"postfix": "%"
 				},
@@ -13425,7 +13685,11 @@
 					"kind": "equal",
 					"new": "1"
 				}
-			]
+			],
+			"text": {
+				"old": "+15% Rush Speed<br>Dispels non-ult debuffs",
+				"new": "+20% Rush Speed<br>Dispels non-ult debuffs"
+			}
 		}
 	],
 	"Sovereign's Decree": [
@@ -13522,8 +13786,9 @@
 				{
 					"key": "DamagePerShrapnel|#0",
 					"label": "Damage Per Shrapnel",
-					"kind": "equal",
-					"new": "70"
+					"kind": "changed",
+					"old": "70",
+					"new": "60"
 				}
 			]
 		},
@@ -13539,8 +13804,9 @@
 				{
 					"key": "BigExplosionDamage|#0",
 					"label": "Big Explosion Damage",
-					"kind": "equal",
-					"new": "300"
+					"kind": "changed",
+					"old": "300",
+					"new": "275"
 				},
 				{
 					"key": "BigExplosionDamage|EAddToScale#0",

@@ -2785,7 +2785,7 @@
 			"signature4": "ability_ult_combo"
 		},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.0847,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.0881,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 65,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -2794,7 +2794,7 @@
 			"MODIFIER_VALUE_BULLET_ARMOR_DAMAGE_RESIST": 0,
 			"MODIFIER_VALUE_TECH_RESIST": 0,
 			"MODIFIER_VALUE_TECH_DAMAGE_MULTIPLIER": 0,
-			"MODIFIER_VALUE_TECH_POWER": 1.1,
+			"MODIFIER_VALUE_TECH_POWER": 0.6,
 			"MODIFIER_VALUE_OUT_OF_COMBAT_HEALTH_REGEN": 0
 		},
 		"colors": {
@@ -2962,7 +2962,7 @@
 		},
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.165,
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.24,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.228,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 46,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
@@ -4017,7 +4017,7 @@
 		},
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.36,
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 1.44,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 1.512,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 45,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
@@ -7477,7 +7477,7 @@
 			"signature4": "ability_bookworm_knightcharge"
 		},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.52,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.61,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 31,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.2,
@@ -8843,7 +8843,7 @@
 		},
 		"starting_stats": {
 			"max_move_speed": {
-				"value": 7,
+				"value": 6.7,
 				"display_stat_name": "EMaxMoveSpeed"
 			},
 			"sprint_speed": {
@@ -8957,7 +8957,7 @@
 			"signature4": "ability_necro_gravestone"
 		},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.054,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.052,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 35,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -9591,7 +9591,7 @@
 				"display_stat_name": "EStamina"
 			},
 			"base_health_regen": {
-				"value": 2.5,
+				"value": 3,
 				"display_stat_name": "EBaseHealthRegen"
 			},
 			"stamina_regen_per_second": {
@@ -10322,7 +10322,7 @@
 			"signature4": "ability_ratking_standard_bearer"
 		},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.18,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.144,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 50,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -11082,7 +11082,7 @@
 		"scaling_stats": {
 			"ETechArmorDamageReduction": {
 				"scaling_stat": "ETechPower",
-				"scale": 0.1
+				"scale": 0.07
 			}
 		}
 	}
