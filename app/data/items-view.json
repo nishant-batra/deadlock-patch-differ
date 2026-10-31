@@ -14939,7 +14939,7 @@
 					"postvalue_label": "Weapon Damage"
 				},
 				"AbilityLifestealPercentHero": {
-					"value": "13",
+					"value": "15",
 					"provided_property_type": "MODIFIER_VALUE_TECH_LIFESTEAL",
 					"css_class": "healing",
 					"scale_function": {
