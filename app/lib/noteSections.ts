@@ -58,16 +58,30 @@ function headingName(chunkHtml: string): string | null {
 	return inner.length > 0 && inner.length <= MAX_HEADING ? inner : null;
 }
 
+/**
+ * The heading name if this chunk is a short `Items:` line - the Halloween 2026
+ * note heads its sections as `<b>Items:</b>` instead of `\[ Items ]`. A `- `
+ * line is a change, never a heading.
+ */
+function colonHeadingName(chunkHtml: string): string | null {
+	const text = stripTags(chunkHtml).trim();
+	if (text.startsWith("-") || !text.endsWith(":")) return null;
+	const inner = text.slice(0, -1).trim();
+	return inner.length > 0 && inner.length <= MAX_HEADING ? inner : null;
+}
+
 /** Sections in document order. An unheaded note yields one `name: null` entry. */
 export function splitSections(html: string): NoteSection[] {
 	const sections: NoteSection[] = [];
 	let current: NoteSection = { name: null, html: "" };
 
 	for (const chunk of chunks(html)) {
-		const name = headingName(chunk);
+		const bracketed = headingName(chunk);
+		const name = bracketed ?? colonHeadingName(chunk);
 		if (name) {
 			if (current.name !== null || current.html.trim()) sections.push(current);
-			current = { name, html: "" };
+			// `\[ General ]` is markup noise; a bold `General:` line reads fine as is.
+			current = { name, html: bracketed ? "" : chunk };
 		} else {
 			current.html += chunk;
 		}

@@ -224,6 +224,14 @@
 					"label": "Spirit Power",
 					"old": "6",
 					"new": "8"
+				},
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "AbilityLifestealPercentHero",
+					"label": "Spirit Lifesteal",
+					"old": "13",
+					"new": "15"
 				}
 			]
 		},

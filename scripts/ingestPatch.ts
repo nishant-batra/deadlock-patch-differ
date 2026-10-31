@@ -450,10 +450,18 @@ async function ingest() {
 		].filter(Boolean) as string[],
 	);
 	const buildNote = pickNotes(patches, version_datetime, knownNames).balance;
-	const buildGeneral = generalOf(
-		patches.find(({ link }) => link === buildNote?.link),
-		knownNames,
-	);
+	// A hotfix that ships before Valve posts the patch's note matches that same
+	// note - it stays the patch's, so the hotfix carries no note of its own.
+	const ownNote =
+		!hotfixTo ||
+		buildNote?.link !==
+			pickNotes(patches, patchWindow.startedAt, knownNames).balance?.link;
+	const buildGeneral = ownNote
+		? generalOf(
+				patches.find(({ link }) => link === buildNote?.link),
+				knownNames,
+			)
+		: undefined;
 
 	let hotfix = readJsonOr<Hotfix | null>("hotfix.json", null);
 	if (newPatch) {
@@ -477,7 +485,7 @@ async function ingest() {
 				client_version,
 			],
 			builtAt: version_datetime,
-			note: buildNote,
+			note: ownNote ? buildNote : hotfix?.note,
 			// A hotfix note with nothing but balance lines keeps the last one's.
 			general: buildGeneral ?? hotfix?.general,
 			...mergeHotfix(
