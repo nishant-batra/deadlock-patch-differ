@@ -16,6 +16,8 @@ export default function AbilityPopover({
 	tiers,
 	anchorRef,
 	onClose,
+	onPrev,
+	onNext,
 }: {
 	ability: Item;
 	changes: Change[];
@@ -23,8 +25,12 @@ export default function AbilityPopover({
 	/** The button that opened this popover - positioning is measured from it. */
 	anchorRef: React.RefObject<HTMLElement | null>;
 	onClose: () => void;
+	/** Open the hero's previous / next changed ability; omitted at either end. */
+	onPrev?: () => void;
+	onNext?: () => void;
 }) {
-	const ref = useDismissablePopover(anchorRef, onClose);
+	const ref = useDismissablePopover(anchorRef, onClose, onPrev, onNext);
+	const arrowClass = "-mt-1 px-1 text-gray-400 text-xl leading-none hover:text-white";
 
 	// Until the layout effect sets the position variables, the `0` fallbacks
 	// park the dialog at the viewport's corner rather than off-screen: React
@@ -44,14 +50,36 @@ export default function AbilityPopover({
 					changes={changes}
 					tiers={tiers}
 					headerEnd={
-						<button
-							type="button"
-							onClick={onClose}
-							aria-label="Close"
-							className="-mt-1 px-1 text-gray-400 text-xl leading-none hover:text-white"
-						>
-							&times;
-						</button>
+						<div className="flex">
+							{onPrev && (
+								<button
+									type="button"
+									onClick={onPrev}
+									aria-label="Previous changed ability"
+									className={arrowClass}
+								>
+									&lsaquo;
+								</button>
+							)}
+							{onNext && (
+								<button
+									type="button"
+									onClick={onNext}
+									aria-label="Next changed ability"
+									className={arrowClass}
+								>
+									&rsaquo;
+								</button>
+							)}
+							<button
+								type="button"
+								onClick={onClose}
+								aria-label="Close"
+								className={arrowClass}
+							>
+								&times;
+							</button>
+						</div>
 					}
 				>
 					<AbilityHiddenChanges ability={ability} changes={changes} />

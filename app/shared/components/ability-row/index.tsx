@@ -30,19 +30,29 @@ export default function AbilityRow({
 		anchorRefFor,
 	} = openState ?? ownState;
 
+	// The popover's prev/next arrows step through changed abilities only; an
+	// arrow is dropped at either end, and an unchanged open ability gets none.
+	const changedIndexes = abilities.flatMap(({ changes, tiers }, index) =>
+		changes.length > 0 || hasTierChanges(tiers) ? [index] : [],
+	);
+	const position =
+		openAbility === null ? -1 : changedIndexes.indexOf(openAbility);
+	const prev = position > 0 ? changedIndexes[position - 1] : undefined;
+	const next = position >= 0 ? changedIndexes[position + 1] : undefined;
+
 	return (
 		<ul className="flex list-none gap-2 p-2.5">
-			{abilities.map(({ ability, changes, tiers }) => {
-				const isOpen = openAbility === ability.class_name;
+			{abilities.map(({ ability, changes, tiers }, index) => {
+				const isOpen = openAbility === index;
 				const isChanged = changes.length > 0 || hasTierChanges(tiers);
 				return (
 					<li key={ability.id}>
 						<button
-							ref={setAnchorRef(ability.class_name)}
+							ref={setAnchorRef(index)}
 							type="button"
 							aria-expanded={isOpen}
 							title={ability.name}
-							onClick={() => toggleAbility(ability.class_name)}
+							onClick={() => toggleAbility(index)}
 							className="block"
 						>
 							<CutFrame
@@ -71,8 +81,14 @@ export default function AbilityRow({
 								ability={ability}
 								changes={changes}
 								tiers={tiers}
-								anchorRef={anchorRefFor(ability.class_name)}
+								anchorRef={anchorRefFor(index)}
 								onClose={closeAbility}
+								onPrev={
+									prev === undefined ? undefined : () => toggleAbility(prev)
+								}
+								onNext={
+									next === undefined ? undefined : () => toggleAbility(next)
+								}
 							/>
 						)}
 					</li>

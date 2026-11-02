@@ -12,8 +12,8 @@ export default function WordingLine({
 	onOpen,
 }: {
 	wording: WordingEntry[];
-	openAbility: string | null;
-	onOpen: (className: string) => void;
+	openAbility: number | null;
+	onOpen: (index: number) => void;
 }) {
 	if (wording.length === 0) return null;
 	return (
@@ -22,13 +22,13 @@ export default function WordingLine({
 				Wording
 			</span>
 			<span>
-				{wording.map(({ ability: { id, name, class_name } }, index) => (
+				{wording.map(({ ability: { id, name }, index }, position) => (
 					<Fragment key={id}>
-						{index > 0 && ", "}
+						{position > 0 && ", "}
 						<button
 							type="button"
-							aria-expanded={openAbility === class_name}
-							onClick={() => onOpen(class_name)}
+							aria-expanded={openAbility === index}
+							onClick={() => onOpen(index)}
 							className="text-gray-300 underline decoration-white/20 underline-offset-2 hover:text-white"
 						>
 							{name}

@@ -28,15 +28,19 @@ const MARGIN = 8;
 export function useDismissablePopover(
 	anchorRef: React.RefObject<HTMLElement | null>,
 	onClose: () => void,
+	onPrev?: () => void,
+	onNext?: () => void,
 ) {
 	const ref = useRef<HTMLDivElement>(null);
 
-	// Read via a ref rather than depending on `onClose` directly: its identity
-	// changes every render (`useOpenAbility` recreates it each time), which
-	// would otherwise re-run this effect - and re-register its listeners - on
-	// every render regardless of what React Compiler decides to memoize.
+	// Read via a ref rather than depending on the callbacks directly: their
+	// identity changes every render (`useOpenAbility` recreates them each time),
+	// which would otherwise re-run this effect - and re-register its listeners -
+	// on every render regardless of what React Compiler decides to memoize.
 	const onCloseRef = useRef(onClose);
 	onCloseRef.current = onClose;
+	const stepRef = useRef({ onPrev, onNext });
+	stepRef.current = { onPrev, onNext };
 
 	// `place()` reads `anchorRef.current` and `onCloseRef.current` fresh on
 	// every call rather than capturing them, so this is correctly mount-only
@@ -76,6 +80,8 @@ export function useDismissablePopover(
 
 		const onKey = (event: KeyboardEvent) => {
 			if (event.key === "Escape") onCloseRef.current();
+			if (event.key === "ArrowLeft") stepRef.current.onPrev?.();
+			if (event.key === "ArrowRight") stepRef.current.onNext?.();
 		};
 		const onPointer = (event: MouseEvent) => {
 			if (!ref.current?.contains(event.target as Node)) onCloseRef.current();

@@ -4,7 +4,8 @@ import type { DeltaRow } from "#/shared/components/stat-delta";
 import { isNegativeHeroStat, labelForStatKey } from "#/shared/utils/statLabels";
 import type { AbilityChange, Change, Item } from "#/types";
 
-export type WordingEntry = { ability: Item };
+/** `index` is the ability's place in the hero's ability row - what opens its popover. */
+export type WordingEntry = { ability: Item; index: number };
 
 const isTextChange = ({ path }: Change) => path.at(-1) === "loc_string";
 
@@ -31,7 +32,7 @@ const isTierRewording = ({ text, rows }: TierDiff) =>
 export function abilityWording(abilities: AbilityChange[]): WordingEntry[] {
 	const wording: WordingEntry[] = [];
 
-	for (const { ability, changes, tiers } of abilities) {
+	for (const [index, { ability, changes, tiers }] of abilities.entries()) {
 		const hasWording =
 			changes.some(isTextChange) || tiers.some(isTierRewording);
 		const hasOther = changes.some(
@@ -42,7 +43,7 @@ export function abilityWording(abilities: AbilityChange[]): WordingEntry[] {
 				!isTierCovered(change),
 		);
 
-		if (hasWording || hasOther) wording.push({ ability });
+		if (hasWording || hasOther) wording.push({ ability, index });
 	}
 
 	return wording;

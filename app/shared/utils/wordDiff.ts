@@ -14,10 +14,12 @@ export type WordDiffOp = { op: "equal" | "insert" | "delete"; text: string };
 
 // A "word" keeps %, apostrophes and internal hyphens so "non-ultimate",
 // "self-cast" and "150%" stay single tokens, and a leading sign so "+1m" ->
-// "+2m" swaps the whole bonus rather than keeping a lone "+". Everything else is either a
+// "+2m" swaps the whole bonus rather than keeping a lone "+". A decimal point
+// between digits stays inside the word, so "1.5s" -> "2.5s" is one swap, while a
+// sentence-ending "5." still splits off its period. Everything else is either a
 // whitespace run or one punctuation character. An icon placeholder (`$svg$`,
 // see htmlDiff) is one token, so "$svg$" -> "$img$" never half-matches.
-const WORD = "[+]?[A-Za-z0-9'’%-]+";
+const WORD = "[+]?(?:[A-Za-z0-9'’%-]|\\.(?=\\d))+";
 const PLACEHOLDER = "\\$[a-z][\\w-]*\\$";
 const TOKEN = new RegExp(
 	`${PLACEHOLDER}|${WORD}|\\s+|[^\\sA-Za-z0-9'’%-]`,
