@@ -1,1 +1,211 @@
-null
+{
+	"builds": [
+		6851
+	],
+	"builtAt": "2026-11-04T19:33:34",
+	"note": {
+		"title": "Minor Update - 11-04-2026",
+		"pubDate": "2026-11-05T05:02:30Z",
+		"link": "https://store.steampowered.com/news/app/1422450/view/680766308468391944"
+	},
+	"before": {
+		"hero/Mo & Krill/ability/Scorn/properties/DamageHealMult/value": "1.2",
+		"hero/Mo & Krill/ability/Burrow/properties/Radius/value": "5m",
+		"hero/Mo & Krill/ability/Combo/properties/BonusHealthOnKill/value": "40",
+		"hero/Mo & Krill/tier/Sand Blast/2/row/SlowPercent|#0": {
+			"label": "Slow Percent",
+			"prefix": "-",
+			"postfix": "%",
+			"bonus": "24"
+		},
+		"hero/Mo & Krill/tier/Sand Blast/2/row/GroundDashReductionPercent|#0": {
+			"label": "Ground Dash Reduction Percent",
+			"postfix": "%",
+			"bonus": "-26"
+		},
+		"hero/Mo & Krill/tier/Sand Blast/2/text": "Slow targets by <span class=\"highlight\">-24% and reduces dash distances by -26%</span>",
+		"hero/Apollo/ability/Riposte/tooltip_details/info_sections/0/loc_string": "Prepare to <span class=\"highlight\">deflect</span> the next incoming attack. On a successful deflection, briefly become <span class=\"highlight\">invulnerable</span> and target an enemy hero to dash towards them, <span class=\"highlight\">immobilizing</span> them, preventing them from <span class=\"highlight\">parrying</span>, and reducing their <span class=\"highlight\">Melee Resist</span>.<br><br><span class=\"diminish\">Press Ability 2 to select a target.<br>Does not trigger against trooper or neutral damage.</span>",
+		"hero/Apollo/tier/Riposte/2/row/StunDuration|#0": {
+			"label": "Stun Duration",
+			"postfix": "s",
+			"bonus": "0.6"
+		},
+		"hero/Apollo/tier/Riposte/2/text": "<span class=\"highlight\">-25%</span> Melee Resist and <span class=\"highlight\">+0.6s</span> Immobilize Duration",
+		"hero/Apollo/tier/Itani Lo Sahn/3/row/BonusDamagePercent|#0": {
+			"label": "Bonus Damage Percent",
+			"prefix": "+",
+			"postfix": "%",
+			"bonus": "50"
+		},
+		"hero/Deadman Danny/ability/Strix Salvo/properties/Damage/scale_function/stat_scale": 0.74,
+		"hero/Deadman Danny/ability/Strix Salvo/properties/CoatedDamage/scale_function/stat_scale": 1.1,
+		"hero/Deadman Danny/ability/Close The Deal/properties/BonusDamagePercent/value": "75",
+		"hero/Deadman Danny/tier/Strix Salvo/3/row/CoatedDamage|EAddToScale#0": {
+			"label": "Coated Damage",
+			"scaling": "ETechPower",
+			"bonus": "0.35"
+		},
+		"hero/Deadman Danny/tier/Strix Salvo/3/row/Damage|EAddToScale#0": {
+			"label": "Damage",
+			"scaling": "ETechPower",
+			"bonus": "0.35"
+		},
+		"hero/Deadman Danny/tier/Chimera Mk1/2/row/HealOnHit|#0": {
+			"label": "Heal On Hit",
+			"bonus": "150"
+		},
+		"hero/Deadman Danny/tier/Chimera Mk1/2/row/HealOnHit|EAddToScale#0": {
+			"label": "Heal On Hit",
+			"scaling": "ETechPower",
+			"bonus": "2.0"
+		},
+		"hero/Celeste/ability/Radiant Daggers/properties/AbilityCastRange/value": "30m",
+		"hero/Celeste/ability/Radiant Daggers/properties/MagicIncreasePerStack/value": "7",
+		"hero/Celeste/ability/Shining Wonder/properties/AbilityCooldown/value": "160",
+		"hero/Celeste/ability/Shining Wonder/properties/SlowPercent/value": "32",
+		"hero/Celeste/ability/Shining Wonder/properties/BounceRadius/value": "15.5m",
+		"hero/Celeste/tier/Dazzling Trick/3/row/DebuffDuration|#0": {
+			"label": "Debuff Duration",
+			"postfix": "s",
+			"bonus": "1.25"
+		},
+		"hero/Celeste/tier/Dazzling Trick/3/text": "+1.25 Silence Duration and -20s Cooldown. Allows Shining Wonder Bounce.",
+		"hero/Celeste/tier/Radiant Daggers/2/row/AbilityCastRange|#0": null,
+		"hero/Celeste/tier/Radiant Daggers/3/row/MagicIncreasePerStack|#0": {
+			"label": "Magic Increase Per Stack",
+			"prefix": "{s:sign}",
+			"postfix": "%",
+			"bonus": "4"
+		},
+		"hero/Celeste/tier/Shining Wonder/1/row/SlowPercent|#0": {
+			"label": "Slow Percent",
+			"prefix": "-",
+			"postfix": "%",
+			"bonus": "16"
+		},
+		"hero/Celeste/tier/Shining Wonder/1/text": "-16% Move Speed and -14% Dash Distance",
+		"hero/Rat King/weapon/weapon_info/bullet_damage": 5.7,
+		"hero/Rat King/weapon/weapon_info/clip_size": 24,
+		"hero/Rat King/weapon/weapon_info/damage_per_second": 38,
+		"hero/Rat King/ability/Rule, Ratannia!/properties/BonusMoveSpeed/value": "3m",
+		"hero/Rat King/tier/Rule, Ratannia!/1/row/AbilityCooldown|#0": null,
+		"hero/Rat King/tier/Rule, Ratannia!/1/text": "+2m Move Speed",
+		"hero/Nurse Harrow/weapon/weapon_info/bullet_damage": 13.372,
+		"hero/Nurse Harrow/weapon/weapon_info/damage_per_second": 35.189473684210526,
+		"hero/Nurse Harrow/ability/Lurking Terrors/properties/BuildupTime/value": "2",
+		"hero/Nurse Harrow/ability/Lurking Terrors/properties/BuildupLookAngleVertical/value": "50",
+		"hero/Baba/stats/standard_level_up_upgrades/MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 0.7,
+		"hero/Baba/stats/scaling_stats/ETechArmorDamageReduction/scale": 0.07,
+		"hero/Baba/ability/Granny Long Legs/properties/StatusResistancePercent/value": "30",
+		"hero/Baba/ability/Granny Long Legs/properties/MeleeResist/value": "30",
+		"hero/Baba/ability/Baba's Brew/properties/AbilityCooldown/value": 27,
+		"hero/Baba/ability/Baba's Brew/properties/BarrierWindow/value": "1.5",
+		"hero/Baba/ability/Baba's Brew/properties/SilenceWindow/value": "1.5",
+		"hero/Baba/ability/Baba's Brew/properties/FireWindow/value": "1.5",
+		"hero/Baba/ability/Baba's Brew/properties/DamagePerSecond/scale_function/stat_scale": 0.152
+	},
+	"after": {
+		"hero/Mo & Krill/ability/Scorn/properties/DamageHealMult/value": "1.3",
+		"hero/Mo & Krill/ability/Burrow/properties/Radius/value": "5.5m",
+		"hero/Mo & Krill/ability/Combo/properties/BonusHealthOnKill/value": "50",
+		"hero/Mo & Krill/tier/Sand Blast/2/row/SlowPercent|#0": {
+			"label": "Slow Percent",
+			"prefix": "-",
+			"postfix": "%",
+			"bonus": "28"
+		},
+		"hero/Mo & Krill/tier/Sand Blast/2/row/GroundDashReductionPercent|#0": {
+			"label": "Ground Dash Reduction Percent",
+			"postfix": "%",
+			"bonus": "-28"
+		},
+		"hero/Mo & Krill/tier/Sand Blast/2/text": "Slow targets by <span class=\"highlight\">-28% and reduces dash distances by -28%</span>",
+		"hero/Apollo/ability/Riposte/tooltip_details/info_sections/0/loc_string": "Prepare to <span class=\"highlight\">deflect</span> the next incoming attack. On a successful deflection, briefly become <span class=\"highlight\">invulnerable</span> and target an enemy hero to dash towards them, <span class=\"highlight\">immobilizing</span> and <span class=\"highlight\">disarming</span> them, preventing them from <span class=\"highlight\">parrying</span>, and reducing their <span class=\"highlight\">Melee Resist</span>.<br><br><span class=\"diminish\">Press Ability 2 to select a target.<br>Does not trigger against trooper or neutral damage.</span>",
+		"hero/Apollo/tier/Riposte/2/row/StunDuration|#0": {
+			"label": "Stun Duration",
+			"postfix": "s",
+			"bonus": "0.7"
+		},
+		"hero/Apollo/tier/Riposte/2/text": "<span class=\"highlight\">-25%</span> Melee Resist and <span class=\"highlight\">+0.7s</span> Immobilize Duration",
+		"hero/Apollo/tier/Itani Lo Sahn/3/row/BonusDamagePercent|#0": {
+			"label": "Bonus Damage Percent",
+			"prefix": "+",
+			"postfix": "%",
+			"bonus": "60"
+		},
+		"hero/Deadman Danny/ability/Strix Salvo/properties/Damage/scale_function/stat_scale": 0.681,
+		"hero/Deadman Danny/ability/Strix Salvo/properties/CoatedDamage/scale_function/stat_scale": 1.012,
+		"hero/Deadman Danny/ability/Close The Deal/properties/BonusDamagePercent/value": "55",
+		"hero/Deadman Danny/tier/Strix Salvo/3/row/CoatedDamage|EAddToScale#0": {
+			"label": "Coated Damage",
+			"scaling": "ETechPower",
+			"bonus": "0.322"
+		},
+		"hero/Deadman Danny/tier/Strix Salvo/3/row/Damage|EAddToScale#0": {
+			"label": "Damage",
+			"scaling": "ETechPower",
+			"bonus": "0.322"
+		},
+		"hero/Deadman Danny/tier/Chimera Mk1/2/row/HealOnHit|#0": {
+			"label": "Heal On Hit",
+			"bonus": "125"
+		},
+		"hero/Deadman Danny/tier/Chimera Mk1/2/row/HealOnHit|EAddToScale#0": {
+			"label": "Heal On Hit",
+			"scaling": "ETechPower",
+			"bonus": "1.7"
+		},
+		"hero/Celeste/ability/Radiant Daggers/properties/AbilityCastRange/value": "25m",
+		"hero/Celeste/ability/Radiant Daggers/properties/MagicIncreasePerStack/value": "6",
+		"hero/Celeste/ability/Shining Wonder/properties/AbilityCooldown/value": "170",
+		"hero/Celeste/ability/Shining Wonder/properties/SlowPercent/value": "28",
+		"hero/Celeste/ability/Shining Wonder/properties/BounceRadius/value": "15m",
+		"hero/Celeste/tier/Dazzling Trick/3/row/DebuffDuration|#0": {
+			"label": "Debuff Duration",
+			"postfix": "s",
+			"bonus": "0.75"
+		},
+		"hero/Celeste/tier/Dazzling Trick/3/text": "+0.75 Silence Duration and -20s Cooldown. Allows Shining Wonder Bounce.",
+		"hero/Celeste/tier/Radiant Daggers/2/row/AbilityCastRange|#0": {
+			"label": "Ability Cast Range",
+			"postfix": "m",
+			"bonus": "5m"
+		},
+		"hero/Celeste/tier/Radiant Daggers/3/row/MagicIncreasePerStack|#0": {
+			"label": "Magic Increase Per Stack",
+			"prefix": "{s:sign}",
+			"postfix": "%",
+			"bonus": "5"
+		},
+		"hero/Celeste/tier/Shining Wonder/1/row/SlowPercent|#0": {
+			"label": "Slow Percent",
+			"prefix": "-",
+			"postfix": "%",
+			"bonus": "14"
+		},
+		"hero/Celeste/tier/Shining Wonder/1/text": "-14% Move Speed and -14% Dash Distance",
+		"hero/Rat King/weapon/weapon_info/bullet_damage": 5.8,
+		"hero/Rat King/weapon/weapon_info/clip_size": 26,
+		"hero/Rat King/weapon/weapon_info/damage_per_second": 38.666666666666664,
+		"hero/Rat King/ability/Rule, Ratannia!/properties/BonusMoveSpeed/value": "4m",
+		"hero/Rat King/tier/Rule, Ratannia!/1/row/AbilityCooldown|#0": {
+			"label": "Ability Cooldown",
+			"postfix": "s",
+			"bonus": "-25"
+		},
+		"hero/Rat King/tier/Rule, Ratannia!/1/text": "+2m Move Speed<br>-25s Cooldown",
+		"hero/Nurse Harrow/weapon/weapon_info/bullet_damage": 14.442,
+		"hero/Nurse Harrow/weapon/weapon_info/damage_per_second": 38.00526315789474,
+		"hero/Nurse Harrow/ability/Lurking Terrors/properties/BuildupTime/value": "1.75",
+		"hero/Nurse Harrow/ability/Lurking Terrors/properties/BuildupLookAngleVertical/value": "65",
+		"hero/Baba/stats/standard_level_up_upgrades/MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 0.63,
+		"hero/Baba/stats/scaling_stats/ETechArmorDamageReduction/scale": 0.05,
+		"hero/Baba/ability/Granny Long Legs/properties/StatusResistancePercent/value": "25",
+		"hero/Baba/ability/Granny Long Legs/properties/MeleeResist/value": "25",
+		"hero/Baba/ability/Baba's Brew/properties/AbilityCooldown/value": 28,
+		"hero/Baba/ability/Baba's Brew/properties/BarrierWindow/value": "1.6",
+		"hero/Baba/ability/Baba's Brew/properties/SilenceWindow/value": "1.6",
+		"hero/Baba/ability/Baba's Brew/properties/FireWindow/value": "1.6",
+		"hero/Baba/ability/Baba's Brew/properties/DamagePerSecond/scale_function/stat_scale": 0.13
+	}
+}
