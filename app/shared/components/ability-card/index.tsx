@@ -16,15 +16,12 @@ export default function AbilityCard({
 	ability,
 	changes,
 	tiers,
-	headerEnd,
 	className,
 	children,
 }: {
 	ability: Item;
 	changes: Change[];
 	tiers: TierDiff[];
-	/** Slot at the end of the title row, e.g. a close button. */
-	headerEnd?: React.ReactNode;
 	className?: string;
 	children?: React.ReactNode;
 }) {
@@ -43,7 +40,6 @@ export default function AbilityCard({
 				ability={ability}
 				chips={headerChips(ability)}
 				previous={shown.previous}
-				end={headerEnd}
 			/>
 			{sections.map((section, index) => (
 				<InfoSection

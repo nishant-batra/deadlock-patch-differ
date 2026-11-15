@@ -1,4 +1,5 @@
 import GeneralNote from "./general-note";
+import type { OpenState } from "#/shared/components/ability-row";
 import HeroChanges from "./hero-changes";
 import ItemChanges from "./item-changes";
 import SectionBar from "./section-bar";
@@ -12,8 +13,10 @@ import { BELOW_BAR, itemCount } from "./utils";
  */
 export default function HotfixSection({
 	hotfix,
+	openStateFor,
 }: {
 	hotfix: HotfixChanges | null;
+	openStateFor: (card: number) => OpenState;
 }) {
 	if (!hotfix) return null;
 	const { builds, builtAt, note, general, items, heroes } = hotfix;
@@ -46,7 +49,12 @@ export default function HotfixSection({
 			/>
 			{heroes.length > 0 && (
 				<section id="hotfix-heroes" className={`mb-10 ${BELOW_BAR}`}>
-					<HeroChanges heroes={heroes} hideEmpty legend />
+					<HeroChanges
+						heroes={heroes}
+						hideEmpty
+						legend
+						openStateFor={openStateFor}
+					/>
 				</section>
 			)}
 			{itemTotal > 0 && (

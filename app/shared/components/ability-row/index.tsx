@@ -1,10 +1,16 @@
 import clsx from "clsx";
-import { hasTierChanges } from "#/lib/abilityUpgrades";
 import AbilityPopover from "#/shared/components/ability-popover";
 import CutFrame from "#/shared/components/cut-frame";
 import type { AbilityChange } from "#/types";
 import { CHANGED_COLOR, UNCHANGED_COLOR } from "./constants";
+import Marker from "./marker";
+import type { OpenState } from "./types";
+import { useAnchorRefs } from "./useAnchorRefs";
+import { useHoverPreview } from "./useHoverPreview";
 import { useOpenAbility } from "./useOpenAbility";
+import { isAbilityChanged } from "./utils";
+
+export type { OpenState } from "./types";
 
 /**
  * The row of ability icons on a hero card - shared by the changed-hero card
@@ -17,43 +23,32 @@ export default function AbilityRow({
 	openState,
 }: {
 	abilities: AbilityChange[];
-	/** Pass when something outside the row (the changed-hero card's change
-	 * list) also needs to open these popovers; otherwise the row owns it. */
-	openState?: ReturnType<typeof useOpenAbility>;
+	/** Pass when something outside the row (the patch-notes hero list) owns
+	 * which popover is open; otherwise the row owns it. */
+	openState?: OpenState;
 }) {
 	const ownState = useOpenAbility();
-	const {
-		openAbility,
-		toggleAbility,
-		closeAbility,
-		setAnchorRef,
-		anchorRefFor,
-	} = openState ?? ownState;
-
-	// The popover's prev/next arrows step through changed abilities only; an
-	// arrow is dropped at either end, and an unchanged open ability gets none.
-	const changedIndexes = abilities.flatMap(({ changes, tiers }, index) =>
-		changes.length > 0 || hasTierChanges(tiers) ? [index] : [],
-	);
-	const position =
-		openAbility === null ? -1 : changedIndexes.indexOf(openAbility);
-	const prev = position > 0 ? changedIndexes[position - 1] : undefined;
-	const next = position >= 0 ? changedIndexes[position + 1] : undefined;
+	const state = openState ?? ownState;
+	const { openAbility, preview, close, nav } = state;
+	const { setAnchorRef, anchorRefFor } = useAnchorRefs();
+	const { hoverProps, iconProps } = useHoverPreview(state);
 
 	return (
 		<ul className="flex list-none gap-2 p-2.5">
-			{abilities.map(({ ability, changes, tiers }, index) => {
+			{abilities.map((abilityChange, index) => {
+				const { ability, changes, tiers } = abilityChange;
 				const isOpen = openAbility === index;
-				const isChanged = changes.length > 0 || hasTierChanges(tiers);
+				const isChanged = isAbilityChanged(abilityChange);
 				return (
-					<li key={ability.id}>
+					<li key={ability.id} {...hoverProps(index)}>
 						<button
 							ref={setAnchorRef(index)}
 							type="button"
 							aria-expanded={isOpen}
 							title={ability.name}
-							onClick={() => toggleAbility(index)}
-							className="block"
+							{...iconProps(index)}
+							// The popover scrolls this into view: clear the navbar and any sticky section bar.
+							className="block scroll-mt-[calc(var(--nav-height)+var(--sticky-bar-height,0px)+0.5rem)]"
 						>
 							<CutFrame
 								cut="sm"
@@ -75,6 +70,7 @@ export default function AbilityRow({
 							</CutFrame>
 							{isChanged && <span className="sr-only">Changed this patch</span>}
 						</button>
+						{isChanged && <Marker abilityChange={abilityChange} />}
 
 						{isOpen && (
 							<AbilityPopover
@@ -82,13 +78,9 @@ export default function AbilityRow({
 								changes={changes}
 								tiers={tiers}
 								anchorRef={anchorRefFor(index)}
-								onClose={closeAbility}
-								onPrev={
-									prev === undefined ? undefined : () => toggleAbility(prev)
-								}
-								onNext={
-									next === undefined ? undefined : () => toggleAbility(next)
-								}
+								onClose={close}
+								nav={nav}
+								preview={preview}
 							/>
 						)}
 					</li>

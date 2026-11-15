@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { deltaDirection } from "#/shared/components/stat-delta";
 import type { Change, Item } from "#/types";
 import {
 	abilityDeltaRow,
@@ -122,6 +123,32 @@ describe("abilityDeltaRow", () => {
 			prefix: undefined,
 			postfix: "%",
 		});
+	});
+
+	it("reads a deeper penalty on the target as better", () => {
+		const penalty = (old: string, next: string) =>
+			deltaDirection(
+				abilityDeltaRow(
+					change(["properties", "WeaponDamagePenalty", "value"], old, next),
+					props,
+				),
+			);
+		// Warden's Alchemical Flask: -25% -> -30% Weapon Damage on the target.
+		expect(penalty("-25", "-30")).toBe("better");
+		// The penalty went away entirely: weaker.
+		expect(penalty("-25", "0")).toBe("worse");
+	});
+
+	it("reads more scaling as better, even on a cooldown", () => {
+		const { negativeAttribute } = abilityDeltaRow(
+			change(
+				["properties", "AbilityCooldown", "scale_function", "stat_scale"],
+				0.1,
+				0.2,
+			),
+			props,
+		);
+		expect(negativeAttribute).toBe(false);
 	});
 
 	it("treats a cooldown as negative even without negative_attribute", () => {

@@ -15,6 +15,16 @@ const scalarOnly = (value: ChangeValue | undefined) =>
 	typeof value === "string" || typeof value === "number" ? value : undefined;
 
 /**
+ * Values at or below zero on an ability are a penalty it puts on its target
+ * (-25% -> -30% Weapon Damage): a deeper one is the stronger move, so the
+ * usual reading flips. Abilities only - an item's own drawback reads plainly.
+ */
+const isPenalty = (...values: unknown[]) => {
+	const numbers = values.map((value) => Number.parseFloat(String(value)));
+	return numbers.some((n) => n < 0) && numbers.every((n) => n <= 0);
+};
+
+/**
  * One `properties.X.value` or `properties.X.scale_function.stat_scale` change
  * as a `StatDelta` row. Shared by the card's hidden-changes panel and the hero
  * card's ability ledger, so both label and colour a move the same way.
@@ -25,8 +35,8 @@ export function abilityDeltaRow(
 ): DeltaRow {
 	const { path, kind, old, new: next } = change;
 	const key = statKeyOf(change);
-	const { label, negative_attribute, prefix, postfix } =
-		allProperties[key] ?? {};
+	const property = allProperties[key];
+	const { label, negative_attribute, prefix, postfix } = property ?? {};
 	const name = label ?? humaniseStatKey(key);
 	const scale = isScaleChange(change);
 	return {
@@ -35,9 +45,13 @@ export function abilityDeltaRow(
 		kind: kind === "added" ? "added" : kind === "removed" ? "removed" : "stat",
 		old: scalarOnly(old),
 		new: scalarOnly(next),
-		// AbilityCooldown and siblings carry no `negative_attribute` in the
-		// payload at all - see negativeProperties.ts.
-		negativeAttribute: negative_attribute ?? isNegativeProperty(key),
+		// More scaling per point is always stronger, whatever the stat.
+		// Otherwise most properties carry no `negative_attribute` - see
+		// negativeProperties.ts.
+		negativeAttribute: scale
+			? false
+			: (negative_attribute ?? isNegativeProperty(key, property)) !==
+				isPenalty(old, next),
 		// `stat_scale` is a unitless per-point multiplier, not the property's own
 		// displayed value, so the property's "%"/"m" units do not apply to it.
 		...(scale ? {} : { prefix, postfix }),
@@ -190,14 +204,18 @@ export function splitAbilityChanges(ability: Item, changes: Change[]) {
  */
 export const faceDirection = (
 	key: string,
-	{ value, label, negative_attribute }: ItemProperty,
+	property: ItemProperty,
 	previous: string | number,
-) =>
-	deltaDirection({
+) => {
+	const { label, value, negative_attribute } = property;
+	return deltaDirection({
 		id: key,
 		label: label ?? key,
 		kind: "stat",
 		old: previous,
 		new: value,
-		negativeAttribute: negative_attribute ?? isNegativeProperty(key),
+		negativeAttribute:
+			(negative_attribute ?? isNegativeProperty(key, property)) !==
+			isPenalty(previous, value),
 	});
+};

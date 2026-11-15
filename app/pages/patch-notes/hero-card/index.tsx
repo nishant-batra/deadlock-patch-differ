@@ -1,5 +1,4 @@
-import AbilityRow from "#/shared/components/ability-row";
-import { useOpenAbility } from "#/shared/components/ability-row/useOpenAbility";
+import AbilityRow, { type OpenState } from "#/shared/components/ability-row";
 import HeroCard from "#/shared/components/hero-card";
 import StatDelta from "#/shared/components/stat-delta";
 import type { ChangedHero } from "#/types";
@@ -12,11 +11,14 @@ export default function ChangedHeroCard({
 	statChanges,
 	weaponChanges,
 	isNew,
-}: ChangedHero) {
+	openState,
+}: ChangedHero & {
+	/** This card's slice of the hero list's open-ability state. */
+	openState: OpenState;
+}) {
 	const statRows = heroStatRows(statChanges, weaponChanges);
 	const wording = abilityWording(abilities);
-	const openState = useOpenAbility();
-	const { openAbility, toggleAbility } = openState;
+	const { openAbility, toggle } = openState;
 
 	// No `content-visibility: auto` here: with the router's view transitions it
 	// crashes Chrome's renderer (STATUS_BREAKPOINT) on home -> hero -> back ->
@@ -41,7 +43,7 @@ export default function ChangedHeroCard({
 			<WordingLine
 				wording={wording}
 				openAbility={openAbility}
-				onOpen={toggleAbility}
+				onOpen={toggle}
 			/>
 
 			<AbilityRow abilities={abilities} openState={openState} />

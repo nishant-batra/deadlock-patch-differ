@@ -206,6 +206,48 @@ html::-webkit-scrollbar-thumb:hover {
 
 /* React <ViewTransition> animations (e.g. the ability popover) render as
    document-level ::view-transition pseudo-elements, so this has to be global. */
+
+/* Ability popover open/close: rises in beside its icon; on phones, where it's
+   full screen, slides up from the bottom and back down. Steps between
+   abilities keep the default cross-fade. */
+::view-transition-new(.ability-popover-in) {
+	animation: popover-rise-in 180ms ease-out;
+}
+::view-transition-old(.ability-popover-out) {
+	animation: popover-fade-out 120ms ease-in forwards;
+}
+@media (width < 40rem) {
+	::view-transition-new(.ability-popover-in) {
+		animation: sheet-slide-up 280ms cubic-bezier(0.32, 0.72, 0, 1);
+	}
+	::view-transition-old(.ability-popover-out) {
+		animation: sheet-slide-down 200ms ease-in forwards;
+	}
+}
+@keyframes popover-rise-in {
+	from {
+		opacity: 0;
+		transform: translateY(8px) scale(0.98);
+	}
+}
+@keyframes popover-fade-out {
+	to {
+		opacity: 0;
+		transform: translateY(4px) scale(0.98);
+	}
+}
+@keyframes sheet-slide-up {
+	from {
+		transform: translateY(100%);
+	}
+}
+@keyframes sheet-slide-down {
+	to {
+		transform: translateY(100%);
+	}
+}
+
+/* Last, so it overrides the animations above. */
 @media (prefers-reduced-motion: reduce) {
 	::view-transition-group(*),
 	::view-transition-old(*),

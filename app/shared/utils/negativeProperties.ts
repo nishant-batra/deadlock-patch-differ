@@ -1,23 +1,36 @@
-// app/utils/negativeProperties.ts
-//
-// `negative_attribute` is present on only 19 properties catalog-wide, and is
-// absent from `AbilityCooldown` and its siblings entirely - so a cooldown
-// increase (a nerf) reads green with no override. This is the override,
-// consulted only when the payload itself has no `negative_attribute`.
+// `negative_attribute` is present on only a handful of properties, so this is
+// the fallback for "is a bigger number worse?", consulted only when the payload
+// itself has no `negative_attribute`.
+import type { ItemProperty } from "#/types";
 
 /**
- * Properties where a bigger number is worse. Verified against the current
- * catalog: none of these three carry `negative_attribute` on any item or
- * ability, despite a longer cooldown/cast delay/channel time always being a
- * nerf. `AbilityDuration` is deliberately excluded - it is often a buff's own
- * duration, where longer is better, so it is left to the payload's own
- * `negative_attribute` (absent -> neutral) rather than guessed here.
+ * Item stats that shrink a property when you buy them (cooldown reduction).
+ * Any other scale type (duration, range, radius, spirit power...) grows it, so
+ * the game itself treats bigger as better there. This beats `css_class`: Shiv's
+ * Recast Window wears the cooldown icon but scales with duration.
  */
-const NEGATIVE_PROPERTY_KEYS = new Set([
-	"AbilityCooldown",
-	"AbilityCastDelay",
-	"AbilityChannelTime",
+const SHRINKING_SCALE_TYPES = new Set([
+	"ETechCooldown",
+	"ETechCooldownBetweenChargeUses",
 ]);
 
-export const isNegativeProperty = (key: string) =>
-	NEGATIVE_PROPERTY_KEYS.has(key);
+/**
+ * Timings with no scale function where longer is a nerf - cooldowns, wind-ups,
+ * delays, wait times - minus the stats that cut them (Cooldown Reduction,
+ * Cooldown Refund). `Duration`/`Lifetime`/`Window` are deliberately left out:
+ * those are usually the effect's own length, where longer is better.
+ * shortcut: name-based guess, so a new oddly named stat can still land the
+ * wrong way; extend these patterns when one shows up.
+ */
+const SLOWER_IS_WORSE =
+	/Cooldown|CastDelay|ChannelTime|Delay$|WindUp|BuildupTime|DeployTime|CompletedTime|BrewTime/;
+const CUTS_THE_WAIT = /Reduc|Refund|Refresh|Reset|Speed|Chance/;
+
+export function isNegativeProperty(
+	key: string,
+	property?: Pick<ItemProperty, "scale_function">,
+) {
+	const scaleType = property?.scale_function?.specific_stat_scale_type;
+	if (scaleType) return SHRINKING_SCALE_TYPES.has(scaleType);
+	return SLOWER_IS_WORSE.test(key) && !CUTS_THE_WAIT.test(key);
+}

@@ -41,20 +41,16 @@ function Chip({
 
 /**
  * The card's title row. Range/area/duration sit under the name and
- * charges/cooldowns in the corner, as in game; `end` is the caller's slot
- * (the popover's close button) so the card itself knows nothing about where
- * it is shown.
+ * charges/cooldowns in the corner, as in game.
  */
 export default function CardHeader({
 	ability: { name, properties = {} },
 	chips: { left, right },
 	previous,
-	end,
 }: {
 	ability: Item;
 	chips: { left: string[]; right: string[] };
 	previous: FaceChanges["previous"];
-	end?: React.ReactNode;
 }) {
 	const renderChips = (keys: string[]) =>
 		keys.map((key) => (
@@ -77,7 +73,6 @@ export default function CardHeader({
 						{renderChips(right)}
 					</div>
 				)}
-				{end}
 			</div>
 		</div>
 	);

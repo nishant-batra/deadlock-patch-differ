@@ -1,38 +1,35 @@
-import { startTransition, useRef, useState } from "react";
+import { startTransition, useState } from "react";
+import type { OpenState } from "./types";
+
+type Open = { index: number; preview: boolean } | null;
 
 /**
- * Tracks which ability popover is open - by its index in the hero's ability
- * row, at most one at a time - plus a stable button ref per ability for
- * `AbilityPopover` to measure its position from.
+ * Which ability popover in one row is open - at most one at a time - for rows
+ * nothing outside owns (the all-heroes page).
  *
- * Open/close run inside `startTransition` so the popover's `<ViewTransition>`
+ * Updates run inside `startTransition` so the popover's `<ViewTransition>`
  * animates them - React only fires enter/exit for transition updates.
  */
-export function useOpenAbility() {
-	const [openAbility, setOpenAbility] = useState<number | null>(null);
-	const anchorRefs = useRef(new Map<number, HTMLButtonElement | null>());
-
-	const toggleAbility = (index: number) =>
-		startTransition(() =>
-			setOpenAbility((current) => (current === index ? null : index)),
-		);
-	const closeAbility = () => startTransition(() => setOpenAbility(null));
-	const setAnchorRef = (index: number) => (node: HTMLButtonElement | null) => {
-		anchorRefs.current.set(index, node);
-	};
-	const anchorRefFor = (
-		index: number,
-	): React.RefObject<HTMLButtonElement | null> => ({
-		get current() {
-			return anchorRefs.current.get(index) ?? null;
-		},
-	});
+export function useOpenAbility(): OpenState {
+	const [open, setOpen] = useState<Open>(null);
+	const update = (next: (current: Open) => Open) =>
+		startTransition(() => setOpen(next));
 
 	return {
-		openAbility,
-		toggleAbility,
-		closeAbility,
-		setAnchorRef,
-		anchorRefFor,
+		openAbility: open?.index ?? null,
+		preview: open?.preview ?? false,
+		toggle: (index) =>
+			update((current) =>
+				current?.index === index && !current.preview
+					? null
+					: { index, preview: false },
+			),
+		showPreview: (index) =>
+			update((current) =>
+				current && !current.preview ? current : { index, preview: true },
+			),
+		closePreview: () =>
+			update((current) => (current?.preview ? null : current)),
+		close: () => update(() => null),
 	};
 }

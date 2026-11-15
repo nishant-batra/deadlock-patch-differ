@@ -1,5 +1,4 @@
-import type { TierDiff } from "#/lib/abilityUpgrades";
-import { isScaleChange, isStatChange } from "#/lib/diffEngine";
+import { hasWordingChange } from "#/shared/components/ability-row/utils";
 import type { DeltaRow } from "#/shared/components/stat-delta";
 import { isNegativeHeroStat, labelForStatKey } from "#/shared/utils/statLabels";
 import type { AbilityChange, Change, Item } from "#/types";
@@ -7,47 +6,18 @@ import type { AbilityChange, Change, Item } from "#/types";
 /** `index` is the ability's place in the hero's ability row - what opens its popover. */
 export type WordingEntry = { ability: Item; index: number };
 
-const isTextChange = ({ path }: Change) => path.at(-1) === "loc_string";
-
-/** Upgrade moves the per-tier diff already covers - same split as the popover. */
-const isTierCovered = ({ path }: Change) =>
-	path[0] === "upgrades" ||
-	(path[0] === "description" && /^t\d_desc$/.test(path[1]));
-
-/**
- * A tier blurb ("+150 Damage and +15% Damage Reduction") restates that tier's
- * bonuses, so when a bonus moved the rewrite is just the number again - the
- * tier rows already show it. Only a rewrite with every bonus unchanged is
- * real wording. The popover still shows the text diff either way.
- */
-const isTierRewording = ({ text, rows }: TierDiff) =>
-	Boolean(text) && rows.every(({ kind }) => kind === "equal");
-
 /**
  * The abilities the card names on its Wording line: description and tier text
  * rewrites whose bonuses did not move, plus anything else unrecognised. Number
  * moves (property values, spirit scaling, upgrade-tier bonuses) are left to the
- * ability popover - the amber icon already says the ability changed.
+ * icon markers and the ability popover.
  */
-export function abilityWording(abilities: AbilityChange[]): WordingEntry[] {
-	const wording: WordingEntry[] = [];
-
-	for (const [index, { ability, changes, tiers }] of abilities.entries()) {
-		const hasWording =
-			changes.some(isTextChange) || tiers.some(isTierRewording);
-		const hasOther = changes.some(
-			(change) =>
-				!isStatChange(change) &&
-				!isScaleChange(change) &&
-				!isTextChange(change) &&
-				!isTierCovered(change),
-		);
-
-		if (hasWording || hasOther) wording.push({ ability, index });
-	}
-
-	return wording;
-}
+export const abilityWording = (abilities: AbilityChange[]): WordingEntry[] =>
+	abilities.flatMap((abilityChange, index) =>
+		hasWordingChange(abilityChange)
+			? [{ ability: abilityChange.ability, index }]
+			: [],
+	);
 
 /**
  * The stat a change moved is always the key under its section.
@@ -60,7 +30,8 @@ const statKeyOf = (path: string[]) => path[1];
 
 // A scaling row would otherwise read the same as the stat it scales.
 const labelForStat = (path: string[]) =>
-	labelForStatKey(statKeyOf(path)) + (path.at(-1) === "scale" ? " Scaling" : "");
+	labelForStatKey(statKeyOf(path)) +
+	(path.at(-1) === "scale" ? " Scaling" : "");
 
 /**
  * The hero card's top strip: the hero's own stat moves plus its weapon's

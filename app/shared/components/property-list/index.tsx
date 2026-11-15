@@ -144,7 +144,8 @@ export default function PropertyList({
 											old: previousValue,
 											new: value,
 											negativeAttribute:
-												negative_attribute ?? isNegativeProperty(property),
+												negative_attribute ??
+												isNegativeProperty(property, displayProperty),
 										})}
 									>
 										{value}

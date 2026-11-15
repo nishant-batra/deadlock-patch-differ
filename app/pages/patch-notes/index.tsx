@@ -2,7 +2,9 @@ import EmptyState from "#/shared/components/empty-state";
 import UpcomingHeroes from "#/shared/components/upcoming-heroes";
 import { formatPatchDate } from "#/shared/utils/formatPatchDate";
 import GeneralNote from "./general-note";
+import { useMemo } from "react";
 import HeroChanges from "./hero-changes";
+import { useAbilityCycle } from "./hero-changes/useAbilityCycle";
 import HotfixSection from "./hotfix-section";
 import ItemChanges from "./item-changes";
 import SectionBar from "./section-bar";
@@ -20,6 +22,10 @@ export default function Changes({
 }: ChangesPayload) {
 	const { balance, general, recent } = notes;
 	const patchDate = latestNoteDate(notes, hotfix?.note);
+	// Both changed-hero lists share one open popover; prev/next stay in each.
+	const lists = useMemo(() => [hotfix?.heroes ?? [], heroes], [hotfix, heroes]);
+	const hotfixCount = hotfix?.heroes.length ?? 0;
+	const openStateFor = useAbilityCycle(lists);
 
 	const itemsBlock = (
 		<section id="items" className={`mb-12 ${BELOW_BAR}`}>
@@ -29,7 +35,11 @@ export default function Changes({
 
 	const heroesBlock = (
 		<section id="heroes" className={`mb-12 ${BELOW_BAR}`}>
-			<HeroChanges heroes={heroes} legend={!hotfix?.heroes.length} />
+			<HeroChanges
+				heroes={heroes}
+				legend={hotfixCount === 0}
+				openStateFor={(card) => openStateFor(hotfixCount + card)}
+			/>
 		</section>
 	);
 
@@ -90,7 +100,7 @@ export default function Changes({
 				side.
 			</p>
 			{/* First: the newest changes, merged across every hotfix since the patch. */}
-			<HotfixSection hotfix={hotfix} />
+			<HotfixSection hotfix={hotfix} openStateFor={openStateFor} />
 			<section id="patch">
 				<SectionBar
 					label="Patch"

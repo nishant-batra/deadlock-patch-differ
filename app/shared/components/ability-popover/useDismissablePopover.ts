@@ -25,16 +25,21 @@ const MARGIN = 8;
  * finished. A direct write lands before the browser takes that snapshot -
  * and scrolling no longer re-renders the whole card.
  */
-export function useDismissablePopover(
-	anchorRef: React.RefObject<HTMLElement | null>,
-	onClose: () => void,
-	onPrev?: () => void,
-	onNext?: () => void,
-) {
+export function useDismissablePopover({
+	anchorRef,
+	onClose,
+	onPrev,
+	onNext,
+}: {
+	anchorRef: React.RefObject<HTMLElement | null>;
+	onClose: () => void;
+	onPrev?: () => void;
+	onNext?: () => void;
+}) {
 	const ref = useRef<HTMLDivElement>(null);
 
 	// Read via a ref rather than depending on the callbacks directly: their
-	// identity changes every render (`useOpenAbility` recreates them each time),
+	// identity can change every render,
 	// which would otherwise re-run this effect - and re-register its listeners -
 	// on every render regardless of what React Compiler decides to memoize.
 	const onCloseRef = useRef(onClose);
@@ -45,7 +50,7 @@ export function useDismissablePopover(
 	// `place()` reads `anchorRef.current` and `onCloseRef.current` fresh on
 	// every call rather than capturing them, so this is correctly mount-only
 	// despite the lint - re-running per render would just re-attach the same
-	// listeners (harmless), but `anchorRefFor` (in useOpenAbility.ts) returns a
+	// listeners (harmless), but `anchorRefFor` (in useAnchorRefs.ts) returns a
 	// new wrapper object every render, which would make this effect fire on
 	// every render if `anchorRef` were a dependency.
 	// biome-ignore lint/correctness/useExhaustiveDependencies: see above
@@ -73,18 +78,38 @@ export function useDismissablePopover(
 			dialog.style.setProperty("--popover-left", `${left}px`);
 		};
 
+		// Prev/next can open an ability on another hero's card, possibly off
+		// screen: bring its icon into view first. No-op for a clicked icon.
+		anchorRef.current?.scrollIntoView({ block: "nearest" });
+
 		// useLayoutEffect runs after the dialog is committed to the DOM but
 		// before the browser paints, so its real `offsetHeight` is already
 		// available here - no flash of the wrong position on open.
 		place();
 
+		// Keyboard and screen-reader users land in the dialog, including after
+		// prev/next swaps it for another one.
+		ref.current?.focus({ preventScroll: true });
+
 		const onKey = (event: KeyboardEvent) => {
 			if (event.key === "Escape") onCloseRef.current();
-			if (event.key === "ArrowLeft") stepRef.current.onPrev?.();
-			if (event.key === "ArrowRight") stepRef.current.onNext?.();
+			// A/D step like the arrows; not with a modifier (Ctrl+D bookmarks).
+			if (event.ctrlKey || event.metaKey || event.altKey) return;
+			// Typing elsewhere on the page is not stepping.
+			if (
+				(event.target as Element).closest("input, textarea, [contenteditable]")
+			)
+				return;
+			const key = event.key.toLowerCase();
+			if (key === "arrowleft" || key === "a") stepRef.current.onPrev?.();
+			if (key === "arrowright" || key === "d") stepRef.current.onNext?.();
 		};
-		const onPointer = (event: MouseEvent) => {
-			if (!ref.current?.contains(event.target as Node)) onCloseRef.current();
+		// A press on the icon is left to the icon itself.
+		const onPointer = ({ target }: MouseEvent) => {
+			const inside = [ref.current, anchorRef.current].some((node) =>
+				node?.contains(target as Node),
+			);
+			if (!inside) onCloseRef.current();
 		};
 		document.addEventListener("keydown", onKey);
 		// Deferred: the click that opened the popover is still propagating.
@@ -95,7 +120,15 @@ export function useDismissablePopover(
 		window.addEventListener("scroll", place, { capture: true, passive: true });
 		window.addEventListener("resize", place);
 
+		const dialog = ref.current;
 		return () => {
+			// Hand focus back to the icon if it was in the dialog (or dropped to
+			// <body>), not if the user already moved it elsewhere. On prev/next
+			// the next dialog's effect then takes it.
+			const active = document.activeElement;
+			if (!active || active === document.body || dialog?.contains(active)) {
+				anchorRef.current?.focus({ preventScroll: true });
+			}
 			document.removeEventListener("keydown", onKey);
 			document.removeEventListener("mousedown", onPointer);
 			clearTimeout(timeoutId);
