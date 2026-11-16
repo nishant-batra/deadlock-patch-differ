@@ -15745,6 +15745,7 @@
 		],
 		"gun_tag": "Pistol",
 		"hideout_rich_presence": "Pontificating in the Hideout",
+		"hero_type": "healer",
 		"gender": "male",
 		"search_name": "Dynamo",
 		"popular_items": {
@@ -17707,6 +17708,7 @@
 		],
 		"gun_tag": "Heavy Hitter",
 		"hideout_rich_presence": "Chilling In The Hideout",
+		"hero_type": "healer",
 		"gender": "male",
 		"search_name": "Kelvin",
 		"popular_items": {
@@ -33300,6 +33302,7 @@
 		],
 		"gun_tag": "Rapid Fire",
 		"hideout_rich_presence": "Wishing the Arroyos were In The Hideout",
+		"hero_type": "healer",
 		"gender": "female",
 		"search_name": "Ivy",
 		"popular_items": {
@@ -78062,6 +78065,7 @@
 		],
 		"gun_tag": "Projectile",
 		"hideout_rich_presence": "Reading In The Hideout",
+		"hero_type": "healer",
 		"gender": "female",
 		"search_name": "Paige",
 		"popular_items": {
@@ -98737,6 +98741,7 @@
 			"zZzzZ"
 		],
 		"hideout_rich_presence": "Having Sweet Dreams In The Hideout",
+		"hero_type": "healer",
 		"gender": "male",
 		"search_name": "Rem",
 		"popular_items": {
@@ -113581,6 +113586,7 @@
 		],
 		"gun_tag": "Projectile",
 		"hideout_rich_presence": "Conducting Rounds In The Hideout",
+		"hero_type": "healer",
 		"gender": "female",
 		"search_name": "Nurse Harrow",
 		"popular_items": {
