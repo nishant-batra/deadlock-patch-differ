@@ -53367,12 +53367,12 @@
 				"burst_slope": 0
 			},
 			"recycle_time": 2,
-			"shots_per_second": 0.7633587786259541,
-			"shots_per_second_with_reload": 0.6309148264984227,
-			"bullets_per_second": 9.16030534351145,
-			"bullets_per_second_with_reload": 7.570977917981072,
-			"damage_per_second": 41.49618320610687,
-			"damage_per_second_with_reload": 34.29652996845426,
+			"shots_per_second": 0.7936507936507936,
+			"shots_per_second_with_reload": 0.64882400648824,
+			"bullets_per_second": 9.523809523809524,
+			"bullets_per_second_with_reload": 7.78588807785888,
+			"damage_per_second": 43.142857142857146,
+			"damage_per_second_with_reload": 35.270072992700726,
 			"damage_per_shot": 54.36,
 			"damage_per_magazine": 434.88
 		}
@@ -97040,12 +97040,12 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 1.1111111111111112,
-			"shots_per_second_with_reload": 0.7453416149068323,
-			"bullets_per_second": 4.444444444444445,
-			"bullets_per_second_with_reload": 2.981366459627329,
-			"damage_per_second": 50.66666666666667,
-			"damage_per_second_with_reload": 33.98757763975155,
+			"shots_per_second": 1.25,
+			"shots_per_second_with_reload": 0.7947019867549668,
+			"bullets_per_second": 5,
+			"bullets_per_second_with_reload": 3.1788079470198674,
+			"damage_per_second": 57,
+			"damage_per_second_with_reload": 36.23841059602649,
 			"damage_per_shot": 45.6,
 			"damage_per_magazine": 273.6
 		}
@@ -98928,12 +98928,12 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 1.6666666666666667,
-			"shots_per_second_with_reload": 1.2669683257918551,
-			"bullets_per_second": 1.6666666666666667,
-			"bullets_per_second_with_reload": 1.2669683257918551,
-			"damage_per_second": 53.333333333333336,
-			"damage_per_second_with_reload": 40.542986425339365,
+			"shots_per_second": 2,
+			"shots_per_second_with_reload": 1.435897435897436,
+			"bullets_per_second": 2,
+			"bullets_per_second_with_reload": 1.435897435897436,
+			"damage_per_second": 64,
+			"damage_per_second_with_reload": 45.94871794871795,
 			"damage_per_shot": 32,
 			"damage_per_magazine": 448
 		}
@@ -99161,12 +99161,12 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 1.4705882352941175,
-			"shots_per_second_with_reload": 0.9950248756218905,
-			"bullets_per_second": 1.4705882352941175,
-			"bullets_per_second_with_reload": 0.9950248756218905,
-			"damage_per_second": 35.29411764705882,
-			"damage_per_second_with_reload": 23.88059701492537,
+			"shots_per_second": 1.5873015873015872,
+			"shots_per_second_with_reload": 1.0403120936280885,
+			"bullets_per_second": 1.5873015873015872,
+			"bullets_per_second_with_reload": 1.0403120936280885,
+			"damage_per_second": 38.095238095238095,
+			"damage_per_second_with_reload": 24.967490247074124,
 			"damage_per_shot": 24,
 			"damage_per_magazine": 192
 		}
@@ -99391,12 +99391,12 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 1.4705882352941175,
-			"shots_per_second_with_reload": 1.0471204188481675,
-			"bullets_per_second": 1.4705882352941175,
-			"bullets_per_second_with_reload": 1.0471204188481675,
-			"damage_per_second": 41.17647058823529,
-			"damage_per_second_with_reload": 29.319371727748692,
+			"shots_per_second": 1.5873015873015872,
+			"shots_per_second_with_reload": 1.0973936899862826,
+			"bullets_per_second": 1.5873015873015872,
+			"bullets_per_second_with_reload": 1.0973936899862826,
+			"damage_per_second": 44.44444444444444,
+			"damage_per_second_with_reload": 30.727023319615913,
 			"damage_per_shot": 28,
 			"damage_per_magazine": 224
 		}
@@ -201676,12 +201676,12 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 1.7391304347826089,
-			"shots_per_second_with_reload": 1.0289389067524117,
-			"bullets_per_second": 1.7391304347826089,
-			"bullets_per_second_with_reload": 1.0289389067524117,
-			"damage_per_second": 43.47826086956522,
-			"damage_per_second_with_reload": 25.72347266881029,
+			"shots_per_second": 2,
+			"shots_per_second_with_reload": 1.103448275862069,
+			"bullets_per_second": 2,
+			"bullets_per_second_with_reload": 1.103448275862069,
+			"damage_per_second": 50,
+			"damage_per_second_with_reload": 27.586206896551722,
 			"damage_per_shot": 25,
 			"damage_per_magazine": 200
 		}
@@ -201922,12 +201922,12 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 1.4285714285714286,
-			"shots_per_second_with_reload": 0.8759124087591241,
-			"bullets_per_second": 1.4285714285714286,
-			"bullets_per_second_with_reload": 0.8759124087591241,
-			"damage_per_second": 50,
-			"damage_per_second_with_reload": 30.656934306569344,
+			"shots_per_second": 1.6666666666666667,
+			"shots_per_second_with_reload": 0.9448818897637796,
+			"bullets_per_second": 1.6666666666666667,
+			"bullets_per_second_with_reload": 0.9448818897637796,
+			"damage_per_second": 58.333333333333336,
+			"damage_per_second_with_reload": 33.07086614173229,
 			"damage_per_shot": 35,
 			"damage_per_magazine": 210
 		}
@@ -209620,12 +209620,12 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 3.333333333333333,
-			"shots_per_second_with_reload": 2.4186046511627906,
-			"bullets_per_second": 6.666666666666666,
-			"bullets_per_second_with_reload": 4.837209302325581,
-			"damage_per_second": 38.666666666666664,
-			"damage_per_second_with_reload": 28.055813953488368,
+			"shots_per_second": 5,
+			"shots_per_second_with_reload": 3.1515151515151514,
+			"bullets_per_second": 10,
+			"bullets_per_second_with_reload": 6.303030303030303,
+			"damage_per_second": 58,
+			"damage_per_second_with_reload": 36.557575757575755,
 			"damage_per_shot": 11.6,
 			"damage_per_magazine": 301.59999999999997
 		}
