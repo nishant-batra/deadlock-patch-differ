@@ -1,5 +1,67 @@
 {
 	"added": [],
 	"removed": [],
-	"changed": []
+	"changed": [
+		{
+			"name": "Capacitor",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "DamagePerChain",
+					"label": "Shock Damage",
+					"old": "43",
+					"new": "37"
+				}
+			]
+		},
+		{
+			"name": "Sharpshooter",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "innate",
+					"key": "BonusAttackRangePercent",
+					"label": "Weapon Fall-off Range",
+					"old": "20",
+					"new": "18"
+				}
+			]
+		},
+		{
+			"name": "Dispel Magic",
+			"changes": [
+				{
+					"kind": "cooldown",
+					"section": "active",
+					"old": 45,
+					"new": 52
+				}
+			]
+		},
+		{
+			"name": "Cheat Death",
+			"changes": [
+				{
+					"kind": "cooldown",
+					"section": "passive",
+					"old": 90,
+					"new": 105
+				}
+			]
+		},
+		{
+			"name": "Spirit Burn",
+			"changes": [
+				{
+					"kind": "stat",
+					"section": "passive",
+					"key": "DebuffDuration",
+					"label": "Debuff Duration",
+					"old": "8",
+					"new": "7"
+				}
+			]
+		}
+	]
 }

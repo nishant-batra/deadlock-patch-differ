@@ -1174,7 +1174,7 @@
 					"tooltip_is_important": false
 				},
 				"DamagePerChain": {
-					"value": "43",
+					"value": "37",
 					"css_class": "tech_damage",
 					"scale_function": {
 						"class_name": "scale_function_tech_damage",
@@ -1190,7 +1190,7 @@
 					"tooltip_is_important": true
 				},
 				"BonusPerChain": {
-					"value": "43",
+					"value": "37",
 					"css_class": "tech_damage",
 					"scale_function": {
 						"class_name": "scale_function_tech_damage",
@@ -6753,7 +6753,7 @@
 					"tooltip_is_important": false
 				},
 				"BonusAttackRangePercent": {
-					"value": "20",
+					"value": "18",
 					"provided_property_type": "MODIFIER_VALUE_BONUS_ATTACK_RANGE_PERCENT",
 					"css_class": "distance",
 					"prefix": "{s:sign}",
@@ -9597,7 +9597,7 @@
 			"is_active_item": true,
 			"properties": {
 				"AbilityCooldown": {
-					"value": 45,
+					"value": 52,
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -22781,7 +22781,7 @@
 			"is_active_item": false,
 			"properties": {
 				"AbilityCooldown": {
-					"value": 90,
+					"value": 105,
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -23873,7 +23873,7 @@
 					"scale_function": {
 						"class_name": "scale_function_healing_spirit_scale",
 						"subclass_name": "TotalHealthRegen_scale_function",
-						"stat_scale": 1.1
+						"stat_scale": 1.25
 					},
 					"label": "Total HP Regen",
 					"postvalue_label": "Total HP Regen",
@@ -36393,7 +36393,7 @@
 					"tooltip_is_important": true
 				},
 				"DebuffDuration": {
-					"value": "8",
+					"value": "7",
 					"css_class": "tech_damage",
 					"scale_function": {
 						"class_name": "scale_function_tech_duration",
@@ -39091,7 +39091,7 @@
 						"class_name": "scale_function_single_stat",
 						"subclass_name": "SecondaryDamage_scale_function",
 						"specific_stat_scale_type": "ELevelUpBoons",
-						"stat_scale": 1.24
+						"stat_scale": 1.12
 					},
 					"prefix": "{s:sign}",
 					"label": "Secondary Fire Weapon Damage",
@@ -44821,7 +44821,7 @@
 				"zoom_move_speed_percent": 1,
 				"bullets": 1,
 				"burst_shot_count": 1,
-				"clip_size": 10,
+				"clip_size": 8,
 				"spread": 0,
 				"standing_spread": 1.5,
 				"reload_duration": 2.75,
@@ -44843,13 +44843,13 @@
 				},
 				"recycle_time": 1,
 				"shots_per_second": 2.1164021164021167,
-				"shots_per_second_with_reload": 1.2944983818770228,
+				"shots_per_second_with_reload": 1.1799410029498527,
 				"bullets_per_second": 2.1164021164021167,
-				"bullets_per_second_with_reload": 1.2944983818770228,
+				"bullets_per_second_with_reload": 1.1799410029498527,
 				"damage_per_second": 41.6931216931217,
-				"damage_per_second_with_reload": 25.501618122977348,
+				"damage_per_second_with_reload": 23.244837758112098,
 				"damage_per_shot": 19.7,
-				"damage_per_magazine": 197
+				"damage_per_magazine": 157.6
 			},
 			"description": {}
 		},
@@ -45970,7 +45970,7 @@
 					"scale_function": {
 						"class_name": "scale_function_tech_damage",
 						"subclass_name": "Damage_scale_function",
-						"stat_scale": 1.116,
+						"stat_scale": 0.9,
 						"street_brawl_stat_scale": 2.5
 					},
 					"label": "Damage",
@@ -52552,7 +52552,7 @@
 						"class_name": "scale_function_kinetic_carbine_damage",
 						"subclass_name": "MaxBonusBulletDamage_scale_function",
 						"specific_stat_scale_type": "EWeaponPower",
-						"stat_scale": 125
+						"stat_scale": 110
 					},
 					"prefix": "",
 					"label": "Max Damage",
@@ -52695,7 +52695,7 @@
 						},
 						{
 							"name": "MaxBonusBulletDamage",
-							"bonus": "55",
+							"bonus": "40",
 							"scale_stat_filter": "EWeaponPower",
 							"upgrade_type": "EAddToScale"
 						}
@@ -52705,7 +52705,7 @@
 			"weapon_info": {},
 			"description": {
 				"t2_desc": "-12.0s Cooldown<br>Increases Speed Scaling",
-				"t3_desc": "+2s Charge Hold Duration and +55% Damage Scaling"
+				"t3_desc": "+2s Charge Hold Duration and +40% Damage Scaling"
 			}
 		},
 		{
@@ -56431,19 +56431,19 @@
 					"postvalue_label": "Weapon Damage"
 				},
 				"SelfDamagePct": {
-					"value": "30",
+					"value": "50",
 					"label": "Health Cost",
 					"postfix": "%",
 					"postvalue_label": "Health Cost"
 				},
 				"Damage": {
-					"value": 90,
+					"value": 85,
 					"css_class": "tech_damage",
 					"scale_function": {
 						"class_name": "scale_function_tech_damage",
 						"subclass_name": "Damage_scale_function",
 						"specific_stat_scale_type": "ETechPower",
-						"stat_scale": 1.35
+						"stat_scale": 1.3
 					},
 					"label": "Damage",
 					"postvalue_label": "Damage",
@@ -56464,7 +56464,7 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
 				},
 				"ArmingDuration": {
-					"value": "0.65",
+					"value": "0.8",
 					"css_class": "duration",
 					"label": "Arming Duration",
 					"postfix": "s",
@@ -56547,7 +56547,7 @@
 					"property_upgrades": [
 						{
 							"name": "Damage",
-							"bonus": 50
+							"bonus": 45
 						},
 						{
 							"name": "Radius",
@@ -56570,7 +56570,7 @@
 			],
 			"weapon_info": {},
 			"description": {
-				"t2_desc": "+<span class=\"highlight\">2m</span> Radius and +<span class=\"highlight\">50.0</span> Damage.",
+				"t2_desc": "+<span class=\"highlight\">2m</span> Radius and +<span class=\"highlight\">45.0</span> Damage.",
 				"t3_desc": "Bombs leave a toxic mess on the ground, dealing <span class=\"highlight\">30.0%</span> of the original <span class=\"highlight\">damage per second</span>, for <span class=\"highlight\">6s</span>."
 			}
 		},
@@ -63113,10 +63113,10 @@
 					"value": "50"
 				},
 				"GrowthPerMeter": {
-					"value": "0.5m"
+					"value": "0.475m"
 				},
 				"InitialWidth": {
-					"value": "1m"
+					"value": "1.5m"
 				},
 				"SlowDuration": {
 					"value": "4",
@@ -63811,7 +63811,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": 28,
+					"value": 29,
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -63969,7 +63969,7 @@
 						"class_name": "scale_function_tech_damage",
 						"subclass_name": "DPS_scale_function",
 						"specific_stat_scale_type": "ETechPower",
-						"stat_scale": 0.38
+						"stat_scale": 0.32
 					},
 					"prefix": "",
 					"label": "Damage Per Second",
@@ -64039,7 +64039,7 @@
 					"postvalue_label": "Max Dash Slow"
 				},
 				"MaxSlowTime": {
-					"value": "2.0",
+					"value": "2.5",
 					"css_class": "duration",
 					"label": "Time To Max Debuff",
 					"postfix": "s",
@@ -64160,7 +64160,7 @@
 						},
 						{
 							"name": "DPS",
-							"bonus": "0.6",
+							"bonus": "0.5",
 							"scale_stat_filter": "ETechPower",
 							"upgrade_type": "EAddToScale"
 						}
@@ -64587,7 +64587,7 @@
 					"property_upgrades": [
 						{
 							"name": "BonusSpiritPct",
-							"bonus": "35"
+							"bonus": "30"
 						},
 						{
 							"name": "BonusSpirit",
@@ -64599,7 +64599,7 @@
 			"weapon_info": {},
 			"description": {
 				"t1_desc": "<span class=\"highlight\">+2m</span> Move Speed and <span class=\"highlight\">+35%</span> Bullet Resist for Kelvin while on Ice Path",
-				"t3_desc": "<span class=\"highlight\">+35%</span> Spirit and <span class=\"highlight\">+20</span> Spirit for Kelvin while on Ice Path"
+				"t3_desc": "<span class=\"highlight\">+30%</span> Spirit and <span class=\"highlight\">+20</span> Spirit for Kelvin while on Ice Path"
 			}
 		},
 		{
@@ -68269,7 +68269,7 @@
 			"tooltip_details": {
 				"info_sections": [
 					{
-						"loc_string": "Target a location on the minimap. After a brief wait, <span class=\"highlight\">teleport</span> to that location. Taking damage or being Stunned, Immobilized, put to Sleep or Movement Silenced during the wait period causes the teleport to be interrupted.<br><br>After teleporting, gain a <span class=\"highlight\">Barrier</span>.",
+						"loc_string": "Target a location on the minimap. After a brief wait, <span class=\"highlight\">teleport</span> to that location. Taking damage or being Stunned, Immobilized, put to Sleep or Movement Silenced during the wait period causes the teleport to be interrupted.<br><br>After teleporting, gain a <span class=\"highlight\">Barrier</span>.<br><br><svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M106 74.5C106 102.39 97.196 125 64 125C30.804 125 22 102.39 22 74.5C22 74.2499 22.0048 74.0002 22.0078 73.751C31.2634 78.1321 44.7654 81 64 81C83.234 81 96.7357 78.1319 105.991 73.751C105.994 74.0002 106 74.2499 106 74.5Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M58 22.9204C58.0001 19.6507 60.6863 17 63.9999 17C67.3135 17.0003 69.9999 19.6509 70 22.9204V51.0796C70 54.3492 67.3135 56.9997 63.9999 57C60.6862 57 58 54.3494 58 51.0796V22.9204Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M63.6125 17.008C61.6841 17.0899 59.8918 17.7814 58.5226 18.9327C57.0626 20.1605 56.0002 22.0028 56 24.1999V49.8001C56.0002 51.9973 57.0626 53.8395 58.5226 55.0673C59.8918 56.2186 61.6841 56.9101 63.6125 56.992L64 57C66.075 56.9998 68.0169 56.2945 69.4774 55.0664C70.9372 53.8386 71.9998 51.9972 72 49.8001V24.1999L71.9969 23.9957C71.9332 21.8888 70.8918 20.1232 69.4774 18.9336C68.017 17.7055 66.075 17.0002 64 17L63.6125 17.008Z\" fill=\"black\"/>\n<path d=\"M69 12.9755C73.4305 14.5801 76.598 18.8335 76.598 23.8299V50.7515C76.598 55.7478 73.4304 60.0003 69 61.605V73.4277C84.4336 72.9935 96.282 69.6691 104.368 66.3811C104.93 66.1525 105.474 65.9235 106 65.6961C105.868 63.8985 105.711 62.0149 105.527 60.0406L103.581 44.5956C102.213 35.6269 100.295 26.7201 97.1331 20.6114C89.7895 6.41635 75.6511 4.72025 69 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M59 12.9755C54.5695 14.5801 51.402 18.8335 51.402 23.8299V50.7515C51.402 55.7478 54.5696 60.0003 59 61.605V73.4277C43.5664 72.9935 31.718 69.6691 23.6324 66.3811C23.0701 66.1525 22.526 65.9235 22 65.6961C22.1325 63.8985 22.2887 62.0149 22.4731 60.0406L24.4194 44.5956C25.7871 35.6269 27.7049 26.7201 30.8669 20.6114C38.2105 6.41635 52.3489 4.72025 59 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n</svg>\n to target your base's healing area.",
 						"properties_block": [
 							{
 								"properties": [
@@ -68533,7 +68533,7 @@
 				"zoom_move_speed_percent": 1,
 				"bullets": 4,
 				"burst_shot_count": 1,
-				"clip_size": 20,
+				"clip_size": 25,
 				"spread": 1.2,
 				"standing_spread": 1.5,
 				"recoil_seed": 14235,
@@ -68555,13 +68555,13 @@
 					"burst_slope": 0
 				},
 				"shots_per_second": 5.291005291005291,
-				"shots_per_second_with_reload": 2.9197080291970803,
+				"shots_per_second_with_reload": 3.207184092366902,
 				"bullets_per_second": 21.164021164021165,
-				"bullets_per_second_with_reload": 11.678832116788321,
+				"bullets_per_second_with_reload": 12.828736369467608,
 				"damage_per_second": 59.682539682539684,
-				"damage_per_second_with_reload": 32.934306569343065,
+				"damage_per_second_with_reload": 36.17703656189865,
 				"damage_per_shot": 11.28,
-				"damage_per_magazine": 225.6
+				"damage_per_magazine": 282
 			},
 			"description": {}
 		},
@@ -71184,11 +71184,11 @@
 					"property_upgrades": [
 						{
 							"name": "CooldownRefundPercent",
-							"bonus": "50"
+							"bonus": "60"
 						},
 						{
 							"name": "ImpactDamage",
-							"bonus": "90"
+							"bonus": "100"
 						}
 					]
 				}
@@ -71196,7 +71196,7 @@
 			"weapon_info": {},
 			"description": {
 				"t2_desc": "Heroes killed within 3s grant <span class=\"highlight\">+200</span> souls",
-				"t3_desc": "<span class=\"highlight\">+90</span> Damage & On Hero Hit: <span class=\"highlight\">50%</span> Cooldown Refund"
+				"t3_desc": "<span class=\"highlight\">+100</span> Damage & On Hero Hit: <span class=\"highlight\">60%</span> Cooldown Refund"
 			}
 		},
 		{
@@ -73509,8 +73509,8 @@
 				{
 					"property_upgrades": [
 						{
-							"name": "TechArmorDamageReduction",
-							"bonus": "-4"
+							"name": "ImpactDamage",
+							"bonus": "50"
 						},
 						{
 							"name": "DashRange",
@@ -73521,8 +73521,8 @@
 				{
 					"property_upgrades": [
 						{
-							"name": "ImpactDamage",
-							"bonus": "50"
+							"name": "TechArmorDamageReduction",
+							"bonus": "-4"
 						},
 						{
 							"name": "CooldownReductionOnHit",
@@ -73541,8 +73541,8 @@
 			],
 			"weapon_info": {},
 			"description": {
-				"t2_desc": "<span class=\"highlight\">-4%</span> Spirit Resist<br><span class=\"highlight\">+2m</span> Dash Range",
-				"t3_desc": "<span class=\"highlight\">+50</span> Impact Damage<br><span class=\"highlight\">-2s</span> Cooldown per Hero hit."
+				"t2_desc": "<span class=\"highlight\">+50</span> Impact Damage<br><span class=\"highlight\">+2m</span> Dash Range",
+				"t3_desc": "<span class=\"highlight\">-4%</span> Spirit Resist<br><span class=\"highlight\">-2s</span> Cooldown per Hero hit."
 			}
 		},
 		{
@@ -74132,7 +74132,7 @@
 					"property_upgrades": [
 						{
 							"name": "EnemyHealthPercent",
-							"bonus": "10"
+							"bonus": "8"
 						}
 					]
 				}
@@ -74141,7 +74141,7 @@
 			"description": {
 				"t1_desc": "<span class=\"highlight\">+6 m</span> Range<br><span class=\"highlight\">+2 m/s</span> in Full Rage.",
 				"t2_desc": "<span class=\"highlight\">+16%</span> Full Rage Bonus Damage<br><span class=\"highlight\">-25s</span> Cooldown",
-				"t3_desc": "<span class=\"highlight\">+10%</span> Enemy Health Threshold"
+				"t3_desc": "<span class=\"highlight\">+8%</span> Enemy Health Threshold"
 			}
 		},
 		{
@@ -77904,20 +77904,20 @@
 				{
 					"property_upgrades": [
 						{
-							"name": "AbilityCooldown",
-							"bonus": "-25"
+							"name": "StunDuration",
+							"bonus": "0.75"
 						}
 					]
 				},
 				{
 					"property_upgrades": [
 						{
-							"name": "StunDuration",
-							"bonus": "0.75"
+							"name": "AbilityCooldown",
+							"bonus": "-25"
 						},
 						{
 							"name": "Damage",
-							"bonus": "1.5",
+							"bonus": "1.2",
 							"scale_stat_filter": "ETechPower",
 							"upgrade_type": "EAddToScale"
 						}
@@ -77926,7 +77926,7 @@
 			],
 			"weapon_info": {},
 			"description": {
-				"t3_desc": "<span class=\"highlight\">+0.75s</span> Stun Duration and increased Damage spirit scaling"
+				"t3_desc": "<span class=\"highlight\">-25s</span> Cooldown and increased Damage spirit scaling"
 			}
 		},
 		{
@@ -78285,6 +78285,18 @@
 				{
 					"property_upgrades": [
 						{
+							"name": "SlowPercent",
+							"bonus": "32"
+						},
+						{
+							"name": "DebuffDuration",
+							"bonus": "3"
+						}
+					]
+				},
+				{
+					"property_upgrades": [
+						{
 							"name": "AirDropBulletShield",
 							"bonus": "300"
 						},
@@ -78293,18 +78305,6 @@
 							"bonus": "0.7",
 							"scale_stat_filter": "ETechPower",
 							"upgrade_type": "EAddToScale"
-						}
-					]
-				},
-				{
-					"property_upgrades": [
-						{
-							"name": "SlowPercent",
-							"bonus": "32"
-						},
-						{
-							"name": "DebuffDuration",
-							"bonus": "3"
 						}
 					]
 				},
@@ -78331,8 +78331,8 @@
 			],
 			"weapon_info": {},
 			"description": {
-				"t1_desc": "On Fly End : <span class=\"highlight\">300</span> Barrier to Ivy and ally that scales with Spirit",
-				"t2_desc": "<span class=\"highlight\">+32%</span> Slow for <span class=\"highlight\">3s</span> on enemies hit",
+				"t1_desc": "<span class=\"highlight\">+32%</span> Slow for <span class=\"highlight\">3s</span> on enemies hit",
+				"t2_desc": "On Fly End : <span class=\"highlight\">300</span> Barrier to Ivy and ally that scales with Spirit",
 				"t3_desc": "<span class=\"highlight\">Silence</span> for <span class=\"highlight\">3s</span> on enemies hit.<br>Increases damage and barrier scaling."
 			}
 		},
@@ -80657,6 +80657,10 @@
 						{
 							"name": "MoveSpeedBonusPct",
 							"bonus": "20"
+						},
+						{
+							"name": "CombatBarrier",
+							"bonus": "50"
 						}
 					]
 				},
@@ -80689,6 +80693,7 @@
 			],
 			"weapon_info": {},
 			"description": {
+				"t1_desc": "<span class=\"highlight\">+20%</span> Move Speed and <span class=\"highlight\">+50</span> Barrier",
 				"t2_desc": "-24s Cooldown and +2s Duration",
 				"t3_desc": "<span class=\"highlight\">+30%</span> Debuff Resistance and improved Barrier scaling"
 			}
@@ -81230,8 +81235,8 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
 				},
 				"HealthStealPctHero": {
-					"value": "75",
-					"street_brawl_value": "48.75",
+					"value": "90",
+					"street_brawl_value": "58.5",
 					"css_class": "healing",
 					"scale_function": {
 						"class_name": "scale_function_single_stat",
@@ -81244,8 +81249,8 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/heal.svg"
 				},
 				"HealthStealPct": {
-					"value": "10",
-					"street_brawl_value": "7.5",
+					"value": "15",
+					"street_brawl_value": "11.25",
 					"css_class": "healing",
 					"scale_function": {
 						"class_name": "scale_function_single_stat",
@@ -82433,7 +82438,7 @@
 					"property_upgrades": [
 						{
 							"name": "MagicDamagePerBullet",
-							"bonus": "0.045",
+							"bonus": "0.03",
 							"upgrade_type": "EAddToScale"
 						},
 						{
@@ -82654,7 +82659,7 @@
 					"value": "25"
 				},
 				"CardResourceGenPctScale": {
-					"value": "85",
+					"value": "68",
 					"scale_function": {
 						"class_name": "scale_function_single_stat",
 						"subclass_name": "card_gen",
@@ -93686,7 +93691,7 @@
 						},
 						{
 							"name": "AbilityCastRange",
-							"bonus": "4m"
+							"bonus": "3m"
 						}
 					]
 				}
@@ -93694,7 +93699,7 @@
 			"weapon_info": {},
 			"description": {
 				"t1_desc": "On Cast: Gain <span class=\"highlight\">+25%</span> Fire Rate for 8s and add <span class=\"highlight\">8</span> bullets",
-				"t3_desc": "<span class=\"highlight\">+1</span> Recast<br><span class=\"highlight\">+4m</span> Range"
+				"t3_desc": "<span class=\"highlight\">+1</span> Recast<br><span class=\"highlight\">+3m</span> Range"
 			}
 		},
 		{
@@ -93892,7 +93897,7 @@
 					"scale_function": {
 						"class_name": "scale_function_tech_damage",
 						"subclass_name": "lovebites_bonusdamage_sf",
-						"stat_scale": 1.85
+						"stat_scale": 1.5
 					},
 					"label": "Bonus Damage",
 					"postvalue_label": "Bonus Damage",
@@ -94021,6 +94026,12 @@
 						{
 							"name": "BonusDamage",
 							"bonus": 45
+						},
+						{
+							"name": "BonusDamage",
+							"bonus": "0.35",
+							"scale_stat_filter": "ETechPower",
+							"upgrade_type": "EAddToScale"
 						}
 					]
 				},
@@ -94044,7 +94055,7 @@
 			"weapon_info": {},
 			"description": {
 				"t1_desc": "On Proc: <span class=\"highlight\">+24%</span> Slow for 3s",
-				"t2_desc": "<span class=\"highlight\">+3.0</span> Spirit Damage per Bullet & <br><span class=\"highlight\">+45.0</span> Bonus Damage",
+				"t2_desc": "<span class=\"highlight\">+3.0</span> Spirit Damage per Bullet & <br><span class=\"highlight\">+45.0</span> Bonus Damage with increased Spirit scaling",
 				"t3_desc": "<span class=\"highlight\">-5</span> Cooldown <br>On Proc: <span class=\"highlight\">+25%</span> Fire Rate for 5s"
 			}
 		},
@@ -94620,7 +94631,7 @@
 					"value": "25",
 					"css_class": "healing",
 					"scale_function": {
-						"class_name": "scale_function_tech_damage",
+						"class_name": "scale_function_healing_spirit_scale",
 						"subclass_name": "herohealsf",
 						"stat_scale": 0.3
 					},
@@ -110240,7 +110251,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": "23",
+					"value": "20",
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -110780,8 +110791,7 @@
 						"specific_stat_scale_type": "ELevelUpBoons",
 						"scaling_stats": [
 							"ELevelUpBoons",
-							"EWeaponDamageScale",
-							"EDamageScale"
+							"EWeaponDamageScale"
 						],
 						"stat_scale": 3.6
 					},
@@ -111099,8 +111109,7 @@
 						"specific_stat_scale_type": "ELevelUpBoons",
 						"scaling_stats": [
 							"ELevelUpBoons",
-							"EWeaponDamageScale",
-							"EDamageScale"
+							"EWeaponDamageScale"
 						],
 						"stat_scale": 1.6
 					},
@@ -113513,7 +113522,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": "12",
+					"value": "11",
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -113912,7 +113921,7 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
 				},
 				"AbilityCastRange": {
-					"value": "0",
+					"value": "35m",
 					"can_set_token_override": true,
 					"css_class": "range",
 					"display_units": "EDisplayUnit_Meters",
@@ -114032,19 +114041,6 @@
 					"postfix": "m",
 					"postvalue_label": "Dash Speed"
 				},
-				"DashRange": {
-					"value": "35m",
-					"css_class": "distance",
-					"scale_function": {
-						"class_name": "scale_function_single_stat",
-						"subclass_name": "DashRange_scale_function",
-						"specific_stat_scale_type": "ETechRange"
-					},
-					"label": "Dash Range",
-					"postfix": "m",
-					"postvalue_label": "Dash Range",
-					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
-				},
 				"SideMoveSpeed": {
 					"value": "-100"
 				},
@@ -114090,25 +114086,29 @@
 					"value": "1m"
 				},
 				"SlowDuration": {
-					"value": "4",
+					"value": "2",
+					"css_class": "duration",
 					"scale_function": {
 						"class_name": "scale_function_tech_duration",
 						"subclass_name": "riposte_slow_duration_sf"
 					},
 					"label": "Slow Duration",
 					"postfix": "s",
-					"postvalue_label": "Slow Duration"
+					"postvalue_label": "Slow Duration",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
 				},
 				"SlowPercent": {
-					"value": "40",
+					"value": "50",
 					"provided_property_type": "MODIFIER_VALUE_MOVEMENT_SPEED_SLOW_PERCENT",
+					"css_class": "slow",
 					"usage_flags": [
 						"ConditionallyApplied"
 					],
 					"prefix": "-",
 					"label": "Move Speed",
 					"postfix": "%",
-					"postvalue_label": "Move Speed"
+					"postvalue_label": "Move Speed",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/condition_slow.svg"
 				},
 				"AbilityLifestealPercentHero": {
 					"value": "50",
@@ -114128,20 +114128,6 @@
 					"postvalue_label": "Spirit Lifesteal",
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/heal.svg"
 				},
-				"StunDuration": {
-					"value": "1.5",
-					"css_class": "duration",
-					"loc_token_override": "ImmobilizeDuration",
-					"scale_function": {
-						"class_name": "scale_function_single_stat",
-						"subclass_name": "StunDuration_scale_function",
-						"specific_stat_scale_type": "ETechDuration"
-					},
-					"label": "Immobilize Duration",
-					"postfix": "s",
-					"postvalue_label": "Immobilize Duration",
-					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
-				},
 				"DampingFactor": {
 					"value": "0.5"
 				},
@@ -114157,30 +114143,17 @@
 					"postvalue_label": "Move Speed",
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/condition_slow.svg"
 				},
-				"MeleeResistReduction": {
-					"value": "-25",
-					"provided_property_type": "MODIFIER_VALUE_MELEE_RESIST_REDUCTION",
-					"css_class": "bullet_armor_down",
-					"usage_flags": [
-						"ConditionallyApplied"
-					],
-					"label": "Melee Resist",
-					"postfix": "%",
-					"postvalue_label": "Melee Resist",
-					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/armor_bullet_color.svg"
-				},
-				"MeleeResistReductionDuration": {
-					"value": "3.0",
-					"css_class": "duration",
+				"Damage": {
+					"value": "100",
+					"css_class": "tech_damage",
 					"scale_function": {
-						"class_name": "scale_function_single_stat",
-						"subclass_name": "MeleeResistReductionDuration_scale_function",
-						"specific_stat_scale_type": "ETechDuration"
+						"class_name": "scale_function_tech_damage",
+						"subclass_name": "Damage_scale_function",
+						"stat_scale": 1.5
 					},
-					"label": "Melee Resist Reduction Duration",
-					"postfix": "s",
-					"postvalue_label": "Debuff Duration",
-					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+					"label": "Damage",
+					"postvalue_label": "Damage",
+					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg"
 				},
 				"TargetLifesteal": {
 					"value": "0",
@@ -114212,13 +114185,13 @@
 					"value": "0"
 				},
 				"DashGraceWindow": {
-					"value": "1.3"
+					"value": "1.8"
 				}
 			},
 			"tooltip_details": {
 				"info_sections": [
 					{
-						"loc_string": "Prepare to <span class=\"highlight\">deflect</span> the next incoming attack. On a successful deflection, briefly become <span class=\"highlight\">invulnerable</span> and target an enemy hero to dash towards them, <span class=\"highlight\">immobilizing</span> and <span class=\"highlight\">disarming</span> them, preventing them from <span class=\"highlight\">parrying</span>, and reducing their <span class=\"highlight\">Melee Resist</span>.<br><br><span class=\"diminish\">Press Ability 2 to select a target.<br>Does not trigger against trooper or neutral damage.</span>",
+						"loc_string": "Prepare to <span class=\"highlight\">deflect</span> all incoming <span class=\"highlight\">ability</span> damage. On a successful deflection, briefly become <span class=\"highlight\">invulnerable</span> and gain the ability to dash to an enemy hero whose attack you deflected. Hitting them deals <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDamage\">spirit damage</span>, knocks them back, applies <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_slow_large.png\" class=\"inline-attribute Slow\" alt=\"slow\"/><span class=\"inline-attribute-label Slow\">slow</span> and prevents <span class=\"highlight\">stamina usage</span>.<br><br>While deflecting, <span class=\"highlight\">bullets</span> are reflected back at the attacker.<br><br><span class=\"diminish\">Press Ability 2 to counter attack.<br>Reflected bullets do not trigger the counter attack.</span>",
 						"properties_block": [
 							{
 								"properties": [
@@ -114235,16 +114208,16 @@
 								"loc_string": "On Pommel Hit:",
 								"properties": [
 									{
-										"important_property": "StunDuration"
+										"important_property": "Damage"
 									},
 									{
-										"important_property": "MeleeResistReduction"
+										"important_property": "SlowPercent"
+									},
+									{
+										"important_property": "SlowDuration"
 									}
 								]
 							}
-						],
-						"basic_properties": [
-							"MeleeResistReductionDuration"
 						]
 					}
 				]
@@ -114254,19 +114227,19 @@
 					"property_upgrades": [
 						{
 							"name": "AbilityCooldown",
-							"bonus": "-8"
+							"bonus": "-9"
 						}
 					]
 				},
 				{
 					"property_upgrades": [
 						{
-							"name": "MeleeResistReduction",
-							"bonus": "-25"
+							"name": "Damage",
+							"bonus": "100"
 						},
 						{
-							"name": "StunDuration",
-							"bonus": "0.7"
+							"name": "SlowDuration",
+							"bonus": "1"
 						}
 					]
 				},
@@ -114285,7 +114258,7 @@
 			],
 			"weapon_info": {},
 			"description": {
-				"t2_desc": "<span class=\"highlight\">-25%</span> Melee Resist and <span class=\"highlight\">+0.7s</span> Immobilize Duration",
+				"t2_desc": "<span class=\"highlight\">+100</span> Damage <br><span class=\"highlight\">+1s</span> Debuff Duration",
 				"t3_desc": "Gain <span class=\"highlight\">75%</span> Bullet, Spirit &amp; Melee Lifesteal against the Riposte target for 13s"
 			}
 		},
@@ -114299,7 +114272,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": "26",
+					"value": "30",
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -115381,7 +115354,7 @@
 				"crit_bonus_end_range": 1500,
 				"crit_bonus_start": 1.65,
 				"crit_bonus_start_range": 500,
-				"cycle_time": 0.102,
+				"cycle_time": 0.1075,
 				"intra_burst_cycle_time": 0,
 				"damage_falloff_bias": 0.5,
 				"damage_falloff_end_range": 670,
@@ -115460,12 +115433,12 @@
 					"burst_constant": 0,
 					"burst_slope": 0
 				},
-				"shots_per_second": 9.803921568627452,
-				"shots_per_second_with_reload": 5.610098176718092,
-				"bullets_per_second": 9.803921568627452,
-				"bullets_per_second_with_reload": 5.610098176718092,
-				"damage_per_second": 35.294117647058826,
-				"damage_per_second_with_reload": 20.196353436185134,
+				"shots_per_second": 9.30232558139535,
+				"shots_per_second_with_reload": 5.442176870748299,
+				"bullets_per_second": 9.30232558139535,
+				"bullets_per_second_with_reload": 5.442176870748299,
+				"damage_per_second": 33.48837209302326,
+				"damage_per_second_with_reload": 19.591836734693878,
 				"damage_per_shot": 3.6,
 				"damage_per_magazine": 144
 			},
@@ -121011,7 +120984,7 @@
 					"property_upgrades": [
 						{
 							"name": "BulletDamageMultiplier",
-							"bonus": "30"
+							"bonus": "45"
 						},
 						{
 							"name": "CooldownReductionPerHit",
@@ -121030,7 +121003,7 @@
 			"description": {
 				"t1_desc": "-4s Cooldown<br>+15m Max Drawing Distance",
 				"t2_desc": "On Empower: Gain +10% Fire Rate for 10s, stacking 5 times",
-				"t3_desc": "+1s Cooldown Reduction Per Hit<br>Improve scaling"
+				"t3_desc": "+45% Bullet Damage<br>+1s Cooldown Reduction Per Hit<br>Increased Spirit Damage Scaling"
 			}
 		},
 		{
@@ -122407,7 +122380,7 @@
 				"bullet_gravity_scale": 0,
 				"bullet_inherit_shooter_velocity_scale": 0,
 				"bullet_lifetime": 2,
-				"bullet_radius": 7,
+				"bullet_radius": 8.5,
 				"bullet_reflect_amount": 1,
 				"bullet_reflect_scale": 0,
 				"bullet_whiz_distance": 80,
@@ -122447,7 +122420,7 @@
 				"bullets": 3,
 				"burst_shot_count": 1,
 				"clip_size": 15,
-				"spread": 0,
+				"spread": 0.25,
 				"standing_spread": 1.5,
 				"recoil_seed": 32152,
 				"reload_duration": 2.5,
@@ -122681,8 +122654,8 @@
 					"postvalue_label": "Burst Interval"
 				},
 				"DebuffDuration": {
-					"value": "16",
-					"street_brawl_value": "14",
+					"value": "10",
+					"street_brawl_value": "7",
 					"css_class": "duration",
 					"scale_function": {
 						"class_name": "scale_function_tech_duration",
@@ -122736,7 +122709,7 @@
 					"value": "0.6"
 				},
 				"MagicDamagePerBullet": {
-					"value": "8",
+					"value": "12",
 					"css_class": "tech_damage",
 					"scale_function": {
 						"class_name": "scale_function_tech_damage",
@@ -122795,7 +122768,7 @@
 						},
 						{
 							"name": "DebuffDuration",
-							"bonus": "8"
+							"bonus": "6"
 						}
 					]
 				},
@@ -122814,7 +122787,7 @@
 			],
 			"weapon_info": {},
 			"description": {
-				"t2_desc": "-12s Cooldown<br>+8s Debuff Duration",
+				"t2_desc": "-12s Cooldown<br>+6s Debuff Duration",
 				"t3_desc": "+1 Charge<br>On Hit: Pull enemies 7m"
 			}
 		},
@@ -123743,7 +123716,7 @@
 					"value": "0"
 				},
 				"TimeToMaxStacks": {
-					"value": "3.5",
+					"value": "4",
 					"css_class": "duration",
 					"loc_token_override": "BabaUlt2TimeToMaxStacks",
 					"label": "Time To Max Stacks",
@@ -123782,7 +123755,7 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
 				},
 				"AbilityCastRange": {
-					"value": "18m",
+					"value": "20m",
 					"can_set_token_override": true,
 					"css_class": "range",
 					"display_units": "EDisplayUnit_Meters",
@@ -123911,7 +123884,7 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/condition_slow.svg"
 				},
 				"BarrageMaxDamage": {
-					"value": "450",
+					"value": "650",
 					"css_class": "tech_damage",
 					"loc_token_override": "MaxDamage",
 					"scale_function": {
@@ -126540,7 +126513,7 @@
 					"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_bullet_color.svg"
 				},
 				"Radius": {
-					"value": "8.0m",
+					"value": "6.5m",
 					"css_class": "distance",
 					"scale_function": {
 						"class_name": "scale_function_single_stat",
@@ -126665,7 +126638,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": 25,
+					"value": 26,
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -126814,7 +126787,7 @@
 						"class_name": "scale_function_tech_damage",
 						"subclass_name": "Damage_scale_function",
 						"specific_stat_scale_type": "ETechPower",
-						"stat_scale": 0.681
+						"stat_scale": 0.62
 					},
 					"label": "Damage",
 					"postvalue_label": "Damage",
@@ -127871,7 +127844,7 @@
 				"horizontal_punch": 0,
 				"range": 7000,
 				"recoil_recovery_delay_factor": 0.05,
-				"bullet_speed": 20000,
+				"bullet_speed": 14000,
 				"recoil_recovery_speed": 5,
 				"recoil_shot_index_recovery_time_factor": 0.25,
 				"recoil_speed": 5,
@@ -130551,7 +130524,7 @@
 					"property_upgrades": [
 						{
 							"name": "ReturnFireChance",
-							"bonus": "15"
+							"bonus": "20"
 						},
 						{
 							"name": "AbilityCooldown",
@@ -130574,7 +130547,7 @@
 			],
 			"weapon_info": {},
 			"description": {
-				"t2_desc": "<span class=\"highlight\">-8s</span> Cooldown<br><span class=\"highlight\">+15%</span> Bullet Return Chance",
+				"t2_desc": "<span class=\"highlight\">-8s</span> Cooldown<br><span class=\"highlight\">+20%</span> Bullet Return Chance",
 				"t3_desc": "Reduce all damage to a max of <span class=\"highlight\">250</span><br><span class=\"highlight\">+10%</span> Max Health as Barrier"
 			}
 		},
@@ -130772,7 +130745,7 @@
 					"postvalue_label": "Duration"
 				},
 				"BonusMoveSpeed": {
-					"value": "4m",
+					"value": "5m",
 					"provided_property_type": "MODIFIER_VALUE_MOVEMENT_SPEED_MAX",
 					"css_class": "move_speed",
 					"display_units": "EDisplayUnit_MetersPerSecond",

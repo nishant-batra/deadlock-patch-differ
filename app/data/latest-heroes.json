@@ -472,7 +472,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 830,
+				"value": 760,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -1168,9 +1168,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.088,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.092,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 39,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 41,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -1778,7 +1778,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 730,
+				"value": 670,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -2474,9 +2474,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.24,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.252,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 41,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 43,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -3012,7 +3012,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 755,
+				"value": 690,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -3715,7 +3715,7 @@
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.495,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 28,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 30,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -4221,7 +4221,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 880,
+				"value": 805,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -4917,9 +4917,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 1,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 1.05,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 51,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 54,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -5425,7 +5425,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 800,
+				"value": 735,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -6121,9 +6121,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.1,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.105,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 49,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 51,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.738,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -6623,11 +6623,11 @@
 		},
 		"starting_stats": {
 			"max_move_speed": {
-				"value": 7.2,
+				"value": 6.8,
 				"display_stat_name": "EMaxMoveSpeed"
 			},
 			"sprint_speed": {
-				"value": 1.6,
+				"value": 1.2,
 				"display_stat_name": "ESprintSpeed"
 			},
 			"crouch_speed": {
@@ -6647,7 +6647,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 730,
+				"value": 670,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -6671,7 +6671,7 @@
 				"display_stat_name": "EStamina"
 			},
 			"base_health_regen": {
-				"value": 2,
+				"value": 1,
 				"display_stat_name": "EBaseHealthRegen"
 			},
 			"stamina_regen_per_second": {
@@ -7350,7 +7350,7 @@
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.14,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 35,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 37,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -7910,7 +7910,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -8606,9 +8606,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.171,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.18,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 52,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 54,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -9066,7 +9066,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 730,
+				"value": 670,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -9762,9 +9762,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.26,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.273,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 46,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 48,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -10300,7 +10300,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 880,
+				"value": 805,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -10997,9 +10997,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.5,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.525,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 61,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 64,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -11535,7 +11535,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 880,
+				"value": 805,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -12232,9 +12232,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.418,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.439,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 60,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 63,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -12770,7 +12770,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 730,
+				"value": 670,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -13473,7 +13473,7 @@
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.143,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 33,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 35,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -14105,7 +14105,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -14801,9 +14801,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 1.144,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 1.05,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 43,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 45,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -15387,7 +15387,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 880,
+				"value": 805,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -16083,9 +16083,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.115,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.121,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 52,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 55,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 59,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -16585,7 +16585,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 730,
+				"value": 670,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -17281,9 +17281,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.043,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.045,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 37,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 39,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -17777,7 +17777,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -18483,9 +18483,9 @@
 		},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.85,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.893,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 38,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 40,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -18996,7 +18996,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 930,
+				"value": 855,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -19694,9 +19694,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.0881,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.0925,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 65,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 68,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -20251,7 +20251,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 830,
+				"value": 760,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -20947,9 +20947,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.165,
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.228,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 46,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.173,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.239,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 48,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -21569,7 +21569,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 755,
+				"value": 690,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -22265,9 +22265,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.08,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.084,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 45,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 44,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -22370,7 +22370,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -23659,7 +23659,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 805,
+				"value": 740,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -24366,7 +24366,7 @@
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.25,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 60,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 67,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -24891,7 +24891,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 730,
+				"value": 670,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -25592,9 +25592,9 @@
 		},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.154,
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.7,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 45,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.162,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.735,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 47,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -26082,7 +26082,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -26782,9 +26782,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.31,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.326,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 50,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 52,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -27459,7 +27459,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -27499,7 +27499,7 @@
 				"display_stat_name": "EAbilityResourceRegenPerSecond"
 			},
 			"crit_damage_received_scale": {
-				"value": 1,
+				"value": 0.9,
 				"display_stat_name": "ECritDamageReceivedScale"
 			},
 			"tech_duration": {
@@ -28155,9 +28155,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.36,
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 1.512,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 45,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.378,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 1.588,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 47,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -28259,7 +28259,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -28944,7 +28944,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.924,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.97,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 63,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -29049,7 +29049,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -29844,7 +29844,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -30642,7 +30642,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -31853,7 +31853,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -32553,9 +32553,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.14,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.147,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 36,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 38,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -32658,7 +32658,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -33851,7 +33851,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 730,
+				"value": 670,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -34547,9 +34547,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.3,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.315,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 45,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 47,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -34658,7 +34658,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -35348,7 +35348,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.22,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.231,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 54,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -36236,7 +36236,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -36921,7 +36921,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.077,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.081,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 63,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -37019,7 +37019,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -37704,7 +37704,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.077,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.081,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 63,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -38290,7 +38290,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -38991,9 +38991,9 @@
 		},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.178,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.187,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 35,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 37,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -39098,7 +39098,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -39788,7 +39788,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.242,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.254,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 53,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -40337,7 +40337,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 730,
+				"value": 670,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -41039,9 +41039,9 @@
 		},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.55,
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.55,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 38,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.578,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.578,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 40,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -41150,7 +41150,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -41844,7 +41844,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.22,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.231,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 67,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -41954,7 +41954,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -42642,7 +42642,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.803,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.843,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 51,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -43112,7 +43112,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 660,
+				"value": 605,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -43136,7 +43136,7 @@
 				"display_stat_name": "EStamina"
 			},
 			"base_health_regen": {
-				"value": 2,
+				"value": 1.5,
 				"display_stat_name": "EBaseHealthRegen"
 			},
 			"stamina_regen_per_second": {
@@ -43808,9 +43808,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.275,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.289,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 27,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 29,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -44416,7 +44416,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 755,
+				"value": 690,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -45112,9 +45112,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.49,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.515,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 41,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 43,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -45696,7 +45696,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 820,
+				"value": 750,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -46403,7 +46403,7 @@
 		"standard_level_up_upgrades": {
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.27,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 43,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 45,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.7,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -46919,7 +46919,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 800,
+				"value": 735,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -47624,9 +47624,9 @@
 		},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.26,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.273,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 34,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 36,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -48184,7 +48184,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 680,
+				"value": 625,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -48885,9 +48885,9 @@
 		},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.61,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.641,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 31,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 33,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.2,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -49674,9 +49674,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.495,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.52,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 62,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 64,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -50180,7 +50180,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 755,
+				"value": 690,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -50876,9 +50876,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 1.25,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 1.313,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 42,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 44,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -50984,7 +50984,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -51678,7 +51678,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.44,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.462,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 51,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -51785,7 +51785,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -52475,7 +52475,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.275,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.289,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 61,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -53017,7 +53017,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 820,
+				"value": 750,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -53712,9 +53712,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.127,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.133,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 53,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 55,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -53817,7 +53817,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -54503,7 +54503,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.124929,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.131175,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 41,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -55303,7 +55303,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.25,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.263,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 29,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -56108,7 +56108,7 @@
 		},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.18,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.189,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 35,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -56626,7 +56626,7 @@
 		},
 		"starting_stats": {
 			"max_move_speed": {
-				"value": 6.7,
+				"value": 6.5,
 				"display_stat_name": "EMaxMoveSpeed"
 			},
 			"sprint_speed": {
@@ -56650,7 +56650,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 730,
+				"value": 670,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -57346,9 +57346,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.052,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.055,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 35,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 37,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -57912,7 +57912,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 770,
+				"value": 705,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -58608,9 +58608,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.825,
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.5,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 45,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.866,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.525,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 47,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -59115,7 +59115,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 730,
+				"value": 670,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -59811,9 +59811,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.42,
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 1.6,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 39,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.441,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 1.68,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 41,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -60400,7 +60400,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 680,
+				"value": 625,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -61096,9 +61096,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.34,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.357,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 28,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 30,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -61674,7 +61674,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 830,
+				"value": 760,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -62370,9 +62370,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.117,
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.7735,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 31,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.123,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0.8122,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 33,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -62936,7 +62936,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 690,
+				"value": 630,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -63633,9 +63633,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.82,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.861,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 33,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 35,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -63731,7 +63731,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -64416,7 +64416,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.07,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.074,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 66,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -65224,7 +65224,7 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.043,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.045,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
 			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 40,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
@@ -65738,7 +65738,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 800,
+				"value": 735,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -66436,9 +66436,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.144,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.151,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 50,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 52,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -66950,7 +66950,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -67651,9 +67651,9 @@
 		},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.4,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.42,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 40,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 42,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -68219,7 +68219,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 710,
+				"value": 650,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -68915,9 +68915,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.55,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.578,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 34,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 36,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.2,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -69531,7 +69531,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 730,
+				"value": 670,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -70227,9 +70227,9 @@
 		"scaling_stats": {},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.37436,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.39308,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 32,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 34,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 1.58,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,
@@ -70753,7 +70753,7 @@
 		},
 		"starting_stats": {
 			"max_move_speed": {
-				"value": 6.5,
+				"value": 6.4,
 				"display_stat_name": "EMaxMoveSpeed"
 			},
 			"sprint_speed": {
@@ -70777,7 +70777,7 @@
 				"display_stat_name": "EHeavyMeleeDamage"
 			},
 			"max_health": {
-				"value": 780,
+				"value": 715,
 				"display_stat_name": "EMaxHealth"
 			},
 			"weapon_power": {
@@ -71481,14 +71481,14 @@
 		"scaling_stats": {
 			"ETechArmorDamageReduction": {
 				"scaling_stat": "ETechPower",
-				"scale": 0.05
+				"scale": 0.02
 			}
 		},
 		"purchase_bonuses": {},
 		"standard_level_up_upgrades": {
-			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.41,
+			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL": 0.431,
 			"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE": 0,
-			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 45,
+			"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL": 47,
 			"MODIFIER_VALUE_BASE_MELEE_DAMAGE_FROM_LEVEL": 0.63,
 			"MODIFIER_VALUE_BONUS_ATTACK_RANGE": 0,
 			"MODIFIER_VALUE_BOON_COUNT": 1,

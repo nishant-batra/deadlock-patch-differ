@@ -1,39 +1,1452 @@
 {
-	"Paige": {
-		"stats": [],
-		"weapon": [
+	"Infernus": {
+		"stats": [
 			{
 				"path": [
-					"weapon_info",
-					"bullets_per_second"
+					"starting_stats",
+					"max_health",
+					"value"
 				],
 				"kind": "modified",
-				"old": 1.6666666666666667,
-				"new": 2
+				"old": 830,
+				"new": 760
 			},
 			{
 				"path": [
-					"weapon_info",
-					"damage_per_second"
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
 				],
 				"kind": "modified",
-				"old": 53.333333333333336,
+				"old": 0.088,
+				"new": 0.092
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 39,
+				"new": 41
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Napalm": [
+				{
+					"path": [
+						"properties",
+						"GrowthPerMeter",
+						"value"
+					],
+					"kind": "modified",
+					"old": "0.5m",
+					"new": "0.475m"
+				},
+				{
+					"path": [
+						"properties",
+						"InitialWidth",
+						"value"
+					],
+					"kind": "modified",
+					"old": "1m",
+					"new": "1.5m"
+				}
+			]
+		}
+	},
+	"Seven": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 730,
+				"new": 670
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.24,
+				"new": 0.252
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 41,
+				"new": 43
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Vindicta": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 755,
+				"new": 690
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 28,
+				"new": 30
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Lady Geist": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 880,
+				"new": 805
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 1,
+				"new": 1.05
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 51,
+				"new": 54
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Essence Bomb": [
+				{
+					"path": [
+						"properties",
+						"SelfDamagePct",
+						"value"
+					],
+					"kind": "modified",
+					"old": "30",
+					"new": "50"
+				},
+				{
+					"path": [
+						"properties",
+						"Damage",
+						"value"
+					],
+					"kind": "modified",
+					"old": 90,
+					"new": 85
+				},
+				{
+					"path": [
+						"properties",
+						"Damage",
+						"scale_function",
+						"stat_scale"
+					],
+					"kind": "modified",
+					"old": 1.35,
+					"new": 1.3
+				},
+				{
+					"path": [
+						"properties",
+						"ArmingDuration",
+						"value"
+					],
+					"kind": "modified",
+					"old": "0.65",
+					"new": "0.8"
+				}
+			]
+		}
+	},
+	"Abrams": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 800,
+				"new": 735
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.1,
+				"new": 0.105
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 49,
+				"new": 51
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Wraith": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_move_speed",
+					"value"
+				],
+				"kind": "modified",
+				"old": 7.2,
+				"new": 6.8
+			},
+			{
+				"path": [
+					"starting_stats",
+					"sprint_speed",
+					"value"
+				],
+				"kind": "modified",
+				"old": 1.6,
+				"new": 1.2
+			},
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 730,
+				"new": 670
+			},
+			{
+				"path": [
+					"starting_stats",
+					"base_health_regen",
+					"value"
+				],
+				"kind": "modified",
+				"old": 2,
+				"new": 1
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 35,
+				"new": 37
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Card Trick": [
+				{
+					"path": [
+						"properties",
+						"CardResourceGenPctScale",
+						"value"
+					],
+					"kind": "modified",
+					"old": "85",
+					"new": "68"
+				}
+			]
+		}
+	},
+	"McGinnis": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 780,
+				"new": 715
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.171,
+				"new": 0.18
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 52,
+				"new": 54
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Paradox": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 730,
+				"new": 670
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.26,
+				"new": 0.273
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 46,
+				"new": 48
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Kinetic Carbine": [
+				{
+					"path": [
+						"properties",
+						"MaxBonusBulletDamage",
+						"scale_function",
+						"stat_scale"
+					],
+					"kind": "modified",
+					"old": 125,
+					"new": 110
+				}
+			]
+		}
+	},
+	"Dynamo": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 880,
+				"new": 805
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.5,
+				"new": 0.525
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 61,
 				"new": 64
 			}
 		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Kelvin": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 880,
+				"new": 805
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.418,
+				"new": 0.439
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 60,
+				"new": 63
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Arctic Beam": [
+				{
+					"path": [
+						"properties",
+						"AbilityCooldown",
+						"value"
+					],
+					"kind": "modified",
+					"old": 28,
+					"new": 29
+				},
+				{
+					"path": [
+						"properties",
+						"DPS",
+						"scale_function",
+						"stat_scale"
+					],
+					"kind": "modified",
+					"old": 0.38,
+					"new": 0.32
+				},
+				{
+					"path": [
+						"properties",
+						"MaxSlowTime",
+						"value"
+					],
+					"kind": "modified",
+					"old": "2.0",
+					"new": "2.5"
+				}
+			]
+		}
+	},
+	"Haze": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 730,
+				"new": 670
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 33,
+				"new": 35
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Holliday": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 780,
+				"new": 715
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 1.144,
+				"new": 1.05
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 43,
+				"new": 45
+			}
+		],
+		"weapon": [
+			{
+				"path": [
+					"weapon_info",
+					"clip_size"
+				],
+				"kind": "modified",
+				"old": 10,
+				"new": 8
+			}
+		],
+		"abilities": {
+			"Crackshot": [
+				{
+					"path": [
+						"properties",
+						"Damage",
+						"scale_function",
+						"stat_scale"
+					],
+					"kind": "modified",
+					"old": 1.116,
+					"new": 0.9
+				}
+			]
+		}
+	},
+	"Bebop": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 880,
+				"new": 805
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.115,
+				"new": 0.121
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 52,
+				"new": 55
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Calico": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 730,
+				"new": 670
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.043,
+				"new": 0.045
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 37,
+				"new": 39
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Grey Talon": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 780,
+				"new": 715
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.85,
+				"new": 0.893
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 38,
+				"new": 40
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Mo & Krill": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 930,
+				"new": 855
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.0881,
+				"new": 0.0925
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 65,
+				"new": 68
+			}
+		],
+		"weapon": [
+			{
+				"path": [
+					"weapon_info",
+					"clip_size"
+				],
+				"kind": "modified",
+				"old": 20,
+				"new": 25
+			}
+		],
+		"abilities": {}
+	},
+	"Shiv": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 830,
+				"new": 760
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.165,
+				"new": 0.173
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE"
+				],
+				"kind": "modified",
+				"old": 0.228,
+				"new": 0.239
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 46,
+				"new": 48
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Ivy": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 755,
+				"new": 690
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.08,
+				"new": 0.084
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 45,
+				"new": 44
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Warden": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 805,
+				"new": 740
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 60,
+				"new": 67
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Last Stand": [
+				{
+					"path": [
+						"properties",
+						"HealthStealPctHero",
+						"value"
+					],
+					"kind": "modified",
+					"old": "75",
+					"new": "90"
+				},
+				{
+					"path": [
+						"properties",
+						"HealthStealPct",
+						"value"
+					],
+					"kind": "modified",
+					"old": "10",
+					"new": "15"
+				}
+			]
+		}
+	},
+	"Yamato": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 730,
+				"new": 670
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.154,
+				"new": 0.162
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE"
+				],
+				"kind": "modified",
+				"old": 0.7,
+				"new": 0.735
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 45,
+				"new": 47
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Lash": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 780,
+				"new": 715
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.31,
+				"new": 0.326
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 50,
+				"new": 52
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Viscous": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 780,
+				"new": 715
+			},
+			{
+				"path": [
+					"starting_stats",
+					"crit_damage_received_scale",
+					"value"
+				],
+				"kind": "modified",
+				"old": 1,
+				"new": 0.9
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.36,
+				"new": 0.378
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE"
+				],
+				"kind": "modified",
+				"old": 1.512,
+				"new": 1.588
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 45,
+				"new": 47
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Pocket": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 780,
+				"new": 715
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.14,
+				"new": 0.147
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 36,
+				"new": 38
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Mirage": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 730,
+				"new": 670
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.3,
+				"new": 0.315
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 45,
+				"new": 47
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Traveler": [
+				{
+					"path": [
+						"tooltip_details",
+						"info_sections",
+						"0",
+						"loc_string"
+					],
+					"kind": "modified",
+					"old": "Target a location on the minimap. After a brief wait, <span class=\"highlight\">teleport</span> to that location. Taking damage or being Stunned, Immobilized, put to Sleep or Movement Silenced during the wait period causes the teleport to be interrupted.<br><br>After teleporting, gain a <span class=\"highlight\">Barrier</span>.",
+					"new": "Target a location on the minimap. After a brief wait, <span class=\"highlight\">teleport</span> to that location. Taking damage or being Stunned, Immobilized, put to Sleep or Movement Silenced during the wait period causes the teleport to be interrupted.<br><br>After teleporting, gain a <span class=\"highlight\">Barrier</span>.<br><br><svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M106 74.5C106 102.39 97.196 125 64 125C30.804 125 22 102.39 22 74.5C22 74.2499 22.0048 74.0002 22.0078 73.751C31.2634 78.1321 44.7654 81 64 81C83.234 81 96.7357 78.1319 105.991 73.751C105.994 74.0002 106 74.2499 106 74.5Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M58 22.9204C58.0001 19.6507 60.6863 17 63.9999 17C67.3135 17.0003 69.9999 19.6509 70 22.9204V51.0796C70 54.3492 67.3135 56.9997 63.9999 57C60.6862 57 58 54.3494 58 51.0796V22.9204Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M63.6125 17.008C61.6841 17.0899 59.8918 17.7814 58.5226 18.9327C57.0626 20.1605 56.0002 22.0028 56 24.1999V49.8001C56.0002 51.9973 57.0626 53.8395 58.5226 55.0673C59.8918 56.2186 61.6841 56.9101 63.6125 56.992L64 57C66.075 56.9998 68.0169 56.2945 69.4774 55.0664C70.9372 53.8386 71.9998 51.9972 72 49.8001V24.1999L71.9969 23.9957C71.9332 21.8888 70.8918 20.1232 69.4774 18.9336C68.017 17.7055 66.075 17.0002 64 17L63.6125 17.008Z\" fill=\"black\"/>\n<path d=\"M69 12.9755C73.4305 14.5801 76.598 18.8335 76.598 23.8299V50.7515C76.598 55.7478 73.4304 60.0003 69 61.605V73.4277C84.4336 72.9935 96.282 69.6691 104.368 66.3811C104.93 66.1525 105.474 65.9235 106 65.6961C105.868 63.8985 105.711 62.0149 105.527 60.0406L103.581 44.5956C102.213 35.6269 100.295 26.7201 97.1331 20.6114C89.7895 6.41635 75.6511 4.72025 69 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M59 12.9755C54.5695 14.5801 51.402 18.8335 51.402 23.8299V50.7515C51.402 55.7478 54.5696 60.0003 59 61.605V73.4277C43.5664 72.9935 31.718 69.6691 23.6324 66.3811C23.0701 66.1525 22.526 65.9235 22 65.6961C22.1325 63.8985 22.2887 62.0149 22.4731 60.0406L24.4194 44.5956C25.7871 35.6269 27.7049 26.7201 30.8669 20.6114C38.2105 6.41635 52.3489 4.72025 59 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n</svg>\n to target your base's healing area."
+				}
+			]
+		}
+	},
+	"Vyper": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 780,
+				"new": 715
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.178,
+				"new": 0.187
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 35,
+				"new": 37
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Sinclair": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 730,
+				"new": 670
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.55,
+				"new": 0.578
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE"
+				],
+				"kind": "modified",
+				"old": 0.55,
+				"new": 0.578
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 38,
+				"new": 40
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Mina": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 660,
+				"new": 605
+			},
+			{
+				"path": [
+					"starting_stats",
+					"base_health_regen",
+					"value"
+				],
+				"kind": "modified",
+				"old": 2,
+				"new": 1.5
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.275,
+				"new": 0.289
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 27,
+				"new": 29
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Love Bites": [
+				{
+					"path": [
+						"properties",
+						"BonusDamage",
+						"scale_function",
+						"stat_scale"
+					],
+					"kind": "modified",
+					"old": 1.85,
+					"new": 1.5
+				}
+			]
+		}
+	},
+	"Drifter": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 755,
+				"new": 690
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.49,
+				"new": 0.515
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 41,
+				"new": 43
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Venator": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 820,
+				"new": 750
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 43,
+				"new": 45
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Gutshot": [
+				{
+					"path": [
+						"properties",
+						"AbilityCooldown",
+						"value"
+					],
+					"kind": "modified",
+					"old": "23",
+					"new": "20"
+				}
+			]
+		}
+	},
+	"Victor": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 800,
+				"new": 735
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.26,
+				"new": 0.273
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 34,
+				"new": 36
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Paige": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 680,
+				"new": 625
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.61,
+				"new": 0.641
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 31,
+				"new": 33
+			}
+		],
+		"weapon": [],
 		"abilities": {}
 	},
 	"The Doorman": {
-		"stats": [],
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 755,
+				"new": 690
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 1.25,
+				"new": 1.313
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 42,
+				"new": 44
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Billy": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 820,
+				"new": 750
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.127,
+				"new": 0.133
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 53,
+				"new": 55
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Graves": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_move_speed",
+					"value"
+				],
+				"kind": "modified",
+				"old": 6.7,
+				"new": 6.5
+			},
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 730,
+				"new": 670
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.052,
+				"new": 0.055
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 35,
+				"new": 37
+			}
+		],
 		"weapon": [
+			{
+				"path": [
+					"weapon_info",
+					"cycle_time"
+				],
+				"kind": "modified",
+				"old": 0.102,
+				"new": 0.1075
+			},
 			{
 				"path": [
 					"weapon_info",
 					"bullets_per_second"
 				],
 				"kind": "modified",
-				"old": 1.4705882352941175,
-				"new": 1.5873015873015872
+				"old": 9.803921568627452,
+				"new": 9.30232558139535
 			},
 			{
 				"path": [
@@ -41,58 +1454,663 @@
 					"damage_per_second"
 				],
 				"kind": "modified",
-				"old": 35.29411764705882,
-				"new": 38.095238095238095
+				"old": 35.294117647058826,
+				"new": 33.48837209302326
 			}
 		],
+		"abilities": {}
+	},
+	"Apollo": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 770,
+				"new": 705
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.825,
+				"new": 0.866
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE"
+				],
+				"kind": "modified",
+				"old": 0.5,
+				"new": 0.525
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 45,
+				"new": 47
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Disengaging Sigil": [
+				{
+					"path": [
+						"properties",
+						"AbilityCooldown",
+						"value"
+					],
+					"kind": "modified",
+					"old": "12",
+					"new": "11"
+				}
+			],
+			"Riposte": [
+				{
+					"path": [
+						"properties",
+						"AbilityCastRange",
+						"value"
+					],
+					"kind": "modified",
+					"old": "0",
+					"new": "35m"
+				},
+				{
+					"path": [
+						"properties",
+						"SlowDuration",
+						"value"
+					],
+					"kind": "modified",
+					"old": "4",
+					"new": "2"
+				},
+				{
+					"path": [
+						"properties",
+						"SlowPercent",
+						"value"
+					],
+					"kind": "modified",
+					"old": "40",
+					"new": "50"
+				},
+				{
+					"path": [
+						"properties",
+						"Damage",
+						"value"
+					],
+					"kind": "added",
+					"new": "100"
+				},
+				{
+					"path": [
+						"properties",
+						"Damage",
+						"scale_function",
+						"stat_scale"
+					],
+					"kind": "added",
+					"new": 1.5
+				},
+				{
+					"path": [
+						"properties",
+						"DashGraceWindow",
+						"value"
+					],
+					"kind": "modified",
+					"old": "1.3",
+					"new": "1.8"
+				},
+				{
+					"path": [
+						"properties",
+						"DashRange",
+						"value"
+					],
+					"kind": "removed",
+					"old": "35m"
+				},
+				{
+					"path": [
+						"properties",
+						"StunDuration",
+						"value"
+					],
+					"kind": "removed",
+					"old": "1.5"
+				},
+				{
+					"path": [
+						"properties",
+						"MeleeResistReduction",
+						"value"
+					],
+					"kind": "removed",
+					"old": "-25"
+				},
+				{
+					"path": [
+						"properties",
+						"MeleeResistReductionDuration",
+						"value"
+					],
+					"kind": "removed",
+					"old": "3.0"
+				},
+				{
+					"path": [
+						"tooltip_details",
+						"info_sections",
+						"0",
+						"loc_string"
+					],
+					"kind": "modified",
+					"old": "Prepare to <span class=\"highlight\">deflect</span> the next incoming attack. On a successful deflection, briefly become <span class=\"highlight\">invulnerable</span> and target an enemy hero to dash towards them, <span class=\"highlight\">immobilizing</span> and <span class=\"highlight\">disarming</span> them, preventing them from <span class=\"highlight\">parrying</span>, and reducing their <span class=\"highlight\">Melee Resist</span>.<br><br><span class=\"diminish\">Press Ability 2 to select a target.<br>Does not trigger against trooper or neutral damage.</span>",
+					"new": "Prepare to <span class=\"highlight\">deflect</span> all incoming <span class=\"highlight\">ability</span> damage. On a successful deflection, briefly become <span class=\"highlight\">invulnerable</span> and gain the ability to dash to an enemy hero whose attack you deflected. Hitting them deals <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDamage\">spirit damage</span>, knocks them back, applies <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_slow_large.png\" class=\"inline-attribute Slow\" alt=\"slow\"/><span class=\"inline-attribute-label Slow\">slow</span> and prevents <span class=\"highlight\">stamina usage</span>.<br><br>While deflecting, <span class=\"highlight\">bullets</span> are reflected back at the attacker.<br><br><span class=\"diminish\">Press Ability 2 to counter attack.<br>Reflected bullets do not trigger the counter attack.</span>"
+				}
+			],
+			"Flawless Advance": [
+				{
+					"path": [
+						"properties",
+						"AbilityCooldown",
+						"value"
+					],
+					"kind": "modified",
+					"old": "26",
+					"new": "30"
+				}
+			]
+		}
+	},
+	"Deadman Danny": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 730,
+				"new": 670
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.42,
+				"new": 0.441
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE"
+				],
+				"kind": "modified",
+				"old": 1.6,
+				"new": 1.68
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 39,
+				"new": 41
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Strix Salvo": [
+				{
+					"path": [
+						"properties",
+						"AbilityCooldown",
+						"value"
+					],
+					"kind": "modified",
+					"old": 25,
+					"new": 26
+				},
+				{
+					"path": [
+						"properties",
+						"Damage",
+						"scale_function",
+						"stat_scale"
+					],
+					"kind": "modified",
+					"old": 0.681,
+					"new": 0.62
+				}
+			],
+			"Chimera Mk1": [
+				{
+					"path": [
+						"properties",
+						"Radius",
+						"value"
+					],
+					"kind": "modified",
+					"old": "8.0m",
+					"new": "6.5m"
+				}
+			]
+		}
+	},
+	"Rem": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 680,
+				"new": 625
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.34,
+				"new": 0.357
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 28,
+				"new": 30
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Silver": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 830,
+				"new": 760
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.117,
+				"new": 0.123
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL_ALT_FIRE"
+				],
+				"kind": "modified",
+				"old": 0.7735,
+				"new": 0.8122
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 31,
+				"new": 33
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Celeste": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 690,
+				"new": 630
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.82,
+				"new": 0.861
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 33,
+				"new": 35
+			}
+		],
+		"weapon": [],
 		"abilities": {}
 	},
 	"Rat King": {
-		"stats": [],
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 800,
+				"new": 735
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.144,
+				"new": 0.151
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 50,
+				"new": 52
+			}
+		],
+		"weapon": [],
+		"abilities": {
+			"Rule, Ratannia!": [
+				{
+					"path": [
+						"properties",
+						"BonusMoveSpeed",
+						"value"
+					],
+					"kind": "modified",
+					"old": "4m",
+					"new": "5m"
+				}
+			]
+		}
+	},
+	"Solomon": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 780,
+				"new": 715
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.4,
+				"new": 0.42
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 40,
+				"new": 42
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Violet": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 710,
+				"new": 650
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.55,
+				"new": 0.578
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 34,
+				"new": 36
+			}
+		],
+		"weapon": [],
+		"abilities": {}
+	},
+	"Nurse Harrow": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 730,
+				"new": 670
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.37436,
+				"new": 0.39308
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 32,
+				"new": 34
+			}
+		],
 		"weapon": [
 			{
 				"path": [
 					"weapon_info",
-					"bullets_per_second"
+					"bullet_speed"
 				],
 				"kind": "modified",
-				"old": 6.666666666666666,
-				"new": 10
-			},
-			{
-				"path": [
-					"weapon_info",
-					"damage_per_second"
-				],
-				"kind": "modified",
-				"old": 38.666666666666664,
-				"new": 58
+				"old": 20000,
+				"new": 14000
 			}
 		],
 		"abilities": {}
 	},
-	"Solomon": {
-		"stats": [],
+	"Baba": {
+		"stats": [
+			{
+				"path": [
+					"starting_stats",
+					"max_move_speed",
+					"value"
+				],
+				"kind": "modified",
+				"old": 6.5,
+				"new": 6.4
+			},
+			{
+				"path": [
+					"starting_stats",
+					"max_health",
+					"value"
+				],
+				"kind": "modified",
+				"old": 780,
+				"new": 715
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_BULLET_DAMAGE_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 0.41,
+				"new": 0.431
+			},
+			{
+				"path": [
+					"standard_level_up_upgrades",
+					"MODIFIER_VALUE_BASE_HEALTH_FROM_LEVEL"
+				],
+				"kind": "modified",
+				"old": 45,
+				"new": 47
+			},
+			{
+				"path": [
+					"scaling_stats",
+					"ETechArmorDamageReduction",
+					"scale"
+				],
+				"kind": "modified",
+				"old": 0.05,
+				"new": 0.02
+			}
+		],
 		"weapon": [
 			{
 				"path": [
 					"weapon_info",
-					"bullets_per_second"
+					"bullet_radius"
 				],
 				"kind": "modified",
-				"old": 1.7391304347826089,
-				"new": 2
+				"old": 7,
+				"new": 8.5
 			},
 			{
 				"path": [
 					"weapon_info",
-					"damage_per_second"
+					"spread"
 				],
 				"kind": "modified",
-				"old": 43.47826086956522,
-				"new": 50
+				"old": 0,
+				"new": 0.25
 			}
 		],
-		"abilities": {}
+		"abilities": {
+			"Threadsap": [
+				{
+					"path": [
+						"properties",
+						"DebuffDuration",
+						"value"
+					],
+					"kind": "modified",
+					"old": "16",
+					"new": "10"
+				},
+				{
+					"path": [
+						"properties",
+						"MagicDamagePerBullet",
+						"value"
+					],
+					"kind": "modified",
+					"old": "8",
+					"new": "12"
+				}
+			],
+			"Feed The Birds": [
+				{
+					"path": [
+						"properties",
+						"TimeToMaxStacks",
+						"value"
+					],
+					"kind": "modified",
+					"old": "3.5",
+					"new": "4"
+				},
+				{
+					"path": [
+						"properties",
+						"AbilityCastRange",
+						"value"
+					],
+					"kind": "modified",
+					"old": "18m",
+					"new": "20m"
+				},
+				{
+					"path": [
+						"properties",
+						"BarrageMaxDamage",
+						"value"
+					],
+					"kind": "modified",
+					"old": "450",
+					"new": "650"
+				}
+			]
+		}
 	}
 }

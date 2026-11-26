@@ -1846,13 +1846,18 @@
 				{
 					"key": "MaxBonusBulletDamage|EAddToScale#0",
 					"label": "Max Bonus Bullet Damage",
-					"kind": "equal",
-					"new": "55",
+					"kind": "changed",
+					"old": "55",
+					"new": "40",
 					"scaling": "EWeaponPower",
 					"prefix": "",
 					"postfix": ""
 				}
-			]
+			],
+			"text": {
+				"old": "+2s Charge Hold Duration and +55% Damage Scaling",
+				"new": "+2s Charge Hold Duration and +40% Damage Scaling"
+			}
 		}
 	],
 	"Paradoxical Swap": [
@@ -2423,8 +2428,9 @@
 				{
 					"key": "Damage|#0",
 					"label": "Damage",
-					"kind": "equal",
-					"new": 50
+					"kind": "changed",
+					"old": 50,
+					"new": 45
 				},
 				{
 					"key": "Radius|#0",
@@ -2433,7 +2439,11 @@
 					"new": "2m",
 					"postfix": "m"
 				}
-			]
+			],
+			"text": {
+				"old": "+<span class=\"highlight\">2m</span> Radius and +<span class=\"highlight\">50.0</span> Damage.",
+				"new": "+<span class=\"highlight\">2m</span> Radius and +<span class=\"highlight\">45.0</span> Damage."
+			}
 		},
 		{
 			"tier": 3,
@@ -3640,8 +3650,9 @@
 				{
 					"key": "DPS|EAddToScale#0",
 					"label": "DPS",
-					"kind": "equal",
-					"new": "0.6",
+					"kind": "changed",
+					"old": "0.6",
+					"new": "0.5",
 					"scaling": "ETechPower",
 					"prefix": "",
 					"postfix": ""
@@ -3722,8 +3733,9 @@
 				{
 					"key": "BonusSpiritPct|#0",
 					"label": "Bonus Spirit Pct",
-					"kind": "equal",
-					"new": "35"
+					"kind": "changed",
+					"old": "35",
+					"new": "30"
 				},
 				{
 					"key": "BonusSpirit|#0",
@@ -3732,7 +3744,11 @@
 					"new": "20",
 					"prefix": "{s:sign}"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+35%</span> Spirit and <span class=\"highlight\">+20</span> Spirit for Kelvin while on Ice Path",
+				"new": "<span class=\"highlight\">+30%</span> Spirit and <span class=\"highlight\">+20</span> Spirit for Kelvin while on Ice Path"
+			}
 		}
 	],
 	"Frost Grenade": [
@@ -4824,17 +4840,23 @@
 				{
 					"key": "CooldownRefundPercent|#0",
 					"label": "Cooldown Refund Percent",
-					"kind": "equal",
-					"new": "50",
+					"kind": "changed",
+					"old": "50",
+					"new": "60",
 					"postfix": "%"
 				},
 				{
 					"key": "ImpactDamage|#0",
 					"label": "Impact Damage",
-					"kind": "equal",
-					"new": "90"
+					"kind": "changed",
+					"old": "90",
+					"new": "100"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+90</span> Damage & On Hero Hit: <span class=\"highlight\">50%</span> Cooldown Refund",
+				"new": "<span class=\"highlight\">+100</span> Damage & On Hero Hit: <span class=\"highlight\">60%</span> Cooldown Refund"
+			}
 		}
 	],
 	"The Mourning Comes": [
@@ -5142,12 +5164,10 @@
 			"tier": 2,
 			"rows": [
 				{
-					"key": "TechArmorDamageReduction|#0",
-					"label": "Tech Armor Damage Reduction",
-					"kind": "equal",
-					"new": "-4",
-					"prefix": "{s:sign}",
-					"postfix": "%"
+					"key": "ImpactDamage|#0",
+					"label": "Impact Damage",
+					"kind": "added",
+					"new": "50"
 				},
 				{
 					"key": "DashRange|#0",
@@ -5155,17 +5175,31 @@
 					"kind": "equal",
 					"new": "2m",
 					"postfix": "m"
+				},
+				{
+					"key": "TechArmorDamageReduction|#0",
+					"label": "Tech Armor Damage Reduction",
+					"kind": "removed",
+					"old": "-4",
+					"prefix": "{s:sign}",
+					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">-4%</span> Spirit Resist<br><span class=\"highlight\">+2m</span> Dash Range",
+				"new": "<span class=\"highlight\">+50</span> Impact Damage<br><span class=\"highlight\">+2m</span> Dash Range"
+			}
 		},
 		{
 			"tier": 3,
 			"rows": [
 				{
-					"key": "ImpactDamage|#0",
-					"label": "Impact Damage",
-					"kind": "equal",
-					"new": "50"
+					"key": "TechArmorDamageReduction|#0",
+					"label": "Tech Armor Damage Reduction",
+					"kind": "added",
+					"new": "-4",
+					"prefix": "{s:sign}",
+					"postfix": "%"
 				},
 				{
 					"key": "CooldownReductionOnHit|#0",
@@ -5186,8 +5220,18 @@
 					"label": "Max Cooldown Reductions From Hits",
 					"kind": "equal",
 					"new": "8"
+				},
+				{
+					"key": "ImpactDamage|#0",
+					"label": "Impact Damage",
+					"kind": "removed",
+					"old": "50"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+50</span> Impact Damage<br><span class=\"highlight\">-2s</span> Cooldown per Hero hit.",
+				"new": "<span class=\"highlight\">-4%</span> Spirit Resist<br><span class=\"highlight\">-2s</span> Cooldown per Hero hit."
+			}
 		}
 	],
 	"Bloodletting": [
@@ -5275,11 +5319,16 @@
 				{
 					"key": "EnemyHealthPercent|#0",
 					"label": "Enemy Health Percent",
-					"kind": "equal",
-					"new": "10",
+					"kind": "changed",
+					"old": "10",
+					"new": "8",
 					"postfix": "%"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+10%</span> Enemy Health Threshold",
+				"new": "<span class=\"highlight\">+8%</span> Enemy Health Threshold"
+			}
 		}
 	],
 	"citadel_weapon_shieldguy_set": [
@@ -5836,10 +5885,17 @@
 			"tier": 2,
 			"rows": [
 				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "added",
+					"new": "0.75",
+					"postfix": "s"
+				},
+				{
 					"key": "AbilityCooldown|#0",
 					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": "-25",
+					"kind": "removed",
+					"old": "-25",
 					"postfix": "s"
 				}
 			]
@@ -5848,20 +5904,32 @@
 			"tier": 3,
 			"rows": [
 				{
-					"key": "StunDuration|#0",
-					"label": "Stun Duration",
-					"kind": "equal",
-					"new": "0.75",
+					"key": "AbilityCooldown|#0",
+					"label": "Ability Cooldown",
+					"kind": "added",
+					"new": "-25",
 					"postfix": "s"
 				},
 				{
 					"key": "Damage|EAddToScale#0",
 					"label": "Damage",
-					"kind": "equal",
-					"new": "1.5",
+					"kind": "changed",
+					"old": "1.5",
+					"new": "1.2",
 					"scaling": "ETechPower"
+				},
+				{
+					"key": "StunDuration|#0",
+					"label": "Stun Duration",
+					"kind": "removed",
+					"old": "0.75",
+					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+0.75s</span> Stun Duration and increased Damage spirit scaling",
+				"new": "<span class=\"highlight\">-25s</span> Cooldown and increased Damage spirit scaling"
+			}
 		}
 	],
 	"Air Drop": [
@@ -5869,27 +5937,9 @@
 			"tier": 1,
 			"rows": [
 				{
-					"key": "AirDropBulletShield|#0",
-					"label": "Air Drop Bullet Shield",
-					"kind": "equal",
-					"new": "300"
-				},
-				{
-					"key": "AirDropBulletShield|EAddToScale#0",
-					"label": "Air Drop Bullet Shield",
-					"kind": "equal",
-					"new": "0.7",
-					"scaling": "ETechPower"
-				}
-			]
-		},
-		{
-			"tier": 2,
-			"rows": [
-				{
 					"key": "SlowPercent|#0",
 					"label": "Slow Percent",
-					"kind": "equal",
+					"kind": "added",
 					"new": "32",
 					"prefix": "-",
 					"postfix": "%"
@@ -5897,11 +5947,65 @@
 				{
 					"key": "DebuffDuration|#0",
 					"label": "Debuff Duration",
-					"kind": "equal",
+					"kind": "added",
 					"new": "3",
 					"postfix": "s"
+				},
+				{
+					"key": "AirDropBulletShield|#0",
+					"label": "Air Drop Bullet Shield",
+					"kind": "removed",
+					"old": "300"
+				},
+				{
+					"key": "AirDropBulletShield|EAddToScale#0",
+					"label": "Air Drop Bullet Shield",
+					"kind": "removed",
+					"old": "0.7",
+					"scaling": "ETechPower"
 				}
-			]
+			],
+			"text": {
+				"old": "On Fly End : <span class=\"highlight\">300</span> Barrier to Ivy and ally that scales with Spirit",
+				"new": "<span class=\"highlight\">+32%</span> Slow for <span class=\"highlight\">3s</span> on enemies hit"
+			}
+		},
+		{
+			"tier": 2,
+			"rows": [
+				{
+					"key": "AirDropBulletShield|#0",
+					"label": "Air Drop Bullet Shield",
+					"kind": "added",
+					"new": "300"
+				},
+				{
+					"key": "AirDropBulletShield|EAddToScale#0",
+					"label": "Air Drop Bullet Shield",
+					"kind": "added",
+					"new": "0.7",
+					"scaling": "ETechPower"
+				},
+				{
+					"key": "SlowPercent|#0",
+					"label": "Slow Percent",
+					"kind": "removed",
+					"old": "32",
+					"prefix": "-",
+					"postfix": "%"
+				},
+				{
+					"key": "DebuffDuration|#0",
+					"label": "Debuff Duration",
+					"kind": "removed",
+					"old": "3",
+					"postfix": "s"
+				}
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+32%</span> Slow for <span class=\"highlight\">3s</span> on enemies hit",
+				"new": "On Fly End : <span class=\"highlight\">300</span> Barrier to Ivy and ally that scales with Spirit"
+			}
 		},
 		{
 			"tier": 3,
@@ -6286,8 +6390,18 @@
 					"new": "20",
 					"prefix": "+",
 					"postfix": "%"
+				},
+				{
+					"key": "CombatBarrier|#0",
+					"label": "Combat Barrier",
+					"kind": "added",
+					"new": "50"
 				}
-			]
+			],
+			"text": {
+				"old": "",
+				"new": "<span class=\"highlight\">+20%</span> Move Speed and <span class=\"highlight\">+50</span> Barrier"
+			}
 		},
 		{
 			"tier": 2,
@@ -6608,8 +6722,9 @@
 				{
 					"key": "MagicDamagePerBullet|EAddToScale#0",
 					"label": "Magic Damage Per Bullet",
-					"kind": "equal",
-					"new": "0.045",
+					"kind": "changed",
+					"old": "0.045",
+					"new": "0.03",
 					"scaling": "ETechPower"
 				},
 				{
@@ -8162,11 +8277,16 @@
 				{
 					"key": "AbilityCastRange|#0",
 					"label": "Ability Cast Range",
-					"kind": "equal",
-					"new": "4m",
+					"kind": "changed",
+					"old": "4m",
+					"new": "3m",
 					"postfix": "m"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+1</span> Recast<br><span class=\"highlight\">+4m</span> Range",
+				"new": "<span class=\"highlight\">+1</span> Recast<br><span class=\"highlight\">+3m</span> Range"
+			}
 		}
 	],
 	"Love Bites": [
@@ -8204,8 +8324,19 @@
 					"label": "Bonus Damage",
 					"kind": "equal",
 					"new": 45
+				},
+				{
+					"key": "BonusDamage|EAddToScale#0",
+					"label": "Bonus Damage",
+					"kind": "added",
+					"new": "0.35",
+					"scaling": "ETechPower"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">+3.0</span> Spirit Damage per Bullet & <br><span class=\"highlight\">+45.0</span> Bonus Damage",
+				"new": "<span class=\"highlight\">+3.0</span> Spirit Damage per Bullet & <br><span class=\"highlight\">+45.0</span> Bonus Damage with increased Spirit scaling"
+			}
 		},
 		{
 			"tier": 3,
@@ -11283,8 +11414,9 @@
 				{
 					"key": "AbilityCooldown|#0",
 					"label": "Ability Cooldown",
-					"kind": "equal",
-					"new": "-8",
+					"kind": "changed",
+					"old": "-8",
+					"new": "-9",
 					"postfix": "s"
 				}
 			]
@@ -11293,20 +11425,37 @@
 			"tier": 2,
 			"rows": [
 				{
+					"key": "Damage|#0",
+					"label": "Damage",
+					"kind": "added",
+					"new": "100"
+				},
+				{
+					"key": "SlowDuration|#0",
+					"label": "Slow Duration",
+					"kind": "added",
+					"new": "1",
+					"postfix": "s"
+				},
+				{
 					"key": "MeleeResistReduction|#0",
 					"label": "Melee Resist Reduction",
-					"kind": "equal",
-					"new": "-25",
+					"kind": "removed",
+					"old": "-25",
 					"postfix": "%"
 				},
 				{
 					"key": "StunDuration|#0",
 					"label": "Stun Duration",
-					"kind": "equal",
-					"new": "0.7",
+					"kind": "removed",
+					"old": "0.7",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">-25%</span> Melee Resist and <span class=\"highlight\">+0.7s</span> Immobilize Duration",
+				"new": "<span class=\"highlight\">+100</span> Damage <br><span class=\"highlight\">+1s</span> Debuff Duration"
+			}
 		},
 		{
 			"tier": 3,
@@ -12234,8 +12383,9 @@
 				{
 					"key": "BulletDamageMultiplier|#0",
 					"label": "Bullet Damage Multiplier",
-					"kind": "equal",
-					"new": "30",
+					"kind": "changed",
+					"old": "30",
+					"new": "45",
 					"postfix": "%"
 				},
 				{
@@ -12252,7 +12402,11 @@
 					"new": "0.4",
 					"scaling": "ETechPower"
 				}
-			]
+			],
+			"text": {
+				"old": "+1s Cooldown Reduction Per Hit<br>Improve scaling",
+				"new": "+45% Bullet Damage<br>+1s Cooldown Reduction Per Hit<br>Increased Spirit Damage Scaling"
+			}
 		}
 	],
 	"Flow State": [
@@ -12485,11 +12639,16 @@
 				{
 					"key": "DebuffDuration|#0",
 					"label": "Debuff Duration",
-					"kind": "equal",
-					"new": "8",
+					"kind": "changed",
+					"old": "8",
+					"new": "6",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "-12s Cooldown<br>+8s Debuff Duration",
+				"new": "-12s Cooldown<br>+6s Debuff Duration"
+			}
 		},
 		{
 			"tier": 3,
@@ -13614,8 +13773,9 @@
 				{
 					"key": "ReturnFireChance|#0",
 					"label": "Return Fire Chance",
-					"kind": "equal",
-					"new": "15",
+					"kind": "changed",
+					"old": "15",
+					"new": "20",
 					"postfix": "%"
 				},
 				{
@@ -13625,7 +13785,11 @@
 					"new": "-8",
 					"postfix": "s"
 				}
-			]
+			],
+			"text": {
+				"old": "<span class=\"highlight\">-8s</span> Cooldown<br><span class=\"highlight\">+15%</span> Bullet Return Chance",
+				"new": "<span class=\"highlight\">-8s</span> Cooldown<br><span class=\"highlight\">+20%</span> Bullet Return Chance"
+			}
 		},
 		{
 			"tier": 3,

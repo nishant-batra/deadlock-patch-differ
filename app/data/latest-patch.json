@@ -14770,7 +14770,7 @@
 			"zoom_move_speed_percent": 1,
 			"bullets": 1,
 			"burst_shot_count": 1,
-			"clip_size": 10,
+			"clip_size": 8,
 			"spread": 0,
 			"standing_spread": 1.5,
 			"reload_duration": 2.75,
@@ -14792,13 +14792,13 @@
 			},
 			"recycle_time": 1,
 			"shots_per_second": 2.1164021164021167,
-			"shots_per_second_with_reload": 1.2944983818770228,
+			"shots_per_second_with_reload": 1.1799410029498527,
 			"bullets_per_second": 2.1164021164021167,
-			"bullets_per_second_with_reload": 1.2944983818770228,
+			"bullets_per_second_with_reload": 1.1799410029498527,
 			"damage_per_second": 41.6931216931217,
-			"damage_per_second_with_reload": 25.501618122977348,
+			"damage_per_second_with_reload": 23.244837758112098,
 			"damage_per_shot": 19.7,
-			"damage_per_magazine": 197
+			"damage_per_magazine": 157.6
 		}
 	},
 	{
@@ -16156,7 +16156,7 @@
 				"scale_function": {
 					"class_name": "scale_function_tech_damage",
 					"subclass_name": "Damage_scale_function",
-					"stat_scale": 1.116,
+					"stat_scale": 0.9,
 					"street_brawl_stat_scale": 2.5
 				},
 				"label": "Damage",
@@ -24658,7 +24658,7 @@
 					"class_name": "scale_function_kinetic_carbine_damage",
 					"subclass_name": "MaxBonusBulletDamage_scale_function",
 					"specific_stat_scale_type": "EWeaponPower",
-					"stat_scale": 125
+					"stat_scale": 110
 				},
 				"prefix": "",
 				"label": "Max Damage",
@@ -24755,7 +24755,7 @@
 			"desc": "Charge up a powerful shot of time energy, dealing <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDamage\">spirit damage</span> and applying a <span class=\"highlight\">Time-Stop</span> to enemies hit. The damage dealt increases with <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M32.0027 9C40.8042 9 48.6533 13.3022 53.7875 20.0238H53.7766C57.1324 24.4142 58.5664 26.6091 59.9993 26.6084C61.4318 26.6078 62.8632 24.4129 66.2125 20.0238C71.3467 13.3022 79.1958 9 87.9973 9C103.466 9 116 22.2789 116 38.6558C116 38.7707 115.999 38.8854 115.998 39H4.00155C4.00052 38.8854 4 38.7707 4 38.6558C4 22.2789 16.5345 9 32.0027 9Z\" fill=\"white\"/>\n<path d=\"M24.5608 79C27.3761 82.0873 30.3317 85.1748 33.3264 88.303C41.7966 97.1509 50.5788 106.325 57.3782 116.742C58.8889 119.051 61.1111 119.051 62.6218 116.742C69.4174 106.328 78.1987 97.1556 86.6692 88.3073C89.6652 85.1778 92.6222 82.0889 95.4388 79H24.5608Z\" fill=\"white\"/>\n<path d=\"M123 59.0055C123 59.0055 117.403 49 100.88 49H75V69H100.88C117.413 69 123 58.9945 123 58.9945V59.0055Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label WeaponDamage\">weapon damage</span>. Move speed is increased while charging. <br><br>While in the air and charging, <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M106 74.5C106 102.39 97.196 125 64 125C30.804 125 22 102.39 22 74.5C22 74.2499 22.0048 74.0002 22.0078 73.751C31.2634 78.1321 44.7654 81 64 81C83.234 81 96.7357 78.1319 105.991 73.751C105.994 74.0002 106 74.2499 106 74.5Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M58 22.9204C58.0001 19.6507 60.6863 17 63.9999 17C67.3135 17.0003 69.9999 19.6509 70 22.9204V51.0796C70 54.3492 67.3135 56.9997 63.9999 57C60.6862 57 58 54.3494 58 51.0796V22.9204Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M69 12.9755C73.4305 14.5801 76.598 18.8335 76.598 23.8299V50.7515C76.598 55.7478 73.4304 60.0003 69 61.605V73.4277C84.4336 72.9935 96.282 69.6691 104.368 66.3811C104.93 66.1525 105.474 65.9235 106 65.6961C105.868 63.8985 105.711 62.0149 105.527 60.0406L103.581 44.5956C102.213 35.6269 100.295 26.7201 97.1331 20.6114C89.7895 6.41635 75.6511 4.72025 69 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M59 12.9755C54.5695 14.5801 51.402 18.8335 51.402 23.8299V50.7515C51.402 55.7478 54.5696 60.0003 59 61.605V73.4277C43.5664 72.9935 31.718 69.6691 23.6324 66.3811C23.0701 66.1525 22.526 65.9235 22 65.6961C22.1325 63.8985 22.2887 62.0149 22.4731 60.0406L24.4194 44.5956C25.7871 35.6269 27.7049 26.7201 30.8669 20.6114C38.2105 6.41635 52.3489 4.72025 59 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M69 12.9755C73.4305 14.5801 76.598 18.8335 76.598 23.8299V50.7515C76.598 55.7478 73.4304 60.0003 69 61.605V73.4277C84.4336 72.9935 96.282 69.6691 104.368 66.3811C104.93 66.1525 105.474 65.9235 106 65.6961C105.868 63.8985 105.711 62.0149 105.527 60.0406L103.581 44.5956C102.213 35.6269 100.295 26.7201 97.1331 20.6114C89.7895 6.41635 75.6511 4.72025 69 4.42773V12.9755Z\" fill=\"black\"/>\n</svg>\n to timeslow your movement.",
 			"quip": "Charge up your weapon to deal high damage and timestop",
 			"t2_desc": "-12.0s Cooldown<br>Increases Speed Scaling",
-			"t3_desc": "+2s Charge Hold Duration and +55% Damage Scaling"
+			"t3_desc": "+2s Charge Hold Duration and +40% Damage Scaling"
 		},
 		"tooltip_details": {
 			"info_sections": [
@@ -24815,7 +24815,7 @@
 					},
 					{
 						"name": "MaxBonusBulletDamage",
-						"bonus": "55",
+						"bonus": "40",
 						"scale_stat_filter": "EWeaponPower",
 						"upgrade_type": "EAddToScale"
 					}
@@ -30116,19 +30116,19 @@
 				"postvalue_label": "Weapon Damage"
 			},
 			"SelfDamagePct": {
-				"value": "30",
+				"value": "50",
 				"label": "Health Cost",
 				"postfix": "%",
 				"postvalue_label": "Health Cost"
 			},
 			"Damage": {
-				"value": 90,
+				"value": 85,
 				"css_class": "tech_damage",
 				"scale_function": {
 					"class_name": "scale_function_tech_damage",
 					"subclass_name": "Damage_scale_function",
 					"specific_stat_scale_type": "ETechPower",
-					"stat_scale": 1.35
+					"stat_scale": 1.3
 				},
 				"label": "Damage",
 				"postvalue_label": "Damage",
@@ -30149,7 +30149,7 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
 			},
 			"ArmingDuration": {
-				"value": "0.65",
+				"value": "0.8",
 				"css_class": "duration",
 				"label": "Arming Duration",
 				"postfix": "s",
@@ -30193,7 +30193,7 @@
 		"description": {
 			"desc": "<span class=\"highlight\">Sacrifice some of your health</span> to launch a bomb that <span class=\"highlight\">deals damage</span> after a brief arm time.<br>Self damage type is Spirit and can be mitigated.",
 			"quip": "Sacrifice some health to launch a damaging bomb",
-			"t2_desc": "+<span class=\"highlight\">2m</span> Radius and +<span class=\"highlight\">50.0</span> Damage.",
+			"t2_desc": "+<span class=\"highlight\">2m</span> Radius and +<span class=\"highlight\">45.0</span> Damage.",
 			"t3_desc": "Bombs leave a toxic mess on the ground, dealing <span class=\"highlight\">30.0%</span> of the original <span class=\"highlight\">damage per second</span>, for <span class=\"highlight\">6s</span>."
 		},
 		"tooltip_details": {
@@ -30244,7 +30244,7 @@
 				"property_upgrades": [
 					{
 						"name": "Damage",
-						"bonus": 50
+						"bonus": 45
 					},
 					{
 						"name": "Radius",
@@ -36437,7 +36437,8 @@
 			"CITADEL_ABILITY_BEHAVIOR_NO_TARGET",
 			"CITADEL_ABILITY_BEHAVIOR_MOVEMENT",
 			"CITADEL_ABILITY_BEHAVIOR_REQUIRE_ABILITY_BUTTON_TO_CANCEL",
-			"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST"
+			"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST",
+			"CITADEL_ABILITY_BEHAVIOR_FLYING"
 		],
 		"description": {
 			"desc": "Leap into the air and <span class=\"highlight\">fly</span>. While in flight your weapon deals <span class=\"highlight\">bonus spirit damage</span> and your items have increased <span class=\"highlight\">range.</span>",
@@ -38541,10 +38542,10 @@
 				"value": "50"
 			},
 			"GrowthPerMeter": {
-				"value": "0.5m"
+				"value": "0.475m"
 			},
 			"InitialWidth": {
-				"value": "1m"
+				"value": "1.5m"
 			},
 			"SlowDuration": {
 				"value": "4",
@@ -39455,7 +39456,7 @@
 		"update_time": 1685732973,
 		"properties": {
 			"AbilityCooldown": {
-				"value": 28,
+				"value": 29,
 				"can_set_token_override": true,
 				"css_class": "cooldown",
 				"disable_value": "0",
@@ -39613,7 +39614,7 @@
 					"class_name": "scale_function_tech_damage",
 					"subclass_name": "DPS_scale_function",
 					"specific_stat_scale_type": "ETechPower",
-					"stat_scale": 0.38
+					"stat_scale": 0.32
 				},
 				"prefix": "",
 				"label": "Damage Per Second",
@@ -39683,7 +39684,7 @@
 				"postvalue_label": "Max Dash Slow"
 			},
 			"MaxSlowTime": {
-				"value": "2.0",
+				"value": "2.5",
 				"css_class": "duration",
 				"label": "Time To Max Debuff",
 				"postfix": "s",
@@ -39817,7 +39818,7 @@
 					},
 					{
 						"name": "DPS",
-						"bonus": "0.6",
+						"bonus": "0.5",
 						"scale_stat_filter": "ETechPower",
 						"upgrade_type": "EAddToScale"
 					}
@@ -40213,7 +40214,7 @@
 			"desc": "Kelvin creates a <span class=\"highlight\">floating trail</span> of ice and snow that gives movement bonuses to him and his allies. Kelvin gains 60% slow resistance for the duration. Enemies can also walk on the floating trail. <br>Press Dash / Crouch / slide to travel up or down while in Ice Path.",
 			"quip": "Speed around on a floating path of ice",
 			"t1_desc": "<span class=\"highlight\">+2m</span> Move Speed and <span class=\"highlight\">+35%</span> Bullet Resist for Kelvin while on Ice Path",
-			"t3_desc": "<span class=\"highlight\">+35%</span> Spirit and <span class=\"highlight\">+20</span> Spirit for Kelvin while on Ice Path"
+			"t3_desc": "<span class=\"highlight\">+30%</span> Spirit and <span class=\"highlight\">+20</span> Spirit for Kelvin while on Ice Path"
 		},
 		"tooltip_details": {
 			"info_sections": [
@@ -40262,7 +40263,7 @@
 				"property_upgrades": [
 					{
 						"name": "BonusSpiritPct",
-						"bonus": "35"
+						"bonus": "30"
 					},
 					{
 						"name": "BonusSpirit",
@@ -44628,10 +44629,11 @@
 			"CITADEL_ABILITY_BEHAVIOR_CAN_CAST_ON_ZIPLINE",
 			"CITADEL_ABILITY_BEHAVIOR_CASTABLE_WHILE_BUSY",
 			"CITADEL_ABILITY_BEHAVIOR_REQUIRE_ABILITY_BUTTON_TO_CANCEL",
-			"CITADEL_ABILITY_BEHAVIOR_CAN_CANCEL_DURING_CAST_DELAY"
+			"CITADEL_ABILITY_BEHAVIOR_CAN_CANCEL_DURING_CAST_DELAY",
+			"CITADEL_ABILITY_BEHAVIOR_ALLOW_ALT_CAST"
 		],
 		"description": {
-			"desc": "Target a location on the minimap. After a brief wait, <span class=\"highlight\">teleport</span> to that location. Taking damage or being Stunned, Immobilized, put to Sleep or Movement Silenced during the wait period causes the teleport to be interrupted.<br><br>After teleporting, gain a <span class=\"highlight\">Barrier</span>.",
+			"desc": "Target a location on the minimap. After a brief wait, <span class=\"highlight\">teleport</span> to that location. Taking damage or being Stunned, Immobilized, put to Sleep or Movement Silenced during the wait period causes the teleport to be interrupted.<br><br>After teleporting, gain a <span class=\"highlight\">Barrier</span>.<br><br><svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M106 74.5C106 102.39 97.196 125 64 125C30.804 125 22 102.39 22 74.5C22 74.2499 22.0048 74.0002 22.0078 73.751C31.2634 78.1321 44.7654 81 64 81C83.234 81 96.7357 78.1319 105.991 73.751C105.994 74.0002 106 74.2499 106 74.5Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M58 22.9204C58.0001 19.6507 60.6863 17 63.9999 17C67.3135 17.0003 69.9999 19.6509 70 22.9204V51.0796C70 54.3492 67.3135 56.9997 63.9999 57C60.6862 57 58 54.3494 58 51.0796V22.9204Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M63.6125 17.008C61.6841 17.0899 59.8918 17.7814 58.5226 18.9327C57.0626 20.1605 56.0002 22.0028 56 24.1999V49.8001C56.0002 51.9973 57.0626 53.8395 58.5226 55.0673C59.8918 56.2186 61.6841 56.9101 63.6125 56.992L64 57C66.075 56.9998 68.0169 56.2945 69.4774 55.0664C70.9372 53.8386 71.9998 51.9972 72 49.8001V24.1999L71.9969 23.9957C71.9332 21.8888 70.8918 20.1232 69.4774 18.9336C68.017 17.7055 66.075 17.0002 64 17L63.6125 17.008Z\" fill=\"black\"/>\n<path d=\"M69 12.9755C73.4305 14.5801 76.598 18.8335 76.598 23.8299V50.7515C76.598 55.7478 73.4304 60.0003 69 61.605V73.4277C84.4336 72.9935 96.282 69.6691 104.368 66.3811C104.93 66.1525 105.474 65.9235 106 65.6961C105.868 63.8985 105.711 62.0149 105.527 60.0406L103.581 44.5956C102.213 35.6269 100.295 26.7201 97.1331 20.6114C89.7895 6.41635 75.6511 4.72025 69 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M59 12.9755C54.5695 14.5801 51.402 18.8335 51.402 23.8299V50.7515C51.402 55.7478 54.5696 60.0003 59 61.605V73.4277C43.5664 72.9935 31.718 69.6691 23.6324 66.3811C23.0701 66.1525 22.526 65.9235 22 65.6961C22.1325 63.8985 22.2887 62.0149 22.4731 60.0406L24.4194 44.5956C25.7871 35.6269 27.7049 26.7201 30.8669 20.6114C38.2105 6.41635 52.3489 4.72025 59 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n</svg>\n to target your base's healing area.",
 			"quip": "Teleport to an ally or enemy hero",
 			"t1_desc": "+3m Move Speed and +20% Fire Rate",
 			"t3_desc": "Cannot be interrupted by damage<br>Barrier gains Spirit Scaling"
@@ -44639,7 +44641,7 @@
 		"tooltip_details": {
 			"info_sections": [
 				{
-					"loc_string": "Target a location on the minimap. After a brief wait, <span class=\"highlight\">teleport</span> to that location. Taking damage or being Stunned, Immobilized, put to Sleep or Movement Silenced during the wait period causes the teleport to be interrupted.<br><br>After teleporting, gain a <span class=\"highlight\">Barrier</span>.",
+					"loc_string": "Target a location on the minimap. After a brief wait, <span class=\"highlight\">teleport</span> to that location. Taking damage or being Stunned, Immobilized, put to Sleep or Movement Silenced during the wait period causes the teleport to be interrupted.<br><br>After teleporting, gain a <span class=\"highlight\">Barrier</span>.<br><br><svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M106 74.5C106 102.39 97.196 125 64 125C30.804 125 22 102.39 22 74.5C22 74.2499 22.0048 74.0002 22.0078 73.751C31.2634 78.1321 44.7654 81 64 81C83.234 81 96.7357 78.1319 105.991 73.751C105.994 74.0002 106 74.2499 106 74.5Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M58 22.9204C58.0001 19.6507 60.6863 17 63.9999 17C67.3135 17.0003 69.9999 19.6509 70 22.9204V51.0796C70 54.3492 67.3135 56.9997 63.9999 57C60.6862 57 58 54.3494 58 51.0796V22.9204Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M63.6125 17.008C61.6841 17.0899 59.8918 17.7814 58.5226 18.9327C57.0626 20.1605 56.0002 22.0028 56 24.1999V49.8001C56.0002 51.9973 57.0626 53.8395 58.5226 55.0673C59.8918 56.2186 61.6841 56.9101 63.6125 56.992L64 57C66.075 56.9998 68.0169 56.2945 69.4774 55.0664C70.9372 53.8386 71.9998 51.9972 72 49.8001V24.1999L71.9969 23.9957C71.9332 21.8888 70.8918 20.1232 69.4774 18.9336C68.017 17.7055 66.075 17.0002 64 17L63.6125 17.008Z\" fill=\"black\"/>\n<path d=\"M69 12.9755C73.4305 14.5801 76.598 18.8335 76.598 23.8299V50.7515C76.598 55.7478 73.4304 60.0003 69 61.605V73.4277C84.4336 72.9935 96.282 69.6691 104.368 66.3811C104.93 66.1525 105.474 65.9235 106 65.6961C105.868 63.8985 105.711 62.0149 105.527 60.0406L103.581 44.5956C102.213 35.6269 100.295 26.7201 97.1331 20.6114C89.7895 6.41635 75.6511 4.72025 69 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M59 12.9755C54.5695 14.5801 51.402 18.8335 51.402 23.8299V50.7515C51.402 55.7478 54.5696 60.0003 59 61.605V73.4277C43.5664 72.9935 31.718 69.6691 23.6324 66.3811C23.0701 66.1525 22.526 65.9235 22 65.6961C22.1325 63.8985 22.2887 62.0149 22.4731 60.0406L24.4194 44.5956C25.7871 35.6269 27.7049 26.7201 30.8669 20.6114C38.2105 6.41635 52.3489 4.72025 59 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n</svg>\n to target your base's healing area.",
 					"properties_block": [
 						{
 							"properties": [
@@ -44905,7 +44907,7 @@
 			"zoom_move_speed_percent": 1,
 			"bullets": 4,
 			"burst_shot_count": 1,
-			"clip_size": 20,
+			"clip_size": 25,
 			"spread": 1.2,
 			"standing_spread": 1.5,
 			"recoil_seed": 14235,
@@ -44927,13 +44929,13 @@
 				"burst_slope": 0
 			},
 			"shots_per_second": 5.291005291005291,
-			"shots_per_second_with_reload": 2.9197080291970803,
+			"shots_per_second_with_reload": 3.207184092366902,
 			"bullets_per_second": 21.164021164021165,
-			"bullets_per_second_with_reload": 11.678832116788321,
+			"bullets_per_second_with_reload": 12.828736369467608,
 			"damage_per_second": 59.682539682539684,
-			"damage_per_second_with_reload": 32.934306569343065,
+			"damage_per_second_with_reload": 36.17703656189865,
 			"damage_per_shot": 11.28,
-			"damage_per_magazine": 225.6
+			"damage_per_magazine": 282
 		}
 	},
 	{
@@ -51121,7 +51123,7 @@
 			"desc": "Dash forward before slashing all enemies in a circle, dealing <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/hud/core/icon_damage_melee.png\" class=\"inline-attribute MeleeDamage\" alt=\"melee damage\"/><span class=\"inline-attribute-label MeleeDamage\" style=\"color: #EC9719;\">melee damage</span>. <br><br>If the ability hits at least one hero, <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M92.0059 9C107.475 9.00022 120 22.237 120 38.6592C120 68.2957 85.5894 87.6846 66.6162 116.752C65.1163 119.062 62.8837 119.062 61.3838 116.752C42.4106 87.6846 8.00022 68.2957 8 38.6592C8 22.2808 20.5245 9.00022 35.9941 9C40.2312 9.02587 44.4049 10.0351 48.1855 11.9482C49.3884 12.5569 50.5406 13.2524 51.6343 14.0271C52.9137 14.9332 52.473 16.8509 51.0109 17.4168C37.5479 22.6271 28 35.6977 28 51C28 70.8823 44.1177 87 64 87C83.8823 87 100 70.8823 100 51C100 35.6974 90.4516 22.6267 76.9882 17.4167C75.5261 16.8509 75.0854 14.9333 76.3648 14.0273C77.4588 13.2526 78.6113 12.557 79.8145 11.9482C83.5951 10.0351 87.7688 9.02587 92.0059 9Z\" fill=\"#0F9\"/>\n<path d=\"M69 46H84V56H69V71H59V56H44V46H59V31H69V46Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label Heal\" style=\"color: #0F9;\">heal</span> a small amount of health.",
 			"quip": "Dash forward and slash enemies",
 			"t2_desc": "Heroes killed within 3s grant <span class=\"highlight\">+200</span> souls",
-			"t3_desc": "<span class=\"highlight\">+90</span> Damage & On Hero Hit: <span class=\"highlight\">50%</span> Cooldown Refund"
+			"t3_desc": "<span class=\"highlight\">+100</span> Damage & On Hero Hit: <span class=\"highlight\">60%</span> Cooldown Refund"
 		},
 		"tooltip_details": {
 			"info_sections": [
@@ -51181,11 +51183,11 @@
 				"property_upgrades": [
 					{
 						"name": "CooldownRefundPercent",
-						"bonus": "50"
+						"bonus": "60"
 					},
 					{
 						"name": "ImpactDamage",
-						"bonus": "90"
+						"bonus": "100"
 					}
 				]
 			}
@@ -52173,7 +52175,8 @@
 			"CITADEL_ABILITY_BEHAVIOR_NO_TARGET",
 			"CITADEL_ABILITY_BEHAVIOR_ALLOW_ALT_CAST",
 			"CITADEL_ABILITY_BEHAVIOR_MOVEMENT",
-			"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST"
+			"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST",
+			"CITADEL_ABILITY_BEHAVIOR_FLYING"
 		],
 		"description": {
 			"desc": "Launches you high in the air, allowing you to glide slowly. While airborne, you gain <span class=\"highlight\">Weapon Damage</span> and <span class=\"highlight\">multishot on your weapon</span>. <br><svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M106 74.5C106 102.39 97.196 125 64 125C30.804 125 22 102.39 22 74.5C22 74.2499 22.0048 74.0002 22.0078 73.751C31.2634 78.1321 44.7654 81 64 81C83.234 81 96.7357 78.1319 105.991 73.751C105.994 74.0002 106 74.2499 106 74.5Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M58 22.9204C58.0001 19.6507 60.6863 17 63.9999 17C67.3135 17.0003 69.9999 19.6509 70 22.9204V51.0796C70 54.3492 67.3135 56.9997 63.9999 57C60.6862 57 58 54.3494 58 51.0796V22.9204Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M63.6125 17.008C61.6841 17.0899 59.8918 17.7814 58.5226 18.9327C57.0626 20.1605 56.0002 22.0028 56 24.1999V49.8001C56.0002 51.9973 57.0626 53.8395 58.5226 55.0673C59.8918 56.2186 61.6841 56.9101 63.6125 56.992L64 57C66.075 56.9998 68.0169 56.2945 69.4774 55.0664C70.9372 53.8386 71.9998 51.9972 72 49.8001V24.1999L71.9969 23.9957C71.9332 21.8888 70.8918 20.1232 69.4774 18.9336C68.017 17.7055 66.075 17.0002 64 17L63.6125 17.008Z\" fill=\"black\"/>\n<path d=\"M69 12.9755C73.4305 14.5801 76.598 18.8335 76.598 23.8299V50.7515C76.598 55.7478 73.4304 60.0003 69 61.605V73.4277C84.4336 72.9935 96.282 69.6691 104.368 66.3811C104.93 66.1525 105.474 65.9235 106 65.6961C105.868 63.8985 105.711 62.0149 105.527 60.0406L103.581 44.5956C102.213 35.6269 100.295 26.7201 97.1331 20.6114C89.7895 6.41635 75.6511 4.72025 69 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M59 12.9755C54.5695 14.5801 51.402 18.8335 51.402 23.8299V50.7515C51.402 55.7478 54.5696 60.0003 59 61.605V73.4277C43.5664 72.9935 31.718 69.6691 23.6324 66.3811C23.0701 66.1525 22.526 65.9235 22 65.6961C22.1325 63.8985 22.2887 62.0149 22.4731 60.0406L24.4194 44.5956C25.7871 35.6269 27.7049 26.7201 30.8669 20.6114C38.2105 6.41635 52.3489 4.72025 59 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n</svg>\nfor reduced jump height. <br>Press Jump / mantle to cancel the glide.",
@@ -54149,8 +54152,8 @@
 		"description": {
 			"desc": "Perform a <span class=\"highlight\">dash forward, damaging enemies along the path</span>. Hit Enemies have their <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_tech_armor.png\" class=\"inline-attribute SpiritResist\" alt=\"spirit resist\"/><span class=\"inline-attribute-label SpiritResist\" style=\"color: #CE90FF;\">spirit resist</span> reduced. This debuff can stack.",
 			"quip": "Dash ahead, damaging all enemies along the path",
-			"t2_desc": "<span class=\"highlight\">-4%</span> Spirit Resist<br><span class=\"highlight\">+2m</span> Dash Range",
-			"t3_desc": "<span class=\"highlight\">+50</span> Impact Damage<br><span class=\"highlight\">-2s</span> Cooldown per Hero hit."
+			"t2_desc": "<span class=\"highlight\">+50</span> Impact Damage<br><span class=\"highlight\">+2m</span> Dash Range",
+			"t3_desc": "<span class=\"highlight\">-4%</span> Spirit Resist<br><span class=\"highlight\">-2s</span> Cooldown per Hero hit."
 		},
 		"tooltip_details": {
 			"info_sections": [
@@ -54211,8 +54214,8 @@
 			{
 				"property_upgrades": [
 					{
-						"name": "TechArmorDamageReduction",
-						"bonus": "-4"
+						"name": "ImpactDamage",
+						"bonus": "50"
 					},
 					{
 						"name": "DashRange",
@@ -54223,8 +54226,8 @@
 			{
 				"property_upgrades": [
 					{
-						"name": "ImpactDamage",
-						"bonus": "50"
+						"name": "TechArmorDamageReduction",
+						"bonus": "-4"
 					},
 					{
 						"name": "CooldownReductionOnHit",
@@ -54798,7 +54801,7 @@
 			"quip": "Travel to a low health hero and instantly kill it",
 			"t1_desc": "<span class=\"highlight\">+6 m</span> Range<br><span class=\"highlight\">+2 m/s</span> in Full Rage.",
 			"t2_desc": "<span class=\"highlight\">+16%</span> Full Rage Bonus Damage<br><span class=\"highlight\">-25s</span> Cooldown",
-			"t3_desc": "<span class=\"highlight\">+10%</span> Enemy Health Threshold",
+			"t3_desc": "<span class=\"highlight\">+8%</span> Enemy Health Threshold",
 			"active": "<span class=\"diminish\">Active:</span> Leap forward, dealing <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDamage\">spirit damage</span> to the first enemy hero. If they are below the <span class=\"highlight\">kill threshold</span>, <span class=\"highlight\">execute</span> them instead.<br><br>Finishing an enemy with Killing Blow lets you recast for <span class=\"highlight\">12s</span>",
 			"passive": "<span class=\"diminish\">Passive:</span> Damaging enemies fills you with rage. While at full rage, Shiv gains increased damage and <span class=\"highlight\">unlocks special properties</span> on his other abilities."
 		},
@@ -54868,7 +54871,7 @@
 				"property_upgrades": [
 					{
 						"name": "EnemyHealthPercent",
-						"bonus": "10"
+						"bonus": "8"
 					}
 				]
 			}
@@ -59458,7 +59461,7 @@
 		"description": {
 			"desc": "Turn yourself into <span class=\"highlight\">impervious stone</span> and smash into the ground, <span class=\"highlight\">stunning and damaging</span> enemies nearby. Heals you for a percentage of your max health.",
 			"quip": "Turn into impervious stone and stun enemies nearby",
-			"t3_desc": "<span class=\"highlight\">+0.75s</span> Stun Duration and increased Damage spirit scaling"
+			"t3_desc": "<span class=\"highlight\">-25s</span> Cooldown and increased Damage spirit scaling"
 		},
 		"tooltip_details": {
 			"info_sections": [
@@ -59498,20 +59501,20 @@
 			{
 				"property_upgrades": [
 					{
-						"name": "AbilityCooldown",
-						"bonus": "-25"
+						"name": "StunDuration",
+						"bonus": "0.75"
 					}
 				]
 			},
 			{
 				"property_upgrades": [
 					{
-						"name": "StunDuration",
-						"bonus": "0.75"
+						"name": "AbilityCooldown",
+						"bonus": "-25"
 					},
 					{
 						"name": "Damage",
-						"bonus": "1.5",
+						"bonus": "1.2",
 						"scale_stat_filter": "ETechPower",
 						"upgrade_type": "EAddToScale"
 					}
@@ -59854,13 +59857,14 @@
 			"CITADEL_ABILITY_BEHAVIOR_MOVEMENT",
 			"CITADEL_ABILITY_BEHAVIOR_REQUIRE_ABILITY_BUTTON_TO_CANCEL",
 			"CITADEL_ABILITY_BEHAVIOR_CAN_SET_QUICK_CAST",
-			"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST"
+			"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST",
+			"CITADEL_ABILITY_BEHAVIOR_FLYING"
 		],
 		"description": {
 			"desc": "<span class=\"highlight\">Grab an ally</span> and <span class=\"highlight\">take flight</span> with them. Drop your ally to cause an explosion, dealing <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDamage\">spirit damage</span>. You and your ally gain increased Outgoing Damage when flying ends. <span class=\"diminish\"><br><br>Cooldown reduced by 30% when used on allies.<br>Taking damage briefly disables using the ability.<br>While lifted, your ally cannot attack and deals -20% damage.</span>",
 			"quip": "Death from Above! Fly and drop an ally on enemies",
-			"t1_desc": "On Fly End : <span class=\"highlight\">300</span> Barrier to Ivy and ally that scales with Spirit",
-			"t2_desc": "<span class=\"highlight\">+32%</span> Slow for <span class=\"highlight\">3s</span> on enemies hit",
+			"t1_desc": "<span class=\"highlight\">+32%</span> Slow for <span class=\"highlight\">3s</span> on enemies hit",
+			"t2_desc": "On Fly End : <span class=\"highlight\">300</span> Barrier to Ivy and ally that scales with Spirit",
 			"t3_desc": "<span class=\"highlight\">Silence</span> for <span class=\"highlight\">3s</span> on enemies hit.<br>Increases damage and barrier scaling."
 		},
 		"tooltip_details": {
@@ -59898,6 +59902,18 @@
 			{
 				"property_upgrades": [
 					{
+						"name": "SlowPercent",
+						"bonus": "32"
+					},
+					{
+						"name": "DebuffDuration",
+						"bonus": "3"
+					}
+				]
+			},
+			{
+				"property_upgrades": [
+					{
 						"name": "AirDropBulletShield",
 						"bonus": "300"
 					},
@@ -59906,18 +59922,6 @@
 						"bonus": "0.7",
 						"scale_stat_filter": "ETechPower",
 						"upgrade_type": "EAddToScale"
-					}
-				]
-			},
-			{
-				"property_upgrades": [
-					{
-						"name": "SlowPercent",
-						"bonus": "32"
-					},
-					{
-						"name": "DebuffDuration",
-						"bonus": "3"
 					}
 				]
 			},
@@ -62933,6 +62937,7 @@
 		"description": {
 			"desc": "Gain a <span class=\"highlight\">Barrier</span> and <span class=\"highlight\">bonus move speed</span>.",
 			"quip": "Gain a Barrier and move speed",
+			"t1_desc": "<span class=\"highlight\">+20%</span> Move Speed and <span class=\"highlight\">+50</span> Barrier",
 			"t2_desc": "-24s Cooldown and +2s Duration",
 			"t3_desc": "<span class=\"highlight\">+30%</span> Debuff Resistance and improved Barrier scaling"
 		},
@@ -62964,6 +62969,10 @@
 					{
 						"name": "MoveSpeedBonusPct",
 						"bonus": "20"
+					},
+					{
+						"name": "CombatBarrier",
+						"bonus": "50"
 					}
 				]
 			},
@@ -63552,8 +63561,8 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
 			},
 			"HealthStealPctHero": {
-				"value": "75",
-				"street_brawl_value": "48.75",
+				"value": "90",
+				"street_brawl_value": "58.5",
 				"css_class": "healing",
 				"scale_function": {
 					"class_name": "scale_function_single_stat",
@@ -63566,8 +63575,8 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/heal.svg"
 			},
 			"HealthStealPct": {
-				"value": "10",
-				"street_brawl_value": "7.5",
+				"value": "15",
+				"street_brawl_value": "11.25",
 				"css_class": "healing",
 				"scale_function": {
 					"class_name": "scale_function_single_stat",
@@ -64995,7 +65004,7 @@
 				"property_upgrades": [
 					{
 						"name": "MagicDamagePerBullet",
-						"bonus": "0.045",
+						"bonus": "0.03",
 						"upgrade_type": "EAddToScale"
 					},
 					{
@@ -65218,7 +65227,7 @@
 				"value": "25"
 			},
 			"CardResourceGenPctScale": {
-				"value": "85",
+				"value": "68",
 				"scale_function": {
 					"class_name": "scale_function_single_stat",
 					"subclass_name": "card_gen",
@@ -74668,7 +74677,7 @@
 			}
 		],
 		"ability_type": "signature",
-		"boss_damage_scale": 0.5
+		"boss_damage_scale": 1
 	},
 	{
 		"type": "ability",
@@ -83074,7 +83083,7 @@
 		"description": {
 			"desc": "Briefly disperse, becoming <span class=\"highlight\">untargetable</span> and flying to a target location. <br><br>Can be <span class=\"highlight\">recast</span> within a brief window.",
 			"t1_desc": "On Cast: Gain <span class=\"highlight\">+25%</span> Fire Rate for 8s and add <span class=\"highlight\">8</span> bullets",
-			"t3_desc": "<span class=\"highlight\">+1</span> Recast<br><span class=\"highlight\">+4m</span> Range"
+			"t3_desc": "<span class=\"highlight\">+1</span> Recast<br><span class=\"highlight\">+3m</span> Range"
 		},
 		"tooltip_details": {
 			"info_sections": [
@@ -83143,7 +83152,7 @@
 					},
 					{
 						"name": "AbilityCastRange",
-						"bonus": "4m"
+						"bonus": "3m"
 					}
 				]
 			}
@@ -83351,7 +83360,7 @@
 				"scale_function": {
 					"class_name": "scale_function_tech_damage",
 					"subclass_name": "lovebites_bonusdamage_sf",
-					"stat_scale": 1.85
+					"stat_scale": 1.5
 				},
 				"label": "Bonus Damage",
 				"postvalue_label": "Bonus Damage",
@@ -83426,7 +83435,7 @@
 		"description": {
 			"desc": "Your bullets apply additional <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDamage\">spirit damage</span>. Dealing damage with your abilities builds up to a vicious <span class=\"highlight\">bite</span>, dealing a burst of <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label BonusSpiritDamage\">bonus spirit damage</span>. <br><br><span class=\"diminish\">Love Bites has a unique cooldown per target.</span>",
 			"t1_desc": "On Proc: <span class=\"highlight\">+24%</span> Slow for 3s",
-			"t2_desc": "<span class=\"highlight\">+3.0</span> Spirit Damage per Bullet & <br><span class=\"highlight\">+45.0</span> Bonus Damage",
+			"t2_desc": "<span class=\"highlight\">+3.0</span> Spirit Damage per Bullet & <br><span class=\"highlight\">+45.0</span> Bonus Damage with increased Spirit scaling",
 			"t3_desc": "<span class=\"highlight\">-5</span> Cooldown <br>On Proc: <span class=\"highlight\">+25%</span> Fire Rate for 5s"
 		},
 		"tooltip_details": {
@@ -83487,6 +83496,12 @@
 					{
 						"name": "BonusDamage",
 						"bonus": 45
+					},
+					{
+						"name": "BonusDamage",
+						"bonus": "0.35",
+						"scale_stat_filter": "ETechPower",
+						"upgrade_type": "EAddToScale"
 					}
 				]
 			},
@@ -84054,7 +84069,8 @@
 			"CITADEL_ABILITY_BEHAVIOR_MOVEMENT",
 			"CITADEL_ABILITY_BEHAVIOR_CAN_SET_QUICK_CAST",
 			"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST",
-			"CITADEL_ABILITY_BEHAVIOR_TRIGGER"
+			"CITADEL_ABILITY_BEHAVIOR_TRIGGER",
+			"CITADEL_ABILITY_BEHAVIOR_COUNTS_AS_ABILITY_USE"
 		],
 		"description": {},
 		"tooltip_details": {},
@@ -84522,7 +84538,7 @@
 				"value": "25",
 				"css_class": "healing",
 				"scale_function": {
-					"class_name": "scale_function_tech_damage",
+					"class_name": "scale_function_healing_spirit_scale",
 					"subclass_name": "herohealsf",
 					"stat_scale": 0.3
 				},
@@ -87467,7 +87483,8 @@
 			"CITADEL_ABILITY_BEHAVIOR_NO_TARGET",
 			"CITADEL_ABILITY_BEHAVIOR_MOVEMENT",
 			"CITADEL_ABILITY_BEHAVIOR_REQUIRE_ABILITY_BUTTON_TO_CANCEL",
-			"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST"
+			"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST",
+			"CITADEL_ABILITY_BEHAVIOR_FLYING"
 		],
 		"description": {},
 		"tooltip_details": {
@@ -109518,7 +109535,7 @@
 				"tooltip_is_important": false
 			},
 			"DamagePerChain": {
-				"value": "43",
+				"value": "37",
 				"css_class": "tech_damage",
 				"scale_function": {
 					"class_name": "scale_function_tech_damage",
@@ -109534,7 +109551,7 @@
 				"tooltip_is_important": true
 			},
 			"BonusPerChain": {
-				"value": "43",
+				"value": "37",
 				"css_class": "tech_damage",
 				"scale_function": {
 					"class_name": "scale_function_tech_damage",
@@ -118535,7 +118552,7 @@
 				"tooltip_is_important": false
 			},
 			"BonusAttackRangePercent": {
-				"value": "20",
+				"value": "18",
 				"provided_property_type": "MODIFIER_VALUE_BONUS_ATTACK_RANGE_PERCENT",
 				"css_class": "distance",
 				"prefix": "{s:sign}",
@@ -124592,7 +124609,7 @@
 		"item_tier": 3,
 		"properties": {
 			"AbilityCooldown": {
-				"value": 45,
+				"value": 52,
 				"can_set_token_override": true,
 				"css_class": "cooldown",
 				"disable_value": "0",
@@ -145218,7 +145235,7 @@
 		"item_tier": 4,
 		"properties": {
 			"AbilityCooldown": {
-				"value": 90,
+				"value": 105,
 				"can_set_token_override": true,
 				"css_class": "cooldown",
 				"disable_value": "0",
@@ -147903,7 +147920,7 @@
 				"scale_function": {
 					"class_name": "scale_function_healing_spirit_scale",
 					"subclass_name": "TotalHealthRegen_scale_function",
-					"stat_scale": 1.1
+					"stat_scale": 1.25
 				},
 				"label": "Total HP Regen",
 				"postvalue_label": "Total HP Regen",
@@ -167852,7 +167869,7 @@
 				"tooltip_is_important": true
 			},
 			"DebuffDuration": {
-				"value": "8",
+				"value": "7",
 				"css_class": "tech_damage",
 				"scale_function": {
 					"class_name": "scale_function_tech_duration",
@@ -172182,7 +172199,7 @@
 					"class_name": "scale_function_single_stat",
 					"subclass_name": "SecondaryDamage_scale_function",
 					"specific_stat_scale_type": "ELevelUpBoons",
-					"stat_scale": 1.24
+					"stat_scale": 1.12
 				},
 				"prefix": "{s:sign}",
 				"label": "Secondary Fire Weapon Damage",
@@ -174559,7 +174576,7 @@
 			}
 		},
 		"description": {
-			"desc": "Block the next debuff that would apply <span class=\"highlight\">movement lock, Stun, Chained, Immobilize, or Sleep</span> and become <span class=\"highlight\">Unstoppable</span>. Also gain a <span class=\"highlight\">Barrier</span> and bonus <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M81.5143 72.4711L117.08 34.3552L68.8057 2L57.0343 31.8506L11 87.2257L34.7257 103.141L43.3657 96.9254L58.4286 118.989L83.2514 124.977L108.646 125L114.269 116.666L95.96 103.665L81.5143 72.4711Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label MoveSpeed\" style=\"color: #0F9;\">move speed</span>"
+			"desc": "Block the next debuff that would apply <span class=\"highlight\">movement lock, Stun, Chained, Immobilize, Sleep, or Fear</span> and become <span class=\"highlight\">Unstoppable</span>. Also gain a <span class=\"highlight\">Barrier</span> and bonus <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M81.5143 72.4711L117.08 34.3552L68.8057 2L57.0343 31.8506L11 87.2257L34.7257 103.141L43.3657 96.9254L58.4286 118.989L83.2514 124.977L108.646 125L114.269 116.666L95.96 103.665L81.5143 72.4711Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label MoveSpeed\" style=\"color: #0F9;\">move speed</span>"
 		},
 		"activation": "passive",
 		"tooltip_sections": [
@@ -174567,7 +174584,7 @@
 				"section_type": "passive",
 				"section_attributes": [
 					{
-						"loc_string": "Block the next debuff that would apply <span class=\"highlight\">movement lock, Stun, Chained, Immobilize, or Sleep</span> and become <span class=\"highlight\">Unstoppable</span>. Also gain a <span class=\"highlight\">Barrier</span> and bonus <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M81.5143 72.4711L117.08 34.3552L68.8057 2L57.0343 31.8506L11 87.2257L34.7257 103.141L43.3657 96.9254L58.4286 118.989L83.2514 124.977L108.646 125L114.269 116.666L95.96 103.665L81.5143 72.4711Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label MoveSpeed\" style=\"color: #0F9;\">move speed</span>",
+						"loc_string": "Block the next debuff that would apply <span class=\"highlight\">movement lock, Stun, Chained, Immobilize, Sleep, or Fear</span> and become <span class=\"highlight\">Unstoppable</span>. Also gain a <span class=\"highlight\">Barrier</span> and bonus <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M81.5143 72.4711L117.08 34.3552L68.8057 2L57.0343 31.8506L11 87.2257L34.7257 103.141L43.3657 96.9254L58.4286 118.989L83.2514 124.977L108.646 125L114.269 116.666L95.96 103.665L81.5143 72.4711Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label MoveSpeed\" style=\"color: #0F9;\">move speed</span>",
 						"properties": [
 							"StatusImmuneDuration",
 							"BuffDuration",
@@ -177894,7 +177911,7 @@
 		"update_time": 0,
 		"properties": {
 			"AbilityCooldown": {
-				"value": "23",
+				"value": "20",
 				"can_set_token_override": true,
 				"css_class": "cooldown",
 				"disable_value": "0",
@@ -179201,8 +179218,7 @@
 					"specific_stat_scale_type": "ELevelUpBoons",
 					"scaling_stats": [
 						"ELevelUpBoons",
-						"EWeaponDamageScale",
-						"EDamageScale"
+						"EWeaponDamageScale"
 					],
 					"stat_scale": 3.6
 				},
@@ -179240,7 +179256,8 @@
 			"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT",
 			"CITADEL_ABILITY_BEHAVIOR_CANNOT_CANCEL_DURING_CHANNEL",
 			"CITADEL_ABILITY_BEHAVIOR_DONT_INTERRUPT_SLIDE_ON_CAST",
-			"CITADEL_ABILITY_BEHAVIOR_REFUND_HALF_COOLDOWN_ON_CHANNEL_INTERRUPT"
+			"CITADEL_ABILITY_BEHAVIOR_REFUND_HALF_COOLDOWN_ON_CHANNEL_INTERRUPT",
+			"CITADEL_ABILITY_BEHAVIOR_COUNTS_AS_ABILITY_USE"
 		],
 		"description": {
 			"desc": "Load your crossbow with <span class=\"highlight\">3 stakes</span>, dealing massively increased <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M32.0027 9C40.8042 9 48.6533 13.3022 53.7875 20.0238H53.7766C57.1324 24.4142 58.5664 26.6091 59.9993 26.6084C61.4318 26.6078 62.8632 24.4129 66.2125 20.0238C71.3467 13.3022 79.1958 9 87.9973 9C103.466 9 116 22.2789 116 38.6558C116 38.7707 115.999 38.8854 115.998 39H4.00155C4.00052 38.8854 4 38.7707 4 38.6558C4 22.2789 16.5345 9 32.0027 9Z\" fill=\"white\"/>\n<path d=\"M24.5608 79C27.3761 82.0873 30.3317 85.1748 33.3264 88.303C41.7966 97.1509 50.5788 106.325 57.3782 116.742C58.8889 119.051 61.1111 119.051 62.6218 116.742C69.4174 106.328 78.1987 97.1556 86.6692 88.3073C89.6652 85.1778 92.6222 82.0889 95.4388 79H24.5608Z\" fill=\"white\"/>\n<path d=\"M123 59.0055C123 59.0055 117.403 49 100.88 49H75V69H100.88C117.413 69 123 58.9945 123 58.9945V59.0055Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label WeaponDamage\">weapon damage</span>.<br><br>The final stake is <span class=\"highlight\">blessed</span>, dealing bonus <svg width=\"28\" height=\"23\" viewBox=\"0 0 28 23\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M26.8443 10.9368C26.8504 14.1423 26.8576 17.3477 26.8628 20.5531C26.8641 21.7169 26.5371 22.033 25.3444 22.0345C18.7796 22.0448 12.2147 22.0541 5.64983 22.0633C5.584 22.0633 5.51916 22.0633 5.45332 22.0643C5.16442 22.0687 4.87464 22.0653 4.8163 21.6962C4.75883 21.3338 5.03249 21.2315 5.30019 21.134C5.92747 20.9046 6.55664 20.6801 7.18392 20.4507C8.69926 19.8972 10.2165 19.3505 11.7271 18.7854C12.5392 18.4814 12.4206 19.12 11.8895 18.4335C11.6514 18.1255 11.3965 17.8317 11.1554 17.5265C10.9664 17.2869 10.8543 17.0349 11.0141 16.726C11.178 16.4094 11.4555 16.3778 11.7628 16.395C13.887 16.5118 16.0103 16.6275 18.1346 16.7443C18.2652 16.7511 15.1693 20.9464 15.6114 17.5931C16.5363 17.6301 10.4955 7.55415 10.4414 6.64085C10.3332 4.80845 19.9671 10.4794 19.8559 8.64698C19.8307 8.22902 19.8232 7.81036 19.8049 7.39154C19.7931 7.12941 19.8729 6.91311 20.1195 6.78533C20.3749 6.65382 20.6311 6.67311 20.8594 6.84084C21.2141 7.10036 21.5518 7.38089 21.9056 7.64136C22.5829 8.13961 23.1983 7.98158 23.4908 7.20974C24.2609 5.17876 25.0095 3.13876 25.7787 1.1068C25.9004 0.783828 25.9216 0.2844 26.4584 0.390043C26.9502 0.48728 26.8206 0.939661 26.8225 1.27318C26.8363 4.49514 26.8393 7.71501 26.8443 10.9368Z\" fill=\"white\"/>\n<path d=\"M3.83686 11.9585C4.3818 12.4679 4.95652 12.7715 5.64011 12.8787C6.90159 13.0772 8.16192 13.2771 9.42199 13.4904C9.98274 13.5855 10.411 13.4341 10.624 12.891C10.8304 12.3606 10.547 12.0234 10.1167 11.7546C8.04194 10.4569 5.97163 9.15155 3.89117 7.86049C3.51319 7.62662 3.09098 7.48583 2.66509 7.77186C2.19281 8.08741 2.20663 8.54956 2.35098 9.00963C2.6902 10.0936 2.86173 11.2672 3.83818 11.9596L3.83686 11.9585Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label PureDamage\" style=\"color: white;\">pure damage</span> and <span class=\"highlight\">executing</span> low-health enemies.",
@@ -180393,8 +180410,7 @@
 					"specific_stat_scale_type": "ELevelUpBoons",
 					"scaling_stats": [
 						"ELevelUpBoons",
-						"EWeaponDamageScale",
-						"EDamageScale"
+						"EWeaponDamageScale"
 					],
 					"stat_scale": 1.6
 				},
@@ -183929,7 +183945,7 @@
 		"update_time": 0,
 		"properties": {
 			"AbilityCooldown": {
-				"value": "12",
+				"value": "11",
 				"can_set_token_override": true,
 				"css_class": "cooldown",
 				"disable_value": "0",
@@ -184338,7 +184354,7 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
 			},
 			"AbilityCastRange": {
-				"value": "35m",
+				"value": "0",
 				"can_set_token_override": true,
 				"css_class": "range",
 				"display_units": "EDisplayUnit_Meters",
@@ -184512,7 +184528,7 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
 			},
 			"AbilityCastRange": {
-				"value": "0",
+				"value": "35m",
 				"can_set_token_override": true,
 				"css_class": "range",
 				"display_units": "EDisplayUnit_Meters",
@@ -184632,19 +184648,6 @@
 				"postfix": "m",
 				"postvalue_label": "Dash Speed"
 			},
-			"DashRange": {
-				"value": "35m",
-				"css_class": "distance",
-				"scale_function": {
-					"class_name": "scale_function_single_stat",
-					"subclass_name": "DashRange_scale_function",
-					"specific_stat_scale_type": "ETechRange"
-				},
-				"label": "Dash Range",
-				"postfix": "m",
-				"postvalue_label": "Dash Range",
-				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/range.svg"
-			},
 			"SideMoveSpeed": {
 				"value": "-100"
 			},
@@ -184690,25 +184693,29 @@
 				"value": "1m"
 			},
 			"SlowDuration": {
-				"value": "4",
+				"value": "2",
+				"css_class": "duration",
 				"scale_function": {
 					"class_name": "scale_function_tech_duration",
 					"subclass_name": "riposte_slow_duration_sf"
 				},
 				"label": "Slow Duration",
 				"postfix": "s",
-				"postvalue_label": "Slow Duration"
+				"postvalue_label": "Slow Duration",
+				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
 			},
 			"SlowPercent": {
-				"value": "40",
+				"value": "50",
 				"provided_property_type": "MODIFIER_VALUE_MOVEMENT_SPEED_SLOW_PERCENT",
+				"css_class": "slow",
 				"usage_flags": [
 					"ConditionallyApplied"
 				],
 				"prefix": "-",
 				"label": "Move Speed",
 				"postfix": "%",
-				"postvalue_label": "Move Speed"
+				"postvalue_label": "Move Speed",
+				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/condition_slow.svg"
 			},
 			"AbilityLifestealPercentHero": {
 				"value": "50",
@@ -184728,20 +184735,6 @@
 				"postvalue_label": "Spirit Lifesteal",
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/heal.svg"
 			},
-			"StunDuration": {
-				"value": "1.5",
-				"css_class": "duration",
-				"loc_token_override": "ImmobilizeDuration",
-				"scale_function": {
-					"class_name": "scale_function_single_stat",
-					"subclass_name": "StunDuration_scale_function",
-					"specific_stat_scale_type": "ETechDuration"
-				},
-				"label": "Immobilize Duration",
-				"postfix": "s",
-				"postvalue_label": "Immobilize Duration",
-				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
-			},
 			"DampingFactor": {
 				"value": "0.5"
 			},
@@ -184757,30 +184750,17 @@
 				"postvalue_label": "Move Speed",
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/condition_slow.svg"
 			},
-			"MeleeResistReduction": {
-				"value": "-25",
-				"provided_property_type": "MODIFIER_VALUE_MELEE_RESIST_REDUCTION",
-				"css_class": "bullet_armor_down",
-				"usage_flags": [
-					"ConditionallyApplied"
-				],
-				"label": "Melee Resist",
-				"postfix": "%",
-				"postvalue_label": "Melee Resist",
-				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/armor_bullet_color.svg"
-			},
-			"MeleeResistReductionDuration": {
-				"value": "3.0",
-				"css_class": "duration",
+			"Damage": {
+				"value": "100",
+				"css_class": "tech_damage",
 				"scale_function": {
-					"class_name": "scale_function_single_stat",
-					"subclass_name": "MeleeResistReductionDuration_scale_function",
-					"specific_stat_scale_type": "ETechDuration"
+					"class_name": "scale_function_tech_damage",
+					"subclass_name": "Damage_scale_function",
+					"stat_scale": 1.5
 				},
-				"label": "Melee Resist Reduction Duration",
-				"postfix": "s",
-				"postvalue_label": "Debuff Duration",
-				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
+				"label": "Damage",
+				"postvalue_label": "Damage",
+				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg"
 			},
 			"TargetLifesteal": {
 				"value": "0",
@@ -184812,24 +184792,25 @@
 				"value": "0"
 			},
 			"DashGraceWindow": {
-				"value": "1.3"
+				"value": "1.8"
 			}
 		},
 		"weapon_info": {},
 		"behaviours": [
 			"CITADEL_ABILITY_BEHAVIOR_CHANNELLED",
 			"CITADEL_ABILITY_BEHAVIOR_NO_TARGET",
-			"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT"
+			"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT",
+			"CITADEL_ABILITY_BEHAVIOR_CASTABLE_WHILE_BUSY"
 		],
 		"description": {
-			"desc": "Prepare to <span class=\"highlight\">deflect</span> the next incoming attack. On a successful deflection, briefly become <span class=\"highlight\">invulnerable</span> and target an enemy hero to dash towards them, <span class=\"highlight\">immobilizing</span> and <span class=\"highlight\">disarming</span> them, preventing them from <span class=\"highlight\">parrying</span>, and reducing their <span class=\"highlight\">Melee Resist</span>.<br><br><span class=\"diminish\">Press Ability 2 to select a target.<br>Does not trigger against trooper or neutral damage.</span>",
-			"t2_desc": "<span class=\"highlight\">-25%</span> Melee Resist and <span class=\"highlight\">+0.7s</span> Immobilize Duration",
+			"desc": "Prepare to <span class=\"highlight\">deflect</span> all incoming <span class=\"highlight\">ability</span> damage. On a successful deflection, briefly become <span class=\"highlight\">invulnerable</span> and gain the ability to dash to an enemy hero whose attack you deflected. Hitting them deals <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDamage\">spirit damage</span>, knocks them back, applies <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_slow_large.png\" class=\"inline-attribute Slow\" alt=\"slow\"/><span class=\"inline-attribute-label Slow\">slow</span> and prevents <span class=\"highlight\">stamina usage</span>.<br><br>While deflecting, <span class=\"highlight\">bullets</span> are reflected back at the attacker.<br><br><span class=\"diminish\">Press Ability 2 to counter attack.<br>Reflected bullets do not trigger the counter attack.</span>",
+			"t2_desc": "<span class=\"highlight\">+100</span> Damage <br><span class=\"highlight\">+1s</span> Debuff Duration",
 			"t3_desc": "Gain <span class=\"highlight\">75%</span> Bullet, Spirit &amp; Melee Lifesteal against the Riposte target for 13s"
 		},
 		"tooltip_details": {
 			"info_sections": [
 				{
-					"loc_string": "Prepare to <span class=\"highlight\">deflect</span> the next incoming attack. On a successful deflection, briefly become <span class=\"highlight\">invulnerable</span> and target an enemy hero to dash towards them, <span class=\"highlight\">immobilizing</span> and <span class=\"highlight\">disarming</span> them, preventing them from <span class=\"highlight\">parrying</span>, and reducing their <span class=\"highlight\">Melee Resist</span>.<br><br><span class=\"diminish\">Press Ability 2 to select a target.<br>Does not trigger against trooper or neutral damage.</span>",
+					"loc_string": "Prepare to <span class=\"highlight\">deflect</span> all incoming <span class=\"highlight\">ability</span> damage. On a successful deflection, briefly become <span class=\"highlight\">invulnerable</span> and gain the ability to dash to an enemy hero whose attack you deflected. Hitting them deals <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDamage\">spirit damage</span>, knocks them back, applies <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_slow_large.png\" class=\"inline-attribute Slow\" alt=\"slow\"/><span class=\"inline-attribute-label Slow\">slow</span> and prevents <span class=\"highlight\">stamina usage</span>.<br><br>While deflecting, <span class=\"highlight\">bullets</span> are reflected back at the attacker.<br><br><span class=\"diminish\">Press Ability 2 to counter attack.<br>Reflected bullets do not trigger the counter attack.</span>",
 					"properties_block": [
 						{
 							"properties": [
@@ -184846,16 +184827,16 @@
 							"loc_string": "On Pommel Hit:",
 							"properties": [
 								{
-									"important_property": "StunDuration"
+									"important_property": "Damage"
 								},
 								{
-									"important_property": "MeleeResistReduction"
+									"important_property": "SlowPercent"
+								},
+								{
+									"important_property": "SlowDuration"
 								}
 							]
 						}
-					],
-					"basic_properties": [
-						"MeleeResistReductionDuration"
 					]
 				}
 			]
@@ -184865,19 +184846,19 @@
 				"property_upgrades": [
 					{
 						"name": "AbilityCooldown",
-						"bonus": "-8"
+						"bonus": "-9"
 					}
 				]
 			},
 			{
 				"property_upgrades": [
 					{
-						"name": "MeleeResistReduction",
-						"bonus": "-25"
+						"name": "Damage",
+						"bonus": "100"
 					},
 					{
-						"name": "StunDuration",
-						"bonus": "0.7"
+						"name": "SlowDuration",
+						"bonus": "1"
 					}
 				]
 			},
@@ -184911,7 +184892,7 @@
 		],
 		"properties": {
 			"AbilityCooldown": {
-				"value": "26",
+				"value": "30",
 				"can_set_token_override": true,
 				"css_class": "cooldown",
 				"disable_value": "0",
@@ -186029,7 +186010,7 @@
 			"crit_bonus_end_range": 1500,
 			"crit_bonus_start": 1.65,
 			"crit_bonus_start_range": 500,
-			"cycle_time": 0.102,
+			"cycle_time": 0.1075,
 			"intra_burst_cycle_time": 0,
 			"damage_falloff_bias": 0.5,
 			"damage_falloff_end_range": 670,
@@ -186108,12 +186089,12 @@
 				"burst_constant": 0,
 				"burst_slope": 0
 			},
-			"shots_per_second": 9.803921568627452,
-			"shots_per_second_with_reload": 5.610098176718092,
-			"bullets_per_second": 9.803921568627452,
-			"bullets_per_second_with_reload": 5.610098176718092,
-			"damage_per_second": 35.294117647058826,
-			"damage_per_second_with_reload": 20.196353436185134,
+			"shots_per_second": 9.30232558139535,
+			"shots_per_second_with_reload": 5.442176870748299,
+			"bullets_per_second": 9.30232558139535,
+			"bullets_per_second_with_reload": 5.442176870748299,
+			"damage_per_second": 33.48837209302326,
+			"damage_per_second_with_reload": 19.591836734693878,
 			"damage_per_shot": 3.6,
 			"damage_per_magazine": 144
 		},
@@ -187777,7 +187758,7 @@
 			}
 		],
 		"ability_type": "ultimate",
-		"boss_damage_scale": 1
+		"boss_damage_scale": 0.75
 	},
 	{
 		"type": "ability",
@@ -197364,7 +197345,7 @@
 		"description": {
 			"t1_desc": "-4s Cooldown<br>+15m Max Drawing Distance",
 			"t2_desc": "On Empower: Gain +10% Fire Rate for 10s, stacking 5 times",
-			"t3_desc": "+1s Cooldown Reduction Per Hit<br>Improve scaling",
+			"t3_desc": "+45% Bullet Damage<br>+1s Cooldown Reduction Per Hit<br>Increased Spirit Damage Scaling",
 			"passive": "<span class=\"diminish\">Passive:</span> Casting any other ability refreshes the cooldown of <span class=\"highlight\">Flow State</span>."
 		},
 		"tooltip_details": {
@@ -197437,7 +197418,7 @@
 				"property_upgrades": [
 					{
 						"name": "BulletDamageMultiplier",
-						"bonus": "30"
+						"bonus": "45"
 					},
 					{
 						"name": "CooldownReductionPerHit",
@@ -199227,7 +199208,7 @@
 			"bullet_gravity_scale": 0,
 			"bullet_inherit_shooter_velocity_scale": 0,
 			"bullet_lifetime": 2,
-			"bullet_radius": 7,
+			"bullet_radius": 8.5,
 			"bullet_reflect_amount": 1,
 			"bullet_reflect_scale": 0,
 			"bullet_whiz_distance": 80,
@@ -199267,7 +199248,7 @@
 			"bullets": 3,
 			"burst_shot_count": 1,
 			"clip_size": 15,
-			"spread": 0,
+			"spread": 0.25,
 			"standing_spread": 1.5,
 			"recoil_seed": 32152,
 			"reload_duration": 2.5,
@@ -199860,8 +199841,8 @@
 				"postvalue_label": "Burst Interval"
 			},
 			"DebuffDuration": {
-				"value": "16",
-				"street_brawl_value": "14",
+				"value": "10",
+				"street_brawl_value": "7",
 				"css_class": "duration",
 				"scale_function": {
 					"class_name": "scale_function_tech_duration",
@@ -199915,7 +199896,7 @@
 				"value": "0.6"
 			},
 			"MagicDamagePerBullet": {
-				"value": "8",
+				"value": "12",
 				"css_class": "tech_damage",
 				"scale_function": {
 					"class_name": "scale_function_tech_damage",
@@ -199935,7 +199916,7 @@
 		"description": {
 			"desc": "Weave a scraggly thread that follows your crosshair before bursting along its path, dealing <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDamage\">spirit damage</span> and stealing enemy <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#CE90FF\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M66.2532 6.37122C65.2804 4.54292 62.7195 4.54293 61.7471 6.37122L44.1015 39.5393C43.7322 40.233 43.0786 40.7202 42.3208 40.8656L6.09636 47.8197C4.0996 48.2031 3.30824 50.6996 4.70387 52.2131L30.0227 79.6659C30.5523 80.2401 30.8021 81.0281 30.7029 81.8119L25.9605 119.278C25.6991 121.343 27.7709 122.886 29.6061 121.993L62.8996 105.792C63.5958 105.453 64.4041 105.453 65.1007 105.792L98.3941 121.993C100.229 122.886 102.301 121.343 102.039 119.278L97.2971 81.8119C97.198 81.0281 97.4478 80.2401 97.9775 79.6659L123.296 52.2131C124.692 50.6996 123.9 48.2031 121.904 47.8197L85.6794 40.8656C84.9216 40.7202 84.2676 40.233 83.8987 39.5393L66.2532 6.37122ZM61.591 25.1546C62.4149 22.8569 65.585 22.8569 66.4088 25.1546L74.0468 46.4571C74.0262 46.6577 74.0427 46.8669 74.1027 47.0765L80.7174 70.2705C81.0437 71.4137 82.4267 71.8103 83.2841 71.0064L89.8403 64.8601C90.2444 64.4812 90.4268 63.9135 90.3212 63.3625L88.2169 52.3689H105.054C107.473 52.3689 108.549 55.4865 106.667 57.0454L88.2542 72.3055C88.002 72.3447 87.7539 72.4484 87.5329 72.6233L68.8712 87.3875C67.9513 88.1151 68.0948 89.5801 69.1376 90.1057L77.1093 94.1261C77.6011 94.3739 78.1829 94.3413 78.6453 94.0398L87.1338 88.5041L91.7117 104.982C92.3741 107.366 89.7479 109.28 87.7692 107.856L65.4784 91.817C65.1775 91.6009 64.8427 91.4579 64.4968 91.3885L49.094 80.6881C48.1185 80.0104 46.79 80.6347 46.6536 81.8342L45.6334 90.8129C45.5701 91.3705 45.7949 91.9218 46.2268 92.2674L53.6701 98.2257L40.3621 107.852C38.3884 109.28 35.7592 107.376 36.4112 104.992L43.1392 80.3897C43.1792 80.3161 43.2113 80.236 43.2337 80.1503L49.1451 57.6041C49.3367 56.8737 48.7365 56.1808 48.0061 56.2894L38.1921 57.7505C37.809 57.8078 37.4899 58.0808 37.3666 58.4569L34.247 67.9728L21.4828 57.6794C19.5888 56.152 20.607 53.0327 23.0163 52.9813L48.6012 52.4376C48.6776 52.4473 48.7558 52.4511 48.835 52.4491L69.3532 51.9036C70.4695 51.8738 71.1996 50.6927 70.7491 49.6451L67.0293 40.995C66.7781 40.411 66.2149 40.0346 65.5925 40.0346H56.256L61.591 25.1546Z\" fill=\"#CE90FF\"/>\n</svg>\n<span class=\"inline-attribute-label Spirit\" style=\"color: #CE90FF;\">Spirit</span>, increased in effectiveness for Baba.<br><br>While holding stolen <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#CE90FF\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M66.2532 6.37122C65.2804 4.54292 62.7195 4.54293 61.7471 6.37122L44.1015 39.5393C43.7322 40.233 43.0786 40.7202 42.3208 40.8656L6.09636 47.8197C4.0996 48.2031 3.30824 50.6996 4.70387 52.2131L30.0227 79.6659C30.5523 80.2401 30.8021 81.0281 30.7029 81.8119L25.9605 119.278C25.6991 121.343 27.7709 122.886 29.6061 121.993L62.8996 105.792C63.5958 105.453 64.4041 105.453 65.1007 105.792L98.3941 121.993C100.229 122.886 102.301 121.343 102.039 119.278L97.2971 81.8119C97.198 81.0281 97.4478 80.2401 97.9775 79.6659L123.296 52.2131C124.692 50.6996 123.9 48.2031 121.904 47.8197L85.6794 40.8656C84.9216 40.7202 84.2676 40.233 83.8987 39.5393L66.2532 6.37122ZM61.591 25.1546C62.4149 22.8569 65.585 22.8569 66.4088 25.1546L74.0468 46.4571C74.0262 46.6577 74.0427 46.8669 74.1027 47.0765L80.7174 70.2705C81.0437 71.4137 82.4267 71.8103 83.2841 71.0064L89.8403 64.8601C90.2444 64.4812 90.4268 63.9135 90.3212 63.3625L88.2169 52.3689H105.054C107.473 52.3689 108.549 55.4865 106.667 57.0454L88.2542 72.3055C88.002 72.3447 87.7539 72.4484 87.5329 72.6233L68.8712 87.3875C67.9513 88.1151 68.0948 89.5801 69.1376 90.1057L77.1093 94.1261C77.6011 94.3739 78.1829 94.3413 78.6453 94.0398L87.1338 88.5041L91.7117 104.982C92.3741 107.366 89.7479 109.28 87.7692 107.856L65.4784 91.817C65.1775 91.6009 64.8427 91.4579 64.4968 91.3885L49.094 80.6881C48.1185 80.0104 46.79 80.6347 46.6536 81.8342L45.6334 90.8129C45.5701 91.3705 45.7949 91.9218 46.2268 92.2674L53.6701 98.2257L40.3621 107.852C38.3884 109.28 35.7592 107.376 36.4112 104.992L43.1392 80.3897C43.1792 80.3161 43.2113 80.236 43.2337 80.1503L49.1451 57.6041C49.3367 56.8737 48.7365 56.1808 48.0061 56.2894L38.1921 57.7505C37.809 57.8078 37.4899 58.0808 37.3666 58.4569L34.247 67.9728L21.4828 57.6794C19.5888 56.152 20.607 53.0327 23.0163 52.9813L48.6012 52.4376C48.6776 52.4473 48.7558 52.4511 48.835 52.4491L69.3532 51.9036C70.4695 51.8738 71.1996 50.6927 70.7491 49.6451L67.0293 40.995C66.7781 40.411 66.2149 40.0346 65.5925 40.0346H56.256L61.591 25.1546Z\" fill=\"#CE90FF\"/>\n</svg>\n<span class=\"inline-attribute-label Spirit\" style=\"color: #CE90FF;\">Spirit</span>, Baba deals <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label BonusSpiritDamage\">bonus spirit damage</span> with every bullet.",
 			"quip": "Threadsap",
-			"t2_desc": "-12s Cooldown<br>+8s Debuff Duration",
+			"t2_desc": "-12s Cooldown<br>+6s Debuff Duration",
 			"t3_desc": "+1 Charge<br>On Hit: Pull enemies 7m"
 		},
 		"tooltip_details": {
@@ -199985,7 +199966,7 @@
 					},
 					{
 						"name": "DebuffDuration",
-						"bonus": "8"
+						"bonus": "6"
 					}
 				]
 			},
@@ -200800,7 +200781,8 @@
 			"CITADEL_ABILITY_BEHAVIOR_PROJECTILE_FIRED_AS_BULLET",
 			"CITADEL_ABILITY_BEHAVIOR_COOLDOWN_ON_CHANNEL_END",
 			"CITADEL_ABILITY_BEHAVIOR_DONT_INTERRUPT_SLIDE_ON_CAST",
-			"CITADEL_ABILITY_BEHAVIOR_HOLDS_AT_MAX_CHANNEL"
+			"CITADEL_ABILITY_BEHAVIOR_HOLDS_AT_MAX_CHANNEL",
+			"CITADEL_ABILITY_BEHAVIOR_CAN_CAST_ON_ZIPLINE"
 		],
 		"description": {
 			"desc": "Brew a pot of tea that applies a magical effect in an area when thrown, cycling over time in a random order between a soothing <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_bullet_armor.png\" class=\"inline-attribute CombatBarrier\" alt=\"barrier\"/><span class=\"inline-attribute-label CombatBarrier\" style=\"color: #FFEFD7;\">barrier</span>, <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#CE90FF\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M110.376 117.769C112.72 120.112 116.519 120.112 118.862 117.769C121.205 115.426 121.205 111.627 118.862 109.284L92.6066 83.0284L118.254 68.6545C118.978 68.2493 118.922 67.1909 118.161 66.8635L83.9016 52.1321C83.5993 52.0021 83.3802 51.7317 83.3159 51.4089L76.0293 14.8357C75.8674 14.0228 74.8436 13.7485 74.297 14.3715L50.7655 41.1873L15.6241 6.04597C13.2809 3.70328 9.48227 3.70343 7.13928 6.04642C4.79629 8.38942 4.79659 12.1885 7.13928 14.5317L110.376 117.769Z\" fill=\"#CE90FF\"/>\n<path d=\"M81.7924 124.801L83.8439 102.55L20.7091 39.4154L11.7963 38.3633C10.9732 38.2661 10.3959 39.155 10.8195 39.8674L29.8767 71.9222C30.0449 72.2052 30.0631 72.5527 29.9254 72.8517L14.3232 106.723C13.9765 107.476 14.6435 108.299 15.4519 108.117L51.8269 99.8977C52.1479 99.8252 52.4841 99.9153 52.7259 100.139L80.118 125.444C80.7268 126.006 81.7163 125.627 81.7924 124.801Z\" fill=\"#CE90FF\"/>\n</svg>\n<span class=\"inline-attribute-label Silence\" style=\"color: #CE90FF;\">Silence</span>, or scalding burn that deals <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDPS\">spirit damage over time</span> and reduces <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_tech_armor.png\" class=\"inline-attribute SpiritResist\" alt=\"spirit resist\"/><span class=\"inline-attribute-label SpiritResist\" style=\"color: #CE90FF;\">spirit resist</span>. <br><br>Press <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M106 74.5C106 102.39 97.196 125 64 125C30.804 125 22 102.39 22 74.5C22 74.2499 22.0048 74.0002 22.0078 73.751C31.2634 78.1321 44.7654 81 64 81C83.234 81 96.7357 78.1319 105.991 73.751C105.994 74.0002 106 74.2499 106 74.5Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M58 22.9204C58.0001 19.6507 60.6863 17 63.9999 17C67.3135 17.0003 69.9999 19.6509 70 22.9204V51.0796C70 54.3492 67.3135 56.9997 63.9999 57C60.6862 57 58 54.3494 58 51.0796V22.9204Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M69 12.9755C73.4305 14.5801 76.598 18.8335 76.598 23.8299V50.7515C76.598 55.7478 73.4304 60.0003 69 61.605V73.4277C84.4336 72.9935 96.282 69.6691 104.368 66.3811C104.93 66.1525 105.474 65.9235 106 65.6961C105.868 63.8985 105.711 62.0149 105.527 60.0406L103.581 44.5956C102.213 35.6269 100.295 26.7201 97.1331 20.6114C89.7895 6.41635 75.6511 4.72025 69 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M59 12.9755C54.5695 14.5801 51.402 18.8335 51.402 23.8299V50.7515C51.402 55.7478 54.5696 60.0003 59 61.605V73.4277C43.5664 72.9935 31.718 69.6691 23.6324 66.3811C23.0701 66.1525 22.526 65.9235 22 65.6961C22.1325 63.8985 22.2887 62.0149 22.4731 60.0406L24.4194 44.5956C25.7871 35.6269 27.7049 26.7201 30.8669 20.6114C38.2105 6.41635 52.3489 4.72025 59 4.42773V12.9755Z\" fill=\"black\" fill-opacity=\"0.6\"/>\n<path d=\"M69 12.9755C73.4305 14.5801 76.598 18.8335 76.598 23.8299V50.7515C76.598 55.7478 73.4304 60.0003 69 61.605V73.4277C84.4336 72.9935 96.282 69.6691 104.368 66.3811C104.93 66.1525 105.474 65.9235 106 65.6961C105.868 63.8985 105.711 62.0149 105.527 60.0406L103.581 44.5956C102.213 35.6269 100.295 26.7201 97.1331 20.6114C89.7895 6.41635 75.6511 4.72025 69 4.42773V12.9755Z\" fill=\"black\"/>\n</svg>\n to pause or resume brewing.",
@@ -201135,7 +201117,7 @@
 				"value": "0"
 			},
 			"TimeToMaxStacks": {
-				"value": "3.5",
+				"value": "4",
 				"css_class": "duration",
 				"loc_token_override": "BabaUlt2TimeToMaxStacks",
 				"label": "Time To Max Stacks",
@@ -201174,7 +201156,7 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/duration.svg"
 			},
 			"AbilityCastRange": {
-				"value": "18m",
+				"value": "20m",
 				"can_set_token_override": true,
 				"css_class": "range",
 				"display_units": "EDisplayUnit_Meters",
@@ -201303,7 +201285,7 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/condition_slow.svg"
 			},
 			"BarrageMaxDamage": {
-				"value": "450",
+				"value": "650",
 				"css_class": "tech_damage",
 				"loc_token_override": "MaxDamage",
 				"scale_function": {
@@ -205956,7 +205938,7 @@
 				"icon": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_bullet_color.svg"
 			},
 			"Radius": {
-				"value": "8.0m",
+				"value": "6.5m",
 				"css_class": "distance",
 				"scale_function": {
 					"class_name": "scale_function_single_stat",
@@ -206003,7 +205985,8 @@
 			"CITADEL_ABILITY_BEHAVIOR_CANNOT_CANCEL_DURING_CHANNEL",
 			"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT",
 			"CITADEL_ABILITY_BEHAVIOR_MOVEMENT",
-			"CITADEL_ABILITY_BEHAVIOR_CAN_SET_QUICK_CAST"
+			"CITADEL_ABILITY_BEHAVIOR_CAN_SET_QUICK_CAST",
+			"CITADEL_ABILITY_BEHAVIOR_FLYING"
 		],
 		"description": {
 			"desc": "Hold Jump / mantle to fly, building up heat. When max heat is reached, your jetpack will begin to overheat.<br><br><span class=\"diminish\">Overheating:</span> After a short delay, <span class=\"highlight\">dive to the ground.</span> Upon impact, create an explosion that <span class=\"highlight\">deals damage</span> and launches you and nearby enemies. If no hero is hit, you stun yourself. Press Ability 2 to dive early.<br><br><span class=\"diminish\">Cooling Down:</span> After overheating, the jetpack cannot be used until it fully cools down.<br><br><span class=\"small_diminish\">Slows affect you while airborne. You always explode on death.</span>",
@@ -206095,7 +206078,7 @@
 		],
 		"properties": {
 			"AbilityCooldown": {
-				"value": 25,
+				"value": 26,
 				"can_set_token_override": true,
 				"css_class": "cooldown",
 				"disable_value": "0",
@@ -206244,7 +206227,7 @@
 					"class_name": "scale_function_tech_damage",
 					"subclass_name": "Damage_scale_function",
 					"specific_stat_scale_type": "ETechPower",
-					"stat_scale": 0.681
+					"stat_scale": 0.62
 				},
 				"label": "Damage",
 				"postvalue_label": "Damage",
@@ -206386,7 +206369,8 @@
 			"CITADEL_ABILITY_BEHAVIOR_PROJECTILE_PASS_THROUGH_WORLD",
 			"CITADEL_ABILITY_BEHAVIOR_SHOW_CAST_RANGE_AS_SAT_SPHERE_WHILE_CASTING",
 			"CITADEL_ABILITY_BEHAVIOR_DONT_INTERRUPT_SLIDE_ON_CAST",
-			"CITADEL_ABILITY_BEHAVIOR_REFUND_HALF_COOLDOWN_ON_CHANNEL_INTERRUPT"
+			"CITADEL_ABILITY_BEHAVIOR_REFUND_HALF_COOLDOWN_ON_CHANNEL_INTERRUPT",
+			"CITADEL_ABILITY_BEHAVIOR_COUNTS_AS_ABILITY_USE"
 		],
 		"description": {
 			"desc": "Launch a <span class=\"highlight\">salvo of spirit missiles that lodge into the ground along a line.</span> The missiles explode after a delay or upon detecting an enemy, dealing <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDamage\">spirit damage</span> and <span class=\"highlight\">marking</span> the target.<br><br>Shooting a marked enemy with a charged shot consumes a mark to deal <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label BonusSpiritDamage\">bonus spirit damage</span> and apply a fading <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_slow_large.png\" class=\"inline-attribute Slow\" alt=\"slow\"/><span class=\"inline-attribute-label Slow\">slow</span>.<br><br><span class=\"diminish\">Hold and drag to select the angle.</span>",
@@ -207089,8 +207073,8 @@
 			"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT",
 			"CITADEL_ABILITY_BEHAVIOR_DONT_AIM_FACING_ENEMY",
 			"CITADEL_ABILITY_BEHAVIOR_REQUIRE_ABILITY_BUTTON_TO_CANCEL",
-			"CITADEL_ABILITY_BEHAVIOR_DO_NOT_ALLOW_SPAM_PROC",
-			"CITADEL_ABILITY_BEHAVIOR_DO_NOT_CANCEL_ON_PARRY"
+			"CITADEL_ABILITY_BEHAVIOR_DO_NOT_CANCEL_ON_PARRY",
+			"CITADEL_ABILITY_BEHAVIOR_COUNTS_AS_ABILITY_USE"
 		],
 		"description": {
 			"desc": "Spray fuel dealing <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M32.0027 9C40.8042 9 48.6533 13.3022 53.7875 20.0238H53.7766C57.1324 24.4142 58.5664 26.6091 59.9993 26.6084C61.4318 26.6078 62.8632 24.4129 66.2125 20.0238C71.3467 13.3022 79.1958 9 87.9973 9C103.466 9 116 22.2789 116 38.6558C116 38.7707 115.999 38.8854 115.998 39H4.00155C4.00052 38.8854 4 38.7707 4 38.6558C4 22.2789 16.5345 9 32.0027 9Z\" fill=\"white\"/>\n<path d=\"M24.5608 79C27.3761 82.0873 30.3317 85.1748 33.3264 88.303C41.7966 97.1509 50.5788 106.325 57.3782 116.742C58.8889 119.051 61.1111 119.051 62.6218 116.742C69.4174 106.328 78.1987 97.1556 86.6692 88.3073C89.6652 85.1778 92.6222 82.0889 95.4388 79H24.5608Z\" fill=\"white\"/>\n<path d=\"M123 59.0055C123 59.0055 117.403 49 100.88 49H75V69H100.88C117.413 69 123 58.9945 123 58.9945V59.0055Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label WeaponDPS\">weapon damage over time</span> and shredding <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_bullet_armor.png\" class=\"inline-attribute BulletResist\" alt=\"bullet resist\"/><span class=\"inline-attribute-label BulletResist\" style=\"color: #EC9719;\">bullet resist</span>, building up to a <span class=\"highlight\">huge backblast</span> that deals <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"white\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M53.7875 20.0238C48.6533 13.3022 40.8042 9 32.0027 9C16.5345 9 4 22.2789 4 38.6558C4 38.7707 4.00052 38.8854 4.00155 39H91.8416L94.7229 33.1618C97.2906 27.9591 104.71 27.9591 107.277 33.1618L110.159 39H115.998C115.999 38.8854 116 38.7707 116 38.6558C116 22.2789 103.466 9 87.9973 9C79.1958 9 71.3467 13.3022 66.2125 20.0238C65.7565 20.6214 65.336 21.1783 64.9462 21.6946C62.4734 24.9699 61.2367 26.6078 59.9993 26.6084C58.7614 26.609 57.5227 24.9711 55.0449 21.6946C54.6545 21.1783 54.2333 20.6214 53.7766 20.0238H53.7875Z\" fill=\"white\"/>\n<path d=\"M79.7015 79L79.5588 79.8323C78.7516 84.5386 82.6742 88.3253 86.9508 88.0132C86.8571 88.1111 86.7634 88.209 86.6696 88.3069C78.1991 97.1552 69.4174 106.328 62.6218 116.742C61.1111 119.051 58.8889 119.051 57.3782 116.742C50.5788 106.325 41.7966 97.1509 33.3264 88.303C30.3317 85.1748 27.3761 82.0873 24.5608 79H79.7015Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M101.901 35.5496C101.512 34.8168 100.488 34.8168 100.099 35.5497L93.0406 48.845C92.8929 49.123 92.6315 49.3183 92.3283 49.3766L77.8385 52.1641C77.0398 52.3178 76.7233 53.3185 77.2815 53.9252L87.4091 64.9295C87.6209 65.1597 87.7208 65.4756 87.6812 65.7898L85.7842 80.8078C85.6796 81.6357 86.5083 82.2542 87.2424 81.8963L100.56 75.402C100.838 75.2662 101.162 75.2662 101.44 75.402L114.758 81.8963C115.492 82.2542 116.32 81.6357 116.216 80.8078L114.319 65.7898C114.279 65.4756 114.379 65.1597 114.591 64.9295L124.718 53.9252C125.277 53.3185 124.96 52.3178 124.161 52.1641L109.672 49.3766C109.369 49.3183 109.107 49.123 108.959 48.845L101.901 35.5496ZM100.036 43.0789C100.366 42.1579 101.634 42.1579 101.964 43.0789L105.019 51.6179C105.01 51.6983 105.017 51.7822 105.041 51.8662L107.687 61.1634C107.817 61.6217 108.371 61.7807 108.714 61.4584L111.336 58.9947C111.498 58.8428 111.571 58.6153 111.528 58.3944L110.687 53.9877H117.422C118.389 53.9877 118.82 55.2373 118.067 55.8622L110.702 61.9792C110.601 61.9949 110.502 62.0365 110.413 62.1066L102.948 68.0247C102.581 68.3164 102.638 68.9036 103.055 69.1143L106.244 70.7259C106.44 70.8252 106.673 70.8121 106.858 70.6913L110.254 68.4723L112.085 75.0776C112.35 76.0329 111.299 76.8003 110.508 76.2296L101.591 69.8003C101.471 69.7136 101.337 69.6563 101.199 69.6285L95.0376 65.3393C94.6474 65.0677 94.116 65.3179 94.0614 65.7987L93.6534 69.3978C93.6281 69.6213 93.718 69.8423 93.8907 69.9808L96.868 72.3692L91.5448 76.2279C90.7554 76.8001 89.7037 76.0372 89.9645 75.0816L92.6557 65.2197C92.6717 65.1902 92.6845 65.1581 92.6935 65.1237L95.058 56.0862C95.1347 55.7934 94.8946 55.5156 94.6024 55.5592L90.6768 56.1448C90.5236 56.1678 90.3959 56.2773 90.3466 56.428L89.0988 60.2424L83.9931 56.1163C83.2355 55.5041 83.6428 54.2537 84.6065 54.2331L94.8405 54.0152C94.8711 54.0191 94.9023 54.0206 94.934 54.0198L103.141 53.8011C103.588 53.7892 103.88 53.3157 103.7 52.8958L102.212 49.4285C102.111 49.1944 101.886 49.0435 101.637 49.0435H97.9024L100.036 43.0789Z\" fill=\"white\"/>\n<path d=\"M67 57C68.1046 57 69 57.8954 69 59C69 60.1046 68.1046 61 67 61H7C5.89543 61 5 60.1046 5 59C5 57.8954 5.89543 57 7 57H67Z\" fill=\"white\"/>\n</svg>\n<span class=\"inline-attribute-label SpiritDamage\">spirit damage</span> and knocks you backwards.<br><br>Vents the jetpack when dealing damage.</span>",
@@ -207347,7 +207331,7 @@
 			"horizontal_punch": 0,
 			"range": 7000,
 			"recoil_recovery_delay_factor": 0.05,
-			"bullet_speed": 20000,
+			"bullet_speed": 14000,
 			"recoil_recovery_speed": 5,
 			"recoil_shot_index_recovery_time_factor": 0.25,
 			"recoil_speed": 5,
@@ -207577,7 +207561,7 @@
 			"horizontal_punch": 0,
 			"range": 7000,
 			"recoil_recovery_delay_factor": 0.05,
-			"bullet_speed": 20000,
+			"bullet_speed": 14000,
 			"recoil_recovery_speed": 5,
 			"recoil_shot_index_recovery_time_factor": 0.25,
 			"recoil_speed": 5,
@@ -209010,7 +208994,8 @@
 			"CITADEL_ABILITY_BEHAVIOR_NO_TARGET",
 			"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT",
 			"CITADEL_ABILITY_BEHAVIOR_DONT_INTERRUPT_SLIDE_ON_CAST",
-			"CITADEL_ABILITY_BEHAVIOR_DO_NOT_ALLOW_SPAM_PROC"
+			"CITADEL_ABILITY_BEHAVIOR_DO_NOT_ALLOW_SPAM_PROC",
+			"CITADEL_ABILITY_BEHAVIOR_DOES_NOT_COUNT_AS_ABILITY_USE"
 		],
 		"description": {
 			"desc": "Load your weapon with a full clip of syringes that <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M92.0059 9C107.475 9.00022 120 22.237 120 38.6592C120 68.2957 85.5894 87.6846 66.6162 116.752C65.1163 119.062 62.8837 119.062 61.3838 116.752C42.4106 87.6846 8.00022 68.2957 8 38.6592C8 22.2808 20.5245 9.00022 35.9941 9C40.2312 9.02587 44.4049 10.0351 48.1855 11.9482C49.3884 12.5569 50.5406 13.2524 51.6343 14.0271C52.9137 14.9332 52.473 16.8509 51.0109 17.4168C37.5479 22.6271 28 35.6977 28 51C28 70.8823 44.1177 87 64 87C83.8823 87 100 70.8823 100 51C100 35.6974 90.4516 22.6267 76.9882 17.4167C75.5261 16.8509 75.0854 14.9333 76.3648 14.0273C77.4588 13.2526 78.6113 12.557 79.8145 11.9482C83.5951 10.0351 87.7688 9.02587 92.0059 9Z\" fill=\"#0F9\"/>\n<path d=\"M69 46H84V56H69V71H59V56H44V46H59V31H69V46Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label Heal\" style=\"color: #0F9;\">heal</span> allies. <span class=\"highlight\">Dealing damage</span> recovers charges, and each leech you have collected slowly restores them.<br><br>Reloading spends a charge for a fresh clip.<br><br><span class=\"small_diminish\">Unused syringes are refunded as a partial charge. Recast to put them away.</span>",
@@ -210732,7 +210717,7 @@
 		],
 		"description": {
 			"desc": "Adorn scrappy armor, gaining <img src=\"https://assets-bucket.deadlock-api.com/assets-api-res/images/upgrades/property_bullet_armor.png\" class=\"inline-attribute CombatBarrier\" alt=\"barrier\"/><span class=\"inline-attribute-label CombatBarrier\" style=\"color: #FFEFD7;\">barrier</span> based on your <svg width=\"128\" height=\"128\" viewBox=\"0 0 128 128\" fill=\"#0F9\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M92.0059 9C107.475 9.00022 120 22.237 120 38.6592C120 68.2957 85.5894 87.6846 66.6162 116.752C65.1163 119.062 62.8837 119.062 61.3838 116.752C42.4106 87.6846 8.00022 68.2957 8 38.6592C8 22.2808 20.5245 9.00022 35.9941 9C40.2312 9.02587 44.4049 10.0351 48.1855 11.9482C49.3884 12.5569 50.5406 13.2524 51.6343 14.0271C52.9137 14.9332 52.473 16.8509 51.0109 17.4168C37.5479 22.6271 28 35.6977 28 51C28 70.8823 44.1177 87 64 87C83.8823 87 100 70.8823 100 51C100 35.6974 90.4516 22.6267 76.9882 17.4167C75.5261 16.8509 75.0854 14.9333 76.3648 14.0273C77.4588 13.2526 78.6113 12.557 79.8145 11.9482C83.5951 10.0351 87.7688 9.02587 92.0059 9Z\" fill=\"#0F9\"/>\n<path d=\"M69 46H84V56H69V71H59V56H44V46H59V31H69V46Z\" fill=\"#0F9\"/>\n</svg>\n<span class=\"inline-attribute-label MaxHealth\" style=\"color: #0F9;\">max health</span>. As long as the armor holds, bullets have a chance to be <span class=\"highlight\">deflected</span> back towards the attacker.<br><br><span class=\"diminish\">The barrier does not benefit from resists.</span>",
-			"t2_desc": "<span class=\"highlight\">-8s</span> Cooldown<br><span class=\"highlight\">+15%</span> Bullet Return Chance",
+			"t2_desc": "<span class=\"highlight\">-8s</span> Cooldown<br><span class=\"highlight\">+20%</span> Bullet Return Chance",
 			"t3_desc": "Reduce all damage to a max of <span class=\"highlight\">250</span><br><span class=\"highlight\">+10%</span> Max Health as Barrier"
 		},
 		"tooltip_details": {
@@ -210767,7 +210752,7 @@
 				"property_upgrades": [
 					{
 						"name": "ReturnFireChance",
-						"bonus": "15"
+						"bonus": "20"
 					},
 					{
 						"name": "AbilityCooldown",
@@ -211318,7 +211303,7 @@
 				"postvalue_label": "Duration"
 			},
 			"BonusMoveSpeed": {
-				"value": "4m",
+				"value": "5m",
 				"provided_property_type": "MODIFIER_VALUE_MOVEMENT_SPEED_MAX",
 				"css_class": "move_speed",
 				"display_units": "EDisplayUnit_MetersPerSecond",
