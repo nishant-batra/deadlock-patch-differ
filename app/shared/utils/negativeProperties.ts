@@ -25,6 +25,8 @@ const SHRINKING_SCALE_TYPES = new Set([
 const SLOWER_IS_WORSE =
 	/Cooldown|CastDelay|ChannelTime|Delay$|WindUp|BuildupTime|DeployTime|CompletedTime|BrewTime/;
 const CUTS_THE_WAIT = /Reduc|Refund|Refresh|Reset|Speed|Chance/;
+/** Costs paid by the caster, e.g. Geist's Essence Bomb "Health Cost" (SelfDamagePct). */
+const COST_TO_SELF = /SelfDamage/;
 
 export function isNegativeProperty(
 	key: string,
@@ -32,5 +34,6 @@ export function isNegativeProperty(
 ) {
 	const scaleType = property?.scale_function?.specific_stat_scale_type;
 	if (scaleType) return SHRINKING_SCALE_TYPES.has(scaleType);
+	if (COST_TO_SELF.test(key)) return true;
 	return SLOWER_IS_WORSE.test(key) && !CUTS_THE_WAIT.test(key);
 }

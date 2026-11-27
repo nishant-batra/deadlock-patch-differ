@@ -6,7 +6,7 @@ import { formatDeltaValue } from "#/shared/components/stat-delta";
  */
 export default function PreviousValue({ value }: { value: unknown }) {
 	return (
-		<s className="mr-1.5 font-medium text-[0.9em] text-gray-400 decoration-[1.5px] decoration-rose-400">
+		<s className="mr-1.5 font-medium text-[0.9em] text-gray-400 decoration-[1.5px] decoration-rose-400/50">
 			{formatDeltaValue(value)}
 		</s>
 	);
