@@ -3,6 +3,10 @@ import type { PopoverNav } from "#/shared/components/ability-popover/types";
 /** Which of a row's ability popovers is open, and how to change that. */
 export type OpenState = {
 	openAbility: number | null;
+	/** "closing" while the popover plays its exit animation, until `onClosed`. */
+	status: "open" | "closing" | "closed";
+	/** The exit animation finished: unmount the popover. */
+	onClosed: () => void;
 	/** Opened by hovering its icon: leaving the icon closes it again. */
 	preview: boolean;
 	/** A tap or keyboard press: opens it pinned, or closes it if already pinned. */

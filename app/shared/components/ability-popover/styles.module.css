@@ -1,0 +1,50 @@
+/* Open/close: rises in beside its icon; on phones, where it's full screen,
+   slides up from the bottom and back down. Keyframes on the element itself,
+   not a view transition: those snapshot the whole page, and mobile Chrome
+   brings its URL bar back while one runs. */
+.popover {
+	animation: rise-in 180ms ease-out;
+}
+/* Fills forwards so it stays hidden until `onClosed` unmounts it. */
+.closing {
+	pointer-events: none;
+	animation: fade-out 120ms ease-in forwards;
+}
+@media (width < 40rem) {
+	.popover {
+		animation: sheet-slide-up 280ms cubic-bezier(0.32, 0.72, 0, 1);
+	}
+	.closing {
+		animation: sheet-slide-down 200ms ease-in forwards;
+	}
+}
+/* Near-instant rather than `none`: closing waits for `animationend`. */
+@media (prefers-reduced-motion: reduce) {
+	.popover,
+	.closing {
+		animation-duration: 1ms;
+	}
+}
+
+@keyframes rise-in {
+	from {
+		opacity: 0;
+		transform: translateY(8px) scale(0.98);
+	}
+}
+@keyframes fade-out {
+	to {
+		opacity: 0;
+		transform: translateY(4px) scale(0.98);
+	}
+}
+@keyframes sheet-slide-up {
+	from {
+		transform: translateY(100%);
+	}
+}
+@keyframes sheet-slide-down {
+	to {
+		transform: translateY(100%);
+	}
+}

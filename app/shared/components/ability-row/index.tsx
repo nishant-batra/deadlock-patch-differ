@@ -29,7 +29,7 @@ export default function AbilityRow({
 }) {
 	const ownState = useOpenAbility();
 	const state = openState ?? ownState;
-	const { openAbility, preview, close, nav } = state;
+	const { openAbility, preview, status, close, onClosed, nav } = state;
 	const { setAnchorRef, anchorRefFor } = useAnchorRefs();
 	const { hoverProps, iconProps } = useHoverPreview(state);
 
@@ -79,6 +79,8 @@ export default function AbilityRow({
 								tiers={tiers}
 								anchorRef={anchorRefFor(index)}
 								onClose={close}
+								closing={status === "closing"}
+								onClosed={onClosed}
 								nav={nav}
 								preview={preview}
 							/>

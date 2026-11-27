@@ -19,11 +19,7 @@ const MARGIN = 8;
  *
  * The position is written straight onto the dialog as `--popover-top` /
  * `--popover-left` (read by its `top-(…)` / `left-(…)` classes), not kept in
- * React state. A state update from a layout effect is held back until after
- * the view transition has started, so the enter animation's snapshot was
- * taken at the unpositioned corner and the dialog jumped into place once it
- * finished. A direct write lands before the browser takes that snapshot -
- * and scrolling no longer re-renders the whole card.
+ * React state, so scrolling does not re-render the whole card.
  */
 export function useDismissablePopover({
 	anchorRef,

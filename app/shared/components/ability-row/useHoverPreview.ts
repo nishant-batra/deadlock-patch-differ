@@ -16,6 +16,7 @@ const CLOSE_DELAY = 200;
 export function useHoverPreview({
 	openAbility,
 	preview,
+	status,
 	toggle,
 	showPreview,
 	closePreview,
@@ -31,7 +32,9 @@ export function useHoverPreview({
 	const hoverProps = (index: number) => ({
 		onPointerEnter: ({ pointerType }: React.PointerEvent) => {
 			if (pointerType !== "mouse") return;
-			if (preview && openAbility === index) return clearTimeout(timer.current);
+			// A preview that is still fading out gets reopened below.
+			if (preview && openAbility === index && status === "open")
+				return clearTimeout(timer.current);
 			later(() => showPreview(index), OPEN_DELAY);
 		},
 		onPointerLeave: ({ pointerType }: React.PointerEvent) => {
