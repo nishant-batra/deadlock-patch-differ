@@ -30,7 +30,10 @@ export default function AbilityRow({
 	const ownState = useOpenAbility();
 	const state = openState ?? ownState;
 	const { openAbility, preview, status, close, onClosed, nav } = state;
-	const { setAnchorRef, anchorRefFor } = useAnchorRefs();
+	const { setAnchorRef: setOwnAnchorRef, anchorRefFor } = useAnchorRefs();
+	// An owner that registers anchors renders the popover itself.
+	const ownsPopover = !state.setAnchorRef;
+	const setAnchorRef = state.setAnchorRef ?? setOwnAnchorRef;
 	const { hoverProps, iconProps } = useHoverPreview(state);
 
 	return (
@@ -72,12 +75,13 @@ export default function AbilityRow({
 						</button>
 						{isChanged && <Marker abilityChange={abilityChange} />}
 
-						{isOpen && (
+						{ownsPopover && isOpen && (
 							<AbilityPopover
 								ability={ability}
 								changes={changes}
 								tiers={tiers}
 								anchorRef={anchorRefFor(index)}
+								anchorKey={index}
 								onClose={close}
 								closing={status === "closing"}
 								onClosed={onClosed}

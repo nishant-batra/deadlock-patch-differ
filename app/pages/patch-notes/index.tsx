@@ -1,3 +1,4 @@
+import AbilityPopover from "#/shared/components/ability-popover";
 import EmptyState from "#/shared/components/empty-state";
 import UpcomingHeroes from "#/shared/components/upcoming-heroes";
 import { formatPatchDate } from "#/shared/utils/formatPatchDate";
@@ -25,7 +26,7 @@ export default function Changes({
 	// Both changed-hero lists share one open popover; prev/next stay in each.
 	const lists = useMemo(() => [hotfix?.heroes ?? [], heroes], [hotfix, heroes]);
 	const hotfixCount = hotfix?.heroes.length ?? 0;
-	const openStateFor = useAbilityCycle(lists);
+	const { openStateFor, popover } = useAbilityCycle(lists);
 
 	const itemsBlock = (
 		<section id="items" className={`mb-12 ${BELOW_BAR}`}>
@@ -137,6 +138,8 @@ export default function Changes({
 				{heroesBlock}
 				{generalBlock}
 			</section>
+			{/* One for the whole page, so prev/next swaps its content in place. */}
+			{popover && <AbilityPopover {...popover} />}
 		</main>
 	);
 }

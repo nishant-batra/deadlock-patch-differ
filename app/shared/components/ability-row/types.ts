@@ -18,4 +18,12 @@ export type OpenState = {
 	close: () => void;
 	/** Moving between changed abilities; only set while a changed one is open. */
 	nav?: PopoverNav;
+	/**
+	 * Set when the owner renders the popover itself (the patch-notes page, so
+	 * one popover stays mounted while prev/next steps across cards): the row
+	 * registers its icons here and renders no popover of its own.
+	 */
+	setAnchorRef?: (index: number) => (node: HTMLButtonElement | null) => void;
+	/** The owner's hover timer, shared with its popover so moving onto it keeps a preview open. */
+	hoverTimer?: React.RefObject<ReturnType<typeof setTimeout> | undefined>;
 };

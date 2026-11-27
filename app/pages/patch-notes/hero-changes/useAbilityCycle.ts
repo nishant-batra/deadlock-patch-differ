@@ -1,6 +1,8 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import type AbilityPopover from "#/shared/components/ability-popover";
 import type { StepTarget } from "#/shared/components/ability-popover/types";
 import type { OpenState } from "#/shared/components/ability-row";
+import { popoverHoverProps } from "#/shared/components/ability-row/useHoverPreview";
 import { isAbilityChanged } from "#/shared/components/ability-row/utils";
 import type { ChangedHero } from "#/types";
 
@@ -9,6 +11,7 @@ type Stop = { card: number; index: number };
 type Open = Stop & { preview: boolean; status: "open" | "closing" };
 
 const closing = (current: Open): Open => ({ ...current, status: "closing" });
+const anchorKeyOf = ({ card, index }: Stop) => `${card}:${index}`;
 
 /**
  * Which ability popover is open across every changed-hero card on the page -
@@ -17,12 +20,20 @@ const closing = (current: Open): Open => ({ ...current, status: "closing" });
  * one hero into the next, wrapping at both ends of that list. Closing goes
  * through "closing" so the popover can play its exit animation first.
  *
- * Returns `forCard(card)`: that card's slice of the state, in the shape
+ * Returns `openStateFor(card)`: that card's slice of the state, in the shape
  * `AbilityRow`'s `openState` takes. Cards with nothing open get the same
  * object every render, so a hover only re-renders the cards it touches.
+ *
+ * And `popover`: the open popover's props, for the page to render once. One
+ * popover for the whole page means a prev/next step - even onto another
+ * hero's card - only swaps its content, without replaying the open animation.
  */
 export function useAbilityCycle(lists: ChangedHero[][]) {
 	const [open, setOpen] = useState<Open | null>(null);
+	// Every card's icons, for the popover to position from.
+	const anchors = useRef(new Map<string, HTMLButtonElement | null>());
+	// One hover timer for the page, shared by the icons and the popover.
+	const hoverTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
 	const { cards, places, stops, closed } = useMemo(() => {
 		const cards = lists.flat();
@@ -39,6 +50,10 @@ export function useAbilityCycle(lists: ChangedHero[][]) {
 				openAbility: null,
 				preview: false,
 				status: "closed",
+				hoverTimer,
+				setAnchorRef: (index) => (node) => {
+					anchors.current.set(anchorKeyOf({ card, index }), node);
+				},
 				toggle: (index) =>
 					update((current) =>
 						current &&
@@ -85,7 +100,7 @@ export function useAbilityCycle(lists: ChangedHero[][]) {
 	const go = (stop: Stop) => () =>
 		setOpen({ ...stop, preview: false, status: "open" });
 
-	return (card: number): OpenState => {
+	const openStateFor = (card: number): OpenState => {
 		if (open?.card !== card) return closed[card];
 		const { index: openAbility, preview, status } = open;
 		const { hero, abilities } = cards[card];
@@ -133,4 +148,31 @@ export function useAbilityCycle(lists: ChangedHero[][]) {
 						},
 		};
 	};
+
+	const popover = ((): React.ComponentProps<typeof AbilityPopover> | null => {
+		if (!open) return null;
+		const state = openStateFor(open.card);
+		const { preview, status, close, onClosed, nav } = state;
+		const { ability, changes, tiers } = cards[open.card].abilities[open.index];
+		const anchorKey = anchorKeyOf(open);
+		return {
+			ability,
+			changes,
+			tiers,
+			anchorRef: {
+				get current() {
+					return anchors.current.get(anchorKey) ?? null;
+				},
+			},
+			anchorKey,
+			onClose: close,
+			closing: status === "closing",
+			onClosed,
+			nav,
+			preview,
+			hoverProps: popoverHoverProps(hoverTimer, state),
+		};
+	})();
+
+	return { openStateFor, popover };
 }

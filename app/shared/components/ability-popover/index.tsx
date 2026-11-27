@@ -21,17 +21,21 @@ export default function AbilityPopover({
 	changes,
 	tiers,
 	anchorRef,
+	anchorKey,
 	onClose,
 	closing,
 	onClosed,
 	nav,
 	preview,
+	hoverProps,
 }: {
 	ability: Item;
 	changes: Change[];
 	tiers: TierDiff[];
 	/** The button that opened this popover - positioning is measured from it. */
 	anchorRef: React.RefObject<HTMLElement | null>;
+	/** Which button that is: when it changes (prev/next), the popover moves to it. */
+	anchorKey: string | number;
 	onClose: () => void;
 	/** Playing its exit animation; `onClosed` fires when it ends. */
 	closing: boolean;
@@ -40,19 +44,28 @@ export default function AbilityPopover({
 	nav?: PopoverNav;
 	/** Opened by hovering its icon, not yet pinned by a click. */
 	preview?: boolean;
+	/** Keeps a hover preview open while the mouse is on it, when rendered outside its icon's row. */
+	hoverProps?: Pick<
+		React.HTMLAttributes<HTMLElement>,
+		"onPointerEnter" | "onPointerLeave"
+	>;
 }) {
 	const { prev, next } = nav ?? {};
 	const ref = useDismissablePopover({
 		anchorRef,
+		anchorKey,
 		onClose,
 		onPrev: prev?.go,
 		onNext: next?.go,
 	});
 	const statusId = useId();
 
-	// The layout effect sets the position variables before first paint.
+	// The layout effect sets the position variables before first paint. When
+	// the owner keeps this mounted across prev/next, only the content changes,
+	// so the open animation plays once.
 	return createPortal(
 		<div
+			{...hoverProps}
 			ref={ref}
 			role="dialog"
 			data-ability-popover
@@ -71,7 +84,11 @@ export default function AbilityPopover({
 			)}
 		>
 			<NavHeader nav={nav} statusId={statusId} onClose={onClose} />
-			<div className="min-h-0 flex-1 overflow-auto overscroll-contain">
+			{/* Keyed: a step starts the next ability scrolled to the top, fresh. */}
+			<div
+				key={anchorKey}
+				className="min-h-0 flex-1 overflow-auto overscroll-contain"
+			>
 				<AbilityCard ability={ability} changes={changes} tiers={tiers}>
 					<AbilityHiddenChanges ability={ability} changes={changes} />
 				</AbilityCard>

@@ -2,6 +2,28 @@ import { useLayoutEffect, useRef } from "react";
 
 const MARGIN = 8;
 
+/** Pins the dialog beside its anchor, flipping above it when there's no room below. */
+function placeDialog(anchor: HTMLElement | null, dialog: HTMLElement | null) {
+	if (!anchor || !dialog) return;
+	const anchorBox = anchor.getBoundingClientRect();
+	const width = dialog.offsetWidth;
+	const height = dialog.offsetHeight;
+
+	let left = anchorBox.left;
+	left = Math.min(left, window.innerWidth - width - MARGIN);
+	left = Math.max(left, MARGIN);
+
+	const spaceBelow = window.innerHeight - anchorBox.bottom;
+	const opensAbove = height > 0 && spaceBelow < height + MARGIN;
+	let top = opensAbove
+		? anchorBox.top - height - MARGIN
+		: anchorBox.bottom + MARGIN;
+	top = Math.max(top, MARGIN);
+
+	dialog.style.setProperty("--popover-top", `${top}px`);
+	dialog.style.setProperty("--popover-left", `${left}px`);
+}
+
 /**
  * Positions the dialog with `position: fixed`, measured from `anchorRef`
  * (the button that opened it) rather than the dialog's own place in the DOM.
@@ -20,73 +42,52 @@ const MARGIN = 8;
  * The position is written straight onto the dialog as `--popover-top` /
  * `--popover-left` (read by its `top-(…)` / `left-(…)` classes), not kept in
  * React state, so scrolling does not re-render the whole card.
+ *
+ * One dialog can move between anchors (prev/next on the patch-notes page keeps
+ * it mounted): `anchorKey` names the current one, and changing it re-places.
  */
 export function useDismissablePopover({
 	anchorRef,
+	anchorKey,
 	onClose,
 	onPrev,
 	onNext,
 }: {
 	anchorRef: React.RefObject<HTMLElement | null>;
+	anchorKey: string | number;
 	onClose: () => void;
 	onPrev?: () => void;
 	onNext?: () => void;
 }) {
 	const ref = useRef<HTMLDivElement>(null);
 
-	// Read via a ref rather than depending on the callbacks directly: their
-	// identity can change every render,
-	// which would otherwise re-run this effect - and re-register its listeners -
-	// on every render regardless of what React Compiler decides to memoize.
+	// Read via refs rather than depending on these directly: their identity can
+	// change every render (`anchorRefFor` builds a new wrapper each time), which
+	// would re-run the effects below - and re-register listeners - every render.
+	const anchorRefRef = useRef(anchorRef);
+	anchorRefRef.current = anchorRef;
 	const onCloseRef = useRef(onClose);
 	onCloseRef.current = onClose;
 	const stepRef = useRef({ onPrev, onNext });
 	stepRef.current = { onPrev, onNext };
 
-	// `place()` reads `anchorRef.current` and `onCloseRef.current` fresh on
-	// every call rather than capturing them, so this is correctly mount-only
-	// despite the lint - re-running per render would just re-attach the same
-	// listeners (harmless), but `anchorRefFor` (in useAnchorRefs.ts) returns a
-	// new wrapper object every render, which would make this effect fire on
-	// every render if `anchorRef` were a dependency.
-	// biome-ignore lint/correctness/useExhaustiveDependencies: see above
+	// Each new anchor: on open, and on each prev/next step.
+	// biome-ignore lint/correctness/useExhaustiveDependencies: `anchorKey` stands in for the anchor, read through a ref
 	useLayoutEffect(() => {
-		const place = () => {
-			const anchor = anchorRef.current;
-			const dialog = ref.current;
-			if (!anchor || !dialog) return;
-			const anchorBox = anchor.getBoundingClientRect();
-			const width = dialog.offsetWidth;
-			const height = dialog.offsetHeight;
-
-			let left = anchorBox.left;
-			left = Math.min(left, window.innerWidth - width - MARGIN);
-			left = Math.max(left, MARGIN);
-
-			const spaceBelow = window.innerHeight - anchorBox.bottom;
-			const opensAbove = height > 0 && spaceBelow < height + MARGIN;
-			let top = opensAbove
-				? anchorBox.top - height - MARGIN
-				: anchorBox.bottom + MARGIN;
-			top = Math.max(top, MARGIN);
-
-			dialog.style.setProperty("--popover-top", `${top}px`);
-			dialog.style.setProperty("--popover-left", `${left}px`);
-		};
-
+		const anchor = anchorRefRef.current.current;
 		// Prev/next can open an ability on another hero's card, possibly off
 		// screen: bring its icon into view first. No-op for a clicked icon.
-		anchorRef.current?.scrollIntoView({ block: "nearest" });
-
-		// useLayoutEffect runs after the dialog is committed to the DOM but
-		// before the browser paints, so its real `offsetHeight` is already
-		// available here - no flash of the wrong position on open.
-		place();
-
+		anchor?.scrollIntoView({ block: "nearest" });
+		// Layout effects run after commit but before paint, so the real
+		// `offsetHeight` is already there - no flash of the wrong position.
+		placeDialog(anchor, ref.current);
 		// Keyboard and screen-reader users land in the dialog, including after
-		// prev/next swaps it for another one.
+		// prev/next swaps its content.
 		ref.current?.focus({ preventScroll: true });
+	}, [anchorKey]);
 
+	useLayoutEffect(() => {
+		const place = () => placeDialog(anchorRefRef.current.current, ref.current);
 		const onKey = (event: KeyboardEvent) => {
 			if (event.key === "Escape") onCloseRef.current();
 			// A/D step like the arrows; not with a modifier (Ctrl+D bookmarks).
@@ -102,7 +103,7 @@ export function useDismissablePopover({
 		};
 		// A press on the icon is left to the icon itself.
 		const onPointer = ({ target }: MouseEvent) => {
-			const inside = [ref.current, anchorRef.current].some((node) =>
+			const inside = [ref.current, anchorRefRef.current.current].some((node) =>
 				node?.contains(target as Node),
 			);
 			if (!inside) onCloseRef.current();
@@ -119,11 +120,10 @@ export function useDismissablePopover({
 		const dialog = ref.current;
 		return () => {
 			// Hand focus back to the icon if it was in the dialog (or dropped to
-			// <body>), not if the user already moved it elsewhere. On prev/next
-			// the next dialog's effect then takes it.
+			// <body>), not if the user already moved it elsewhere.
 			const active = document.activeElement;
 			if (!active || active === document.body || dialog?.contains(active)) {
-				anchorRef.current?.focus({ preventScroll: true });
+				anchorRefRef.current.current?.focus({ preventScroll: true });
 			}
 			document.removeEventListener("keydown", onKey);
 			document.removeEventListener("mousedown", onPointer);
