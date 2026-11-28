@@ -11001,7 +11001,7 @@
 				"display_stat_name": "ETechRange"
 			},
 			"bullet_armor_damage_reduction": {
-				"value": -7,
+				"value": -4,
 				"display_stat_name": "EBulletArmorDamageReduction"
 			},
 			"ground_dash_distance_in_meters": {

@@ -113891,7 +113891,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": "22",
+					"value": "20",
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -114239,7 +114239,7 @@
 						},
 						{
 							"name": "SlowDuration",
-							"bonus": "1"
+							"bonus": "1.25"
 						}
 					]
 				},
@@ -114258,7 +114258,7 @@
 			],
 			"weapon_info": {},
 			"description": {
-				"t2_desc": "<span class=\"highlight\">+100</span> Damage <br><span class=\"highlight\">+1s</span> Debuff Duration",
+				"t2_desc": "<span class=\"highlight\">+100</span> Damage <br><span class=\"highlight\">+1.25s</span> Debuff Duration",
 				"t3_desc": "Gain <span class=\"highlight\">75%</span> Bullet, Spirit &amp; Melee Lifesteal against the Riposte target for 13s"
 			}
 		},
@@ -122461,7 +122461,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": 28,
+					"value": 26,
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -122709,12 +122709,12 @@
 					"value": "0.6"
 				},
 				"MagicDamagePerBullet": {
-					"value": "12",
+					"value": "18",
 					"css_class": "tech_damage",
 					"scale_function": {
 						"class_name": "scale_function_tech_damage",
 						"subclass_name": "DPS_scale_function",
-						"stat_scale": 0.26
+						"stat_scale": 0.3
 					},
 					"label": "Spirit Damage Per Bullet",
 					"postvalue_label": "Spirit Damage Per Bullet",
@@ -122801,7 +122801,7 @@
 			"ability_type": "signature",
 			"properties": {
 				"AbilityCooldown": {
-					"value": "32",
+					"value": "30",
 					"can_set_token_override": true,
 					"css_class": "cooldown",
 					"disable_value": "0",
@@ -122997,7 +122997,7 @@
 						"class_name": "scale_function_tech_damage",
 						"subclass_name": "HeavyMeleeSpiritDamage_scale_function",
 						"specific_stat_scale_type": "ETechPower",
-						"stat_scale": 0.6
+						"stat_scale": 0.9
 					},
 					"label": "Heavy Melee Damage",
 					"postvalue_label": "Heavy Melee Damage",
@@ -123968,7 +123968,7 @@
 						},
 						{
 							"name": "AbilityCastRange",
-							"bonus": "4m"
+							"bonus": "5m"
 						}
 					]
 				},
@@ -124001,7 +124001,7 @@
 			],
 			"weapon_info": {},
 			"description": {
-				"t1_desc": "+4m Cast Range<br>+32% Max Slow",
+				"t1_desc": "+5m Cast Range<br>+32% Max Slow",
 				"t3_desc": "+125 Max Damage <br>+125 Spirit Scaling<br>+0.5s Max Duration"
 			}
 		},
